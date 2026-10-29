@@ -26,7 +26,7 @@ append-only filename and the unchanged limits; these failures stay as evidence.
 T02 remains incomplete and PR #5 remains draft.
 
 The owner selected waiting for IT13 to become quiet. The continuation supervisor
-is `continue_host2_v1.py` (current tool session 87377; append-only
+is `continue_host2_v1.py` (current tool session 37276; append-only
 `continue-host2-v1.log`). It verifies the fresh native artifact hashes, waits for
 three load observations below 4, runs all 40 matches into the new
 `family-F40-rust-host2-v2.jsonl`, compares them with the unchanged oracle, waits
@@ -43,6 +43,12 @@ errors**; no group members remained. `host2-interruptions-v1.jsonl` records the
 stop. The lifecycle producer was left running and subsequently passed. The new supervisor above is
 waiting for quiet, then resumes the same append-only v2 file's missing matches;
 there is no failed v2 record to replace. Previous tool session 26456 is stopped.
+
+At 19:39 UTC another sustained load increase caused a second verified family
+stop (group 207048), before the unchanged timeout. **22 complete v2 records, no
+runner errors**, remain intact. Old supervisor session 87377 is stopped; the
+current session 37276 above waits for quiet before resuming missing matches.
+The second stop is recorded in the same append-only interruptions file.
 
 Toolchain commands on IT13 need
 `CARGO_HOME="$PWD/.cache/cargo" RUSTUP_HOME="$PWD/.cache/rustup"`
