@@ -99,3 +99,35 @@ refused. The interactive straight/resumed/expected digests agree, as do the
 knockout straight/extra-time-resumed/shootout-order-resumed/expected digests.
 F40 is still running (24 completed records at this checkpoint, no runner errors);
 its final comparison and paired CPU receipts remain pending.
+
+## Shared-load interruption and unchanged-limit recovery (2026-10-29)
+
+The host load rose to about 16 while only our two family workers were active.
+`F40/edit-3a5c` hit the **unchanged 300-second** family limit (300.189 CPU /
+300.202 wall seconds). v1 is preserved with 34 complete JSON records: 33
+completed matches and that one timeout. The runner and its two verified worker
+PIDs were stopped; no partial JSON line was left. The old final supervisor
+correctly refused the error receipt. **T02 is not done.**
+
+Recovery follows T01's documented accepted pattern: wait for a quiet machine,
+run only the failed and six missing IDs into the separate append-only
+`family-F40-rust-v1-rerun.jsonl`, assemble the 33 completed v1 lines and seven
+rerun lines byte-for-byte into v2, and require the original `compare.py` to pass
+all 40. `assembly-v2.json` will record every selected line's source and digest;
+the failed v1 line remains in git. No time limit, assertion, comparison field or
+required match is weakened or skipped.
+
+The active quiet/recovery supervisor is tool session **81157**:
+
+```sh
+.venv/bin/python -u -B out/T02/recover_quiet_v1.py >> out/T02/recover-quiet-v1.log 2>&1
+```
+
+Do not start a second supervisor while it is active. It currently waits for
+three quiet observations (one-minute load <4), then runs the seven-ID recovery,
+the v2 comparison/source ledger, and finally the three paired CPU receipts after
+another quiet check. Existing partial outputs are preserved; failed reruns are
+refused. This supervisor stops its own child process group if interrupted.
+The old sessions 17713/57926 are stopped; 33178 finished with all checks passing.
+All runtime source and CPython extension hashes still match M2. CPU receipts have
+not started. No new subtree has been ported.

@@ -1,0 +1,24 @@
+F40 records 12 /40; lifecycle report complete False
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T02/finish_v1.py", line 28, in <module>
+    time.sleep(30)
+KeyboardInterrupt
+F40 records 14 /40; lifecycle report complete False
+F40 records 16 /40; lifecycle report complete False
+F40 records 18 /40; lifecycle report complete False
+F40 records 20 /40; lifecycle report complete False
+F40 records 21 /40; lifecycle report complete False
+F40 records 22 /40; lifecycle report complete False
+F40 records 22 /40; lifecycle report complete True
+F40 records 24 /40; lifecycle report complete True
+F40 records 26 /40; lifecycle report complete True
+F40 records 28 /40; lifecycle report complete True
+F40 records 29 /40; lifecycle report complete True
+F40 records 30 /40; lifecycle report complete True
+F40 records 31 /40; lifecycle report complete True
+F40 records 32 /40; lifecycle report complete True
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T02/finish_v1.py", line 22, in <module>
+    assert not any(r['error'] for r in rows), 'F40 runner errors: preserve records and inspect'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: F40 runner errors: preserve records and inspect
