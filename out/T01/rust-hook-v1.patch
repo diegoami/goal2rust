@@ -1,0 +1,47 @@
+diff --git a/runtime/original_match/port/__init__.py b/runtime/original_match/port/__init__.py
+index ed5cfe79..58bfabea 100644
+--- a/runtime/original_match/port/__init__.py
++++ b/runtime/original_match/port/__init__.py
+@@ -20,6 +20,7 @@ mem.read_key() and mem.keypressed(), and returns as the listing's `ret n` / `ret
+ still the original's is a generator yielding guest.call(...) (port/guest.py, T59); prove.py runs a port side by side
+ with the original (T59). The module holds no byte of the original: only addresses, offsets and constants, each citing
+ its listing line."""
++import copy
+ import importlib
+ import pkgutil
+ import re
+@@ -141,10 +142,22 @@ def runner(entry, variant, mem, calls):
+     return run
+ 
+ 
++def overrides():
++    """goal2rust T01 (spike, not for merge as is): GOAL2_PORT_OVERRIDES names importable modules, each with
++    OVERRIDES = {address: fn(mem, variant)}; fn runs in place of the registered port's function at that address
++    (a module loaded without a variant only), through the same PortFrame, names and call counts unchanged."""
++    import os
++    out = {}
++    for name in filter(None, os.environ.get("GOAL2_PORT_OVERRIDES", "").split(",")):
++        out.update(importlib.import_module(name).OVERRIDES)
++    return out
++
++
+ def install(machine, specs, keys=None):
+     """Put the ports of `specs` (load()) in place of their routines in `machine` (after the kit's own hooks, so
+     they run after them). keys: the kit's key services (Match). Returns Installed."""
+     loaded = load(specs)
++    replaced = overrides()
+     factory = getattr(machine, "port_memory", None)
+     mem = factory(keys) if factory is not None else MachineMem(machine, keys)
+     inst = Installed(loaded, mem)
+@@ -154,6 +167,11 @@ def install(machine, specs, keys=None):
+             if address in owner:
+                 raise ValueError(f"{address} is ported by both {owner[address]} and {reg.name}")
+             owner[address] = reg.name
++            if variant is None and address in replaced:
++                entry = copy.copy(entry)
++                entry.fn = replaced[address]
+             machine.port(address, runner(entry, variant, mem, inst.calls))
+             inst.calls[address] = 0
++    if set(replaced) - set(owner):
++        raise ValueError(f"GOAL2_PORT_OVERRIDES: no port at {sorted(set(replaced) - set(owner))}")
+     return inst

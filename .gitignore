@@ -11,3 +11,5 @@ __pycache__/
 *.dat
 *.EXE
 *.exe
+.venv-pypy/
+target-pypy-wheels/

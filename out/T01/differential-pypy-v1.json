@@ -1,0 +1,52 @@
+{
+ "root": "/home/diego/projects/goal2rust/.cache/goal2-archaeology-spike",
+ "trials": 50,
+ "seed": 1,
+ "mutant": 0,
+ "routines": {
+  "0791:045D": {
+   "trials": 200,
+   "equal": 200,
+   "errors_both": 0,
+   "differences": []
+  },
+  "0791:26D7": {
+   "trials": 200,
+   "equal": 200,
+   "errors_both": 0,
+   "differences": []
+  },
+  "0791:2974": {
+   "trials": 200,
+   "equal": 200,
+   "errors_both": 0,
+   "differences": []
+  },
+  "0791:2B51": {
+   "trials": 200,
+   "equal": 200,
+   "errors_both": 0,
+   "differences": []
+  },
+  "0791:2BE5": {
+   "trials": 200,
+   "equal": 200,
+   "errors_both": 0,
+   "differences": []
+  },
+  "0791:2C29": {
+   "trials": 200,
+   "equal": 200,
+   "errors_both": 0,
+   "differences": []
+  },
+  "0791:2CEC": {
+   "trials": 200,
+   "equal": 200,
+   "errors_both": 0,
+   "differences": []
+  }
+ },
+ "seconds": 2.2170310020446777,
+ "all_equal": true
+}

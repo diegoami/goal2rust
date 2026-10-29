@@ -1,0 +1,116 @@
+{
+ "root": "/home/diego/projects/goal2rust/.cache/goal2-archaeology-spike",
+ "trials": 100,
+ "seed": 1,
+ "mutant": 1,
+ "routines": {
+  "0791:045D": {
+   "trials": 400,
+   "equal": 400,
+   "errors_both": 0,
+   "differences": []
+  },
+  "0791:26D7": {
+   "trials": 400,
+   "equal": 400,
+   "errors_both": 0,
+   "differences": []
+  },
+  "0791:2974": {
+   "trials": 400,
+   "equal": 400,
+   "errors_both": 0,
+   "differences": []
+  },
+  "0791:2B51": {
+   "trials": 400,
+   "equal": 44,
+   "errors_both": 0,
+   "differences": [
+    {
+     "trial": 0,
+     "tapped": false,
+     "listener": false,
+     "diff": {
+      "memory": [
+       "'f17a047d4018104782565afcce33b51952682c2884ef6caed48b3e9ca93a9087'",
+       "'5fec1560d5f60d0fd7acd654ee13caac66d45314b3419eda27602bc4254cef03'"
+      ]
+     }
+    },
+    {
+     "trial": 0,
+     "tapped": false,
+     "listener": true,
+     "diff": {
+      "memory": [
+       "'f17a047d4018104782565afcce33b51952682c2884ef6caed48b3e9ca93a9087'",
+       "'5fec1560d5f60d0fd7acd654ee13caac66d45314b3419eda27602bc4254cef03'"
+      ],
+      "calls": [
+       "[('w', 247249, 13, 1426363189315865449582989053953, 169696), ('w', 247263, 3, 11441408, 169696)]",
+       "[('w', 247249, 13, 1426363189315865449582989053953, 169696), ('w', 247264, 2, 44693, 169696)]"
+      ]
+     }
+    },
+    {
+     "trial": 0,
+     "tapped": true,
+     "listener": false,
+     "diff": {
+      "memory": [
+       "'f17a047d4018104782565afcce33b51952682c2884ef6caed48b3e9ca93a9087'",
+       "'5fec1560d5f60d0fd7acd654ee13caac66d45314b3419eda27602bc4254cef03'"
+      ]
+     }
+    },
+    {
+     "trial": 0,
+     "tapped": true,
+     "listener": true,
+     "diff": {
+      "memory": [
+       "'f17a047d4018104782565afcce33b51952682c2884ef6caed48b3e9ca93a9087'",
+       "'5fec1560d5f60d0fd7acd654ee13caac66d45314b3419eda27602bc4254cef03'"
+      ],
+      "calls": [
+       "[('io', 'g', 'ss', 14453), ('io', 'g', 'bp', 44693), ('io', 'g', 'ss', 14453), ('io', 'g', 'ax', 4620), ('le', 7, 247249, 13, 1426363189315865449582989053953), ('io', 'p', None, 169696), ('w', 247249, 13, 1426363189315865449582989053953, 169696), ('ll', 5), ('le', 7, 247263, 3, 11441408), ('io', 'p'",
+       "[('io', 'g', 'ss', 14453), ('io', 'g', 'bp', 44693), ('io', 'g', 'ss', 14453), ('io', 'g', 'ax', 4620), ('le', 7, 247249, 13, 1426363189315865449582989053953), ('io', 'p', None, 169696), ('w', 247249, 13, 1426363189315865449582989053953, 169696), ('ll', 5), ('le', 7, 247264, 2, 44693), ('io', 'p', N"
+      ]
+     }
+    },
+    {
+     "trial": 1,
+     "tapped": false,
+     "listener": false,
+     "diff": {
+      "memory": [
+       "'e292e449051af01b8d610ca374eff69f37908cc947a8c569a9b2520d62a5472a'",
+       "'34fa96a2369098ed9d4df6d8c166de6931d4c629f58a9d0103896ed8614cf967'"
+      ]
+     }
+    }
+   ]
+  },
+  "0791:2BE5": {
+   "trials": 400,
+   "equal": 400,
+   "errors_both": 0,
+   "differences": []
+  },
+  "0791:2C29": {
+   "trials": 400,
+   "equal": 400,
+   "errors_both": 0,
+   "differences": []
+  },
+  "0791:2CEC": {
+   "trials": 400,
+   "equal": 400,
+   "errors_both": 0,
+   "differences": []
+  }
+ },
+ "seconds": 3.771315097808838,
+ "all_equal": false
+}

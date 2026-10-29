@@ -1,0 +1,28 @@
+# T01 M1: the crate's unit tests and the Python bindings' build. Written before the GitHub repository exists:
+# it has not run yet.
+name: build
+on:
+  push:
+  pull_request:
+jobs:
+  engine:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: dtolnay/rust-toolchain@stable
+      - name: cargo test (no interpreter linked)
+        working-directory: engine
+        run: cargo test --locked
+      - name: build the bindings with maturin
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install -r requirements-build.txt
+          . .venv/bin/activate
+          cd engine && maturin build --release --locked -o ../dist
+      - name: import the wheel
+        run: |
+          .venv/bin/pip install dist/*.whl
+          .venv/bin/python -c "import goal2rust_engine as e; b = bytearray(0x110000); g = e.GuestMemory(b); g.w16(2, -1); assert g.u16(2) == 0xFFFF and g.i16(2) == -1 and b[2:4] == b'\xff\xff'; assert len(e.PORTS) >= 1"
