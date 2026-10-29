@@ -1,5 +1,32 @@
 # T02 evidence and experiment continuation
 
+## IT13 continuation, 2026-10-29
+
+The owner resumed T02 on IT13 at `64e1033`. The pinned oracle and verified
+reference image are now provisioned in the ignored cache. Rust and PyPy are
+project-local too; see `host2-environment-v1.json` for versions and the rebuilt
+CPython extension digest. Production sources are unchanged.
+
+Fresh `host2-v1` proofs: 11 Rust tests, six synthetic tests on each interpreter,
+the CPython installed-wheel tests, 28,224/28,224 per-call/body/frame comparisons,
+and the caught guest-return-IP mutant. Native ordered taps and kit lifecycle
+checks are still running. Do not start duplicate producers on their output files.
+
+The first F40 attempt on IT13 preserves two complete timeout records in
+`family-F40-rust-host2-v1.jsonl`: `F40/e032-0101` (300.206 CPU / 300.349 wall s)
+and `F40/e032-1234` (300.065 CPU / 300.179 wall s). Host load was about 15;
+the workers each received approximately a full CPU core. The family process
+group was verified and stopped after these failures. No other family match
+completed, and no timing receipt has started. A quiet-host retry must use a new
+append-only filename and the unchanged limits; these failures stay as evidence.
+T02 remains incomplete and PR #5 remains draft.
+
+Toolchain commands on IT13 need
+`CARGO_HOME="$PWD/.cache/cargo" RUSTUP_HOME="$PWD/.cache/rustup"`
+and `$PWD/.cache/cargo/bin` on `PATH`. The PyPy environment is `.venv-pypy`.
+
+## Previous computer's handover (historical)
+
 **Owner wind-down, 2026-10-29:** all T02 experiment processes on this computer
 are stopped, including the recovery process group. The owner will start the
 experiments from another computer. Do not auto-restart experiments here or start
