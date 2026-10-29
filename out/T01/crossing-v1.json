@@ -1,0 +1,70 @@
+{
+ "root": "/home/diego/projects/goal2rust/.cache/goal2-archaeology-spike",
+ "n": 50000,
+ "repeat": 5,
+ "unit": "ns per call",
+ "routines": {
+  "0791:045D": {
+   "bare_python_ns": 6897.19596,
+   "bare_rust_ns": 683.50384,
+   "framed_python_ns": 10203.42694,
+   "framed_rust_ns": 3417.73568,
+   "bare_speedup": 12.500899813240862,
+   "framed_speedup": 3.072276455160802
+  },
+  "0791:26D7": {
+   "bare_python_ns": 28178.83506,
+   "bare_rust_ns": 1134.65672,
+   "framed_python_ns": 34484.41574,
+   "framed_rust_ns": 4788.19024,
+   "bare_speedup": 28.277904701974116,
+   "framed_speedup": 7.3932073436985375
+  },
+  "0791:2974": {
+   "bare_python_ns": 7930.5383,
+   "bare_rust_ns": 798.6569,
+   "framed_python_ns": 12130.60862,
+   "framed_rust_ns": 4505.14792,
+   "bare_speedup": 11.881194602935373,
+   "framed_speedup": 2.748187885193366
+  },
+  "0791:2B51": {
+   "bare_python_ns": 16265.89802,
+   "bare_rust_ns": 895.5622,
+   "framed_python_ns": 21028.60708,
+   "framed_rust_ns": 4470.0043,
+   "bare_speedup": 21.43011703503033,
+   "framed_speedup": 4.827004305401077
+  },
+  "0791:2BE5": {
+   "bare_python_ns": 18161.7995,
+   "bare_rust_ns": 1064.69204,
+   "framed_python_ns": 24906.2313,
+   "framed_rust_ns": 4686.73468,
+   "bare_speedup": 19.554226934968415,
+   "framed_speedup": 5.450193421181751
+  },
+  "0791:2C29": {
+   "bare_python_ns": 6699.23276,
+   "bare_rust_ns": 705.33052,
+   "framed_python_ns": 10524.01268,
+   "framed_rust_ns": 4286.61402,
+   "bare_speedup": 11.663305494310624,
+   "framed_speedup": 2.5053857410480718
+  },
+  "0791:2CEC": {
+   "bare_python_ns": 6673.69886,
+   "bare_rust_ns": 680.60396,
+   "framed_python_ns": 10461.27978,
+   "framed_rust_ns": 4199.98714,
+   "bare_speedup": 12.152456674424695,
+   "framed_speedup": 2.5434212104447593
+  }
+ },
+ "restore_registers_ns": 143.22506,
+ "bare_python_noop_ns": 160.03246,
+ "bare_rust_noop_ns": 161.7961,
+ "bare_rust_crossing_ns": 242.24954,
+ "framed_python_noop_ns": 3567.1477,
+ "framed_rust_crossing_ns": 3696.50696
+}

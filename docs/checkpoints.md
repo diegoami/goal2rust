@@ -31,3 +31,15 @@ Until the GitHub repository exists, the latest entry here is where the work stan
   in-process differential (`differential_v1.py`) 80/80 per routine over 4 tap/listener modes; mutants 1 and 2 caught.
 - Next: M3 (taps receipt with all seven, F40 with all seven), started: `taps-rust-all-v1.json`,
   `family-F40-rust-v1.jsonl` (resume: rerun the same family.py command, it skips recorded matches).
+
+## 2026-10-29 T01 M3 in progress: taps equal, F40 37/40 (3 over the wall-time limit under foreign load)
+
+- `taps-rust-all-v1.json` (all seven routines in Rust) equals `dev-taps-python-d3cf46a3.json` on events, result,
+  full memory, stretches and the ordered tap hash (PYTHONHASHSEED=0): Done-when 1's drive half is met.
+- Mutants: `taps-rust-mutant1-v1.json` (2B51's dead frame byte) is NOT caught by the receipts (every field equal),
+  caught by `differential-mutant1-v1.json`; `taps-rust-mutant2-v1.json` (2974 slot 0xC) caught everywhere.
+- `family-F40-rust-v1.jsonl`: `compare-F40-rust-v1.log` 37 identical, 3 NOT COMPLETED on family.py's 300 s wall-time
+  limit (edit-b4d2, edit-d00d, edit-face) when another session started 12 parallel A700 matches on this machine
+  (load 22): no difference found in any completed match. Next: rerun when the machine is quiet (family.py with a new
+  --out), then M4's paired receipts (`out/T01/paired_v1.sh v1`) on a quiet machine.
+- `crossing-v1.json`: per-call costs; `docs/go-no-go.md` drafted (TBD: drive speed-up, F40).
