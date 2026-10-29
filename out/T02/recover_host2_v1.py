@@ -72,7 +72,9 @@ def quiet():
     count = 0
     while count < 3:
         load = os.getloadavg()
-        count = count + 1 if load[0] < 4 else 0
+        # Brief dips repeatedly launched work just before load returned. Wait
+        # for the recent workload to subside too, including before timing.
+        count = count + 1 if load[0] < 4 and load[1] < 4 else 0
         print('quiet observation', count, '/3; load', load, flush=True)
         time.sleep(20)
 

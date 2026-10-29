@@ -24,17 +24,25 @@ interruptions at 16, 22 and 24 completed records are recorded in
 `host2-interruptions-v1.jsonl`. The first host2-v1 attempt's two timeouts also
 remain intact. No timing receipt has started. T02 is incomplete; PR #5 is draft.
 
+The first recovery also met renewed high load: its first two IDs timed out at
+the unchanged limit (`edit-8e05`, 299.891 CPU / 300.719 wall s; `edit-c3c3`,
+299.425 CPU / 300.103 wall s). Both records remain in
+`family-F40-rust-host2-v2-rerun-v1.jsonl`. Verified group 229900 was stopped with
+no remaining members; recovery session 25106 exited nonzero. No assembly,
+comparison, ledger or timing was allowed to pass that failure.
+
 The owner selected waiting for IT13. **Current recovery supervisor: tool session
-25106**, `recover_host2_v1.py`, append-only `recover-host2-v1.log`. Old continuation
-sessions 26456, 87377, 37276 and 37665 are stopped; do not resume them on v2's
-failed output. The recovery verifies the fresh native proof and every current
-source/extension hash, waits for three load observations below 4, and reruns
-exactly the **13 failed/missing IDs** into
-`family-F40-rust-host2-v2-rerun-v1.jsonl`, with the unchanged limits and two workers.
+58978**, `recover_host2_v1.py`, append-only `recover-host2-v2.log`. All previous
+continuation/recovery sessions are stopped. It verifies the fresh native proof
+and every current source/extension hash. The quiet gate is now stricter: three
+observations with **both one-minute and five-minute load below 4**, including
+before timing. Brief one-minute dips had repeatedly preceded renewed load.
+It reruns exactly the **13 failed/missing IDs** into
+`family-F40-rust-host2-v2-rerun-v2.jsonl`, with unchanged limits and two workers.
 Completed lines are never replaced after seeing their comparison result.
 
 On success it assembles the 27 original completions plus 13 rerun lines
-byte-for-byte into `family-F40-rust-host2-v3.jsonl`. `assembly-host2-v3.json`
+byte-for-byte into `family-F40-rust-host2-v4.jsonl`. `assembly-host2-v4.json`
 records each input digest and each selected source file, line number and digest.
 The unchanged full-family comparison and fresh-artifact ledger must pass before
 another quiet wait and paired CPU timings. The ledger includes recovery/assembly
@@ -42,8 +50,16 @@ evidence; all original assertions remain. A failure stops the supervisor and
 preserves its outputs. Inspect active processes before resuming; do not duplicate
 the producer. Its log prints the separate rerun process group.
 
-Resume a clean, partial rerun with:
-`.venv/bin/python -u -B out/T02/recover_host2_v1.py >> out/T02/recover-host2-v1.log 2>&1`.
+Resume this clean, partial rerun with:
+
+```sh
+.venv/bin/python -u -B out/T02/recover_host2_v1.py \
+  --prior out/T02/family-F40-rust-host2-v2.jsonl \
+  --prior out/T02/family-F40-rust-host2-v2-rerun-v1.jsonl \
+  --rerun out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl --version 4 \
+  >> out/T02/recover-host2-v2.log 2>&1
+```
+
 If that rerun itself contains an error, preserve it: pass both prior files via
 repeated `--prior`, choose a new `--rerun` filename and increment `--version`.
 The helper rejects duplicate completions and partial lines rather than choosing
