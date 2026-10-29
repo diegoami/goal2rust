@@ -3,6 +3,7 @@
 set -euo pipefail
 G2R=$(cd "$(dirname "$0")/../.." && pwd)
 cd "$G2R"
+unset GOAL2RUST_MACHINE GOAL2RUST_MACHINE_MUTANT GOAL2_PORT_OVERRIDES
 export PYTHONHASHSEED=0 PYTHONPATH="$G2R/engine/python:$G2R/.cache/goal2-archaeology/runtime"
 uptime > out/T02/load-before-v1.txt
 .venv/bin/python -B out/T02/run_receipt_v1.py --backend python --mode cpu --out out/T02/cpu-python-v1.json > out/T02/cpu-python-v1.log 2>&1 & CP=$!
