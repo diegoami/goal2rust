@@ -21,9 +21,11 @@ assert all(r['error'] is None and r['stopped_at_board'] and not r['strays'] and 
 check=G2R/'out/T02/check-rust-v1.json'
 checks=json.loads(check.read_text())
 assert all(c['pass'] for c in checks['checks'].values())
+status=G2R/'out/T02/compare-F40-rust-v1.status.json'
+assert json.loads(status.read_text())['returncode']==0
 paths=[family,check,G2R/'out/T02/compare-F40-rust-v1.log',G2R/'out/T02/differential-v2.json',
        G2R/'out/T02/mutant-v2.json',G2R/'out/T02/tests-v3.log',G2R/'out/T02/next-subtrees.md',
-       G2R/'out/T02/run_family_v1.sh',G2R/'out/T02/sitecustomize.py']
+       G2R/'out/T02/run_family_v1.sh',G2R/'out/T02/sitecustomize.py',status]
 report=dict(head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=G2R,text=True).strip(),
     family_count=len(rows),family_errors=0,kit_checks_pass=True,
     source_matches_M2_taps=True,source_sha256=current,

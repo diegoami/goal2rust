@@ -64,3 +64,18 @@ profile/call-edge evidence in `profile-subtrees-v2.json`. Generator resumptions
 are distinguished from the actual dispatched call counts in the T01 top-40
 call table. M3's paired timing gate is still pending; do not infer speed from the
 tapped validation runs.
+
+Final gate orchestration (supervised):
+
+```sh
+.venv/bin/python -u -B out/T02/finish_v1.py >> out/T02/finish-v1.log 2>&1
+```
+
+It waits for F40 and the existing check run, refuses failed records/checks,
+records `compare.py`'s exit status, verifies the M2 source/extension hashes, and
+requires three quiet load observations before starting the paired CPU runs.
+It preserves existing records and refuses incomplete timing attempts. A partial
+supervisor log can be appended to on resume. It neither publishes nor starts
+another task. The kit check itself is the unmodified standard producer; if
+interrupted before its JSON report, preserve its log and rerun the command with
+stdout appended (or use a new receipt version if the completed report failed).
