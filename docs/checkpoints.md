@@ -84,3 +84,10 @@ Left, in order, on a quiet machine:
   cpyext is slower than PyPy's own JIT); equal events/result/memory. `differential-pypy-v1.json` 200/200 per routine;
   `crossing-pypy-v1.json` per-call costs under PyPy.
 - Next: M5, docs/go-no-go.md.
+
+## 2026-10-29 T01 M5 reached: docs/go-no-go.md
+
+- Done-when 3 written: drive and per-routine speed-ups (CPython and PyPy), crossing and framing costs, translation
+  and proof cost, hazards, and how to port (the machine in Rust first, Python crossed per event, call trees bottom
+  up, the per-call differential as a gate, PyPy as the baseline to beat).
+- All three Done-when lines are met. Next: the main session's PR and the milestone review prompt for the owner.
