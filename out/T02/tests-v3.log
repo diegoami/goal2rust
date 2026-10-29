@@ -1,0 +1,11 @@
+test_dispatch_error_and_cleanup (test_machine.MachineTests.test_dispatch_error_and_cleanup) ... ok
+test_listener_and_site_reentrancy_and_errors (test_machine.MachineTests.test_listener_and_site_reentrancy_and_errors) ... ok
+test_native_seven_full_frames_and_arbitrary_width_listener_values (test_machine.MachineTests.test_native_seven_full_frames_and_arbitrary_width_listener_values) ... ok
+test_nested_calls_full_state_and_ordered_taps (test_machine.MachineTests.test_nested_calls_full_state_and_ordered_taps) ... ok
+test_recursive_same_return_address_and_stop_before_resume (test_machine.MachineTests.test_recursive_same_return_address_and_stop_before_resume) ... ok
+test_register_aliases (test_machine.MachineTests.test_register_aliases) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.167s
+
+OK

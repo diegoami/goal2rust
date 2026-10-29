@@ -1,0 +1,83 @@
+{
+  "trials": 500,
+  "seed": 1,
+  "routines": {
+    "0791:045D": {
+      "random": 4000,
+      "real": 32,
+      "equal": 4032,
+      "errors_both": 0,
+      "differences": []
+    },
+    "0791:26D7": {
+      "random": 4000,
+      "real": 32,
+      "equal": 4032,
+      "errors_both": 0,
+      "differences": []
+    },
+    "0791:2974": {
+      "random": 4000,
+      "real": 32,
+      "equal": 4032,
+      "errors_both": 0,
+      "differences": []
+    },
+    "0791:2B51": {
+      "random": 4000,
+      "real": 32,
+      "equal": 4032,
+      "errors_both": 0,
+      "differences": []
+    },
+    "0791:2BE5": {
+      "random": 4000,
+      "real": 32,
+      "equal": 4032,
+      "errors_both": 0,
+      "differences": []
+    },
+    "0791:2C29": {
+      "random": 4000,
+      "real": 32,
+      "equal": 4032,
+      "errors_both": 0,
+      "differences": []
+    },
+    "0791:2CEC": {
+      "random": 4000,
+      "real": 32,
+      "equal": 4032,
+      "errors_both": 0,
+      "differences": []
+    }
+  },
+  "captured_counts": {
+    "0791:045D": 4,
+    "0791:2974": 4,
+    "0791:2BE5": 4,
+    "0791:26D7": 4,
+    "0791:2B51": 4,
+    "0791:2C29": 4,
+    "0791:2CEC": 4
+  },
+  "all_equal": true,
+  "seconds": 81.28833740900154,
+  "source_sha256": {
+    "engine/src/geometry.rs": "8fc7fb202070d123300b6645633d349ffa6e6231f0d1b8bac3d57c2ace55a8ea",
+    "engine/src/host.rs": "a517add447a1e28cb4d2c3efc7628a6a23715a1550b65ed81d306fac73da84a4",
+    "engine/src/lib.rs": "076b8a0081e4b09e46225917f791f629c0c996f2b5ca390f3f33ae7f34ac0fc9",
+    "engine/src/machine.rs": "0937f8bb9b1196a585a949292ce23ab871516c14b578959a0c33c2c82583c795",
+    "engine/src/mem.rs": "f10a8b447bf667aab43e1eaaf12e1a6690416f34577e0a8e216dbc345c8cd68b",
+    "engine/src/py.rs": "5433d50617370da54c78ffbeee50897df4022b719615d570f2a44669a1c2bc41",
+    "engine/src/regs.rs": "c18bd0c8a220f2bbb09e1b4f53858e84bf6cd686ed2f46612f3970d6f1cf225a",
+    "engine/src/routines.inc.rs": "12b4539c79ab3f6f57a11bea0353bdc4deb0eb463d4beae54b0b9097318baeb9",
+    "engine/src/testhost.rs": "5e127a51c982d5a0d099e2e5da28f8c809a632c67ef0a257920a80bb4eb4dbfa",
+    "engine/src/tests.rs": "ed2ddb894963121289767e348f3e8529c623fbaf9fba50b4d137b736b7504c59",
+    "engine/python/goal2rust/__init__.py": "a227a6d946dbe76a04461101444b1b1b15428e8ff862c0770e8c36d872978265",
+    "engine/python/goal2rust/machine.py": "d2f99c202fc94f8e79606fc4d3fd848c9411e5ae967d931b81f766e1f02b0a5a",
+    "engine/python/goal2rust_engine/__init__.py": "70c88c35a93b6325c74630f3561ba6ffc654191f729e184649efb9b1b4a500f4",
+    "out/T02/differential_v1.py": "19fa844d854de43c1746a3eedfaec8be61b0a49073c4689214c5928d94088f6f",
+    "out/T02/differential_helpers.py": "968ed3f0d93def098b5f6823af20ada12f346ad1648194cfe377833e6057d462"
+  }
+}

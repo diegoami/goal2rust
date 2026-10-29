@@ -1,0 +1,2 @@
+{"mode": "cpu", "events": 831, "score": [1, 1], "drive_cpu_s": 48.63403734, "longest_stretch": {"context": ["run_match", "shootout", 120], "cpu_s": 8.063753378999998, "wall_s": 8.064065080005093}, "taps": null}
+wrote out/T02/cpu-pypy-python-v1.json

@@ -7,6 +7,8 @@ pub mod mem;
 pub mod regs;
 #[cfg(feature = "python")]
 pub mod py;
+#[cfg(feature = "python")]
+pub mod machine;
 #[cfg(test)]
 pub mod testhost;
 #[cfg(test)]

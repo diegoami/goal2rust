@@ -1,0 +1,26 @@
+    Updating crates.io index
+   Compiling goal2rust-engine v0.1.0 (/home/diego/projects/goal2rust/engine)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.13s
+     Running unittests src/lib.rs (engine/target/debug/deps/goal2rust_engine-2e8d5844a48a4f4b)
+
+running 11 tests
+test mem::tests::offsets_wrap_in_segment_linear_does_not ... ok
+test mem::tests::out_of_range_is_refused ... ok
+test mem::tests::signed_views ... ok
+test mem::tests::words_are_little_endian ... ok
+test mem::tests::wrapping_arithmetic_is_16_bit ... ok
+test tests::out_of_range_reads_are_errors_not_panics ... ok
+test tests::direction_2be5_indexes_the_table_by_flag_xor_side ... ok
+test tests::registers_are_read_once_and_stored_in_insertion_order_without_sp_bp ... ok
+test tests::flush_writes_runs_in_address_order_later_writes_win ... ok
+test tests::keeper_045d_sets_flags_of_its_compare ... ok
+test tests::slot_is_on_ball_side_2b51 ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests goal2rust_engine
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

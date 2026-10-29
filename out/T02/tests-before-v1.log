@@ -1,0 +1,21 @@
+test_machine (unittest.loader._FailedTest.test_machine) ... ERROR
+
+======================================================================
+ERROR: test_machine (unittest.loader._FailedTest.test_machine)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_machine
+Traceback (most recent call last):
+  File "/home/diego/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "/home/diego/projects/goal2rust/engine/tests/test_machine.py", line 10, in <module>
+    from goal2rust.machine import PortMachine, BridgeRunner
+ModuleNotFoundError: No module named 'goal2rust.machine'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

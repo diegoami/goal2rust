@@ -1,0 +1,13 @@
+{
+  "returncode": 0,
+  "command": [
+    "/home/diego/projects/goal2rust/.venv/bin/python",
+    "-B",
+    "experiments/E036-match-port/compare.py",
+    "--family",
+    "F40",
+    "--no-screen",
+    "--candidate",
+    "/home/diego/projects/goal2rust/out/T02/family-F40-rust-host2-v4.jsonl"
+  ]
+}

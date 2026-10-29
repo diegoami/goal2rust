@@ -1,5 +1,4 @@
-# T01 M1: the crate's unit tests and the Python bindings' build. Written before the GitHub repository exists:
-# it has not run yet.
+# Rust unit tests, wheel packaging, and synthetic machine differentials.
 name: build
 on:
   push:
@@ -9,6 +8,12 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: diegoami/goal2-archaeology
+          ref: d3cf46a3e87f0ba04916867b5b231c4646a0c2bd
+          path: .cache/goal2-archaeology
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -26,3 +31,8 @@ jobs:
         run: |
           .venv/bin/pip install dist/*.whl
           .venv/bin/python -c "import goal2rust_engine as e; b = bytearray(0x110000); g = e.GuestMemory(b); g.w16(2, -1); assert g.u16(2) == 0xFFFF and g.i16(2) == -1 and b[2:4] == b'\xff\xff'; assert len(e.PORTS) >= 1"
+      - name: machine differential (synthetic memory; no private game image)
+        env:
+          PYTHONHASHSEED: "0"
+          PYTHONPATH: .cache/goal2-archaeology/runtime
+        run: .venv/bin/python -m unittest discover -s engine/tests -v
