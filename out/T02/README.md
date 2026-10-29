@@ -9,8 +9,11 @@ CPython extension digest. Production sources are unchanged.
 
 Fresh `host2-v1` proofs: 11 Rust tests, six synthetic tests on each interpreter,
 the CPython installed-wheel tests, 28,224/28,224 per-call/body/frame comparisons,
-and the caught guest-return-IP mutant. Native ordered taps and kit lifecycle
-checks are still running. Do not start duplicate producers on their output files.
+and the caught guest-return-IP mutant. The native ordered-tap drive is now equal
+on every required field, including the complete ordered tap hash and exactly
+880,504 native calls across the seven permitted addresses (`taps-rust-host2-v1.json`,
+`compare-rust-host2-v1.log`). The kit lifecycle check is still running. Do not
+start duplicate producers on its output files.
 
 The first F40 attempt on IT13 preserves two complete timeout records in
 `family-F40-rust-host2-v1.jsonl`: `F40/e032-0101` (300.206 CPU / 300.349 wall s)
@@ -20,6 +23,18 @@ group was verified and stopped after these failures. No other family match
 completed, and no timing receipt has started. A quiet-host retry must use a new
 append-only filename and the unchanged limits; these failures stay as evidence.
 T02 remains incomplete and PR #5 remains draft.
+
+The owner selected waiting for IT13 to become quiet. The continuation supervisor
+is `continue_host2_v1.py` (tool session 26456; append-only
+`continue-host2-v1.log`). It verifies the fresh native artifact hashes, waits for
+three load observations below 4, runs all 40 matches into the new
+`family-F40-rust-host2-v2.jsonl`, compares them with the unchanged oracle, waits
+for the existing lifecycle producer, and runs the artifact-aware ledger. Only
+after those gates and another quiet wait does it run the three paired timings.
+It stops on any failure; no limit/assertion is relaxed. Do not start a duplicate
+supervisor. If it stops, inspect the outputs and active processes before resuming
+the same command:
+`.venv/bin/python -u -B out/T02/continue_host2_v1.py >> out/T02/continue-host2-v1.log 2>&1`.
 
 Toolchain commands on IT13 need
 `CARGO_HOME="$PWD/.cache/cargo" RUSTUP_HOME="$PWD/.cache/rustup"`
