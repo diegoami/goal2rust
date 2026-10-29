@@ -1,0 +1,2 @@
+# The declared build tool of the crate's Python bindings (engine/pyproject.toml), pinned.
+maturin==1.15.0
