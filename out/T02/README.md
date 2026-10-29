@@ -1,133 +1,150 @@
-# T02 evidence and resume
+# T02 evidence and experiment continuation
 
-## M1: bridge-only machine equal (2026-10-29)
+**Owner wind-down, 2026-10-29:** all T02 experiment processes on this computer
+are stopped, including the recovery process group. The owner will start the
+experiments from another computer. Do not auto-restart experiments here or start
+T03. PR [#5](https://github.com/diegoami/goal2rust/pull/5) is draft; **T02 is not
+done**. Recheck its live head/CI and the latest comment on checkpoint issue #1.
 
-- Oracle remains pristine at `d3cf46a3e87f0ba04916867b5b231c4646a0c2bd`.
-- `taps-bridge-v1.json`, produced by `run_receipt_v1.py --backend rust --native 0
-  --mode taps --out out/T02/taps-bridge-v1.json`: E034-03's drive with every routine
-  bridged, equals `../T01/dev-taps-python-d3cf46a3.json` on events, result, full
-  memory, stretches and ordered taps (`compare-bridge-v1.log`). 831 events,
-  553 stretches, tap hash `76ac2f951bbed7bff94c4cfd1a2413de7207b47f027b141d35caf498f9f46647`.
-  `goal2rust.native_calls` is empty. Both oracle and implementation source hashes
-  were stable during the run. CPU time here is diagnostic, not the paired timing.
-- `tests-before-v1.log`: new machine tests fail before implementation.
-  `tests-dev-v3.log`: synthetic machine differentials pass, including 144 nested
-  call combinations and listener/site reentrancy and error cleanup.
-- Real match smoke: save/load at event 60 with five live frames reconstructed
-  identical frame state and full machine snapshot. Formal lifecycle checks remain.
-- `mutant-v1.json`: incrementing a pushed guest-call return IP is caught by the
-  machine differential (`PortError: no registered port/return at 0791:0111`).
-- **M2 pending**: `differential-v1.json` exposes native listener-value truncation
-  for stack flushes wider than eight bytes (26D7, 2B51, 2BE5), despite equal memory.
-  Fix `write_native` to retain arbitrary-width Python integers, then rerun into a
-  new receipt. Do not weaken its full-stack listener coverage.
+## What is proved
 
-All harness commands use `PYTHONHASHSEED=0` and
-`PYTHONPATH=engine/python:.cache/goal2-archaeology/runtime` from the repository root.
-`run_family_v1.sh` is append-only and resumable; `paired_v1.sh` starts CPython,
-PyPy, and the Rust machine together. No family or timing run has started at M1.
-Original game bytes and save images remain private in the ignored oracle cache.
+The oracle is pristine at `d3cf46a3e87f0ba04916867b5b231c4646a0c2bd`.
+The production code and this computer's CPython extension still hash exactly as
+in `taps-rust-v1.json`.
 
-## M2: seven routines native and equal (2026-10-29)
+| Gate | Evidence |
+| --- | --- |
+| All bodies bridged, ordered straight drive equal | `taps-bridge-v1.json`, `compare-bridge-v1.log` |
+| Seven T01 bodies native, ordered straight drive equal | `taps-rust-v1.json`, `compare-rust-v1.log`; exactly 880,504 native calls across exactly seven addresses |
+| Per-call/body/full-frame differential | `differential-v2.json`: 28,224/28,224 equal; 500 random and four captured real inputs per routine, four tap/listener modes, body and whole-frame execution |
+| Machine mutant caught | `mutant-v2.json`: pushed guest-call return IP incremented; the synthetic machine differential catches `PortError: no registered port/return at 0791:0111` |
+| Kit engine and lifecycle | `check-rust-v1.json`: engine, interactive save/load, goals, knockout all pass; straight/resumed/expected digests agree, including extra time and shootout-order replay |
+| Synthetic tests and installed wheels | `tests-v3.log`, `wheel-tests-v3.log`, `wheel-tests-pypy-v3.log`: six tests pass on CPython 3.12 / PyPy 3.11; includes 144 call combinations, recursion sharing a return address, stop/replay, callback reentrancy/errors, native bypass and wide listener values |
+| Next-subtree proposal | `next-subtrees.md`, `profile-subtrees-v2.json` (planning only) |
 
-- Fixed native listener delivery to construct the integer from **all** coalesced
-  stack bytes, rather than folding into u64. The v1 failed differential is kept.
-- `differential-v2.json`: 28,224/28,224 equal. Per routine: 500 random inputs and
-  four real inputs captured from the drive, each in four tap/listener modes and
-  both bare-body and whole-frame execution. Full memory, every register, result,
-  exception and ordered taps/listeners are compared. Real inputs live only in RAM;
-  receipts contain counts/hashes. All seven have four captured real inputs.
-- `taps-rust-v1.json` equals the original Python receipt on every required field
-  (`compare-rust-v1.log`), including the same ordered hash as M1. Its native call
-  map has exactly the seven T01 entries, totalling 880,504 calls; all remaining
-  bodies run through the bridge. Source hashes before/after are equal.
-- `tests-v2.log`: synthetic tests now cover all seven native full frames and
-  >64-bit listener values, and poison their Python bodies to prove they are not
-  called. `mutant-v2.json` rechecks the return-IP mutant on the corrected source.
-- F40 is running with two workers, append-only in `family-F40-rust-v1.jsonl`.
-  Resume with `out/T02/run_family_v1.sh`; the original family runner skips records
-  already appended. Compare only once all 40 have completed; preserve any errors.
-- The unmodified `original_match.check --engine port --no-unicorn` is running
-  into `check-rust-v1.json` for its engine, interactive save/load, goal consistency,
-  and knockout replay checks. CPU receipts wait until these validation runs finish
-  and the machine is quiet. No T03 work is authorized here.
+The wide-stack listener differential initially failed (`differential-v1.json`).
+Rust had truncated a coalesced write's listener value to u64 for runs longer than
+eight bytes. Memory remained equal. The corrected host constructs the integer
+from the entire run. Keep this stronger full-stack coverage and the failing
+receipt; full memory alone would not have exposed that observable error.
+`tests-before-v1.log` records the new machine tests failing before implementation.
 
-Additional M2 validation: `tests-v3.log` adds recursion with five live frames
-sharing a return address and a stop before resume; it agrees with the oracle.
-`wheel-tests-v3.log` and `wheel-tests-pypy-v3.log` pass the six synthetic tests
-from separately built/installed CPython 3.12 and PyPy 3.11 wheels. `engine/README.md`
-documents the per-event API. The production sources and CPython extension still
-hash exactly as in the native M2 taps receipt.
+## What remains
 
-The proposed next-subtree order is drafted in `next-subtrees.md` with generated
-profile/call-edge evidence in `profile-subtrees-v2.json`. Generator resumptions
-are distinguished from the actual dispatched call counts in the T01 top-40
-call table. M3's paired timing gate is still pending; do not infer speed from the
-tapped validation runs.
+1. F40 must be `compare.py --family F40 --no-screen` identical **40/40**.
+2. `cpu-{python,pypy-python,rust}-v1.json` must run together on one quiet machine,
+   with source/extension hashes. None of these CPU receipts has started.
+3. Publish the final evidence/timing assessment, finalize the profile-based plan,
+   and pass CI on the exact final PR head. Follow CLAUDE.md's review/merge rules;
+   do not start another task. The Done-when in `docs/tasks/T02.md` is unchanged.
 
-Final gate orchestration (supervised):
+## F40 interruption: preserve the failure
 
-```sh
-.venv/bin/python -u -B out/T02/finish_v1.py >> out/T02/finish-v1.log 2>&1
-```
+`family-F40-rust-v1.jsonl` has **34 complete lines: 33 completed matches and one
+TimeLimit** (`F40/edit-3a5c`, 300.189 CPU / 300.202 wall s). Host load had risen to
+about 16 with only our two family workers active. The runner and verified workers
+were stopped; no partial JSON line was left. The old final supervisor correctly
+refused this error (`finish-v1.log`). No semantic difference has been established;
+the completed matches have not yet had their final full-family comparison.
 
-It waits for F40 and the existing check run, refuses failed records/checks,
-records `compare.py`'s exit status, verifies the M2 source/extension hashes, and
-requires three quiet load observations before starting the paired CPU runs.
-It preserves existing records and refuses incomplete timing attempts. A partial
-supervisor log can be appended to on resume. It neither publishes nor starts
-another task. The kit check itself is the unmodified standard producer; if
-interrupted before its JSON report, preserve its log and rerun the command with
-stdout appended (or use a new receipt version if the completed report failed).
+When load fell, recovery launched the seven failed/missing IDs, but the owner
+then requested this handover. It was stopped before producing any match record.
+There is **no** rerun JSONL yet. `recovery-attempts-v1.jsonl` and the rerun/recovery
+logs preserve its launch and interruption. No experiment process remains active.
+Old tool sessions 17713/57926 stopped, 33178 finished successfully, and 81157 was
+interrupted and terminated its child process group. These session IDs are history,
+not commands to resume on the next computer.
 
-## Mid-run recovery checkpoint (2026-10-29)
+For the **same built artifact**, `recover_quiet_v1.py` implements T01's accepted
+recovery pattern: wait for three quiet observations, rerun only the failed/six
+missing IDs under the unchanged default limits, assemble the 33 completed v1 lines
+and seven rerun lines byte-for-byte into v2, then require all 40 to compare equal.
+`assembly-v2.json` would record every source line and digest. The failed v1 record
+stays in git. Do not increase limits, omit a match or replace a completed match
+because its comparison differs.
 
-F40 has 20 completed records with no runner errors; its **final comparison is
-pending**, not inferred from completion. The partial append-only family receipt
-and log are pushed for recovery. Before resuming either producer in a new
-session, check whether the existing runner is still active; do not run two
-producers against the same output. Current sessions: family 17713, kit check
-33178, final-gate supervisor 57926. The supervisor is waiting for both producers.
-The production implementation and extension still match M2. CI passed on
-`c40369f`; any subsequent final head must have its own passing CI.
+## Starting on the other computer
 
-## Lifecycle checks passed (2026-10-29)
-
-`check-rust-v1.json`: the unchanged kit's engine, interactive save/load, goal
-consistency, and knockout checks all pass, with Unicorn imports positively
-refused. The interactive straight/resumed/expected digests agree, as do the
-knockout straight/extra-time-resumed/shootout-order-resumed/expected digests.
-F40 is still running (24 completed records at this checkpoint, no runner errors);
-its final comparison and paired CPU receipts remain pending.
-
-## Shared-load interruption and unchanged-limit recovery (2026-10-29)
-
-The host load rose to about 16 while only our two family workers were active.
-`F40/edit-3a5c` hit the **unchanged 300-second** family limit (300.189 CPU /
-300.202 wall seconds). v1 is preserved with 34 complete JSON records: 33
-completed matches and that one timeout. The runner and its two verified worker
-PIDs were stopped; no partial JSON line was left. The old final supervisor
-correctly refused the error receipt. **T02 is not done.**
-
-Recovery follows T01's documented accepted pattern: wait for a quiet machine,
-run only the failed and six missing IDs into the separate append-only
-`family-F40-rust-v1-rerun.jsonl`, assemble the 33 completed v1 lines and seven
-rerun lines byte-for-byte into v2, and require the original `compare.py` to pass
-all 40. `assembly-v2.json` will record every selected line's source and digest;
-the failed v1 line remains in git. No time limit, assertion, comparison field or
-required match is weakened or skipped.
-
-The active quiet/recovery supervisor is tool session **81157**:
+Read `CLAUDE.md`, `AGENTS.md`, `docs/tasks/T02.md`, this file, and the live PR/#1
+checkpoint. Check out `task/T02-machine` and fetch its latest pushed head.
+Prerequisites are Rust, CPython 3.12, PyPy 3.11, and the pinned oracle clone. Verify:
 
 ```sh
-.venv/bin/python -u -B out/T02/recover_quiet_v1.py >> out/T02/recover-quiet-v1.log 2>&1
+git -C .cache/goal2-archaeology rev-parse HEAD
+# must be d3cf46a3e87f0ba04916867b5b231c4646a0c2bd
 ```
 
-Do not start a second supervisor while it is active. It currently waits for
-three quiet observations (one-minute load <4), then runs the seven-ID recovery,
-the v2 comparison/source ledger, and finally the three paired CPU receipts after
-another quiet check. Existing partial outputs are preserved; failed reruns are
-refused. This supervisor stops its own child process group if interrupted.
-The old sessions 17713/57926 are stopped; 33178 finished with all checks passing.
-All runtime source and CPython extension hashes still match M2. CPU receipts have
-not started. No new subtree has been ported.
+If the clone is absent, obtain goal2-archaeology and check out that exact commit.
+Provision the owner's reference image privately under its `.cache/dl`, as
+`original_match.assets.reference_image` expects. Images/checkpoints are never in
+git. Do not amend the oracle to load Rust; the process-local adapter does that.
+Build the extension as in `engine/README.md`. Build/install the PyPy wheel too,
+since the paired producer fingerprints its interpreter's installed extension:
+
+```sh
+pypy3.11 -m venv .venv-pypy
+CARGO_TARGET_DIR=/tmp/goal2rust-T02-target-pypy .venv/bin/maturin build \
+  --release --locked --manifest-path engine/Cargo.toml \
+  -i .venv-pypy/bin/python -o /tmp/goal2rust-T02-wheels-pypy
+.venv-pypy/bin/pip install --no-index --force-reinstall /tmp/goal2rust-T02-wheels-pypy/*.whl
+```
+
+**A rebuild may change the extension digest. Do not bypass the old artifact hash
+assertion.** Give the new build fresh proof receipts and run a fresh full F40 for
+that artifact, retaining this computer's receipts as evidence. The commands below
+use the new `host2-v1` names; refuse/choose another version if any output exists.
+Run them from the repository root, on a quiet machine. Long family output is
+append-only; repeat its command to resume after verifying no old runner is active.
+
+```sh
+export PYTHONHASHSEED=0
+export PYTHONPATH="$PWD/engine/python:$PWD/.cache/goal2-archaeology/runtime"
+.venv/bin/python -B -m unittest discover -s engine/tests -v > out/T02/tests-host2-v1.log 2>&1
+.venv/bin/python -B out/T02/differential_v1.py --trials 500 --out out/T02/differential-host2-v1.json > out/T02/differential-host2-v1.log 2>&1
+.venv/bin/python -B out/T02/mutant_v1.py out/T02/mutant-host2-v1.json > out/T02/mutant-host2-v1.log 2>&1
+.venv/bin/python -B out/T02/run_receipt_v1.py --backend rust --native 1 --mode taps --out out/T02/taps-rust-host2-v1.json > out/T02/taps-rust-host2-v1.log 2>&1
+.venv/bin/python out/T01/compare_receipts.py out/T01/dev-taps-python-d3cf46a3.json out/T02/taps-rust-host2-v1.json
+out/T02/run_family_v1.sh family-F40-rust-host2-v1.jsonl >> out/T02/family-F40-rust-host2-v1.log 2>&1
+PYTHONPATH="$PWD/out/T02:$PYTHONPATH" GOAL2RUST_MACHINE=1 .venv/bin/python -B -m original_match.check --engine port --no-unicorn --cache .cache/goal2-archaeology/.cache/dl --json out/T02/check-rust-host2-v1.json >> out/T02/check-rust-host2-v1.log 2>&1
+```
+
+The lifecycle check can run alongside the two family workers on a quiet host;
+wait for both to finish before timing. Record the full-family comparison and its
+exit status (the ledger refuses a log without a successful status receipt):
+
+```sh
+.venv/bin/python - <<'PY'
+import json, subprocess
+from pathlib import Path
+root=Path.cwd()
+stem=root/'out/T02/compare-F40-rust-host2-v1'
+cmd=[str(root/'.venv/bin/python'),'-B','experiments/E036-match-port/compare.py',
+     '--family','F40','--no-screen','--candidate',str(root/'out/T02/family-F40-rust-host2-v1.jsonl')]
+with stem.with_suffix('.log').open('x') as log:
+    code=subprocess.run(cmd,cwd=root/'.cache/goal2-archaeology',stdout=log,stderr=subprocess.STDOUT).returncode
+with Path(str(stem)+'.status.json').open('x') as f: json.dump(dict(returncode=code,command=cmd),f,indent=2)
+assert code==0
+PY
+.venv/bin/python out/T02/validation_manifest_v1.py out/T02/validation-host2-v1.json \
+  --family-file "$PWD/out/T02/family-F40-rust-host2-v1.jsonl" \
+  --compare-stem compare-F40-rust-host2-v1 \
+  --proof-receipt "$PWD/out/T02/taps-rust-host2-v1.json" \
+  --check-file "$PWD/out/T02/check-rust-host2-v1.json" \
+  --differential-file "$PWD/out/T02/differential-host2-v1.json" \
+  --mutant-file "$PWD/out/T02/mutant-host2-v1.json" \
+  --tests-file "$PWD/out/T02/tests-host2-v1.log"
+```
+
+The ledger verifies the new native taps against the original on every required
+field, verifies native call counts, successful differential/mutant/check receipts,
+and exact current source/extension hashes. It does not accept a new binary merely
+because its source looks similar.
+
+Finally, with no validation work or foreign heavy load active, collect three quiet
+load observations and run `out/T02/paired_v1.sh`. It starts CPython Python, PyPy
+Python and the CPython Rust machine together, clears overrides/mutant flags,
+records load before/after, and writes all required `cpu-*-v1.json` with source and
+extension hashes. Existing/incomplete timing outputs must be preserved and
+inspected, not overwritten. Compare both baselines with Rust (the script does),
+report measured results against **PyPy** too, commit/push receipts, update draft
+PR #5 and the GitHub checkpoint, and recheck the final head's CI. No T03 work.
