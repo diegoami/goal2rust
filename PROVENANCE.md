@@ -20,3 +20,26 @@ The machinery each routine runs on is translated from the same commit: `Regs`, `
 reads, writes, registers and `ss_lin`, `_set_plain` and `PortMachine.write_as`'s fast path (`port/engine.py`) in
 `engine/src/py.rs`. The hook that loads them is `out/T01/rust-hook-v1.patch` on a clone of d3cf46a3 (not in
 goal2-archaeology).
+
+## T02 machine
+
+The same exact oracle commit is `d3cf46a3e87f0ba04916867b5b231c4646a0c2bd`.
+`engine/src/machine.rs` translates `port/engine.py`'s `PortMachine` register/memory IO,
+`write_as`, `pc`, `_dispatch`, and `run`; `port/guest.py`'s `PortFrame` constructor,
+`start`, `_in_frame`, `_step`, `_issue`, `returned`, `resume`, and `_finish`; and
+`machine.py`'s `return_from`, `stack_word`, `fire`, and listener delivery.
+
+`MachineCore` owns one memory buffer and a Rust register bank. `_PortMemory` borrows
+that buffer and accesses the same bank through `RegisterFile`; there is no bridge
+state synchronization. Native bodies call the existing seven `geometry.rs`
+functions through `NativeHost`, directly from Rust. No further routines are ported.
+Python generator objects hold only unported bodies' continuations; their frame
+metadata, guest-call pushes, dispatch, suspension, and returns are Rust's.
+
+`engine/python/goal2rust/machine.py` adapts the unchanged kit's construction and
+registration APIs. It inherits `Machine`'s address helpers, kit registration
+helpers, far-call setup, and snapshot/restore (which use the Rust IO/register
+methods). The kit's event/decision logic and replay-based save format remain the
+pinned Python implementation. `goal2rust.Match` exposes its per-event API over
+this machine; `install()` selects it process-locally for the oracle harnesses,
+including `Match.load` replay. Nothing in the pinned clone is patched.

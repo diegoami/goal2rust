@@ -14,7 +14,7 @@ use pyo3::types::{PyByteArray, PyBytes, PyDict, PyList, PySet, PyTuple};
 use crate::host::{Host, Reg};
 use crate::mem::{self, MEM_SIZE};
 
-fn port_error(py: Python<'_>, what: String) -> PyErr {
+pub(crate) fn port_error(py: Python<'_>, what: String) -> PyErr {
     match py.import("original_match.port.mem").and_then(|m| m.getattr("PortError")) {
         Ok(cls) => match cls.call1((what.clone(),)) {
             Ok(e) => PyErr::from_value(e),
@@ -291,6 +291,7 @@ include!("routines.inc.rs");
 
 #[pymodule]
 fn goal2rust_engine(m: &Bound<'_, PyModule>) -> PyResult<()> {
+    m.add_class::<crate::machine::MachineCore>()?;
     m.add_class::<GuestMemory>()?;
     m.add_function(wrap_pyfunction!(crossing, m)?)?;
     m.add_function(wrap_pyfunction!(noop, m)?)?;

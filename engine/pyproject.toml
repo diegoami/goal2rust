@@ -9,4 +9,6 @@ requires-python = ">=3.11"
 
 [tool.maturin]
 features = ["python"]
-module-name = "goal2rust_engine"
+module-name = "goal2rust_engine.goal2rust_engine"
+python-source = "python"
+python-packages = ["goal2rust"]
