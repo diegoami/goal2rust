@@ -1,0 +1,9 @@
+EQUAL events: 831
+EQUAL events_sha256: "aa402fb8c2fd912c6bed8150ee79de0c4429c3bb2835651cfeaa6c2ebd7f1dd1"
+EQUAL score: [1, 1]
+EQUAL draws: 110835
+EQUAL result_sha256: "b08217dfc263e5406fe960e6a31dbae42770deb94f81b6ef339f2e1fac0eb289"
+EQUAL memory_sha256: "f308151e71b9c2559734d46c10b1b8890f2b1497fc59fa26cbffb6d83d7daaa6"
+EQUAL stretches: 553
+EQUAL taps: {"sha256": "76ac2f951bbed7bff94c4cfd1a2413de7207b47f027b141d35caf498f9f46647", "counts": {
+cpu 237.9 s -> 221.6 s (1.074x); heads d3cf46a3 -> d3cf46a3

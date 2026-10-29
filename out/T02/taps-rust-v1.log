@@ -1,0 +1,2 @@
+{"mode": "taps", "events": 831, "score": [1, 1], "drive_cpu_s": 221.568500279, "longest_stretch": {"context": ["run_match", "shootout", 120], "cpu_s": 47.564428324000005, "wall_s": 47.56527570199978}, "taps": {"sha256": "76ac2f951bbed7bff94c4cfd1a2413de7207b47f027b141d35caf498f9f46647", "counts": {"io": 158092779, "listen_enter": 114492, "listen_leave": 114492, "site_enter": 81134, "site_leave": 81134, "write": 4}}}
+wrote out/T02/taps-rust-v1.json

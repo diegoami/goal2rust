@@ -27,3 +27,27 @@ All harness commands use `PYTHONHASHSEED=0` and
 `run_family_v1.sh` is append-only and resumable; `paired_v1.sh` starts CPython,
 PyPy, and the Rust machine together. No family or timing run has started at M1.
 Original game bytes and save images remain private in the ignored oracle cache.
+
+## M2: seven routines native and equal (2026-10-29)
+
+- Fixed native listener delivery to construct the integer from **all** coalesced
+  stack bytes, rather than folding into u64. The v1 failed differential is kept.
+- `differential-v2.json`: 28,224/28,224 equal. Per routine: 500 random inputs and
+  four real inputs captured from the drive, each in four tap/listener modes and
+  both bare-body and whole-frame execution. Full memory, every register, result,
+  exception and ordered taps/listeners are compared. Real inputs live only in RAM;
+  receipts contain counts/hashes. All seven have four captured real inputs.
+- `taps-rust-v1.json` equals the original Python receipt on every required field
+  (`compare-rust-v1.log`), including the same ordered hash as M1. Its native call
+  map has exactly the seven T01 entries, totalling 880,504 calls; all remaining
+  bodies run through the bridge. Source hashes before/after are equal.
+- `tests-v2.log`: synthetic tests now cover all seven native full frames and
+  >64-bit listener values, and poison their Python bodies to prove they are not
+  called. `mutant-v2.json` rechecks the return-IP mutant on the corrected source.
+- F40 is running with two workers, append-only in `family-F40-rust-v1.jsonl`.
+  Resume with `out/T02/run_family_v1.sh`; the original family runner skips records
+  already appended. Compare only once all 40 have completed; preserve any errors.
+- The unmodified `original_match.check --engine port --no-unicorn` is running
+  into `check-rust-v1.json` for its engine, interactive save/load, goal consistency,
+  and knockout replay checks. CPU receipts wait until these validation runs finish
+  and the machine is quiet. No T03 work is authorized here.

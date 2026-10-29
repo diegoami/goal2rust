@@ -4,7 +4,7 @@ PYTHONPATH=engine/python:.cache/goal2-archaeology/runtime .venv/bin/python -m un
 """
 import unittest
 
-from original_match.port import Entry
+from original_match.port import Entry, load
 from original_match.port.engine import PortMachine as Oracle
 from original_match.port.guest import PortFrame, call
 from goal2rust.machine import PortMachine, BridgeRunner
@@ -137,6 +137,40 @@ class MachineTests(unittest.TestCase):
             return m.snapshot(), error, mem._entries, m.running
         for kind in ('yield', 'near', 'raise', 'missing'):
             with self.subTest(kind=kind): self.assertEqual(run(Oracle, kind), run(PortMachine, kind))
+
+    def test_native_seven_full_frames_and_arbitrary_width_listener_values(self):
+        import goal2rust_engine
+        entries = {ad: e for registry, _ in load(['geometry', 'entrypoints'])
+                   for ad, e in registry.entries.items() if ad in goal2rust_engine.PORTS}
+        observed_wide = False
+        for address, entry in sorted(entries.items()):
+            for tapped in (False, True):
+                results = []
+                for cls in (Oracle, PortMachine):
+                    m = cls(bytes(0x110000), 0x823)
+                    ds, off = m.DS, 0x8100
+                    m._memory[ds*16+off+6] = 12
+                    args = [12] if address == '0791:045D' else ([6, ds, off] if address == '0791:26D7' else [ds, off])
+                    m.far_call(address, args, '000E:0300', 0x3000, 0x100)
+                    mem, log = m.port_memory(), []
+                    def listener(a, n, v): log.append(('write', a, n, v, m.pc()))
+                    m.on_write(0x30000, 0x3ffff, listener)
+                    if tapped: m.io_tap = lambda *x: log.append(('io',) + x)
+                    if cls is Oracle: PortFrame(m, mem, entry, None).start()
+                    else:
+                        # A native routine must bypass its Python body completely.
+                        old = entry.fn
+                        def forbidden(*args): raise AssertionError('native routine crossed into Python')
+                        try:
+                            entry.fn = forbidden
+                            BridgeRunner(entry, None, mem, {})(m)
+                        finally: entry.fn = old
+                        self.assertEqual(m._core.native_calls, {address: 1})
+                    m.io_tap = None
+                    results.append((m.snapshot(), log))
+                    observed_wide |= any(x[0] == 'write' and x[2] > 8 and x[3] > 2**64 for x in log)
+                with self.subTest(address=address, tapped=tapped): self.assertEqual(*results)
+        self.assertTrue(observed_wide, 'must exercise a >64-bit coalesced stack listener value')
 
 
 if __name__ == '__main__':
