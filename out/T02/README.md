@@ -90,3 +90,12 @@ producers against the same output. Current sessions: family 17713, kit check
 33178, final-gate supervisor 57926. The supervisor is waiting for both producers.
 The production implementation and extension still match M2. CI passed on
 `c40369f`; any subsequent final head must have its own passing CI.
+
+## Lifecycle checks passed (2026-10-29)
+
+`check-rust-v1.json`: the unchanged kit's engine, interactive save/load, goal
+consistency, and knockout checks all pass, with Unicorn imports positively
+refused. The interactive straight/resumed/expected digests agree, as do the
+knockout straight/extra-time-resumed/shootout-order-resumed/expected digests.
+F40 is still running (24 completed records at this checkpoint, no runner errors);
+its final comparison and paired CPU receipts remain pending.
