@@ -12,8 +12,9 @@ the CPython installed-wheel tests, 28,224/28,224 per-call/body/frame comparisons
 and the caught guest-return-IP mutant. The native ordered-tap drive is now equal
 on every required field, including the complete ordered tap hash and exactly
 880,504 native calls across the seven permitted addresses (`taps-rust-host2-v1.json`,
-`compare-rust-host2-v1.log`). The kit lifecycle check is still running. Do not
-start duplicate producers on its output files.
+`compare-rust-host2-v1.log`). The fresh kit lifecycle suite has also passed all
+four checks: engine, interactive save/load, goals and knockout replay
+(`check-rust-host2-v1.json`); its producer (tool session 58762) finished normally.
 
 The first F40 attempt on IT13 preserves two complete timeout records in
 `family-F40-rust-host2-v1.jsonl`: `F40/e032-0101` (300.206 CPU / 300.349 wall s)
@@ -39,7 +40,7 @@ the same command:
 At 19:16 UTC the host load rose above 13 again. The verified family/supervisor
 process group (199482) was stopped with **16 complete v2 records and no runner
 errors**; no group members remained. `host2-interruptions-v1.jsonl` records the
-stop. The lifecycle producer was left running. The new supervisor above is
+stop. The lifecycle producer was left running and subsequently passed. The new supervisor above is
 waiting for quiet, then resumes the same append-only v2 file's missing matches;
 there is no failed v2 record to replace. Previous tool session 26456 is stopped.
 
