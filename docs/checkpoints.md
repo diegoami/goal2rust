@@ -71,3 +71,16 @@ Left, in order, on a quiet machine:
   `family-F40-rust-v2.jsonl` = v1's 37 completed records + the 3 reruns, byte for byte (`assemble_f40_v2.py`);
   `compare-F40-rust-v2.log`: 40 matches expected identical, 40 pass. With the taps receipt, Done-when 1 is met.
 - Next: M4, `out/T01/paired_v1.sh v1`; a PyPy baseline if measurable; then M5.
+
+## 2026-10-29 T01 M4 reached: paired CPU receipts
+
+- `out/T01/paired_v1.sh v1` on the quiet machine (load 2.1 before, 3.0 after; one foreign unit-suite process):
+  `cpu-python-v1.json` 116.7 s, `cpu-rust-v1.json` 98.5 s CPU for the drive (1.185x); shootout stretch 21.96 s to
+  20.57 s; events, result, memory and stretches equal; both with source hashes (clone sources from the producer,
+  crate/bindings sources and the extension's sha256 under `goal2rust`). Done-when 2 met.
+- PyPy baseline (owner's note): the crate also builds for PyPy 3.11 (`maturin build -i pypy3.11`, in `.venv-pypy`;
+  `engine/pyproject.toml` requires-python lowered to 3.11 for it, after the CPython receipts were taken).
+  `paired_pypy_v1.sh v1`: `cpu-pypy-python-v1.json` 35.2 s, `cpu-pypy-rust-v1.json` 46.2 s (0.76x: Rust through
+  cpyext is slower than PyPy's own JIT); equal events/result/memory. `differential-pypy-v1.json` 200/200 per routine;
+  `crossing-pypy-v1.json` per-call costs under PyPy.
+- Next: M5, docs/go-no-go.md.

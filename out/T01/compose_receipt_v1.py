@@ -12,12 +12,13 @@ ap.add_argument("raw", type=Path)
 ap.add_argument("out", type=Path)
 ap.add_argument("--clone", type=Path, required=True)
 ap.add_argument("--rust", action="store_true")
+ap.add_argument("--site", type=Path, default=G2R / ".venv/lib/python3.12/site-packages", help="where the crate's build is installed")
 a = ap.parse_args()
 receipt = json.loads(a.raw.read_text())
 sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()  # noqa: E731
 sources = sorted(list((G2R / "engine/src").rglob("*.rs")) + [G2R / "engine/Cargo.toml", G2R / "engine/Cargo.lock",
                  G2R / "engine/pyproject.toml", G2R / "bindings/goal2rust_overrides.py"])
-so = sorted((G2R / ".venv/lib/python3.12/site-packages/goal2rust_engine").glob("*.so"))
+so = sorted((a.site / "goal2rust_engine").glob("*.so"))
 git = lambda *c, cwd=G2R: subprocess.run(["git", *c], cwd=cwd, capture_output=True, text=True).stdout.strip()  # noqa: E731
 receipt["goal2rust"] = dict(
     rust_routines_on=a.rust, head=git("rev-parse", "HEAD"), dirty=bool(git("status", "--porcelain", "engine", "bindings")),

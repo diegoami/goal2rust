@@ -1,0 +1,70 @@
+{
+ "root": "/home/diego/projects/goal2rust/.cache/goal2-archaeology-spike",
+ "n": 50000,
+ "repeat": 5,
+ "unit": "ns per call",
+ "routines": {
+  "0791:045D": {
+   "bare_python_ns": 1229.71076,
+   "bare_rust_ns": 3497.82498,
+   "framed_python_ns": 1598.13774,
+   "framed_rust_ns": 4833.69076,
+   "bare_speedup": 0.33198527800327043,
+   "framed_speedup": 0.31612011817318336
+  },
+  "0791:26D7": {
+   "bare_python_ns": 5581.63868,
+   "bare_rust_ns": 5695.06346,
+   "framed_python_ns": 6064.12698,
+   "framed_rust_ns": 7154.4137,
+   "bare_speedup": 0.9797185725247605,
+   "framed_speedup": 0.8453909476121116
+  },
+  "0791:2974": {
+   "bare_python_ns": 1464.5971,
+   "bare_rust_ns": 4794.26838,
+   "framed_python_ns": 1922.10172,
+   "framed_rust_ns": 6274.3075,
+   "bare_speedup": 0.29031344587191626,
+   "framed_speedup": 0.29482257059803924
+  },
+  "0791:2B51": {
+   "bare_python_ns": 3265.9658,
+   "bare_rust_ns": 5188.55604,
+   "framed_python_ns": 3744.23278,
+   "framed_rust_ns": 6261.4783,
+   "bare_speedup": 0.6219865652564683,
+   "framed_speedup": 0.5912871809217708
+  },
+  "0791:2BE5": {
+   "bare_python_ns": 3324.75386,
+   "bare_rust_ns": 6589.0893,
+   "framed_python_ns": 3822.31338,
+   "framed_rust_ns": 8482.53536,
+   "bare_speedup": 0.49675477027068443,
+   "framed_speedup": 0.4438886616366079
+  },
+  "0791:2C29": {
+   "bare_python_ns": 1335.95042,
+   "bare_rust_ns": 4321.94842,
+   "framed_python_ns": 1815.8543,
+   "framed_rust_ns": 5224.9771,
+   "bare_speedup": 0.2923218111697279,
+   "framed_speedup": 0.3344751888305431
+  },
+  "0791:2CEC": {
+   "bare_python_ns": 1394.61094,
+   "bare_rust_ns": 4749.59682,
+   "framed_python_ns": 1924.86888,
+   "framed_rust_ns": 5455.60222,
+   "bare_speedup": 0.27804392712548603,
+   "framed_speedup": 0.3404299254856684
+  }
+ },
+ "restore_registers_ns": 102.51924,
+ "bare_python_noop_ns": 104.7864,
+ "bare_rust_noop_ns": 144.27008,
+ "bare_rust_crossing_ns": 581.33816,
+ "framed_python_noop_ns": 427.7713,
+ "framed_rust_crossing_ns": 1447.4035
+}
