@@ -1,0 +1,228 @@
+{
+  "proof_receipt": "out/T02/taps-rust-host2-v1.json",
+  "preserved_failed": [
+    {
+      "id": "F40/edit-8e05",
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 27
+    },
+    {
+      "id": "F40/edit-8e05",
+      "source": "out/T02/family-F40-rust-host2-v2-rerun-v1.jsonl",
+      "line": 1
+    },
+    {
+      "id": "F40/edit-c3c3",
+      "source": "out/T02/family-F40-rust-host2-v2-rerun-v1.jsonl",
+      "line": 2
+    }
+  ],
+  "inputs": {
+    "out/T02/family-F40-rust-host2-v2.jsonl": "ba7ac799c6d03555562d3bffbbbe51da3fc76ba7babdfb90f50cd1f95f18bbda",
+    "out/T02/family-F40-rust-host2-v2-rerun-v1.jsonl": "18dd6d5597ef5b3a665f3617c4457d88d6e84a0c3549077e5c8cd9374801d6c2",
+    "out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl": "361c8c43998e98389813c15f55f46739e4ae3801af16456b6aa507ef7080dbc4"
+  },
+  "candidate_sha256": "ebc9b026a509ad207f5df9bf714d4a6d21ef742ce2c67cb92b2789ac7a7caece",
+  "lines": {
+    "F40/e032-0101": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 1,
+      "sha256": "e6d1d72cde2518cf1ea37b8d27d97dfa0f225d0c75b3bf6af2a3c431c3279f7f"
+    },
+    "F40/e032-1234": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 2,
+      "sha256": "d6e5fc2e0bfdba16c9cccfa99b6f49123aaf293c13e84b756b9e758da277b105"
+    },
+    "F40/e032-2345": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 3,
+      "sha256": "7716782f0a852f3ce9c090937ff78d6a6501dfa22709214edfa2bff2ad3be83b"
+    },
+    "F40/e032-2b7e": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 4,
+      "sha256": "6f2f30601599230b37d50bd436302b3d2481a786ea9a2d0006fa4bc68358a8d0"
+    },
+    "F40/e032-4c1d": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 5,
+      "sha256": "cb4a9bc43775a93738f02b485dca3b5bdf468d8e65eb636b3f2dd14559ef5aa8"
+    },
+    "F40/e032-6a33": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 6,
+      "sha256": "41287543746681bcaafc58411d9a2fd2f7b1b0b96e8cab0ec93dbf5e87f149f1"
+    },
+    "F40/e032-8e05": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 7,
+      "sha256": "07656feef9e9875c5254ebd8c0e1418ddf3a12d927874c51e4e2d8056228abc6"
+    },
+    "F40/e032-a1f0": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 8,
+      "sha256": "21a8204af17ac58f7e1a838a7c28acdfc11c5c47a106b0f6501436edd991089f"
+    },
+    "F40/e032-c3c3": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 9,
+      "sha256": "b696c33f7efd6878d114c55ceb46f348a23b58867076bcd08a502338812998de"
+    },
+    "F40/e032-e719": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 10,
+      "sha256": "20b6b36961de6aa86db4e812c0af91f5ae293323e25bd540443b96b6d0a806d6"
+    },
+    "F40/more-0042": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 11,
+      "sha256": "c81ca4e5fd13d4d273a39b60a5a3277a00beed16eeabfcef3d420dff92955d12"
+    },
+    "F40/more-1111": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 12,
+      "sha256": "cbc039ed6a531a0e830192e8bf7bcb11e5751cfa1818fd34f1ef18bd488e4dad"
+    },
+    "F40/more-3a5c": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 13,
+      "sha256": "e8c9444d36e0689ecb2fe8808377ddfc65bd946a9cb0c8e1ee449e9aaa878a91"
+    },
+    "F40/more-5e5e": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 14,
+      "sha256": "ccd5c69ac294677f3e6011f92a8573fb4be4eec23ad7bf256fb186320cf4c73a"
+    },
+    "F40/more-7f31": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 15,
+      "sha256": "e7421ce68315d3faf671d1eca80bd1cee1b99b4154da90451decad5de0bb6f57"
+    },
+    "F40/more-9abc": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 16,
+      "sha256": "b12a7af06efb675f0e6d6c5639f3cd508ed684aa02cd9bef35460edc61db165a"
+    },
+    "F40/more-b4d2": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 17,
+      "sha256": "f15d3a6ba5847411cff29a6445abc64852f1ffa0eaa38a216a9b7dba00932b1f"
+    },
+    "F40/more-cafe": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 18,
+      "sha256": "bdefad49e45210504acd7cff260f3061d9593b5570b09daa8172cda67bd585cf"
+    },
+    "F40/more-d00d": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 19,
+      "sha256": "cd355d9e928eb6f51e59e51a3e45b083acb3a1ec66d2898907c0e15da77566dc"
+    },
+    "F40/more-face": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 20,
+      "sha256": "9d1247396665bffe015096587ebfe4e02bf840533f5435b5a692f752827bd7c0"
+    },
+    "F40/edit-0101": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 21,
+      "sha256": "de14334da54a3ac315ee80a376c30a56c2ec8d79ae9373471baa4b39ea89564d"
+    },
+    "F40/edit-1234": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 22,
+      "sha256": "8a0381400ee73a5f36f84d00eba59f19688431dfde0b0379106ca960ac3016c2"
+    },
+    "F40/edit-2345": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 23,
+      "sha256": "feccf781287290adab32d4c2893cfd5c431ad67706ad6eddf191c3dfbfb37d17"
+    },
+    "F40/edit-2b7e": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 24,
+      "sha256": "2b04253a8a3e133663ba8533f634b4cecd334a58a1b260d84efbb14c8f915929"
+    },
+    "F40/edit-4c1d": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 25,
+      "sha256": "43cb8bd751f6a22f5c6e262b650146b651374ced0020b3c20f8fc1061c4ed0cb"
+    },
+    "F40/edit-6a33": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 26,
+      "sha256": "91443073e6032493619dbc789f157734f75ce2dc506badb1ea0bff4acc3770d1"
+    },
+    "F40/edit-8e05": {
+      "source": "out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl",
+      "line": 1,
+      "sha256": "52cec0398af66ad1a1fe659a2a4cb2b8d4e426c7c2dde4709e061fe94e3741ec"
+    },
+    "F40/edit-a1f0": {
+      "source": "out/T02/family-F40-rust-host2-v2.jsonl",
+      "line": 28,
+      "sha256": "e5a3056aeb9a35a1e6fd38d28127a872f9eb01704a91ba385666e4e84144fe92"
+    },
+    "F40/edit-c3c3": {
+      "source": "out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl",
+      "line": 2,
+      "sha256": "13436cb1a18d638060271ddc495b286c2c013f9903628dad9ed29dcc519c028b"
+    },
+    "F40/edit-e719": {
+      "source": "out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl",
+      "line": 3,
+      "sha256": "628ec26b31e56f292761680fc0bbae076853202459aa38ffb1ee9d0fa9b3d4cd"
+    },
+    "F40/edit-0042": {
+      "source": "out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl",
+      "line": 4,
+      "sha256": "040c4dfc5422a02f9325e73e5f2d35c87238e764ba8ff00fbb18f26dee79c73e"
+    },
+    "F40/edit-1111": {
+      "source": "out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl",
+      "line": 5,
+      "sha256": "c147ea997b73cdd2ec0f45a96401bdf0d223933ae4486a3d9a0a6a3f47bd3897"
+    },
+    "F40/edit-3a5c": {
+      "source": "out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl",
+      "line": 6,
+      "sha256": "3372a0e55371b82959a2c560c4d14aa547c46acf4d1164e0983515a44b4bb9cb"
+    },
+    "F40/edit-5e5e": {
+      "source": "out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl",
+      "line": 7,
+      "sha256": "e19d7e7ceb2684b773a721b9ce1b92d94fa776d1ed76ab00e18c7529e136f2b5"
+    },
+    "F40/edit-7f31": {
+      "source": "out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl",
+      "line": 8,
+      "sha256": "497ae52b5b172aae3623eb2bcbf56451e2d8f41f1751f421941f29755592df47"
+    },
+    "F40/edit-9abc": {
+      "source": "out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl",
+      "line": 9,
+      "sha256": "caafa46a0bab0b6b64fbd3f2a545b8edac5d84995e0f2dcf0a95f3162176a1be"
+    },
+    "F40/edit-cafe": {
+      "source": "out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl",
+      "line": 11,
+      "sha256": "b9ecee6beed3a42d5910cda220a79f9e1e8838564222cf0bf39ddacc44e2c150"
+    },
+    "F40/edit-b4d2": {
+      "source": "out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl",
+      "line": 10,
+      "sha256": "50b1b16732e2dda24a68d95df3da31166842fccf7e14aae9b8b3d9c7038baa02"
+    },
+    "F40/edit-d00d": {
+      "source": "out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl",
+      "line": 12,
+      "sha256": "9beeb96116c8a645dff8d48dcf0ae4e80b0c2c14bfe4ab4bde7cf555fe682879"
+    },
+    "F40/edit-face": {
+      "source": "out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl",
+      "line": 13,
+      "sha256": "10478d9e3c63ce309d93d69ed4aa0b7dad67df30e11341f29c6e8edcd84adda8"
+    }
+  }
+}

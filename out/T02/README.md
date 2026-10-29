@@ -1,73 +1,47 @@
 # T02 evidence and experiment continuation
 
-## IT13 continuation, 2026-10-29
+## IT13 validation complete, 2026-10-29
 
-The owner resumed T02 on IT13 at `64e1033`. The pinned oracle and verified
-reference image are now provisioned in the ignored cache. Rust and PyPy are
-project-local too; see `host2-environment-v1.json` for versions and the rebuilt
-CPython extension digest. Production sources are unchanged.
+All three unchanged local Done-when gates pass. Final PR-head CI and the
+owner-run milestone review are tracked on PR #5 and checkpoint issue #1.
+See [assessment.md](assessment.md) for the evidence and timing assessment and
+[review-prompt.md](review-prompt.md) for the owner's review prompt. No T03 work
+has begun. **No experiment process remains active**; final supervisor session
+58978 finished with exit 0.
 
-Fresh `host2-v1` proofs: 11 Rust tests, six synthetic tests on each interpreter,
-the CPython installed-wheel tests, 28,224/28,224 per-call/body/frame comparisons,
-and the caught guest-return-IP mutant. The native ordered-tap drive is now equal
-on every required field, including the complete ordered tap hash and exactly
-880,504 native calls across the seven permitted addresses (`taps-rust-host2-v1.json`,
-`compare-rust-host2-v1.log`). The fresh kit lifecycle suite has also passed all
-four checks: engine, interactive save/load, goals and knockout replay
-(`check-rust-host2-v1.json`); its producer (tool session 58762) finished normally.
+| Gate | Fresh evidence |
+| --- | --- |
+| Native ordered drive | `taps-rust-host2-v1.json`, `compare-rust-host2-v1.log`: events, result, full memory, 553 stretches and complete ordered taps equal; exactly 880,504 calls across seven native addresses |
+| Per-call/body/frame differential | `differential-host2-v1.json`: 28,224/28,224 equal |
+| Machine mutant | `mutant-host2-v1.json`: corrupted guest-return IP caught by the full-frame differential |
+| Engine, save/load, goals, knockout | `check-rust-host2-v1.json`: all four pass |
+| F40 | `family-F40-rust-host2-v4.jsonl`, compare log/status: **40 identical, 0 fail** |
+| Exact artifact ledger | `validation-host2-v4.json`: sources/extension equal the fresh native-tap artifact |
+| Paired CPU | `cpu-{python,pypy-python,rust}-v1.json`: 146.111 / 48.634 / 107.394 CPU s; equal events/result/memory/stretches |
 
-F40 v2 now preserves **27 completed records and one timeout** in
-`family-F40-rust-host2-v2.jsonl`. Shared load returned after its quiet restart;
-`F40/edit-8e05` reached the unchanged limit (301.261 CPU / 301.287 wall s).
-Verified family group 221371 was stopped with no remaining members. Earlier
-interruptions at 16, 22 and 24 completed records are recorded in
-`host2-interruptions-v1.jsonl`. The first host2-v1 attempt's two timeouts also
-remain intact. No timing receipt has started. T02 is incomplete; PR #5 is draft.
+Rust is 1.361 times faster than plain CPython and uses 2.208 times PyPy's CPU.
+The runs started together after sustained quiet (both 1m/5m load below 4), with
+load 0.48 before and 1.55 after. Every source/extension fingerprint is unchanged.
+This is one paired drive, not a distribution or a speed win over PyPy.
 
-The first recovery also met renewed high load: its first two IDs timed out at
-the unchanged limit (`edit-8e05`, 299.891 CPU / 300.719 wall s; `edit-c3c3`,
-299.425 CPU / 300.103 wall s). Both records remain in
-`family-F40-rust-host2-v2-rerun-v1.jsonl`. Verified group 229900 was stopped with
-no remaining members; recovery session 25106 exited nonzero. No assembly,
-comparison, ledger or timing was allowed to pass that failure.
+F40's final candidate consists of 27 successful original v2 lines and exactly
+13 successful second-recovery lines, byte-for-byte. `assembly-host2-v4.json`
+records each source file, line number and digest. All earlier timeouts and
+interruption receipts remain intact; no limit, required ID, comparison field or
+artifact assertion changed. `recover_host2_v1.py` and its final log
+`recover-host2-v2.log` document the recovery. Do not restart completed producers.
 
-The owner selected waiting for IT13. **Current recovery supervisor: tool session
-58978**, `recover_host2_v1.py`, append-only `recover-host2-v2.log`. All previous
-continuation/recovery sessions are stopped. It verifies the fresh native proof
-and every current source/extension hash. The quiet gate is now stricter: three
-observations with **both one-minute and five-minute load below 4**, including
-before timing. Brief one-minute dips had repeatedly preceded renewed load.
-It reruns exactly the **13 failed/missing IDs** into
-`family-F40-rust-host2-v2-rerun-v2.jsonl`, with unchanged limits and two workers.
-Completed lines are never replaced after seeing their comparison result.
+The owner chose waiting on IT13. Brief quiet windows repeatedly preceded
+renewed load; the recovery gate was strengthened to require both 1m/5m load
+below 4. The private reference image and pinned unmodified oracle stay under
+`.cache/goal2-archaeology`; `host2-environment-v1.json` identifies this build.
+Toolchain commands on IT13 need `CARGO_HOME="$PWD/.cache/cargo"`,
+`RUSTUP_HOME="$PWD/.cache/rustup"`, and `$PWD/.cache/cargo/bin` on `PATH`.
+PyPy is installed in `.venv-pypy`.
 
-On success it assembles the 27 original completions plus 13 rerun lines
-byte-for-byte into `family-F40-rust-host2-v4.jsonl`. `assembly-host2-v4.json`
-records each input digest and each selected source file, line number and digest.
-The unchanged full-family comparison and fresh-artifact ledger must pass before
-another quiet wait and paired CPU timings. The ledger includes recovery/assembly
-evidence; all original assertions remain. A failure stops the supervisor and
-preserves its outputs. Inspect active processes before resuming; do not duplicate
-the producer. Its log prints the separate rerun process group.
-
-Resume this clean, partial rerun with:
-
-```sh
-.venv/bin/python -u -B out/T02/recover_host2_v1.py \
-  --prior out/T02/family-F40-rust-host2-v2.jsonl \
-  --prior out/T02/family-F40-rust-host2-v2-rerun-v1.jsonl \
-  --rerun out/T02/family-F40-rust-host2-v2-rerun-v2.jsonl --version 4 \
-  >> out/T02/recover-host2-v2.log 2>&1
-```
-
-If that rerun itself contains an error, preserve it: pass both prior files via
-repeated `--prior`, choose a new `--rerun` filename and increment `--version`.
-The helper rejects duplicate completions and partial lines rather than choosing
-between records. No limit, required ID, field or native-artifact assertion changes.
-
-Toolchain commands on IT13 need
-`CARGO_HOME="$PWD/.cache/cargo" RUSTUP_HOME="$PWD/.cache/rustup"`
-and `$PWD/.cache/cargo/bin` on `PATH`. The PyPy environment is `.venv-pypy`.
+The following handover and commands are historical context. A different build
+needs fresh proof receipts, a fresh full F40, and fresh timing names; never bypass
+the old artifact hashes or overwrite a completed/failed receipt.
 
 ## Previous computer's handover (historical)
 
@@ -77,7 +51,7 @@ experiments from another computer. Do not auto-restart experiments here or start
 T03. PR [#5](https://github.com/diegoami/goal2rust/pull/5) is draft; **T02 is not
 done**. Recheck its live head/CI and the latest comment on checkpoint issue #1.
 
-## New-session prompt
+### New-session prompt
 
 > Resume goal2rust T02 on branch `task/T02-machine`; fetch its latest pushed head.
 > Read `AGENTS.md`, `CLAUDE.md`, `docs/tasks/T02.md`, and `out/T02/README.md`, then
@@ -87,7 +61,7 @@ done**. Recheck its live head/CI and the latest comment on checkpoint issue #1.
 > CPython/PyPy/Rust CPU receipts on a quiet machine. Keep the Done-when unchanged;
 > do not start T03.
 
-## What is proved
+### What is proved
 
 The oracle is pristine at `d3cf46a3e87f0ba04916867b5b231c4646a0c2bd`.
 The production code and this computer's CPython extension still hash exactly as
@@ -110,7 +84,7 @@ from the entire run. Keep this stronger full-stack coverage and the failing
 receipt; full memory alone would not have exposed that observable error.
 `tests-before-v1.log` records the new machine tests failing before implementation.
 
-## What remains
+### What remains
 
 1. F40 must be `compare.py --family F40 --no-screen` identical **40/40**.
 2. `cpu-{python,pypy-python,rust}-v1.json` must run together on one quiet machine,
@@ -119,7 +93,7 @@ receipt; full memory alone would not have exposed that observable error.
    and pass CI on the exact final PR head. Follow CLAUDE.md's review/merge rules;
    do not start another task. The Done-when in `docs/tasks/T02.md` is unchanged.
 
-## F40 interruption: preserve the failure
+### F40 interruption: preserve the failure
 
 `family-F40-rust-v1.jsonl` has **34 complete lines: 33 completed matches and one
 TimeLimit** (`F40/edit-3a5c`, 300.189 CPU / 300.202 wall s). Host load had risen to
@@ -144,7 +118,7 @@ and seven rerun lines byte-for-byte into v2, then require all 40 to compare equa
 stays in git. Do not increase limits, omit a match or replace a completed match
 because its comparison differs.
 
-## Starting on the other computer
+### Starting on the other computer
 
 Read `CLAUDE.md`, `AGENTS.md`, `docs/tasks/T02.md`, this file, and the live PR/#1
 checkpoint. Check out `task/T02-machine` and fetch its latest pushed head.

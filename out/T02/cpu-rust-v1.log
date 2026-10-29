@@ -1,0 +1,2 @@
+{"mode": "cpu", "events": 831, "score": [1, 1], "drive_cpu_s": 107.394203327, "longest_stretch": {"context": ["run_match", "shootout", 120], "cpu_s": 21.709269574000004, "wall_s": 21.71097827199992}, "taps": null}
+wrote out/T02/cpu-rust-v1.json

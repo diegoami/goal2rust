@@ -1,0 +1,232 @@
+{
+  "mode": "cpu",
+  "head": "d3cf46a3e87f0ba04916867b5b231c4646a0c2bd",
+  "python": "3.12.15 (main, Oct  9 2026, 15:22:32) [Clang 22.1.3 ]",
+  "events": 831,
+  "events_sha256": "aa402fb8c2fd912c6bed8150ee79de0c4429c3bb2835651cfeaa6c2ebd7f1dd1",
+  "score": [
+    1,
+    1
+  ],
+  "draws": 110835,
+  "result_sha256": "b08217dfc263e5406fe960e6a31dbae42770deb94f81b6ef339f2e1fac0eb289",
+  "memory_sha256": "f308151e71b9c2559734d46c10b1b8890f2b1497fc59fa26cbffb6d83d7daaa6",
+  "drive_cpu_s": 146.110939766,
+  "drive_wall_s": 146.12781987299968,
+  "stretches": 553,
+  "longest_stretch": {
+    "context": [
+      "run_match",
+      "shootout",
+      120
+    ],
+    "cpu_s": 25.862546271,
+    "wall_s": 25.868354957005067
+  },
+  "stretches_over_1s": [
+    {
+      "context": [
+        "run_match",
+        "match",
+        1
+      ],
+      "cpu_s": 1.416414868,
+      "wall_s": 1.4164677529988694
+    },
+    {
+      "context": [
+        "run_match",
+        "match",
+        5
+      ],
+      "cpu_s": 1.259446682,
+      "wall_s": 1.2595188400009647
+    },
+    {
+      "context": [
+        "run_match",
+        "match",
+        6
+      ],
+      "cpu_s": 1.3275499030000013,
+      "wall_s": 1.3276242299980368
+    },
+    {
+      "context": [
+        "run_match",
+        "match",
+        14
+      ],
+      "cpu_s": 1.3384943379999967,
+      "wall_s": 1.3385829580001882
+    },
+    {
+      "context": [
+        "run_match",
+        "match",
+        15
+      ],
+      "cpu_s": 1.0898966709999982,
+      "wall_s": 1.0900566099953721
+    },
+    {
+      "context": [
+        "run_match",
+        "match",
+        22
+      ],
+      "cpu_s": 1.793653704999997,
+      "wall_s": 1.793663074997312
+    },
+    {
+      "context": [
+        "run_match",
+        "match",
+        24
+      ],
+      "cpu_s": 1.1968481859999969,
+      "wall_s": 1.1968739660005667
+    },
+    {
+      "context": [
+        "run_match",
+        "match",
+        29
+      ],
+      "cpu_s": 1.0663315619999878,
+      "wall_s": 1.0663937189965509
+    },
+    {
+      "context": [
+        "run_match",
+        "match",
+        29
+      ],
+      "cpu_s": 1.3566458049999994,
+      "wall_s": 1.3567108639981598
+    },
+    {
+      "context": [
+        "run_match",
+        "match",
+        30
+      ],
+      "cpu_s": 1.4584623619999917,
+      "wall_s": 1.4586186169981374
+    },
+    {
+      "context": [
+        "run_match",
+        "match",
+        38
+      ],
+      "cpu_s": 1.2758526199999949,
+      "wall_s": 1.2758541200018954
+    },
+    {
+      "context": [
+        "run_match",
+        "match",
+        45
+      ],
+      "cpu_s": 1.2972682719999966,
+      "wall_s": 1.2974040020053508
+    },
+    {
+      "context": [
+        "run_match",
+        "shootout",
+        120
+      ],
+      "cpu_s": 25.862546271,
+      "wall_s": 25.868354957005067
+    }
+  ],
+  "taps": null,
+  "source_sha256": {
+    "runtime/original_match/__init__.py": "b1286fdd13e3862f5e21c91c9879a1de078199c6180328e78bcde28f5ac12d5c",
+    "runtime/original_match/assets.py": "fb5da2f045c06e3a54d5fe162a89947969d547b3d0dca4d8ed716ea380250685",
+    "runtime/original_match/build.py": "e3b7c45b7442115361a6bfbded6f954749eea4e31e4f45714684bc2b071a6b41",
+    "runtime/original_match/check.py": "7b87da83260e19b26d76ea6189b56204bee0434960162c216b553f6f31be5b99",
+    "runtime/original_match/example.py": "d17a104f8c08635fb8a3ff61f6113aa56a902b88aef5fcceaf32ab27790bbacf",
+    "runtime/original_match/image.py": "0b6c8a98c0d4fabdfe63be52561dd2afc56a4f0a8238e8ccc06dfd33e78e35a9",
+    "runtime/original_match/machine.py": "c01aa890626ac0235f6e1a40dec93475624a5f09d426bdb6f701b37ceb6c2db1",
+    "runtime/original_match/match.py": "937f30228031de7b17fa67cae24a92c21ec42af48a43793c6e412e8b50df3ab3",
+    "runtime/original_match/port/__init__.py": "755c1d44d453854d04733ea1678ad588b23c45152d84336168c8342f9bc760e6",
+    "runtime/original_match/port/_display_finals.py": "32ad22c55be46cd6ce22ac105070f5938f94d013f3ea41d26df967d8bcf02325",
+    "runtime/original_match/port/attributes.py": "187df60ae923ab002c40939bf4eb7bacae63ac2b1a932fb1f1ba269d12503cc0",
+    "runtime/original_match/port/ball.py": "6b5f17ee9af3bf7dbb2bae4bd5ae00e1a012f6d6cf6e6e3c2cdd8464a7e2c72a",
+    "runtime/original_match/port/contests.py": "b4db099959a09a1dcb78f031e9a44dc64624a5ffd8ea7b0be3441298bb0ec40e",
+    "runtime/original_match/port/discipline.py": "a8ee74a7336ebd3d8c85ee71cbb6a089fca45fc0c05ee3efec866d798649fdcd",
+    "runtime/original_match/port/display.py": "33b298ead7c58815b9463a39f14e0ba862c81a3af02d53cd5f6184b0f4d8da5e",
+    "runtime/original_match/port/duels.py": "37fe8ea7dec6c3aff8c80d26367d3225460af037a839912e98b4e6217dd739b6",
+    "runtime/original_match/port/engine.py": "6439370e3ffcc5977bb066506431a25a0c300ea374faf28ec3f4fbd9718c6f14",
+    "runtime/original_match/port/entrypoints.py": "a55d378798ed5ec2c33404739b0961b8fec1e6167d1d301f5512cced4063b5b7",
+    "runtime/original_match/port/frame.py": "d4c0cd4753038d6058f8359818164ce8cd0be775191fc8338f9a7ec9849b3a6a",
+    "runtime/original_match/port/geometry.py": "a665d830ed16c00833a27216393a3b6f406251f44cef1f7fc9e80f7eb6bd3e81",
+    "runtime/original_match/port/guest.py": "1062b5ea7d72114b5f404485768f6aeca69a5d94ffb0285a31158b266c46de7f",
+    "runtime/original_match/port/mem.py": "0105113f8102a3e8c3544942a445e156fecc0196f7911089e7f789a7775fe45c",
+    "runtime/original_match/port/menus.py": "ea87406a9f0300d0d54c3f71d664a8ed2925505fb133b59a481e8fc5f098f053",
+    "runtime/original_match/port/motion.py": "4e7bab13c1e196464ecb41fd2ddb3a41878c217885c238fd2e80cd8329746eb2",
+    "runtime/original_match/port/pilot.py": "700a8bf56db7adcccd6d011b0e26d0a06599c24fbc451e44fee033b8e56e0863",
+    "runtime/original_match/port/positioning.py": "6a8feb436f745149a010db472a1aed04569d897875cd966eb434a6170b7f839e",
+    "runtime/original_match/port/postmatch.py": "32035e9d055055cc29ba6dedbb38ceda3ac18ea6cc5d2a40605450086f41f86e",
+    "runtime/original_match/port/prove.py": "74e7724eaf93206e4070b9bc41d2f04cf546e177b6a9718451da6476a313e8d7",
+    "runtime/original_match/port/quick.py": "28836a578a2937b72a4fff05ab315bb0a9f665f24cf79e5a14bd4da710432590",
+    "runtime/original_match/port/rare.py": "588b6fc3430a0e674664d9bf8f165bdf31779f240ac783f0490e5f4c5be1d66e",
+    "runtime/original_match/port/real.py": "dbd3e488d8959924ffedeb58f8afec62ffa4c71a35116d7dd72c307a30dcd1f9",
+    "runtime/original_match/port/restarts.py": "c378834575a59d89f31fea8f9ee5ffca7daaf98754a36e848164bb819ad87977",
+    "runtime/original_match/port/runtime.py": "2e94867069cd6e35c28af96426bfade7dcb381e370eb12af106627cbeeced0eb",
+    "runtime/original_match/port/selection.py": "4a2ac1e0868d44f0e58dfcf31b1df1c3f1171edf4a511d4695e73fb7ee9ef382",
+    "runtime/original_match/port/setup.py": "0f703063621cd8a96d9ac0acde56da89754aa885a3d94d9333991a115e8185e2",
+    "runtime/original_match/port/takers.py": "fcd182d4543af18a0def9e16773cd317939fd0ca37559f941b499bf9ab40d7b8",
+    "runtime/original_match/port/update.py": "0a4b3f58a48aec4fc69a229410e566af2144cc9e7153cbfd604da1557deb36b2",
+    "runtime/original_match/screens.py": "45c220305d3e9bbbb4680edbb29fee6d6526d6521fbeea67a969d7b8daf7b304",
+    "experiments/E033-original-match-kit/save_boundaries.py": "f56ee570bef8286f0af82b1eb1711e4b26b8021fa1b6da9b8e572ee3dd38dbd7",
+    "experiments/E036-match-port/out/T117/drive_receipt_v1.py": "d384d13a4f4fc71a452d3939a51a574df93f8cd9acfc2d9708080770eeee58c6"
+  },
+  "source_unchanged": true,
+  "diagnostic_not_acceptance": true,
+  "goal2rust": {
+    "native_calls": {},
+    "backend": "python",
+    "native": false,
+    "machine_mutant": 0,
+    "head": "5632ee51c3b67ddd08b9d41aa7547f0ddc04761b",
+    "source_sha256": {
+      "engine/src/geometry.rs": "8fc7fb202070d123300b6645633d349ffa6e6231f0d1b8bac3d57c2ace55a8ea",
+      "engine/src/host.rs": "a517add447a1e28cb4d2c3efc7628a6a23715a1550b65ed81d306fac73da84a4",
+      "engine/src/lib.rs": "076b8a0081e4b09e46225917f791f629c0c996f2b5ca390f3f33ae7f34ac0fc9",
+      "engine/src/machine.rs": "0937f8bb9b1196a585a949292ce23ab871516c14b578959a0c33c2c82583c795",
+      "engine/src/mem.rs": "f10a8b447bf667aab43e1eaaf12e1a6690416f34577e0a8e216dbc345c8cd68b",
+      "engine/src/py.rs": "5433d50617370da54c78ffbeee50897df4022b719615d570f2a44669a1c2bc41",
+      "engine/src/regs.rs": "c18bd0c8a220f2bbb09e1b4f53858e84bf6cd686ed2f46612f3970d6f1cf225a",
+      "engine/src/routines.inc.rs": "12b4539c79ab3f6f57a11bea0353bdc4deb0eb463d4beae54b0b9097318baeb9",
+      "engine/src/testhost.rs": "5e127a51c982d5a0d099e2e5da28f8c809a632c67ef0a257920a80bb4eb4dbfa",
+      "engine/src/tests.rs": "ed2ddb894963121289767e348f3e8529c623fbaf9fba50b4d137b736b7504c59",
+      "engine/python/goal2rust/__init__.py": "a227a6d946dbe76a04461101444b1b1b15428e8ff862c0770e8c36d872978265",
+      "engine/python/goal2rust/machine.py": "d2f99c202fc94f8e79606fc4d3fd848c9411e5ae967d931b81f766e1f02b0a5a",
+      "engine/python/goal2rust_engine/__init__.py": "70c88c35a93b6325c74630f3561ba6ffc654191f729e184649efb9b1b4a500f4",
+      "engine/Cargo.toml": "7ed7c5ffcf095582625fdcbdfdd5347943c46e6d51f5dcd69657a8e7f89157b8",
+      "engine/Cargo.lock": "fd74c4883808fc367e7d8172f7056de3b3b8c0a48053d966c6b27e495405f0a0",
+      "engine/pyproject.toml": "2f03baaad6363306fcc806d5313687e14fd1c4f5da0c08460f33948806025f64",
+      "out/T02/run_receipt_v1.py": "82fb3d57437e4f802478e655fdbb5c0a35e97e7ca813f15fc2920a0f3c1c003d",
+      "engine/python/goal2rust_engine/goal2rust_engine.cpython-312-x86_64-linux-gnu.so": "de1b8c24c829c3dd008be20c81a439d57afd8bd2cdcfd6fa0c09e5505f684ccb"
+    },
+    "source_unchanged": true,
+    "machine": {
+      "node": "IT13",
+      "cpus": 20,
+      "load_before": [
+        0.47998046875,
+        1.52587890625,
+        3.09375
+      ],
+      "load_after": [
+        1.54638671875,
+        1.73583984375,
+        2.94384765625
+      ]
+    }
+  }
+}
