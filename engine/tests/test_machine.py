@@ -172,6 +172,35 @@ class MachineTests(unittest.TestCase):
                 with self.subTest(address=address, tapped=tapped): self.assertEqual(*results)
         self.assertTrue(observed_wide, 'must exercise a >64-bit coalesced stack listener value')
 
+    def test_recursive_same_return_address_and_stop_before_resume(self):
+        def run(cls):
+            m = cls(bytes(0x110000), 0x823)
+            mem, calls, log = m.port_memory(), {}, []
+            def recursive(mem, _):
+                depth = mem.arg(0)
+                child = 0
+                if depth: child = yield call('0791:0100', depth-1, ret_to='0791:0110', far=True)
+                return depth + child
+            entry = Entry('0791:0100', 'retf 2', recursive, 'recursive')
+            def ret_site(replay):
+                log.append((replay, m.reg('sp'), len(m.frames)))
+                if len(log) == 1: m.stop('decision')
+            m.at('0791:0110', ret_site)
+            if cls is Oracle:
+                def runner(machine):
+                    calls[entry.address] = calls.get(entry.address, 0) + 1
+                    PortFrame(machine, mem, entry, None).start()
+            else: runner = BridgeRunner(entry, None, mem, calls)
+            m.port(entry.address, runner)
+            end = m.far_call(entry.address, [5], '000E:0300', 0x3000, 0x100)
+            self.assertEqual(m.run(end, fresh=True), 'decision')
+            self.assertEqual(len(m.frames), 5)
+            self.assertIsNone(m.run(end))
+            self.assertEqual(m.reg('ax'), 15)
+            self.assertTrue(log[1][0], 'the stopped return site must be replayed before frame resume')
+            return m.snapshot(), calls, log
+        self.assertEqual(run(Oracle), run(PortMachine))
+
 
 if __name__ == '__main__':
     unittest.main()

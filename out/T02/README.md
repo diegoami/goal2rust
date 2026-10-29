@@ -51,3 +51,16 @@ Original game bytes and save images remain private in the ignored oracle cache.
   into `check-rust-v1.json` for its engine, interactive save/load, goal consistency,
   and knockout replay checks. CPU receipts wait until these validation runs finish
   and the machine is quiet. No T03 work is authorized here.
+
+Additional M2 validation: `tests-v3.log` adds recursion with five live frames
+sharing a return address and a stop before resume; it agrees with the oracle.
+`wheel-tests-v3.log` and `wheel-tests-pypy-v3.log` pass the six synthetic tests
+from separately built/installed CPython 3.12 and PyPy 3.11 wheels. `engine/README.md`
+documents the per-event API. The production sources and CPython extension still
+hash exactly as in the native M2 taps receipt.
+
+The proposed next-subtree order is drafted in `next-subtrees.md` with generated
+profile/call-edge evidence in `profile-subtrees-v2.json`. Generator resumptions
+are distinguished from the actual dispatched call counts in the T01 top-40
+call table. M3's paired timing gate is still pending; do not infer speed from the
+tapped validation runs.

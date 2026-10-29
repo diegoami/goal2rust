@@ -6,7 +6,7 @@ cd "$G2R"
 export PYTHONHASHSEED=0 PYTHONPATH="$G2R/engine/python:$G2R/.cache/goal2-archaeology/runtime"
 uptime > out/T02/load-before-v1.txt
 .venv/bin/python -B out/T02/run_receipt_v1.py --backend python --mode cpu --out out/T02/cpu-python-v1.json > out/T02/cpu-python-v1.log 2>&1 & CP=$!
-.venv-pypy/bin/python -B out/T02/run_receipt_v1.py --backend python --mode cpu --out out/T02/cpu-pypy-python-v1.json > out/T02/cpu-pypy-python-v1.log 2>&1 & PP=$!
+PYTHONPATH="$G2R/.cache/goal2-archaeology/runtime" .venv-pypy/bin/python -B out/T02/run_receipt_v1.py --backend python --mode cpu --out out/T02/cpu-pypy-python-v1.json > out/T02/cpu-pypy-python-v1.log 2>&1 & PP=$!
 .venv/bin/python -B out/T02/run_receipt_v1.py --backend rust --mode cpu --out out/T02/cpu-rust-v1.json > out/T02/cpu-rust-v1.log 2>&1 & RS=$!
 status=0
 wait "$CP" || status=1

@@ -1,0 +1,60 @@
+module unique body self seconds / Python calls or generator resumes
+geometry 4.214 1114244
+ball 3.084 320939
+menus 2.79 234537
+entrypoints 2.297 507060
+positioning 1.836 1032751
+attributes 1.803 282494
+display 1.789 555587
+contests 1.352 699575
+motion 1.241 515741
+frame 0.809 472121
+pilot 0.466 75781
+quick 0.304 27369
+runtime 0.262 74224
+duels 0.202 118997
+restarts 0.136 46911
+rare 0.125 19491
+real 0.034 6720
+postmatch 0.019 656
+discipline 0.018 3540
+takers 0.011 4867
+update 0.005 1822
+setup 0.002 569
+selection 0.001 399
+next hot entries
+0791:2BE5 entrypoints direction 247014 native []
+1771:3216 attributes player_unavailable 233587 bridge []
+0791:2956 geometry player_unavailable_on_pitch 184872 bridge ['1771:3216']
+0791:2B51 geometry slot_is_on_ball_side 161484 native []
+0791:26D7 geometry player_effective_tactic 132774 native []
+0791:2C29 geometry slot_is_idle_ball_slot 112141 native []
+0791:2CEC geometry player_at_ball 93450 native []
+0791:045D entrypoints keeper 90495 native []
+0791:8F10 display draw_ball_state 79194 bridge []
+214B:0723 menus key_pressed 78132 bridge []
+0791:9372 menus match_key_poll 76928 bridge []
+0791:94E8 display speaker_noise_state 76847 bridge []
+0791:8537 motion move_player_sprite 75943 bridge ['0791:045D', '0791:2BE5', '0791:2C29', '0791:2EB8', '0791:8F10']
+0791:8AE9 motion update_player 75781 bridge ['0791:2AD4', '0791:2CEC', '0791:8537', '0791:869F', '0791:8889']
+0791:8889 pilot player_run_step 75781 bridge []
+0791:42CB positioning position_group 65877 bridge []
+214B:1E8D display speaker_off_memory 63498 bridge []
+0791:6188 duels handle_player_at_ball 57791 bridge []
+214B:06B1 entrypoints random_n 45266 bridge []
+0791:2974 entrypoints side 43146 native []
+0791:2996 geometry ball_holder_is_side0 40543 bridge []
+0791:4A28 positioning update_marking_destination 37118 bridge []
+23E4:08DF entrypoints membership 36766 bridge []
+0791:5049 contests energy_chance_branch 36198 bridge []
+0791:56D9 contests offside_call 36198 bridge []
+0791:57AC contests play_state_update 36198 bridge []
+0791:533B contests pass_receiver_destination 35723 bridge []
+0791:5565 contests challenge_duel 35193 bridge []
+0791:474D positioning adjust_depth_offset 34783 bridge []
+0791:94C9 display speaker_seed_step 32727 bridge []
+214B:0688 entrypoints explicit_seed_draw 32727 bridge []
+0791:2BB1 geometry slot_in_side 31689 bridge []
+0791:4438 positioning near_post_zone 30586 bridge []
+0791:2D10 geometry ball_ahead_of_by 28719 bridge []
+0791:2C86 geometry mirror_to_team_frame 25944 bridge []
