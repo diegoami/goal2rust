@@ -64,3 +64,10 @@ Left, in order, on a quiet machine:
    hashes), only with no foreign load.
 3. M5: fill the TBDs in `docs/go-no-go.md` (drive speed-up from the paired receipts, F40 result), final
    checkpoint, report.
+
+## 2026-10-29 T01 resumed; M3 reached: F40 identical 40/40
+
+- The 3 matches over the time limit rerun on the quiet machine (`family-F40-rust-v1-rerun.jsonl`, all completed);
+  `family-F40-rust-v2.jsonl` = v1's 37 completed records + the 3 reruns, byte for byte (`assemble_f40_v2.py`);
+  `compare-F40-rust-v2.log`: 40 matches expected identical, 40 pass. With the taps receipt, Done-when 1 is met.
+- Next: M4, `out/T01/paired_v1.sh v1`; a PyPy baseline if measurable; then M5.
