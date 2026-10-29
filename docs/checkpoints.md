@@ -43,3 +43,24 @@ Until the GitHub repository exists, the latest entry here is where the work stan
   (load 22): no difference found in any completed match. Next: rerun when the machine is quiet (family.py with a new
   --out), then M4's paired receipts (`out/T01/paired_v1.sh v1`) on a quiet machine.
 - `crossing-v1.json`: per-call costs; `docs/go-no-go.md` drafted (TBD: drive speed-up, F40).
+
+## 2026-10-29 T01 paused (owner's instruction: T79's 700-match port run needs the machine)
+
+No run of T01 is running; nothing was interrupted. State: M1 and M2 reached; M3's drive half met
+(`taps-rust-all-v1.json` equal to `dev-taps-python-d3cf46a3.json`); F40 37/40 identical, 3 not completed on the
+300 s wall-time limit under foreign load (no difference in any completed match). `docs/go-no-go.md` is a draft
+with TBD for the drive speed-up and F40.
+
+Left, in order, on a quiet machine:
+1. The 3 F40 reruns, into a new file (the v1 file keeps its error records and is not rewritten), from the hook
+   clone: `cd .cache/goal2-archaeology-spike && PYTHONHASHSEED=0 GOAL2_PORT_OVERRIDES=goal2rust_overrides
+   PYTHONPATH=runtime:<goal2rust>/bindings:<goal2rust>/.venv/lib/python3.12/site-packages python3.12 -B
+   experiments/E036-match-port/family.py --family F40 --engine port --no-unicorn --only
+   F40/edit-b4d2,F40/edit-d00d,F40/edit-face --out <goal2rust>/out/T01/family-F40-rust-v1-rerun.jsonl`. Then
+   either a documented 40-record candidate (the 37 completed v1 lines + the 3 rerun lines, byte for byte) or a
+   full new 40-match run (`family-F40-rust-v2.jsonl`), and `compare.py --family F40 --no-screen --candidate ...`
+   into a new log.
+2. M4: `out/T01/paired_v1.sh v1` (pristine and hook clone at once; writes `cpu-{python,rust}-v1.json` with source
+   hashes), only with no foreign load.
+3. M5: fill the TBDs in `docs/go-no-go.md` (drive speed-up from the paired receipts, F40 result), final
+   checkpoint, report.
