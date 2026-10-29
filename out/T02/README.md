@@ -6,6 +6,16 @@ experiments from another computer. Do not auto-restart experiments here or start
 T03. PR [#5](https://github.com/diegoami/goal2rust/pull/5) is draft; **T02 is not
 done**. Recheck its live head/CI and the latest comment on checkpoint issue #1.
 
+## New-session prompt
+
+> Resume goal2rust T02 on branch `task/T02-machine`; fetch its latest pushed head.
+> Read `AGENTS.md`, `CLAUDE.md`, `docs/tasks/T02.md`, and `out/T02/README.md`, then
+> recheck PR #5 and checkpoint issue #1. Experiments on the previous computer are
+> stopped. Follow the cross-computer instructions: preserve existing evidence and
+> hash assertions, rebuild and validate the artifact, complete F40 40/40 and paired
+> CPython/PyPy/Rust CPU receipts on a quiet machine. Keep the Done-when unchanged;
+> do not start T03.
+
 ## What is proved
 
 The oracle is pristine at `d3cf46a3e87f0ba04916867b5b231c4646a0c2bd`.
