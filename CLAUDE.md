@@ -45,6 +45,10 @@ the guest calls move to Rust early (T01's go/no-go, `docs/go-no-go.md` on its br
 3. One task, one PR, squash-merged once its Done-when lines and CI pass, pinned to the checked head.
 4. Only milestones mandate a review. No session starts a review: the main session writes the prompt
    and the owner runs it on a model of their choice. Relay findings in full.
+   Review prompts must name the PR and explicitly instruct the owner-invoked reviewer to post the
+   complete report as a PR comment: reviewed SHA, every finding and severity, checks run/skipped,
+   and coverage limits. Return the comment URL. If posting fails or is unavailable, say so and return
+   the full paste-ready report; do not leave the destination implicit or claim it was posted.
 5. The Done-when is not negotiable by the implementer: it stops and reports, never weakens an
    assertion or skips a test. The main session amends a Done-when on `main` with the reason.
 6. A question is not a request to edit files. Design decisions go to the owner; nothing else waits.

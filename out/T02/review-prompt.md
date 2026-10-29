@@ -42,9 +42,20 @@ Audit the unchanged Done-when against the evidence:
 Run appropriate public checks if useful. Any expensive private-image rerun must
 respect shared host load and use fresh output names; preserve failed receipts.
 Do not weaken a Done-when, patch the oracle, edit this implementation, merge the
-PR, publish a review, or begin T03 as part of this review.
+PR, or begin T03 as part of this review.
+
+## Deliver the report on PR #5
 
 Return every finding with severity, concrete file/line evidence, reproduction
 or failing case, and impact. Separate demonstrated defects from questions or
 coverage limits. Report the reviewed SHA and checks actually run. If there are
 no findings, say so and state the meaningful remaining coverage limits.
+
+Post the complete report as a comment on
+https://github.com/diegoami/goal2rust/pull/5 . Include the reviewed SHA, all
+findings, checks actually run, checks skipped and coverage limits. Use a
+structured body or `gh pr comment 5 --body-file <report-file>` to preserve the
+full text. Then return the posted comment URL and a short summary to the owner.
+If GitHub posting is unavailable or fails, explicitly say the report was not
+posted and return the complete paste-ready report. Do not claim posting succeeded
+or leave the report only in chat without identifying that failure.
