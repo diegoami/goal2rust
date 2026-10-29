@@ -1,0 +1,13 @@
+.cache/
+target/
+__pycache__/
+*.pyc
+.venv/
+*.so
+# no original-game bytes
+*.sav
+*.SAV
+*.DAT
+*.dat
+*.EXE
+*.exe
