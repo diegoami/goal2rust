@@ -79,3 +79,14 @@ supervisor log can be appended to on resume. It neither publishes nor starts
 another task. The kit check itself is the unmodified standard producer; if
 interrupted before its JSON report, preserve its log and rerun the command with
 stdout appended (or use a new receipt version if the completed report failed).
+
+## Mid-run recovery checkpoint (2026-10-29)
+
+F40 has 20 completed records with no runner errors; its **final comparison is
+pending**, not inferred from completion. The partial append-only family receipt
+and log are pushed for recovery. Before resuming either producer in a new
+session, check whether the existing runner is still active; do not run two
+producers against the same output. Current sessions: family 17713, kit check
+33178, final-gate supervisor 57926. The supervisor is waiting for both producers.
+The production implementation and extension still match M2. CI passed on
+`c40369f`; any subsequent final head must have its own passing CI.
