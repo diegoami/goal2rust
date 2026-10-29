@@ -16,44 +16,38 @@ on every required field, including the complete ordered tap hash and exactly
 four checks: engine, interactive save/load, goals and knockout replay
 (`check-rust-host2-v1.json`); its producer (tool session 58762) finished normally.
 
-The first F40 attempt on IT13 preserves two complete timeout records in
-`family-F40-rust-host2-v1.jsonl`: `F40/e032-0101` (300.206 CPU / 300.349 wall s)
-and `F40/e032-1234` (300.065 CPU / 300.179 wall s). Host load was about 15;
-the workers each received approximately a full CPU core. The family process
-group was verified and stopped after these failures. No other family match
-completed, and no timing receipt has started. A quiet-host retry must use a new
-append-only filename and the unchanged limits; these failures stay as evidence.
-T02 remains incomplete and PR #5 remains draft.
+F40 v2 now preserves **27 completed records and one timeout** in
+`family-F40-rust-host2-v2.jsonl`. Shared load returned after its quiet restart;
+`F40/edit-8e05` reached the unchanged limit (301.261 CPU / 301.287 wall s).
+Verified family group 221371 was stopped with no remaining members. Earlier
+interruptions at 16, 22 and 24 completed records are recorded in
+`host2-interruptions-v1.jsonl`. The first host2-v1 attempt's two timeouts also
+remain intact. No timing receipt has started. T02 is incomplete; PR #5 is draft.
 
-The owner selected waiting for IT13 to become quiet. The continuation supervisor
-is `continue_host2_v1.py` (current tool session 37665; append-only
-`continue-host2-v1.log`). It verifies the fresh native artifact hashes, waits for
-three load observations below 4, runs all 40 matches into the new
-`family-F40-rust-host2-v2.jsonl`, compares them with the unchanged oracle, waits
-for the existing lifecycle producer, and runs the artifact-aware ledger. Only
-after those gates and another quiet wait does it run the three paired timings.
-It stops on any failure; no limit/assertion is relaxed. Do not start a duplicate
-supervisor. If it stops, inspect the outputs and active processes before resuming
-the same command:
-`.venv/bin/python -u -B out/T02/continue_host2_v1.py >> out/T02/continue-host2-v1.log 2>&1`.
+The owner selected waiting for IT13. **Current recovery supervisor: tool session
+25106**, `recover_host2_v1.py`, append-only `recover-host2-v1.log`. Old continuation
+sessions 26456, 87377, 37276 and 37665 are stopped; do not resume them on v2's
+failed output. The recovery verifies the fresh native proof and every current
+source/extension hash, waits for three load observations below 4, and reruns
+exactly the **13 failed/missing IDs** into
+`family-F40-rust-host2-v2-rerun-v1.jsonl`, with the unchanged limits and two workers.
+Completed lines are never replaced after seeing their comparison result.
 
-At 19:16 UTC the host load rose above 13 again. The verified family/supervisor
-process group (199482) was stopped with **16 complete v2 records and no runner
-errors**; no group members remained. `host2-interruptions-v1.jsonl` records the
-stop. The lifecycle producer was left running and subsequently passed. The new supervisor above is
-waiting for quiet, then resumes the same append-only v2 file's missing matches;
-there is no failed v2 record to replace. Previous tool session 26456 is stopped.
+On success it assembles the 27 original completions plus 13 rerun lines
+byte-for-byte into `family-F40-rust-host2-v3.jsonl`. `assembly-host2-v3.json`
+records each input digest and each selected source file, line number and digest.
+The unchanged full-family comparison and fresh-artifact ledger must pass before
+another quiet wait and paired CPU timings. The ledger includes recovery/assembly
+evidence; all original assertions remain. A failure stops the supervisor and
+preserves its outputs. Inspect active processes before resuming; do not duplicate
+the producer. Its log prints the separate rerun process group.
 
-At 19:39 UTC another sustained load increase caused a second verified family
-stop (group 207048), before the unchanged timeout. **22 complete v2 records, no
-runner errors**, remain intact. Old supervisor session 87377 is stopped; the
-current session 37276 above waits for quiet before resuming missing matches.
-The second stop is recorded in the same append-only interruptions file.
-
-At 19:52 UTC a third sustained load spike required stopping verified group
-216144 before the unchanged timeout. **24 complete v2 records, no runner
-errors**, are preserved. Session 37276 is stopped; current session 37665 waits
-for quiet. The append-only interruptions file records the group and clean stop.
+Resume a clean, partial rerun with:
+`.venv/bin/python -u -B out/T02/recover_host2_v1.py >> out/T02/recover-host2-v1.log 2>&1`.
+If that rerun itself contains an error, preserve it: pass both prior files via
+repeated `--prior`, choose a new `--rerun` filename and increment `--version`.
+The helper rejects duplicate completions and partial lines rather than choosing
+between records. No limit, required ID, field or native-artifact assertion changes.
 
 Toolchain commands on IT13 need
 `CARGO_HOME="$PWD/.cache/cargo" RUSTUP_HOME="$PWD/.cache/rustup"`

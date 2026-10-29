@@ -1,0 +1,2 @@
+ports: attributes, ball, contests, discipline, display, duels, entrypoints, frame, geometry, menus, motion, pilot, positioning, postmatch, quick, rare, real, restarts, runtime, selection, setup, takers, update
+13 matches selected, 0 already in /home/diego/projects/goal2rust/out/T02/family-F40-rust-host2-v2-rerun-v1.jsonl, 13 to run

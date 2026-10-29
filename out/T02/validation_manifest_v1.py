@@ -20,6 +20,7 @@ ap.add_argument('--check-file',type=Path,default=G2R/'out/T02/check-rust-v1.json
 ap.add_argument('--differential-file',type=Path,default=G2R/'out/T02/differential-v2.json')
 ap.add_argument('--mutant-file',type=Path,default=G2R/'out/T02/mutant-v2.json')
 ap.add_argument('--tests-file',type=Path,default=G2R/'out/T02/tests-v3.log')
+ap.add_argument('--extra-evidence',type=Path,action='append',default=[])
 a=ap.parse_args()
 taps=json.loads(a.proof_receipt.read_text())
 oracle=json.loads((G2R/'out/T01/dev-taps-python-d3cf46a3.json').read_text())
@@ -47,6 +48,7 @@ paths=[family,check,G2R/'out/T02'/f'{a.compare_stem}.log',a.differential_file,
        a.mutant_file,a.tests_file,a.proof_receipt,G2R/'out/T02/next-subtrees.md',
        G2R/'out/T02/run_family_v1.sh',G2R/'out/T02/sitecustomize.py',status,
        G2R/'out/T02/paired_v1.sh',G2R/'out/T02/finish_v1.py',Path(__file__).resolve()]
+paths += a.extra_evidence
 if (G2R/'out/T02/assembly-v2.json').exists():
     paths += [G2R/'out/T02/assembly-v2.json',G2R/'out/T02/family-F40-rust-v1.jsonl',
               G2R/'out/T02/family-F40-rust-v1-rerun.jsonl',G2R/'out/T02/recover_quiet_v1.py',
