@@ -5,6 +5,12 @@ Era Software, 1993), for speed: goal2-archaeology's plain Python port runs a mat
 slower than the original under Unicorn (T78d, `experiments/E036-match-port/out/T78/play-speed-v1.json`).
 This repository translates; it decides nothing about what the original does.
 
+[designed: owner, 2026-10-29] Scope: the engine first, then the game, into Rust, in parallel with
+goal2 (which keeps its Python engine and its milestones meanwhile). The T01 spike's first finding
+shapes the order: leaf routines under the Python dispatcher gain only about 1.1 to 1.2 times on a
+match, because the port's per-call Python machinery dominates, so the dispatcher, the frames and
+the guest calls move to Rust early (T01's go/no-go, `docs/go-no-go.md` on its branch).
+
 ## Sources and the oracle
 
 - **Semantics**: [goal2-archaeology](https://github.com/diegoami/goal2-archaeology)'s accepted Python
