@@ -1,0 +1,51 @@
+test_plain_and_rust_workers_are_independent_and_equal (test_backend_processes.BackendProcessTests.test_plain_and_rust_workers_are_independent_and_equal) ... ok
+test_dispatch_error_and_cleanup (test_machine.MachineTests.test_dispatch_error_and_cleanup) ... ok
+test_listener_and_site_reentrancy_and_errors (test_machine.MachineTests.test_listener_and_site_reentrancy_and_errors) ... ok
+test_native_seven_full_frames_and_arbitrary_width_listener_values (test_machine.MachineTests.test_native_seven_full_frames_and_arbitrary_width_listener_values) ... ok
+test_nested_calls_full_state_and_ordered_taps (test_machine.MachineTests.test_nested_calls_full_state_and_ordered_taps) ... ok
+test_recursive_same_return_address_and_stop_before_resume (test_machine.MachineTests.test_recursive_same_return_address_and_stop_before_resume) ... ok
+test_register_aliases (test_machine.MachineTests.test_register_aliases) ... ok
+test_ignoring_negative_delta_is_detected (test_negative_return_delta.NegativeReturnDeltaTests.test_ignoring_negative_delta_is_detected) ... ok
+test_real_dos_shifted_frame_full_state_and_ordered_callbacks (test_negative_return_delta.NegativeReturnDeltaTests.test_real_dos_shifted_frame_full_state_and_ordered_callbacks) ... ok
+test_state_records_and_checkpoint_through_rust (test_sealed_api.SealedAPITests.test_state_records_and_checkpoint_through_rust) ... 
+  test_state_records_and_checkpoint_through_rust (test_sealed_api.SealedAPITests.test_state_records_and_checkpoint_through_rust) (mode='invalid') ... FAIL
+  test_state_records_and_checkpoint_through_rust (test_sealed_api.SealedAPITests.test_state_records_and_checkpoint_through_rust) (mode='records') ... FAIL
+  test_state_records_and_checkpoint_through_rust (test_sealed_api.SealedAPITests.test_state_records_and_checkpoint_through_rust) (mode='replay') ... FAIL
+
+======================================================================
+FAIL: test_state_records_and_checkpoint_through_rust (test_sealed_api.SealedAPITests.test_state_records_and_checkpoint_through_rust) (mode='invalid')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_sealed_api.py", line 67, in test_state_records_and_checkpoint_through_rust
+    self.assertEqual(run.returncode, 0, run.stdout + run.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 22, in <module>
+NameError: name 'sys' is not defined. Did you forget to import 'sys'?
+
+
+======================================================================
+FAIL: test_state_records_and_checkpoint_through_rust (test_sealed_api.SealedAPITests.test_state_records_and_checkpoint_through_rust) (mode='records')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_sealed_api.py", line 67, in test_state_records_and_checkpoint_through_rust
+    self.assertEqual(run.returncode, 0, run.stdout + run.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 22, in <module>
+NameError: name 'sys' is not defined. Did you forget to import 'sys'?
+
+
+======================================================================
+FAIL: test_state_records_and_checkpoint_through_rust (test_sealed_api.SealedAPITests.test_state_records_and_checkpoint_through_rust) (mode='replay')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_sealed_api.py", line 67, in test_state_records_and_checkpoint_through_rust
+    self.assertEqual(run.returncode, 0, run.stdout + run.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 22, in <module>
+NameError: name 'sys' is not defined. Did you forget to import 'sys'?
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.556s
+
+FAILED (failures=3)

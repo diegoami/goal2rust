@@ -1,0 +1,42 @@
+{
+  "oracle": "e0270981883f02ce46a31391e7070079977bbfef",
+  "previous": "d3cf46a3e87f0ba04916867b5b231c4646a0c2bd",
+  "unchanged": {
+    "machine.py": {
+      "equal": true,
+      "source_text_sha256": "ea0deea4c770b29ebe52ab89da26b3df7d8d9496396cb288936307dcee9688d3"
+    },
+    "port/engine.py": {
+      "equal": true,
+      "source_text_sha256": "ffb5e9d04364be31894f631665ca455caf8daa2e3fe633c6fa0c18a3a1013230"
+    },
+    "port/guest.py": {
+      "equal": true,
+      "source_text_sha256": "ac4f5cd9bfd5dca553e96e36848aece3ea2f610523964f65366bab27adfb9f80"
+    },
+    "port/runtime.py": {
+      "equal": true,
+      "source_text_sha256": "0050d1d5c6e63de294474768305dbe79c9d87b6417b1348350cd5b29497e00ce"
+    },
+    "port/geometry.py": {
+      "equal": true,
+      "source_text_sha256": "594ac938168f66c5ac12d5efe5bfca3f2cfd54ac3018070d92822e85927aa627"
+    },
+    "port/entrypoints.py": {
+      "equal": true,
+      "source_text_sha256": "0629e7532805201b24e75fb7cb773e1c070a51429474db2ee19f750507f7db72"
+    },
+    "port/attributes.py": {
+      "equal": true,
+      "source_text_sha256": "e9cb49f5200783419941fe1c12ba51ccc78acb4fcdcfb98f3d4de443a4376a20"
+    }
+  },
+  "tables": {
+    "ds": "049efefc6274a87f2e3484b571898fb7ec104aedf8c59e319b8e159b059797f5",
+    "code_data": "3325b696a32433cc403673ff5f54b99038af39beef94d4a9ffd63fd7df467a17"
+  },
+  "state_file_sha256": "965e80472fdaf9cb75a27438ae87c40a61c2d6399ceb3b2073609916e572e44f",
+  "reference_image_sha256": "e0afff6751747233f6ab8b9ba73dab0790b7509f15257ed7ae24f528b935657d",
+  "extraction": "upstream port_tables.py extract, registered owner GOAL.EXE; local ignored .cache/T03-tables",
+  "production_source_changed": false
+}
