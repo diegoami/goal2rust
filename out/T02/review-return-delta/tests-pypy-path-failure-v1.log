@@ -1,0 +1,49 @@
+test_machine (unittest.loader._FailedTest.test_machine) ... ERROR
+test_negative_return_delta (unittest.loader._FailedTest.test_negative_return_delta) ... ERROR
+
+======================================================================
+ERROR: test_machine (unittest.loader._FailedTest.test_machine)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_machine
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/.cache/python/pypy-3.11.16-linux-x86_64-gnu/lib/pypy3.11/unittest/loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/goal2rust/.cache/python/pypy-3.11.16-linux-x86_64-gnu/lib/pypy3.11/unittest/loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "/home/diego/projects/goal2rust/engine/tests/test_machine.py", line 10, in <module>
+    from goal2rust.machine import PortMachine, BridgeRunner
+  File "/home/diego/projects/goal2rust/engine/python/goal2rust/__init__.py", line 2, in <module>
+    from .machine import install
+  File "/home/diego/projects/goal2rust/engine/python/goal2rust/machine.py", line 12, in <module>
+    from goal2rust_engine import MachineCore
+  File "/home/diego/projects/goal2rust/engine/python/goal2rust_engine/__init__.py", line 1, in <module>
+    from .goal2rust_engine import *
+ModuleNotFoundError: No module named 'goal2rust_engine.goal2rust_engine'
+
+
+======================================================================
+ERROR: test_negative_return_delta (unittest.loader._FailedTest.test_negative_return_delta)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_negative_return_delta
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/.cache/python/pypy-3.11.16-linux-x86_64-gnu/lib/pypy3.11/unittest/loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/goal2rust/.cache/python/pypy-3.11.16-linux-x86_64-gnu/lib/pypy3.11/unittest/loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "/home/diego/projects/goal2rust/engine/tests/test_negative_return_delta.py", line 8, in <module>
+    from goal2rust.machine import BridgeRunner, PortMachine
+  File "/home/diego/projects/goal2rust/engine/python/goal2rust/__init__.py", line 2, in <module>
+    from .machine import install
+  File "/home/diego/projects/goal2rust/engine/python/goal2rust/machine.py", line 12, in <module>
+    from goal2rust_engine import MachineCore
+  File "/home/diego/projects/goal2rust/engine/python/goal2rust_engine/__init__.py", line 1, in <module>
+    from .goal2rust_engine import *
+ModuleNotFoundError: No module named 'goal2rust_engine.goal2rust_engine'
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (errors=2)
