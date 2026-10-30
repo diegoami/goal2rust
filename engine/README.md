@@ -32,6 +32,25 @@ For oracle harnesses, call `goal2rust.install()` in the test process before
 constructing/loading a kit match with `engine="port"`. This changes the factory
 only in that process. It does not edit the oracle or change its default backend.
 
+Select one port backend for the lifetime of each worker. `install()` permanently
+replaces both the kit's port-machine factory and its port runner in that process;
+it has no uninstall operation. A plain port-machine class captured before
+installation cannot subsequently run with the replaced runner. Compare plain
+Python and Rust in separate fresh subprocesses, installing Rust only in its
+worker before constructing or loading matches. Each receipt should identify the
+actual machine type and Rust native-call counts alongside source/extension hashes;
+`engine="port"` alone does not distinguish the two implementations.
+
+Constructing `goal2rust.Match` selects the Rust port backend and overwrites a
+supplied `engine=` option. Its `load()` installs the adapter and delegates to the
+kit's checkpoint loader, which reads the checkpoint's recorded backend; use
+port checkpoints for Rust replay. Use the unchanged kit's `original_match.Match`
+in a fresh worker for a plain-port baseline. Importing goal2rust alone does not
+install the adapter; constructing/loading its Match or calling install() does.
+Same-process backend coexistence is unsupported by the current adapter (review
+[#6](https://github.com/diegoami/goal2rust/issues/6)); this contract does not
+change the kit's default original/Unicorn backend or its checkpoint format.
+
 The machine owns the register bank and shared guest memory. Unported Python
 bodies use the same state through the bridge. T01's seven bodies execute directly
 in Rust; no other subtree has been translated. Site and write listeners remain
