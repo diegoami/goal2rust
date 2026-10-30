@@ -13,6 +13,12 @@ the guest calls move to Rust early (T01's go/no-go, `docs/go-no-go.md` on its br
 
 ## Sources and the oracle
 
+[designed: owner, 2026-10-30] Follow `docs/roadmap.md`: adopt archaeology's
+accepted state-and-tables boundary before the next native subtree, retain PyPy
+as the performance baseline, and add the larger explicit fidelity corpus at the
+engine milestone. Refresh proof receipts when changing the oracle or artifact;
+T01/T02's historical evidence stays bound to its original source.
+
 - **Semantics**: [goal2-archaeology](https://github.com/diegoami/goal2-archaeology)'s accepted Python
   port (`runtime/original_match/port/`, accepted for the 75-match admitted family by T78d) and the
   findings it cites. Where a decompiled routine and the port disagree, the port (proved against the

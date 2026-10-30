@@ -1,5 +1,10 @@
 # T02 M4: proposed subtree order
 
+Owner update, 2026-10-30: [the roadmap](../../docs/roadmap.md) inserts T03's
+accepted sealed-engine compatibility before T04's first native tree. The
+post-T02 diagnostic profile and preflight live in `out/roadmap/`; confirm the
+candidate at the new oracle pin. The original proposal below is historical.
+
 Planning only; T02 ports no additional routine. Oracle: archaeology
 `d3cf46a3e87f0ba04916867b5b231c4646a0c2bd`. Evidence is T01's measured
 `out/T01/profile-d3cf46a3-v1.prof` / `.txt`, summarised with literal guest-call
