@@ -1,0 +1,8 @@
+test_a_state_with_module_bytes_or_other_tables_is_refused (tests.test_port_seal.StateContract.test_a_state_with_module_bytes_or_other_tables_is_refused) ... ok
+test_tables_that_differ_from_their_manifest_are_refused (tests.test_port_seal.StateContract.test_tables_that_differ_from_their_manifest_are_refused) ... ok
+test_the_state_leaves_the_module_out_and_from_state_restores_it (tests.test_port_seal.StateContract.test_the_state_leaves_the_module_out_and_from_state_restores_it) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.081s
+
+OK

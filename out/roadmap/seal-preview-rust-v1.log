@@ -1,0 +1,2 @@
+denied: unicorn, .sav, .EXE, .DAT
+{"backend": "rust", "events": 831, "native_calls": {"0791:045D": 90495, "0791:2CEC": 93450, "0791:26D7": 132774, "0791:2B51": 161484, "0791:2974": 43146, "0791:2BE5": 247014, "0791:2C29": 112141}, "checks": {"replay_events_equal": true, "replay_result_equal": true, "replay_records_equal": true, "records_roundtrip_equal": true}}

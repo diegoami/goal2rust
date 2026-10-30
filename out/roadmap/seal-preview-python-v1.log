@@ -1,0 +1,2 @@
+denied: unicorn, .sav, .EXE, .DAT
+{"backend": "python", "events": 831, "native_calls": {}, "checks": {"replay_events_equal": true, "replay_result_equal": true, "replay_records_equal": true, "records_roundtrip_equal": true}}

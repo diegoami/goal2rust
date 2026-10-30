@@ -6,6 +6,10 @@ Read [CLAUDE.md](CLAUDE.md). The oracle is a pinned clone of goal2-archaeology i
 labelled `checkpoint` once the GitHub repository exists; until then `docs/checkpoints.md`), then
 recheck live heads and checks.
 
-T02's evidence, remaining gates and cross-computer experiment commands are in
+The owner-approved next sequence is in [docs/roadmap.md](docs/roadmap.md): T03's
+sealed-engine compatibility gates precede T04's first native call tree. Check
+upstream dependencies and the latest checkpoint before starting either task.
+
+T02 is complete. Its evidence and historical cross-computer experiment commands are in
 [out/T02/README.md](out/T02/README.md). Read that before restarting its experiments;
 keep the task's Done-when intact and consult the latest GitHub checkpoint for status.
