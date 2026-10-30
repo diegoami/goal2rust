@@ -1,0 +1,50 @@
+{
+  "accepted_oracle": "d3cf46a3e87f0ba04916867b5b231c4646a0c2bd",
+  "preview": "b46000bc5ef790696cfa3dc6eb905f2b28e5f057",
+  "goal2_main_checked": "4ef9829825ed8cd993cf081291f06c092c366085",
+  "changed_runtime_files": [
+    "runtime/original_match/check.py",
+    "runtime/original_match/image.py",
+    "runtime/original_match/match.py",
+    "runtime/original_match/port/__init__.py",
+    "runtime/original_match/port/tables.py"
+  ],
+  "audited_unchanged": {
+    "runtime/original_match/port/engine.py": {
+      "equal": true,
+      "old_sha256": "6439370e3ffcc5977bb066506431a25a0c300ea374faf28ec3f4fbd9718c6f14",
+      "preview_sha256": "6439370e3ffcc5977bb066506431a25a0c300ea374faf28ec3f4fbd9718c6f14"
+    },
+    "runtime/original_match/port/guest.py": {
+      "equal": true,
+      "old_sha256": "1062b5ea7d72114b5f404485768f6aeca69a5d94ffb0285a31158b266c46de7f",
+      "preview_sha256": "1062b5ea7d72114b5f404485768f6aeca69a5d94ffb0285a31158b266c46de7f"
+    },
+    "runtime/original_match/port/runtime.py": {
+      "equal": true,
+      "old_sha256": "2e94867069cd6e35c28af96426bfade7dcb381e370eb12af106627cbeeced0eb",
+      "preview_sha256": "2e94867069cd6e35c28af96426bfade7dcb381e370eb12af106627cbeeced0eb"
+    },
+    "runtime/original_match/machine.py": {
+      "equal": true,
+      "old_sha256": "c01aa890626ac0235f6e1a40dec93475624a5f09d426bdb6f701b37ceb6c2db1",
+      "preview_sha256": "c01aa890626ac0235f6e1a40dec93475624a5f09d426bdb6f701b37ceb6c2db1"
+    },
+    "runtime/original_match/port/geometry.py": {
+      "equal": true,
+      "old_sha256": "a665d830ed16c00833a27216393a3b6f406251f44cef1f7fc9e80f7eb6bd3e81",
+      "preview_sha256": "a665d830ed16c00833a27216393a3b6f406251f44cef1f7fc9e80f7eb6bd3e81"
+    },
+    "runtime/original_match/port/entrypoints.py": {
+      "equal": true,
+      "old_sha256": "a55d378798ed5ec2c33404739b0961b8fec1e6167d1d301f5512cced4063b5b7",
+      "preview_sha256": "a55d378798ed5ec2c33404739b0961b8fec1e6167d1d301f5512cced4063b5b7"
+    },
+    "runtime/original_match/port/attributes.py": {
+      "equal": true,
+      "old_sha256": "187df60ae923ab002c40939bf4eb7bacae63ac2b1a932fb1f1ba269d12503cc0",
+      "preview_sha256": "187df60ae923ab002c40939bf4eb7bacae63ac2b1a932fb1f1ba269d12503cc0"
+    }
+  },
+  "note": "Preparation audit only; no accepted pin change. Upstream #627/#628 still pending; repeat at accepted merge."
+}
