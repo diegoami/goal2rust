@@ -1,5 +1,13 @@
 # T05 native nearest-to-ball tree
 
+## Validation complete
+
+All unchanged gates pass; see [assessment.md](assessment.md). The authoritative
+post-writer ledger is validation-v1.json, with post-exit-audit-v1.json. All
+producers/child groups have exited. Live merge/checkpoint status is in PR #17 / #1.
+Do not restart completed producers or overwrite receipts. Commands below are
+historical; a later source/binary needs fresh versioned evidence.
+
 Task #16 / docs/tasks/T05.md; full semantic inventory in contract.md. The
 owner-authorized next tree is selected from T04's refreshed accepted-pin profile
 (selection-v1.json). Historical T04 receipts and archived artifacts stay intact.

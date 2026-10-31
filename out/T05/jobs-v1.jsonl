@@ -1,0 +1,22 @@
+{"event": "start", "name": "family-F40-v1", "pid": 11295, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-B", "out/T05/run_family.py", "--out", "out/T05/family-F40-rust-v1.jsonl", "--attest", "out/T05/attest-family-F40-v1"], "time": 1793456653.4465616}
+{"event": "start", "name": "check-v1", "pid": 11296, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-B", "out/T05/run_check.py", "--out", "out/T05/check-v1.json"], "time": 1793456653.4471328}
+{"event": "start", "name": "taps-python-v1", "pid": 11297, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T05/run_receipt.py", "--backend", "python", "--mode", "taps", "--out", "out/T05/taps-python-v1.json"], "time": 1793456653.447845}
+{"event": "start", "name": "differential-v1", "pid": 11298, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T05/differential.py", "--out", "out/T05/differential-v1.json"], "time": 1793456653.448452}
+{"event": "exit", "name": "differential-v1", "pid": 11298, "code": 0, "time": 1793456988.4662473}
+{"event": "start", "name": "return-mutant-v1", "pid": 11649, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T05/differential.py", "--mutant", "4", "--out", "out/T05/return-mutant-v1.json"], "time": 1793456988.467339}
+{"event": "exit", "name": "taps-python-v1", "pid": 11297, "code": 0, "time": 1793457018.4690495}
+{"event": "exit", "name": "return-mutant-v1", "pid": 11649, "code": 0, "time": 1793457158.4780471}
+{"event": "start", "name": "body-mutant-v1", "pid": 11717, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T05/differential.py", "--mutant", "3", "--out", "out/T05/body-mutant-v1.json"], "time": 1793457158.4791427}
+{"event": "exit", "name": "body-mutant-v1", "pid": 11717, "code": 0, "time": 1793457393.4932373}
+{"event": "start", "name": "taps-rust-v1", "pid": 11786, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T05/run_receipt.py", "--backend", "rust", "--mode", "taps", "--out", "out/T05/taps-rust-v1.json"], "time": 1793457393.494249}
+{"event": "exit", "name": "taps-rust-v1", "pid": 11786, "code": 0, "time": 1793457673.512109}
+{"event": "start", "name": "profile-after-v1", "pid": 12029, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T05/profile_machine.py", "--out", "out/T05/profile-after-v1.json"], "time": 1793457673.5129464}
+{"event": "exit", "name": "profile-after-v1", "pid": 12029, "code": 0, "time": 1793457923.5297873}
+{"event": "exit", "name": "check-v1", "pid": 11296, "code": 0, "time": 1793458493.582096}
+{"event": "exit", "name": "family-F40-v1", "pid": 11295, "code": 0, "time": 1793459678.6844108}
+{"event": "start", "name": "cpu-python-v1", "pid": 16424, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-B", "out/T05/run_receipt.py", "--backend", "python", "--mode", "cpu", "--out", "out/T05/cpu-python-v1.json"], "time": 1793459698.9232128}
+{"event": "start", "name": "cpu-pypy-v1", "pid": 16425, "command": ["/home/diego/projects/goal2rust/.venv-pypy/bin/python", "-B", "out/T05/run_receipt.py", "--backend", "python", "--mode", "cpu", "--out", "out/T05/cpu-pypy-v1.json"], "time": 1793459698.924409}
+{"event": "start", "name": "cpu-rust-v1", "pid": 16426, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-B", "out/T05/run_receipt.py", "--backend", "rust", "--mode", "cpu", "--out", "out/T05/cpu-rust-v1.json"], "time": 1793459698.9253166}
+{"event": "exit", "name": "cpu-pypy-v1", "pid": 16425, "code": 0, "time": 1793459753.9324543}
+{"event": "exit", "name": "cpu-rust-v1", "pid": 16426, "code": 0, "time": 1793459793.9362748}
+{"event": "exit", "name": "cpu-python-v1", "pid": 16424, "code": 0, "time": 1793459838.9394763}
