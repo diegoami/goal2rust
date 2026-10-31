@@ -28,6 +28,11 @@ with proof/artifact/resume rules in [out/T06/README.md](out/T06/README.md).
 Read those and the live checkpoint before its producers; preserve completed
 receipts and keep bound sources/binaries fixed during measurements.
 
+State-v2 compatibility refresh T07 is specified in [docs/tasks/T07.md](docs/tasks/T07.md),
+with current pin, input/artifact and resume rules in [out/T07/README.md](out/T07/README.md).
+Read those and checkpoint #1 before any producer/build. Preserve historical v1
+receipts and use the documented final validation revision; never overwrite them.
+
 T02 is complete. Its evidence and historical cross-computer experiment commands are in
 [out/T02/README.md](out/T02/README.md). Read that before restarting its experiments;
 keep the task's Done-when intact and consult the latest GitHub checkpoint for status.

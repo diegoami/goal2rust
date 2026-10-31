@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T07/validate.py", line 32, in <module>
+    for field in ['events','events_sha256','result_sha256','stretches']:assert old[field]==new[field],field
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: result_sha256

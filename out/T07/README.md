@@ -1,5 +1,15 @@
 # T07 state-v2 compatibility refresh
 
+## Validation complete
+
+All required gates pass; see [assessment.md](assessment.md). Authoritative
+post-writer ledger: **validation-v2.json**. The original historical-result
+assumption/failed diagnostic is preserved; the identity-aware revision retains
+every fresh-v2 gate and checks the complete historical result. All producer
+and child groups have exited. Live merge/stop status is in PR #21 / checkpoint #1.
+Do not restart completed producers or overwrite receipts. All invocation and
+in-progress commands below are historical; future artifacts need new evidence.
+
 Task #20 / PR #21, contract docs/tasks/T07.md. Accepted oracle PR640 merge
 2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c. Old e0270981 clone preserved under
 .cache/goal2-archaeology-T06. T06's private inputs, receipts and archived binaries
