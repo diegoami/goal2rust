@@ -83,7 +83,7 @@ Same-process backend coexistence is unsupported by the current adapter (review
 change the kit's default original/Unicorn backend or its checkpoint format.
 
 The machine owns the register bank and shared guest memory. Unported Python
-bodies use the same state through the bridge. The availability and nearest-ball
+bodies use the same state through the bridge. Availability, nearest-ball and effective-skill
 call trees execute in Rust alongside T01's seven bodies. Native callers suspend
 as explicit Rust state through the guest call/return dispatcher. Effective
 skill retains its captured scalar locals independently of guest memory and
