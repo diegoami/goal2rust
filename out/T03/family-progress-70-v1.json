@@ -1,0 +1,48 @@
+{
+  "source": "family-ALL-rust-v1.jsonl",
+  "records": 10,
+  "completed_total": 70,
+  "complete_family": false,
+  "lines": [
+    {
+      "number": 61,
+      "sha256": "4d9bf9d4252e724c23037af74abc119157fe75307a04f1ef3e3134b146deb09f"
+    },
+    {
+      "number": 62,
+      "sha256": "2fa8a6d61e2607f78d87fba4d442f1df63e0521bcca4d166c803bfa9965bdc91"
+    },
+    {
+      "number": 63,
+      "sha256": "b89f8e2745bb0f36285b437c11877820994d96a4a6db561d4e3782486cac7edf"
+    },
+    {
+      "number": 64,
+      "sha256": "447f420cff655dbe5a8966c309212ee2dbdba5767059364a9228da1e339a0fbd"
+    },
+    {
+      "number": 65,
+      "sha256": "88cdada19f10f697c350d0601d5b207732efbcac992e30aa43f9c0f819e6ebd2"
+    },
+    {
+      "number": 66,
+      "sha256": "00399271513523ec629fb3ad3bbe6f5ed77bd94d9cab170181ec0bd812aee49a"
+    },
+    {
+      "number": 67,
+      "sha256": "a72662ad0108638cd00547bf18a23a5ce297365df8bcc11a58251b366c6f85c1"
+    },
+    {
+      "number": 68,
+      "sha256": "c6048f47407f4ddf63f3c2754a7b2604a96bc111f6158afdb24bcf1f71e59104"
+    },
+    {
+      "number": 69,
+      "sha256": "c85f50942e04b204dc6215802efe0e02d75753d06cb29d02ddab68f9adbc1625"
+    },
+    {
+      "number": 70,
+      "sha256": "07d283465dd02f3faf51a5abb0cbab62415be076047a23a1d293a0698ed21ea8"
+    }
+  ]
+}

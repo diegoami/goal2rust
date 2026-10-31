@@ -1,9 +1,16 @@
 # Provenance
 
-The oracle: goal2-archaeology at `d3cf46a3` (branch task/T78d-engine-on-its-own: T78c's
-checkpoints and T117's dispatch speed-up, with T78d's accepted family run; the Python port under
-`runtime/original_match/port/`). Each translated routine is listed here with the Python module and
-address it reproduces and the commit it was translated from.
+The current oracle is goal2-archaeology at
+`e0270981883f02ce46a31391e7070079977bbfef` (accepted T80d handover, including
+T80c's sealed family and T79's larger fidelity corpus). CI and the ignored
+`.cache/goal2-archaeology` clone use this exact commit. T03 validates the same
+Rust implementation against the state-and-tables API. The T02 oracle remains
+available in `.cache/goal2-archaeology-T02` at `d3cf46a3`; historical T01/T02
+receipts and the translation-origin pins below remain unchanged.
+
+Each translated routine is listed with its Python source and translation-origin
+commit. T03's source audit records that the machine/frames/runtime and the
+geometry/entrypoint bodies are byte-identical between the two oracle commits.
 
 | Routine (address) | Python port | goal2-archaeology commit | Rust |
 | --- | --- | --- | --- |

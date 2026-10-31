@@ -28,6 +28,32 @@ resumed = Match.load(checkpoint)
 ```
 
 `image` is an existing kit `Image`; game images and checkpoints stay outside git.
+
+The accepted sealed-engine boundary also takes game state and verified tables:
+
+```python
+from original_match import Image
+from original_match.port.tables import load as load_tables
+
+tables = load_tables(private_tables_folder)
+match = Match(Image.from_state(state, tables), fixture, managed=7)
+for event in match.events():
+    if event.kind == "decision":
+        match.answer()
+next_state = match.records_after()
+checkpoint = match.save()
+resumed = Match.load(checkpoint)
+next_state_from_replay = resumed.records_after(tables)
+```
+
+Generate the tables locally with the pinned oracle's `tools/static/port_tables.py
+extract --exe <owner's GOAL.EXE> --out <private folder>`, then copy its pinned
+`static/goal-exe/tables/manifest.json` alongside `ds.hex` and `code_data.hex`.
+Tables and state stay outside git and releases. The checkpoint loader does not
+restore the tables object, so supply it explicitly to `records_after` after
+load. [T03's evidence](../out/T03/README.md) covers this boundary; the engine
+still bridges unported bodies to Python and has seven native routines.
+
 For oracle harnesses, call `goal2rust.install()` in the test process before
 constructing/loading a kit match with `engine="port"`. This changes the factory
 only in that process. It does not edit the oracle or change its default backend.

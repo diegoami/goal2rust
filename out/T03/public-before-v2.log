@@ -1,0 +1,42 @@
+test_state_records_and_checkpoint_through_rust (test_sealed_api.SealedAPITests.test_state_records_and_checkpoint_through_rust) ... 
+  test_state_records_and_checkpoint_through_rust (test_sealed_api.SealedAPITests.test_state_records_and_checkpoint_through_rust) (mode='invalid') ... FAIL
+  test_state_records_and_checkpoint_through_rust (test_sealed_api.SealedAPITests.test_state_records_and_checkpoint_through_rust) (mode='records') ... FAIL
+  test_state_records_and_checkpoint_through_rust (test_sealed_api.SealedAPITests.test_state_records_and_checkpoint_through_rust) (mode='replay') ... FAIL
+
+======================================================================
+FAIL: test_state_records_and_checkpoint_through_rust (test_sealed_api.SealedAPITests.test_state_records_and_checkpoint_through_rust) (mode='invalid')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_sealed_api.py", line 67, in test_state_records_and_checkpoint_through_rust
+    self.assertEqual(run.returncode, 0, run.stdout + run.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+ModuleNotFoundError: No module named 'original_match.port.tables'
+
+
+======================================================================
+FAIL: test_state_records_and_checkpoint_through_rust (test_sealed_api.SealedAPITests.test_state_records_and_checkpoint_through_rust) (mode='records')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_sealed_api.py", line 67, in test_state_records_and_checkpoint_through_rust
+    self.assertEqual(run.returncode, 0, run.stdout + run.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+ModuleNotFoundError: No module named 'original_match.port.tables'
+
+
+======================================================================
+FAIL: test_state_records_and_checkpoint_through_rust (test_sealed_api.SealedAPITests.test_state_records_and_checkpoint_through_rust) (mode='replay')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_sealed_api.py", line 67, in test_state_records_and_checkpoint_through_rust
+    self.assertEqual(run.returncode, 0, run.stdout + run.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+ModuleNotFoundError: No module named 'original_match.port.tables'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.173s
+
+FAILED (failures=3)

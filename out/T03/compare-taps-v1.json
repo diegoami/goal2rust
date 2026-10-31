@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "oracle": true,
+    "events": true,
+    "events_sha256": true,
+    "result_sha256": true,
+    "records_sha256": true,
+    "memory_sha256": true,
+    "stretches": true,
+    "taps": true,
+    "input_state_sha256": true,
+    "source_sha256": true,
+    "sources_unchanged": true,
+    "native_calls": true
+  },
+  "equal": true,
+  "inputs": {
+    "taps-python-v1.json": "b443eb8a86bd7a1e49213c5f6467f2c8d231958f774fb0af872f8d1daeac75bd",
+    "taps-rust-v1.json": "5d2e531947127eb9ee1b3c852ad53bf6dd1359e0a8c24b0df7211bc59201f496"
+  }
+}

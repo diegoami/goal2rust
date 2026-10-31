@@ -1,0 +1,11 @@
+{
+  "pid": 5370,
+  "argv": [
+    "smoke",
+    "replay"
+  ],
+  "oracle": "e0270981883f02ce46a31391e7070079977bbfef",
+  "machines": 2,
+  "backend": "rust",
+  "native_calls": {}
+}
