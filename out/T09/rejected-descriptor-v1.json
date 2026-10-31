@@ -1,0 +1,13 @@
+{
+  "reason": "Getter modest improvement; setter and byte-half operations slower. No backend factory enabled in production or fidelity run.",
+  "source": {
+    "engine/src/cache_property.rs": {
+      "preserved": "out/T09/rejected-descriptor-v1.txt",
+      "sha256": "17627576eae3fa61cc744c6f0fdd727235d5a4af7b3632c238ddc967bb0b309e"
+    },
+    "engine/python/goal2rust/register_cache.py": {
+      "preserved": "out/T09/rejected-router-v1.txt",
+      "sha256": "25edbaf91a07dfa64c3f16611c38326dc96cf08afc8e1b442661abeeebd8577a"
+    }
+  }
+}

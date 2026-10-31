@@ -105,3 +105,17 @@ memory-view methods as fallback. Contract and callback/numeric boundaries:
 `out/T08/contract.md`. No guest routine or state/table format is added.
 The exact T07 source/adapter/extension baseline is preserved and hash-bound for
 simultaneous before/after rounds; T07 historical evidence remains unchanged.
+
+## T09 speaker/noise-state tree
+
+Translation pin: `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c` (state/2).
+`port/display.py` speaker_noise_state **0791:94E8** (ret), speaker_seed_step
+**0791:94C9** (ret2), speaker_off_memory **214B:1E8D** (retf) and
+`port/entrypoints.py` explicit_seed_draw **214B:0688** (retf6) are reproduced by
+`engine/src/speaker.rs` and its `machine.rs` continuations. The source's existing
+omitted-hardware stubs **214B:1EBC** (retf2) and **0791:0425** (ret2) remain
+observable delegated calls. No hardware functionality is claimed. The RNG seed,
+DF/flags, dead frame writes, secondary state and value-return timing remain
+source ordered; nondefault variants retain Python bodies. Full contract:
+`out/T09/contract.md`. Baseline T08 sources/binaries and the rejected descriptor
+prototype are preserved, with hashes in `out/T09/`.

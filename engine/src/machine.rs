@@ -105,6 +105,7 @@ enum NativeContinuation {
     AvailabilityStart,
     AvailabilityReturn,
     NearestBall(crate::ball::Phase),
+    Speaker(crate::speaker::Phase),
     SkillStart,
     SkillReturn(crate::skill::Saved),
 }
@@ -841,6 +842,8 @@ impl MachineCore {
             frame.native = match address.extract::<String>()?.as_str() {
                 "0791:2956" => Some(NativeContinuation::AvailabilityStart),
                 "0791:278A" => Some(NativeContinuation::SkillStart),
+                "0791:94E8" => Some(NativeContinuation::Speaker(crate::speaker::Phase::NoiseStart)),
+                "0791:94C9" => Some(NativeContinuation::Speaker(crate::speaker::Phase::SeedStart)),
                 "0791:2FB1" => Some(NativeContinuation::NearestBall(crate::ball::Phase::Start)),
                 _ => None,
             };
@@ -928,8 +931,26 @@ impl MachineCore {
         let far: bool = f.port.entry.bind(py).getattr("far")?.extract()?;
         entries.append((f.sp, far))?;
         let mut h = NativeHost { core: self, m: m.clone(), entry: (f.sp, far) };
+        let mut completed_value = py.None();
         let result = (|| -> PyResult<Option<Py<PyAny>>> {
             match f.native.take().unwrap() {
+                NativeContinuation::Speaker(phase) => {
+                    let action=crate::speaker::step(&mut h,phase,self.mutant==7)?;
+                    if matches!(phase,crate::speaker::Phase::NoiseStart|crate::speaker::Phase::SeedStart) {
+                        let address=if phase==crate::speaker::Phase::NoiseStart {"0791:94E8"}else{"0791:94C9"};
+                        *self.native_calls.borrow_mut().entry(address.into()).or_insert(0)+=1;
+                    }
+                    match action {
+                        crate::speaker::Action::Call(req)=>{
+                            let args=PyTuple::new(py,req.args)?;
+                            let c=self.call_type.bind(py).call1((req.target,args,req.ret_to,req.far,false))?;
+                            f.native=Some(NativeContinuation::Speaker(req.next));Ok(Some(c.unbind()))
+                        }
+                        crate::speaker::Action::Done(value)=>{
+                            if let Some(value)=value {completed_value=value.into_pyobject(py)?.into_any().unbind();}Ok(None)
+                        }
+                    }
+                }
                 NativeContinuation::SkillStart => {
                     let start = crate::skill::start(&mut h)?;
                     let c = self.call_type.bind(py).call1(("1771:3A06", start.args, "0791:27EB", true, false))?;
@@ -973,7 +994,7 @@ impl MachineCore {
         entries.call_method0("pop")?;
         match result? {
             Some(c) => self.issue(m, f, c.into_bound(py)),
-            None => self.finish(m, f, py.None().into_bound(py)),
+            None => self.finish(m, f, completed_value.into_bound(py)),
         }
     }
 
@@ -1009,7 +1030,9 @@ impl MachineCore {
             // Mutant 1 corrupts a guest-call return's saved IP; a machine error.
             let corrupt = self.mutant == 1 || (self.mutant == 4
                 && matches!(ret_to.as_str(), "0791:3013" | "0791:3090" | "0791:30A3"))
-                || (self.mutant == 6 && ret_to == "0791:27EB");
+                || (self.mutant == 6 && ret_to == "0791:27EB")
+                || (self.mutant == 8 && matches!(ret_to.as_str(),"0791:94F9"|"0791:9522"|"0791:952B"|"0791:9532"|"0791:9540"))
+                || (self.mutant == 9 && ret_to == "0791:94DC");
             let w = if corrupt && i == args.len() + usize::from(far) {
                 w.wrapping_add(1)
             } else {
@@ -1075,6 +1098,8 @@ impl MachineCore {
         };
         use crate::geometry as g;
         match address {
+            "214B:0688" => crate::speaker::rng(&mut h,self.mutant==7)?,
+            "214B:1E8D" => crate::speaker::off(&mut h,self.mutant==7)?,
             "1771:3A06" => return Ok(Some(crate::skill::derived(&mut h, self.mutant == 5)?.into_pyobject(m.py())?.into_any().unbind())),
             "1771:3216" => return Ok(Some(self.availability_body(m)?.into_pyobject(m.py())?.into_any().unbind())),
             "0791:2BE5" => g::direction(&mut h)?,

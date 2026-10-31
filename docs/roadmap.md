@@ -121,6 +121,22 @@ candidate faster and median candidate/baseline CPU <=0.95. Preserve every round
 and rejected attempt; a single pilot or faster primitive is insufficient. Report
 PyPy outcomes explicitly; a smaller gap does not establish a PyPy win.
 
+## 2e. T09: measured speaker/noise-state tree
+
+Translate the bounded data-state closure 0791:94E8 -> 0791:94C9 -> 214B:0688,
+plus 214B:1E8D, selected from T08's residual profile (205,799 Python entries).
+Keep both omitted-hardware stubs as observable guest calls. An isolated register
+descriptor prototype regressed writes and byte halves and was rejected; its
+source/artifact/timings remain evidence. Contract: [tasks/T09.md](tasks/T09.md),
+[out/T09](../out/T09/README.md). The same full fidelity and three-round 5% CPU
+gate apply against a preserved actual T08 source/adapter/binary baseline.
+
+Upstream rechecked 2026-10-31: archaeology main 2a411f50, goal2 main 721dbd1e.
+Goal2 PR483 adopted the sealed kit (including its own table policy), and PR486
+fixes cancellation after a job wrapper exits. This supports the adoption sequence;
+retain the accepted 2cbeb36f pin/private table policy for the controlled T09
+comparison. Goal2 integration/cancellation remains a separate adoption gate.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the
