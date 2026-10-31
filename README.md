@@ -3,3 +3,8 @@
 A Rust translation of the match engine of *goal (version 2)* (1993), for speed, checked routine by
 routine against [goal2-archaeology](https://github.com/diegoami/goal2-archaeology)'s accepted Python
 port and, through it, the original. Rules: [CLAUDE.md](CLAUDE.md). No byte of the original game is here.
+
+Build, state/tables API and backend-worker isolation: [engine/README.md](engine/README.md).
+The translation sequence is in [docs/roadmap.md](docs/roadmap.md); current sealed-engine
+evidence and resume rules are in [out/T03/README.md](out/T03/README.md). Read the latest
+[checkpoint](https://github.com/diegoami/goal2rust/issues/1) before restarting work.

@@ -7,10 +7,11 @@ complete; its historical receipts and Done-when remain unchanged.
 
 ## 1. T03: sealed-engine compatibility
 
-Wait for archaeology PRs #627 (sealed family) and #628 (handover), and their
-required checks, to merge. Pin an exact accepted merge commit in PROVENANCE.md
-and CI. Keep d3cf46a3 and all T01/T02 evidence available: an oracle update does
-not revalidate old receipts against the new source.
+Archaeology PRs #627 (sealed family) and #628 (handover) merged with passing
+checks. PROVENANCE.md and CI pin their accepted handover commit; T03's evidence
+and resume rules are in `out/T03/README.md`. Keep d3cf46a3 and all T01/T02
+evidence available: an oracle update does not revalidate old receipts against
+the new source.
 
 Use the upstream contract unchanged: `Image.from_state(state, tables)`, the
 per-event Match API, and `Match.records_after()`. Tables are generated locally
@@ -85,7 +86,7 @@ initial state still originates in a savestate. Translate these boundaries only
 with accepted upstream semantics and dedicated tasks. Sealing the match engine
 does not establish an independent whole game.
 
-Sources checked 2026-10-30: archaeology main `b46000bc5ef7`, PRs
+Accepted source checked 2026-10-31: archaeology handover `e0270981883f02ce46a31391e7070079977bbfef`, PRs
 [#624](https://github.com/diegoami/goal2-archaeology/pull/624),
 [#625](https://github.com/diegoami/goal2-archaeology/pull/625),
 [#626](https://github.com/diegoami/goal2-archaeology/pull/626),

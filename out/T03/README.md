@@ -1,5 +1,40 @@
 # T03 accepted sealed-engine validation
 
+## Validation complete, 2026-10-31
+
+All local gates and the post-exit audit pass; see
+[assessment.md](assessment.md) for results and limits. The authoritative stable
+index is `validation-v2.json`; its earlier pre-final-banner snapshot is retained.
+No producer or child process remains active. Final PR-head CI and merge status
+are tracked on PR #14 / checkpoint issue #1. Owner requested wind-down after
+T03; T04 has not begun. Do not restart completed v1 producers.
+
+The plan and in-progress resume procedure below are retained for provenance.
+A new build needs fresh versioned receipts and source/artifact bindings; the
+historical resume command is not a command to rerun this completed validation.
+
+To verify the stable index without rerunning private experiments:
+
+```sh
+PYTHONHASHSEED=0 PYTHONPATH=out/T03 .venv/bin/python -B - <<'PY'
+import hashlib, json
+from pathlib import Path
+root = Path.cwd()
+evidence = root / 'out/T03'
+report = json.loads((evidence / 'validation-v2.json').read_text())
+assert report['pass_all'] and report['all_writers_finished']
+for name, sha in report['evidence_sha256'].items():
+    assert hashlib.sha256((evidence / name).read_bytes()).hexdigest() == sha, name
+for name, sha in report['source_sha256'].items():
+    assert hashlib.sha256((root / name).read_bytes()).hexdigest() == sha, name
+print('T03 final evidence and source hashes match')
+PY
+```
+
+This verifies the measured checkout/artifact. A later source or extension rebuild
+will intentionally fail those source bindings; use the recorded revision and
+archived binaries when inspecting historical evidence.
+
 Contract: `docs/tasks/T03.md`, issue #8 and `docs/roadmap.md`'s three unchanged
 Done-when gates. Oracle: accepted handover merge
 `e0270981883f02ce46a31391e7070079977bbfef`; upstream #627/#628 merged with
@@ -60,7 +95,7 @@ family/status output, source/extension manifests and original limits:
 7. `finish.py final`: require all proof/control/comparison gates, rehash source
    manifests, compare receipts and bind the evidence in `validation-v1.json`.
 
-## Resume
+## Historical in-progress resume procedure
 
 Read the latest checkpoint on issue #1 before any command. `jobs-v1.jsonl`
 records producer PIDs, commands and exits; `supervisor-v1.log` is append-only.
@@ -68,7 +103,8 @@ Check for live supervisor/producer processes before starting anything. The
 supervisor holds `.cache/T03-supervisor.lock`, but an exited supervisor can
 leave child process groups running: do not duplicate those.
 
-If no existing job is active, completed stages have valid manifests, and no
+For an interrupted, incomplete candidate only: if no existing job is active,
+completed stages have valid manifests, and no
 failed/partial receipt needs disposition, resume:
 
 ```sh

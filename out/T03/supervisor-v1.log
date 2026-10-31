@@ -1,0 +1,26 @@
+START family-ALL-v1 5636
+START check-v1 5637
+START differential-v1 5638
+EXIT differential-v1 0
+START body-mutant-v1 5859
+START machine-mutant-v1 5860
+EXIT machine-mutant-v1 0
+EXIT body-mutant-v1 0
+START taps-python-v1 6035
+EXIT taps-python-v1 0
+START taps-rust-v1 6488
+EXIT taps-rust-v1 0
+EXIT taps-python-v1 0
+EXIT taps-rust-v1 0
+EXIT check-v1 0
+EXIT family-ALL-v1 0
+QUIET (1.48681640625, 1.96630859375, 2.04345703125) 1
+QUIET (1.337890625, 1.91796875, 2.0263671875) 2
+QUIET (1.2119140625, 1.87060546875, 2.00927734375) 3
+START cpu-python-v1 11975
+START cpu-pypy-v1 11976
+START cpu-rust-v1 11977
+EXIT cpu-pypy-v1 0
+EXIT cpu-rust-v1 0
+EXIT cpu-python-v1 0
+ALL T03 PRODUCER GATES PASS
