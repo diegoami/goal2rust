@@ -1,0 +1,8 @@
+test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) ... ok
+test_errors_and_variants (test_effective_skill.EffectiveSkillTests.test_errors_and_variants) ... ok
+test_full_tree_and_retained_state (test_effective_skill.EffectiveSkillTests.test_full_tree_and_retained_state) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.743s
+
+OK

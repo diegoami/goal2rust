@@ -122,6 +122,8 @@ enum NativeContinuation {
     AvailabilityStart,
     AvailabilityReturn,
     NearestBall(crate::ball::Phase),
+    SkillStart,
+    SkillReturn(crate::skill::Saved),
 }
 
 struct Frame {
@@ -815,6 +817,7 @@ impl MachineCore {
         if self.native && frame.port.variant.bind(py).is_none() {
             frame.native = match address.extract::<String>()?.as_str() {
                 "0791:2956" => Some(NativeContinuation::AvailabilityStart),
+                "0791:278A" => Some(NativeContinuation::SkillStart),
                 "0791:2FB1" => Some(NativeContinuation::NearestBall(crate::ball::Phase::Start)),
                 _ => None,
             };
@@ -856,7 +859,7 @@ impl MachineCore {
     }
     fn step(&self, m: &Bound<'_, PyAny>, frame: Frame, sent: &Bound<'_, PyAny>) -> PyResult<()> {
         if frame.native.is_some() {
-            return self.step_native(m, frame);
+            return self.step_native(m, frame, sent);
         }
         let py = m.py();
         let entries = frame
@@ -896,7 +899,7 @@ impl MachineCore {
             Err(e) => Err(e),
         }
     }
-    fn step_native(&self, m: &Bound<'_, PyAny>, mut f: Frame) -> PyResult<()> {
+    fn step_native(&self, m: &Bound<'_, PyAny>, mut f: Frame, sent: &Bound<'_, PyAny>) -> PyResult<()> {
         let py = m.py();
         let entries = f.port.mem.bind(py).getattr("_entries")?.cast_into::<PyList>()?;
         let far: bool = f.port.entry.bind(py).getattr("far")?.extract()?;
@@ -904,6 +907,17 @@ impl MachineCore {
         let mut h = NativeHost { core: self, m: m.clone(), entry: (f.sp, far) };
         let result = (|| -> PyResult<Option<Py<PyAny>>> {
             match f.native.take().unwrap() {
+                NativeContinuation::SkillStart => {
+                    let start = crate::skill::start(&mut h)?;
+                    let c = self.call_type.bind(py).call1(("1771:3A06", start.args, "0791:27EB", true, false))?;
+                    f.native = Some(NativeContinuation::SkillReturn(start.saved));
+                    *self.native_calls.borrow_mut().entry("0791:278A".into()).or_insert(0) += 1;
+                    Ok(Some(c.unbind()))
+                }
+                NativeContinuation::SkillReturn(saved) => {
+                    crate::skill::resume(&mut h, saved, sent.extract()?)?;
+                    Ok(None)
+                }
                 NativeContinuation::NearestBall(phase) => {
                     let request = crate::ball::step(&mut h, phase, self.mutant == 3)?;
                     if phase == crate::ball::Phase::Start {
@@ -971,7 +985,8 @@ impl MachineCore {
             let ss = self.reg(m, "ss")?;
             // Mutant 1 corrupts a guest-call return's saved IP; a machine error.
             let corrupt = self.mutant == 1 || (self.mutant == 4
-                && matches!(ret_to.as_str(), "0791:3013" | "0791:3090" | "0791:30A3"));
+                && matches!(ret_to.as_str(), "0791:3013" | "0791:3090" | "0791:30A3"))
+                || (self.mutant == 6 && ret_to == "0791:27EB");
             let w = if corrupt && i == args.len() + usize::from(far) {
                 w.wrapping_add(1)
             } else {
@@ -1037,6 +1052,7 @@ impl MachineCore {
         };
         use crate::geometry as g;
         match address {
+            "1771:3A06" => return Ok(Some(crate::skill::derived(&mut h, self.mutant == 5)?.into_pyobject(m.py())?.into_any().unbind())),
             "1771:3216" => return Ok(Some(self.availability_body(m)?.into_pyobject(m.py())?.into_any().unbind())),
             "0791:2BE5" => g::direction(&mut h)?,
             "0791:2B51" => g::slot_is_on_ball_side(&mut h)?,

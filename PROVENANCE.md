@@ -77,3 +77,14 @@ semantics are reproduced in `engine/src/ball.rs`. `machine.rs` carries its
 four native continuation phases through the existing guest dispatcher.
 Its guest closure 2956 -> 3216 and 2BE5 stays separately observable and uses
 previously translated bodies. Full contract: `out/T05/contract.md`.
+
+## T06 effective-skill tree
+
+Translation-origin pin: `e0270981883f02ce46a31391e7070079977bbfef`.
+`geometry.skill_of_pitch_record` **0791:278A** (retf6) and
+`attributes.derived_skill` **1771:3A06** (retf4) are reproduced in
+`engine/src/skill.rs`, including the respective Regs and immediate Mem.Frame
+semantics and the already-inline keeper membership operation. `machine.rs`
+retains the caller's off/seg/element/base scalars and passes the dispatcher's
+captured AX to its Rust continuation. One observable guest callee, no dynamic
+target; nondefault variants retain Python bodies. Contract: out/T06/contract.md.
