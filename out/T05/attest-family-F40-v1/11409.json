@@ -1,0 +1,24 @@
+{
+  "pid": 11409,
+  "argv": [
+    "experiments/E036-match-port/family.py",
+    "--family",
+    "F40",
+    "--engine",
+    "port",
+    "--no-unicorn",
+    "--from-records",
+    "--tables",
+    "/home/diego/projects/goal2rust/.cache/T03-tables",
+    "--workers",
+    "2",
+    "--cache",
+    "/home/diego/projects/goal2rust/.cache/goal2-archaeology/.cache/dl",
+    "--out",
+    "/home/diego/projects/goal2rust/out/T05/family-F40-rust-v1.jsonl"
+  ],
+  "oracle": "e0270981883f02ce46a31391e7070079977bbfef",
+  "machines": 0,
+  "backend": "rust",
+  "native_calls": {}
+}
