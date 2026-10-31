@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/home/diego/projects/goal2rust/.venv/bin/python",
+    "-B",
+    "out/T09/validate.py",
+    "out/T09/validation-v1.json"
+  ],
+  "exit_code": 1,
+  "expected_failure": "unchanged performance gate",
+  "acceptance_ledger_created": false
+}

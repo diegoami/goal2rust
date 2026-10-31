@@ -137,6 +137,14 @@ fixes cancellation after a job wrapper exits. This supports the adoption sequenc
 retain the accepted 2cbeb36f pin/private table policy for the controlled T09
 comparison. Goal2 integration/cancellation remains a separate adoption gate.
 
+T09 v1's fidelity proofs pass, but the three-round median CPU gain is 4.28%,
+below the unchanged 5% gate. The candidate remains unmerged in draft PR #25;
+main retains T08. Full evidence: [out/T09/assessment.md](../out/T09/assessment.md).
+Any further candidate requires fresh versioned proof, not discarded samples or
+a relaxed threshold. Goal2 main rechecked 2026-11-01 at d31bba36: PR488 caps automatic
+CI batches while retaining full local/manual slow runs. This does not reduce
+this port's strict ALL75/F40 gates or change the accepted semantic pin.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the

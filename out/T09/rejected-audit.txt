@@ -1,0 +1,87 @@
+"""Close a rejected experiment; this is NOT acceptance or a relaxed Done-when.
+
+Original validate.py must fail at its unchanged performance assertion. Check
+remaining fidelity/artifact/closure evidence separately and record acceptance=False.
+"""
+import hashlib,json,statistics,subprocess,sys
+from pathlib import Path
+import evidence as e
+e.verify();before=e.hashes();out=e.BASE/'out/T09';load=lambda n:json.loads((out/(n+'.json')).read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+assert not (out/'validation-v1.json').exists()
+status=load('validation-rejection-v1.status');assert status['exit_code']==1 and status['expected_failure']=='unchanged performance gate'
+assert 'pass_performance' in (out/'validation-rejection-v1.log').read_text()
+perf=load('performance-v1');assert not perf['pass_performance'] and perf['threshold']==0.95
+closure=load('rejected-process-closure-v1');assert closure['closure_pass'] and not closure['acceptance_pass'] and closure['supervisor_exited'] and len(closure['groups'])==35 and all(r['empty'] for r in closure['groups'])
+assert closure['script_sha256']==sha(out/'rejected-process-closure.txt')
+names=['legacy-v1','legacy-body-v1','check-v1','taps-python-v1','taps-rust-v1','profile-after-v1','attest-family-ALL-v1-invocation','m2-proof-v1','observer-matrix-v2']
+for suite in ['availability','ball','skill']:names.extend(suite+'-'+kind+'-v1' for kind in ['differential','body','return'])
+names.extend('speaker-'+kind+'-v1' for kind in ['differential','body','root-return','seed-return'])
+for rnd in range(1,4):names.extend(f'cpu-{arm}-r{rnd}-v1' for arm in ['baseline','candidate','python','pypy'])
+for name in names+['pilot-baseline-v1','pilot-candidate-v1']:
+ r=load(name);assert r['source_unchanged'],name
+ for path,h in r['source_sha256'].items():assert sha(e.BASE/path)==h,(name,path)
+for name,count in [('legacy-v1',28448),('availability-differential-v1',3224),('ball-differential-v1',2128),('skill-differential-v1',6224),('speaker-differential-v1',12448)]:
+ r=load(name);assert r['all_equal'] and sum(v['equal'] for v in r.get('comparisons',r.get('routines')).values())==count
+for name in ['legacy-body-v1']+[s+'-'+k+'-v1' for s in ['availability','ball','skill'] for k in ['body','return']]+['speaker-'+k+'-v1' for k in ['body','root-return','seed-return']]:assert not load(name)['all_equal']
+for label in ['differential','body','root-return','seed-return']:
+ r=load('speaker-'+label+'-v1');assert r['control_scope_verified'] and all(v==8 for v in r['captures'].values())
+ assert all(v['equal']==v['total']-v['expected_different'] for v in r['comparisons'].values())
+ assert all(r['callback_mutations'].values())
+for suite in ['availability','ball','skill']:assert all(v['equal']==0 for v in load(suite+'-body-v1')['comparisons'].values())
+assert load('skill-differential-v1')['callback_mutations']==dict(saved=400,sent=144)
+for name in ['public-cpython-v1.log','public-pypy-v1.log']:
+ text=(out/name).read_text();assert 'Ran 27 tests' in text and text.rstrip().endswith('OK')
+assert 'running 11 tests' in (out/'cargo-v1.log').read_text()
+gc=load('gc-parity-v1');assert gc['pass_all'] and len(gc['cases'])==20 and gc['source_sha256']==sha(out/'gc-parity.txt')
+r=load('observer-matrix-v2');assert r['pass_all'] and r['error_comparisons']==252 and len(r['variants'])==16 and len(r['live_return_store_observers'])==60 and all(r['errors_seen'].values())
+assert r['script_sha256']==sha(out/'observer-matrix-v2.txt')
+r=load('m2-proof-v1');assert r['pass_m2'] and r['normal_differential_comparisons']==52472 and r['supplemental_observer_comparisons']==328
+for n,h in r['receipt_sha256'].items():assert sha(out/(n+'.json'))==h
+check=load('check-v1');assert check['state'] and check['exit_code']==0 and set(check['checks'])=={'engine','interactive','goals','knockout'} and all(r['pass'] for r in check['checks'].values())
+comparisons=[]
+for group in [['taps-python-v1','taps-rust-v1']]+[[f'cpu-{a}-r{r}-v1' for a in ['baseline','candidate','python','pypy']] for r in range(1,4)]:
+ rows=[load(n) for n in group]
+ for key in ['oracle','input_state_sha256','events','events_sha256','result_sha256','records_sha256','memory_sha256','stretches']:assert all(row[key]==rows[0][key] for row in rows),(group,key)
+ comparisons.append(dict(files=group,equal=True))
+assert load('taps-python-v1')['taps']==load('taps-rust-v1')['taps']
+for name in ['taps-rust-v1']+[f'cpu-{a}-r{r}-v1' for r in range(1,4) for a in ['baseline','candidate']]:
+ r=load(name);old='baseline' in name;assert len(r['native_calls'])==(12 if old else 16) and sum(r['native_calls'].values())==(1350794 if old else 1556593)
+ assert r['bridge_fast_calls'] and all(r['bridge_fast_calls'].values())
+ratios=[]
+for rnd in range(1,4):
+ ratio=load(f'cpu-candidate-r{rnd}-v1')['drive_cpu_s']/load(f'cpu-baseline-r{rnd}-v1')['drive_cpu_s'];ratios.append(ratio)
+ starts=[r for r in perf['starts'] if r['round']==rnd];assert len(starts)==4 and max(r['time'] for r in starts)-min(r['time'] for r in starts)<5 and len({r['cpu'] for r in starts})==4
+ quiet=[r for r in perf['quiet_observations'] if r['round']==rnd];assert len(quiet)>=3 and all(max(r['load'][:2])<4 for r in quiet[-3:])
+assert len(perf['exits'])==12 and all(r['code']==0 for r in perf['exits'])
+assert statistics.median(ratios)==perf['median_ratio'] and statistics.median(ratios)>0.95
+lines=(out/'family-ALL-rust-v1.jsonl').read_bytes().splitlines(keepends=True);rows=[json.loads(x) for x in lines];assert len(rows)==len({r['id'] for r in rows})==75 and all(not r['error'] and r['stopped_at_board'] for r in rows)
+selection=load('F40-selection-v1');assert selection['source_sha256']==sha(out/'family-ALL-rust-v1.jsonl');f40=[lines[r['line']-1] for r in selection['lines']];assert len(f40)==40 and b''.join(f40)==(out/'family-F40-rust-v1.jsonl').read_bytes()
+assert all(hashlib.sha256(line).hexdigest()==r['sha256'] for line,r in zip(f40,selection['lines']))
+for fam in ['ALL','F40']:assert load('compare-'+fam+'-v1.status')['exit_code']==0
+attest={}
+for label,count in [('check',11),('family-ALL',75)]:
+ ar=[json.loads(p.read_text()) for p in (out/f'attest-{label}-v1').glob('*.json')];assert sum(r['machines'] for r in ar)==count and all(r['oracle']==e.PIN and r['backend']=='rust' for r in ar)
+ addresses={a for r in ar for a,n in r['native_calls'].items() if n};assert len(addresses)==16
+ counts={k:sum(r['bridge_fast_calls'].get(k,0) for r in ar) for k in ['u8','u16','write']};assert all(counts.values());attest[label]=dict(machines=count,native_bodies=16,bridge_fast_calls=counts)
+p=load('profile-after-v1');assert p['equal_to_fresh_state_v2'] and p['total_guest_entries']==3103685 and p['python_guest_entries']==1547092 and len(p['routines'])==422 and len(p['native_calls'])==16
+for path,h in load('baseline-snapshot-v1')['source_and_binary_sha256'].items():assert sha(e.BASE/path)==h
+for stage in ['T07','T08','T09']:
+ for row in json.loads((e.BASE/'out'/stage/'artifact-archive-v1.json').read_text())['artifacts']:
+  assert sha(e.BASE/row['archive'])==row['sha256']
+  if stage=='T09':assert sha(e.BASE/row['original'])==row['sha256']
+r=load('rejected-descriptor-v1')
+for row in r['source'].values():assert sha(e.BASE/row['preserved'])==row['sha256']
+r=load('rejected-artifact-v1');assert sha(e.BASE/r['archive'])==r['sha256']
+r=load('call-inventory-v1');assert r['all_guest_targets_literal'] and r['rust_call_sites_match'] and len(r['guest_sites'])==6
+for path,h in r['source_sha256'].items():assert sha(e.BASE/path)==h
+harness={}
+for p in sorted((e.ORACLE/'experiments/E036-match-port').glob('*.py'))+[e.ORACLE/'tests/test_port_seal.py']:
+ rel=str(p.relative_to(e.ORACLE));blob=subprocess.check_output(['git','show',e.PIN+':'+rel],cwd=e.ORACLE);assert hashlib.sha256(blob).hexdigest()==sha(p);harness[rel]=sha(p)
+prefixes=[]
+for p in sorted(out.glob('family-progress-*-v1.json')):
+ r=json.loads(p.read_text());n=len(r['source_lines']);snapshot=p.with_suffix('.jsonl');assert snapshot.read_bytes()==b''.join(lines[:n]) and sha(snapshot)==r['sha256']
+ assert [hashlib.sha256(x).hexdigest() for x in lines[:n]]==r['line_sha256'] and sha(out/'progress-snapshot.txt')==r['snapshot_script_sha256'];prefixes.append(n)
+ r=load(f'compare-progress-{n}-v1');assert r['pass_all'] and r['provisional_subset'] and r['expected']==n and r['candidate_sha256']==sha(snapshot) and r['script_sha256']==sha(out/'compare-progress.txt')
+assert len(prefixes)>=3
+report=dict(acceptance_pass=False,do_not_merge=True,fidelity_pass=True,artifact_closure_pass=True,all_writers_finished=True,reason='Median candidate/baseline CPU exceeds unchanged0.95 gate; acceptance validator rejects',performance_ratios=ratios,median_performance_ratio=statistics.median(ratios),performance_threshold=0.95,all_rounds_retained=True,comparisons=comparisons,attestation=attest,normal_differential_comparisons=52472,supplemental_observer_comparisons=328,pristine_harness_sha256=harness,progress_prefixes_verified=prefixes,script_sha256=sha(Path(__file__)),evidence_sha256={str(p.relative_to(out)):sha(p) for p in sorted(out.rglob('*')) if p.is_file() and p.suffix in ['.json','.jsonl','.log','.txt','.prof'] and not p.name.startswith('rejected-validation-')})
+e.write(out/'rejected-validation-v1.json',report,before);print('Fidelity/artifact closure verified; candidate NOT accepted, unchanged CPU gate enforced')

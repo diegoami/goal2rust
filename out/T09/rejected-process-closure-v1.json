@@ -1,0 +1,350 @@
+{
+  "closure_pass": true,
+  "acceptance_pass": false,
+  "reason": "unchanged three-round CPU gate rejected candidate",
+  "node": "IT13",
+  "time_utc": "2026-10-31T23:26:41Z",
+  "supervisor_pid": 49603,
+  "supervisor_exited": true,
+  "groups": [
+    {
+      "kind": "canonical",
+      "pid": 49626,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 49627,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 49628,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 49629,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 50014,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 50511,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 50567,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 50870,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 51115,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 51764,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 52243,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 52396,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 52645,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 52732,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 52828,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 52924,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 53028,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 53125,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 53193,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 53392,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 54593,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 54603,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 54604,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 54605,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 54606,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 54798,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 54799,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 54800,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 54801,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 54965,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 54966,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 54967,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 54968,
+      "empty": true
+    },
+    {
+      "kind": "pilot",
+      "pid": 48454,
+      "empty": true
+    },
+    {
+      "kind": "pilot",
+      "pid": 48455,
+      "empty": true
+    }
+  ],
+  "canonical_exits": [
+    {
+      "event": "exit",
+      "name": "legacy-v1",
+      "pid": 49629,
+      "code": 0,
+      "time": 1793485509.09978
+    },
+    {
+      "event": "exit",
+      "name": "legacy-body-v1",
+      "pid": 50014,
+      "code": 0,
+      "time": 1793485574.1041915
+    },
+    {
+      "event": "exit",
+      "name": "availability-differential-v1",
+      "pid": 50511,
+      "code": 0,
+      "time": 1793485594.1061256
+    },
+    {
+      "event": "exit",
+      "name": "availability-body-v1",
+      "pid": 50567,
+      "code": 0,
+      "time": 1793485614.1085594
+    },
+    {
+      "event": "exit",
+      "name": "availability-return-v1",
+      "pid": 50870,
+      "code": 0,
+      "time": 1793485634.110589
+    },
+    {
+      "event": "exit",
+      "name": "taps-python-v1",
+      "pid": 49628,
+      "code": 0,
+      "time": 1793485804.1206262
+    },
+    {
+      "event": "exit",
+      "name": "ball-differential-v1",
+      "pid": 51115,
+      "code": 0,
+      "time": 1793485944.1299903
+    },
+    {
+      "event": "exit",
+      "name": "ball-body-v1",
+      "pid": 51764,
+      "code": 0,
+      "time": 1793486184.1482747
+    },
+    {
+      "event": "exit",
+      "name": "ball-return-v1",
+      "pid": 52243,
+      "code": 0,
+      "time": 1793486349.1624901
+    },
+    {
+      "event": "exit",
+      "name": "skill-differential-v1",
+      "pid": 52396,
+      "code": 0,
+      "time": 1793486389.1667926
+    },
+    {
+      "event": "exit",
+      "name": "skill-body-v1",
+      "pid": 52645,
+      "code": 0,
+      "time": 1793486429.1717067
+    },
+    {
+      "event": "exit",
+      "name": "skill-return-v1",
+      "pid": 52732,
+      "code": 0,
+      "time": 1793486469.1774666
+    },
+    {
+      "event": "exit",
+      "name": "speaker-differential-v1",
+      "pid": 52828,
+      "code": 0,
+      "time": 1793486559.1862283
+    },
+    {
+      "event": "exit",
+      "name": "speaker-body-v1",
+      "pid": 52924,
+      "code": 0,
+      "time": 1793486644.1940718
+    },
+    {
+      "event": "exit",
+      "name": "check-v1",
+      "pid": 49627,
+      "code": 0,
+      "time": 1793486714.2013514
+    },
+    {
+      "event": "exit",
+      "name": "speaker-root-return-v1",
+      "pid": 53028,
+      "code": 0,
+      "time": 1793486714.2015014
+    },
+    {
+      "event": "exit",
+      "name": "speaker-seed-return-v1",
+      "pid": 53125,
+      "code": 0,
+      "time": 1793486779.2093077
+    },
+    {
+      "event": "exit",
+      "name": "taps-rust-v1",
+      "pid": 53193,
+      "code": 0,
+      "time": 1793486984.2289402
+    },
+    {
+      "event": "exit",
+      "name": "profile-after-v1",
+      "pid": 53392,
+      "code": 0,
+      "time": 1793487154.245526
+    },
+    {
+      "event": "exit",
+      "name": "family-ALL-v1",
+      "pid": 49626,
+      "code": 0,
+      "time": 1793488674.4132285
+    },
+    {
+      "event": "exit",
+      "name": "performance-v1",
+      "pid": 54593,
+      "code": 1,
+      "time": 1793489155.0353827
+    }
+  ],
+  "timing_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "script_sha256": "15ab945c936920b3a93fcdded6550ad9445b21611b8adedf284dba75fe001701"
+}

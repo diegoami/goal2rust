@@ -1,0 +1,101 @@
+"""Render accepted receipts as reviewable prose after the closed ledger exists."""
+import json,statistics
+from pathlib import Path
+out=Path('out/T09');load=lambda n:json.loads((out/(n+'.json')).read_text());v=load('validation-v1');p=load('performance-v1');assert v['pass_all'] and p['pass_performance']
+rows=p['rounds'];gain=100*(1-p['median_ratio']);cpy=statistics.median(r['cpu_s']['python']/r['cpu_s']['candidate'] for r in rows);pypy=statistics.median(r['candidate_to_pypy'] for r in rows)
+table='\n'.join('| '+str(r['round'])+' | '+' | '.join(f"{r['cpu_s'][a]:.6f}" for a in ['baseline','candidate','python','pypy'])+f" | {r['candidate_to_baseline']:.6f} |" for r in rows)
+text=f'''# T09 speaker/noise-state assessment
+
+## Fidelity and repeatable performance accepted
+
+Four speaker/noise data-state bodies now run in Rust: 0791:94E8, 0791:94C9,
+214B:0688 and 214B:1E8D. Their six guest-call sites and the existing omitted-hardware
+stubs remain observable. No hardware implementation or oracle semantic change is
+claimed. Accepted 2cbeb36f/state-v2 and the private T07 inputs stay unchanged.
+
+The reference drive has 16 default native bodies / 1,556,593 native guest entries,
+with 1,547,092 Python entries remaining out of 3,103,685 total. Exactly 205,799 entries
+moved from Python. This is a partial port, not a whole-engine completion percentage.
+
+## Three paired whole-drive rounds
+
+Quiet simultaneous preserved-T08 baseline/candidate/plain CPython/PyPy processes,
+on distinct physical cores with exchanged assignments and launch order. Original
+guards remain. Every raw output/state/record agrees; every candidate is faster.
+All samples are retained; no failed or slow round was removed.
+
+| Round | T08 CPU s | Candidate CPU s | CPython CPU s | PyPy CPU s | Candidate/T08 |
+| --- | --- | --- | --- | --- | --- |
+{table}
+
+Median candidate/T08 ratio **{p['median_ratio']:.9f}**, or **{gain:.2f}% less CPU**,
+passes the predeclared <=0.95 threshold. Median paired speed relative to plain
+CPython is **{cpy:.3f}x**. The candidate uses **{pypy:.3f}x PyPy CPU**; {'still no PyPy win' if pypy>=1 else 'a gain on this reference drive only'}.
+These are three controlled rounds on one host/fixture, not a broad workload claim.
+Full start/load/physical-core topology/exit metadata: performance-v1.json.
+The earlier pilot (ratio0.9470055) is preserved as diagnostic evidence separately.
+
+## Correctness and artifact binding
+
+- Public 27 tests each on CPython/PyPy, Rust 11 and 20 lifetime cases pass.
+- All 52,472 full-state per-routine comparisons equal: 40,024 previous 12-body cases
+  and 12,448 new-tree cases (eight real RAM captures/body, 500 authored cases/body,
+  complete frames and direct leaves, taps/listeners, pauses and DF/seed mutations).
+  Every body/return corruption control is caught in its intended scope; unaffected
+  isolated cases remain equal. New normal/control arms each exercise 1,402 seed
+  and later stack-listener mutations.
+- Supplemental 328 observer comparisons cover 252 error cases, 16 variant fallbacks
+  and 60 live-return/store cases, including cached return value versus actual AX
+  and the tone decision after a later game-speed change. M2 index: m2-proof-v1.json.
+- Exact ordered 831 events/result/records/full memory/553 stretches and full IO/
+  site/listener digest agree (158,092,780 IO observations).
+- Four positively sealed lifecycle checks pass with 11 independently attested Rust
+  machines covering all 16 bodies; strict ALL75/75 and exact-source F40 40/40 are
+  identical, with independent attestation of all 75 Rust machines. No guard raised.
+- Closed ledger validation-v1.json binds {len(v['evidence_sha256'])} recursive evidence files.
+  Real-host process-closure-v1.json verifies supervisor exit and all21 canonical,
+  12 timing and 2 pilot process groups empty. Baseline source/adapter/extension,
+  candidate binaries, private inputs, harness bytes and prefix snapshots rehash.
+
+## Preserved rejected attempts and limits
+
+The register-descriptor prototype improved an isolated getter but regressed sets
+and byte-half operations; it was rejected, with source/binary/microbench retained.
+No factory hook is active. The supplemental observer harness's first assertion
+expected final AX 1111 after a store-listener mutation. Both implementations agreed:
+generic frame finish restores cached returned AX 8000. Failed source/log/diagnosis
+remain; v2 checks the correct final value and observed mutation, with no production
+change or weakened equality assertion. The failing-before baseline native/body
+tests are also preserved.
+
+Actual baseline: .cache/T09-baseline/engine (baseline-snapshot-v1.json); candidate
+binaries: .cache/T09-artifacts (artifact-archive-v1.json). Original game bytes,
+states and tables remain private/ignored. No automatic model review ran.
+Existing #6 and later explicit A700/ref-121/owner-run engine-milestone review and
+goal2 integration/save-load/cancellation/playtest gates remain separate. The
+refreshed profile still points to Python register/frame overhead and match_key_poll
+as major remaining costs. Re-profile/inventory before the next selected tree.
+Live exact-head CI/merge/checkpoint state stays in PR #25 / issue #1.
+'''
+(out/'assessment.md').write_text(text)
+readme=out/'README.md';s=readme.read_text();a=s.index('## M2');b=s.index('Task #24',a);s=s[:a]+'''## Validation complete
+
+All local fidelity and three-round performance gates pass; see assessment.md.
+Authoritative closed ledger: validation-v1.json, with post-exit-audit-v1.json and
+real-host process-closure-v1.json. No experiment producer/child group remains.
+Live exact-head CI/merge/stop state is in PR #25 / issue #1. Do not restart completed
+producers or overwrite any receipt, round, baseline or rejected attempt.
+Commands below are historical; future artifacts require fresh versioned proof.
+
+'''+s[b:];readme.write_text(s)
+Path('/tmp/T09-pr-final.md').write_text(f'''Four frequently called speaker/noise data-state routines still crossed the Python dispatcher. Translate 0791:94E8, 0791:94C9, 214B:0688 and 214B:1E8D into Rust, preserving all six guest-call sites, existing hardware omission stubs, RNG seed/DF/flags/frame order, callback behavior and variant fallback. Native continuations now carry the seed routine's cached returned value through the common finish path.
+
+Three quiet simultaneous preserved-T08/candidate/CPython/PyPy rounds with rotated physical cores/order show **{gain:.2f}% less CPU** at the median (ratio {p['median_ratio']:.9f}); every round improves and all outputs agree. Median paired CPython speed {cpy:.3f}x; candidate/PyPy CPU {pypy:.3f}x. {'Still slower than PyPy.' if pypy>=1 else 'This reference-drive result does not establish a broad PyPy win.'} All samples and the separate pilot are retained. Source remains accepted 2cbeb36f/state-v2.
+
+Validation: 27 public tests each CPython/PyPy, 11 Rust, 20 lifetime cases; 52,472 full-state comparisons across 16 native bodies plus 328 observer cases; every scoped corruption control caught; exact ordered 831-event drive/full memory/records/callback stream; four sealed lifecycle checks with 11 attested Rust machines; strict ALL75/75 and exact-source F40 40/40 identical with75-machine backend attestation. Final ledger out/T09/validation-v1.json closes source/binary/private-input/evidence bindings and empty experiment process groups. See out/T09/assessment.md and docs/tasks/T09.md.
+
+Rejected descriptor and initial supplemental-harness assertion evidence are preserved; no descriptor factory is active and no oracle semantic fix is made. No original bytes/state/tables committed. 16 native bodies remove 205,799 Python entries; 1,547,092 Python entries remain in this partial port. Existing #6/later A700/ref-121/owner-run engine review and goal2 adoption gates remain. No model review launched automatically.
+
+Closes #24.
+''')
+print('Assessment/README/final PR description rendered from accepted receipts')

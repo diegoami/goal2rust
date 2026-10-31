@@ -1,12 +1,16 @@
 # T09 speaker/noise state
 
-## M2 and partial M3 evidence saved; full acceptance pending
+## V1 stopped: fidelity passes, performance gate missed
 
-M2 proof: m2-proof-v1.json (52,472 comparisons plus328 observer cases).
-Ordered drive, lifecycle and refreshed16-body profile pass. The complete F40
-prefix passes the unchanged strict comparator; ALL75/final F40 source selection
-and three quiet four-arm timing rounds remain required. No final acceptance
-ledger or production merge yet. Live completion/resume state stays in issue #1.
+All experiments have exited. All fidelity checks pass, but the three-round median
+CPU gain is 4.28%, below the unchanged 5% requirement. PR #25 stays draft/unmerged,
+task #24 open; main unchanged. See assessment.md. No accepted validation-v1.json.
+Diagnostic closed rejection ledger: rejected-validation-v1.json (acceptance=false,
+do_not_merge=true), with real-host rejected-process-closure-v1.json. Do not restart
+v1 producers or overwrite any receipt, round, source binding or archived artifact.
+A further candidate requires fresh versioned proof; success-path helper scripts
+remain historical/unexecuted for this rejected candidate. Live stop/resume state
+is in issue #1. Commands below are historical, not an instruction to rerun v1.
 
 Task #24, contract docs/tasks/T09.md and contract.md. Read checkpoint issue #1
 and recheck live jobs before resuming. Never overwrite completed receipts,
