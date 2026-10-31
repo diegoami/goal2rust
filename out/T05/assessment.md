@@ -8,7 +8,7 @@ T04's historical evidence and archived binaries remain intact.
 
 0791:2FB1 (`ball.find_nearest_to_ball`, near ret, no args) now runs as four
 Rust continuation phases through the existing guest issue/return dispatcher.
-Its closure was already native: availability2956 ->3216 and direction2BE5.
+Its closure was already native: availability 2956 -> 3216 and direction 2BE5.
 All guest frames, three return sites, stack locals, the live word across two
 direction calls, signed arithmetic, strict tie handling, sites, callbacks and
 suspension/replay remain observable. Nondefault variants use the bridge.
@@ -40,8 +40,8 @@ other bodies and kit/API callbacks still use Python.
 | Nested errors | 20 authored error/valid-neighbor cases agree on errors, complete partial state and the two waiting native frames. |
 | Ordered drive | All 831 events, result, returned records, full memory, 553 stretches and complete ordered IO/site/listener stream equal. |
 | Sealed lifecycle | Engine, interactive save/load, goals and knockout/replay pass under upstream's positive original-file/Unicorn denial. Independent attestation: 11 Rust machines / 88,940 new-root entries. |
-| F40 | Strict unchanged comparator: all40 expected IDs identical, zero failures, original limits. Independent attestation: 40 Rust machines / 301,778 new-root entries. |
-| Final ledger | validation-v1.json seals canonical source/binary bindings and recursive evidence after all11 producers and supervisor exited; every producer process group empty. |
+| F40 | Strict unchanged comparator: all 40 expected IDs identical, zero failures, original limits. Independent attestation: 40 Rust machines / 301,778 new-root entries. |
+| Final ledger | validation-v1.json seals canonical source/binary bindings and recursive evidence after all 11 producers and supervisor exited; every producer process group empty. |
 
 The complete stream retains hash
 `afcb5ec2ad3800a7d969f8cda6a513577d3e39feff886a441a48cbd814d0f191`:
@@ -53,9 +53,9 @@ post-exit-audit.txt; result post-exit-audit-v1.json. No original bytes are track
 
 ## Quiet paired CPU
 
-All correctness jobs finished before three quiet observations (both1m/5m load
-below4), then plain CPython/PyPy/Rust drives started together. All outputs and
-source bindings agree; default60-second stretch guards remain.
+All correctness jobs finished before three quiet observations (both 1m/5m load
+below 4), then plain CPython/PyPy/Rust drives started together. All outputs and
+source bindings agree; default 60-second stretch guards remain.
 
 | Backend | CPU seconds |
 | --- | ---: |
