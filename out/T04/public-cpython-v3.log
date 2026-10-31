@@ -1,0 +1,19 @@
+test_plain_and_rust_workers_are_independent_and_equal (test_backend_processes.BackendProcessTests.test_plain_and_rust_workers_are_independent_and_equal) ... ok
+test_dispatch_error_and_cleanup (test_machine.MachineTests.test_dispatch_error_and_cleanup) ... ok
+test_listener_and_site_reentrancy_and_errors (test_machine.MachineTests.test_listener_and_site_reentrancy_and_errors) ... ok
+test_native_seven_full_frames_and_arbitrary_width_listener_values (test_machine.MachineTests.test_native_seven_full_frames_and_arbitrary_width_listener_values) ... ok
+test_nested_calls_full_state_and_ordered_taps (test_machine.MachineTests.test_nested_calls_full_state_and_ordered_taps) ... ok
+test_recursive_same_return_address_and_stop_before_resume (test_machine.MachineTests.test_recursive_same_return_address_and_stop_before_resume) ... ok
+test_register_aliases (test_machine.MachineTests.test_register_aliases) ... ok
+test_body_values_and_direct_done_callbacks (test_native_subtree.NativeSubtreeTests.test_body_values_and_direct_done_callbacks) ... ok
+test_caller_variant_bridge (test_native_subtree.NativeSubtreeTests.test_caller_variant_bridge) ... ok
+test_errors_and_variant_bridge (test_native_subtree.NativeSubtreeTests.test_errors_and_variant_bridge) ... ok
+test_tree_state_callbacks_and_suspension (test_native_subtree.NativeSubtreeTests.test_tree_state_callbacks_and_suspension) ... ok
+test_ignoring_negative_delta_is_detected (test_negative_return_delta.NegativeReturnDeltaTests.test_ignoring_negative_delta_is_detected) ... ok
+test_real_dos_shifted_frame_full_state_and_ordered_callbacks (test_negative_return_delta.NegativeReturnDeltaTests.test_real_dos_shifted_frame_full_state_and_ordered_callbacks) ... ok
+test_state_records_and_checkpoint_through_rust (test_sealed_api.SealedAPITests.test_state_records_and_checkpoint_through_rust) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.842s
+
+OK

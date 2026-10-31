@@ -6,5 +6,6 @@ port and, through it, the original. Rules: [CLAUDE.md](CLAUDE.md). No byte of th
 
 Build, state/tables API and backend-worker isolation: [engine/README.md](engine/README.md).
 The translation sequence is in [docs/roadmap.md](docs/roadmap.md); current sealed-engine
-evidence and resume rules are in [out/T03/README.md](out/T03/README.md). Read the latest
+baseline evidence is in [out/T03](out/T03/README.md), and the first native
+caller/callee tree is documented in [out/T04](out/T04/README.md). Read the latest
 [checkpoint](https://github.com/diegoami/goal2rust/issues/1) before restarting work.

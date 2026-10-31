@@ -1,0 +1,2 @@
+denied: unicorn, .sav, .EXE, .DAT
+{"mutant": 2, "captures": {"1771:3216": 8, "0791:2956": 8}, "comparisons": {"real:1771:3216": {"total": 96, "equal": 0}, "real-body:1771:3216": {"total": 32, "equal": 0}, "real:0791:2956": {"total": 96, "equal": 0}, "random-edge:1771:3216": {"total": 1000, "equal": 0}, "random-edge:0791:2956": {"total": 1000, "equal": 0}, "random-edge-body:1771:3216": {"total": 1000, "equal": 0}}, "all_equal": false, "source_unchanged": true}

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T04/profile.py", line 8, in <module>
+    import cProfile
+  File "/home/diego/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/cProfile.py", line 24, in <module>
+    run.__doc__ = _pyprofile.run.__doc__
+                  ^^^^^^^^^^^^^^
+AttributeError: module 'profile' has no attribute 'run'

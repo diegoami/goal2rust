@@ -50,3 +50,20 @@ methods). The kit's event/decision logic and replay-based save format remain the
 pinned Python implementation. `goal2rust.Match` exposes its per-event API over
 this machine; `install()` selects it process-locally for the oracle harnesses,
 including `Match.load` replay. Nothing in the pinned clone is patched.
+
+## T04 native availability subtree
+
+Translation-origin pin: `e0270981883f02ce46a31391e7070079977bbfef`, the
+unchanged T03 accepted oracle. Full inventory: `out/T04/contract.md`.
+
+| Routine | Python source | Rust |
+| --- | --- | --- |
+| 0791:2956, retf 4 | `port/geometry.py` `player_unavailable_on_pitch` | `geometry.rs` `unavailable_start` / `unavailable_resume`; `machine.rs` `NativeContinuation` |
+| 1771:3216, retf 2 | `port/attributes.py` `player_unavailable`, `mul`, `put`, `ret` | `machine.rs` `availability_body` |
+
+The caller's native continuation uses the existing issue/return/suspend path,
+including its observable guest Call metadata and separate callee frame. The
+callee reproduces the upstream inline bit tests and retained stack bytes; it
+has no yielded guest call. Nondefault variants use their original Python
+bodies. This adds two bodies to T02's seven; it does not replace unported
+Python generators. T03 receipts remain historical seven-body evidence.

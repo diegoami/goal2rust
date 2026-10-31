@@ -334,3 +334,23 @@ pub fn player_at_ball<H: Host>(h: &mut H) -> Result<(), H::Err> {
     r.leave(h)?;
     r.store(h, false)
 }
+
+/// T04, e0270981 geometry.player_unavailable_on_pitch: body up to its guest call.
+pub fn unavailable_start<H: Host>(h: &mut H) -> Result<u16, H::Err> {
+    let a = args(h, 2)?;
+    let mut r = Regs::new(false);
+    r.enter(h, 2)?;
+    r.set(Reg::Es, a[1] as u32);
+    r.set(Reg::Di, a[0] as u32);
+    r.store(h, true)?;
+    rec16(h, a[1], a[0], 13)
+}
+
+/// The continuation after 1771:3216 returns to 0791:2968.
+pub fn unavailable_resume<H: Host>(h: &mut H) -> Result<(), H::Err> {
+    let mut r = Regs::new(true);
+    let al = r.al(h)?;
+    r.local8(h, -1, al)?;
+    r.leave(h)?;
+    r.store(h, false)
+}

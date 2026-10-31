@@ -1,0 +1,8 @@
+denied: unicorn, .sav, .EXE, .DAT
+denied: unicorn, .sav, .EXE, .DAT
+ports: attributes, ball, contests, discipline, display, duels, entrypoints, frame, geometry, menus, motion, pilot, positioning, postmatch, quick, rare, real, restarts, runtime, selection, setup, takers, update
+digests without the board's screen
+engine       PASS  171.1 s  
+interactive  PASS  438.1 s  {'straight': '8de3af19448095441a67f5776c13ec4fb47330d747fc16d71c9f77c01ed15d1b', 'resumed': '8de3af19448095441a67f5776c13ec4fb47330d747fc16d71c9f77c01ed15d1b', 'expected': '8de3af19448095441a67f5776c13ec4fb47330d747fc16d71c9f77c01ed15d1b', 'screen': False}
+goals        PASS  219.3 s  
+knockout     PASS  1010.3 s  {'digests': {'straight': 'f5d846d69d1e507bab11ca6e43b0016934e05cca89d4c6ddbb2134d812f20869', 'resumed at extra time': 'f5d846d69d1e507bab11ca6e43b0016934e05cca89d4c6ddbb2134d812f20869', 'resumed at the order': 'f5d846d69d1e507bab11ca6e43b0016934e05cca89d4c6ddbb2134d812f20869'}, 'expected': 'f5d846d69d1e507bab11ca6e43b0016934e05cca89d4c6ddbb2134d812f20869', 'screen': False, 'problems': [], 'score': [0, 0], 'score_90': [0, 0], 'shootout': [3, 1], 'winner': 0}
