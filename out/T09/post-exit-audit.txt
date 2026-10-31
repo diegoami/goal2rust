@@ -4,6 +4,8 @@ from pathlib import Path
 sys.path.insert(0,'out/T09')
 import evidence as e
 e.verify();before=e.hashes();out=e.BASE/'out/T09';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();load=lambda n:json.loads((out/(n+'.json')).read_text())
+r=load('process-closure-v1');assert r['pass_all'] and r['supervisor_exited'] and len(r['groups'])==35 and all(x['empty'] for x in r['groups'])
+assert r['script_sha256']==sha(out/'process-closure.txt')
 for path,h in load('baseline-snapshot-v1')['source_and_binary_sha256'].items():assert sha(e.BASE/path)==h
 for stage in ['T07','T08','T09']:
  for r in json.loads((e.BASE/'out'/stage/'artifact-archive-v1.json').read_text())['artifacts']:
@@ -27,6 +29,10 @@ for p in sorted(out.glob('family-progress-*-v1.json')):
  assert [hashlib.sha256(x).hexdigest() for x in lines[:n]]==r['line_sha256']
  assert sha(out/'progress-snapshot.txt')==r['snapshot_script_sha256'];prefixes.append(n)
 assert len(prefixes)>=3
+for n in prefixes:
+ r=load(f'compare-progress-{n}-v1');assert r['pass_all'] and r['provisional_subset'] and r['full_ALL75_pending'] and r['expected']==n
+ assert r['candidate_sha256']==sha(out/f'family-progress-{n}-v1.jsonl') and r['script_sha256']==sha(out/'compare-progress.txt')
+ assert r['comparator_sha256']==sha(e.ORACLE/'experiments/E036-match-port/compare.py')
 for suite,count in [('availability',3224),('ball',2128),('skill',6224)]:
  r=load(suite+'-differential-v1');assert sum(v['total'] for v in r['comparisons'].values())==count and all(v['equal']==v['total'] for v in r['comparisons'].values())
  assert all(v['equal']==0 for v in load(suite+'-body-v1')['comparisons'].values())

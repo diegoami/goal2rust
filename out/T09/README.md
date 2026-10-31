@@ -1,5 +1,13 @@
 # T09 speaker/noise state
 
+## M2 and partial M3 evidence saved; full acceptance pending
+
+M2 proof: m2-proof-v1.json (52,472 comparisons plus328 observer cases).
+Ordered drive, lifecycle and refreshed16-body profile pass. The complete F40
+prefix passes the unchanged strict comparator; ALL75/final F40 source selection
+and three quiet four-arm timing rounds remain required. No final acceptance
+ledger or production merge yet. Live completion/resume state stays in issue #1.
+
 Task #24, contract docs/tasks/T09.md and contract.md. Read checkpoint issue #1
 and recheck live jobs before resuming. Never overwrite completed receipts,
 rejected attempts, preserved baselines or private inputs. No original data in git.
