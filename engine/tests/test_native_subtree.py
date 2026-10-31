@@ -14,7 +14,7 @@ ENTRIES = {ad: entry for registry, _ in load(['all'])
 
 
 def exercise(cls, case, *, root='0791:2956', tapped=True, pause=None,
-             variant=None, failure=None, mutant=0):
+             variant=None, failure=None, mutant=0, body=False, direct=False, caller_variant=None):
     rng = random.Random(case)
     # Authored memory, including nonzero untouched/dead bytes.
     memory = bytes(range(256)) * (0x110000 // 256)
@@ -22,7 +22,7 @@ def exercise(cls, case, *, root='0791:2956', tapped=True, pause=None,
     log, calls, done = [], {}, []
     mem = m.port_memory()
     for ad, entry in ENTRIES.items():
-        v = variant if ad == '1771:3216' else None
+        v = variant if ad == '1771:3216' else caller_variant
         if cls is Oracle:
             def runner(machine, e=entry, v=v):
                 calls[e.address] = calls.get(e.address, 0) + 1
@@ -66,11 +66,27 @@ def exercise(cls, case, *, root='0791:2956', tapped=True, pause=None,
         def handler(replay, site=site):
             visits.append((site, replay))
             if failure == site: raise ValueError('subtree site refused')
-            if pause == site and visits.count((site, replay)) == 1: m.stop('pause')
+            if pause == site and sum(v[0] == site for v in visits) == 1: m.stop('pause')
         m.at(site, handler)
     error, suspended = None, None
     try:
-        reason = m.run(end, fresh=True)
+        if body:
+            mem._entries.append((m.reg('sp'), True))
+            try:
+                value = (m._core.routine(m, mem, root) if cls is PortMachine
+                         else ENTRIES[root].fn(mem, variant))
+                done.append((root, value))
+            finally: mem._entries.pop()
+            reason = None
+        else:
+            if direct:
+                entry = ENTRIES[root]
+                callback = lambda f: done.append((f.entry.address, f.value))
+                if cls is Oracle:
+                    calls[root] = calls.get(root, 0) + 1
+                    PortFrame(m, mem, entry, variant, callback).start()
+                else: BridgeRunner(entry, variant, mem, calls)(m, callback)
+            reason = m.run(end, fresh=True)
         if reason == 'pause':
             suspended = [(f.entry.address, f.ss, f.sp, f.bp, f.ret_lin, f.expect_sp,
                           f.after_sp, None if f.waiting is None else
@@ -98,6 +114,22 @@ class NativeSubtreeTests(unittest.TestCase):
                         self.assertEqual(p, r)
                         self.assertEqual(native.get(root), 1)
                         if root == '0791:2956': self.assertEqual(native.get('1771:3216'), 1)
+
+    def test_body_values_and_direct_done_callbacks(self):
+        for case in range(100):
+            for opts in (dict(root='1771:3216', body=True),
+                         dict(root='1771:3216', direct=True),
+                         dict(root='0791:2956', direct=True)):
+                with self.subTest(case=case, **opts):
+                    self.assertEqual(exercise(Oracle, case, **opts)[0],
+                                     exercise(PortMachine, case, **opts)[0])
+
+    def test_caller_variant_bridge(self):
+        p, _ = exercise(Oracle, 2, caller_variant='diagnostic-nondefault')
+        r, native = exercise(PortMachine, 2, caller_variant='diagnostic-nondefault')
+        self.assertEqual(p, r)
+        self.assertNotIn('0791:2956', native)
+        self.assertEqual(native.get('1771:3216'), 1)
 
     def test_errors_and_variant_bridge(self):
         for case in range(12):

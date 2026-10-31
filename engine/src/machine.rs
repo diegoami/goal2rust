@@ -118,6 +118,11 @@ impl Port {
         visit.call(&self.calls)
     }
 }
+enum NativeContinuation {
+    AvailabilityStart,
+    AvailabilityReturn,
+}
+
 struct Frame {
     port: Port,
     done: Py<PyAny>,
@@ -125,6 +130,7 @@ struct Frame {
     sp: u32,
     bp: u32,
     gen: Option<Py<PyAny>>,
+    native: Option<NativeContinuation>,
     waiting: Option<Py<PyAny>>,
     ret_lin: Option<u32>,
     expect_sp: Option<u32>,
@@ -531,7 +537,7 @@ impl MachineCore {
         result
     }
     /// Run a native routine body for per-call differentials, inside mem._entries.
-    fn routine(&self, m: &Bound<'_, PyAny>, mem: &Bound<'_, PyAny>, address: &str) -> PyResult<()> {
+    fn routine(&self, m: &Bound<'_, PyAny>, mem: &Bound<'_, PyAny>, address: &str) -> PyResult<Py<PyAny>> {
         let entries = mem.getattr("_entries")?.cast_into::<PyList>()?;
         let entry: (u32, bool) = entries.get_item(entries.len() - 1)?.extract()?;
         self.native_body(m, entry, address)?
@@ -792,18 +798,25 @@ impl MachineCore {
         let ss = self.reg(m, "ss")?;
         let sp = self.reg(m, "sp")?;
         let bp = self.reg(m, "bp")?;
-        let frame = Frame {
+        let mut frame = Frame {
             port,
             done,
             ss,
             sp,
             bp,
             gen: None,
+            native: None,
             waiting: None,
             ret_lin: None,
             expect_sp: None,
             after_sp: None,
         };
+        if self.native && frame.port.variant.bind(py).is_none()
+            && address.extract::<String>()? == "0791:2956"
+        {
+            frame.native = Some(NativeContinuation::AvailabilityStart);
+            return self.step(m, frame, &py.None().into_bound(py));
+        }
         let entries = frame
             .port
             .mem
@@ -813,18 +826,11 @@ impl MachineCore {
         let far: bool = frame.port.entry.bind(py).getattr("far")?.extract()?;
         entries.append((sp, far))?;
         let result = (|| {
-            if self.native
-                && frame.port.variant.bind(py).is_none()
-                && self
-                    .native_body(m, (sp, far), &address.extract::<String>()?)?
-                    .is_some()
-            {
-                *self
-                    .native_calls
-                    .borrow_mut()
-                    .entry(address.extract()?)
-                    .or_insert(0) += 1;
-                return Ok(py.None().into_bound(py));
+            if self.native && frame.port.variant.bind(py).is_none() {
+                if let Some(value) = self.native_body(m, (sp, far), &address.extract::<String>()?)? {
+                    *self.native_calls.borrow_mut().entry(address.extract()?).or_insert(0) += 1;
+                    return Ok(value.into_bound(py));
+                }
             }
             frame
                 .port
@@ -844,6 +850,9 @@ impl MachineCore {
         }
     }
     fn step(&self, m: &Bound<'_, PyAny>, frame: Frame, sent: &Bound<'_, PyAny>) -> PyResult<()> {
+        if frame.native.is_some() {
+            return self.step_native(m, frame);
+        }
         let py = m.py();
         let entries = frame
             .port
@@ -882,6 +891,36 @@ impl MachineCore {
             Err(e) => Err(e),
         }
     }
+    fn step_native(&self, m: &Bound<'_, PyAny>, mut f: Frame) -> PyResult<()> {
+        let py = m.py();
+        let entries = f.port.mem.bind(py).getattr("_entries")?.cast_into::<PyList>()?;
+        let far: bool = f.port.entry.bind(py).getattr("far")?.extract()?;
+        entries.append((f.sp, far))?;
+        let mut h = NativeHost { core: self, m: m.clone(), entry: (f.sp, far) };
+        let result = (|| -> PyResult<Option<Py<PyAny>>> {
+            match f.native.take().unwrap() {
+                NativeContinuation::AvailabilityStart => {
+                    let player = crate::geometry::unavailable_start(&mut h)?;
+                    let c = self.call_type.bind(py).call1((
+                        "1771:3216", (player,), "0791:2968", true, false
+                    ))?;
+                    f.native = Some(NativeContinuation::AvailabilityReturn);
+                    *self.native_calls.borrow_mut().entry("0791:2956".into()).or_insert(0) += 1;
+                    Ok(Some(c.unbind()))
+                }
+                NativeContinuation::AvailabilityReturn => {
+                    crate::geometry::unavailable_resume(&mut h)?;
+                    Ok(None)
+                }
+            }
+        })();
+        entries.call_method0("pop")?;
+        match result? {
+            Some(c) => self.issue(m, f, c.into_bound(py)),
+            None => self.finish(m, f, py.None().into_bound(py)),
+        }
+    }
+
     fn issue(&self, m: &Bound<'_, PyAny>, mut f: Frame, c: Bound<'_, PyAny>) -> PyResult<()> {
         let py = m.py();
         let ret_to: String = c.getattr("ret_to")?.extract()?;
@@ -969,7 +1008,7 @@ impl MachineCore {
         m: &Bound<'_, PyAny>,
         entry: (u32, bool),
         address: &str,
-    ) -> PyResult<Option<()>> {
+    ) -> PyResult<Option<Py<PyAny>>> {
         let mut h = NativeHost {
             core: self,
             m: m.clone(),
@@ -977,6 +1016,7 @@ impl MachineCore {
         };
         use crate::geometry as g;
         match address {
+            "1771:3216" => return Ok(Some(self.availability_body(m)?.into_pyobject(m.py())?.into_any().unbind())),
             "0791:2BE5" => g::direction(&mut h)?,
             "0791:2B51" => g::slot_is_on_ball_side(&mut h)?,
             "0791:26D7" => g::player_effective_tactic(&mut h)?,
@@ -986,7 +1026,55 @@ impl MachineCore {
             "0791:2974" => g::side(&mut h)?,
             _ => return Ok(None),
         }
-        Ok(Some(()))
+        Ok(Some(m.py().None()))
+    }
+
+    /// attributes.player_unavailable at e0270981: no guest calls in the oracle.
+    fn availability_body(&self, m: &Bound<'_, PyAny>) -> PyResult<u16> {
+        let py = m.py();
+        let e = self.reg(m, "sp")?;
+        let bp = self.reg(m, "bp")? as u16;
+        let arg = self.reg(m, "ss")? * 16 + ((e + 4) & 0xffff);
+        let n = u16::from_le_bytes(self.bytes(py, arg, 2)?.as_bytes().try_into().unwrap());
+        let product = n as u32 * 20;
+        let ptr = u32::from_le_bytes(self.bytes(py, (self.load as u32 + 0x2581) * 16 + 0xa91b, 4)?.as_bytes().try_into().unwrap());
+        let off = (ptr as u16).wrapping_add(product as u16);
+        let seg = (ptr >> 16) as u16;
+        let energy = self.bytes(py, seg as u32 * 16 + off.wrapping_add(14) as u32, 1)?.as_bytes()[0] as i8;
+        let base = self.reg(m, "ss")? * 16 + (e.wrapping_sub(20) & 0xffff);
+        let mut block = self.bytes(py, base, 20)?.as_bytes().to_vec();
+        block[18..20].copy_from_slice(&bp.to_le_bytes());
+        block[13..15].copy_from_slice(&off.to_le_bytes());
+        block[15..17].copy_from_slice(&seg.to_le_bytes());
+        let (ax, dx, start) = if energy < 1 {
+            block[17] = 1;
+            (((product as u16) & 0xff00) | 1, product >> 16, 12)
+        } else {
+            let flags = self.bytes(py, seg as u32 * 16 + off.wrapping_add(16) as u32, 1)?.as_bytes()[0];
+            let mut result = 0;
+            let mut dx = 2;
+            for (elem, shift, after) in [(8u16, 7u32, 0x324du16), (6, 5, 0x3264), (3, 2, 0x327b)] {
+                let bit = (flags >> shift) & 1;
+                if bit != 0 || elem == 3 {
+                    block[10..12].copy_from_slice(&elem.to_le_bytes());
+                    block[8..10].copy_from_slice(&(flags as u16).to_le_bytes());
+                    block[6..8].copy_from_slice(&self.seg(0x1771).to_le_bytes());
+                    block[4..6].copy_from_slice(&after.to_le_bytes());
+                    block[2..4].copy_from_slice(&(e.wrapping_sub(2) as u16).to_le_bytes());
+                    block[1] = bit;
+                    result = bit as u16;
+                    dx = shift;
+                    break;
+                }
+            }
+            block[17] = result as u8;
+            (result, dx, 0)
+        };
+        // T04 body control: corrupt the result's dead local byte only.
+        if self.mutant == 2 { block[17] ^= 1; }
+        self.write_native(m, base + start as u32, &block[start..], self.lin("1771:3285")?)?;
+        self.set(m, "dx", dx)?;
+        Ok(ax)
     }
 }
 

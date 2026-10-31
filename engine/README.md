@@ -52,7 +52,9 @@ extract --exe <owner's GOAL.EXE> --out <private folder>`, then copy its pinned
 Tables and state stay outside git and releases. The checkpoint loader does not
 restore the tables object, so supply it explicitly to `records_after` after
 load. [T03's evidence](../out/T03/README.md) covers this boundary; the engine
-still bridges unported bodies to Python and has seven native routines.
+still bridges unported bodies to Python. T04 adds a native availability caller
+and callee to the seven bodies measured by T03; its evidence is in
+[the T04 directory](../out/T04/README.md).
 
 For oracle harnesses, call `goal2rust.install()` in the test process before
 constructing/loading a kit match with `engine="port"`. This changes the factory

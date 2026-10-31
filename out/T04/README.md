@@ -44,3 +44,29 @@ restarting. Do not run completed T03 producers or overwrite their outputs.
 Do not modify bound production/proof sources while producers are running.
 Full ordered drive, F40, lifecycle and quiet paired timings remain required;
 public tests or a diagnostic profile alone do not complete T04.
+
+## Initial implementation receipts
+
+`differential-v2.json` expands the earlier v1 full-frame run to **3,224**
+real/random/edge comparisons, including direct callee body return values.
+`public-cpython-v4.log` and `public-pypy-v1.log` cover all 14 public tests,
+including native caller suspension, direct completion callbacks and both
+caller/callee variant fallback. `cargo-v1.log` covers the 11 Rust tests.
+The baseline/native assertions and intermediate failed helper attempts remain.
+The first native-suite attempt stopped twice because the test's pause counter
+separated fresh/replay visits; counting the site once fixes the helper without
+changing the production code or equality assertions. `public-cpython-v1.log`
+preserves that failure. Later runs preserve the expanded suite.
+
+The full gate supervisor uses `.cache/T04-supervisor.lock`; append-only
+`jobs-v1.jsonl` binds producer process groups/commands, `supervisor-v1.log`
+reports progress. Before resuming, inspect every job/process and failure;
+never duplicate a live group. After it exits successfully, run the independent
+post-writer audit (exclusive output):
+
+```sh
+PYTHONHASHSEED=0 .venv/bin/python -B out/T04/validate.py out/T04/validation-v1.json
+```
+
+The supervisor does not write the final index while its own log is open.
+Measured source files and interpreter artifacts must stay unchanged throughout.

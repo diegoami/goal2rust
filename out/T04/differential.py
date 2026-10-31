@@ -42,7 +42,7 @@ def main():
         if i >= 60: break
     for ad, entry in ENTRIES.items(): entry.fn = originals[ad]
 
-    def real(cls, root, snap, tapped, listener, pause):
+    def real(cls, root, snap, tapped, listener, pause, body=False):
         memory, regs, entry_state = snap
         machine = cls(memory, m.m.load, mutant=a.mutant) if cls is PortMachine else cls(memory, m.m.load)
         machine._registers.clear(); machine._registers.update(regs)
@@ -70,7 +70,16 @@ def main():
         ret_cs = int.from_bytes(memory[ss * 16 + cs_off:ss * 16 + cs_off + 2], 'little')
         error, suspended = None, []
         try:
-            reason = machine.run(ret_cs * 16 + ret_ip, fresh=True)
+            if body:
+                mem._entries.append(entry_state)
+                try:
+                    value = (machine._core.routine(machine, mem, root) if cls is PortMachine
+                             else ENTRIES[root].fn(mem, None))
+                    log.append(('value', value))
+                finally: mem._entries.pop()
+                reason = None
+            else:
+                reason = machine.run(ret_cs * 16 + ret_ip, fresh=True)
             if reason == 'pause':
                 suspended = [(f.entry.address, f.sp, f.bp, f.ret_lin, f.expect_sp) for f in machine.frames]
                 machine.run(ret_cs * 16 + ret_ip)
@@ -94,17 +103,27 @@ def main():
                     for pause in (None, '1771:3216', '0791:2968'):
                         compare('real:' + root, real(Oracle, root, snap, tapped, listener, pause),
                                 real(PortMachine, root, snap, tapped, listener, pause))
+        if root == '1771:3216':
+            for snap in snaps:
+                for tapped in (False, True):
+                    for listener in (False, True):
+                        compare('real-body:' + root, real(Oracle, root, snap, tapped, listener, None, True),
+                                real(PortMachine, root, snap, tapped, listener, None, True))
     for case in range(500):
         for root in ENTRIES:
             for tapped in (False, True):
                 opts = dict(root=root, tapped=tapped, pause=[None, '1771:3216', '0791:2968'][case % 3])
                 compare('random-edge:' + root, exercise(Oracle, case, **opts)[0],
                         exercise(PortMachine, case, mutant=a.mutant, **opts)[0])
+        for tapped in (False, True):
+            opts = dict(root='1771:3216', tapped=tapped, body=True)
+            compare('random-edge-body:1771:3216', exercise(Oracle, case, **opts)[0],
+                    exercise(PortMachine, case, mutant=a.mutant, **opts)[0])
     report = dict(mutant=a.mutant, captures={ad: len(v) for ad, v in captures.items()},
                   comparisons=counts, differences=differences,
                   all_equal=all(v['total'] == v['equal'] for v in counts.values()))
     e.write(a.out, report, before)
-    print(json.dumps(report), flush=True)
+    print(json.dumps({k: report[k] for k in ('mutant', 'captures', 'comparisons', 'all_equal', 'source_unchanged')}), flush=True)
     assert report['all_equal'] == (a.mutant == 0)
 
 
