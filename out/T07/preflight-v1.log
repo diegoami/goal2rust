@@ -1,0 +1,3 @@
+Initial fetch via the cache's stale local origin failed: git upload-pack: not our ref 2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c.
+Retried via the explicit official GitHub remote; the accepted commit fetched successfully.
+Old e0270981 clone preserved under ignored .cache/goal2-archaeology-T06; old private state and tables unchanged.

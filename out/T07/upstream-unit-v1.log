@@ -1,0 +1,16 @@
+test_a_code_data_byte_that_differs_from_the_tables_is_carried (test_port_seal.StateContract.test_a_code_data_byte_that_differs_from_the_tables_is_carried) ... ok
+test_a_state_with_module_bytes_or_other_tables_is_refused (test_port_seal.StateContract.test_a_state_with_module_bytes_or_other_tables_is_refused) ... ok
+test_entries_outside_their_table_are_refused (test_port_seal.StateContract.test_entries_outside_their_table_are_refused) ... ok
+test_tables_that_differ_from_their_manifest_are_refused (test_port_seal.StateContract.test_tables_that_differ_from_their_manifest_are_refused) ... ok
+test_the_state_leaves_the_module_out_and_from_state_restores_it (test_port_seal.StateContract.test_the_state_leaves_the_module_out_and_from_state_restores_it) ... ok
+test_a_mutated_byte_in_either_table_fails (test_port_tables.PortTables.test_a_mutated_byte_in_either_table_fails) ... ok
+test_a_read_code_byte_that_differs_from_goal_exe_fails (test_port_tables.PortTables.test_a_read_code_byte_that_differs_from_goal_exe_fails) ... ok
+test_extract_refuses_another_goal_exe (test_port_tables.PortTables.test_extract_refuses_another_goal_exe) ... skipped 'the registered GOAL.EXE is not in .cache/artifacts'
+test_extract_writes_a_folder_the_loader_reads (test_port_tables.PortTables.test_extract_writes_a_folder_the_loader_reads) ... ok
+test_the_committed_tables_pass (test_port_tables.PortTables.test_the_committed_tables_pass) ... ok
+test_the_hex_format_reads_back (test_port_tables.PortTables.test_the_hex_format_reads_back) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.291s
+
+OK (skipped=1)
