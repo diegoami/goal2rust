@@ -1,0 +1,42 @@
+{
+  "baseline": "0c3a698f14295e32e41858f63a6a1356657d066d",
+  "oracle": "e0270981883f02ce46a31391e7070079977bbfef",
+  "upstream": {
+    "archaeology": "b11171f70ee8f4a24b2ed7e389efd5bc2cc6fb90",
+    "goal2": "696edb0796be99d706234522f7160707553ce963",
+    "goal2_changes": "Adoption/task documentation and goal2-only table exception; no oracle routine change"
+  },
+  "profile_sha256": "639de01de3cd7b28f93348799c65396478d36dea4d6ba7fde6c0b3d1dee1818a",
+  "routines": {
+    "0791:278A": {
+      "body_self_s": 0.482016031,
+      "cumulative_s": 3.53741429,
+      "function": "skill_of_pitch_record",
+      "guest_entries": 23342,
+      "module": "geometry",
+      "native_entries": 0,
+      "python_calls_or_resumes": 46684,
+      "python_entries": 23342
+    },
+    "1771:3A06": {
+      "body_self_s": 0.169977333,
+      "cumulative_s": 1.308166031,
+      "function": "derived_skill",
+      "guest_entries": 23342,
+      "module": "attributes",
+      "native_entries": 0,
+      "python_calls_or_resumes": 23342,
+      "python_entries": 23342
+    }
+  },
+  "literal_callee": "1771:3A06",
+  "dynamic_guest_targets": 0,
+  "source_sha256": {
+    ".cache/goal2-archaeology/runtime/original_match/port/geometry.py": "a665d830ed16c00833a27216393a3b6f406251f44cef1f7fc9e80f7eb6bd3e81",
+    ".cache/goal2-archaeology/runtime/original_match/port/attributes.py": "187df60ae923ab002c40939bf4eb7bacae63ac2b1a932fb1f1ba269d12503cc0",
+    ".cache/goal2-archaeology/runtime/original_match/port/mem.py": "0105113f8102a3e8c3544942a445e156fecc0196f7911089e7f789a7775fe45c",
+    ".cache/goal2-archaeology/runtime/original_match/port/runtime.py": "2e94867069cd6e35c28af96426bfade7dcb381e370eb12af106627cbeeced0eb",
+    ".cache/goal2-archaeology/runtime/original_match/port/guest.py": "1062b5ea7d72114b5f404485768f6aeca69a5d94ffb0285a31158b266c46de7f",
+    ".cache/goal2-archaeology/runtime/original_match/port/engine.py": "6439370e3ffcc5977bb066506431a25a0c300ea374faf28ec3f4fbd9718c6f14"
+  }
+}
