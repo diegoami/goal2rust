@@ -11,6 +11,12 @@ shapes the order: leaf routines under the Python dispatcher gain only about 1.1 
 match, because the port's per-call Python machinery dominates, so the dispatcher, the frames and
 the guest calls move to Rust early (T01's go/no-go, `docs/go-no-go.md` on its branch).
 
+[owner, 2026-11-01] Incremental Python-to-Rust translations do not each need a
+5% whole-match CPU gain. Preserve fidelity and report complete measured outcomes;
+use the task's explicit performance criteria. T09 is owner-approved with all
+three rounds faster and a 4.28% median CPU gain. T08's historical optimization
+gate is unchanged. See [incremental acceptance](docs/porting-acceptance.md).
+
 ## Sources and the oracle
 
 [designed: owner, 2026-10-30] Follow `docs/roadmap.md`: adopt archaeology's
