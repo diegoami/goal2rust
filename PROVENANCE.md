@@ -67,3 +67,13 @@ callee reproduces the upstream inline bit tests and retained stack bytes; it
 has no yielded guest call. Nondefault variants use their original Python
 bodies. This adds two bodies to T02's seven; it does not replace unported
 Python generators. T03 receipts remain historical seven-body evidence.
+
+## T05 nearest-to-ball tree
+
+Translation-origin pin: `e0270981883f02ce46a31391e7070079977bbfef`.
+`port/ball.py` `find_nearest_to_ball` at **0791:2FB1** (near ret, no args)
+and its `local8`, `local16`, `load_local_pitch`, geometry `cbw`/`mul`/`imul`
+semantics are reproduced in `engine/src/ball.rs`. `machine.rs` carries its
+four native continuation phases through the existing guest dispatcher.
+Its guest closure 2956 -> 3216 and 2BE5 stays separately observable and uses
+previously translated bodies. Full contract: `out/T05/contract.md`.

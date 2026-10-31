@@ -70,6 +70,18 @@ records 1,804,722 remaining Python guest entries. Use that evidence when
 inventorying the next bounded tree. An entry-count reduction is not an
 uninstrumented speed claim; the larger engine milestone below remains separate.
 
+## 2a. T05: nearest-to-ball native tree
+
+Continue the bounded-tree sequence with `0791:2FB1` after T04's refreshed
+profile: highest remaining registered body self time and 298,641 Python
+calls/resumptions from 5,147 starts. Its complete guest closure is already
+native (2956 -> 3216 and 2BE5). Translate the loop as explicit native
+continuations while preserving all guest boundaries and the live stack word
+across the two direction calls. Contract and unchanged per-subtree gates:
+[docs/tasks/T05.md](tasks/T05.md); evidence: [out/T05](../out/T05/README.md).
+Report the paired performance outcome and remaining entries; a small entry
+count can still represent many Python resumptions, and neither predicts speed.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the
@@ -81,8 +93,8 @@ or replace it. T79's 699 equal completed matches prove the Python port, not Rust
 The owner runs the milestone review from a prompt naming the PR and requesting
 the full report as a PR comment and its URL. Goal2 adoption separately requires
 application fidelity, save/load, cancellation and native lifecycle/playtest.
-The current hybrid Rust engine has not beaten PyPy (T02: 107.394 versus 48.634
-CPU seconds on the same drive).
+The hybrid Rust engine has not beaten PyPy (T05: 92.484 versus 49.243
+CPU seconds in the quiet pair; see out/T05/assessment.md).
 
 ## 4. Beyond the match engine
 

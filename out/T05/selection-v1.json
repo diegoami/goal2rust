@@ -1,0 +1,37 @@
+{
+  "baseline_commit": "0eacd69d1d1f0aa0cdcb936640fb897a95662ed1",
+  "oracle": "e0270981883f02ce46a31391e7070079977bbfef",
+  "profile": "out/T04/profile-after-v1.json",
+  "profile_sha256": "a159c168e79dd28c8e9351ee4aa600199812ce40e673eb947ec3026530d06161",
+  "root": "0791:2FB1",
+  "guest_entries": 5147,
+  "python_calls_or_resumes": 298641,
+  "body_self_s": 4.013,
+  "limitations": "Diagnostic cProfile; no uninstrumented speed estimate or FFI count",
+  "literal_calls": [
+    {
+      "target": "0791:2956",
+      "ret_to": "0791:3013",
+      "far": true
+    },
+    {
+      "target": "0791:2BE5",
+      "ret_to": "0791:3090",
+      "far": true
+    },
+    {
+      "target": "0791:2BE5",
+      "ret_to": "0791:30A3",
+      "far": true
+    }
+  ],
+  "dynamic_guest_targets": 0,
+  "source_sha256": {
+    ".cache/goal2-archaeology/runtime/original_match/port/ball.py": "6b5f17ee9af3bf7dbb2bae4bd5ae00e1a012f6d6cf6e6e3c2cdd8464a7e2c72a",
+    ".cache/goal2-archaeology/runtime/original_match/port/geometry.py": "a665d830ed16c00833a27216393a3b6f406251f44cef1f7fc9e80f7eb6bd3e81",
+    ".cache/goal2-archaeology/runtime/original_match/port/attributes.py": "187df60ae923ab002c40939bf4eb7bacae63ac2b1a932fb1f1ba269d12503cc0",
+    ".cache/goal2-archaeology/runtime/original_match/port/engine.py": "6439370e3ffcc5977bb066506431a25a0c300ea374faf28ec3f4fbd9718c6f14",
+    ".cache/goal2-archaeology/runtime/original_match/port/guest.py": "1062b5ea7d72114b5f404485768f6aeca69a5d94ffb0285a31158b266c46de7f",
+    ".cache/goal2-archaeology/runtime/original_match/port/runtime.py": "2e94867069cd6e35c28af96426bfade7dcb381e370eb12af106627cbeeced0eb"
+  }
+}

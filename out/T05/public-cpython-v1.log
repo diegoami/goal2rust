@@ -1,0 +1,7 @@
+test_errors_variants_and_done (test_nearest_ball.NearestBallTests.test_errors_variants_and_done) ... ok
+test_full_frames_and_continuations (test_nearest_ball.NearestBallTests.test_full_frames_and_continuations) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 9.267s
+
+OK

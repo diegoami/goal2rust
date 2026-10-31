@@ -1,0 +1,8 @@
+denied: unicorn, .sav, .EXE, .DAT
+Real capture comparisons complete {'real': {'total': 128, 'equal': 128}}
+Synthetic cases complete 100
+Synthetic cases complete 200
+Synthetic cases complete 300
+Synthetic cases complete 400
+Synthetic cases complete 500
+{"mutant": 0, "comparisons": {"real": {"total": 128, "equal": 128}, "random-edge": {"total": 2000, "equal": 2000}}, "all_equal": true, "source_unchanged": true}

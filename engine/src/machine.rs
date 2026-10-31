@@ -121,6 +121,7 @@ impl Port {
 enum NativeContinuation {
     AvailabilityStart,
     AvailabilityReturn,
+    NearestBall(crate::ball::Phase),
 }
 
 struct Frame {
@@ -811,11 +812,15 @@ impl MachineCore {
             expect_sp: None,
             after_sp: None,
         };
-        if self.native && frame.port.variant.bind(py).is_none()
-            && address.extract::<String>()? == "0791:2956"
-        {
-            frame.native = Some(NativeContinuation::AvailabilityStart);
-            return self.step(m, frame, &py.None().into_bound(py));
+        if self.native && frame.port.variant.bind(py).is_none() {
+            frame.native = match address.extract::<String>()?.as_str() {
+                "0791:2956" => Some(NativeContinuation::AvailabilityStart),
+                "0791:2FB1" => Some(NativeContinuation::NearestBall(crate::ball::Phase::Start)),
+                _ => None,
+            };
+            if frame.native.is_some() {
+                return self.step(m, frame, &py.None().into_bound(py));
+            }
         }
         let entries = frame
             .port
@@ -899,6 +904,20 @@ impl MachineCore {
         let mut h = NativeHost { core: self, m: m.clone(), entry: (f.sp, far) };
         let result = (|| -> PyResult<Option<Py<PyAny>>> {
             match f.native.take().unwrap() {
+                NativeContinuation::NearestBall(phase) => {
+                    let request = crate::ball::step(&mut h, phase, self.mutant == 3)?;
+                    if phase == crate::ball::Phase::Start {
+                        *self.native_calls.borrow_mut().entry("0791:2FB1".into()).or_insert(0) += 1;
+                    }
+                    match request {
+                        Some(request) => {
+                            let c = self.call_type.bind(py).call1((request.target, request.args, request.ret_to, true, false))?;
+                            f.native = Some(NativeContinuation::NearestBall(request.next));
+                            Ok(Some(c.unbind()))
+                        }
+                        None => Ok(None),
+                    }
+                }
                 NativeContinuation::AvailabilityStart => {
                     let player = crate::geometry::unavailable_start(&mut h)?;
                     let c = self.call_type.bind(py).call1((
@@ -951,7 +970,9 @@ impl MachineCore {
             sp = sp.wrapping_sub(2) & 0xffff;
             let ss = self.reg(m, "ss")?;
             // Mutant 1 corrupts a guest-call return's saved IP; a machine error.
-            let w = if self.mutant == 1 && i == args.len() + usize::from(far) {
+            let corrupt = self.mutant == 1 || (self.mutant == 4
+                && matches!(ret_to.as_str(), "0791:3013" | "0791:3090" | "0791:30A3"));
+            let w = if corrupt && i == args.len() + usize::from(far) {
                 w.wrapping_add(1)
             } else {
                 w
