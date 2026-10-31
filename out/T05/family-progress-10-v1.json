@@ -1,0 +1,31 @@
+{
+  "source": "family-F40-rust-v1.jsonl",
+  "source_lines": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "sha256": "43925c4c86fc56cdaf66deb2e2de698c343a264af5de15b4831c78937dfccdb2",
+  "line_sha256": [
+    "5ae94dfe1c3459b8a9e4ba578089ea70e966fc6acab26fbd0c17a60863047cc6",
+    "eab5d296a673039c4b5f48f355cfe8a69a955920973f15e192149cbddfb74ac9",
+    "cfd26d48473380d19372f259ddef39d88bcfb739e522c58090f5a6dba1d4b784",
+    "10fe37c6f92383a5caf6e99c9decca1616ad18fa3b0ee81880200383b6068ac3",
+    "c4b8f11aee53aa4193ae3ebaba8759a91adcba83285c827158a8bfba4f52766f",
+    "1570fd95d18a0665b49658e1f9fcbcb1bbf9176be3c6fe65ba8201545d86a059",
+    "14c2cffc78e76cfc939b5bd92c0a37f192081d30376fe1f5f1a4a29142c540ce",
+    "b3b8c6e2a6d43eb203ca98f496587023b6bd1aa665fe8653734aba95164533e5",
+    "dbc76716c8aa102498ab2a3a16b1eb6753a531efcdf48fcc6f911464a0f56efb",
+    "fab9ab9b99c83422f73789ef585c4d4e624fbebac96b263b464af81f9914a87a"
+  ],
+  "provisional_completed_subset_equal": true,
+  "full_F40_gate_pending": true,
+  "snapshot_script_sha256": "2769cae98aa1beaa879d20ce9e61e7c8e4d8ba1100eb915808474ccd72053c74"
+}
