@@ -80,8 +80,10 @@ Same-process backend coexistence is unsupported by the current adapter (review
 change the kit's default original/Unicorn backend or its checkpoint format.
 
 The machine owns the register bank and shared guest memory. Unported Python
-bodies use the same state through the bridge. T01's seven bodies execute directly
-in Rust; no other subtree has been translated. Site and write listeners remain
+bodies use the same state through the bridge. T04's availability caller and
+callee execute in Rust alongside T01's seven bodies. The caller suspends as
+explicit Rust state through the guest call/return dispatcher; other callers
+retain their Python generators. Site and write listeners remain
 kit callbacks, with their original ordered taps and error/stop semantics.
 
 Local checks that need no private image:
@@ -94,6 +96,9 @@ PYTHONHASHSEED=0 PYTHONPATH=.cache/goal2-archaeology/runtime \
 
 The public synthetic differential covers frames and recursion, near/far calls,
 caller/callee argument cleanup, wraparound, stop/replay, register aliases, native
-body bypass, callbacks, >64-bit coalesced listener values, and error cleanup.
+body bypass, native availability caller/callee suspension and variant fallback,
+callbacks, >64-bit coalesced listener values, and error cleanup.
 The real-drive, family, per-call, lifecycle and timing evidence and resume
-commands are in `../out/T02/README.md`.
+commands are in [out/T04](../out/T04/README.md); the accepted sealed-input
+baseline remains in [out/T03](../out/T03/README.md). T01/T02 receipts are
+historical and stay bound to their original source and artifacts.

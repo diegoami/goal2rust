@@ -1,5 +1,17 @@
 # T04 native availability tree
 
+## Validation complete
+
+All unchanged gates pass; see [assessment.md](assessment.md). The authoritative
+post-writer index is `validation-v1.json`, with the additional
+`post-exit-audit-v1.json`. No producer or child process remains active. Live
+merge/checkpoint status is in PR #15 / issue #1.
+
+Do not restart the completed producers or overwrite their receipts. A later
+source or binary build needs fresh versioned evidence. The commands and
+in-progress procedure below are historical; inspect checkpoint #1 and live
+processes before resuming any interrupted future candidate.
+
 Contract and source inventory: [contract.md](contract.md). Task: #9 and
 `docs/tasks/T04.md`; the roadmap's Done-when is unchanged. Live status belongs
 in checkpoint #1. T03 historical receipts and archived extensions are retained.
@@ -42,8 +54,8 @@ All producers use exclusive receipts, not silent reruns. Read checkpoint #1,
 inspect live processes and prior failures, and choose a new version before
 restarting. Do not run completed T03 producers or overwrite their outputs.
 Do not modify bound production/proof sources while producers are running.
-Full ordered drive, F40, lifecycle and quiet paired timings remain required;
-public tests or a diagnostic profile alone do not complete T04.
+The completed ordered drive, F40, lifecycle and quiet paired timings are
+assessed above; public tests or a diagnostic profile alone do not complete T04.
 
 ## Initial implementation receipts
 

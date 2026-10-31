@@ -64,6 +64,12 @@ show the outcome against plain PyPy as well as CPython. Report regressions as
 results, never omit them. Count remaining Python guest entries and re-profile
 before selecting another tree. No performance claim rests on cProfile alone.
 
+T04's implementation and measured outcome are in
+[out/T04/assessment.md](../out/T04/assessment.md); its refreshed full profile
+records 1,804,722 remaining Python guest entries. Use that evidence when
+inventorying the next bounded tree. An entry-count reduction is not an
+uninstrumented speed claim; the larger engine milestone below remains separate.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the

@@ -13,7 +13,9 @@ upstream dependencies and the latest checkpoint before starting either task.
 T03's accepted-pin evidence, artifact bindings and experiment resume rules are
 in [out/T03/README.md](out/T03/README.md). Read that before running its producers;
 completed receipts must not be overwritten. T04's contract is in
-[docs/tasks/T04.md](docs/tasks/T04.md). Live completion and stop/resume status
+[docs/tasks/T04.md](docs/tasks/T04.md), with artifact bindings and producer
+rules in [out/T04/README.md](out/T04/README.md). Read those before running its
+producers; preserve completed receipts. Live completion and stop/resume status
 remain in the GitHub checkpoint.
 
 T02 is complete. Its evidence and historical cross-computer experiment commands are in
