@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T04/supplemental-bounds-v1.txt", line 27, in <module>
+    assert p[6] and p[6][0] == 'PortError' and 'outside mapped range' in p[6][1]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

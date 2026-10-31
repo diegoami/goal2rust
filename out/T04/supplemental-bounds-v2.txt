@@ -1,0 +1,33 @@
+"""Authored supplemental mapping-boundary test, executed as Python despite .txt.
+
+The file is immutable evidence rather than a new dependency of active producers.
+"""
+import hashlib
+import json
+import sys
+from pathlib import Path
+sys.path[:0] = ['engine/python', '.cache/goal2-archaeology/runtime', 'engine/tests']
+from test_native_subtree import Oracle, PortMachine, exercise
+
+originals = {cls: cls.far_call for cls in (Oracle, PortMachine)}
+rows = []
+try:
+    for cls in originals:
+        def far_call(self, target, args, return_to, ss, sp, cls=cls):
+            # Callee entry SP=19: ss_lin(SP-20)=FFFF:FFFF, 20 bytes exceed mapping.
+            start = 0x1d if target == '0791:2956' else 0x13
+            return originals[cls](self, target, args, return_to, 0xffff, start)
+        cls.far_call = far_call
+    for root in ('0791:2956', '1771:3216'):
+        for case in range(5):
+            for body in ([False, True] if root == '1771:3216' else [False]):
+                p = exercise(Oracle, case, root=root, body=body)[0]
+                r = exercise(PortMachine, case, root=root, body=body)[0]
+                assert p == r
+                assert p[6] and p[6][0] == 'PortError' and 'outside mapped range' in p[6][1]
+                rows.append(dict(root=root, case=case, body=body, equal=True, error=p[6]))
+finally:
+    for cls, fn in originals.items(): cls.far_call = fn
+report = dict(cases=rows, all_equal=True, source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
+with Path('out/T04/supplemental-bounds-v2.json').open('x') as f: json.dump(report, f, indent=2)
+print('15 mapping-boundary error/partial-state comparisons equal')

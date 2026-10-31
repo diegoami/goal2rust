@@ -1,0 +1,156 @@
+{
+  "cases": [
+    {
+      "root": "0791:2956",
+      "case": 0,
+      "body": false,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ]
+    },
+    {
+      "root": "0791:2956",
+      "case": 1,
+      "body": false,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ]
+    },
+    {
+      "root": "0791:2956",
+      "case": 2,
+      "body": false,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ]
+    },
+    {
+      "root": "0791:2956",
+      "case": 3,
+      "body": false,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ]
+    },
+    {
+      "root": "0791:2956",
+      "case": 4,
+      "body": false,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ]
+    },
+    {
+      "root": "1771:3216",
+      "case": 0,
+      "body": false,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ]
+    },
+    {
+      "root": "1771:3216",
+      "case": 0,
+      "body": true,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ]
+    },
+    {
+      "root": "1771:3216",
+      "case": 1,
+      "body": false,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ]
+    },
+    {
+      "root": "1771:3216",
+      "case": 1,
+      "body": true,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ]
+    },
+    {
+      "root": "1771:3216",
+      "case": 2,
+      "body": false,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ]
+    },
+    {
+      "root": "1771:3216",
+      "case": 2,
+      "body": true,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ]
+    },
+    {
+      "root": "1771:3216",
+      "case": 3,
+      "body": false,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ]
+    },
+    {
+      "root": "1771:3216",
+      "case": 3,
+      "body": true,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ]
+    },
+    {
+      "root": "1771:3216",
+      "case": 4,
+      "body": false,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ]
+    },
+    {
+      "root": "1771:3216",
+      "case": 4,
+      "body": true,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ]
+    }
+  ],
+  "all_equal": true,
+  "source_sha256": "c3c86ce0fe4e48a907e16db6ee468462bebf0b7528da03306153d6f27a61d90d"
+}
