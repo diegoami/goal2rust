@@ -1,0 +1,15 @@
+{
+  "plain:word-read": 1.9235897599999995e-07,
+  "plain:byte-read": 9.529956999999988e-08,
+  "plain:register-read": 1.0506971400000031e-07,
+  "plain:register-write": 1.8980816200000027e-07,
+  "plain:word-write": 2.648558479999998e-07,
+  "rust:word-read": 6.66586339999995e-08,
+  "rust:byte-read": 6.176361400000018e-08,
+  "rust:register-read": 1.2747269000000027e-07,
+  "rust:register-write": 2.3027956400000016e-07,
+  "rust:word-write": 1.2906917999999923e-07,
+  "direct-existing-view:word-read": 5.63614139999995e-08,
+  "direct-existing-core:register-read": 8.413299599999923e-08,
+  "direct-existing-core:register-write": 1.794688759999996e-07
+}

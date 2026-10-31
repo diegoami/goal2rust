@@ -6,6 +6,7 @@ returns, sites, and listener delivery live in MachineCore. No oracle source is
 patched. install() is process-local and opt-in, including for Match.load replay.
 """
 import os
+from functools import partial
 
 from original_match.machine import Machine
 from original_match.port.engine import _PortMemory
@@ -28,11 +29,23 @@ class _FrameView:
                 f'(returning to {self.waiting.ret_to})')
 
 
+class PortMemory(_PortMemory):
+    # Generic/invalid inputs and resized buffers retain the original operation path.
+    _slow_u8 = _PortMemory.u8
+    _slow_u16 = _PortMemory.u16
+    def __init__(self, machine, keys=None):
+        super().__init__(machine, keys)
+        if machine._core.fast_bridge:
+            self.u8 = partial(machine._core.port_u8, self)
+            self.u16 = partial(machine._core.port_u16, self)
+
+
 class PortMachine(Machine):
-    def __init__(self, memory, load, *, native=None, mutant=None):
+    def __init__(self, memory, load, *, native=None, mutant=None, fast=None):
         self._core = MachineCore(memory, load,
                                  os.environ.get('GOAL2RUST_NATIVE', '1') == '1' if native is None else native,
-                                 int(os.environ.get('GOAL2RUST_MACHINE_MUTANT', '0')) if mutant is None else mutant)
+                                 int(os.environ.get('GOAL2RUST_MACHINE_MUTANT', '0')) if mutant is None else mutant,
+                                 os.environ.get('GOAL2RUST_FAST', '1') == '1' if fast is None else fast)
         self._memory, self._registers = self._core.memory, self._core.registers
         self.load, self.DS = load, load + 0x2581
         self.proving, self.foreign_hooks, self._recorder = False, 0, None
@@ -47,7 +60,7 @@ class PortMachine(Machine):
     def frames(self):
         return self._core.frames
 
-    def port_memory(self, keys=None): return _PortMemory(self, keys)
+    def port_memory(self, keys=None): return PortMemory(self, keys)
     def _bounds(self, linear, n): return self._core.bounds(linear, n)
     def reg(self, name): return self._core.reg(self, name)
     def set_reg(self, name, value): return self._core.set_reg(self, name, value)

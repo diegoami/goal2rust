@@ -94,3 +94,14 @@ semantics and the already-inline keeper membership operation. `machine.rs`
 retains the caller's off/seg/element/base scalars and passes the dispatcher's
 captured AX to its Rust continuation. One observable guest callee, no dynamic
 target; nondefault variants retain Python bodies. Contract: out/T06/contract.md.
+
+## T08 common bridge optimization
+
+Semantics remain pinned to accepted `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`.
+`machine.rs` optimizes static register/name lookup and common exact-integer
+write_as, retaining the original fallback/listener machinery. The adapter's
+PortMemory binds exact-integer fixed-image reads to Rust, with the original
+memory-view methods as fallback. Contract and callback/numeric boundaries:
+`out/T08/contract.md`. No guest routine or state/table format is added.
+The exact T07 source/adapter/extension baseline is preserved and hash-bound for
+simultaneous before/after rounds; T07 historical evidence remains unchanged.
