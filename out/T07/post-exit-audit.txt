@@ -39,6 +39,11 @@ for suite,count in counts.items():
     root={'availability':'0791:2956','ball':None,'skill':'0791:278A'}[suite]
     for kind,v in r['comparisons'].items():assert v['equal']==(0 if root is None or kind.endswith(root) else v['total'])
 assert load('skill-differential-v1')['callback_mutations']==dict(saved=400,sent=144)
+bridge=load('historical-result-bridge-v1')
+assert bridge['pass_all'] and bridge['changed_field']=='image_sha256' and bridge['no_result_keys_omitted']
+assert bridge['source_script_sha256']==sha(out/'historical-result-bridge.txt')
+assert e.git('rev-parse','HEAD',root=e.BASE/'.cache/goal2-archaeology-T06')=='e0270981883f02ce46a31391e7070079977bbfef'
+assert not e.git('status','--porcelain',root=e.BASE/'.cache/goal2-archaeology-T06')
 harness={}
 for p in sorted((e.ORACLE/'experiments/E036-match-port').glob('*.py'))+[e.ORACLE/'tests/test_port_seal.py',e.ORACLE/'tools/static/port_tables.py']:
     rel=str(p.relative_to(e.ORACLE));blob=subprocess.check_output(['git','show',e.PIN+':'+rel],cwd=e.ORACLE)

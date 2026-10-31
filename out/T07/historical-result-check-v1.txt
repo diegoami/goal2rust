@@ -1,0 +1,7 @@
+"""Preserved historical comparison assumption; expected to expose changed result identity."""
+import json
+from pathlib import Path
+old=json.loads(Path('out/T06/taps-rust-v1.json').read_text())
+p,r=[json.loads(Path(f'out/T07/taps-{b}-v1.json').read_text()) for b in ['python','rust']]
+for k in ['events','events_sha256','result_sha256','records_sha256','memory_sha256','stretches','taps']:assert p[k]==r[k],k
+for k in ['events','events_sha256','result_sha256','stretches']:assert old[k]==r[k],k

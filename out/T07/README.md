@@ -47,3 +47,15 @@ the code-data overlay/schema changed. Compare every field between equivalent
 fresh v2 machines, documenting the input delta; old receipts stay untouched.
 No speed claim from schema changes/cProfile. Existing #6 limits remain; A700 and
 owner-run engine-milestone review stay later gates, known ref-121 preserved.
+
+## Historical result digest diagnostic
+
+Fresh-v2 Python/Rust ordered results agree exactly. The old-v1 result digest
+changed because it includes image_sha256. The preserved failed diagnostic is
+historical-result-check-v1.log; the exact identity-continuity proof is
+historical-result-bridge-v1.json, using independently reconstructed image hashes
+and no omitted result keys. See contract-audit.md. Do not modify the frozen
+original validate.py or canonical receipts. After all writers exit: run the
+original validator and retain its expected result_sha256 failure in
+validator-original-v1.log, run post-exit-audit.txt, then validate-v2.txt into the
+exclusive validation-v2.json. That final ledger binds both validator versions.

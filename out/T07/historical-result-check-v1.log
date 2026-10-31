@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T07/historical-result-check-v1.txt", line 7, in <module>
+    for k in ['events','events_sha256','result_sha256','stretches']:assert old[k]==r[k],k
+                                                                           ^^^^^^^^^^^^
+AssertionError: result_sha256

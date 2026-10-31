@@ -1,0 +1,41 @@
+"""Exact historical result continuity with independently verified changed image identity.
+
+Raw fresh-v2 results remain unmodified; no keys are omitted from the comparison.
+"""
+import hashlib,importlib.util,json,os,subprocess,sys
+from pathlib import Path
+sys.path.insert(0,'out/T07')
+import evidence as e
+e.verify();before=e.hashes();out=e.BASE/'out/T07'
+oldcode="""import json,sys
+from pathlib import Path
+from original_match import Image
+from original_match.port import tables
+s=json.loads(Path('.cache/T03-state-v1.json').read_text())
+i=Image.from_state(s,tables.load('.cache/T03-tables'))
+print(i.sha256())
+"""
+env=dict(os.environ,PYTHONPATH=str(e.BASE/'.cache/goal2-archaeology-T06/runtime'))
+old_image_sha=subprocess.check_output([sys.executable,'-B','-c',oldcode],cwd=e.BASE,env=env,text=True).strip()
+assert len(old_image_sha)==64
+new_image=e.image();new_image_sha=new_image.sha256();assert new_image_sha!=old_image_sha
+e.deny_original()
+from original_match import Match,Fixture
+m=Match(new_image,Fixture(7,19,index=9,kind=200),managed=7,substitutions=None,engine='port',record_draws=True)
+assert not hasattr(m.m,'_core') and m.timeout_s==60
+spec=importlib.util.spec_from_file_location('boundaries',e.ORACLE/'experiments/E033-original-match-kit/save_boundaries.py');h=importlib.util.module_from_spec(spec);spec.loader.exec_module(h)
+def policy(m,data):m.answer(quick=True) if data['context']=='half_time' else m.answer()
+events=h.drive(m,policy,());result=m.result()
+fresh=json.loads((out/'taps-python-v1.json').read_text());old=json.loads((e.BASE/'out/T06/taps-rust-v1.json').read_text())
+assert e.digest(events)==fresh['events_sha256']==old['events_sha256']
+assert e.digest(result)==fresh['result_sha256']
+assert result['image_sha256']==new_image_sha
+historical=dict(result,image_sha256=old_image_sha)
+assert e.digest(historical)==old['result_sha256']
+assert result.keys()==historical.keys() and [k for k in result if result[k]!=historical[k]]==['image_sha256']
+report=dict(pass_all=True,changed_field='image_sha256',old_image_sha256=old_image_sha,new_image_sha256=new_image_sha,
+            raw_v2_result_sha256=e.digest(result),exact_historical_result_sha256=e.digest(historical),old_receipt_result_sha256=old['result_sha256'],
+            raw_v2_result_matches_fresh_receipt=True,all_historical_fields_checked=True,event_sequence_unchanged=True,
+            no_result_keys_omitted=True,source_script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
+e.write(out/'historical-result-bridge-v1.json',report,before)
+print('Exact historical result reproduced by verified image_sha256 substitution only; fresh-v2 results unchanged')

@@ -21,3 +21,18 @@ coverage. The three preserved tree producers execute with T07's cached evidence
 module and new state input. Original producer files/receipts are not edited.
 Body/return controls remain their known deliberate faults. Every new producer
 hashes itself, reused source, oracle/harness, installed binary and private inputs.
+
+## Historical result identity refinement
+
+The initial historical digest diagnostic failed on result_sha256: Match._finish
+includes image_sha256, which necessarily changes when relocated code-data bytes
+are preserved. historical-result-bridge-v1.json proves that substituting the
+independently reconstructed old image identity reproduces the complete old
+result digest. No result key is omitted; raw fresh-v2 results stay unmodified.
+
+The original frozen validate.py retains its overbroad historical assertion and
+will be run after writers exit, preserving its expected diagnostic failure.
+validate-v2.txt uses the exact identity-continuity proof while retaining every
+fresh-v2 equality/corpus/lifecycle/control/input/source/binary assertion. Its own
+source and the original validator are hash-bound in validation-v2.json. No
+Done-when requirement or fresh result/memory/tap assertion is weakened.
