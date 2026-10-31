@@ -61,3 +61,14 @@ Eight real captures/body +500 synthetic inputs, then full existing12-body/contro
 proofs, exact ordered drive/lifecycle/ALL75/F40/profile and three rotated quiet
 baseline/candidate/CPython/PyPy rounds precede merge; ratio<=0.95 median and every
 candidate faster. No primitive-only performance claim or discarded sample.
+
+## Owner acceptance amendment — 2026-11-01
+
+The owner clarified the incremental porting objective and authorized merging T09.
+The <=0.95 magnitude requirement above describes the original optimization gate;
+it is superseded for this increment by docs/tasks/T09.md and
+docs/porting-acceptance.md (recorded on main in 981335f). Every paired candidate
+round must still improve, and all fidelity/artifact/CI requirements remain.
+The measured median ratio 0.957204635 satisfies the amended contract. Preserve
+the original failed assertion and receipts; owner-acceptance-v2.json records the
+separate owner-approved acceptance of the same runtime artifact.
