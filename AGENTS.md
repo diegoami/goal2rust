@@ -33,6 +33,12 @@ with current pin, input/artifact and resume rules in [out/T07/README.md](out/T07
 Read those and checkpoint #1 before any producer/build. Preserve historical v1
 receipts and use the documented final validation revision; never overwrite them.
 
+Measured common-bridge performance task T08 is specified in
+[docs/tasks/T08.md](docs/tasks/T08.md), with preserved baseline, exact fallback/
+callback contract and repeatability/resume rules in [out/T08/README.md](out/T08/README.md).
+Read those and checkpoint #1 before any run/build. Preserve every round, rejected
+prototype and old baseline; no merge from a microbenchmark or single pilot.
+
 T02 is complete. Its evidence and historical cross-computer experiment commands are in
 [out/T02/README.md](out/T02/README.md). Read that before restarting its experiments;
 keep the task's Done-when intact and consult the latest GitHub checkpoint for status.

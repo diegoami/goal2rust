@@ -10,5 +10,6 @@ state-v2 compatibility evidence is in [out/T07](out/T07/README.md), with the
 historical baseline in [out/T03](out/T03/README.md). The first native
 caller/callee tree is documented in [out/T04](out/T04/README.md). The next native
 nearest-to-ball tree is in [out/T05](out/T05/README.md), and effective skill
-in [out/T06](out/T06/README.md). Read the latest
+in [out/T06](out/T06/README.md). Common-bridge performance evidence and
+baseline/confirmation rules are in [out/T08](out/T08/README.md). Read the latest
 [checkpoint](https://github.com/diegoami/goal2rust/issues/1) before restarting work.

@@ -1,5 +1,13 @@
 # T08 Measured common bridge performance
 
+## Validation complete
+
+All fidelity and three-round performance gates pass; see [assessment.md](assessment.md).
+Authoritative closed ledger: validation-v1.json, with post-exit-audit-v1.json.
+No producer/child group remains active. Live merge/stop status is in PR #23 / #1.
+Do not restart completed producers or overwrite any round/baseline/receipt.
+Commands below are historical; future artifacts need fresh versioned proof.
+
 Task #22; full implementation/observer/fallback/measurement contract in
 contract.md and docs/tasks/T08.md. Existing accepted2cbeb36f/state-v2 inputs stay
 under ignored .cache/T07-*. T07 receipts and binaries remain unchanged. Preserved

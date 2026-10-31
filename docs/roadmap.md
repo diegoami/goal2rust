@@ -105,6 +105,22 @@ Full compatibility gates and comparison boundary: [tasks/T07.md](tasks/T07.md),
 result continuity accounts for the independently verified changed image identity
 without omitting any result key. No speed claim follows from a schema refresh.
 
+## 2d. T08: measured common-bridge performance
+
+Use the full profile and authored primitive benchmarks to target common bridge
+costs across remaining Python bodies. Preserve exact prior source/adapter/binary
+for simultaneous baseline/candidate comparisons. Optimize immutable name/alias
+lookup, common fixed-image reads and small writes while preserving dynamic
+callbacks, fallback/error/numeric behavior and full guest semantics. No new
+routine or source-pin change. Contract: [tasks/T08.md](tasks/T08.md),
+[out/T08](../out/T08/README.md).
+
+A candidate requires full fidelity plus three quiet simultaneous baseline,
+candidate, CPython and PyPy rounds, rotated physical cores/launch order, every
+candidate faster and median candidate/baseline CPU <=0.95. Preserve every round
+and rejected attempt; a single pilot or faster primitive is insufficient. Report
+PyPy outcomes explicitly; a smaller gap does not establish a PyPy win.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the
@@ -116,8 +132,9 @@ or replace it. T79's 699 equal completed matches prove the Python port, not Rust
 The owner runs the milestone review from a prompt naming the PR and requesting
 the full report as a PR comment and its URL. Goal2 adoption separately requires
 application fidelity, save/load, cancellation and native lifecycle/playtest.
-The hybrid Rust engine has not beaten PyPy (T07: 116.643 versus 79.032
-CPU seconds in the quiet pair; see out/T07/assessment.md).
+The hybrid Rust engine has not beaten PyPy. T08 demonstrates a 26.73% median
+CPU reduction against the preserved hybrid baseline in three simultaneous rounds;
+the candidate still uses about 1.46x PyPy CPU (out/T08/assessment.md).
 
 ## 4. Beyond the match engine
 
