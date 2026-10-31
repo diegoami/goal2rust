@@ -1,0 +1,50 @@
+"""Additional immutable compatibility audit; run after all writers exit."""
+import hashlib,json,subprocess,sys
+from pathlib import Path
+sys.path.insert(0,'out/T07')
+import evidence as e
+e.verify();before=e.hashes();out=e.BASE/'out/T07';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();load=lambda n:json.loads((out/(n+'.json')).read_text())
+assert not subprocess.check_output(['git','diff','42f82ae162d5936a21d6dad2408c447779cd5863','--','engine/src','engine/python','engine/Cargo.toml','engine/Cargo.lock'],cwd=e.BASE)
+audit=load('input-audit-v1');assert audit['production_source_changed'] is False and audit['code_data_entries']==2
+assert audit['schema']=='original_match.state/2' and audit['source_covered_memory_equal'] and audit['candidate_merge_tree_equal']
+assert sha(e.STATE)==audit['new_state_sha256']
+for rel,h in audit['unchanged_sources_sha256'].items():assert sha(e.ORACLE/rel)==h
+state=json.loads(e.STATE.read_text());assert state['schema']=='original_match.state/2' and len(state['code_data'])==2
+from original_match import Image
+from original_match.port import tables
+im=Image.from_state(state,tables.load(e.TABLES));assert im.state()==state
+ci=load('upstream-ci-v1');assert ci['headSha']==audit['pr640_candidate'] and ci['conclusion']=='success'
+groups=[j for j in ci['jobs'] if j['name'].startswith('checks (')];assert len(groups)==12 and all(j['conclusion']=='success' for j in groups)
+for stage in ['T06','T07']:
+    for r in json.loads((e.BASE/'out'/stage/'artifact-archive-v1.json').read_text())['artifacts']:
+        assert sha(e.BASE/r['archive'])==r['sha256']
+        assert sha(e.BASE/r['original'])==r['sha256']
+for name in ['public-cpython-v1.log','public-pypy-v1.log']:
+    s=(out/name).read_text();assert 'Ran 22 tests' in s and s.rstrip().endswith('OK')
+s=(out/'upstream-unit-v2.log').read_text();assert 'Ran 11 tests' in s and s.rstrip().endswith('OK') and 'skipped=' not in s
+assert 'port tables check: ok' in (out/'read-map-v2.log').read_text()
+lines=(out/'family-ALL-rust-v1.jsonl').read_bytes().splitlines(keepends=True)
+prefixes=[]
+for p in sorted(out.glob('family-progress-*-v1.json')):
+    r=json.loads(p.read_text());n=len(r['source_lines']);snapshot=p.with_suffix('.jsonl')
+    assert snapshot.read_bytes()==b''.join(lines[:n]) and sha(snapshot)==r['sha256']
+    assert [hashlib.sha256(x).hexdigest() for x in lines[:n]]==r['line_sha256']
+    assert sha(out/'progress-snapshot.txt')==r['snapshot_script_sha256'];prefixes.append(n)
+assert len(prefixes)>=3
+counts={'availability':3224,'ball':2128,'skill':6224}
+for suite,count in counts.items():
+    r=load(suite+'-differential-v1');assert sum(v['total'] for v in r['comparisons'].values())==count and all(v['equal']==v['total'] for v in r['comparisons'].values())
+    r=load(suite+'-body-v1');assert all(v['equal']==0 for v in r['comparisons'].values())
+    r=load(suite+'-return-v1')
+    root={'availability':'0791:2956','ball':None,'skill':'0791:278A'}[suite]
+    for kind,v in r['comparisons'].items():assert v['equal']==(0 if root is None or kind.endswith(root) else v['total'])
+assert load('skill-differential-v1')['callback_mutations']==dict(saved=400,sent=144)
+harness={}
+for p in sorted((e.ORACLE/'experiments/E036-match-port').glob('*.py'))+[e.ORACLE/'tests/test_port_seal.py',e.ORACLE/'tools/static/port_tables.py']:
+    rel=str(p.relative_to(e.ORACLE));blob=subprocess.check_output(['git','show',e.PIN+':'+rel],cwd=e.ORACLE)
+    assert hashlib.sha256(blob).hexdigest()==sha(p);harness[rel]=sha(p)
+e.write(out/'post-exit-audit-v1.json',dict(pass_all=True,state_schema='original_match.state/2',code_data_entries=2,production_source_changed=False,
+         public_tests_each=22,upstream_tests=11,upstream_ci_groups=12,unchanged_kernel_files=len(audit['unchanged_sources_sha256']),
+         fresh_differential_comparisons=28448+sum(counts.values()),progress_prefixes_verified=prefixes,
+         harness_sha256=harness,audit_source_sha256=sha(Path(__file__))),before)
+print('Additional state-v2 input, archive, harness and proof audit passes')
