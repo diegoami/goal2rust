@@ -33,6 +33,27 @@ for suite,count in [('availability',3224),('ball',2128),('skill',6224)]:
  r=load(suite+'-return-v1');root={'availability':'0791:2956','ball':None,'skill':'0791:278A'}[suite]
  for kind,v in r['comparisons'].items():assert v['equal']==(0 if root is None or kind.endswith(root) else v['total'])
 assert load('skill-differential-v1')['callback_mutations']==dict(saved=400,sent=144)
+for label in ['differential','body','root-return','seed-return']:
+ r=load('speaker-'+label+'-v1');assert r['control_scope_verified'] and all(v==8 for v in r['captures'].values())
+ assert sum(v['total'] for v in r['comparisons'].values())==12448
+ assert all(v['equal']==v['total']-v['expected_different'] for v in r['comparisons'].values())
+ if label=='body':assert all(v['equal']==0 for v in r['comparisons'].values())
+ assert r['callback_mutations']['seed_writes']>0 and r['callback_mutations']['stack_mutations']>0
+attested_native_bodies={}
+for label in ['check','family-ALL']:
+ ar=[json.loads(p.read_text()) for p in (out/f'attest-{label}-v1').glob('*.json')]
+ addresses={ad for r in ar for ad,count in r['native_calls'].items() if count>0}
+ assert len(addresses)==16 and {'0791:94E8','0791:94C9','214B:0688','214B:1E8D'}<=addresses
+ attested_native_bodies[label]=sorted(addresses)
+r=load('observer-matrix-v2');assert r['pass_all'] and r['error_comparisons']==252 and len(r['variants'])==16 and len(r['live_return_store_observers'])==60
+assert all(r['errors_seen'].values()) and r['script_sha256']==sha(out/'observer-matrix-v2.txt')
+for path,h in r['source_sha256'].items():assert sha(e.BASE/path)==h
+r=load('call-inventory-v1');assert r['all_guest_targets_literal'] and r['rust_call_sites_match'] and len(r['guest_sites'])==6
+for path,h in r['source_sha256'].items():assert sha(e.BASE/path)==h
+r=load('rejected-descriptor-v1')
+for entry in r['source'].values():assert sha(e.BASE/entry['preserved'])==entry['sha256']
+r=load('rejected-artifact-v1');assert sha(e.BASE/r['archive'])==r['sha256']
+r=load('selection-v1');assert r['python_entries_removed']==205799 and sha(e.BASE/r['profile_source'])==r['profile_sha256']
 p=load('profile-after-v1');assert len(p['routines'])==422
 assert sum(v['native_entries']>0 for v in p['routines'].values())==16
 perf=load('performance-v1');assert perf['pass_performance'] and perf['median_ratio']<=0.95
@@ -44,7 +65,7 @@ for r in perf['starts']:
   for k,h in old['source_sha256'].items():
    if k.startswith('.cache/T09-baseline/engine/'):assert p['source_sha256'][k]==h
 report=dict(pass_all=True,public_tests_each=27,rust_tests=11,gc_cases=20,differential_comparisons=52472,
-            pristine_harness_sha256=harness,progress_prefixes_verified=prefixes,performance_rounds=3,
+            attested_native_bodies=attested_native_bodies,pristine_harness_sha256=harness,progress_prefixes_verified=prefixes,supplemental_observer_comparisons=328,performance_rounds=3,
             performance_median_ratio=perf['median_ratio'],baseline_snapshot_verified=True,
             audit_source_sha256=sha(Path(__file__)))
 e.write(out/'post-exit-audit-v1.json',report,before);print('Supplemental baseline/source/archive/GC/proof/performance audit passes')

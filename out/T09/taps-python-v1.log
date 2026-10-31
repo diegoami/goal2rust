@@ -1,0 +1,2 @@
+denied: unicorn, .sav, .EXE, .DAT
+{"backend": "python", "mode": "taps", "events": 831, "drive_cpu_s": 354.909772492, "taps": {"sha256": "096f56c262844705a0fcf7348fa4563c40e7d3ff4554b05c5224ffb0a7080ea9", "counts": {"io": 158092780, "listen_enter": 114492, "listen_leave": 114492, "site_enter": 81134, "site_leave": 81134, "write": 4}}}
