@@ -1,12 +1,20 @@
 # T06 effective skill tree
 
-Task #18 / draft PR #19; contract in docs/tasks/T06.md and contract.md.
+## Validation complete
+
+All unchanged gates pass; see [assessment.md](assessment.md). The authoritative
+post-writer index is validation-v1.json, with post-exit-audit-v1.json. All
+producers and child groups have exited. Live merge/checkpoint status is in
+PR #19 / #1. Do not restart completed producers or overwrite receipts. Commands
+below are historical; later source/binary builds require fresh versioned evidence.
+
+Task #18 / PR #19; contract in docs/tasks/T06.md and contract.md.
 Selection-v1.json binds T05's refreshed profile and the unchanged accepted oracle.
 T05 receipts and archived extensions remain intact. No original bytes/state/tables
 enter tracked output; private accepted inputs stay under .cache/T03-*.
 
 Same per-subtree gates as the approved roadmap. Body control5 corrupts the leaf
-retained local, root-return control6 changes only27EB IP. Tests include callbacks
+retained local, root-return control6 changes only 27EB IP. Tests include callbacks
 that mutate saved guest arguments/base and AX after the dispatcher captures it.
 Variants stay Python. Preserve all failures and original guards; no speed gain
 is inferred from cProfile or routine/entry counts. ALL75/A700 and owner-run review
@@ -27,7 +35,7 @@ PYTHONHASHSEED=0 .venv/bin/python -u -B out/T06/supervise.py >> out/T06/supervis
 ```
 
 Stages: strict F40/two workers/default guards, four sealed lifecycle checks with
-independent backend attestation, eight captures per routine and500 synthetic
+independent backend attestation, eight captures per routine and 500 synthetic
 states x body/frame/tap/listener/continuation variants, both controls, Python/Rust
 ordered drives, all-entry profile, three quiet observations and simultaneous
 CPython/PyPy/Rust CPU drives. Only after every writer exits seal an exclusive

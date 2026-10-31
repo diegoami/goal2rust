@@ -1,0 +1,130 @@
+START family-F40-v1 20641
+START check-v1 20642
+START taps-python-v1 20643
+START differential-v1 20644
+PROGRESS 0 /40 family records; family-F40-v1,check-v1,taps-python-v1,differential-v1
+PROGRESS 0 /40 family records; family-F40-v1,check-v1,taps-python-v1,differential-v1
+EXIT differential-v1 0
+START return-mutant-v1 20966
+PROGRESS 0 /40 family records; family-F40-v1,check-v1,taps-python-v1,return-mutant-v1
+PROGRESS 0 /40 family records; family-F40-v1,check-v1,taps-python-v1,return-mutant-v1
+EXIT return-mutant-v1 0
+START body-mutant-v1 21175
+PROGRESS 0 /40 family records; family-F40-v1,check-v1,taps-python-v1,body-mutant-v1
+PROGRESS 0 /40 family records; family-F40-v1,check-v1,taps-python-v1,body-mutant-v1
+EXIT body-mutant-v1 0
+PROGRESS 0 /40 family records; family-F40-v1,check-v1,taps-python-v1
+PROGRESS 0 /40 family records; family-F40-v1,check-v1,taps-python-v1
+PROGRESS 2 /40 family records; family-F40-v1,check-v1,taps-python-v1
+PROGRESS 2 /40 family records; family-F40-v1,check-v1,taps-python-v1
+PROGRESS 2 /40 family records; family-F40-v1,check-v1,taps-python-v1
+PROGRESS 2 /40 family records; family-F40-v1,check-v1,taps-python-v1
+PROGRESS 2 /40 family records; family-F40-v1,check-v1,taps-python-v1
+EXIT taps-python-v1 0
+PROGRESS 4 /40 family records; family-F40-v1,check-v1
+START taps-rust-v1 21515
+PROGRESS 4 /40 family records; family-F40-v1,check-v1,taps-rust-v1
+PROGRESS 4 /40 family records; family-F40-v1,check-v1,taps-rust-v1
+PROGRESS 4 /40 family records; family-F40-v1,check-v1,taps-rust-v1
+PROGRESS 4 /40 family records; family-F40-v1,check-v1,taps-rust-v1
+PROGRESS 4 /40 family records; family-F40-v1,check-v1,taps-rust-v1
+PROGRESS 6 /40 family records; family-F40-v1,check-v1,taps-rust-v1
+PROGRESS 6 /40 family records; family-F40-v1,check-v1,taps-rust-v1
+PROGRESS 6 /40 family records; family-F40-v1,check-v1,taps-rust-v1
+PROGRESS 6 /40 family records; family-F40-v1,check-v1,taps-rust-v1
+EXIT taps-rust-v1 0
+START profile-after-v1 21814
+PROGRESS 6 /40 family records; family-F40-v1,check-v1,profile-after-v1
+PROGRESS 8 /40 family records; family-F40-v1,check-v1,profile-after-v1
+PROGRESS 8 /40 family records; family-F40-v1,check-v1,profile-after-v1
+PROGRESS 8 /40 family records; family-F40-v1,check-v1,profile-after-v1
+PROGRESS 8 /40 family records; family-F40-v1,check-v1,profile-after-v1
+PROGRESS 8 /40 family records; family-F40-v1,check-v1,profile-after-v1
+PROGRESS 10 /40 family records; family-F40-v1,check-v1,profile-after-v1
+PROGRESS 10 /40 family records; family-F40-v1,check-v1,profile-after-v1
+EXIT profile-after-v1 0
+PROGRESS 10 /40 family records; family-F40-v1,check-v1
+PROGRESS 10 /40 family records; family-F40-v1,check-v1
+PROGRESS 10 /40 family records; family-F40-v1,check-v1
+PROGRESS 12 /40 family records; family-F40-v1,check-v1
+PROGRESS 12 /40 family records; family-F40-v1,check-v1
+PROGRESS 12 /40 family records; family-F40-v1,check-v1
+PROGRESS 12 /40 family records; family-F40-v1,check-v1
+PROGRESS 12 /40 family records; family-F40-v1,check-v1
+PROGRESS 14 /40 family records; family-F40-v1,check-v1
+PROGRESS 14 /40 family records; family-F40-v1,check-v1
+PROGRESS 14 /40 family records; family-F40-v1,check-v1
+PROGRESS 14 /40 family records; family-F40-v1,check-v1
+PROGRESS 14 /40 family records; family-F40-v1,check-v1
+PROGRESS 15 /40 family records; family-F40-v1,check-v1
+PROGRESS 16 /40 family records; family-F40-v1,check-v1
+PROGRESS 16 /40 family records; family-F40-v1,check-v1
+PROGRESS 16 /40 family records; family-F40-v1,check-v1
+PROGRESS 17 /40 family records; family-F40-v1,check-v1
+PROGRESS 17 /40 family records; family-F40-v1,check-v1
+PROGRESS 18 /40 family records; family-F40-v1,check-v1
+PROGRESS 18 /40 family records; family-F40-v1,check-v1
+PROGRESS 18 /40 family records; family-F40-v1,check-v1
+PROGRESS 18 /40 family records; family-F40-v1,check-v1
+PROGRESS 19 /40 family records; family-F40-v1,check-v1
+PROGRESS 20 /40 family records; family-F40-v1,check-v1
+PROGRESS 20 /40 family records; family-F40-v1,check-v1
+PROGRESS 20 /40 family records; family-F40-v1,check-v1
+PROGRESS 21 /40 family records; family-F40-v1,check-v1
+PROGRESS 22 /40 family records; family-F40-v1,check-v1
+PROGRESS 22 /40 family records; family-F40-v1,check-v1
+PROGRESS 22 /40 family records; family-F40-v1,check-v1
+EXIT check-v1 0
+PROGRESS 22 /40 family records; family-F40-v1
+PROGRESS 23 /40 family records; family-F40-v1
+PROGRESS 24 /40 family records; family-F40-v1
+PROGRESS 24 /40 family records; family-F40-v1
+PROGRESS 24 /40 family records; family-F40-v1
+PROGRESS 25 /40 family records; family-F40-v1
+PROGRESS 26 /40 family records; family-F40-v1
+PROGRESS 26 /40 family records; family-F40-v1
+PROGRESS 26 /40 family records; family-F40-v1
+PROGRESS 26 /40 family records; family-F40-v1
+PROGRESS 27 /40 family records; family-F40-v1
+PROGRESS 28 /40 family records; family-F40-v1
+PROGRESS 28 /40 family records; family-F40-v1
+PROGRESS 28 /40 family records; family-F40-v1
+PROGRESS 29 /40 family records; family-F40-v1
+PROGRESS 30 /40 family records; family-F40-v1
+PROGRESS 30 /40 family records; family-F40-v1
+PROGRESS 30 /40 family records; family-F40-v1
+PROGRESS 31 /40 family records; family-F40-v1
+PROGRESS 31 /40 family records; family-F40-v1
+PROGRESS 32 /40 family records; family-F40-v1
+PROGRESS 32 /40 family records; family-F40-v1
+PROGRESS 32 /40 family records; family-F40-v1
+PROGRESS 33 /40 family records; family-F40-v1
+PROGRESS 34 /40 family records; family-F40-v1
+PROGRESS 34 /40 family records; family-F40-v1
+PROGRESS 34 /40 family records; family-F40-v1
+PROGRESS 34 /40 family records; family-F40-v1
+PROGRESS 36 /40 family records; family-F40-v1
+PROGRESS 36 /40 family records; family-F40-v1
+PROGRESS 36 /40 family records; family-F40-v1
+PROGRESS 36 /40 family records; family-F40-v1
+PROGRESS 37 /40 family records; family-F40-v1
+PROGRESS 38 /40 family records; family-F40-v1
+PROGRESS 38 /40 family records; family-F40-v1
+PROGRESS 38 /40 family records; family-F40-v1
+PROGRESS 39 /40 family records; family-F40-v1
+EXIT family-F40-v1 0
+QUIET (1.71240234375, 2.0810546875, 2.369140625) 1
+QUIET (1.44873046875, 2.01220703125, 2.34326171875) 2
+QUIET (1.2255859375, 1.9453125, 2.31787109375) 3
+START cpu-python-v1 24874
+START cpu-pypy-v1 24875
+START cpu-rust-v1 24876
+PROGRESS 40 /40 family records; cpu-python-v1,cpu-pypy-v1,cpu-rust-v1
+PROGRESS 40 /40 family records; cpu-python-v1,cpu-pypy-v1,cpu-rust-v1
+EXIT cpu-pypy-v1 0
+PROGRESS 40 /40 family records; cpu-python-v1,cpu-rust-v1
+PROGRESS 40 /40 family records; cpu-python-v1,cpu-rust-v1
+EXIT cpu-rust-v1 0
+PROGRESS 40 /40 family records; cpu-python-v1
+EXIT cpu-python-v1 0
+ALL PRODUCERS EXITED; run validate.py after this writer exits

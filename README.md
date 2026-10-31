@@ -8,5 +8,6 @@ Build, state/tables API and backend-worker isolation: [engine/README.md](engine/
 The translation sequence is in [docs/roadmap.md](docs/roadmap.md); current sealed-engine
 baseline evidence is in [out/T03](out/T03/README.md), and the first native
 caller/callee tree is documented in [out/T04](out/T04/README.md). The next native
-nearest-to-ball tree is in [out/T05](out/T05/README.md). Read the latest
+nearest-to-ball tree is in [out/T05](out/T05/README.md), and effective skill
+in [out/T06](out/T06/README.md). Read the latest
 [checkpoint](https://github.com/diegoami/goal2rust/issues/1) before restarting work.
