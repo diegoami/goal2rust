@@ -69,6 +69,20 @@ leaf, for twelve default native bodies. Evidence is in
 [out/T06](../out/T06/README.md), with ball selection in [out/T05](../out/T05/README.md), with the earlier tree in
 [out/T04](../out/T04/README.md).
 
+The common Python-body memory bridge uses bound Rust reads for exact builtin
+integer addresses in the fixed image, with original methods retained for generic,
+invalid or resized-buffer cases. Small exact-integer writes keep the same listener-
+before-commit logic; wide/huge/custom inputs retain the previous path. Attribute
+names are interned, while tap/handler/span/error values stay dynamic. No guest
+routine, callback or observable guest entry is removed by this optimization.
+Evidence and exact boundaries: [out/T08/contract.md](../out/T08/contract.md).
+
+For controlled diagnostics, `PortMachine(..., fast=False)` or
+`GOAL2RUST_FAST=0` disables the direct memory/small-write paths. Static lookup/name
+improvements remain, so this is an ablation flag. Performance before/after uses
+the preserved original source/binary baseline instead. The internal
+`bridge_fast_calls` counters prove the optimized paths execute.
+
 For oracle harnesses, call `goal2rust.install()` in the test process before
 constructing/loading a kit match with `engine="port"`. This changes the factory
 only in that process. It does not edit the oracle or change its default backend.
@@ -116,6 +130,6 @@ mutated saved inputs/dispatch-captured AX, guest-boundary
 state snapshots and variant fallback,
 callbacks, >64-bit coalesced listener values, and error cleanup.
 The real-drive, family, per-call, lifecycle and timing evidence and resume
-commands are in [out/T07](../out/T07/README.md); the accepted sealed-input
+commands are in [out/T08](../out/T08/README.md); the accepted sealed-input
 baseline remains in [out/T03](../out/T03/README.md). T01/T02 receipts are
 historical and stay bound to their original source and artifacts.

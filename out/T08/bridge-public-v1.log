@@ -1,0 +1,7 @@
+test_exact_state_events_and_fast_path_coverage (test_bridge_fast.BridgeFastTests.test_exact_state_events_and_fast_path_coverage) ... ok
+test_read_fallbacks_and_resized_buffer (test_bridge_fast.BridgeFastTests.test_read_fallbacks_and_resized_buffer) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.006s
+
+OK

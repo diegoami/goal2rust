@@ -1,7 +1,7 @@
 //! PortMachine, PortFrame and guest calls, translated from archaeology d3cf46a3.
 //! Python bodies and callbacks borrow the SAME memory/register state. No state
 //! is copied into/out of the bridge, and no Python PortFrame or dispatcher runs.
-use std::cell::RefCell;
+use std::cell::{Cell, RefCell};
 use std::collections::HashMap;
 use std::rc::Rc;
 use std::time::Instant;
@@ -9,7 +9,8 @@ use std::time::Instant;
 use pyo3::class::gc::{PyTraverseError, PyVisit};
 use pyo3::exceptions::{PyKeyError, PyStopIteration, PyValueError};
 use pyo3::prelude::*;
-use pyo3::types::{PyByteArray, PyBytes, PyDict, PyList, PySet, PyTuple};
+use pyo3::intern;
+use pyo3::types::{PyByteArray, PyBytes, PyDict, PyList, PySet, PyTuple, PyInt};
 
 use crate::host::{Host, Reg};
 use crate::mem::{self, MEM_SIZE};
@@ -21,43 +22,29 @@ const NAMES: [&str; 16] = [
 ];
 type Bank = Rc<RefCell<[u32; 16]>>;
 
-fn alias(py: Python<'_>, name: &str) -> PyResult<(usize, u32, u32, bool)> {
-    let n = name.to_lowercase();
-    if let Some(i) = NAMES.iter().position(|s| *s == n) {
-        return Ok((i, 0, if i < 10 { u32::MAX } else { 0xffff }, false));
-    }
-    let base = match n.as_str() {
-        "ax" => 0,
-        "bx" => 1,
-        "cx" => 2,
-        "dx" => 3,
-        "si" => 4,
-        "di" => 5,
-        "bp" => 6,
-        "sp" => 7,
-        "flags" => 8,
-        "ip" => 9,
-        "al" | "ah" => 0,
-        "bl" | "bh" => 1,
-        "cl" | "ch" => 2,
-        "dl" | "dh" => 3,
-        _ => {
-            return Err(port_error(
-                py,
-                format!("unsupported plain register {n:?}").replace('"', "'"),
-            ))
-        }
+fn base_index(name: &str) -> Option<usize> {
+    Some(match name {
+        "eax"=>0,"ebx"=>1,"ecx"=>2,"edx"=>3,"esi"=>4,"edi"=>5,"ebp"=>6,"esp"=>7,
+        "eflags"=>8,"eip"=>9,"cs"=>10,"ds"=>11,"es"=>12,"ss"=>13,"fs"=>14,"gs"=>15,
+        _=>return None,
+    })
+}
+fn plain_alias(name: &str) -> Option<(usize,u32,u32,bool)> {
+    if let Some(i)=base_index(name) { return Some((i,0,if i<10 {u32::MAX}else{0xffff},false)); }
+    let (i,shift,mask,clear)=match name {
+        "ax"=>(0,0,65535,false),"bx"=>(1,0,65535,false),"cx"=>(2,0,65535,false),"dx"=>(3,0,65535,false),
+        "si"=>(4,0,65535,false),"di"=>(5,0,65535,false),"bp"=>(6,0,65535,false),"sp"=>(7,0,65535,false),
+        "flags"=>(8,0,65535,true),"ip"=>(9,0,65535,true),
+        "al"=>(0,0,255,false),"ah"=>(0,8,255,false),"bl"=>(1,0,255,false),"bh"=>(1,8,255,false),
+        "cl"=>(2,0,255,false),"ch"=>(2,8,255,false),"dl"=>(3,0,255,false),"dh"=>(3,8,255,false),
+        _=>return None,
     };
-    let byte = matches!(
-        n.as_str(),
-        "al" | "ah" | "bl" | "bh" | "cl" | "ch" | "dl" | "dh"
-    );
-    Ok((
-        base,
-        if byte && n.ends_with('h') { 8 } else { 0 },
-        if byte { 255 } else { 0xffff },
-        n == "ip" || n == "flags",
-    ))
+    Some((i,shift,mask,clear))
+}
+fn alias(py: Python<'_>, name: &str) -> PyResult<(usize,u32,u32,bool)> {
+    if let Some(v)=plain_alias(name) { return Ok(v); }
+    let n=name.to_lowercase();
+    plain_alias(&n).ok_or_else(||port_error(py,format!("unsupported plain register {n:?}").replace('"',"'")))
 }
 
 #[pyclass(unsendable, module = "goal2rust_engine")]
@@ -68,16 +55,12 @@ pub struct RegisterFile {
 #[pymethods]
 impl RegisterFile {
     fn __getitem__(&self, name: &str) -> PyResult<u32> {
-        let i = NAMES
-            .iter()
-            .position(|s| *s == name)
+        let i = base_index(name)
             .ok_or_else(|| PyKeyError::new_err(name.to_string()))?;
         Ok(self.regs.borrow()[i])
     }
     fn __setitem__(&self, name: &str, value: u32) -> PyResult<()> {
-        let i = NAMES
-            .iter()
-            .position(|s| *s == name)
+        let i = base_index(name)
             .ok_or_else(|| PyKeyError::new_err(name.to_string()))?;
         self.regs.borrow_mut()[i] = value;
         Ok(())
@@ -166,6 +149,10 @@ pub struct MachineCore {
     frames: RefCell<Vec<Frame>>,
     native: bool,
     mutant: u32,
+    fast: bool,
+    fast_u8: Cell<u64>,
+    fast_u16: Cell<u64>,
+    fast_write: Cell<u64>,
     native_calls: RefCell<HashMap<String, u64>>,
     // Bridge type tests/StopIteration and NOOP identity resolved once, never per call.
     generator_type: Py<PyAny>,
@@ -176,7 +163,8 @@ pub struct MachineCore {
 #[pymethods]
 impl MachineCore {
     #[new]
-    fn new(memory: &Bound<'_, PyAny>, load: u16, native: bool, mutant: u32) -> PyResult<Self> {
+    #[pyo3(signature = (memory, load, native, mutant, fast=true))]
+    fn new(memory: &Bound<'_, PyAny>, load: u16, native: bool, mutant: u32, fast: bool) -> PyResult<Self> {
         let py = memory.py();
         let b = py
             .get_type::<PyBytes>()
@@ -198,6 +186,8 @@ impl MachineCore {
             frames: RefCell::new(Vec::new()),
             native,
             mutant,
+            fast,
+            fast_u8: Cell::new(0), fast_u16: Cell::new(0), fast_write: Cell::new(0),
             native_calls: RefCell::new(HashMap::new()),
             generator_type: py.import("types")?.getattr("GeneratorType")?.unbind(),
             call_type: py
@@ -232,6 +222,32 @@ impl MachineCore {
         }
         Ok(out)
     }
+    #[getter]
+    fn fast_bridge(&self) -> bool { self.fast }
+    #[getter]
+    fn bridge_fast_calls(&self) -> HashMap<&'static str,u64> {
+        HashMap::from([("u8",self.fast_u8.get()),("u16",self.fast_u16.get()),("write",self.fast_write.get())])
+    }
+    fn port_u8<'py>(&self, mem: &Bound<'py,PyAny>, linear: &Bound<'py,PyAny>) -> PyResult<Bound<'py,PyAny>> {
+        let py=mem.py();
+        if self.fast && linear.get_type().is(&py.get_type::<PyInt>()) && self.memory.bind(py).len()==MEM_SIZE as usize {
+            if let Ok(l)=linear.extract::<u32>() {
+                let v=mem::u8_at(unsafe {self.memory.bind(py).as_bytes()},l);
+                if let Some(v)=v {self.fast_u8.set(self.fast_u8.get()+1);return Ok(v.into_pyobject(py)?.into_any());}
+            }
+        }
+        mem.call_method1(intern!(py,"_slow_u8"),(linear,))
+    }
+    fn port_u16<'py>(&self, mem: &Bound<'py,PyAny>, linear: &Bound<'py,PyAny>) -> PyResult<Bound<'py,PyAny>> {
+        let py=mem.py();
+        if self.fast && linear.get_type().is(&py.get_type::<PyInt>()) && self.memory.bind(py).len()==MEM_SIZE as usize {
+            if let Ok(l)=linear.extract::<u32>() {
+                let v=mem::u16_at(unsafe {self.memory.bind(py).as_bytes()},l);
+                if let Some(v)=v {self.fast_u16.set(self.fast_u16.get()+1);return Ok(v.into_pyobject(py)?.into_any());}
+            }
+        }
+        mem.call_method1(intern!(py,"_slow_u16"),(linear,))
+    }
     fn bounds(&self, linear: &Bound<'_, PyAny>, n: &Bound<'_, PyAny>) -> PyResult<()> {
         let l = linear.extract::<u32>();
         let count = n.extract::<u32>();
@@ -252,7 +268,7 @@ impl MachineCore {
     fn reg(&self, m: &Bound<'_, PyAny>, name: &str) -> PyResult<u32> {
         let (i, shift, mask, _) = alias(m.py(), name)?;
         let value = self.regs.borrow()[i] >> shift & mask;
-        let tap = m.getattr("io_tap")?;
+        let tap = m.getattr(intern!(m.py(), "io_tap"))?;
         if !tap.is_none() {
             tap.call1(("g", name.to_lowercase(), value))?;
         }
@@ -271,7 +287,7 @@ impl MachineCore {
                 regs[i] |= 2;
             }
         }
-        let tap = m.getattr("io_tap")?;
+        let tap = m.getattr(intern!(m.py(), "io_tap"))?;
         if !tap.is_none() {
             tap.call1(("s", name.to_lowercase(), value))?;
         }
@@ -285,7 +301,7 @@ impl MachineCore {
     ) -> PyResult<Bound<'py, PyBytes>> {
         self.bounds(linear, n)?;
         let data = self.bytes(m.py(), linear.extract()?, n.extract()?)?;
-        let tap = m.getattr("io_tap")?;
+        let tap = m.getattr(intern!(m.py(), "io_tap"))?;
         if !tap.is_none() {
             tap.call1(("r", linear, &data))?;
         }
@@ -303,7 +319,7 @@ impl MachineCore {
             .call1((data,))?
             .cast_into::<PyBytes>()?;
         self.bounds(linear, &data.as_bytes().len().into_pyobject(py)?.into_any())?;
-        let tap = m.getattr("write_tap")?;
+        let tap = m.getattr(intern!(m.py(), "write_tap"))?;
         if !tap.is_none() {
             tap.call1((linear, &data))?;
         }
@@ -320,6 +336,13 @@ impl MachineCore {
         self.bounds(linear, size)?;
         let py = m.py();
         let n: usize = size.extract()?;
+        if self.fast && n>0 && n<=8 && [linear,size,value,at].iter().all(|v|v.get_type().is(&py.get_type::<PyInt>())) {
+            if let (Ok(v),Ok(at))=(value.extract::<i128>(),at.extract::<u32>()) {
+                let mask=(1i128<<(n*8))-1;let data=((v&mask) as u64).to_le_bytes();
+                self.fast_write.set(self.fast_write.get()+1);
+                return self.write_native(m,linear.extract()?,&data[..n],at);
+            }
+        }
         let int = py.get_type::<pyo3::types::PyInt>();
         let mask = int
             .call1((1,))?
@@ -334,16 +357,16 @@ impl MachineCore {
     }
     fn pc(&self, m: &Bound<'_, PyAny>) -> PyResult<u32> {
         // Machine.pc invokes its io tap even when the override supplies the PC.
-        let override_pc = m.getattr("_pc_override")?;
+        let override_pc = m.getattr(intern!(m.py(), "_pc_override"))?;
         let pc = if !override_pc.is_none() {
             override_pc.extract()?
-        } else if !m.getattr("io_tap")?.is_none() {
+        } else if !m.getattr(intern!(m.py(), "io_tap"))?.is_none() {
             self.reg(m, "cs")? * 16 + self.reg(m, "ip")?
         } else {
             let r = self.regs.borrow();
             (r[10] & 0xffff) * 16 + (r[9] & 0xffff)
         };
-        let tap = m.getattr("io_tap")?;
+        let tap = m.getattr(intern!(m.py(), "io_tap"))?;
         if !tap.is_none() {
             tap.call1(("p", m.py().None(), pc))?;
         }
@@ -406,8 +429,8 @@ impl MachineCore {
     }
     fn dispatch(&self, m: &Bound<'_, PyAny>, linear: u32) -> PyResult<()> {
         let py = m.py();
-        let replay = m.getattr("_resume_lin")?.extract::<Option<u32>>()? == Some(linear);
-        m.setattr("_resume_lin", py.None())?;
+        let replay = m.getattr(intern!(m.py(), "_resume_lin"))?.extract::<Option<u32>>()? == Some(linear);
+        m.setattr(intern!(m.py(), "_resume_lin"), py.None())?;
         if self.handlers(m, linear, replay, false)? {
             return Ok(());
         }
@@ -444,8 +467,8 @@ impl MachineCore {
                 ));
             }
         }
-        if !m.getattr("stop_reason")?.is_none() {
-            m.setattr("no_replay_at", self.pc(m)?)?;
+        if !m.getattr(intern!(m.py(), "stop_reason"))?.is_none() {
+            m.setattr(intern!(m.py(), "no_replay_at"), self.pc(m)?)?;
         }
         Ok(())
     }
@@ -458,15 +481,15 @@ impl MachineCore {
         fresh: bool,
     ) -> PyResult<Py<PyAny>> {
         let py = m.py();
-        if m.getattr("muted")?.is_truthy()? {
+        if m.getattr(intern!(m.py(), "muted"))?.is_truthy()? {
             return Err(port_error(
                 py,
                 "plain engine cannot execute a muted original proof".into(),
             ));
         }
-        m.setattr("stop_reason", py.None())?;
+        m.setattr(intern!(m.py(), "stop_reason"), py.None())?;
         let start = self.pc(m)?;
-        let no_replay: Option<u32> = m.getattr("no_replay_at")?.extract()?;
+        let no_replay: Option<u32> = m.getattr(intern!(m.py(), "no_replay_at"))?.extract()?;
         m.setattr(
             "_resume_lin",
             if fresh || no_replay == Some(start) {
@@ -475,9 +498,9 @@ impl MachineCore {
                 Some(start)
             },
         )?;
-        m.setattr("no_replay_at", py.None())?;
+        m.setattr(intern!(m.py(), "no_replay_at"), py.None())?;
         let begin = Instant::now();
-        m.setattr("running", true)?;
+        m.setattr(intern!(m.py(), "running"), true)?;
         let result = (|| {
             loop {
                 let pc = self.pc(m)?;
@@ -487,28 +510,28 @@ impl MachineCore {
                 if begin.elapsed().as_secs_f64() > timeout_s {
                     return Err(port_error(py, "plain dispatch time limit exceeded".into()));
                 }
-                let linear = if m.getattr("io_tap")?.is_none() {
+                let linear = if m.getattr(intern!(m.py(), "io_tap"))?.is_none() {
                     pc
                 } else {
                     self.pc(m)?
                 };
                 self.dispatch(m, linear)?;
                 self.raise_pending(m)?;
-                if !m.getattr("stop_reason")?.is_none() {
+                if !m.getattr(intern!(m.py(), "stop_reason"))?.is_none() {
                     break;
                 }
             }
-            Ok(m.getattr("stop_reason")?.unbind())
+            Ok(m.getattr(intern!(m.py(), "stop_reason"))?.unbind())
         })();
-        m.setattr("running", false)?;
+        m.setattr(intern!(m.py(), "running"), false)?;
         result
     }
     fn fire(&self, m: &Bound<'_, PyAny>, address: &str) -> PyResult<()> {
         let py = m.py();
         let lin = self.lin(address)?;
-        let saved = m.getattr("_pc_override")?;
-        m.setattr("_pc_override", lin)?;
-        let handlers = m.getattr("_handlers")?.cast_into::<PyDict>()?;
+        let saved = m.getattr(intern!(m.py(), "_pc_override"))?;
+        m.setattr(intern!(m.py(), "_pc_override"), lin)?;
+        let handlers = m.getattr(intern!(m.py(), "_handlers"))?.cast_into::<PyDict>()?;
         let hs: Vec<Py<PyAny>> = match handlers.get_item(lin)? {
             Some(v) => v
                 .try_iter()?
@@ -517,7 +540,7 @@ impl MachineCore {
             None => vec![],
         };
         let tap = if hs.iter().any(|h| !h.bind(py).is(self.noop.bind(py))) {
-            m.getattr("site_tap")?
+            m.getattr(intern!(m.py(), "site_tap"))?
         } else {
             py.None().into_bound(py)
         };
@@ -533,7 +556,7 @@ impl MachineCore {
             }
             Ok(())
         })();
-        m.setattr("_pc_override", saved)?;
+        m.setattr(intern!(m.py(), "_pc_override"), saved)?;
         if !tap.is_none() {
             tap.call_method("site_leave", (lin, false), Some(&kw))?;
         }
@@ -601,7 +624,7 @@ impl MachineCore {
                 r[i] |= 2;
             }
         }
-        let tap = m.getattr("io_tap")?;
+        let tap = m.getattr(intern!(m.py(), "io_tap"))?;
         if !tap.is_none() {
             tap.call1(("s", name, v))?;
         }
@@ -638,22 +661,22 @@ impl MachineCore {
     fn stack_word(&self, m: &Bound<'_, PyAny>, offset: u32) -> PyResult<u32> {
         let linear = self.reg(m, "ss")? * 16 + (self.reg(m, "sp")?.wrapping_add(offset) & 0xffff);
         let data = self.bytes(m.py(), linear, 2)?;
-        let tap = m.getattr("io_tap")?;
+        let tap = m.getattr(intern!(m.py(), "io_tap"))?;
         if !tap.is_none() {
             tap.call1(("r", linear, &data))?;
         }
         Ok(u16::from_le_bytes(data.as_bytes().try_into().unwrap()) as u32)
     }
     fn raise_pending(&self, m: &Bound<'_, PyAny>) -> PyResult<()> {
-        let error = m.getattr("error")?;
+        let error = m.getattr(intern!(m.py(), "error"))?;
         if !error.is_none() {
-            m.setattr("error", m.py().None())?;
+            m.setattr(intern!(m.py(), "error"), m.py().None())?;
             return Err(PyErr::from_value(error));
         }
         Ok(())
     }
     fn placeholder(&self, m: &Bound<'_, PyAny>, lin: u32) -> PyResult<()> {
-        let handlers = m.getattr("_handlers")?.cast_into::<PyDict>()?;
+        let handlers = m.getattr(intern!(m.py(), "_handlers"))?.cast_into::<PyDict>()?;
         if !handlers.contains(lin)? {
             m.call_method1("at_linear", (lin, self.noop.bind(m.py())))?;
         }
@@ -667,7 +690,7 @@ impl MachineCore {
         fired: bool,
     ) -> PyResult<bool> {
         let py = m.py();
-        let handlers = m.getattr("_handlers")?.cast_into::<PyDict>()?;
+        let handlers = m.getattr(intern!(m.py(), "_handlers"))?.cast_into::<PyDict>()?;
         let list = match handlers.get_item(lin)? {
             Some(v) => v,
             None => return Ok(false),
@@ -678,7 +701,7 @@ impl MachineCore {
             .map(|h| h.map(Bound::unbind))
             .collect::<PyResult<_>>()?;
         let tap = if hs.iter().any(|h| !h.bind(py).is(self.noop.bind(py))) {
-            m.getattr("site_tap")?
+            m.getattr(intern!(m.py(), "site_tap"))?
         } else {
             py.None().into_bound(py)
         };
@@ -695,7 +718,7 @@ impl MachineCore {
                 h.bind(py).call1((replay,))?;
                 if fired {
                     self.raise_pending(m)?;
-                } else if !m.getattr("stop_reason")?.is_none() || !m.getattr("error")?.is_none() {
+                } else if !m.getattr(intern!(m.py(), "stop_reason"))?.is_none() || !m.getattr(intern!(m.py(), "error"))?.is_none() {
                     stopped = true;
                     break;
                 }
@@ -718,24 +741,24 @@ impl MachineCore {
         at: &Bound<'_, PyAny>,
     ) -> PyResult<()> {
         let py = m.py();
-        let (lo, hi): (i64, i64) = m.getattr("_writes_span")?.extract()?;
+        let (lo, hi): (i64, i64) = m.getattr(intern!(m.py(), "_writes_span"))?.extract()?;
         if !(lo <= linear as i64 && linear as i64 <= hi) {
             return Ok(());
         }
-        let saved = m.getattr("_pc_override")?;
-        m.setattr("_pc_override", at)?;
+        let saved = m.getattr(intern!(m.py(), "_pc_override"))?;
+        m.setattr(intern!(m.py(), "_pc_override"), at)?;
         let result = (|| {
-            let writes = m.getattr("_writes_now")?.cast_into::<PyTuple>()?;
+            let writes = m.getattr(intern!(m.py(), "_writes_now"))?.cast_into::<PyTuple>()?;
             for (index, w) in writes.iter().enumerate() {
                 let (begin, end, f, recorder): (u32, u32, Py<PyAny>, bool) = w.extract()?;
                 if begin <= linear
                     && linear <= end
-                    && (recorder || !m.getattr("muted")?.is_truthy()?)
+                    && (recorder || !m.getattr(intern!(m.py(), "muted"))?.is_truthy()?)
                 {
                     let tap = if recorder {
                         py.None().into_bound(py)
                     } else {
-                        m.getattr("listen_tap")?
+                        m.getattr(intern!(m.py(), "listen_tap"))?
                     };
                     if tap.is_none() {
                         f.bind(py).call1((linear, n, value))?;
@@ -750,7 +773,7 @@ impl MachineCore {
             }
             Ok(())
         })();
-        m.setattr("_pc_override", saved)?;
+        m.setattr(intern!(m.py(), "_pc_override"), saved)?;
         result
     }
     fn write_native(
@@ -770,7 +793,7 @@ impl MachineCore {
                 ),
             ));
         }
-        let (lo, hi): (i64, i64) = m.getattr("_writes_span")?.extract()?;
+        let (lo, hi): (i64, i64) = m.getattr(intern!(m.py(), "_writes_span"))?.extract()?;
         if lo <= linear as i64 && linear as i64 <= hi {
             // Regs.flush coalesces stack writes into runs, sometimes >8 bytes.
             // Listener values are Python integers of the WHOLE run's width.
@@ -1160,7 +1183,7 @@ impl Host for NativeHost<'_, '_> {
         self.entry
     }
     fn store_order(&mut self, inserted: &[Reg]) -> PyResult<Vec<Reg>> {
-        if self.m.getattr("io_tap")?.is_none() {
+        if self.m.getattr(intern!(self.m.py(), "io_tap"))?.is_none() {
             return Ok(inserted.to_vec());
         }
         let set = PySet::empty(self.m.py())?;
