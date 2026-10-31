@@ -1,0 +1,32 @@
+{
+  "pid": 20642,
+  "argv": [
+    "original_match.check",
+    "--engine",
+    "port",
+    "--no-unicorn",
+    "--state",
+    "/home/diego/projects/goal2rust/.cache/T03-state-v1.json",
+    "--tables",
+    "/home/diego/projects/goal2rust/.cache/T03-tables",
+    "--json",
+    "out/T06/check-v1.raw.json"
+  ],
+  "oracle": "e0270981883f02ce46a31391e7070079977bbfef",
+  "machines": 11,
+  "backend": "rust",
+  "native_calls": {
+    "0791:2956": 2984056,
+    "0791:2B51": 3477876,
+    "0791:045D": 2002250,
+    "1771:3216": 4294092,
+    "1771:3A06": 487636,
+    "0791:2974": 1041035,
+    "0791:2C29": 1956708,
+    "0791:26D7": 2984540,
+    "0791:2CEC": 2165621,
+    "0791:2FB1": 88940,
+    "0791:2BE5": 4628195,
+    "0791:278A": 487636
+  }
+}
