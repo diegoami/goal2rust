@@ -8,7 +8,8 @@ complete; its historical receipts and Done-when remain unchanged.
 ## 1. T03: sealed-engine compatibility
 
 Archaeology PRs #627 (sealed family) and #628 (handover) merged with passing
-checks. PROVENANCE.md and CI pin their accepted handover commit; T03's evidence
+checks. T03 adopted their accepted handover commit; the current state-v2 pin is described
+in T07 below. T03's evidence
 and resume rules are in `out/T03/README.md`. Keep d3cf46a3 and all T01/T02
 evidence available: an oracle update does not revalidate old receipts against
 the new source.
@@ -92,6 +93,18 @@ frame writes and the source's inline keeper-membership bytes. Contract/gates:
 [out/T06](../out/T06/README.md). Keep the accepted pin and private-input rule;
 goal2's later table-policy exception is specific to goal2.
 
+## 2c. T07: state-v2 compatibility refresh
+
+Adopt accepted archaeology PR640 merge `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`:
+state/2 preserves differing code-data bytes and strictly checks overlay entries;
+checkpoint tables survive load and extraction writes a loadable manifest.
+Native Rust/adapter code remains unchanged. Regenerate private inputs from the
+registered source; retain old state-v1 inputs, source clone, receipts and binaries.
+Full compatibility gates and comparison boundary: [tasks/T07.md](tasks/T07.md),
+[out/T07](../out/T07/README.md). Compare raw fresh-v2 machines exactly. Historical
+result continuity accounts for the independently verified changed image identity
+without omitting any result key. No speed claim follows from a schema refresh.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the
@@ -103,8 +116,8 @@ or replace it. T79's 699 equal completed matches prove the Python port, not Rust
 The owner runs the milestone review from a prompt naming the PR and requesting
 the full report as a PR comment and its URL. Goal2 adoption separately requires
 application fidelity, save/load, cancellation and native lifecycle/playtest.
-The hybrid Rust engine has not beaten PyPy (T06: 93.558 versus 46.582
-CPU seconds in the quiet pair; see out/T06/assessment.md).
+The hybrid Rust engine has not beaten PyPy (T07: 116.643 versus 79.032
+CPU seconds in the quiet pair; see out/T07/assessment.md).
 
 ## 4. Beyond the match engine
 
@@ -114,7 +127,9 @@ initial state still originates in a savestate. Translate these boundaries only
 with accepted upstream semantics and dedicated tasks. Sealing the match engine
 does not establish an independent whole game.
 
-Accepted source checked 2026-10-31: archaeology handover `e0270981883f02ce46a31391e7070079977bbfef`, PRs
+Current accepted source checked 2026-10-31: state-v2 merge
+`2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`, [PR #640](https://github.com/diegoami/goal2-archaeology/pull/640).
+Historical handover e0270981 included PRs
 [#624](https://github.com/diegoami/goal2-archaeology/pull/624),
 [#625](https://github.com/diegoami/goal2-archaeology/pull/625),
 [#626](https://github.com/diegoami/goal2-archaeology/pull/626),

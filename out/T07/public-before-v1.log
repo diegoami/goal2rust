@@ -1,0 +1,55 @@
+test_checkpoint_retains_tables_and_checks_digests (test_state_v2.StateV2Tests.test_checkpoint_retains_tables_and_checks_digests) ... FAIL
+test_entry_types_ranges_and_legacy_refusal (test_state_v2.StateV2Tests.test_entry_types_ranges_and_legacy_refusal) ... FAIL
+test_relocated_code_data_and_rust_records (test_state_v2.StateV2Tests.test_relocated_code_data_and_rust_records) ... FAIL
+
+======================================================================
+FAIL: test_checkpoint_retains_tables_and_checks_digests (test_state_v2.StateV2Tests.test_checkpoint_retains_tables_and_checks_digests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_state_v2.py", line 62, in test_checkpoint_retains_tables_and_checks_digests
+    def test_checkpoint_retains_tables_and_checks_digests(self):self.run_mode('checkpoint')
+                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/goal2rust/engine/tests/test_state_v2.py", line 59, in run_mode
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr);self.assertIn('PASS '+mode,p.stdout)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 61, in <module>
+  File "/home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/match.py", line 573, in records_after
+    raise MatchError("records_after needs GOAL.EXE's tables (port.tables.load): this match was not built "
+original_match.match.MatchError: records_after needs GOAL.EXE's tables (port.tables.load): this match was not built from them
+
+
+======================================================================
+FAIL: test_entry_types_ranges_and_legacy_refusal (test_state_v2.StateV2Tests.test_entry_types_ranges_and_legacy_refusal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_state_v2.py", line 61, in test_entry_types_ranges_and_legacy_refusal
+    def test_entry_types_ranges_and_legacy_refusal(self):self.run_mode('invalid')
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/goal2rust/engine/tests/test_state_v2.py", line 59, in run_mode
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr);self.assertIn('PASS '+mode,p.stdout)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 44, in <module>
+AssertionError: legacy schema accepted
+
+
+======================================================================
+FAIL: test_relocated_code_data_and_rust_records (test_state_v2.StateV2Tests.test_relocated_code_data_and_rust_records)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_state_v2.py", line 60, in test_relocated_code_data_and_rust_records
+    def test_relocated_code_data_and_rust_records(self):self.run_mode('overlay')
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/goal2rust/engine/tests/test_state_v2.py", line 59, in run_mode
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr);self.assertIn('PASS '+mode,p.stdout)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 30, in <module>
+AssertionError
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.305s
+
+FAILED (failures=3)

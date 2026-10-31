@@ -1,12 +1,18 @@
 # Provenance
 
 The current oracle is goal2-archaeology at
-`e0270981883f02ce46a31391e7070079977bbfef` (accepted T80d handover, including
-T80c's sealed family and T79's larger fidelity corpus). CI and the ignored
-`.cache/goal2-archaeology` clone use this exact commit. T03 validates the same
-Rust implementation against the state-and-tables API. The T02 oracle remains
-available in `.cache/goal2-archaeology-T02` at `d3cf46a3`; historical T01/T02
-receipts and the translation-origin pins below remain unchanged.
+`2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c` (accepted PR640, state/2,
+including checkpoint-table retention and extractor-manifest fixes). CI and
+`.cache/goal2-archaeology` use this exact commit. T07 refreshes compatibility
+and artifact-bound proof for the unchanged twelve native bodies.
+
+Previous e0270981 source remains in ignored `.cache/goal2-archaeology-T06`;
+d3cf46a3 remains in `.cache/goal2-archaeology-T02`. Historical inputs, receipts,
+translation-origin pins and measured binary archives stay unchanged. T07's input
+and source audit is in `out/T07/input-audit-v1.json`. All translated routines,
+helpers, machine and guest dispatcher sources are byte-identical across this
+oracle update; changes are in the sealed image/checkpoint/table boundary and
+associated checks/docs. No original bytes or extracted tables are committed.
 
 Each translated routine is listed with its Python source and translation-origin
 commit. T03's source audit records that the machine/frames/runtime and the

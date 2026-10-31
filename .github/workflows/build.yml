@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: diegoami/goal2-archaeology
-          ref: e0270981883f02ce46a31391e7070079977bbfef
+          ref: 2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c
           path: .cache/goal2-archaeology
           persist-credentials: false
       - uses: actions/setup-python@v5

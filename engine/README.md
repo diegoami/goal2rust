@@ -43,15 +43,25 @@ for event in match.events():
 next_state = match.records_after()
 checkpoint = match.save()
 resumed = Match.load(checkpoint)
-next_state_from_replay = resumed.records_after(tables)
+next_state_from_replay = resumed.records_after()
 ```
 
 Generate the tables locally with the pinned oracle's `tools/static/port_tables.py
-extract --exe <owner's GOAL.EXE> --out <private folder>`, then copy its pinned
-`static/goal-exe/tables/manifest.json` alongside `ds.hex` and `code_data.hex`.
-Tables and state stay outside git and releases. The checkpoint loader does not
-restore the tables object, so supply it explicitly to `records_after` after
-load. [T03's evidence](../out/T03/README.md) covers this boundary; the engine
+extract --exe <owner's GOAL.EXE> --out <private folder>`. Extraction writes
+`manifest.json`, `ds.hex` and `code_data.hex` as a folder `load_tables` reads.
+Tables, state and checkpoints stay outside git and releases.
+
+The current state schema is `original_match.state/2`, emitted by `Image.state`.
+It carries differing code-data bytes along with initialised-data changes; each
+entry must be an integer byte inside its declared table. Regenerate old state-v1
+inputs from the private source rather than renaming their schema. Sealed
+checkpoints now retain their validated tables, so `records_after()` works after
+ordinary/replay load. For older checkpoints without tables, the explicit
+`records_after(tables)` argument remains available.
+
+Current compatibility evidence and comparison rules are in
+[out/T07](../out/T07/README.md); [T03](../out/T03/README.md) remains historical
+state-v1 evidence. The engine
 still bridges unported bodies to Python. T04 adds a native availability caller
 and callee to the seven bodies measured by T03; T05 adds the nearest-to-ball
 caller over those native callees. T06 adds the effective-skill caller and
@@ -106,6 +116,6 @@ mutated saved inputs/dispatch-captured AX, guest-boundary
 state snapshots and variant fallback,
 callbacks, >64-bit coalesced listener values, and error cleanup.
 The real-drive, family, per-call, lifecycle and timing evidence and resume
-commands are in [out/T06](../out/T06/README.md); the accepted sealed-input
+commands are in [out/T07](../out/T07/README.md); the accepted sealed-input
 baseline remains in [out/T03](../out/T03/README.md). T01/T02 receipts are
 historical and stay bound to their original source and artifacts.
