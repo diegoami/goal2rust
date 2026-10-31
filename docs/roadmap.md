@@ -137,11 +137,14 @@ fixes cancellation after a job wrapper exits. This supports the adoption sequenc
 retain the accepted 2cbeb36f pin/private table policy for the controlled T09
 comparison. Goal2 integration/cancellation remains a separate adoption gate.
 
-T09 v1's fidelity proofs pass, but the three-round median CPU gain is 4.28%,
-below the unchanged 5% gate. The candidate remains unmerged in draft PR #25;
-main retains T08. Full evidence: [out/T09/assessment.md](../out/T09/assessment.md).
-Any further candidate requires fresh versioned proof, not discarded samples or
-a relaxed threshold. Goal2 main rechecked 2026-11-01 at d31bba36: PR488 caps automatic
+T09's fidelity proofs pass and all three rounds improve (median CPU gain 4.28%).
+The owner authorized merging this incremental translation on 2026-11-01 and
+removed the per-increment 5% minimum carried from T08. Fidelity, complete samples,
+original guards, artifact binding and exact-head CI remain. See
+[owner acceptance](porting-acceptance.md) and
+[out/T09/assessment.md](../out/T09/assessment.md). Historical rejected receipts
+remain intact; acceptance under the amended contract is recorded separately.
+Goal2 main rechecked 2026-11-01 at d31bba36: PR488 caps automatic
 CI batches while retaining full local/manual slow runs. This does not reduce
 this port's strict ALL75/F40 gates or change the accepted semantic pin.
 

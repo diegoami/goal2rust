@@ -1,19 +1,22 @@
-# T09 speaker/noise candidate — performance gate missed
+# T09 speaker/noise incremental port
 
-## Outcome: unmerged, experiments stopped
+## Owner-approved incremental port
 
-All fidelity checks pass. The three-round median uses **4.28% less CPU** than
-saved T08, below the required **5%**. All three samples improve, but the unchanged
-median ratio **0.957204635 >0.95** rejects this candidate. PR #25 stays
-draft; task #24 remains open, main stays 15fadea13. No Done-when was weakened.
+The owner clarified the incremental Python-to-Rust objective and explicitly
+authorized merging T09 on 2026-11-01. The contract was amended on main in
+981335f: a faithful native subtree need not deliver 5% whole-match improvement.
+All three candidate rounds are faster; the median uses **4.28% less CPU**.
+All fidelity, original-guard, complete-sample and exact-head CI gates remain.
+See docs/porting-acceptance.md and docs/tasks/T09.md.
 
-Original validate.py rejects at its performance assertion; no accepted
-validation-v1.json exists. The diagnostic closed rejection ledger is
-**rejected-validation-v1.json**: fidelity_pass=true, acceptance_pass=false,
-do_not_merge=true. It binds 150 recursive evidence files.
-Real-host rejected-process-closure-v1.json verifies supervisor exit and all 35
-canonical/timing/pilot process groups empty. Performance and supervisor exit 1
-are preserved as expected gate failures; all 12 timing children exited 0.
+The original <=0.95 optimization gate failed and its validator/receipts remain
+unchanged. Historical rejected-validation-v1.json still records that old outcome
+and binds 150 evidence files. **owner-acceptance-v2.json** separately accepts the
+same runtime artifact under the owner's amended incremental-port contract,
+rehashing the original evidence and source/binary/input bindings. No samples,
+failures or private data are removed. No new runtime or oracle change is made.
+All experiment groups have exited; no experiment is restarted for this amendment.
+Live exact-head CI/merge/checkpoint state is in PR #25 / issue #1.
 
 ## Every paired timing sample
 
@@ -29,7 +32,7 @@ Every raw output/result/record/full memory agrees. No round is discarded.
 
 Median paired CPython speed: 2.051x. Candidate/PyPy CPU: 1.354x;
 **still slower than PyPy**. The earlier pilot's 5.30% gain did not repeat at the
-required three-round median. The measurements alone do not establish why samples
+original 5% three-round target. The measurements alone do not establish why samples
 vary. This is one host/reference fixture, not a broad workload claim.
 
 ## Candidate and passing fidelity evidence
@@ -61,7 +64,7 @@ input/baseline/rejected-archive/harness/prefix evidence. Accepted 2cbeb36f/state
 and private T07 inputs unchanged. Actual baseline: .cache/T09-baseline/engine;
 candidate binaries: .cache/T09-artifacts, indexed by artifact-archive-v1.json.
 
-## Preserved attempts and resume boundary
+## Preserved attempts and limits
 
 The register-descriptor prototype regressed setters and byte halves and was
 rejected; source/binary/microbench remain, no factory active. Supplemental observer
@@ -71,10 +74,10 @@ v2 checks that value plus the observed mutation, no production/equality change.
 The baseline's failing-before native/body tests are also retained.
 
 Do not restart completed v1 producers or overwrite receipts/rounds/baselines.
-Any further candidate needs fresh versioned artifact-bound fidelity and timing
-proofs under the same unchanged threshold. Success-path process-closure.txt,
+Any further runtime change needs fresh versioned artifact-bound fidelity and
+timing proofs under its explicit task contract. Success-path process-closure.txt,
 post-exit-audit.txt and write-assessment.txt were not used to assert acceptance;
-the original validator demonstrably rejects, and rejected-audit.txt closes the
-actual rejected outcome. No original bytes/state/tables committed, no automatic
+the original validator demonstrably rejects its original 5% gate, and
+rejected-audit.txt closes that historical outcome. Owner acceptance is separate. No original bytes/state/tables committed, no automatic
 model review launched. Existing #6, later A700/ref-121/owner-run engine review and
 goal2 integration/save-load/cancellation/playtest gates remain separate.

@@ -1,16 +1,18 @@
 # T09 speaker/noise state
 
-## V1 stopped: fidelity passes, performance gate missed
+## Owner-approved acceptance; experiments complete
 
-All experiments have exited. All fidelity checks pass, but the three-round median
-CPU gain is 4.28%, below the unchanged 5% requirement. PR #25 stays draft/unmerged,
-task #24 open; main unchanged. See assessment.md. No accepted validation-v1.json.
-Diagnostic closed rejection ledger: rejected-validation-v1.json (acceptance=false,
-do_not_merge=true), with real-host rejected-process-closure-v1.json. Do not restart
-v1 producers or overwrite any receipt, round, source binding or archived artifact.
-A further candidate requires fresh versioned proof; success-path helper scripts
-remain historical/unexecuted for this rejected candidate. Live stop/resume state
-is in issue #1. Commands below are historical, not an instruction to rerun v1.
+The owner authorized merging this faithful incremental port after clarifying
+that each subtree need not deliver 5% whole-match improvement. Main amendment
+981335f and docs/porting-acceptance.md record the reason. All three rounds improve,
+median CPU gain 4.28%; all fidelity gates pass. owner-acceptance-v2.json binds the
+unchanged runtime/evidence under the amended T09 contract. See assessment.md.
+
+Keep the original rejected-validation-v1.json, assertion failure and all receipts
+unchanged: they describe the historical 5% gate. No accepted validation-v1.json
+is invented. All experiment groups are empty. Do not rerun completed producers,
+overwrite receipts or reuse this proof after runtime changes. Live exact-head
+CI/merge status stays in PR #25 / issue #1. Commands below are historical.
 
 Task #24, contract docs/tasks/T09.md and contract.md. Read checkpoint issue #1
 and recheck live jobs before resuming. Never overwrite completed receipts,
@@ -38,6 +40,7 @@ cases per body, callbacks, direct bodies, pauses and three scoped controls.
 Existing 12-body proofs/controls, exact ordered drive, sealed lifecycle, strict
 ALL75/F40 and profile precede three quiet simultaneous baseline/candidate/plain
 CPython/PyPy rounds on rotated physical cores. Every candidate must improve and
-median CPU ratio must be <=0.95. No failed or slow round discarded. After all
+the historical producer asserts a median CPU ratio <=0.95. The owner amendment
+accepts this increment with every round faster, without that per-increment minimum. No failed or slow round discarded. After all
 writers and groups exit, post-exit-audit.txt and validate.py close a fresh ledger.
 Existing #6 / later A700 and owner-run engine review remain separate gates.
