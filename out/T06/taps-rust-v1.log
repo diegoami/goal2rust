@@ -1,0 +1,2 @@
+denied: unicorn, .sav, .EXE, .DAT
+{"backend": "rust", "mode": "taps", "events": 831, "drive_cpu_s": 261.469873226, "taps": {"sha256": "afcb5ec2ad3800a7d969f8cda6a513577d3e39feff886a441a48cbd814d0f191", "counts": {"io": 158092780, "listen_enter": 114492, "listen_leave": 114492, "site_enter": 81134, "site_leave": 81134, "write": 4}}}

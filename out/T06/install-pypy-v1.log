@@ -1,0 +1,7 @@
+Processing /tmp/goal2rust-T06-wheels-pypy/goal2rust_engine-0.1.0-pp311-pypy311_pp80-manylinux_2_34_x86_64.whl
+Installing collected packages: goal2rust-engine
+  Attempting uninstall: goal2rust-engine
+    Found existing installation: goal2rust-engine 0.1.0
+    Uninstalling goal2rust-engine-0.1.0:
+      Successfully uninstalled goal2rust-engine-0.1.0
+Successfully installed goal2rust-engine-0.1.0

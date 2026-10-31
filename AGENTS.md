@@ -18,10 +18,15 @@ rules in [out/T04/README.md](out/T04/README.md). Read those before running its
 producers; preserve completed receipts. Live completion and stop/resume status
 remain in the GitHub checkpoint.
 
-The next bounded tree T05 is specified in [docs/tasks/T05.md](docs/tasks/T05.md),
+The bounded tree T05 is specified in [docs/tasks/T05.md](docs/tasks/T05.md),
 with full evidence, artifact bindings and producer rules in
 [out/T05/README.md](out/T05/README.md). Read those and the live checkpoint before
 resuming; never overwrite completed receipts or rebuild during a measured run.
+
+Effective-skill tree T06 is specified in [docs/tasks/T06.md](docs/tasks/T06.md),
+with proof/artifact/resume rules in [out/T06/README.md](out/T06/README.md).
+Read those and the live checkpoint before its producers; preserve completed
+receipts and keep bound sources/binaries fixed during measurements.
 
 T02 is complete. Its evidence and historical cross-computer experiment commands are in
 [out/T02/README.md](out/T02/README.md). Read that before restarting its experiments;

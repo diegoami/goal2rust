@@ -1,0 +1,42 @@
+"""Additional immutable post-writer audit; run before validate.py."""
+import hashlib,json,subprocess,sys
+from pathlib import Path
+sys.path.insert(0,'out/T06')
+import evidence as e
+out=e.BASE/'out/T06';e.verify();before=e.hashes();sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+assert not e.git('status','--porcelain',root=e.ORACLE)
+harness={}
+for p in sorted((e.ORACLE/'experiments/E036-match-port').glob('*.py'))+[e.ORACLE/'tests/test_port_seal.py']:
+    rel=str(p.relative_to(e.ORACLE));blob=subprocess.check_output(['git','show',e.PIN+':'+rel],cwd=e.ORACLE)
+    assert hashlib.sha256(blob).hexdigest()==sha(p);harness[rel]=sha(p)
+lines=(out/'family-F40-rust-v1.jsonl').read_bytes().splitlines(keepends=True)
+for n in [10,20,30]:
+    p=out/f'family-progress-{n}-v1.jsonl';r=json.loads((out/f'family-progress-{n}-v1.json').read_text())
+    assert p.read_bytes()==b''.join(lines[:n]) and sha(p)==r['sha256']
+    assert [hashlib.sha256(x).hexdigest() for x in lines[:n]]==r['line_sha256']
+    assert r['snapshot_script_sha256']==sha(out/'progress-snapshot.txt')
+for stage in ['T05','T06']:
+    for r in json.loads((e.BASE/'out'/stage/'artifact-archive-v1.json').read_text())['artifacts']:
+        assert sha(e.BASE/r['archive'])==r['sha256']
+        if stage=='T06':assert sha(e.BASE/r['original'])==r['sha256']
+for name in ['public-cpython-v2.log','public-pypy-v1.log']:
+    text=(out/name).read_text();assert 'Ran 19 tests' in text and text.rstrip().endswith('OK')
+assert 'running 11 tests' in (out/'cargo-v1.log').read_text()
+for name in ['differential-v1','body-mutant-v1','return-mutant-v1']:
+    r=json.loads((out/(name+'.json')).read_text());assert all(v==8 for v in r['captures'].values())
+    assert sum(x['total'] for x in r['comparisons'].values())==6224
+    assert r['callback_mutations']==dict(saved=400,sent=144)
+    for kind,row in r['comparisons'].items():
+        expected=row['total'] if name=='differential-v1' or (name=='return-mutant-v1' and not kind.endswith('0791:278A')) else 0
+        assert row['equal']==expected,(name,kind)
+for label in ['check','family-F40']:
+    rows=[json.loads(p.read_text()) for p in (out/f'attest-{label}-v1').glob('*.json')]
+    for ad in ['0791:278A','1771:3A06']:assert sum(r['native_calls'].get(ad,0) for r in rows)>0
+p=json.loads((out/'profile-after-v1.json').read_text());assert len(p['routines'])==422
+for ad in ['0791:278A','1771:3A06']:assert p['routines'][ad]['python_calls_or_resumes']==0
+report=dict(pass_all=True,oracle_pristine=True,harness_sha256=harness,progress_prefixes_verified=[10,20,30],
+            old_and_new_archives_verified=True,public_tests_each=19,rust_tests=11,comparisons=6224,
+            callback_mutations=dict(saved=400,sent=144),registered_routine_addresses=422,native_routine_addresses=12,
+            audit_source_sha256=sha(Path(__file__)))
+e.write(out/'post-exit-audit-v1.json',report,before)
+print('Additional oracle/harness, artifact, prefix and proof checks pass')

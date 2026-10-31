@@ -1,0 +1,37 @@
+{
+  "pid": 20874,
+  "argv": [
+    "experiments/E036-match-port/family.py",
+    "--family",
+    "F40",
+    "--engine",
+    "port",
+    "--no-unicorn",
+    "--from-records",
+    "--tables",
+    "/home/diego/projects/goal2rust/.cache/T03-tables",
+    "--workers",
+    "2",
+    "--cache",
+    "/home/diego/projects/goal2rust/.cache/goal2-archaeology/.cache/dl",
+    "--out",
+    "/home/diego/projects/goal2rust/out/T06/family-F40-rust-v1.jsonl"
+  ],
+  "oracle": "e0270981883f02ce46a31391e7070079977bbfef",
+  "machines": 20,
+  "backend": "rust",
+  "native_calls": {
+    "0791:2974": 1736087,
+    "0791:2956": 5079589,
+    "1771:3216": 6948416,
+    "0791:2FB1": 150736,
+    "0791:2BE5": 7761525,
+    "0791:2C29": 3379977,
+    "0791:2B51": 6025208,
+    "0791:26D7": 5109398,
+    "0791:045D": 3460127,
+    "0791:278A": 862142,
+    "1771:3A06": 862142,
+    "0791:2CEC": 3716464
+  }
+}

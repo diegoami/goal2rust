@@ -1,0 +1,567 @@
+test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) ... 
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=0, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=1, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=2, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=3, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=4, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=5, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=6, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=7, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=8, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=9, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=10, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=11, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=12, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=13, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=14, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=15, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=16, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=17, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=18, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=19, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=20, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=21, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=22, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=23, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=24, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=25, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=26, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=27, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=28, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=29, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=30, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=31, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=32, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=33, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=34, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=35, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=36, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=37, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=38, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=39, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=40, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=41, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=42, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=43, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=44, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=45, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=46, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=47, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=48, root='1771:3A06', body=True) ... FAIL
+  test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=49, root='1771:3A06', body=True) ... FAIL
+test_errors_and_variants (test_effective_skill.EffectiveSkillTests.test_errors_and_variants) ... ok
+test_full_tree_and_retained_state (test_effective_skill.EffectiveSkillTests.test_full_tree_and_retained_state) ... FAIL
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=0, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '964f0033c62116f9079303b34952bb875c4905f35[1465 chars]alse} != {'memory': '85020b73b01cd3e504f23845f046964ba76ed1cd1[561 chars]alse}
+Diff is 2610 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=1, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '0af4a2e29280583c29abb91e01248c9c6788b31de[1457 chars]alse} != {'memory': '1d040aadf49a69f340b99e25633c9d0b3d68dfd79[560 chars]alse}
+Diff is 2578 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=2, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '535c0b3222a23cb5642a93be845312f2624c8529c[1475 chars]alse} != {'memory': 'ee9c58d73a27dcd8b56c780baa2e99886045c6a4d[561 chars]alse}
+Diff is 2619 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=3, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '2c7775c3609e5b3fff3716e57d61744b9ab06a2f5[1468 chars]alse} != {'memory': 'd856721027052a9a2b1b28b81bd59ced34cb74ac0[562 chars]alse}
+Diff is 2613 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=4, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'bd8be0ddf0ecffd38ee834a556e089d6542315203[1466 chars]alse} != {'memory': 'e66183c5ff892d7f749fe7fabc4db24d70216b5b4[563 chars]alse}
+Diff is 2612 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=5, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'a1f86e4f01ae189b7758c5655124e1b8761b8f978[1481 chars]alse} != {'memory': '307da7bccffe5f2cb6f84820d4cd878b346c3e759[565 chars]alse}
+Diff is 2633 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=6, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '7c56e4f0e8239dba938d9eb28a5bf808be1ba627e[1482 chars]alse} != {'memory': 'b162d8658a1109a36c8acad9d4cc9d5879fd766af[566 chars]alse}
+Diff is 2639 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=7, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '4ca7fc0b94c6f57d5d30ecbd6ed6abf7475039ba7[1486 chars]alse} != {'memory': '143480e74e0383ad4a4d2b7d79d749793050c7f3d[561 chars]alse}
+Diff is 2596 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=8, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'c293520f410c873cbd2d204ac5bbb047b2587c273[1465 chars]alse} != {'memory': '48a6ab7712f322df4b4c3001b8a7512f16067902c[562 chars]alse}
+Diff is 2588 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=9, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '018cbf3f2a2fc997ebdcb674144b67fec283d1b3d[1464 chars]alse} != {'memory': '25370099503b5c5d0e74081e1109a9ad2e198e845[561 chars]alse}
+Diff is 2610 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=10, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'a4ffc502d341505404262aef42118c8a171eee7a3[1471 chars]alse} != {'memory': 'eb2f8a1d98c6b17ff88ddc024feda0c5b83970c93[563 chars]alse}
+Diff is 2618 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=11, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '65ba442a877f96f81fe319ffe6f6aa70dba120e39[1476 chars]alse} != {'memory': '73bf5ca4892a1994aee4f1e4e9442560be30fd447[564 chars]alse}
+Diff is 2622 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=12, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'af15a3db38df6c32da936e25bbd9720b2150470a0[1477 chars]alse} != {'memory': '1ec08010221f6e26826f088c32cc31f45f67e2cb4[564 chars]alse}
+Diff is 2628 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=13, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'b1c2f388fb250677cea7816c6a89fefaccbcbeb5d[1479 chars]alse} != {'memory': '26c47579bbe2a580bfbf76d60b25374b8050cbd63[566 chars]alse}
+Diff is 2633 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=14, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '11f446283e4314d819810c7062d8191b9e5a71ff9[1480 chars]alse} != {'memory': 'b616748535511c0ef38010416965e39d08a199ab0[560 chars]alse}
+Diff is 2622 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=15, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '0ffd69e3fac861a6769688bb5138ee1ebd87d608a[1467 chars]alse} != {'memory': '9119360781df62bf5baf2d0ddea5a5957da5af453[563 chars]alse}
+Diff is 2591 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=16, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '0f4d49af90f7b033196d42761ce6002a09a10743f[1461 chars]alse} != {'memory': '7e19d04aacc1294e0690abf2d4c4a2e80c24e4b82[562 chars]alse}
+Diff is 2603 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=17, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '4c97d486501d3728eeba71a1874a9a8ad22b75a47[1459 chars]alse} != {'memory': '9c09cd0388f1d5682b0b80dcbd5f8960306b03c94[562 chars]alse}
+Diff is 2599 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=18, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '22063c08f316262751e47751e9043ec714584e162[1476 chars]alse} != {'memory': '3650184b3583fa20efade179d9e99a8323de7b04f[562 chars]alse}
+Diff is 2624 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=19, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '6d3a2adc42daf3afef282e992c44a552b8b9691c1[1491 chars]alse} != {'memory': 'be708c4fc31357b8f6d4f42f9197e0f1c777cb77f[566 chars]alse}
+Diff is 2609 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=20, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'cd7fb0f28ebd4ad529f7f58f05fd6a8b5e69d6fdd[1476 chars]alse} != {'memory': '2b86a460baaa3f472e57c9c8e7e1960e99a6dd31f[566 chars]alse}
+Diff is 2631 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=21, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '7137c395fc0a524525a5d6619331de5225be5896b[1463 chars]alse} != {'memory': 'dcdcd7489bd274880943c11e96bc748aab9db1cd1[559 chars]alse}
+Diff is 2607 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=22, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'cf16081d1fec5b9fa54e39450cbaefb7a478b8738[1477 chars]alse} != {'memory': '1f1b2eaa9ab7c0f0ac2d3121da33bfdf93cdd409e[563 chars]alse}
+Diff is 2603 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=23, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'cd8c599adef05c0a6a4d0c81de7f76c5393523ced[1475 chars]alse} != {'memory': '6f0c14a979b2a2d6b308e6a47b5610caf4fedd01f[561 chars]alse}
+Diff is 2624 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=24, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'ed2788ff77f435a949d532fbef8738a7e3979a173[1459 chars]alse} != {'memory': 'b830106048165a9fe99f42c7ec5e7ccdc4461513f[562 chars]alse}
+Diff is 2602 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=25, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '406e08caabe75e1917baea77b8902866f1c49558d[1473 chars]alse} != {'memory': '866578080c35a79d48154c7feb37273b85e506027[565 chars]alse}
+Diff is 2623 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=26, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'b346ad8ca261ceeb1c842e5eb654a4101d777f3f1[1483 chars]alse} != {'memory': '25ef4728424c794b8229656dd71658572656aa1cc[566 chars]alse}
+Diff is 2635 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=27, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'dba3ffb51f081b1f62196263613c43b38d2e4eebf[1491 chars]alse} != {'memory': '6f55d6a8d02d0672804a13cd6cca67346a3784945[566 chars]alse}
+Diff is 2613 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=28, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '5a0d4bd1a05f2f8f171277b15302f1ee2b21e23b7[1474 chars]alse} != {'memory': '19e8115bbff63b73b46b64747d9d0ecf45bfa159b[561 chars]alse}
+Diff is 2618 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=29, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '5614a063075fd6d5bd3c2187ecc953219e16cca50[1460 chars]alse} != {'memory': '680874283d4abe02924f59f7dbee0601295bc23da[561 chars]alse}
+Diff is 2580 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=30, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'e4da469d97b7ab63dae3275e47011e5e1ba72b045[1462 chars]alse} != {'memory': '3ad779137814bac24674a3370217b482be2136892[561 chars]alse}
+Diff is 2606 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=31, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '4c8a73048b10cc6a4cc95976ac63942ea5ac32c15[1463 chars]alse} != {'memory': '3d3122ef4f21a6514579796d699e182bb2479c7d1[561 chars]alse}
+Diff is 2609 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=32, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'b37449c060fb5dbc3beeafc9ee87e56fdee0f6c0f[1459 chars]alse} != {'memory': 'e816cdb044c97fcc622f36fe4bf325de42fd70a44[559 chars]alse}
+Diff is 2603 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=33, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'fb461b5565e739efec8989669a1036d1899e791719[1473 chars]alse} != {'memory': 'fcd65de60138a3032b67eaaba29efd49cfafdb0284[563 chars]alse}
+Diff is 2625 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=34, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '2e747101ef2db142b2cac7e87dc4badd625ca50ed[1485 chars]alse} != {'memory': 'd3b4e4ffc39de636f09e3424649fe767b09de03ba[565 chars]alse}
+Diff is 2640 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=35, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'a82b2c016a2f7d92c9afb3ee507be53a1c3460567[1484 chars]alse} != {'memory': '36665693d39d836c7c2de67bc89adf43abdd9f743[559 chars]alse}
+Diff is 2594 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=36, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'd019b30b92fc037daba202a452db99101e8aba98e[1460 chars]alse} != {'memory': '1f0f24fea9bf8cc7faae6cb90c261882a1ba47d18[563 chars]alse}
+Diff is 2584 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=37, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '0046c398c4c7d4b6dc0fc786eccf9810135af7057[1469 chars]alse} != {'memory': 'c3801002ef0a222e4a95eef1af80a6cf90f2515f1[561 chars]alse}
+Diff is 2616 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=38, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '29b7ffc5b2cfe5580a835a5080e1a3689912e8877[1467 chars]alse} != {'memory': 'c584cdd0843d7dbd18b346554fd696f25c2e618f7[563 chars]alse}
+Diff is 2612 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=39, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '12bcb7d46af413e4d38ccdf1d51440862903fb0ae[1479 chars]alse} != {'memory': '483d885c66880f72d2f9f17754e7d050a787a3ffd[562 chars]alse}
+Diff is 2594 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=40, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '39f48b9593ab3236bd34120de9c8e2a08171cc608[1479 chars]alse} != {'memory': '2a778d26196cc1fde89a4d18188e3d081a4027936[566 chars]alse}
+Diff is 2633 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=41, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '4dbd7386c000d4baadfa5dc8550e017ebe494f6d6[1476 chars]alse} != {'memory': 'dbe03317a24df4b0a84e1042d7b3cb33fa34668d8[563 chars]alse}
+Diff is 2625 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=42, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '3841a8ee652fe9c9bfdb07df6e125e96262fc9217[1480 chars]alse} != {'memory': '9b5b7c71c7502125d4e0f713bafbfc95ecec654e4[560 chars]alse}
+Diff is 2624 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=43, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'f20e7ec5dd0b7cfb050b6676245da7efc3b0dfe82[1476 chars]alse} != {'memory': '5b0abe62d70954330bc24ea891173705f2911fcb7[559 chars]alse}
+Diff is 2560 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=44, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'c9d0400ac1c6bb2aecf2ec9b3ecb4cc079fcdc874[1467 chars]alse} != {'memory': '322aacee2ea4eeb40baf043b274879d3030747fad[562 chars]alse}
+Diff is 2613 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=45, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '7c5b0c5ca3c379912e41c3b68942285f470b13b81[1455 chars]alse} != {'memory': '5d1cab4749a584784918b23310ea42e715116532e[561 chars]alse}
+Diff is 2592 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=46, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '64fe58b671187cf25e2bb6cb35d62ed72f9bcd429[1468 chars]alse} != {'memory': 'fc2104037f605263ad4ffc932c32beb202a83e60a[560 chars]alse}
+Diff is 2616 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=47, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '0119f4be113ed755f535f1d158503be0c57b14122[1482 chars]alse} != {'memory': 'b3b28ed69516cf358e124dcba794118829bf5061e[565 chars]alse}
+Diff is 2637 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=48, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '1c009ccbebb182fc2637f3cdc58b9d0a60ad15f6d[1475 chars]alse} != {'memory': 'de768871de12088c7608ac866537cc0c71e0d6458[562 chars]alse}
+Diff is 2627 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_direct_leaf_body_and_completion (test_effective_skill.EffectiveSkillTests.test_direct_leaf_body_and_completion) (case=49, root='1771:3A06', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 120, in test_direct_leaf_body_and_completion
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertEqual(p,r)
+                                                                           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'a6b00b4523e616fe4eb02ab97f3f44041ffce3182[1472 chars]alse} != {'memory': '5e678cf376ec456b7e472258d23587cf8e3c4ea0d[561 chars]alse}
+Diff is 2613 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_full_tree_and_retained_state (test_effective_skill.EffectiveSkillTests.test_full_tree_and_retained_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_effective_skill.py", line 107, in test_full_tree_and_retained_state
+    self.assertEqual(p,r);self.assertEqual(n.get(ROOT),1)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 1
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.710s
+
+FAILED (failures=51)

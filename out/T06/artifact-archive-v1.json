@@ -1,0 +1,14 @@
+{
+  "artifacts": [
+    {
+      "original": "engine/python/goal2rust_engine/goal2rust_engine.cpython-312-x86_64-linux-gnu.so",
+      "archive": ".cache/T06-artifacts/b62d34ee335958c2a4d06e258f0560356529ca555e59cc77c5f2bd8014059344/goal2rust_engine.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "b62d34ee335958c2a4d06e258f0560356529ca555e59cc77c5f2bd8014059344"
+    },
+    {
+      "original": ".venv-pypy/lib/pypy3.11/site-packages/goal2rust_engine/goal2rust_engine.pypy311-pp80-x86_64-linux-gnu.so",
+      "archive": ".cache/T06-artifacts/f26923229994a0acff89b71732ad4697dd6774498008b94338391b3bdae15faf/goal2rust_engine.pypy311-pp80-x86_64-linux-gnu.so",
+      "sha256": "f26923229994a0acff89b71732ad4697dd6774498008b94338391b3bdae15faf"
+    }
+  ]
+}

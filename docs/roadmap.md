@@ -82,6 +82,16 @@ across the two direction calls. Contract and unchanged per-subtree gates:
 Report the paired performance outcome and remaining entries; a small entry
 count can still represent many Python resumptions, and neither predicts speed.
 
+## 2b. T06: effective skill native tree
+
+Translate `0791:278A -> 1771:3A06` as a complete bounded prerequisite for
+later contest trees. Retain the caller's captured scalars across its guest call,
+consume the dispatcher's captured AX and reproduce the callee's distinct immediate
+frame writes and the source's inline keeper-membership bytes. Contract/gates:
+[tasks/T06.md](tasks/T06.md); proof and measured outcome in
+[out/T06](../out/T06/README.md). Keep the accepted pin and private-input rule;
+goal2's later table-policy exception is specific to goal2.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the
@@ -93,8 +103,8 @@ or replace it. T79's 699 equal completed matches prove the Python port, not Rust
 The owner runs the milestone review from a prompt naming the PR and requesting
 the full report as a PR comment and its URL. Goal2 adoption separately requires
 application fidelity, save/load, cancellation and native lifecycle/playtest.
-The hybrid Rust engine has not beaten PyPy (T05: 92.484 versus 49.243
-CPU seconds in the quiet pair; see out/T05/assessment.md).
+The hybrid Rust engine has not beaten PyPy (T06: 93.558 versus 46.582
+CPU seconds in the quiet pair; see out/T06/assessment.md).
 
 ## 4. Beyond the match engine
 

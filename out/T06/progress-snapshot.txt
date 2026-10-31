@@ -1,0 +1,15 @@
+"""Preserve and provisionally compare a completed prefix; full F40 remains required."""
+import hashlib,json,sys
+from pathlib import Path
+out=Path('out/T06');n=int(sys.argv[1]);source=out/'family-F40-rust-v1.jsonl'
+lines=source.read_bytes().splitlines(keepends=True)[:n];assert len(lines)==n
+path=out/f'family-progress-{n}-v1.jsonl'
+with path.open('xb') as f:f.write(b''.join(lines))
+sys.path[:0]=['.cache/goal2-archaeology/experiments/E036-match-port','.cache/goal2-archaeology/runtime']
+import compare as c
+cand=c.load(path);fam=c.families.discover()['F40'];p=c.candidate_display_profile(cand,True)
+ref=c.load(c.ROOT/(p['reference'] if p else fam.reference));expected={k:v for k,v in fam.expected().items() if k in cand}
+text,ok=c.check(ref,cand,expected,no_screen=True,image_sha256={m.id:m.image_sha256 for m in fam.matches},strict_display=p is not None)
+assert ok
+with (out/f'family-progress-{n}-v1.json').open('x') as f:json.dump(dict(source=source.name,source_lines=list(range(1,n+1)),sha256=hashlib.sha256(path.read_bytes()).hexdigest(),line_sha256=[hashlib.sha256(x).hexdigest() for x in lines],provisional_completed_subset_equal=True,full_F40_gate_pending=True,snapshot_script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()),f,indent=2)
+print(text[-1])
