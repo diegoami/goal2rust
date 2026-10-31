@@ -1,0 +1,29 @@
+"""Supplemental authored nested-native mapping error; immutable evidence source."""
+import hashlib,json,sys
+from pathlib import Path
+sys.path[:0]=['engine/python','.cache/goal2-archaeology/runtime','engine/tests']
+from test_nearest_ball import Oracle,PortMachine,exercise
+originals={cls:cls.far_call for cls in (Oracle,PortMachine)}
+rows=[]
+try:
+    for sp in [0x35,0x36]:
+        for cls in originals:
+            def far_call(self,target,args,ret,ss,old_sp,cls=cls):
+                return originals[cls](self,target,args,ret,0xffff,sp)
+            cls.far_call=far_call
+        for case in range(5):
+            for tapped in (False,True):
+                p,_=exercise(Oracle,case,tapped=tapped)
+                r,_=exercise(PortMachine,case,tapped=tapped)
+                assert p==r
+                if sp==0x35:
+                    assert p['error'] and p['error'][0]=='PortError'
+                    assert 'outside mapped range' in p['error'][1]
+                    assert len(p['frames'])==2
+                else:assert p['error'] is None and not p['frames']
+                rows.append(dict(sp=sp,case=case,tapped=tapped,equal=True,error=p['error'],frames=p['frames']))
+finally:
+    for cls,fn in originals.items():cls.far_call=fn
+with Path('out/T05/nested-error-v1.json').open('x') as f:
+    json.dump(dict(all_equal=True,cases=rows,source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()),f,indent=2)
+print('20 nested-frame error/control comparisons equal')

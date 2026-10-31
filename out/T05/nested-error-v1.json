@@ -1,0 +1,226 @@
+{
+  "all_equal": true,
+  "cases": [
+    {
+      "sp": 53,
+      "case": 0,
+      "tapped": false,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ],
+      "frames": [
+        "0791:2FB1 waiting on its call of 0791:2956 (returning to 0791:3013)",
+        "0791:2956 waiting on its call of 1771:3216 (returning to 0791:2968)"
+      ]
+    },
+    {
+      "sp": 53,
+      "case": 0,
+      "tapped": true,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ],
+      "frames": [
+        "0791:2FB1 waiting on its call of 0791:2956 (returning to 0791:3013)",
+        "0791:2956 waiting on its call of 1771:3216 (returning to 0791:2968)"
+      ]
+    },
+    {
+      "sp": 53,
+      "case": 1,
+      "tapped": false,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ],
+      "frames": [
+        "0791:2FB1 waiting on its call of 0791:2956 (returning to 0791:3013)",
+        "0791:2956 waiting on its call of 1771:3216 (returning to 0791:2968)"
+      ]
+    },
+    {
+      "sp": 53,
+      "case": 1,
+      "tapped": true,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ],
+      "frames": [
+        "0791:2FB1 waiting on its call of 0791:2956 (returning to 0791:3013)",
+        "0791:2956 waiting on its call of 1771:3216 (returning to 0791:2968)"
+      ]
+    },
+    {
+      "sp": 53,
+      "case": 2,
+      "tapped": false,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ],
+      "frames": [
+        "0791:2FB1 waiting on its call of 0791:2956 (returning to 0791:3013)",
+        "0791:2956 waiting on its call of 1771:3216 (returning to 0791:2968)"
+      ]
+    },
+    {
+      "sp": 53,
+      "case": 2,
+      "tapped": true,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ],
+      "frames": [
+        "0791:2FB1 waiting on its call of 0791:2956 (returning to 0791:3013)",
+        "0791:2956 waiting on its call of 1771:3216 (returning to 0791:2968)"
+      ]
+    },
+    {
+      "sp": 53,
+      "case": 3,
+      "tapped": false,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ],
+      "frames": [
+        "0791:2FB1 waiting on its call of 0791:2956 (returning to 0791:3013)",
+        "0791:2956 waiting on its call of 1771:3216 (returning to 0791:2968)"
+      ]
+    },
+    {
+      "sp": 53,
+      "case": 3,
+      "tapped": true,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ],
+      "frames": [
+        "0791:2FB1 waiting on its call of 0791:2956 (returning to 0791:3013)",
+        "0791:2956 waiting on its call of 1771:3216 (returning to 0791:2968)"
+      ]
+    },
+    {
+      "sp": 53,
+      "case": 4,
+      "tapped": false,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ],
+      "frames": [
+        "0791:2FB1 waiting on its call of 0791:2956 (returning to 0791:3013)",
+        "0791:2956 waiting on its call of 1771:3216 (returning to 0791:2968)"
+      ]
+    },
+    {
+      "sp": 53,
+      "case": 4,
+      "tapped": true,
+      "equal": true,
+      "error": [
+        "PortError",
+        "plain-memory read/write outside mapped range: 1114095+20"
+      ],
+      "frames": [
+        "0791:2FB1 waiting on its call of 0791:2956 (returning to 0791:3013)",
+        "0791:2956 waiting on its call of 1771:3216 (returning to 0791:2968)"
+      ]
+    },
+    {
+      "sp": 54,
+      "case": 0,
+      "tapped": false,
+      "equal": true,
+      "error": null,
+      "frames": []
+    },
+    {
+      "sp": 54,
+      "case": 0,
+      "tapped": true,
+      "equal": true,
+      "error": null,
+      "frames": []
+    },
+    {
+      "sp": 54,
+      "case": 1,
+      "tapped": false,
+      "equal": true,
+      "error": null,
+      "frames": []
+    },
+    {
+      "sp": 54,
+      "case": 1,
+      "tapped": true,
+      "equal": true,
+      "error": null,
+      "frames": []
+    },
+    {
+      "sp": 54,
+      "case": 2,
+      "tapped": false,
+      "equal": true,
+      "error": null,
+      "frames": []
+    },
+    {
+      "sp": 54,
+      "case": 2,
+      "tapped": true,
+      "equal": true,
+      "error": null,
+      "frames": []
+    },
+    {
+      "sp": 54,
+      "case": 3,
+      "tapped": false,
+      "equal": true,
+      "error": null,
+      "frames": []
+    },
+    {
+      "sp": 54,
+      "case": 3,
+      "tapped": true,
+      "equal": true,
+      "error": null,
+      "frames": []
+    },
+    {
+      "sp": 54,
+      "case": 4,
+      "tapped": false,
+      "equal": true,
+      "error": null,
+      "frames": []
+    },
+    {
+      "sp": 54,
+      "case": 4,
+      "tapped": true,
+      "equal": true,
+      "error": null,
+      "frames": []
+    }
+  ],
+  "source_sha256": "9ab1bd45494e59722521570aa45e0b0a8e0f074f713216fbe6cf218290bfd41f"
+}
