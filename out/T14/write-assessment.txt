@@ -1,0 +1,83 @@
+"""Render receipt-derived T14 prose only after accepted ledger exists."""
+import json,statistics
+from pathlib import Path
+o=Path('out/T14');load=lambda n:json.loads((o/(n+'.json')).read_text());v=load('validation-v1');p=load('performance-v1');assert v['pass_all'] and p['measurement_complete']
+r=p['median_ratio'];change=100*abs(1-r);direction='less' if r<1 else 'more';cpy=statistics.median(x['cpu_s']['python']/x['cpu_s']['candidate'] for x in p['rounds']);pypy=statistics.median(x['candidate_to_pypy'] for x in p['rounds'])
+table='\n'.join('| '+str(x['round'])+' | '+' | '.join(f"{x['cpu_s'][a]:.6f}" for a in ['baseline','candidate','python','pypy'])+f" | {x['candidate_to_baseline']:.9f} |" for x in p['rounds'])
+text=f'''# T14 player-update incremental port
+
+One complete caller motion.update_player0791:8AE9 now runs in Rust, finite11
+handlers+5 fixed calls/16 registered delegated boundaries. Captured frameBP,
+off/seg/LINEAR record+code addresses/localAX/kept versus live contents and
+conditional reads match source. Captured yieldAX is used after2CEC/2AD4/869F,
+not actual bank changes after capture. Fatigue returnsinteger0; normal returnNone
+leaves Sprite AX/DX. Exact immediate frame/stack/write/observer/flag/ABI and variant
+fallback; no callee/hardware implementation claim. Same2cbeb36f/private state-v2.
+
+21 native bodies/1,828,188 native guest entries,1,275,497 Python of3,103,685 total;
+75,781 moved. Partial port, not a code-completion percentage.
+
+## Every paired measurement
+
+Three quiet simultaneous savedT13/candidate/plainCPython/PyPy rounds, distinct
+physical cores/rotated assignment+launch/original guards. Every raw output agrees,
+every sample retained; all rounds faster:{p['all_rounds_improve']}. No arbitrary5%
+per-increment floor or broad workload claim.
+
+| Round | T13 CPU s | Candidate CPU s | CPython CPU s | PyPy CPU s | Candidate/T13 |
+| --- | --- | --- | --- | --- | --- |
+{table}
+
+Median **{r:.9f} = {change:.2f}% {direction} CPU** versus T13. Paired CPython speed
+**{cpy:.3f}x**, candidate/PyPy CPU **{pypy:.3f}x**.
+{'Still slower than PyPy.' if pypy>=1 else 'Faster on this reference fixture only, not a broad PyPy-win claim.'}
+Pilot0.99941269 was essentially tied and diagnostic only, not proof of gain.
+One host/fixture, no speculative explanation for sample variation or historical
+different-time absolute timing comparisons.
+
+## Fidelity and closure
+
+Public44 each CPython/PyPy, Rust11/GC20 pass.62,952 normal full-state comparisons
+across21 bodies,13,786 error cases and328 speaker observers agree; every scoped
+control caught. New2096 cases(8 actual RAM entries/500 authored/four tap-listener
+modes)/6720 errors, positive/all16 dispatch+return/target/6writes/value0/None/path
+coverage. Captured args/BP/state/code/SENT/kept versus live play/counter/fatigue/
+record contents/conditional rereads, linear64K crossing/farptr-span/basewrap,
+static-link/dead-stack/full waiting ABI/pause/direct done/variant/errors match.
+Controlled registered ABI bodies test caller only; actual admitted tests use actual
+source callees. First runtime build/private proof epoch pass, baseline fails only
+new native-coverage assertion; no runtime/test/source-binding fix or overwritten
+historical receipt. Existing previous failures remain preserved.
+
+Exact ordered831 events/result/records/full memory/553 stretches/full callback
+digest identical(158,092,780 IO observations).4 positive-denial lifecycle checks/
+11 Rust machines; strict ALL75/75/exact-sourceF40 40/40 identical,75-machine backend
+attestation/all21 bodies. Authoritative **validation-v1.json**, {len(v['evidence_sha256'])}
+recursive evidence files, post-exit-audit-v1.json and actual-host process-closure-
+v1.json. Supervisor exited/50 empty groups(36 canonical/12 timing/2pilot), full
+source/binary/input/baseline/archive/harness/prefix/proof/observer binding rehash.
+Actual T13 baseline .cache/T14-baseline/engine/candidate .cache/T14-artifacts, manifests.
+No original bytes/state/tables committed, oracle semantic fix or automatic review.
+Existing #6/A700/ref-121/owner-run engine milestone review and goal2 integration/
+save-load/cancellation/playtest remain separate. Live CI/merge/stop PR #35/
+checkpoint #1, no next task included.
+'''
+for a,b in [('update_player0791','update_player 0791'),('finite11','finite 11'),('after2CEC','after 2CEC'),('returnsinteger0','returns integer 0'),('returnNone','return None'),('Same2cb','Same 2cb'),('entries,1,','entries, 1,'),('of3,','of 3,'),('savedT13','saved T13'),('faster:','faster: '),('arbitrary5%','arbitrary 5%'),('Pilot0.','Pilot 0.'),('Public44','Public 44'),('Rust11/GC20 pass.62','Rust 11/GC20 pass. 62'),('across21','across 21'),('bodies,13,','bodies, 13,'),('and328','and 328'),('New2096','New 2096'),('cases(8','cases (8'),('all16','all 16'),('/6writes','/6 writes'),('ordered831','ordered 831'),('identical(158','identical (158'),(').4','). 4'),('identical,75','identical, 75'),('all21','all 21'),('groups(36','groups (36'),('/2pilot','/2 pilot')]:text=text.replace(a,b)
+(o/'assessment.md').write_text(text);q=o/'README.md';s=q.read_text();i=s.index('Task #34');q.write_text(s[:i]+'''## Validation complete
+
+Authoritative validation-v1.json/post-exit-audit-v1.json and actual-host process-
+closure-v1.json bind all current proof/measurements and empty groups. See
+assessment.md for every sample. No producer remains; live exact-head CI/merge/
+stop PR #35/checkpoint #1. Do not restart or overwrite completed receipts/baselines
+or reuse proof after runtime changes.
+
+'''+s[i:])
+Path('/tmp/T14-pr-final.md').write_text(f'''Port motion.update_player0791:8AE9, hottest remaining Python caller: finite11 handlers+5 fixed calls/16 registered delegated boundaries, immediate frame, captured BP/linear rec+code/localAX/kept versus live contents/conditional rereads, captured yieldAX versus actual bank, integer0 versusNone fatigue/normal finish, exact observers/stack/flags/ABI/variants. One complete caller, no callee/hardware claim;21 native bodies total,75,781 Python entries removed.
+
+All gates pass:44 public each CPython/PyPy,11 Rust/20 GC,62,952 normal full-state/13,786 errors/328 observers and caught controls; positive all-dispatch/return/write/branch/value/SENT/capture/mutation/ABI/pause proof; exact ordered831-event/full-memory/records/callback digest;4 sealed lifecycle/11-machine attests, strict ALL75/75/exact-sourceF40 40/40 identical/75-machine attestation. Final out/T14/validation-v1.json binds{len(v['evidence_sha256'])} evidence files and actual-host closure verifies50 groups empty. See assessment.md.
+
+Three quiet rotated four-arm rounds preserve every outcome:median candidate/T13 {r:.9f}, {change:.2f}% {direction} CPU; paired CPython speed {cpy:.3f}x, candidate/PyPy CPU {pypy:.3f}x. All round improvements:{p['all_rounds_improve']}; no arbitrary5% floor, exact-head CI before squash. Near-tied pilot retained/diagnostic only. First build/private epoch passes, no runtime fix. Same2cbeb36f/private state-v2, no original data/automatic review. Existing #6/A700/ref-121/engine review/adoption remain.
+
+Closes #34.
+''')
+print('Accepted T14 assessment/README/PR text rendered')

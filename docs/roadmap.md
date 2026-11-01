@@ -251,6 +251,16 @@ new caller/control/error/observer/ordered/lifecycle/ALL75/F40/profile/artifact
 closure,3 quiet rotated four-arm outcomes, no arbitrary5% floor; no callee/hardware
 implementation claim, same2cbeb36f/private state-v2, actual T13 baseline preserved.
 
+T14 accepted evidence: 21 native bodies, 1,828,188 native guest entries and
+1,275,497 remaining Python entries in the measured fixture. All three paired
+rounds improved; median CPU reduction versus T13 is 1.19%, with candidate/PyPy
+CPU 1.056x. Strict ALL75 and F40 comparisons pass. See the
+[assessment](../out/T14/assessment.md) and closed validation ledger.
+
+Upstream rechecked 2026-11-01: archaeology remains `2a411f5`; goal2 is now
+`51e70d3` (PR #494: CI/slow-runner infrastructure and job detachment fallback).
+These changes do not alter the accepted oracle or this translation contract.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the
