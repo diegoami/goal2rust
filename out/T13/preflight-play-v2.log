@@ -1,1 +1,7 @@
 START play-differential-v2 29296
+EXIT play-differential-v2 0
+START play-body-v2 29449
+EXIT play-body-v2 0
+START play-return-v2 29705
+EXIT play-return-v2 0
+Three canonical play proofs complete; supervisor can resume remaining jobs
