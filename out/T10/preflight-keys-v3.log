@@ -1,1 +1,7 @@
 START keys-differential-v3 3888
+EXIT keys-differential-v3 0
+START keys-body-v3 3933
+EXIT keys-body-v3 0
+START keys-return-v3 3974
+EXIT keys-return-v3 0
+Three canonical key proofs complete; supervisor can resume remaining jobs
