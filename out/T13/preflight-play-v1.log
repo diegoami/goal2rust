@@ -1,0 +1,7 @@
+START play-differential-v1 28500
+EXIT play-differential-v1 1
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T13/preflight-play.txt", line 12, in <module>
+    code=p.wait();append(dict(event='exit',name=name,pid=p.pid,code=code,time=time.time()));print('EXIT',name,code,flush=True);assert code==0,name
+                                                                                                                                      ^^^^^^^
+AssertionError: play-differential-v1

@@ -1,0 +1,13 @@
+"""Run the three canonical caller proofs first; supervisor resumes these receipts."""
+import fcntl,json,os,subprocess,time
+from pathlib import Path
+out=Path('out/T13');lock=Path('.cache/T13-supervisor.lock').open('a+');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB);lock.seek(0);lock.truncate();lock.write(str(os.getpid()));lock.flush()
+def append(row):
+ with (out/'jobs-v2.jsonl').open('a') as f:f.write(json.dumps(row)+'\n')
+for mutant,label in [(0,'differential'),(18,'body'),(19,'return')]:
+ name='play-'+label+'-v2';receipt=out/(name+'.json');assert not receipt.exists();command=[str(Path('.venv/bin/python').absolute()),'-u','-B','out/T13/play_differential_v2.py','--mutant',str(mutant),'--out',str(receipt)]
+ with (out/(name+'.log')).open('x') as log:
+  p=subprocess.Popen(command,env=dict(os.environ,PYTHONHASHSEED='0'),stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
+  append(dict(event='start',name=name,pid=p.pid,command=command,time=time.time()));print('START',name,p.pid,flush=True)
+  code=p.wait();append(dict(event='exit',name=name,pid=p.pid,code=code,time=time.time()));print('EXIT',name,code,flush=True);assert code==0,name
+print('Three canonical play proofs complete; supervisor can resume remaining jobs',flush=True)

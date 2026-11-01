@@ -1,0 +1,6 @@
+{
+  "reason": "Normal2096 and all attempted error comparisons equal, but all-errors mutation changed second nearest table to matching slot, bypassing point-query44C1/58A9 error sites. Coverage guard correctly rejected v1 before long campaign. V2 only disables optional state mutations in dedicated error probes; positive mutation matrix unchanged, all errors still must reach/agree. No production/test/binary edit.",
+  "production_changed": false,
+  "preserved_producer_sha256": "99f2b68ee448ed7b66910eb2977bc307b75b6f5a312fa4b0a72bd8fcacd1d6fb",
+  "source_unchanged": true
+}
