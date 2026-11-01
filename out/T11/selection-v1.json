@@ -1,0 +1,43 @@
+{
+  "profile_sha256": "d66bbfffcd69a754e59d13341f05ab234ae529ea3e76f65df4fbc57db8b86de9",
+  "oracle_source_sha256": "33b298ead7c58815b9463a39f14e0ba862c81a3af02d53cd5f6184b0f4d8da5e",
+  "selected": {
+    "body_self_s": 1.3732325470000002,
+    "cumulative_s": 12.494042955000001,
+    "function": "draw_ball_state",
+    "guest_entries": 79194,
+    "module": "display",
+    "native_entries": 0,
+    "python_calls_or_resumes": 100485,
+    "python_entries": 79194
+  },
+  "calls": [
+    {
+      "target": "0791:835F",
+      "ret": "0791:8FD4",
+      "far": true,
+      "argument_count": 2
+    },
+    {
+      "target": "23E4:08DF",
+      "ret": "0791:8F66",
+      "far": true,
+      "argument_count": 3
+    }
+  ],
+  "registered_delegates": [
+    "23E4:08DF",
+    "0791:835F",
+    "23E4:0279"
+  ],
+  "expected_native_bodies": 18,
+  "expected_native_entries": 1712715,
+  "expected_python_entries": 1390970,
+  "baseline": "57a7688501a29accbed0ecab605cb2edf7631bab",
+  "accepted": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+  "upstream": {
+    "archaeology": "2a411f50422ecd1f5d8cf96d05f1873e6257e684",
+    "goal2": "65c474592f7f752f22027053c5e0052e6b3b994e",
+    "assessment": "Goal2 PR490 CI scheduling/timeout and cancellation test changes do not alter selected engine semantics or this full-corpus contract."
+  }
+}

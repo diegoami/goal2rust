@@ -1,0 +1,18 @@
+"""Provisional strict prefix comparison; full unchanged ALL75/F40 CLI still required."""
+import hashlib,importlib.util,json,sys
+from pathlib import Path
+import evidence as e
+n=int(sys.argv[1]);out=e.BASE/'out/T11';path=out/f'family-progress-{n}-v1.jsonl';target=out/f'compare-progress-{n}-v1.json';assert not target.exists()
+p=e.ORACLE/'experiments/E036-match-port/compare.py';spec=importlib.util.spec_from_file_location('compare',p);c=importlib.util.module_from_spec(spec);spec.loader.exec_module(c)
+cand=c.load(path);assert len(cand)==n
+profile=c.candidate_display_profile(cand,True);chosen=c.families.select('ALL',c.families.discover());refs={};expected={};images={}
+for fam in chosen:
+ source=c.load(c.ROOT/(profile['reference'] if profile else fam.reference))
+ for mid,digest in fam.expected().items():
+  if mid in cand:expected[mid]=digest;refs[mid]=source[mid]
+ for match in fam.matches:
+  if match.id in cand:images[match.id]=match.image_sha256
+lines,ok=c.check(refs,cand,expected,'identical',True,images,strict_display=profile is not None);assert ok
+row=dict(provisional_subset=True,expected=n,pass_all=ok,full_ALL75_pending=True,lines=lines,candidate_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),comparator_sha256=hashlib.sha256(p.read_bytes()).hexdigest(),script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
+with target.open('x') as f:json.dump(row,f,indent=2)
+print('Provisional strict prefix',n,'equal; full ALL75/F40 pending')
