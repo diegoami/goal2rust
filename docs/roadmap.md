@@ -193,6 +193,19 @@ ledger: [out/T11/validation-v1.json](../out/T11/validation-v1.json), all samples
 scope: [assessment](../out/T11/assessment.md). Actual registered delegated callees,
 explicit positive success/branch coverage, no new hardware or callee implementation.
 
+## 2h. T12: watched match sweep caller
+
+Translate frame.watched_match_engine0791:9564, hottest remaining body after T11,
+3494 starts/451,658 calls or resumptions. One complete22-player sweep, immediate
+frame semantics, possession/holder/nested22-player logic, update/speaker/draw/key,
+quick exit/wait decrement.17 static SITES rows/14 registered callees preserved;
+no callee/hardware claim. Contract[tasks/T12.md](tasks/T12.md),
+[out/T12](../out/T12/README.md). Captured BP/slot/k/rec versus live frame-stop/
+SS/register/data semantics require explicit mutation/loop/site success coverage.
+Full existing18-body/new caller/control/observer/ordered/lifecycle/ALL75/F40/
+profile/artifact gates and three quiet rotated four-arm rounds, report all/no5%
+minimum. Same2cbeb36f/private state-v2 inputs; actual T11 baseline preserved.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the
