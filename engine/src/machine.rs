@@ -102,6 +102,7 @@ impl Port {
     }
 }
 enum NativeContinuation {
+    RunStep,
     PlayerSprite(crate::player_sprite::Phase,Option<crate::player_sprite::Saved>),
     AvailabilityStart,
     AvailabilityReturn,
@@ -848,6 +849,7 @@ impl MachineCore {
             frame.native = match address.extract::<String>()?.as_str() {
                 "0791:2956" => Some(NativeContinuation::AvailabilityStart),
                 "0791:278A" => Some(NativeContinuation::SkillStart),
+                "0791:8889" => Some(NativeContinuation::RunStep),
                 "0791:8537" => Some(NativeContinuation::PlayerSprite(crate::player_sprite::Phase::Start,None)),
                 "0791:8AE9" => Some(NativeContinuation::PlayerUpdate(crate::player_update::Phase::Start,None)),
                 "0791:57AC" => Some(NativeContinuation::Play(crate::play::Phase::Start)),
@@ -946,6 +948,11 @@ impl MachineCore {
         let mut completed_value = py.None();
         let result = (|| -> PyResult<Option<Py<PyAny>>> {
             match f.native.take().unwrap() {
+                NativeContinuation::RunStep=>{
+                    crate::run_step::run(&mut h,self.mutant)?;
+                    *self.native_calls.borrow_mut().entry("0791:8889".into()).or_insert(0)+=1;
+                    Ok(None)
+                }
                 NativeContinuation::PlayerSprite(phase,saved)=>{
                     let first=phase==crate::player_sprite::Phase::Start;
                     let reply=if matches!(phase,crate::player_sprite::Phase::Holder|crate::player_sprite::Phase::Keeper|crate::player_sprite::Phase::Intercept|crate::player_sprite::Phase::Direction){sent.extract::<u16>()?}else{0};

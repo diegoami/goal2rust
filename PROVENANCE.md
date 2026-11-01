@@ -186,3 +186,11 @@ out/T14/contract.md, actual T13 baseline bound out/T14/baseline-snapshot-v1.json
 and inline `record`, `cell`, `cell_mul`, `lo`, `regs` at the same accepted
 `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c` pin. Five guest callees remain delegated;
 variants stay Python. See docs/tasks/T15.md and out/T15/contract.md.
+
+## T16 player run step
+
+`engine/src/run_step.rs` translates `pilot.player_run_step` 0791:8889 and its
+inline `rand`, `coin`, `in_set`, `pitch_slot_side`, `attack_direction`,
+`is_keeper_slot`, `on_target`, `on_pitch`, `can_move` at accepted
+`2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`. No guest calls are introduced;
+variants stay Python. See docs/tasks/T16.md and out/T16/contract.md.

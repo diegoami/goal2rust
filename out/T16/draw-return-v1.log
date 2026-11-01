@@ -1,0 +1,8 @@
+denied: unicorn, .sav, .EXE, .DAT
+Real capture comparisons complete {'real': {'total': 96, 'equal': 96, 'expected_different': 0}}
+Authored inputs complete 100
+Authored inputs complete 200
+Authored inputs complete 300
+Authored inputs complete 400
+Authored inputs complete 500
+{"mutant": 13, "comparisons": {"real": {"total": 96, "equal": 96, "expected_different": 0}, "random-edge": {"total": 2000, "equal": 336, "expected_different": 1664}}, "paths": {"member_true": 86, "member_false": 914, "travel": 1332, "no_travel": 764, "no_guest_calls": 432, "glyph_low": 466, "glyph_high": 534}, "observer_mutations": {"arg_mutations": 376, "pointer_mutations": 334, "zf_mutations": 228, "ax_mutations": 304, "saved_bp_mutations": 376}, "error_comparisons": 0, "all_equal": false, "source_unchanged": true}
