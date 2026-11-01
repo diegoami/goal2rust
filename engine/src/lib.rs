@@ -26,3 +26,5 @@ pub mod sweep;
 pub mod play;
 
 pub mod player_update;
+
+pub mod player_sprite;

@@ -1,0 +1,36 @@
+{
+  "root": "0791:8537",
+  "module": "motion",
+  "function": "move_player_sprite",
+  "guest_entries": 75943,
+  "profile": "out/T14/profile-after-v1.json",
+  "call_sites": [
+    {
+      "target": "0791:2C29",
+      "ret_to": "0791:8610",
+      "far": true
+    },
+    {
+      "target": "0791:045D",
+      "ret_to": "0791:862D",
+      "far": false
+    },
+    {
+      "target": "0791:2EB8",
+      "ret_to": "0791:8640",
+      "far": true
+    },
+    {
+      "target": "0791:2BE5",
+      "ret_to": "0791:8660",
+      "far": true
+    },
+    {
+      "target": "0791:8F10",
+      "ret_to": "0791:8699",
+      "far": true
+    }
+  ],
+  "all_registered": true,
+  "source_pin": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c"
+}

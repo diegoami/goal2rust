@@ -1,0 +1,8 @@
+denied: unicorn, .sav, .EXE, .DAT
+Eight real RAM capture comparisons complete {'real': {'total': 96, 'equal': 0}}
+Authored inputs complete 100
+Authored inputs complete 200
+Authored inputs complete 300
+Authored inputs complete 400
+Authored inputs complete 500
+{"mutant": 11, "comparisons": {"real": {"total": 96, "equal": 0}, "random-edge": {"total": 2000, "equal": 0}}, "all_equal": false, "source_unchanged": true, "observer_mutations": {"loop_writes": 6288, "mutations": 2004, "return_mutations": 792, "saved_bp_mutations": 692, "copy_pointer_mutations": 24}}

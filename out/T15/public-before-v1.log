@@ -1,0 +1,26 @@
+test_errors_and_variants (test_player_sprite.PlayerSpriteTests.test_errors_and_variants) ... ok
+test_native_caller (test_player_sprite.PlayerSpriteTests.test_native_caller) ... FAIL
+test_positive_paths_and_mutations (test_player_sprite.PlayerSpriteTests.test_positive_paths_and_mutations) ... FAIL
+
+======================================================================
+FAIL: test_native_caller (test_player_sprite.PlayerSpriteTests.test_native_caller)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_player_sprite.py", line 102, in test_native_caller
+    p,_=exercise(Oracle,1);r,n=exercise(PortMachine,1);self.assertIsNone(p['error']);self.assertEqual(p,r);self.assertEqual(n.get(ROOT),1)
+                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_player_sprite.PlayerSpriteTests.test_positive_paths_and_mutations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_player_sprite.py", line 110, in test_positive_paths_and_mutations
+    self.assertTrue(set(RETURNS)<=visited);self.assertTrue(set(WRITE_SITES)<=writes,(set(WRITE_SITES)-writes));self.assertTrue(set(TARGETS)<=targets)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : {'0791:867F'}
+
+----------------------------------------------------------------------
+Ran 3 tests in 5.284s
+
+FAILED (failures=2)

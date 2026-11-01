@@ -1,0 +1,8 @@
+test_errors_and_variants (test_player_sprite.PlayerSpriteTests.test_errors_and_variants) ... ok
+test_native_caller (test_player_sprite.PlayerSpriteTests.test_native_caller) ... ok
+test_positive_paths_and_mutations (test_player_sprite.PlayerSpriteTests.test_positive_paths_and_mutations) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 4.931s
+
+OK

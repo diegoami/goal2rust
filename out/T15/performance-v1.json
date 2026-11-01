@@ -1,0 +1,587 @@
+{
+  "outputs_equal": true,
+  "incremental_port_no_magnitude_minimum": true,
+  "rounds": [
+    {
+      "round": 1,
+      "cpu_s": {
+        "baseline": 68.298595979,
+        "candidate": 65.62536200999999,
+        "python": 149.934164629,
+        "pypy": 60.896537722
+      },
+      "candidate_to_baseline": 0.9608596058135374,
+      "candidate_to_pypy": 1.0776534178279173
+    },
+    {
+      "round": 2,
+      "cpu_s": {
+        "baseline": 56.834864069000005,
+        "candidate": 54.180897598,
+        "python": 138.183820412,
+        "pypy": 52.044008420000004
+      },
+      "candidate_to_baseline": 0.9533039004407933,
+      "candidate_to_pypy": 1.0410592735431734
+    },
+    {
+      "round": 3,
+      "cpu_s": {
+        "baseline": 59.322740789,
+        "candidate": 58.35635707,
+        "python": 141.816364385,
+        "pypy": 56.204253707999996
+      },
+      "candidate_to_baseline": 0.983709725711473,
+      "candidate_to_pypy": 1.0382907559484893
+    }
+  ],
+  "ratios": [
+    0.9608596058135374,
+    0.9533039004407933,
+    0.983709725711473
+  ],
+  "median_ratio": 0.9608596058135374,
+  "all_rounds_improve": true,
+  "measurement_complete": true,
+  "quiet_observations": [
+    {
+      "round": 1,
+      "time": 1793562175.355306,
+      "load": [
+        2.62255859375,
+        3.0107421875,
+        3.068359375
+      ],
+      "quiet": 1
+    },
+    {
+      "round": 1,
+      "time": 1793562185.3555017,
+      "load": [
+        2.21875,
+        2.9111328125,
+        3.03515625
+      ],
+      "quiet": 2
+    },
+    {
+      "round": 1,
+      "time": 1793562195.3557138,
+      "load": [
+        1.87744140625,
+        2.81494140625,
+        3.001953125
+      ],
+      "quiet": 3
+    },
+    {
+      "round": 2,
+      "time": 1793562345.7063656,
+      "load": [
+        1.7041015625,
+        2.6474609375,
+        2.9296875
+      ],
+      "quiet": 1
+    },
+    {
+      "round": 2,
+      "time": 1793562355.7066278,
+      "load": [
+        1.44140625,
+        2.5595703125,
+        2.8974609375
+      ],
+      "quiet": 2
+    },
+    {
+      "round": 2,
+      "time": 1793562365.7069402,
+      "load": [
+        1.21923828125,
+        2.474609375,
+        2.8662109375
+      ],
+      "quiet": 3
+    },
+    {
+      "round": 3,
+      "time": 1793562504.260833,
+      "load": [
+        1.5595703125,
+        2.3369140625,
+        2.775390625
+      ],
+      "quiet": 1
+    },
+    {
+      "round": 3,
+      "time": 1793562514.2610443,
+      "load": [
+        1.3193359375,
+        2.25927734375,
+        2.7451171875
+      ],
+      "quiet": 2
+    },
+    {
+      "round": 3,
+      "time": 1793562524.2614436,
+      "load": [
+        1.1162109375,
+        2.1845703125,
+        2.71484375
+      ],
+      "quiet": 3
+    }
+  ],
+  "starts": [
+    {
+      "round": 1,
+      "arm": "baseline",
+      "pid": 55368,
+      "cpu": 0,
+      "time": 1793562195.357961,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T15/run_receipt.py",
+        "--backend",
+        "rust",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T15/cpu-baseline-r1-v1.json"
+      ]
+    },
+    {
+      "round": 1,
+      "arm": "candidate",
+      "pid": 55369,
+      "cpu": 2,
+      "time": 1793562195.358834,
+      "command": [
+        "taskset",
+        "-c",
+        "2",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T15/run_receipt.py",
+        "--backend",
+        "rust",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T15/cpu-candidate-r1-v1.json"
+      ]
+    },
+    {
+      "round": 1,
+      "arm": "python",
+      "pid": 55370,
+      "cpu": 4,
+      "time": 1793562195.3593829,
+      "command": [
+        "taskset",
+        "-c",
+        "4",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T15/run_receipt.py",
+        "--backend",
+        "python",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T15/cpu-python-r1-v1.json"
+      ]
+    },
+    {
+      "round": 1,
+      "arm": "pypy",
+      "pid": 55371,
+      "cpu": 6,
+      "time": 1793562195.3599684,
+      "command": [
+        "taskset",
+        "-c",
+        "6",
+        "/home/diego/projects/goal2rust/.venv-pypy/bin/python",
+        "-B",
+        "out/T15/run_receipt.py",
+        "--backend",
+        "python",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T15/cpu-pypy-r1-v1.json"
+      ]
+    },
+    {
+      "round": 2,
+      "arm": "candidate",
+      "pid": 55741,
+      "cpu": 0,
+      "time": 1793562365.7076926,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T15/run_receipt.py",
+        "--backend",
+        "rust",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T15/cpu-candidate-r2-v1.json"
+      ]
+    },
+    {
+      "round": 2,
+      "arm": "baseline",
+      "pid": 55742,
+      "cpu": 2,
+      "time": 1793562365.7082865,
+      "command": [
+        "taskset",
+        "-c",
+        "2",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T15/run_receipt.py",
+        "--backend",
+        "rust",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T15/cpu-baseline-r2-v1.json"
+      ]
+    },
+    {
+      "round": 2,
+      "arm": "pypy",
+      "pid": 55743,
+      "cpu": 4,
+      "time": 1793562365.7089305,
+      "command": [
+        "taskset",
+        "-c",
+        "4",
+        "/home/diego/projects/goal2rust/.venv-pypy/bin/python",
+        "-B",
+        "out/T15/run_receipt.py",
+        "--backend",
+        "python",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T15/cpu-pypy-r2-v1.json"
+      ]
+    },
+    {
+      "round": 2,
+      "arm": "python",
+      "pid": 55744,
+      "cpu": 6,
+      "time": 1793562365.7100487,
+      "command": [
+        "taskset",
+        "-c",
+        "6",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T15/run_receipt.py",
+        "--backend",
+        "python",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T15/cpu-python-r2-v1.json"
+      ]
+    },
+    {
+      "round": 3,
+      "arm": "baseline",
+      "pid": 56024,
+      "cpu": 0,
+      "time": 1793562524.262193,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T15/run_receipt.py",
+        "--backend",
+        "rust",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T15/cpu-baseline-r3-v1.json"
+      ]
+    },
+    {
+      "round": 3,
+      "arm": "candidate",
+      "pid": 56025,
+      "cpu": 2,
+      "time": 1793562524.262903,
+      "command": [
+        "taskset",
+        "-c",
+        "2",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T15/run_receipt.py",
+        "--backend",
+        "rust",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T15/cpu-candidate-r3-v1.json"
+      ]
+    },
+    {
+      "round": 3,
+      "arm": "python",
+      "pid": 56026,
+      "cpu": 4,
+      "time": 1793562524.2635334,
+      "command": [
+        "taskset",
+        "-c",
+        "4",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T15/run_receipt.py",
+        "--backend",
+        "python",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T15/cpu-python-r3-v1.json"
+      ]
+    },
+    {
+      "round": 3,
+      "arm": "pypy",
+      "pid": 56027,
+      "cpu": 6,
+      "time": 1793562524.264042,
+      "command": [
+        "taskset",
+        "-c",
+        "6",
+        "/home/diego/projects/goal2rust/.venv-pypy/bin/python",
+        "-B",
+        "out/T15/run_receipt.py",
+        "--backend",
+        "python",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T15/cpu-pypy-r3-v1.json"
+      ]
+    }
+  ],
+  "exits": [
+    {
+      "round": 1,
+      "arm": "baseline",
+      "pid": 55368,
+      "code": 0,
+      "time": 1793562265.630341
+    },
+    {
+      "round": 1,
+      "arm": "candidate",
+      "pid": 55369,
+      "code": 0,
+      "time": 1793562265.6303706
+    },
+    {
+      "round": 1,
+      "arm": "python",
+      "pid": 55370,
+      "code": 0,
+      "time": 1793562345.705665
+    },
+    {
+      "round": 1,
+      "arm": "pypy",
+      "pid": 55371,
+      "code": 0,
+      "time": 1793562345.7056882
+    },
+    {
+      "round": 2,
+      "arm": "candidate",
+      "pid": 55741,
+      "code": 0,
+      "time": 1793562420.2503603
+    },
+    {
+      "round": 2,
+      "arm": "baseline",
+      "pid": 55742,
+      "code": 0,
+      "time": 1793562422.9103196
+    },
+    {
+      "round": 2,
+      "arm": "pypy",
+      "pid": 55743,
+      "code": 0,
+      "time": 1793562422.9103491
+    },
+    {
+      "round": 2,
+      "arm": "python",
+      "pid": 55744,
+      "code": 0,
+      "time": 1793562504.2600524
+    },
+    {
+      "round": 3,
+      "arm": "baseline",
+      "pid": 56024,
+      "code": 0,
+      "time": 1793562584.0511436
+    },
+    {
+      "round": 3,
+      "arm": "candidate",
+      "pid": 56025,
+      "code": 0,
+      "time": 1793562584.0511734
+    },
+    {
+      "round": 3,
+      "arm": "python",
+      "pid": 56026,
+      "code": 0,
+      "time": 1793562666.4209056
+    },
+    {
+      "round": 3,
+      "arm": "pypy",
+      "pid": 56027,
+      "code": 0,
+      "time": 1793562666.420933
+    }
+  ],
+  "topology": {
+    "0": {
+      "package": "0",
+      "core": "0",
+      "siblings": "0-1"
+    },
+    "1": {
+      "package": "0",
+      "core": "0",
+      "siblings": "0-1"
+    },
+    "2": {
+      "package": "0",
+      "core": "1",
+      "siblings": "2-3"
+    },
+    "3": {
+      "package": "0",
+      "core": "1",
+      "siblings": "2-3"
+    },
+    "4": {
+      "package": "0",
+      "core": "2",
+      "siblings": "4-5"
+    },
+    "5": {
+      "package": "0",
+      "core": "2",
+      "siblings": "4-5"
+    },
+    "6": {
+      "package": "0",
+      "core": "3",
+      "siblings": "6-7"
+    },
+    "7": {
+      "package": "0",
+      "core": "3",
+      "siblings": "6-7"
+    },
+    "8": {
+      "package": "0",
+      "core": "4",
+      "siblings": "8-9"
+    },
+    "9": {
+      "package": "0",
+      "core": "4",
+      "siblings": "8-9"
+    },
+    "10": {
+      "package": "0",
+      "core": "5",
+      "siblings": "10-11"
+    },
+    "11": {
+      "package": "0",
+      "core": "5",
+      "siblings": "10-11"
+    },
+    "12": {
+      "package": "0",
+      "core": "6",
+      "siblings": "12-13"
+    },
+    "13": {
+      "package": "0",
+      "core": "6",
+      "siblings": "12-13"
+    },
+    "14": {
+      "package": "0",
+      "core": "7",
+      "siblings": "14-15"
+    },
+    "15": {
+      "package": "0",
+      "core": "7",
+      "siblings": "14-15"
+    },
+    "16": {
+      "package": "0",
+      "core": "8",
+      "siblings": "16-17"
+    },
+    "17": {
+      "package": "0",
+      "core": "8",
+      "siblings": "16-17"
+    },
+    "18": {
+      "package": "0",
+      "core": "9",
+      "siblings": "18-19"
+    },
+    "19": {
+      "package": "0",
+      "core": "9",
+      "siblings": "18-19"
+    }
+  },
+  "selected_physical_cores": [
+    0,
+    2,
+    4,
+    6
+  ]
+}
