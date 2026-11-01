@@ -5,6 +5,39 @@ oracle and evidence, profile the Rust machine, then translate complete hot call
 trees. This follows the owner's approval of the upstream assessment. T02 is
 complete; its historical receipts and Done-when remain unchanged.
 
+## Current plan after T16: complete native chunks
+
+[owner-approved recalibration] T03-T16 are historical accepted increments. The
+next default work unit is a complete bounded native execution tree with its
+remaining Python callees. Keep individual proofs, then validate the whole frozen
+bundle in one full campaign. See [chunk policy](porting-chunks.md).
+
+1. **T17, planned:** [complete marking-target subtree](tasks/T17.md): 47C5, 4438,
+   2996, 2C54 and 214B:06B1 together, with existing native boundaries. Expected
+   28 native bodies on the unchanged fixture, subject to proof/profile confirmation.
+2. **Re-profile and choose the next closed tree:** likely destination/positioning
+   and remaining geometry/random dependencies. Do not treat the entire module as
+   one task without an inventory, or choose another isolated caller by self time alone.
+3. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
+   dominant, define a separate optimization task. A larger PR alone does not remove
+   every Python boundary or common dispatch cost.
+4. **Engine milestone and application adoption:** retain the larger A700 corpus,
+   known ref-121 noncompletion and owner review, then worker/save-load/cancellation/
+   playtest and representative performance gates. PyPy remains goal2's baseline.
+5. **Whole game later:** tournament, board and career initialization still have
+   original-game dependencies; a native match subtree does not remove those gates.
+
+Current coverage is **23/422 registered non-stub bodies (5.45%)**, while **63.79%**
+of guest entries on the reference fixture are native. Neither is source-line,
+CPU-time or test coverage; no global line/branch percentage is currently reported.
+Use [the planning snapshot](plans/post-T16-baseline.json) and
+[same-campaign performance reporting](performance-reporting.md). Every new summary
+shows saved-baseline/PyPy and candidate/PyPy together, not historical gaps as a trend.
+
+No runtime work or T17 producer starts as part of this planning change. Historical
+task contracts and receipts below remain intact. No calendar completion date or
+unmeasured PyPy speed promise is inferred from these coverage counts.
+
 ## 1. T03: sealed-engine compatibility
 
 Archaeology PRs #627 (sealed family) and #628 (handover) merged with passing
@@ -314,6 +347,14 @@ to `0ea62a7` ([PR #499](https://github.com/diegoami/goal2/pull/499)), reporting
 completed and still-running test modules promptly. This changes test reporting,
 not the accepted oracle or worker API; no roadmap change. No next task included.
 
+## 2n. T17: complete marking-target subtree (planned)
+
+The owner-approved larger-chunk plan is [T17](tasks/T17.md): port all five remaining
+Python bodies of the 47C5 marking-target subtree together. Most other callees are
+already native. Per-body proofs remain, but the full campaign runs once for the
+combined frozen artifact, with actual integrated callee and scoped closure proof.
+No implementation or experiment has started; live status stays in checkpoint #1.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the
@@ -328,6 +369,16 @@ application fidelity, save/load, cancellation and native lifecycle/playtest.
 The hybrid Rust engine has not beaten PyPy. T08 demonstrates a 26.73% median
 CPU reduction against the preserved hybrid baseline in three simultaneous rounds;
 the candidate still uses about 1.46x PyPy CPU (out/T08/assessment.md).
+
+Post-T16 upstream check: goal2 is now `1d274622` (archaeology remains `2a411f5`).
+[PR #502](https://github.com/diegoami/goal2/pull/502) moves engine tests into PyPy
+child processes; [PR #504](https://github.com/diegoami/goal2/pull/504) retries transient
+half-time IPC read refusals. Preserve those worker/test contracts during later
+Rust integration. Upstream T147 now plans a portable Windows folder with CPython
+3.13 UI and PyPy 3.11 workers; T153 imports the owner's private data for playtesting.
+These plans can proceed independently of Rust. They do not establish original-free
+whole-game distribution or change this port's accepted pin/private-data policy.
+See [adoption details](porting-chunks.md#performance-reporting-and-adoption).
 
 ## 4. Beyond the match engine
 

@@ -17,6 +17,16 @@ use the task's explicit performance criteria. T09 is owner-approved with all
 three rounds faster and a 4.28% median CPU gain. T08's historical optimization
 gate is unchanged. See [incremental acceptance](docs/porting-acceptance.md).
 
+[owner-approved, after T16] Plan work as complete bounded native call trees,
+including their remaining Python callees, rather than one routine per full
+campaign. Keep per-body and integrated proofs; run the full required campaign
+once for the combined frozen artifact. T17 is the five-body marking-target
+closure. Report routine counts and fixture entry frequency separately from
+unmeasured source-line/test coverage, and show saved-baseline/PyPy and
+candidate/PyPy from the same campaign together. No fidelity gate or historical
+receipt is weakened. See [chunk policy](docs/porting-chunks.md) and
+[performance reporting](docs/performance-reporting.md).
+
 ## Sources and the oracle
 
 [designed: owner, 2026-10-30] Follow `docs/roadmap.md`: adopt archaeology's

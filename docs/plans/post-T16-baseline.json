@@ -1,0 +1,205 @@
+{
+  "planning_only": true,
+  "accepted_main": "b3ad14188454ef200b7cfa06500227b0de0a5723",
+  "accepted_oracle": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+  "upstream_heads": {
+    "archaeology": "2a411f50422ecd1f5d8cf96d05f1873e6257e684",
+    "goal2": "1d274622c85054e595a8d0da11925d8780d4b148"
+  },
+  "sources": {
+    "out/T16/profile-after-v1.json": "9378d897b8ccae9974eb56570e4d6719444fc85860d4adcb431f9c83a241d335",
+    "out/T16/performance-v1.json": "ab0091eeac4228f5bd9a07b771348826c10eb26ad13e66dda1f906d42d4767b1"
+  },
+  "coverage": {
+    "registered_nonstub_bodies": 422,
+    "executed_bodies": 343,
+    "native_bodies": 23,
+    "routine_count_percent": 5.450236966824645,
+    "fixture_total_guest_entries": 3103685,
+    "fixture_native_entries": 1979912,
+    "fixture_python_entries": 1123773,
+    "fixture_native_entry_percent": 63.79229850967479,
+    "ported_source_line_share": null,
+    "global_test_line_branch_coverage": null,
+    "note": "Routine counts are not LOC coverage; fixture entry frequency is not CPU share or exact FFI transitions."
+  },
+  "t17": {
+    "root": "0791:47C5",
+    "new_bodies": [
+      {
+        "address": "0791:47C5",
+        "name": "choose_marking_target",
+        "ret": "ret 2",
+        "pop": 2,
+        "fixture_entries": 16410
+      },
+      {
+        "address": "0791:4438",
+        "name": "near_post_zone",
+        "ret": "retf 6",
+        "pop": 6,
+        "fixture_entries": 30586
+      },
+      {
+        "address": "0791:2996",
+        "name": "ball_holder_is_side0",
+        "ret": "ret",
+        "pop": 0,
+        "fixture_entries": 40543
+      },
+      {
+        "address": "0791:2C54",
+        "name": "in_own_half",
+        "ret": "retf 4",
+        "pop": 4,
+        "fixture_entries": 16847
+      },
+      {
+        "address": "214B:06B1",
+        "name": "random_n",
+        "ret": "retf 2",
+        "pop": 2,
+        "fixture_entries": 45266
+      }
+    ],
+    "existing_native_boundaries": [
+      "1771:3216",
+      "0791:278A",
+      "1771:3A06",
+      "0791:2BE5"
+    ],
+    "guest_sites": [
+      {
+        "caller": "0791:47C5",
+        "target": "0791:2996",
+        "ret_to": "0791:47CE",
+        "far": false
+      },
+      {
+        "caller": "0791:47C5",
+        "target": "0791:2996",
+        "ret_to": "0791:47EF",
+        "far": false
+      },
+      {
+        "caller": "0791:47C5",
+        "target": "1771:3216",
+        "ret_to": "0791:485D",
+        "far": true
+      },
+      {
+        "caller": "0791:47C5",
+        "target": "0791:4438",
+        "ret_to": "0791:4888",
+        "far": true
+      },
+      {
+        "caller": "0791:47C5",
+        "target": "1771:3216",
+        "ret_to": "0791:48E2",
+        "far": true
+      },
+      {
+        "caller": "0791:47C5",
+        "target": "0791:2C54",
+        "ret_to": "0791:4930",
+        "far": true
+      },
+      {
+        "caller": "0791:47C5",
+        "target": "0791:278A",
+        "ret_to": "0791:494D",
+        "far": true
+      },
+      {
+        "caller": "0791:47C5",
+        "target": "0791:278A",
+        "ret_to": "0791:496A",
+        "far": true
+      },
+      {
+        "caller": "0791:47C5",
+        "target": "0791:278A",
+        "ret_to": "0791:4980",
+        "far": true
+      },
+      {
+        "caller": "0791:47C5",
+        "target": "0791:278A",
+        "ret_to": "0791:499D",
+        "far": true
+      },
+      {
+        "caller": "0791:47C5",
+        "target": "214B:06B1",
+        "ret_to": "0791:49B2",
+        "far": true
+      },
+      {
+        "caller": "0791:47C5",
+        "target": "0791:2BE5",
+        "ret_to": "0791:49C0",
+        "far": true
+      },
+      {
+        "caller": "0791:4438",
+        "target": "0791:2BE5",
+        "ret_to": "0791:4493",
+        "far": true
+      }
+    ],
+    "predicted_new_native_entries": 149652,
+    "predicted_native_bodies": 28,
+    "predicted_native_entries": 2129564,
+    "predicted_python_entries": 974121,
+    "prediction_note": "Unchanged fixture prediction only; no speed forecast or substitute for the next full profile.",
+    "issue": "https://github.com/diegoami/goal2rust/issues/41"
+  },
+  "performance_example": {
+    "campaign": "T16",
+    "baseline": "saved T15",
+    "candidate": "T16",
+    "rounds": [
+      {
+        "round": 1,
+        "cpu_s": {
+          "baseline": 57.634324872,
+          "candidate": 54.399139269,
+          "python": 136.981813583,
+          "pypy": 50.360429592
+        },
+        "baseline_to_pypy": 1.1444367202371024,
+        "candidate_to_pypy": 1.0801960926409884,
+        "candidate_to_baseline": 0.9438670339214519
+      },
+      {
+        "round": 2,
+        "cpu_s": {
+          "baseline": 52.135411627,
+          "candidate": 50.769203296,
+          "python": 134.600599593,
+          "pypy": 47.334061246
+        },
+        "baseline_to_pypy": 1.101435419962105,
+        "candidate_to_pypy": 1.0725723075429174,
+        "candidate_to_baseline": 0.9737950025066558
+      },
+      {
+        "round": 3,
+        "cpu_s": {
+          "baseline": 53.854224925000004,
+          "candidate": 51.143519403999996,
+          "python": 134.34023857300002,
+          "pypy": 47.857347589
+        },
+        "baseline_to_pypy": 1.125307348570617,
+        "candidate_to_pypy": 1.0686659829797027,
+        "candidate_to_baseline": 0.9496658706949164
+      }
+    ],
+    "median_baseline_to_pypy": 1.125307348570617,
+    "median_candidate_to_pypy": 1.0725723075429174,
+    "median_candidate_to_baseline": 0.9496658706949164,
+    "note": "Median of per-round ratios; do not divide independent medians or compare historical standalone gaps as a trend."
+  }
+}
