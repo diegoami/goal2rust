@@ -1,0 +1,90 @@
+"""Supplemental immutable audit after fidelity/performance writers exit."""
+import hashlib,json,subprocess,sys
+from pathlib import Path
+sys.path.insert(0,'out/T11')
+import evidence as e
+e.verify();before=e.hashes();out=e.BASE/'out/T11';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();load=lambda n:json.loads((out/(n+'.json')).read_text())
+r=load('process-closure-v1');assert r['pass_all'] and r['supervisor_exited'] and len(r['groups'])==41 and all(x['empty'] for x in r['groups'])
+assert r['script_sha256']==sha(out/'process-closure.txt')
+for path,h in load('baseline-snapshot-v1')['source_and_binary_sha256'].items():assert sha(e.BASE/path)==h
+for stage in ['T07','T08','T09','T10','T11']:
+ for r in json.loads((e.BASE/'out'/stage/'artifact-archive-v1.json').read_text())['artifacts']:
+  assert sha(e.BASE/r['archive'])==r['sha256']
+  if stage=='T11':assert sha(e.BASE/r['original'])==r['sha256']
+for name in ['public-cpython-v1.log','public-pypy-v1.log']:
+ s=(out/name).read_text();assert 'Ran 35 tests' in s and s.rstrip().endswith('OK')
+assert 'running 11 tests' in (out/'cargo-v1.log').read_text()
+gc=load('gc-parity-v1');assert gc['pass_all'] and len(gc['cases'])==20 and gc['source_sha256']==sha(out/'gc-parity.txt')
+for name in ['pilot-baseline-v1','pilot-candidate-v1']:
+ r=load(name);assert r['source_unchanged']
+ for path,h in r['source_sha256'].items():assert sha(e.BASE/path)==h,(name,path)
+assert load('pilot-assessment-v1')['outputs_equal']
+harness={}
+for p in sorted((e.ORACLE/'experiments/E036-match-port').glob('*.py'))+[e.ORACLE/'tests/test_port_seal.py']:
+ rel=str(p.relative_to(e.ORACLE));blob=subprocess.check_output(['git','show',e.PIN+':'+rel],cwd=e.ORACLE);assert hashlib.sha256(blob).hexdigest()==sha(p);harness[rel]=sha(p)
+lines=(out/'family-ALL-rust-v1.jsonl').read_bytes().splitlines(keepends=True);prefixes=[]
+for p in sorted(out.glob('family-progress-*-v1.json')):
+ r=json.loads(p.read_text());n=len(r['source_lines']);snapshot=p.with_suffix('.jsonl')
+ assert snapshot.read_bytes()==b''.join(lines[:n]) and sha(snapshot)==r['sha256']
+ assert [hashlib.sha256(x).hexdigest() for x in lines[:n]]==r['line_sha256']
+ assert sha(out/'progress-snapshot.txt')==r['snapshot_script_sha256'];prefixes.append(n)
+assert len(prefixes)>=3
+for n in prefixes:
+ r=load(f'compare-progress-{n}-v1');assert r['pass_all'] and r['provisional_subset'] and r['full_ALL75_pending'] and r['expected']==n
+ assert r['candidate_sha256']==sha(out/f'family-progress-{n}-v1.jsonl') and r['script_sha256']==sha(out/'compare-progress.txt')
+ assert r['comparator_sha256']==sha(e.ORACLE/'experiments/E036-match-port/compare.py')
+for suite,count in [('availability',3224),('ball',2128),('skill',6224)]:
+ r=load(suite+'-differential-v1');assert sum(v['total'] for v in r['comparisons'].values())==count and all(v['equal']==v['total'] for v in r['comparisons'].values())
+ assert all(v['equal']==0 for v in load(suite+'-body-v1')['comparisons'].values())
+ r=load(suite+'-return-v1');root={'availability':'0791:2956','ball':None,'skill':'0791:278A'}[suite]
+ for kind,v in r['comparisons'].items():assert v['equal']==(0 if root is None or kind.endswith(root) else v['total'])
+assert load('skill-differential-v1')['callback_mutations']==dict(saved=400,sent=144)
+for label in ['differential','body','root-return','seed-return']:
+ r=load('speaker-'+label+'-v1');assert r['control_scope_verified'] and all(v==8 for v in r['captures'].values())
+ assert sum(v['total'] for v in r['comparisons'].values())==12448
+ assert all(v['equal']==v['total']-v['expected_different'] for v in r['comparisons'].values())
+ if label=='body':assert all(v['equal']==0 for v in r['comparisons'].values())
+ assert r['callback_mutations']['seed_writes']>0 and r['callback_mutations']['stack_mutations']>0
+attested_native_bodies={}
+for label in ['check','family-ALL']:
+ ar=[json.loads(p.read_text()) for p in (out/f'attest-{label}-v1').glob('*.json')]
+ addresses={ad for r in ar for ad,count in r['native_calls'].items() if count>0}
+ assert len(addresses)==18 and '0791:8F10' in addresses and '0791:9372' in addresses and {'0791:94E8','0791:94C9','214B:0688','214B:1E8D'}<=addresses
+ attested_native_bodies[label]=sorted(addresses)
+r=load('observer-matrix-v2');assert r['pass_all'] and r['error_comparisons']==252 and len(r['variants'])==16 and len(r['live_return_store_observers'])==60
+assert all(r['errors_seen'].values()) and r['script_sha256']==sha(out/'observer-matrix-v2.txt')
+for path,h in r['source_sha256'].items():assert sha(e.BASE/path)==h
+r=load('selection-v1');assert len(r['calls'])==2 and len(r['registered_delegates'])==3
+r=json.loads((e.BASE/'out/T09/rejected-descriptor-v1.json').read_text())
+for entry in r['source'].values():assert sha(e.BASE/entry['preserved'])==entry['sha256']
+r=json.loads((e.BASE/'out/T09/rejected-artifact-v1.json').read_text());assert sha(e.BASE/r['archive'])==r['sha256']
+for label in ['differential','body','return']:
+ r=load('keys-'+label+'-v1');assert r['source_unchanged'] and r['captures']==8 and sum(v['total'] for v in r['comparisons'].values())==2096
+ assert len(r['visited_return_sites'])==15 and len(r['delegated_targets_seen'])==12
+ assert all(r['observer_mutations'][k]>0 for k in ['mutations','return_mutations','saved_bp_mutations','copy_pointer_mutations'])
+ assert r['all_equal']==(label=='differential')
+ if label=='differential':assert r['error_comparisons']==1066 and all(r['errors_seen'].values())
+ else:assert all(v['equal']==0 for v in r['comparisons'].values())
+for label in ['differential','body','return']:
+ r=load('draw-'+label+'-v1');assert r['source_unchanged'] and r['captures']==8 and sum(v['total'] for v in r['comparisons'].values())==2096
+ assert len(r['return_sites_seen'])==2 and len(r['write_sites_seen'])==4 and len(r['delegated_targets_seen'])==3
+ assert all(r['paths'].values()) and all(r['observer_mutations'].values())
+ assert all(v['equal']==v['total']-v['expected_different'] for v in r['comparisons'].values())
+ assert r['all_equal']==(label=='differential')
+ if label=='differential':assert r['error_comparisons']==352 and all(r['errors_seen'].values())
+ if label=='body':assert all(v['equal']==0 for v in r['comparisons'].values())
+p=load('profile-after-v1');assert len(p['routines'])==422
+assert sum(v['native_entries']>0 for v in p['routines'].values())==18
+perf=load('performance-v1');assert perf['measurement_complete'] and len(perf['rounds'])==3
+for r in perf['starts']:
+ p=load(f"cpu-{r['arm']}-r{r['round']}-v1")
+ assert p['arm']==('baseline' if r['arm']=='baseline' else 'candidate' if r['arm']=='candidate' else 'plain')
+ old=load('pilot-baseline-v1')
+ if r['arm']=='baseline':
+  for k,h in old['source_sha256'].items():
+   if k.startswith('.cache/T11-baseline/engine/'):assert p['source_sha256'][k]==h
+report=dict(pass_all=True,public_tests_each=35,rust_tests=11,gc_cases=20,differential_comparisons=56664,
+            attested_native_bodies=attested_native_bodies,pristine_harness_sha256=harness,progress_prefixes_verified=prefixes,supplemental_observer_comparisons=328,keys_error_comparisons=1066,draw_error_comparisons=352,performance_rounds=3,
+            performance_median_ratio=perf['median_ratio'],baseline_snapshot_verified=True,
+            audit_source_sha256=sha(Path(__file__)))
+e.write(out/'post-exit-audit-v1.json',report,before);print('Supplemental baseline/source/archive/GC/proof/performance audit passes')

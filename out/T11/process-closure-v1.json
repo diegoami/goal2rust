@@ -1,0 +1,258 @@
+{
+  "pass_all": true,
+  "node": "IT13",
+  "time_utc": "2026-11-01T10:00:09Z",
+  "supervisor_pid": 10496,
+  "supervisor_exited": true,
+  "groups": [
+    {
+      "kind": "canonical",
+      "pid": 10242,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 10310,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 10336,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 10519,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 10520,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 10521,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 10522,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 10828,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 10888,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 10934,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 10984,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 11036,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 11170,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 11274,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 11390,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 11448,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 11510,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 11564,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 11609,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 11654,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 11691,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 11730,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 11778,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 11815,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 11851,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 11930,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 12475,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 12479,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 12480,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 12481,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 12482,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 12798,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 12799,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 12800,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 12801,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 12923,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 12924,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 12925,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 12926,
+      "empty": true
+    },
+    {
+      "kind": "pilot",
+      "pid": 10406,
+      "empty": true
+    },
+    {
+      "kind": "pilot",
+      "pid": 10407,
+      "empty": true
+    }
+  ],
+  "canonical_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "timing_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "script_sha256": "63ce0ab1ca488cfc8235e4c6bcc7cd15205ea9eb3b85fd9b0e81b283c70e0db4"
+}

@@ -132,3 +132,16 @@ not newly translated bodies. Fresh actual-AX reads, pending stack bytes, capture
 short-lived arguments and live pointer reloads follow the source. Nondefault
 variants use Python. Contract: out/T10/contract.md; preserved actual T09 baseline
 source/adapter/extension: out/T10/baseline-snapshot-v1.json.
+
+## T11 ball draw-state caller
+
+Translation pin:`2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`(state/2).
+`port/display.py` `draw_ball_state` **0791:8F10**(retf4) and its inline `grid_cell`
+helper are reproduced in `engine/src/ball_draw.rs` and `machine.rs` continuations.
+Record segment/offset remain captured across membership/travel calls; grid tables,
+coordinates and post-return ZF/AX remain live. Signed-byte coordinates use unsigned
+word MUL exactly as the Python helper, including highDX and unchanged flags.
+Registered23E4:08DF and0791:835F, plus nested23E4:0279, remain delegated source
+bodies with observable ABI/frames. No hardware or transitive-callee claim. Default
+variant only; others stay Python. Full contract:out/T11/contract.md, preserved
+actual T10 source/adapter/extension:out/T11/baseline-snapshot-v1.json.

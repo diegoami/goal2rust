@@ -107,6 +107,7 @@ enum NativeContinuation {
     NearestBall(crate::ball::Phase),
     Speaker(crate::speaker::Phase),
     Keys(crate::keys::Phase),
+    BallDraw(crate::ball_draw::Phase),
     SkillStart,
     SkillReturn(crate::skill::Saved),
 }
@@ -843,6 +844,7 @@ impl MachineCore {
             frame.native = match address.extract::<String>()?.as_str() {
                 "0791:2956" => Some(NativeContinuation::AvailabilityStart),
                 "0791:278A" => Some(NativeContinuation::SkillStart),
+                "0791:8F10" => Some(NativeContinuation::BallDraw(crate::ball_draw::Phase::Start)),
                 "0791:9372" => Some(NativeContinuation::Keys(crate::keys::Phase::Start)),
                 "0791:94E8" => Some(NativeContinuation::Speaker(crate::speaker::Phase::NoiseStart)),
                 "0791:94C9" => Some(NativeContinuation::Speaker(crate::speaker::Phase::SeedStart)),
@@ -936,6 +938,19 @@ impl MachineCore {
         let mut completed_value = py.None();
         let result = (|| -> PyResult<Option<Py<PyAny>>> {
             match f.native.take().unwrap() {
+                NativeContinuation::BallDraw(phase) => {
+                    let first=matches!(phase,crate::ball_draw::Phase::Start);
+                    let request=crate::ball_draw::step(&mut h,phase,self.mutant==12)?;
+                    if first{*self.native_calls.borrow_mut().entry("0791:8F10".into()).or_insert(0)+=1;}
+                    match request {
+                        Some(req)=>{
+                            let args=PyTuple::new(py,req.args)?;
+                            let call=self.call_type.bind(py).call1((req.target,args,req.ret_to,true,false))?;
+                            f.native=Some(NativeContinuation::BallDraw(req.next));Ok(Some(call.unbind()))
+                        }
+                        None=>Ok(None),
+                    }
+                }
                 NativeContinuation::Keys(phase) => {
                     let request=crate::keys::step(&mut h,phase,self.mutant==10)?;
                     if phase==crate::keys::Phase::Start{*self.native_calls.borrow_mut().entry("0791:9372".into()).or_insert(0)+=1;}
@@ -1047,6 +1062,7 @@ impl MachineCore {
                 || (self.mutant == 6 && ret_to == "0791:27EB")
                 || (self.mutant == 8 && matches!(ret_to.as_str(),"0791:94F9"|"0791:9522"|"0791:952B"|"0791:9532"|"0791:9540"))
                 || (self.mutant == 9 && ret_to == "0791:94DC")
+                || (self.mutant == 13 && matches!(ret_to.as_str(),"0791:8F66"|"0791:8FD4"))
                 || (self.mutant == 11 && matches!(ret_to.as_str(),"0791:93C2"|"0791:93CE"|"0791:93D3"|"0791:93DC"|"0791:93E3"|"0791:9448"|"0791:944B"|"0791:945B"|"0791:947D"|"0791:9482"|"0791:9497"|"0791:94A2"|"0791:94AC"|"0791:94B9"|"0791:94C5"));
             let w = if corrupt && i == args.len() + usize::from(far) {
                 w.wrapping_add(1)

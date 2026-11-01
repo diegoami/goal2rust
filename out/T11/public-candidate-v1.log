@@ -1,0 +1,8 @@
+test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) ... ok
+test_native_caller (test_ball_draw_state.BallDrawStateTests.test_native_caller) ... ok
+test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.425s
+
+OK

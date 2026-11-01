@@ -170,6 +170,29 @@ preflights remain preserved with exact source. Ten registered callees plus two
 unregistered guests remain external; test ABI doubles never enter production.
 No next task is included in this increment.
 
+## 2g. T11: ball draw-state caller
+
+Translate display.draw_ball_state0791:8F10 and inline grid_cell, largest remaining
+Python body self cost after T10(79,194 starts). One complete caller, both registered
+callee boundaries and nested source multiply remain delegated/observable. Preserve
+captured record pointers, live grid/callback observations, unsigned-MUL signed-byte
+address arithmetic and all previous/current picture writes. Contract:
+[tasks/T11.md](tasks/T11.md),[out/T11](../out/T11/README.md). Same pin/state-v2;
+actual T10 baseline preserved. Full old17-body/new caller/control/observer, ordered,
+sealed lifecycle/ALL75/F40/profile/artifact proof and three quiet four-arm rounds,
+all outcomes retained/reported, no arbitrary per-increment5% floor.
+
+Upstreams rechecked before T11: archaeology2a411f50 unchanged; goal2 advances
+65c47459(PR490: CI scheduling/timeout and cancellation-test changes). No selected
+engine semantic change or reason to alter the controlled accepted pin/full corpus.
+
+T11 full fidelity and three-round measurements pass: all rounds improve, median
+4.22% less CPU than saved T10. 18 native bodies/1,712,715 native guest entries,
+1,390,970 Python entries remain (not a code-completion percentage). Accepted
+ledger: [out/T11/validation-v1.json](../out/T11/validation-v1.json), all samples and
+scope: [assessment](../out/T11/assessment.md). Actual registered delegated callees,
+explicit positive success/branch coverage, no new hardware or callee implementation.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the
