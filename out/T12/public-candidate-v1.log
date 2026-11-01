@@ -1,0 +1,8 @@
+test_errors_and_variants (test_watched_sweep.WatchedSweepTests.test_errors_and_variants) ... ok
+test_native_caller (test_watched_sweep.WatchedSweepTests.test_native_caller) ... ok
+test_positive_loop_and_branch_coverage (test_watched_sweep.WatchedSweepTests.test_positive_loop_and_branch_coverage) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 4.851s
+
+OK

@@ -1,0 +1,26 @@
+test_errors_and_variants (test_watched_sweep.WatchedSweepTests.test_errors_and_variants) ... ok
+test_native_caller (test_watched_sweep.WatchedSweepTests.test_native_caller) ... FAIL
+test_positive_loop_and_branch_coverage (test_watched_sweep.WatchedSweepTests.test_positive_loop_and_branch_coverage) ... FAIL
+
+======================================================================
+FAIL: test_native_caller (test_watched_sweep.WatchedSweepTests.test_native_caller)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_watched_sweep.py", line 106, in test_native_caller
+    p,_=exercise(Oracle,1);r,n=exercise(PortMachine,1);self.assertIsNone(p['error']);self.assertEqual(p,r);self.assertEqual(n.get(ROOT),1)
+                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_positive_loop_and_branch_coverage (test_watched_sweep.WatchedSweepTests.test_positive_loop_and_branch_coverage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_watched_sweep.py", line 114, in test_positive_loop_and_branch_coverage
+    self.assertTrue(set(RETURNS)<=visits,set(RETURNS)-visits);self.assertTrue(set(WRITE_SITES)<=writes,set(WRITE_SITES)-writes);self.assertTrue(set(TARGETS)<=targets,set(TARGETS)-targets);self.assertTrue(outer and inner)
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : {'0791:9703'}
+
+----------------------------------------------------------------------
+Ran 3 tests in 5.247s
+
+FAILED (failures=2)

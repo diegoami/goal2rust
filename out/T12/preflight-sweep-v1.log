@@ -1,0 +1,7 @@
+START sweep-differential-v1 14756
+EXIT sweep-differential-v1 0
+START sweep-body-v1 14909
+EXIT sweep-body-v1 0
+START sweep-return-v1 14968
+EXIT sweep-return-v1 0
+Three canonical sweep proofs complete; supervisor can resume remaining jobs

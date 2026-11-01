@@ -145,3 +145,15 @@ Registered23E4:08DF and0791:835F, plus nested23E4:0279, remain delegated source
 bodies with observable ABI/frames. No hardware or transitive-callee claim. Default
 variant only; others stay Python. Full contract:out/T11/contract.md, preserved
 actual T10 source/adapter/extension:out/T11/baseline-snapshot-v1.json.
+
+## T12 watched sweep caller
+
+Translation pin:`2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`(state/2).
+`port/frame.py` watched_match_engine **0791:9564**(near ret/no args), immediate
+Mem.Frame/helpers and its17 SITES rows are reproduced in engine/src/sweep.rs and
+machine.rs continuations. Captured frameBP/DS/CS/slot/k/rec, liveSS/local stop/
+register/flag/data reads, dead push and all immediate stack/possession/wait writes
+retain source order.14 registered external callees remain observable/delegated;
+no transitive callee/hardware claim. Default variant only; others stay Python.
+Contract out/T12/contract.md; actual T11 source/adapter/extension baseline bound
+in out/T12/baseline-snapshot-v1.json, no original data committed.

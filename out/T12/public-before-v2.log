@@ -1,0 +1,17 @@
+test_errors_and_variants (test_watched_sweep.WatchedSweepTests.test_errors_and_variants) ... ok
+test_native_caller (test_watched_sweep.WatchedSweepTests.test_native_caller) ... FAIL
+test_positive_loop_and_branch_coverage (test_watched_sweep.WatchedSweepTests.test_positive_loop_and_branch_coverage) ... ok
+
+======================================================================
+FAIL: test_native_caller (test_watched_sweep.WatchedSweepTests.test_native_caller)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_watched_sweep.py", line 106, in test_native_caller
+    p,_=exercise(Oracle,1);r,n=exercise(PortMachine,1);self.assertIsNone(p['error']);self.assertEqual(p,r);self.assertEqual(n.get(ROOT),1)
+                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 1
+
+----------------------------------------------------------------------
+Ran 3 tests in 5.037s
+
+FAILED (failures=1)

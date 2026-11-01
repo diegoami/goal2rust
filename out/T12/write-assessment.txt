@@ -1,0 +1,84 @@
+"""Receipt-derived T12 assessment after final acceptance only."""
+import json,statistics
+from pathlib import Path
+o=Path('out/T12');load=lambda n:json.loads((o/(n+'.json')).read_text());v=load('validation-v1');p=load('performance-v1');assert v['pass_all'] and p['measurement_complete']
+r=p['median_ratio'];change=100*abs(1-r);direction='less' if r<1 else 'more';cpy=statistics.median(x['cpu_s']['python']/x['cpu_s']['candidate'] for x in p['rounds']);pypy=statistics.median(x['candidate_to_pypy'] for x in p['rounds'])
+table='\n'.join('| '+str(x['round'])+' | '+' | '.join(f"{x['cpu_s'][a]:.6f}" for a in ['baseline','candidate','python','pypy'])+f" | {x['candidate_to_baseline']:.9f} |" for x in p['rounds'])
+text=f'''# T12 watched match sweep incremental port
+
+One complete caller frame.watched_match_engine0791:9564 now runs in Rust, including
+its immediate Mem.Frame, 22-player sweep/nested loop, possession/holder/update/
+speaker/draw/key flow, quick exit/wait decrement. Captured BP/DS/CS/slot/k/rec
+remain distinct from liveSS/stack-stop/register/ZF/memory.17 static call sites/14
+registered callees stay delegated/observable; no transitive callee/hardware claim.
+Default variant only, others Python. Same2cbeb36f/state-v2/private T07 inputs.
+
+19 native bodies/1,716,209 native guest entries,1,387,476 Python out of3,103,685.
+3494 Python entries moved; this is not a code-completion percentage. Generator
+resumptions previously made this caller hot despite its relatively few starts.
+
+## Complete measurements
+
+Three quiet simultaneous savedT11/candidate/plainCPython/PyPy rounds, distinct
+physical cores, rotated assignment/order, original guards, all outcomes retained
+and all raw event/result/record/full-memory outputs identical. All rounds faster:
+{p['all_rounds_improve']}. No arbitrary per-increment5% floor.
+
+| Round | T11 CPU s | Candidate CPU s | CPython CPU s | PyPy CPU s | Candidate/T11 |
+| --- | --- | --- | --- | --- | --- |
+{table}
+
+Median **{r:.9f} = {change:.2f}% {direction} CPU**; paired CPython speed **{cpy:.3f}x**,
+candidate/PyPy CPU **{pypy:.3f}x**. {'Still slower than PyPy.' if pypy>=1 else 'Faster on this fixture only; no broad workload claim.'}
+One host/reference fixture; pilot0.97452040 diagnostic only, no speculative cause
+of variance or comparisons with historical different-time absolute measurements.
+
+## Fidelity and binding
+
+Public38 each CPython/PyPy, Rust11, GC20 pass.58,760 full-state normal comparisons
+across19 bodies,3306 error cases and328 speaker observers agree; all scoped
+body/return controls caught. New2096 cases include8 actual RAM captures/500 authored
+inputs/four tap-listener combinations,1888 errors, positive success/all17 returns/
+14 targets/12 writes, both22 loops/early exits/underflow. CapturedBP/record/slot,
+actualBP/local record/stop/play/returnAX/ZF mutations, near/far/full waiting ABI,
+wrap/static-link/dead-push/frame/pause/direct done/variant/error observations match.
+Controlled external ABI bodies test only caller continuations; actual full drives
+use actual source callees. Initial fixture's full sweeps hadwait0 and missed9703;
+initial source/log retained, revised wait1->FFFF before freeze covers it. No runtime
+fix needed; first build and private proof epoch pass. Historical evidence retained.
+
+Exact ordered831 events/result/records/full memory/553 stretches/full IO-site-
+listener digest (158,092,780 IO observations) identical.4 positive-denial sealed
+lifecycle checks/11 independent Rust machines, strict ALL75/75 and exact-source
+F40 40/40 identical,75-machine backend attestation/all19 bodies. No guards raised.
+
+Authoritative **validation-v1.json**, {len(v['evidence_sha256'])} evidence files, plus
+post-exit-audit-v1.json and actual-host process-closure-v1.json: supervisor and44
+groups empty(30 canonical/12 timing/2 pilot). Full source/binary/input/baseline/
+archive/harness/prefix/proof/observer binding rehash. Actual T11 baseline
+.cache/T12-baseline/engine and candidate .cache/T12-artifacts, hash manifests.
+No overwritten receipt/original game bytes/state/tables in git/oracle semantic fix/
+automatic model review. Existing #6/laterA700/ref-121/owner-run engine milestone
+review/goal2 integration/save-load/cancellation/playtest remain separate. Live
+CI/merge/stop state PR #31/checkpoint #1. No next task included.
+'''
+for a,b in [('watched_match_engine0791','watched_match_engine 0791'),('liveSS','live SS'),('memory.17','memory. 17'),('Same2cb','Same 2cb'),('entries,1,','entries, 1,'),('of3,','of 3,'),('savedT11','saved T11'),('per-increment5%','per-increment 5%'),('pilot0.','pilot 0.'),('Public38','Public 38'),('Rust11','Rust 11'),('GC20 pass.58','GC 20 pass. 58'),('across19','across 19'),(',3306',', 3306'),('and328','and 328'),('New2096','New 2096'),('include8','include 8'),(',1888',', 1888'),('all17','all 17'),('both22','both 22'),('hadwait0','had wait 0'),('missed9703','missed 9703'),('wait1','wait 1'),('ordered831','ordered 831'),('identical.4','identical. 4'),('identical,75','identical, 75'),('all19','all 19'),('and44','and 44'),('empty(30','empty (30')]:text=text.replace(a,b)
+(o/'assessment.md').write_text(text)
+q=o/'README.md';s=q.read_text();i=s.index('Task #30');q.write_text(s[:i]+'''## Validation complete
+
+Authoritative validation-v1.json/post-exit-audit-v1.json and real-host process-
+closure-v1.json bind all current proof/measurements and empty groups. See
+assessment.md for all samples/scope. No producer remains; live exact-head CI/
+merge/stop in PR #31/checkpoint #1. Do not restart/overwrite completed receipts/
+baselines or reuse proof after runtime changes.
+
+'''+s[i:])
+Path('/tmp/T12-pr-final.md').write_text(f'''Port watched_match_engine0791:9564, the hottest remaining Python caller, to Rust: complete22-player/nested loop, immediate frame, possession/holder/player/update/speaker/draw/key flow, quick exit/wait decrement. Preserve capturedBP/DS/CS/slot/k/rec versus liveSS/frame-stop/register/flag/data observations, all17 static call sites/14 delegated registered callees and variant fallback. One complete caller, no transitive callee/hardware claim;19 native bodies total.
+
+All fidelity/closure gates pass:38 public each CPython/PyPy,11 Rust,20 lifetime cases;58,760 full-state normal comparisons/3306 errors/328 observers and caught controls; positive success/all17 returns/14 targets/12 writes/both22 loops/mutations/pauses/direct done; exact ordered831-event/full-memory/records/callback digest;4 sealed lifecycle checks/11-machine attestation, strict ALL75/75/exact-sourceF40 40/40 identical/75-machine attestation. Final out/T12/validation-v1.json binds{len(v['evidence_sha256'])} evidence files and actual-host closure verifies44 groups empty. See out/T12/assessment.md.
+
+Three quiet rotated four-arm rounds preserve every outcome:median candidate/T11 {r:.9f}, {change:.2f}% {direction} CPU; paired CPython speed {cpy:.3f}x, candidate/PyPy CPU {pypy:.3f}x. No arbitrary5% floor; exact-head CI before squash. Initial wait-counter fixture coverage gap preserved/fixed before freeze, no runtime fix. Same2cbeb36f/private state-v2 inputs; no original bytes/automatic review. Existing #6/A700/ref-121/engine review/adoption remain.
+
+Closes #30.
+''')
+print('Accepted assessment/README/PR text rendered')

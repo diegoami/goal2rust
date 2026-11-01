@@ -1,0 +1,30 @@
+{
+  "source": "family-ALL-rust-v1.jsonl",
+  "source_lines": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "sha256": "dfd7cd7fbdae82a04f63de1d446e1e40cdd878c39f5900db4e74624b70e41a51",
+  "line_sha256": [
+    "05a4fe11a6035edd440dde0a249d537350dc47983fee9bb1f00c4a2d77972f6b",
+    "331cb4142060c0282f2b6dfb9bdac8b0f8fb475e8addac1c608fb20bd45a5a46",
+    "80b408b765adfd7186df2bbb0a7d1be9f008832d8b75cae6779090373a179c0f",
+    "4cf5eaf3a4cfa7fef39ddacf0d823b249c13c84c233cf54e5d9f6d70b630b962",
+    "8d5abd191cb59e331f971b8ccd669918896b947543bbf7ed273bea3534ba0a00",
+    "78cbac647a78beb459a8c70ea1cb763c90fa6368e24c9e7c7f1a9f8619ac0327",
+    "507307bf9f7fbc2016cbc3fcbdc5f1afb95ce46a89473b3efaaf6a072d6a95a3",
+    "3993f68b005984df9eff37809201690d2cbd38ffd7cacc2350ad53cd5c124e44",
+    "24bd66274b777a1c124d756b55b623f48cdb09fa12a021319f614851f15e4c9b",
+    "bf24f5fad94fa11644af506695a3918b773b49cfb243690009b89e8abe64021c"
+  ],
+  "snapshot_script_sha256": "67f668a1d6d47a71e51ab5e98ea458fed0ed6569cb7eace576f1af6ac773f1c3",
+  "full_corpus_gate_pending": true
+}
