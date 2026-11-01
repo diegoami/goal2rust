@@ -1,0 +1,190 @@
+START family-ALL-v1 30415
+START check-v1 30416
+START taps-python-v1 30417
+START legacy-v1 30418
+PROGRESS 0 /75; family-ALL-v1,check-v1,taps-python-v1,legacy-v1
+PROGRESS 0 /75; family-ALL-v1,check-v1,taps-python-v1,legacy-v1
+PROGRESS 0 /75; family-ALL-v1,check-v1,taps-python-v1,legacy-v1
+EXIT legacy-v1 0
+START legacy-body-v1 30827
+PROGRESS 0 /75; family-ALL-v1,check-v1,taps-python-v1,legacy-body-v1
+PROGRESS 0 /75; family-ALL-v1,check-v1,taps-python-v1,legacy-body-v1
+PROGRESS 2 /75; family-ALL-v1,check-v1,taps-python-v1,legacy-body-v1
+EXIT legacy-body-v1 0
+START availability-differential-v1 30938
+PROGRESS 2 /75; family-ALL-v1,check-v1,taps-python-v1,availability-differential-v1
+EXIT availability-differential-v1 0
+START availability-body-v1 31003
+PROGRESS 2 /75; family-ALL-v1,check-v1,taps-python-v1,availability-body-v1
+EXIT availability-body-v1 0
+START availability-return-v1 31068
+PROGRESS 2 /75; family-ALL-v1,check-v1,taps-python-v1,availability-return-v1
+EXIT availability-return-v1 0
+START ball-differential-v1 31129
+PROGRESS 2 /75; family-ALL-v1,check-v1,taps-python-v1,ball-differential-v1
+PROGRESS 4 /75; family-ALL-v1,check-v1,taps-python-v1,ball-differential-v1
+PROGRESS 4 /75; family-ALL-v1,check-v1,taps-python-v1,ball-differential-v1
+PROGRESS 4 /75; family-ALL-v1,check-v1,taps-python-v1,ball-differential-v1
+PROGRESS 6 /75; family-ALL-v1,check-v1,taps-python-v1,ball-differential-v1
+PROGRESS 6 /75; family-ALL-v1,check-v1,taps-python-v1,ball-differential-v1
+PROGRESS 6 /75; family-ALL-v1,check-v1,taps-python-v1,ball-differential-v1
+EXIT taps-python-v1 0
+PROGRESS 6 /75; family-ALL-v1,check-v1,ball-differential-v1
+PROGRESS 6 /75; family-ALL-v1,check-v1,ball-differential-v1
+PROGRESS 8 /75; family-ALL-v1,check-v1,ball-differential-v1
+PROGRESS 8 /75; family-ALL-v1,check-v1,ball-differential-v1
+PROGRESS 8 /75; family-ALL-v1,check-v1,ball-differential-v1
+EXIT ball-differential-v1 0
+PROGRESS 10 /75; family-ALL-v1,check-v1
+START ball-body-v1 31973
+PROGRESS 10 /75; family-ALL-v1,check-v1,ball-body-v1
+PROGRESS 10 /75; family-ALL-v1,check-v1,ball-body-v1
+PROGRESS 10 /75; family-ALL-v1,check-v1,ball-body-v1
+PROGRESS 11 /75; family-ALL-v1,check-v1,ball-body-v1
+PROGRESS 12 /75; family-ALL-v1,check-v1,ball-body-v1
+PROGRESS 12 /75; family-ALL-v1,check-v1,ball-body-v1
+PROGRESS 13 /75; family-ALL-v1,check-v1,ball-body-v1
+PROGRESS 14 /75; family-ALL-v1,check-v1,ball-body-v1
+EXIT ball-body-v1 0
+PROGRESS 14 /75; family-ALL-v1,check-v1
+START ball-return-v1 34419
+PROGRESS 14 /75; family-ALL-v1,check-v1,ball-return-v1
+PROGRESS 15 /75; family-ALL-v1,check-v1,ball-return-v1
+PROGRESS 16 /75; family-ALL-v1,check-v1,ball-return-v1
+PROGRESS 16 /75; family-ALL-v1,check-v1,ball-return-v1
+PROGRESS 17 /75; family-ALL-v1,check-v1,ball-return-v1
+PROGRESS 18 /75; family-ALL-v1,check-v1,ball-return-v1
+EXIT ball-return-v1 0
+START skill-differential-v1 34737
+PROGRESS 18 /75; family-ALL-v1,check-v1,skill-differential-v1
+PROGRESS 19 /75; family-ALL-v1,check-v1,skill-differential-v1
+EXIT skill-differential-v1 0
+START skill-body-v1 34807
+PROGRESS 19 /75; family-ALL-v1,check-v1,skill-body-v1
+PROGRESS 20 /75; family-ALL-v1,check-v1,skill-body-v1
+EXIT skill-body-v1 0
+START skill-return-v1 34907
+PROGRESS 20 /75; family-ALL-v1,check-v1,skill-return-v1
+PROGRESS 20 /75; family-ALL-v1,check-v1,skill-return-v1
+EXIT skill-return-v1 0
+START speaker-differential-v1 34988
+PROGRESS 21 /75; family-ALL-v1,check-v1,speaker-differential-v1
+PROGRESS 22 /75; family-ALL-v1,check-v1,speaker-differential-v1
+EXIT check-v1 0
+PROGRESS 22 /75; family-ALL-v1,speaker-differential-v1
+EXIT speaker-differential-v1 0
+START speaker-body-v1 35074
+PROGRESS 22 /75; family-ALL-v1,speaker-body-v1
+PROGRESS 24 /75; family-ALL-v1,speaker-body-v1
+PROGRESS 24 /75; family-ALL-v1,speaker-body-v1
+EXIT speaker-body-v1 0
+START speaker-root-return-v1 35136
+PROGRESS 24 /75; family-ALL-v1,speaker-root-return-v1
+PROGRESS 26 /75; family-ALL-v1,speaker-root-return-v1
+PROGRESS 26 /75; family-ALL-v1,speaker-root-return-v1
+EXIT speaker-root-return-v1 0
+START speaker-seed-return-v1 35213
+PROGRESS 26 /75; family-ALL-v1,speaker-seed-return-v1
+PROGRESS 27 /75; family-ALL-v1,speaker-seed-return-v1
+EXIT speaker-seed-return-v1 0
+PROGRESS 28 /75; family-ALL-v1
+START keys-differential-v1 35282
+PROGRESS 28 /75; family-ALL-v1,keys-differential-v1
+PROGRESS 28 /75; family-ALL-v1,keys-differential-v1
+PROGRESS 29 /75; family-ALL-v1,keys-differential-v1
+EXIT keys-differential-v1 0
+START keys-body-v1 35364
+PROGRESS 30 /75; family-ALL-v1,keys-body-v1
+PROGRESS 30 /75; family-ALL-v1,keys-body-v1
+EXIT keys-body-v1 0
+START keys-return-v1 35443
+PROGRESS 31 /75; family-ALL-v1,keys-return-v1
+PROGRESS 32 /75; family-ALL-v1,keys-return-v1
+EXIT keys-return-v1 0
+START draw-differential-v1 35489
+PROGRESS 32 /75; family-ALL-v1,draw-differential-v1
+EXIT draw-differential-v1 0
+START draw-body-v1 35531
+PROGRESS 32 /75; family-ALL-v1,draw-body-v1
+EXIT draw-body-v1 0
+START draw-return-v1 35560
+PROGRESS 33 /75; family-ALL-v1,draw-return-v1
+EXIT draw-return-v1 0
+START sweep-differential-v1 35605
+PROGRESS 34 /75; family-ALL-v1,sweep-differential-v1
+PROGRESS 34 /75; family-ALL-v1,sweep-differential-v1
+PROGRESS 35 /75; family-ALL-v1,sweep-differential-v1
+PROGRESS 36 /75; family-ALL-v1,sweep-differential-v1
+PROGRESS 36 /75; family-ALL-v1,sweep-differential-v1
+PROGRESS 38 /75; family-ALL-v1,sweep-differential-v1
+PROGRESS 38 /75; family-ALL-v1,sweep-differential-v1
+PROGRESS 38 /75; family-ALL-v1,sweep-differential-v1
+EXIT sweep-differential-v1 0
+START sweep-body-v1 35796
+PROGRESS 38 /75; family-ALL-v1,sweep-body-v1
+PROGRESS 40 /75; family-ALL-v1,sweep-body-v1
+PROGRESS 40 /75; family-ALL-v1,sweep-body-v1
+PROGRESS 40 /75; family-ALL-v1,sweep-body-v1
+PROGRESS 42 /75; family-ALL-v1,sweep-body-v1
+PROGRESS 42 /75; family-ALL-v1,sweep-body-v1
+EXIT sweep-body-v1 0
+START sweep-return-v1 35977
+PROGRESS 42 /75; family-ALL-v1,sweep-return-v1
+PROGRESS 44 /75; family-ALL-v1,sweep-return-v1
+PROGRESS 44 /75; family-ALL-v1,sweep-return-v1
+EXIT sweep-return-v1 0
+PROGRESS 44 /75; family-ALL-v1
+ALREADY COMPLETE play-differential-v2
+ALREADY COMPLETE play-body-v2
+ALREADY COMPLETE play-return-v2
+START taps-rust-v1 36056
+PROGRESS 44 /75; family-ALL-v1,taps-rust-v1
+PROGRESS 46 /75; family-ALL-v1,taps-rust-v1
+PROGRESS 46 /75; family-ALL-v1,taps-rust-v1
+PROGRESS 47 /75; family-ALL-v1,taps-rust-v1
+PROGRESS 48 /75; family-ALL-v1,taps-rust-v1
+PROGRESS 48 /75; family-ALL-v1,taps-rust-v1
+PROGRESS 57 /75; family-ALL-v1,taps-rust-v1
+EXIT taps-rust-v1 0
+START profile-after-v1 36227
+PROGRESS 57 /75; family-ALL-v1,profile-after-v1
+PROGRESS 59 /75; family-ALL-v1,profile-after-v1
+PROGRESS 59 /75; family-ALL-v1,profile-after-v1
+PROGRESS 60 /75; family-ALL-v1,profile-after-v1
+PROGRESS 61 /75; family-ALL-v1,profile-after-v1
+EXIT profile-after-v1 0
+PROGRESS 61 /75; family-ALL-v1
+PROGRESS 62 /75; family-ALL-v1
+PROGRESS 63 /75; family-ALL-v1
+PROGRESS 66 /75; family-ALL-v1
+PROGRESS 66 /75; family-ALL-v1
+PROGRESS 67 /75; family-ALL-v1
+PROGRESS 67 /75; family-ALL-v1
+PROGRESS 68 /75; family-ALL-v1
+PROGRESS 69 /75; family-ALL-v1
+PROGRESS 69 /75; family-ALL-v1
+PROGRESS 69 /75; family-ALL-v1
+PROGRESS 72 /75; family-ALL-v1
+PROGRESS 73 /75; family-ALL-v1
+PROGRESS 73 /75; family-ALL-v1
+EXIT family-ALL-v1 0
+PROGRESS 75 /75; 
+START performance-v1 36922
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+EXIT performance-v1 0
+ALL PRODUCERS EXITED; run post-exit audit after this writer exits

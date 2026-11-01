@@ -1,0 +1,8 @@
+test_errors_and_variants (test_play_state.PlayStateTests.test_errors_and_variants) ... ok
+test_native_caller (test_play_state.PlayStateTests.test_native_caller) ... ok
+test_positive_all_branches (test_play_state.PlayStateTests.test_positive_all_branches) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 3.168s
+
+OK

@@ -1,0 +1,15 @@
+denied: unicorn, .sav, .EXE, .DAT
+Real cases complete {'real': {'total': 96, 'equal': 96}}
+Authored inputs complete 100
+Authored inputs complete 200
+Authored inputs complete 300
+Authored inputs complete 400
+Authored inputs complete 500
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T13/play_differential.py", line 55, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/diego/projects/goal2rust/out/T13/play_differential.py", line 51, in main
+    assert all(errors_seen.values()),errors_seen
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'write': 80, '0791:57AC': 80, '0791:56D9': 80, '0791:5049': 70, '0791:533B': 60, '0791:5565': 50, '0791:045D': 40, '0791:4B64': 1, '0791:2BB1': 16, '0791:2B51': 16, '0791:5729': 24, '0791:2974': 20, '0791:44C1': 0, '0791:4A28': 11, '0791:474D': 39, '0791:6188': 39, '0791:57B6': 80, '0791:57BE': 70, '0791:57C6': 60, '0791:57CE': 50, '0791:57DE': 40, '0791:57F2': 1, '0791:582A': 16, '0791:5857': 16, '0791:585F': 24, '0791:586C': 20, '0791:5885': 11, '0791:58A9': 0, '0791:58C2': 11, '0791:58CB': 39, '0791:58DB': 39, 'callee:0791:56D9': 80, 'callee:0791:5049': 70, 'callee:0791:533B': 60, 'callee:0791:5565': 50, 'callee:0791:045D': 40, 'callee:0791:4B64': 1, 'callee:0791:2BB1': 16, 'callee:0791:2B51': 16, 'callee:0791:5729': 24, 'callee:0791:2974': 20, 'callee:0791:44C1': 0, 'callee:0791:4A28': 11, 'callee:0791:474D': 39, 'callee:0791:6188': 39, 'write:0791:5809': 4, 'write:0791:58B3': 24}

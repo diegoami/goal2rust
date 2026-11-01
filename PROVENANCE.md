@@ -157,3 +157,14 @@ retain source order.14 registered external callees remain observable/delegated;
 no transitive callee/hardware claim. Default variant only; others stay Python.
 Contract out/T12/contract.md; actual T11 source/adapter/extension baseline bound
 in out/T12/baseline-snapshot-v1.json, no original data committed.
+
+## T13 play-state caller
+
+Pin:`2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`(state/2). contests.play_state_update
+**0791:57AC**(retf4), inline live own/player_record helpers and finite probe/table
+loops become engine/src/play.rs with machine.rs continuations.15 return sites/
+14 registered external callees remain delegated, including actual default keeper/
+side helpers; no transitive/hardware claim. CurrentBP/argument/table/AX reloads,
+Regs pending stack and destination None/True/False preserve source semantics;
+nondefault variants Python. Scope out/T13/contract.md, exact T12 source/adapter/
+extension baseline bound in out/T13/baseline-snapshot-v1.json.

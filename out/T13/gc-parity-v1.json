@@ -1,0 +1,86 @@
+{
+  "pass_all": true,
+  "cases": [
+    {
+      "fast": false,
+      "collected": true
+    },
+    {
+      "fast": false,
+      "collected": true
+    },
+    {
+      "fast": false,
+      "collected": true
+    },
+    {
+      "fast": false,
+      "collected": true
+    },
+    {
+      "fast": false,
+      "collected": true
+    },
+    {
+      "fast": false,
+      "collected": true
+    },
+    {
+      "fast": false,
+      "collected": true
+    },
+    {
+      "fast": false,
+      "collected": true
+    },
+    {
+      "fast": false,
+      "collected": true
+    },
+    {
+      "fast": false,
+      "collected": true
+    },
+    {
+      "fast": true,
+      "collected": true
+    },
+    {
+      "fast": true,
+      "collected": true
+    },
+    {
+      "fast": true,
+      "collected": true
+    },
+    {
+      "fast": true,
+      "collected": true
+    },
+    {
+      "fast": true,
+      "collected": true
+    },
+    {
+      "fast": true,
+      "collected": true
+    },
+    {
+      "fast": true,
+      "collected": true
+    },
+    {
+      "fast": true,
+      "collected": true
+    },
+    {
+      "fast": true,
+      "collected": true
+    },
+    {
+      "fast": true,
+      "collected": true
+    }
+  ],
+  "source_sha256": "9c45517c61bd4a57ede5ebf3bcc4f107e1089f68b922f6b6f141d283f16cd00b"
+}
