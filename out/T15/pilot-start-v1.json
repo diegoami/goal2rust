@@ -1,0 +1,67 @@
+{
+  "observations": [
+    {
+      "time": 1793559324.0532856,
+      "load": [
+        1.29638671875,
+        0.9931640625,
+        0.5166015625
+      ],
+      "quiet": 1
+    },
+    {
+      "time": 1793559334.0534158,
+      "load": [
+        1.0966796875,
+        0.9599609375,
+        0.5107421875
+      ],
+      "quiet": 2
+    },
+    {
+      "time": 1793559344.0535755,
+      "load": [
+        0.927734375,
+        0.927734375,
+        0.5048828125
+      ],
+      "quiet": 3
+    }
+  ],
+  "jobs": [
+    {
+      "name": "baseline",
+      "pid": 51494,
+      "command": [
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T15/run_receipt.py",
+        "--backend",
+        "rust",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T15/pilot-baseline-v1.json"
+      ],
+      "baseline": true,
+      "time": 1793559344.0544212
+    },
+    {
+      "name": "candidate",
+      "pid": 51495,
+      "command": [
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T15/run_receipt.py",
+        "--backend",
+        "rust",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T15/pilot-candidate-v1.json"
+      ],
+      "baseline": false,
+      "time": 1793559344.05701
+    }
+  ]
+}

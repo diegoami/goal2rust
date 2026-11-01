@@ -1,0 +1,84 @@
+"""Render accepted evidence and PR prose after all immutable acceptance gates pass."""
+from pathlib import Path
+import json,statistics
+out=Path('out/T15');load=lambda n:json.loads((out/(n+'.json')).read_text())
+v=load('validation-v1');p=load('performance-v1');assert v['pass_all'] and p['measurement_complete']
+r=p['median_ratio'];speed=statistics.median(x['cpu_s']['python']/x['cpu_s']['candidate'] for x in p['rounds']);pypy=statistics.median(x['candidate_to_pypy'] for x in p['rounds'])
+change=f'{abs(1-r)*100:.2f}% '+('less' if r<1 else 'more')+' CPU';rows='\n'.join('| '+str(x['round'])+' | '+' | '.join(f"{x['cpu_s'][k]:.6f}" for k in ['baseline','candidate','python','pypy'])+f" | {x['candidate_to_baseline']:.9f} |" for x in p['rounds'])
+text=f'''# T15 player sprite caller
+
+The complete `motion.move_player_sprite` caller (0791:8537, retf 4) runs in Rust.
+Five registered callee boundaries remain delegated. Immediate frame, captured
+linear record and sentinel, live record/picture pointers/DS argument, signed
+coordinate arithmetic, conditional reads and captured yield replies preserve the
+source. Old-cell restoration, held sprite selection, keeper interception and ball
+movement/clamps remain observable. Variants stay Python. No transitive callee or
+hardware implementation claim. Same accepted 2cbeb36f and private T07 state-v2.
+
+22 native bodies cover 1,904,131 guest entries, leaving 1,199,554 Python entries
+of 3,103,685 total on the fixture. 75,943 entries moved; this is a partial port,
+not a code-completion percentage.
+
+## Every timing outcome
+
+Three quiet simultaneous four-arm rounds use saved T14/candidate/plain CPython/
+PyPy, distinct physical cores and rotated core/launch assignment. Raw outputs
+agree and every sample is retained. No per-increment magnitude floor.
+
+| Round | T14 CPU s | Candidate CPU s | CPython CPU s | PyPy CPU s | Candidate/T14 |
+| --- | --- | --- | --- | --- | --- |
+{rows}
+
+Median candidate/T14 **{r:.9f}**, **{change}**. All three improve:
+{p['all_rounds_improve']}. Paired CPython speed **{speed:.3f}x**; candidate/PyPy CPU
+**{pypy:.3f}x**. {'Still slower than PyPy.' if pypy>1 else 'Less CPU than PyPy on this fixture.'}
+The pilot is diagnostic only. One host/fixture; no broad workload claim or
+comparison of absolute timings across historical campaigns.
+
+## Fidelity and closure
+
+47 public tests pass under each CPython and PyPy, with 11 Rust tests and 20 GC
+checks. Fresh 22-body corpus: 65,048 normal full-state comparisons, 17,026 error
+comparisons and 328 supplemental observer cases agree, with scoped controls
+caught. The new caller contributes 2,096 positive comparisons (eight captured
+RAM entries plus 500 authored inputs in four observer modes), 3,240 errors,
+all five targets/returns and ten write sites, including signed/wrapping/linear
+boundary arithmetic, captured versus live mutations, reply clobbers, waiting ABI,
+pause/resume, direct done and variant fallback. Both controls differ in all
+2,096 positive cases. Controlled ABI doubles scope the caller proof; full drive,
+lifecycle and family tests execute actual source callees.
+
+The exact ordered full drive agrees on 831 events, 553 stretches, result,
+records, full memory and all callbacks. Four positive-denial lifecycle checks
+and 11 independently attested Rust machines pass. Strict ALL75/75 and exact-source
+F40 40/40 agree, with 75-machine Rust attestation and all 22 native bodies.
+
+Authoritative `validation-v1.json` binds {len(v['evidence_sha256'])} evidence files
+and {len(v['source_sha256'])} source/artifact/input hashes. Supplemental
+`post-exit-audit-v1.json` and actual-host `process-closure-v1.json` pass. Supervisor
+exited; all 53 groups are empty (39 canonical, 12 timing, two pilot). Baseline,
+archives, pristine upstream harness and strict family prefixes are rehashed.
+No source or binary changed during canonical proofs or measurements; completed
+receipts remain preserved. Initial compile API mistake and an authored missing
+clamp case were corrected before the canonical epoch; their logs are preserved.
+All canonical proofs passed without runtime changes.
+
+T14 baseline `.cache/T15-baseline/engine`, candidate `.cache/T15-artifacts`, with
+hash manifests. No original bytes/state/tables committed, oracle semantic fix or
+automatic review. Existing #6, A700/ref-121, owner-run engine milestone review,
+application integration/save-load/cancellation/playtest remain separate. Live
+merge/CI/stop status is in PR #37 and checkpoint #1. No next task included.
+'''
+(out/'assessment.md').write_text(text)
+p=out/'README.md';s=p.read_text();s=s.replace('# T15 player sprite caller\n','# T15 player sprite caller\n\nValidation complete: see assessment.md, validation-v1.json, post-exit-audit-v1.json\nand actual-host process-closure-v1.json. All receipts are sealed; live CI/merge/stop\nstatus is in PR #37 and checkpoint #1. No producer remains.\n');p.write_text(s)
+Path('/tmp/T15-pr-final.md').write_text(f'''Port the complete `motion.move_player_sprite` caller (0791:8537) to Rust, bringing the total to 22 native bodies and moving 75,943 more guest entries out of Python. Preserve signed picture-cell arithmetic, old-cell restoration, held sprites, keeper interception, ball movement/clamps, captured replies, live reads, observers, ABI and variant fallback. Five registered callee boundaries remain delegated.
+
+Validation: 47 public tests each CPython/PyPy, 11 Rust, 20 GC; 65,048 normal full-state comparisons, 17,026 errors and 328 supplemental observer cases agree; controls are detected. Exact ordered full drive, four sealed lifecycle checks, strict ALL75/75 and F40 40/40 agree, with independent backend attestation. Final ledger binds {len(v['evidence_sha256'])} evidence files and actual-host closure verifies all 53 groups empty. See `out/T15/assessment.md` for full scope, samples and preserved early preflight failures.
+
+Three quiet rotated four-arm outcomes retained: median candidate/T14 {r:.9f} ({change}), paired CPython speed {speed:.3f}x, candidate/PyPy CPU {pypy:.3f}x. All rounds improve: {p['all_rounds_improve']}. No arbitrary 5% floor. One host/fixture; pilot diagnostic only.
+
+Same accepted oracle and private state-v2 inputs. No original game data committed or automatic model review. Existing #6, A700/ref-121, owner-run engine milestone review and application adoption remain separate.
+
+Closes #36.
+''')
+print('Rendered accepted T15 assessment and PR text:',change,'candidate/PyPy',pypy)
