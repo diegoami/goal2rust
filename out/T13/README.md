@@ -12,3 +12,13 @@ arguments/static links/currentBP versus fresh registers and destination tri-stat
 preserve source semantics. Controlled external ABI bodies only in caller proof;
 actual admitted drive/lifecycle/family uses actual callees. No arbitrary5% target.
 Live experiment/acceptance/merge status remains in #1, no automatic review.
+
+## Authoritative proof revision
+
+Use supervise_v2.py /validate_v2.py, jobs-v2.jsonl, play-*-v2.json/log; other
+canonical groups use fresh v1 names. Final ledger validation-v2.json. Old failed
+preflight/journal v1 stays historical, not accepted. Its normal state/error
+comparisons agreed, but optional table mutations during ALL dedicated error probes
+bypassed point-query44C1/58A9 and failed coverage. V2 disables optional mutations
+only for error probes; positive mutation matrix stays intact and every error site
+must be reached. Runtime/test/binary and original producer bytes unchanged.
