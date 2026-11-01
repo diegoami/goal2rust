@@ -128,8 +128,8 @@ plus 214B:1E8D, selected from T08's residual profile (205,799 Python entries).
 Keep both omitted-hardware stubs as observable guest calls. An isolated register
 descriptor prototype regressed writes and byte halves and was rejected; its
 source/artifact/timings remain evidence. Contract: [tasks/T09.md](tasks/T09.md),
-[out/T09](../out/T09/README.md). The same full fidelity and three-round 5% CPU
-gate apply against a preserved actual T08 source/adapter/binary baseline.
+[out/T09](../out/T09/README.md). The original campaign used a 5% CPU target;
+the owner-approved incremental acceptance amendment is recorded below.
 
 Upstream rechecked 2026-10-31: archaeology main 2a411f50, goal2 main 721dbd1e.
 Goal2 PR483 adopted the sealed kit (including its own table policy), and PR486
@@ -147,6 +147,18 @@ remain intact; acceptance under the amended contract is recorded separately.
 Goal2 main rechecked 2026-11-01 at d31bba36: PR488 caps automatic
 CI batches while retaining full local/manual slow runs. This does not reduce
 this port's strict ALL75/F40 gates or change the accepted semantic pin.
+
+## 2f. T10: match key-poll native caller
+
+Translate menus.match_key_poll0791:9372, the largest remaining registered Python
+body self cost in the post-T09 profile (76,928 starts). One complete caller, all
+six-slot delay-table and key/quick branches; its15 literal guest-call sites and12
+existing external callee bodies remain observable. This bounded increment does
+not claim the transitive menu/service closure. Contract:[tasks/T10.md](tasks/T10.md),
+[out/T10](../out/T10/README.md). Preserve actual T09 baseline before building.
+Full per-caller and existing16-body proofs, ordered/lifecycle/ALL75/F40 evidence,
+profile and three quiet paired four-arm rounds; retain all outcomes, no arbitrary
+per-increment5% minimum. Same accepted2cbeb36f/state-v2, no original data in git.
 
 ## 3. Engine milestone and goal2 adoption
 

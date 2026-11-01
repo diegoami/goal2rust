@@ -1,0 +1,25 @@
+{
+  "revision": "76748f7297dc4535e84f6e3925f8f0d3852d92f0",
+  "node": "IT13",
+  "source_and_binary_sha256": {
+    ".cache/T10-baseline/engine/Cargo.lock": "fd74c4883808fc367e7d8172f7056de3b3b8c0a48053d966c6b27e495405f0a0",
+    ".cache/T10-baseline/engine/Cargo.toml": "7ed7c5ffcf095582625fdcbdfdd5347943c46e6d51f5dcd69657a8e7f89157b8",
+    ".cache/T10-baseline/engine/python/goal2rust/__init__.py": "a227a6d946dbe76a04461101444b1b1b15428e8ff862c0770e8c36d872978265",
+    ".cache/T10-baseline/engine/python/goal2rust/machine.py": "ef683c2fae2997162575ee2044ccc0805c8d3bb963b76b3245b47f3f65b9db7a",
+    ".cache/T10-baseline/engine/python/goal2rust_engine/__init__.py": "70c88c35a93b6325c74630f3561ba6ffc654191f729e184649efb9b1b4a500f4",
+    ".cache/T10-baseline/engine/python/goal2rust_engine/goal2rust_engine.cpython-312-x86_64-linux-gnu.so": "ad0ef40ea7a85dd92df470a104b1431ff905c2d1767cdb24ca0a851429a69978",
+    ".cache/T10-baseline/engine/src/ball.rs": "91478bb65afe22329a523c80d42e2fc6ba83d811e1320f7e1599437badba9c75",
+    ".cache/T10-baseline/engine/src/geometry.rs": "980c0df896731dd5b96f2333dbbf45589c2d8f6ac20fde80c560b146bec28708",
+    ".cache/T10-baseline/engine/src/host.rs": "a517add447a1e28cb4d2c3efc7628a6a23715a1550b65ed81d306fac73da84a4",
+    ".cache/T10-baseline/engine/src/lib.rs": "a0e230a34ec24a749e05da411547a1dccea755965a2070b5efb0867f8fee941a",
+    ".cache/T10-baseline/engine/src/machine.rs": "6990573c428a166510cb1baf6d2455727674bf4627576ddd8378e0fc6175788a",
+    ".cache/T10-baseline/engine/src/mem.rs": "f10a8b447bf667aab43e1eaaf12e1a6690416f34577e0a8e216dbc345c8cd68b",
+    ".cache/T10-baseline/engine/src/py.rs": "5433d50617370da54c78ffbeee50897df4022b719615d570f2a44669a1c2bc41",
+    ".cache/T10-baseline/engine/src/regs.rs": "c18bd0c8a220f2bbb09e1b4f53858e84bf6cd686ed2f46612f3970d6f1cf225a",
+    ".cache/T10-baseline/engine/src/routines.inc.rs": "12b4539c79ab3f6f57a11bea0353bdc4deb0eb463d4beae54b0b9097318baeb9",
+    ".cache/T10-baseline/engine/src/skill.rs": "dd894310819fcf9ea92d1b16d72f9aaf701ca494172d097813a862948b4d0181",
+    ".cache/T10-baseline/engine/src/speaker.rs": "e0bae997a1b1e8ef55a4af53aade606bce32bbad3cbcd11405f96e5059d6ca86",
+    ".cache/T10-baseline/engine/src/testhost.rs": "5e127a51c982d5a0d099e2e5da28f8c809a632c67ef0a257920a80bb4eb4dbfa",
+    ".cache/T10-baseline/engine/src/tests.rs": "ed2ddb894963121289767e348f3e8529c623fbaf9fba50b4d137b736b7504c59"
+  }
+}

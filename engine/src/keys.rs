@@ -1,0 +1,90 @@
+//! menus.match_key_poll0791:9372, accepted2cbeb36f; external service/menu calls stay visible.
+use crate::host::{Host,Reg};
+use crate::mem::lin;
+use crate::regs::Regs;
+#[derive(Clone,Copy,PartialEq,Eq)]
+pub enum Phase {Start,Polled,Off,Read,Key,Adjusted,Copied,Notice,AfterBranch,FinalOff}
+pub struct Request {pub next:Phase,pub target:&'static str,pub ret_to:&'static str,pub args:Vec<u16>,pub far:bool}
+fn ds8<H:Host>(h:&mut H,off:u16)->Result<u8,H::Err>{h.u8(lin(h.ds(),off))}
+fn ds16<H:Host>(h:&mut H,off:u16)->Result<u16,H::Err>{h.u16(lin(h.ds(),off))}
+fn pointer<H:Host>(h:&mut H,r:&mut Regs,at:u16)->Result<(),H::Err>{
+ let off=ds16(h,at)?;let seg=ds16(h,at.wrapping_add(2))?;r.set(Reg::Di,off as u32);r.set(Reg::Es,seg as u32);Ok(())
+}
+fn rb<H:Host>(h:&mut H,r:&mut Regs,k:u16)->Result<u8,H::Err>{let seg=r.get(h,Reg::Es)?;let off=r.get(h,Reg::Di)?.wrapping_add(k);h.u8(lin(seg,off))}
+fn w8<H:Host>(h:&mut H,r:&mut Regs,k:u16,v:u8,at:u16)->Result<(),H::Err>{let seg=r.get(h,Reg::Es)?;let off=r.get(h,Reg::Di)?.wrapping_add(k);h.write(lin(seg,off),&[v],lin(h.seg(0x0791),at))}
+fn cbw<H:Host>(h:&mut H,r:&mut Regs)->Result<(),H::Err>{let v=r.al(h)? as i8 as i16 as u16;r.set(Reg::Ax,v as u32);Ok(())}
+fn request<H:Host>(h:&mut H,r:&mut Regs,next:Phase,target:&'static str,ret_to:&'static str,args:Vec<u16>,far:bool)->Result<Option<Request>,H::Err>{r.store(h,true)?;Ok(Some(Request{next,target,ret_to,args,far}))}
+fn end<H:Host>(h:&mut H,r:&mut Regs,mutant:bool)->Result<Option<Request>,H::Err>{
+ r.leave(h)?;r.store(h,false)?;
+ if mutant{let at=h.ss_lin((h.entry().0 as u16).wrapping_sub(2) as u32)?;let old=h.u16(at)?;h.write(at,&(old^1).to_le_bytes(),lin(h.seg(0x214b),0))?;}
+ Ok(None)
+}
+fn after<H:Host>(h:&mut H,r:&mut Regs,mutant:bool)->Result<Option<Request>,H::Err>{
+ if ds8(h,0x9a3e)?!=0{return request(h,r,Phase::FinalOff,"214B:1E8D","0791:94C5",vec![],true);}end(h,r,mutant)
+}
+pub fn step<H:Host>(h:&mut H,phase:Phase,mutant:bool)->Result<Option<Request>,H::Err>{
+ let mut r=Regs::new(phase!=Phase::Start);
+ macro_rules! get {($reg:ident)=>{r.get(h,Reg::$reg)?};}
+ macro_rules! set {($reg:ident,$v:expr)=>{{let v=$v;r.set(Reg::$reg,v as u32);}};}
+ match phase {
+  Phase::Start=>{
+   r.enter(h,2)?;r.local16(h,-2,1)?;
+   for slot in 1u16..7 {
+    if slot>1{r.local16(h,-2,slot as u32)?;}
+    pointer(h,&mut r,0xa923)?;let speed=rb(h,&mut r,0x3f)?;r.set_al(h,speed)?;r.set_ah(h,0)?;
+    set!(Dx,get!(Ax));set!(Ax,6u16.wrapping_sub(get!(Dx)));let yes=u8::from(get!(Ax)>=slot);r.set_al(h,yes)?;cbw(h,&mut r)?;
+    set!(Di,get!(Ax));let at=get!(Di).wrapping_add(0x882);let b=ds8(h,at)?;set!(Dx,(get!(Dx)&0xff00)|b as u16);
+    set!(Ax,(slot+0x795)<<1);pointer(h,&mut r,0x7c26)?;set!(Di,get!(Di).wrapping_add(get!(Ax)));
+    let b=(get!(Dx)&255) as u8;w8(h,&mut r,0xfffe,b,0x93b3)?;
+   }
+   request(h,&mut r,Phase::Polled,"214B:0723","0791:93C2",vec![],true)
+  }
+  Phase::Polled=>{
+   if r.al(h)?!=0{return request(h,&mut r,Phase::Off,"214B:1E8D","0791:93CE",vec![],true);}
+   if ds8(h,0x7c38)?!=0{let bp=get!(Bp);return request(h,&mut r,Phase::AfterBranch,"0791:92FC","0791:94B9",vec![bp],false);}
+   after(h,&mut r,mutant)
+  }
+  Phase::Off=>request(h,&mut r,Phase::Read,"214B:08DD","0791:93D3",vec![],true),
+  Phase::Read=>{
+   let b=ds8(h,0xa976)?;r.set_al(h,b)?;let ax=get!(Ax);request(h,&mut r,Phase::Key,"23E4:19B2","0791:93DC",vec![ax],true)
+  }
+  Phase::Key=>{
+   let key=r.al(h)?;
+   match key {
+    0x20=>return request(h,&mut r,Phase::AfterBranch,"0791:1A04","0791:93E3",vec![],false),
+    0xae|0xaf=>{
+     pointer(h,&mut r,0xa923)?;let speed=rb(h,&mut r,0x3f)?;
+     if key==0xae&&speed<5{pointer(h,&mut r,0xa923)?;w8(h,&mut r,0x3f,speed+1,0x93f9)?;}
+     else if key==0xaf&&speed>0{pointer(h,&mut r,0xa923)?;w8(h,&mut r,0x3f,speed-1,0x9413)?;}
+    }
+    0xac|0xb1=>{
+     set!(Di,0x66a);r.set_al(h,0)?;let lo=get!(Ax);r.set_al(h,4)?;let hi=get!(Ax);
+     let b=u8::from(ds8(h,0xa976)?==0xb1);r.set_al(h,b)?;cbw(h,&mut r)?;set!(Di,get!(Ax));
+     let at=get!(Di).wrapping_add(0x7920);let b=ds8(h,at)?;r.set_al(h,b)?;cbw(h,&mut r)?;let ax=get!(Ax);let ds=h.ds();
+     return request(h,&mut r,Phase::Adjusted,"214B:1D6F","0791:9448",vec![ds,0x66a,lo,hi,ax],true);
+    }
+    0x0d|0x1b=>{r.set_al(h,1)?;let ax=get!(Ax);return request(h,&mut r,Phase::AfterBranch,"0791:ED8A","0791:945B",vec![ax],false);}
+    0x9f=>{
+     if ds8(h,0x9a3e)?==0{
+      pointer(h,&mut r,0xa96a)?;let seg=get!(Es);let off=get!(Di);pointer(h,&mut r,0xa972)?;set!(Ax,4000);
+      let dseg=get!(Es);let doff=get!(Di);let ax=get!(Ax);
+      return request(h,&mut r,Phase::Copied,"23E4:025D","0791:947D",vec![seg,off,dseg,doff,ax],true);
+     }
+    }
+    0xa7=>return request(h,&mut r,Phase::AfterBranch,"214B:1E5A","0791:94A2",vec![],true),
+    0x52=>{let bp=get!(Bp);return request(h,&mut r,Phase::AfterBranch,"0791:92FC","0791:94AC",vec![bp],false);}
+    _=>{}
+   }
+   after(h,&mut r,mutant)
+  }
+  Phase::Adjusted=>request(h,&mut r,Phase::AfterBranch,"0791:0691","0791:944B",vec![],false),
+  Phase::Copied=>request(h,&mut r,Phase::Notice,"16D6:0945","0791:9482",vec![],true),
+  Phase::Notice=>{
+   pointer(h,&mut r,0xa972)?;let seg=get!(Es);let off=get!(Di);pointer(h,&mut r,0xa96a)?;set!(Ax,4000);
+   let dseg=get!(Es);let doff=get!(Di);let ax=get!(Ax);
+   request(h,&mut r,Phase::AfterBranch,"23E4:025D","0791:9497",vec![seg,off,dseg,doff,ax],true)
+  }
+  Phase::AfterBranch=>after(h,&mut r,mutant),
+  Phase::FinalOff=>end(h,&mut r,mutant),
+ }
+}

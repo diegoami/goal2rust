@@ -1,0 +1,17 @@
+test_all_branches_and_observers (test_match_key_poll.MatchKeyPollTests.test_all_branches_and_observers) ... ok
+test_errors_and_variant (test_match_key_poll.MatchKeyPollTests.test_errors_and_variant) ... ok
+test_native_caller (test_match_key_poll.MatchKeyPollTests.test_native_caller) ... FAIL
+
+======================================================================
+FAIL: test_native_caller (test_match_key_poll.MatchKeyPollTests.test_native_caller)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_match_key_poll.py", line 90, in test_native_caller
+    p,_=exercise(Oracle,0);r,n=exercise(PortMachine,0);self.assertEqual(p,r);self.assertEqual(n.get(ROOT),1)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 1
+
+----------------------------------------------------------------------
+Ran 3 tests in 8.226s
+
+FAILED (failures=1)
