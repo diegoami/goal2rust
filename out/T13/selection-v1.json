@@ -1,0 +1,113 @@
+{
+  "selected": {
+    "body_self_s": 0.9984852940000001,
+    "cumulative_s": 7.0241974460000005,
+    "function": "play_state_update",
+    "guest_entries": 36198,
+    "module": "contests",
+    "native_entries": 0,
+    "python_calls_or_resumes": 397248,
+    "python_entries": 36198
+  },
+  "source_sha256": "b4db099959a09a1dcb78f031e9a44dc64624a5ffd8ea7b0be3441298bb0ec40e",
+  "profile_sha256": "3b2834a6b1fea4f36f05c42201e680beb9d9509076d8141c2f13b1365068e2e8",
+  "call_sites": [
+    {
+      "target": "0791:56D9",
+      "ret": "0791:57B6",
+      "far": false,
+      "args": 1
+    },
+    {
+      "target": "0791:5049",
+      "ret": "0791:57BE",
+      "far": false,
+      "args": 1
+    },
+    {
+      "target": "0791:533B",
+      "ret": "0791:57C6",
+      "far": false,
+      "args": 1
+    },
+    {
+      "target": "0791:5565",
+      "ret": "0791:57CE",
+      "far": false,
+      "args": 1
+    },
+    {
+      "target": "0791:045D",
+      "ret": "0791:57DE",
+      "far": false,
+      "args": 1
+    },
+    {
+      "target": "0791:4B64",
+      "ret": "0791:57F2",
+      "far": true,
+      "args": 2
+    },
+    {
+      "target": "0791:2BB1",
+      "ret": "0791:582A",
+      "far": true,
+      "args": 2
+    },
+    {
+      "target": "0791:2B51",
+      "ret": "0791:5857",
+      "far": true,
+      "args": 2
+    },
+    {
+      "target": "0791:5729",
+      "ret": "0791:585F",
+      "far": false,
+      "args": 1
+    },
+    {
+      "target": "0791:2974",
+      "ret": "0791:586C",
+      "far": true,
+      "args": 2
+    },
+    {
+      "target": "0791:2974",
+      "ret": "0791:5885",
+      "far": true,
+      "args": 2
+    },
+    {
+      "target": "0791:44C1",
+      "ret": "0791:58A9",
+      "far": true,
+      "args": 3
+    },
+    {
+      "target": "0791:4A28",
+      "ret": "0791:58C2",
+      "far": true,
+      "args": 2
+    },
+    {
+      "target": "0791:474D",
+      "ret": "0791:58CB",
+      "far": true,
+      "args": 2
+    },
+    {
+      "target": "0791:6188",
+      "ret": "0791:58DB",
+      "far": true,
+      "args": 2
+    }
+  ],
+  "all_registered": true,
+  "finite_dynamic_dispatch": true,
+  "expected_native_bodies": 20,
+  "expected_native_entries": 1752407,
+  "expected_python_entries": 1351278,
+  "accepted": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+  "baseline": "1c20841f84f7c2e02dd8357814d4847b1603fc8e"
+}

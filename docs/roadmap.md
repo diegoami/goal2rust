@@ -220,6 +220,18 @@ integration must preserve the worker/lifecycle/API boundary and remains separate
 No selected oracle routine semantic change: retain controlled 2cbeb36f pin/private
 input policy. Archaeology main 2a411f50 remains unchanged.
 
+## 2i. T13: play-state update caller
+
+Translate contests.play_state_update0791:57AC, hottest remaining Python body after
+T12(36,198 starts). One complete caller, finite four probes/two nearest-table
+returns, keeper/candidate/destination/movement/holder branches;15 returns/14
+registered callees remain explicit. Live own pointers/currentBP/actualAX/record/
+flag/table semantics and None/True/False destination choice require exact tests.
+Contract[tasks/T13.md](tasks/T13.md),[out/T13](../out/T13/README.md). Same pin/private
+state-v2, T12 baseline preserved; full previous19-body/new caller/error/control/
+observer/ordered/lifecycle/ALL75/F40/profile/artifact/closure proof and3 quiet
+rotated four-arm measured outcomes, no arbitrary5% floor. No callee/hardware claim.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the
