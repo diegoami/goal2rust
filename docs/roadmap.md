@@ -299,6 +299,21 @@ ordered/lifecycle/ALL75/F40/profile, closed artifact ledger and three quiet pair
 four-arm outcomes; all outcomes retained, no 5% floor. No artificial guest-return
 control, callee-frame or separate registered 86D0 implementation claim.
 
+T16 full fidelity and all three measured rounds pass: median 5.03% less CPU
+than saved T15, every outcome retained. Candidate/PyPy CPU is 1.073x on the
+reference fixture (still slower than PyPy), with 2.627x paired CPython speed.
+There are now 23 native bodies / 1,979,912 native guest entries, with 1,123,773
+Python entries remaining (not a code-completion percentage). Closed evidence:
+[out/T16/validation-v1.json](../out/T16/validation-v1.json), complete samples and
+scope in the [assessment](../out/T16/assessment.md). Source branch traces and
+all 13 write sites, strict ALL75/F40, ordered drive, sealed lifecycle and
+independent backend attestation pass; all 56 experiment groups are stopped.
+
+Upstream rechecked at completion: archaeology remains `2a411f5`; goal2 advances
+to `0ea62a7` ([PR #499](https://github.com/diegoami/goal2/pull/499)), reporting
+completed and still-running test modules promptly. This changes test reporting,
+not the accepted oracle or worker API; no roadmap change. No next task included.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the

@@ -1,5 +1,9 @@
 # T16 player run step
 
+Validation complete: see assessment.md and validation-v1.json.
+Post-exit audit and actual-host process closure pass. Every receipt is sealed;
+no producer remains. Live CI/merge/stop status is in PR #39 / checkpoint #1.
+
 Read docs/tasks/T16.md, contract.md and live checkpoint #1 before resuming.
 Recheck live heads/checks and actual process groups. Preserve completed receipts;
 never edit bound .py/Rust/tests/binaries/private inputs or rebuild during runs.
