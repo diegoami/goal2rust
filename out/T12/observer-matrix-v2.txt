@@ -1,0 +1,53 @@
+"""Supplemental authored error/variant and live-return/store observer matrices."""
+import hashlib,json,sys
+from pathlib import Path
+sys.path.insert(0,'out/T12');import evidence as e
+e.verify();e.deny_original();before=e.hashes();sys.path.insert(0,'engine/tests')
+import test_speaker_state as t
+rows=[];seen={s:0 for s in ['write',*t.BODIES,'0791:94DC','0791:9540']}
+for failure in seen:
+ for root in t.BODIES:
+  for case in range(9):
+   opts=dict(root=root,failure=failure,mutations=True)
+   p,_=t.exercise(t.Oracle,case,**opts);r,_=t.exercise(t.PortMachine,case,**opts);assert p==r,(failure,root,case)
+   seen[failure]+=p['error'] is not None
+   rows.append(dict(failure=failure,root=root,case=case,raised=p['error'] is not None))
+assert all(seen.values()),seen
+variants=[]
+for root in t.BODIES:
+ for variant in ['nondefault-identity','omit-0791-94e8','omit-0791-94c9','secondary-seed-adjacent']:
+  p,_=t.exercise(t.Oracle,2,root=root,variant=variant);r,n=t.exercise(t.PortMachine,2,root=root,variant=variant);assert p==r and root not in n
+  variants.append(dict(root=root,variant=variant,equal=True,native_root=False))
+oldat={c:c.at for c in [t.Oracle,t.PortMachine]};oldwrite={c:c.on_write for c in [t.Oracle,t.PortMachine]};observed=[];current={}
+def at(m,site,fn):
+ def wrapped(replay):
+  fn(replay)
+  if site=='0791:94DC':
+   m.set_reg('ax',0x8000);current['armed']=True;current['return_ax']+=1
+  if site=='0791:9522':
+   ds=m.DS*16;off=int.from_bytes(m._memory[ds+0xa923:ds+0xa925],'little');seg=int.from_bytes(m._memory[ds+0xa925:ds+0xa927],'little')
+   m._memory[seg*16+((off+63)&65535)]=0;current['speed_zero']+=1
+ return oldat[type(m)](m,site,wrapped)
+def on_write(m,lo,hi,fn):
+ def wrapped(a,n,v):
+  fn(a,n,v)
+  if current['armed'] and m.pc()==m.lin('214B:0000'):
+   m.set_reg('ax',0x1111);current['armed']=False;current['store_ax']+=1
+ return oldwrite[type(m)](m,lo,hi,wrapped)
+try:
+ for c in oldat:c.at=at;c.on_write=on_write
+ for case in range(30):
+  for root in [t.ROOT,t.SEED]:
+   pair=[]
+   for cls in [t.Oracle,t.PortMachine]:
+    current=dict(armed=False,return_ax=0,speed_zero=0,store_ax=0)
+    p,_=t.exercise(cls,case,root=root,direct=True);pair.append((p,dict(current)))
+   assert pair[0]==pair[1],(case,root)
+   if root==t.SEED:
+    assert pair[0][0]['done']==[(root,0x8000)] and pair[0][0]['regs']['eax']&65535==0x8000 and pair[0][1]['store_ax']==1
+   observed.append(dict(case=case,root=root,**pair[0][1]))
+finally:
+ for c in oldat:c.at=oldat[c];c.on_write=oldwrite[c]
+assert sum(r['speed_zero'] for r in observed)>0
+report=dict(pass_all=True,error_comparisons=len(rows),errors_seen=seen,variants=variants,live_return_store_observers=observed,script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
+e.write('out/T12/observer-matrix-v2.json',report,before);print('Errors',len(rows),'variants',len(variants),'return/store observers',len(observed),'equal')
