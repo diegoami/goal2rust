@@ -1,0 +1,7 @@
+START update-differential-v1 40076
+EXIT update-differential-v1 0
+START update-body-v1 40198
+EXIT update-body-v1 0
+START update-return-v1 40233
+EXIT update-return-v1 0
+Three canonical update proofs complete; supervisor can resume remaining jobs

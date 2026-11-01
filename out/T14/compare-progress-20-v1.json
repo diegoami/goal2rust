@@ -1,0 +1,32 @@
+{
+  "provisional_subset": true,
+  "expected": 20,
+  "pass_all": true,
+  "full_ALL75_pending": true,
+  "lines": [
+    "F40/e032-0101: score [1, 0] ticks 4279 draws 192967 cpu 38.561 s -> 91.166 s; identical",
+    "F40/e032-1234: score [1, 1] ticks 4146 draws 184109 cpu 38.619 s -> 89.504 s; identical",
+    "F40/e032-2345: score [0, 1] ticks 4138 draws 187079 cpu 47.599 s -> 90.696 s; identical",
+    "F40/e032-2b7e: score [0, 2] ticks 4029 draws 175773 cpu 46.634 s -> 87.18 s; identical",
+    "F40/e032-4c1d: score [1, 0] ticks 4659 draws 210776 cpu 40.011 s -> 99.686 s; identical",
+    "F40/e032-6a33: score [0, 2] ticks 4159 draws 184733 cpu 34.903 s -> 90.152 s; identical",
+    "F40/e032-8e05: score [1, 0] ticks 4157 draws 186815 cpu 47.617 s -> 89.633 s; identical",
+    "F40/e032-a1f0: score [1, 0] ticks 4281 draws 191805 cpu 49.012 s -> 90.458 s; identical",
+    "F40/e032-c3c3: score [2, 1] ticks 4262 draws 184677 cpu 33.122 s -> 83.497 s; identical",
+    "F40/e032-e719: score [1, 0] ticks 4240 draws 191629 cpu 34.353 s -> 86.002 s; identical",
+    "F40/more-0042: score [0, 2] ticks 4144 draws 182554 cpu 47.366 s -> 84.138 s; identical",
+    "F40/more-1111: score [1, 0] ticks 4271 draws 191359 cpu 49.089 s -> 85.652 s; identical",
+    "F40/more-3a5c: score [0, 0] ticks 4138 draws 184982 cpu 36.492 s -> 87.162 s; identical",
+    "F40/more-5e5e: score [2, 1] ticks 4435 draws 193715 cpu 38.425 s -> 89.402 s; identical",
+    "F40/more-7f31: score [1, 0] ticks 4056 draws 181732 cpu 46.393 s -> 82.761 s; identical",
+    "F40/more-9abc: score [0, 0] ticks 3991 draws 181391 cpu 47.599 s -> 85.252 s; identical",
+    "F40/more-b4d2: score [1, 2] ticks 4147 draws 180349 cpu 40.04 s -> 82.908 s; identical",
+    "F40/more-cafe: score [0, 0] ticks 4180 draws 188266 cpu 40.689 s -> 86.443 s; identical",
+    "F40/more-d00d: score [1, 1] ticks 4367 draws 193560 cpu 48.418 s -> 102.021 s; identical",
+    "F40/more-face: score [0, 0] ticks 4194 draws 189436 cpu 47.854 s -> 107.925 s; identical",
+    "20 matches expected identical, 20 pass, 0 fail"
+  ],
+  "candidate_sha256": "fa2f424203906667d165356d9d8f5cd2104b9bf6c3149cfa358a4aa62fb2f983",
+  "comparator_sha256": "fc992531242701b3c4ef419ff301627e411557fe918100fc2f1e6b65b1576e97",
+  "script_sha256": "d991090a959f072fb151137bfc4549f127b7fc7dc98e966f26fb220bc92f27ec"
+}

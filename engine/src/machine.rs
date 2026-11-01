@@ -110,6 +110,7 @@ enum NativeContinuation {
     BallDraw(crate::ball_draw::Phase),
     Sweep(crate::sweep::Phase,Option<crate::sweep::Saved>),
     Play(crate::play::Phase),
+    PlayerUpdate(crate::player_update::Phase,Option<crate::player_update::Saved>),
     SkillStart,
     SkillReturn(crate::skill::Saved),
 }
@@ -846,6 +847,7 @@ impl MachineCore {
             frame.native = match address.extract::<String>()?.as_str() {
                 "0791:2956" => Some(NativeContinuation::AvailabilityStart),
                 "0791:278A" => Some(NativeContinuation::SkillStart),
+                "0791:8AE9" => Some(NativeContinuation::PlayerUpdate(crate::player_update::Phase::Start,None)),
                 "0791:57AC" => Some(NativeContinuation::Play(crate::play::Phase::Start)),
                 "0791:9564" => Some(NativeContinuation::Sweep(crate::sweep::Phase::Start,None)),
                 "0791:8F10" => Some(NativeContinuation::BallDraw(crate::ball_draw::Phase::Start)),
@@ -942,6 +944,16 @@ impl MachineCore {
         let mut completed_value = py.None();
         let result = (|| -> PyResult<Option<Py<PyAny>>> {
             match f.native.take().unwrap() {
+                NativeContinuation::PlayerUpdate(phase,saved)=>{
+                    let first=phase==crate::player_update::Phase::Start;
+                    let reply=if matches!(phase,crate::player_update::Phase::AtBall|crate::player_update::Phase::Comment|crate::player_update::Phase::Take){sent.extract::<u16>()?}else{0};
+                    let action=crate::player_update::step(&mut h,phase,saved,reply,self.mutant==20)?;
+                    if first{*self.native_calls.borrow_mut().entry("0791:8AE9".into()).or_insert(0)+=1;}
+                    match action{
+                        crate::player_update::Action::Call(req)=>{let args=PyTuple::new(py,req.args)?;let call=self.call_type.bind(py).call1((req.target,args,req.ret_to,req.far,false))?;f.native=Some(NativeContinuation::PlayerUpdate(req.next,Some(req.saved)));Ok(Some(call.unbind()))}
+                        crate::player_update::Action::Done(value)=>{if let Some(v)=value{completed_value=v.into_pyobject(py)?.into_any().unbind();}Ok(None)}
+                    }
+                }
                 NativeContinuation::Play(phase)=>{
                     let first=phase==crate::play::Phase::Start;
                     let request=crate::play::step(&mut h,phase,self.mutant==18)?;
@@ -1088,6 +1100,7 @@ impl MachineCore {
                 || (self.mutant == 6 && ret_to == "0791:27EB")
                 || (self.mutant == 8 && matches!(ret_to.as_str(),"0791:94F9"|"0791:9522"|"0791:952B"|"0791:9532"|"0791:9540"))
                 || (self.mutant == 9 && ret_to == "0791:94DC")
+                || (self.mutant == 21 && matches!(ret_to.as_str(),"0791:8B1B"|"0791:8B2B"|"0791:8B3B"|"0791:8B4A"|"0791:8B59"|"0791:8B68"|"0791:8B77"|"0791:8B86"|"0791:8B95"|"0791:8BA4"|"0791:8BB3"|"0791:8BB7"|"0791:8BED"|"0791:8C1D"|"0791:8C26"|"0791:8C35"))
                 || (self.mutant == 19 && matches!(ret_to.as_str(),"0791:57B6"|"0791:57BE"|"0791:57C6"|"0791:57CE"|"0791:57DE"|"0791:57F2"|"0791:582A"|"0791:5857"|"0791:585F"|"0791:586C"|"0791:5885"|"0791:58A9"|"0791:58C2"|"0791:58CB"|"0791:58DB"))
                 || (self.mutant == 17 && matches!(ret_to.as_str(),"0791:9597"|"0791:95C9"|"0791:95FB"|"0791:95FE"|"0791:9601"|"0791:9634"|"0791:963F"|"0791:965C"|"0791:9669"|"0791:966C"|"0791:9695"|"0791:96BE"|"0791:96CB"|"0791:96DB"|"0791:96DE"|"0791:96E7"|"0791:96EA"))
                 || (self.mutant == 13 && matches!(ret_to.as_str(),"0791:8F66"|"0791:8FD4"))

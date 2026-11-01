@@ -1,0 +1,7 @@
+{
+  "outputs_equal": true,
+  "baseline_cpu_s": 47.924464499,
+  "candidate_cpu_s": 47.896318107,
+  "ratio": 0.9994126926133814,
+  "limitations": "Single pilot; three paired rounds and complete fidelity gates still required"
+}
