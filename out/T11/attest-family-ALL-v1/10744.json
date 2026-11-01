@@ -1,0 +1,48 @@
+{
+  "pid": 10744,
+  "argv": [
+    "experiments/E036-match-port/family.py",
+    "--family",
+    "ALL",
+    "--engine",
+    "port",
+    "--no-unicorn",
+    "--from-records",
+    "--tables",
+    "/home/diego/projects/goal2rust/.cache/T07-tables",
+    "--workers",
+    "2",
+    "--cache",
+    "/home/diego/projects/goal2rust/.cache/goal2-archaeology/.cache/dl",
+    "--out",
+    "/home/diego/projects/goal2rust/out/T11/family-ALL-rust-v1.jsonl"
+  ],
+  "oracle": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+  "machines": 33,
+  "backend": "rust",
+  "native_calls": {
+    "0791:278A": 1390406,
+    "1771:3A06": 1390406,
+    "0791:2C29": 5452650,
+    "0791:94C9": 199813,
+    "0791:2FB1": 244562,
+    "214B:1E8D": 3124702,
+    "0791:2B51": 9521634,
+    "0791:2CEC": 5954789,
+    "0791:26D7": 8156419,
+    "0791:045D": 5548444,
+    "0791:8F10": 3287727,
+    "1771:3216": 11359933,
+    "214B:0688": 199813,
+    "0791:2BE5": 12575192,
+    "0791:2974": 2826561,
+    "0791:9372": 3151392,
+    "0791:2956": 8254088,
+    "0791:94E8": 3154276
+  },
+  "bridge_fast_calls": {
+    "write": 212428708,
+    "u8": 326032915,
+    "u16": 420233542
+  }
+}

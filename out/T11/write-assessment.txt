@@ -1,0 +1,86 @@
+"""Render the accepted T11 record without changing producer or runtime source."""
+import json,statistics
+from pathlib import Path
+o=Path('out/T11');load=lambda n:json.loads((o/(n+'.json')).read_text());v=load('validation-v1');p=load('performance-v1');assert v['pass_all'] and p['measurement_complete']
+ratio=p['median_ratio'];change=100*abs(1-ratio);direction='less' if ratio<1 else 'more';cpy=statistics.median(r['cpu_s']['python']/r['cpu_s']['candidate'] for r in p['rounds']);pypy=statistics.median(r['candidate_to_pypy'] for r in p['rounds'])
+table='\n'.join('| '+str(r['round'])+' | '+' | '.join(f"{r['cpu_s'][a]:.6f}" for a in ['baseline','candidate','python','pypy'])+f" | {r['candidate_to_baseline']:.9f} |" for r in p['rounds'])
+text=f'''# T11 ball draw-state incremental port
+
+One complete caller, display.draw_ball_state0791:8F10, and inline grid_cell now run
+in Rust. Captured record pointers, live grid/coordinate/ZF/AX observations, signed-
+byte coordinates with unsigned word MUL/highDX/unchanged flags, all previous/current
+glyph/occupancy writes, stack and callback order and variant fallback match the
+accepted2cbeb36f/state-v2 oracle. Both registered callees and nested multiply remain
+actual delegated source bodies; no transitive callee/hardware implementation claim.
+
+The reference drive has18 native bodies/1,712,715 native guest entries and1,390,970
+Python entries of3,103,685 total.79,194 entries moved from Python. This is a partial
+port, not a whole-code completion percentage.
+
+## Complete paired measurements
+
+Three quiet simultaneous savedT10/candidate/plainCPython/PyPy rounds, distinct
+physical cores, rotated assignments/launch order, original guards; every raw
+output agrees, every sample retained. All rounds faster:{p['all_rounds_improve']}.
+
+| Round | T10 CPU s | Candidate CPU s | CPython CPU s | PyPy CPU s | Candidate/T10 |
+| --- | --- | --- | --- | --- | --- |
+{table}
+
+Median ratio **{ratio:.9f}: {change:.2f}% {direction} CPU** than saved T10.
+Median paired CPython speed **{cpy:.3f}x**; candidate/PyPy CPU **{pypy:.3f}x**.
+{'Still slower than PyPy.' if pypy>=1 else 'Faster on this reference fixture only, not a broad PyPy-win claim.'}
+No arbitrary per-increment5% minimum. This is one host/reference fixture; the
+0.96407507 pilot is diagnostic, not acceptance. No speculation about sample variation.
+
+## Fidelity and closed evidence
+
+- Public35 each CPython/PyPy, Rust11,20 lifetime cases pass.
+-56,664 normal full-state comparisons across18 bodies:54,568 previous17-body
+  cases plus2,096 new caller cases(eight actual RAM captures/500 authored cases/
+  four tap-listener combinations).352 new and1,066 key-poll error cases plus328
+  speaker observer cases agree. Every scoped body/return control caught; no-call
+  cases stay equal under return13. Both returns/targets/nested multiply and all4
+  write sites/path outcomes covered with REAL delegated callees, positive success,
+  captured-argument/savedBP/pointer/ZF/AX mutations, alias/wrap/sentinels, pauses,
+  direct done/errors/variants. No test doubles or missing callee workarounds needed.
+- Exact ordered831 events/result/records/full memory/553 stretches and full IO/
+  site/listener digest identical (158,092,780 IO observations).
+- Four positive-denial sealed lifecycle checks pass with11 attested Rust machines;
+  strict ALL75/75 and exact-source F40 40/40 identical,75-machine backend attestation
+  and all18 native bodies observed. No original guards raised or corpus reduced.
+- Authoritative **validation-v1.json**, {len(v['evidence_sha256'])} recursive evidence files,
+  with post-exit-audit-v1.json. Actual-host process-closure-v1.json proves supervisor
+  exit and41 empty experiment groups(27 canonical/12 timing/2 pilot). Full source/
+  binary/private-input/baseline/archive/harness/prefix/proof/observer rehash passes.
+
+Preserved source/adapter/extension baseline:.cache/T11-baseline/engine,
+baseline-snapshot-v1.json; candidate binaries:.cache/T11-artifacts,
+artifact-archive-v1.json. Baseline fails only the new native-coverage assertion;
+all behavioral tests already pass. The implementation's first build and all
+current proof bindings pass. No overwritten historical receipt, original game
+bytes/state/tables in git, oracle semantic fix or automatic model review.
+Existing #6/laterA700/ref-121/owner-run engine-milestone review and goal2 integration/
+save-load/cancellation/playtest remain separate. Live CI/merge/stop state PR #29/
+checkpoint #1. No next task included.
+'''
+for a,b in [('draw_ball_state0791','draw_ball_state 0791'),('accepted2cb','accepted 2cb'),('has18','has 18'),('and1,','and 1,'),('of3,','of 3,'),('total.79,','total. 79,'),('savedT10','saved T10'),('faster:','faster: '),('per-increment5%','per-increment 5%'),('Public35','Public 35'),('Rust11,20','Rust 11, 20'),('-56,664','- 56,664'),('across18','across 18'),('bodies:54,','bodies: 54,'),('previous17','previous 17'),('plus2,','plus 2,'),('cases(eight','cases (eight'),(').352','). 352'),('plus328','plus 328'),('return13','return 13'),('all4','all 4'),('ordered831','ordered 831'),('with11','with 11'),('identical,75','identical, 75'),('all18','all 18'),('and41','and 41'),('groups(27','groups (27'),('baseline:.cache','baseline: .cache'),('binaries:.cache','binaries: .cache')]:text=text.replace(a,b)
+(o/'assessment.md').write_text(text)
+pth=o/'README.md';s=pth.read_text();pos=s.index('Task #28');pth.write_text(s[:pos]+'''## Validation complete
+
+Authoritative validation-v1.json, post-exit-audit-v1.json and real-host process-
+closure-v1.json bind all current proof/measurements and empty groups. See
+assessment.md for every sample. No producer remains; live exact-head CI/merge/
+stop status is in PR #29/checkpoint #1. Do not restart completed producers,
+overwrite receipts/baselines or reuse this proof after runtime changes.
+
+'''+s[pos:])
+Path('/tmp/T11-pr-final.md').write_text(f'''Port display.draw_ball_state0791:8F10 and inline grid_cell to Rust, preserving previous/current glyph and occupancy writes, captured record pointers across calls, live table/coordinate/ZF/AX observations, exact unsigned-MUL signed-byte arithmetic, all IO/stack/callback behavior and variant fallback. Both registered callees and nested multiply stay actual delegated source bodies. One complete caller, not its transitive closure;18 native bodies total,79,194 fewer Python entries.
+
+All gates pass:35 public each CPython/PyPy,11 Rust,20 lifetime cases;56,664 normal full-state comparisons plus1,418 error/328 speaker observers and caught scoped controls; exact ordered831-event/full-memory/records/callback digest; four sealed lifecycle checks/11-machine attestation; strict ALL75/75 and exact-source F40 40/40 identical/75-machine attestation. Actual callees, explicit positive-success/both-return/all-write/path coverage. Final ledger out/T11/validation-v1.json binds{len(v['evidence_sha256'])} evidence files; actual-host closure verifies41 groups empty. See assessment.md.
+
+Three quiet rotated four-arm rounds retain/report every outcome:median candidate/T10{ratio:.9f}, {change:.2f}% {direction} CPU; median paired CPython speed{cpy:.3f}x, candidate/PyPy CPU{pypy:.3f}x. No arbitrary5% per-increment floor. Exact-head CI before squash. Same accepted2cbeb36f/state-v2/private T07 inputs; no original bytes, oracle fix, model review or callee/hardware implementation. Existing #6/laterA700/ref-121/engine review/adoption gates remain.
+
+Closes #28.
+''')
+print('Accepted T11 assessment/README/PR prose rendered')

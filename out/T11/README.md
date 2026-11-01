@@ -1,5 +1,13 @@
 # T11 ball draw-state caller
 
+## Validation complete
+
+Authoritative validation-v1.json, post-exit-audit-v1.json and real-host process-
+closure-v1.json bind all current proof/measurements and empty groups. See
+assessment.md for every sample. No producer remains; live exact-head CI/merge/
+stop status is in PR #29/checkpoint #1. Do not restart completed producers,
+overwrite receipts/baselines or reuse this proof after runtime changes.
+
 Task #28; docs/tasks/T11.md /contract.md define scope/Done-when. Read latest live
 checkpoint #1 and heads/checks before resuming. Preserve every completed receipt
 and old artifact; no original bytes/states/tables in git. Actual T10 baseline

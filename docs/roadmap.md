@@ -186,6 +186,13 @@ Upstreams rechecked before T11: archaeology2a411f50 unchanged; goal2 advances
 65c47459(PR490: CI scheduling/timeout and cancellation-test changes). No selected
 engine semantic change or reason to alter the controlled accepted pin/full corpus.
 
+T11 full fidelity and three-round measurements pass: all rounds improve, median
+4.22% less CPU than saved T10. 18 native bodies/1,712,715 native guest entries,
+1,390,970 Python entries remain (not a code-completion percentage). Accepted
+ledger: [out/T11/validation-v1.json](../out/T11/validation-v1.json), all samples and
+scope: [assessment](../out/T11/assessment.md). Actual registered delegated callees,
+explicit positive success/branch coverage, no new hardware or callee implementation.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the
