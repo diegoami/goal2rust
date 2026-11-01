@@ -1,0 +1,25 @@
+{
+  "pid": 30529,
+  "argv": [
+    "experiments/E036-match-port/family.py",
+    "--family",
+    "ALL",
+    "--engine",
+    "port",
+    "--no-unicorn",
+    "--from-records",
+    "--tables",
+    "/home/diego/projects/goal2rust/.cache/T07-tables",
+    "--workers",
+    "2",
+    "--cache",
+    "/home/diego/projects/goal2rust/.cache/goal2-archaeology/.cache/dl",
+    "--out",
+    "/home/diego/projects/goal2rust/out/T13/family-ALL-rust-v1.jsonl"
+  ],
+  "oracle": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+  "machines": 0,
+  "backend": "rust",
+  "native_calls": {},
+  "bridge_fast_calls": {}
+}

@@ -232,6 +232,13 @@ state-v2, T12 baseline preserved; full previous19-body/new caller/error/control/
 observer/ordered/lifecycle/ALL75/F40/profile/artifact/closure proof and3 quiet
 rotated four-arm measured outcomes, no arbitrary5% floor. No callee/hardware claim.
 
+T13 complete fidelity and measurements pass: all three rounds faster, median
+5.27% less CPU than saved T12. 20 native bodies/1,752,407 native entries, 1,351,278
+Python entries remain (not code-completion percentage). Closed current proof:
+[out/T13/validation-v2.json](../out/T13/validation-v2.json), all samples/scope and
+preserved failed error fixture in [assessment](../out/T13/assessment.md). No runtime
+change for fixture correction. Existing callees remain delegated, no next task.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the

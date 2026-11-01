@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/home/diego/projects/goal2rust/.venv/bin/python",
+    "-B",
+    "experiments/E036-match-port/compare.py",
+    "--family",
+    "ALL",
+    "--no-screen",
+    "--candidate",
+    "/home/diego/projects/goal2rust/out/T13/family-ALL-rust-v1.jsonl"
+  ],
+  "exit_code": 0
+}

@@ -1,5 +1,14 @@
 # T13 play-state caller
 
+## Validation complete
+
+Authoritative validation-v2.json/post-exit-audit-v1.json and actual-host process-
+closure-v1.json bind all accepted proof/measurements and empty groups. See
+assessment.md for every sample and preserved v1 fixture failure. No producer
+remains; live exact-head CI/merge/stop PR #33/checkpoint #1. Do not restart or
+overwrite completed receipts/baselines, reuse proof after runtime changes, or
+accept failed v1 epochs as the current proof.
+
 Task #32, docs/tasks/T13.md /contract.md; latest live checkpoint #1 and heads/
 checks/groups before resume. Never overwrite any earlier receipt/baseline or
 mutate/rebuild bound .py/Rust/tests/extensions/inputs during a run. Private game

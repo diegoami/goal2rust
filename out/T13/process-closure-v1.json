@@ -1,0 +1,299 @@
+{
+  "pass_all": true,
+  "node": "IT13",
+  "time_utc": "2026-11-01T15:06:54Z",
+  "supervisor_pid": 30392,
+  "supervisor_exited": true,
+  "groups": [
+    {
+      "kind": "canonical",
+      "pid": 29296,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 29449,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 29705,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 30415,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 30416,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 30417,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 30418,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 30827,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 30938,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 31003,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 31068,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 31129,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 31973,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 34419,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 34737,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 34807,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 34907,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 34988,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 35074,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 35136,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 35213,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 35282,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 35364,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 35443,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 35489,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 35531,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 35560,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 35605,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 35796,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 35977,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 36056,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 36227,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 36922,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 36943,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 36944,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 36945,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 36946,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 37136,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 37137,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 37138,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 37139,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 37309,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 37310,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 37311,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 37312,
+      "empty": true
+    },
+    {
+      "kind": "pilot",
+      "pid": 30204,
+      "empty": true
+    },
+    {
+      "kind": "pilot",
+      "pid": 30205,
+      "empty": true
+    },
+    {
+      "kind": "failed-historical-preflight",
+      "pid": 28500,
+      "empty": true
+    }
+  ],
+  "canonical_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "timing_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "script_sha256": "6c395d5eb35f4ab22bed7e59941431bacf5578f1d92406c22f9f6a001699b8d3"
+}
