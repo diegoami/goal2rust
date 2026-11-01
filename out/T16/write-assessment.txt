@@ -1,0 +1,95 @@
+"""Render final prose from sealed receipts without mutating any evidence source."""
+import json,statistics
+from pathlib import Path
+out=Path('out/T16');load=lambda name:json.loads((out/(name+'.json')).read_text())
+validation=load('validation-v1');perf=load('performance-v1');assert validation['pass_all'] and perf['measurement_complete']
+ratio=perf['median_ratio'];change=f'{abs(1-ratio)*100:.2f}% '+('less' if ratio<1 else 'more')+' CPU'
+speed=statistics.median(row['cpu_s']['python']/row['cpu_s']['candidate'] for row in perf['rounds']);pypy=statistics.median(row['candidate_to_pypy'] for row in perf['rounds'])
+rows='\n'.join('| '+str(row['round'])+' | '+' | '.join(f"{row['cpu_s'][key]:.6f}" for key in ['baseline','candidate','python','pypy'])+f" | {row['candidate_to_baseline']:.9f} |" for row in perf['rounds'])
+prose=f'''# T16 player run-step and inline movement
+
+The complete `pilot.player_run_step` body (0791:8889, ret 2) and its inline
+movement/random/set/attack/side/keeper/target helpers run in Rust. The accepted
+source is a plain function with no guest calls or frame prologue. No callee
+frames, guest returns, register assignments or retry cap are invented. Parent
+frame/linear record, captured dx/dy/random value, live contents/pointers, signed
+arithmetic, pitch/picture blocking and every seed/movement write preserve source.
+Variants stay Python; 86D0 is an inline helper, not a separately registered native
+body. Same accepted 2cbeb36f / private T07 state-v2. No hardware claim.
+
+23 native bodies cover 1,979,912 guest entries, leaving 1,123,773 Python entries
+of 3,103,685 total on the fixture. 75,781 entries moved. This remains a partial
+port, not a code-completion percentage.
+
+## Every timing outcome
+
+Three quiet simultaneous saved T15/candidate/plain CPython/PyPy rounds use
+separate physical cores and rotated launch/core assignment. Every raw output
+agrees and every sample is retained; no per-increment magnitude floor.
+
+| Round | T15 CPU s | Candidate CPU s | CPython CPU s | PyPy CPU s | Candidate/T15 |
+| --- | --- | --- | --- | --- | --- |
+{rows}
+
+Median candidate/T15 **{ratio:.9f}**, **{change}**. All three improve:
+{perf['all_rounds_improve']}. Paired CPython speed **{speed:.3f}x**; candidate/PyPy
+CPU **{pypy:.3f}x**. {'Still slower than PyPy.' if pypy>1 else 'Less CPU than PyPy on this fixture.'}
+The pilot is diagnostic only. One host/fixture; no broad workload or historical
+absolute timing comparison.
+
+## Fidelity and closure
+
+50 public tests pass under each CPython/PyPy, with 11 Rust tests and 20 GC cases.
+Fresh 23-body corpus: 67,144 normal full-state comparisons and 19,586 error
+comparisons agree, with scoped controls detected. The new body contributes 2,096
+positive comparisons (eight actual RAM entries and 500 authored inputs in four
+observer modes), 2,560 error comparisons, all 13 write sites, both coin choices/
+axis orders, offside adjustment, all four steps and retries. All five observer
+mutation classes are positive. Body24 and position25 controls differ in all
+2,096 cases. There is no guest-return control because no guest call exists.
+
+An additional 160 traced source/native comparisons require every source offside
+skip and movement acceptance/rejection branch, including both holders, to be
+reached. Source-line/return tracing changes no source bytes and is excluded from
+timings. The 328 supplemental speaker observers also agree (488 supplemental
+comparisons total). Capture/live pointer/delta/seed behavior, full memory/all
+registers/ordered observers/errors, direct done, entry pause and variants agree.
+Initial synthetic stack/record overlap and an unreachable retry mutation were
+corrected before canonical freeze; logs are preserved. The corrected saved T15
+baseline fails only the new native-coverage assertion. First runtime build and
+canonical private epoch pass without runtime changes.
+
+Exact ordered full drive agrees on 831 events, 553 stretches, result, records,
+full memory and callback digest. Four positive-denial sealed lifecycle checks /
+11 independently attested machines, strict ALL75/75 and exact-source F40 40/40
+agree, with 75 independently attested Rust machines / all 23 bodies. Baseline,
+archives, pristine oracle harness and strict completed prefixes are rehashed.
+
+Authoritative `validation-v1.json` binds {len(validation['evidence_sha256'])}
+evidence files and {len(validation['source_sha256'])} source/artifact/input hashes.
+Supplemental post-exit-audit and actual-host process-closure receipts pass.
+Supervisor exited; all 56 groups are empty (42 canonical, 12 timing, two pilot).
+Bound sources, binaries and private inputs stayed fixed throughout canonical
+proofs/measurements; every completed receipt is preserved.
+
+Actual T15 baseline `.cache/T16-baseline/engine`, candidate `.cache/T16-artifacts`,
+with hash manifests. No original bytes/state/tables committed, oracle semantic
+change or automatic review. Existing #6, A700/ref-121, owner-run engine milestone
+review and application integration/save-load/cancellation/playtest remain
+separate. Live merge/CI/stop status: PR #39 / checkpoint #1. No next task included.
+'''
+(out/'assessment.md').write_text(prose)
+readme_path=out/'README.md';readme=readme_path.read_text();marker='Validation complete: see assessment.md and validation-v1.json.'
+if marker not in readme:readme=readme.replace('# T16 player run step\n','# T16 player run step\n\n'+marker+'\nPost-exit audit and actual-host process closure pass. Every receipt is sealed;\nno producer remains. Live CI/merge/stop status is in PR #39 / checkpoint #1.\n')
+readme_path.write_text(readme)
+Path('/tmp/T16-pr-final.md').write_text(f'''Port the complete `pilot.player_run_step` body (0791:8889) and its inline movement/random helpers to Rust. This is a plain function with no guest calls or frame prologue; preserve that structure, captured parent/record/deltas/random value, live contents/pointers, seed writes, pitch/picture blocking, retry behavior, observers and variants. Total: 23 native bodies, 75,781 more guest entries moved out of Python.
+
+Validation: 50 public tests each CPython/PyPy, 11 Rust, 20 GC; 67,144 normal full-state and 19,586 error comparisons, 488 supplemental observer/branch-trace comparisons, all scoped controls detected. Source traces reach every offside and movement branch. Exact ordered full drive, four sealed lifecycle checks, strict ALL75/75 and F40 40/40 agree, with independent backend attestation. Ledger binds {len(validation['evidence_sha256'])} evidence files; actual-host closure confirms all 56 groups empty. See `out/T16/assessment.md` for scope, samples and preserved early fixture failures.
+
+All three quiet rotated four-arm outcomes retained: median candidate/T15 {ratio:.9f} ({change}), paired CPython speed {speed:.3f}x, candidate/PyPy CPU {pypy:.3f}x. All rounds improve: {perf['all_rounds_improve']}. No arbitrary 5% floor. One host/fixture; pilot diagnostic only.
+
+Same accepted oracle/private state-v2 inputs, no original game data committed or automatic review. Existing #6, A700/ref-121, owner-run engine milestone review and application adoption remain separate.
+
+Closes #38.
+''')
+print('Rendered accepted T16 assessment and PR text:',change,'candidate/PyPy',pypy)

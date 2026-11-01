@@ -1,0 +1,207 @@
+test_errors_and_variants (test_run_step.RunStepTests.test_errors_and_variants) ... ok
+test_native_body (test_run_step.RunStepTests.test_native_body) ... FAIL
+test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) ... 
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=12, tapped=False) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=12, tapped=True) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=40, tapped=False) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=40, tapped=True) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=68, tapped=False) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=68, tapped=True) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=96, tapped=False) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=96, tapped=True) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=124, tapped=False) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=124, tapped=True) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=152, tapped=False) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=152, tapped=True) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=180, tapped=False) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=180, tapped=True) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=208, tapped=False) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=208, tapped=True) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=236, tapped=False) ... FAIL
+  test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=236, tapped=True) ... FAIL
+test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) ... FAIL
+
+======================================================================
+FAIL: test_native_body (test_run_step.RunStepTests.test_native_body)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 92, in test_native_body
+    p,_=exercise(Oracle,1);r,n=exercise(PortMachine,1);self.assertIsNone(p['error']);self.assertEqual(p,r);self.assertEqual(n.get(ROOT),1)
+                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=12, tapped=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:FF00') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=12, tapped=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:FF00') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=40, tapped=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0800') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=40, tapped=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0800') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=68, tapped=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:F800') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=68, tapped=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:F800') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=96, tapped=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:8000') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=96, tapped=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:8000') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=124, tapped=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0800') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=124, tapped=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0800') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=152, tapped=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0000') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=152, tapped=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0000') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=180, tapped=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:FE00') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=180, tapped=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:FE00') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=208, tapped=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:7F00') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=208, tapped=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:7F00') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=236, tapped=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:8000') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations) (case=236, tapped=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 99, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);writes.update(p['state']['writes'])
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:8000') is not None
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_run_step.RunStepTests.test_positive_paths_and_mutations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 102, in test_positive_paths_and_mutations
+    self.assertTrue(set(WRITE_SITES)<=writes,set(WRITE_SITES)-writes);self.assertTrue(all(mutations.values()),mutations)
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : {'seed_mutations': 80, 'arg_mutations': 80, 'delta_mutations': 80, 'direction_mutations': 80, 'retry_mutations': 0}
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.863s
+
+FAILED (failures=20)

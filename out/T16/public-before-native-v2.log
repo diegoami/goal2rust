@@ -1,0 +1,15 @@
+test_native_body (test_run_step.RunStepTests.test_native_body) ... FAIL
+
+======================================================================
+FAIL: test_native_body (test_run_step.RunStepTests.test_native_body)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_run_step.py", line 92, in test_native_body
+    p,_=exercise(Oracle,1);r,n=exercise(PortMachine,1);self.assertIsNone(p['error']);self.assertEqual(p,r);self.assertEqual(n.get(ROOT),1)
+                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 1
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+FAILED (failures=1)

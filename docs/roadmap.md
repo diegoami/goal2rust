@@ -285,6 +285,20 @@ ordered callbacks, sealed lifecycle and independent backend attestation pass.
 All 53 experiment groups are stopped. Upstreams remain archaeology `2a411f5`
 and goal2 `51e70d3`; no roadmap change. No next task included in this increment.
 
+## 2m. T16: player run-step and inline movement
+
+Translate pilot.player_run_step 0791:8889, hottest remaining Python body after
+T15 (75,781 starts). The source is a plain function: its movement, set tests,
+attack/side/keeper/target and random helpers are inline, with no guest calls or
+frame prologue. Preserve the nested parent-frame pointer, captured record and
+deltas/random value, live content/pointers, seed writes, pitch/picture blocking
+and unbounded source retry semantics. Contract: [tasks/T16.md](tasks/T16.md),
+[out/T16](../out/T16/README.md). Same accepted pin/private state-v2 and saved T15
+baseline. Full prior22-body and new proof/controls/errors/source branch traces,
+ordered/lifecycle/ALL75/F40/profile, closed artifact ledger and three quiet paired
+four-arm outcomes; all outcomes retained, no 5% floor. No artificial guest-return
+control, callee-frame or separate registered 86D0 implementation claim.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the

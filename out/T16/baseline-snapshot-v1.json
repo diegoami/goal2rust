@@ -1,0 +1,30 @@
+{
+  "revision": "a785f1e52651e0e594702a7de8e4d8f68048c21d",
+  "source_and_binary_sha256": {
+    ".cache/T16-baseline/engine/Cargo.lock": "fd74c4883808fc367e7d8172f7056de3b3b8c0a48053d966c6b27e495405f0a0",
+    ".cache/T16-baseline/engine/Cargo.toml": "7ed7c5ffcf095582625fdcbdfdd5347943c46e6d51f5dcd69657a8e7f89157b8",
+    ".cache/T16-baseline/engine/python/goal2rust/__init__.py": "a227a6d946dbe76a04461101444b1b1b15428e8ff862c0770e8c36d872978265",
+    ".cache/T16-baseline/engine/python/goal2rust/machine.py": "ef683c2fae2997162575ee2044ccc0805c8d3bb963b76b3245b47f3f65b9db7a",
+    ".cache/T16-baseline/engine/python/goal2rust_engine/__init__.py": "70c88c35a93b6325c74630f3561ba6ffc654191f729e184649efb9b1b4a500f4",
+    ".cache/T16-baseline/engine/python/goal2rust_engine/goal2rust_engine.cpython-312-x86_64-linux-gnu.so": "dfb11e4750bb9625ea721a84e16cc032b1a03b17ac7a3e322ac7775113a0ead8",
+    ".cache/T16-baseline/engine/src/ball.rs": "91478bb65afe22329a523c80d42e2fc6ba83d811e1320f7e1599437badba9c75",
+    ".cache/T16-baseline/engine/src/ball_draw.rs": "62b766fc833efa092f9f71193ebb9c93e0ee19f71e8743e9fb0e1aaa0859101c",
+    ".cache/T16-baseline/engine/src/geometry.rs": "980c0df896731dd5b96f2333dbbf45589c2d8f6ac20fde80c560b146bec28708",
+    ".cache/T16-baseline/engine/src/host.rs": "a517add447a1e28cb4d2c3efc7628a6a23715a1550b65ed81d306fac73da84a4",
+    ".cache/T16-baseline/engine/src/keys.rs": "8e8233173741d92152cfb6522fd39edb79402c6a7d1fe65dbe67b46553eec3f8",
+    ".cache/T16-baseline/engine/src/lib.rs": "d49b98c561a0986948a1572938d0b259fcb293e7c0521e1919c416031518322d",
+    ".cache/T16-baseline/engine/src/machine.rs": "b26ec9d53b9eb62c9f71d729cb60dbf39cb7d58a6026089c7eee188e2836158d",
+    ".cache/T16-baseline/engine/src/mem.rs": "f10a8b447bf667aab43e1eaaf12e1a6690416f34577e0a8e216dbc345c8cd68b",
+    ".cache/T16-baseline/engine/src/play.rs": "a1985ca927c275524265ad5b2444a1614817696563a595b33a69a2818aff6abd",
+    ".cache/T16-baseline/engine/src/player_sprite.rs": "68e4acc9b4b47d782265f71324fcc264e969fd5c935780ba3846c946ecbd61a0",
+    ".cache/T16-baseline/engine/src/player_update.rs": "4ee0ad8b0d10dc80094932ed5bc8efefff1f8271fd19e6f15e388be67a0a217e",
+    ".cache/T16-baseline/engine/src/py.rs": "5433d50617370da54c78ffbeee50897df4022b719615d570f2a44669a1c2bc41",
+    ".cache/T16-baseline/engine/src/regs.rs": "c18bd0c8a220f2bbb09e1b4f53858e84bf6cd686ed2f46612f3970d6f1cf225a",
+    ".cache/T16-baseline/engine/src/routines.inc.rs": "12b4539c79ab3f6f57a11bea0353bdc4deb0eb463d4beae54b0b9097318baeb9",
+    ".cache/T16-baseline/engine/src/skill.rs": "dd894310819fcf9ea92d1b16d72f9aaf701ca494172d097813a862948b4d0181",
+    ".cache/T16-baseline/engine/src/speaker.rs": "e0bae997a1b1e8ef55a4af53aade606bce32bbad3cbcd11405f96e5059d6ca86",
+    ".cache/T16-baseline/engine/src/sweep.rs": "158ddee0bc7486a4092c5b776795e83db4fc935954dc46d1ac1e15fec67832fe",
+    ".cache/T16-baseline/engine/src/testhost.rs": "5e127a51c982d5a0d099e2e5da28f8c809a632c67ef0a257920a80bb4eb4dbfa",
+    ".cache/T16-baseline/engine/src/tests.rs": "ed2ddb894963121289767e348f3e8529c623fbaf9fba50b4d137b736b7504c59"
+  }
+}
