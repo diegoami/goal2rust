@@ -1,0 +1,15 @@
+denied: unicorn, .sav, .EXE, .DAT
+Eight real RAM capture comparisons complete {'real': {'total': 96, 'equal': 96}}
+Authored inputs complete 100
+Authored inputs complete 200
+Authored inputs complete 300
+Authored inputs complete 400
+Authored inputs complete 500
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T10/keys_differential.py", line 56, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/diego/projects/goal2rust/out/T10/keys_differential.py", line 42, in main
+    assert set(RETURNS)<=visited and set(TARGETS)<=called,(set(RETURNS)-visited,set(TARGETS)-called)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ({'0791:93E3', '0791:9497', '0791:9482'}, {'16D6:0945', '0791:1A04'})

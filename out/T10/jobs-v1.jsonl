@@ -1,0 +1,2 @@
+{"event": "start", "name": "keys-differential-v1", "pid": 3596, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T10/keys_differential.py", "--mutant", "0", "--out", "out/T10/keys-differential-v1.json"], "time": 1793516824.5743208}
+{"event": "exit", "name": "keys-differential-v1", "pid": 3596, "code": 1, "time": 1793516891.0158167}

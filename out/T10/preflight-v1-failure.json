@@ -1,0 +1,9 @@
+{
+  "reason": "Caller ABI test registry omitted Match-owned hooks0791:1A04 and16D6:0945. Both backends stopped equally at missing targets, hiding later return sites. Explicit positive-success plus15-return/12-target coverage assertion caught it before the long corpus. V2 adds authored hook ABI entries in test-only module; production/native binaries unchanged. Original scripts/logs/pilot/public receipts preserved.",
+  "production_changed": false,
+  "preserved_source_sha256": {
+    "engine/tests/test_match_key_poll.py": "9d9a7e820efe980514aded7bfd0ef6034795e4e611b0f1556bfea1d2e51d9232",
+    "out/T10/keys_differential.py": "9ab4f797fd7261610fcb38599d56f0a802371d3eb4d229b6ff9f61a0c07b8325",
+    "out/T10/preflight-keys.txt": "8dbd5897753efa7987d048027483bbd4367075aed15f1f233c2b87079232103e"
+  }
+}

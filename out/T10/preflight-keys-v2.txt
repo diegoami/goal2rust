@@ -1,0 +1,14 @@
+"""Run the three canonical caller proofs first; supervisor resumes these receipts."""
+import fcntl,json,os,subprocess,time
+from pathlib import Path
+out=Path('out/T10');lock=Path('.cache/T10-supervisor.lock').open('a+');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB);lock.seek(0);lock.truncate();lock.write(str(os.getpid()));lock.flush()
+def append(row):
+ with (out/'jobs-v2.jsonl').open('a') as f:f.write(json.dumps(row)+'\n')
+while not Path('.cache/T10-boundary-tests-ready-v2').exists():time.sleep(1)
+for mutant,label in [(0,'differential'),(10,'body'),(11,'return')]:
+ name='keys-'+label+'-v2';receipt=out/(name+'.json');assert not receipt.exists();command=[str(Path('.venv/bin/python').absolute()),'-u','-B','out/T10/keys_differential_v2.py','--mutant',str(mutant),'--out',str(receipt)]
+ with (out/(name+'.log')).open('x') as log:
+  p=subprocess.Popen(command,env=dict(os.environ,PYTHONHASHSEED='0'),stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
+  append(dict(event='start',name=name,pid=p.pid,command=command,time=time.time()));print('START',name,p.pid,flush=True)
+  code=p.wait();append(dict(event='exit',name=name,pid=p.pid,code=code,time=time.time()));print('EXIT',name,code,flush=True);assert code==0,name
+print('Three canonical key proofs complete; supervisor can resume remaining jobs',flush=True)

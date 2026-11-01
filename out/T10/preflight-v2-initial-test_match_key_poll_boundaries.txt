@@ -1,0 +1,23 @@
+"""Two Match-owned hook boundaries absent from the port registry, for caller tests only."""
+import unittest
+from original_match.port import Entry
+import test_match_key_poll as base
+# Source guest calls have no arguments: near1A04 pause, far16D6:0945 notice.
+# Do not register these entries in any production Registry or claim their bodies ported.
+for address,ret in [('0791:1A04','ret'),('16D6:0945','retf')]:
+ assert address not in base.ENTRIES
+ base.ENTRIES[address]=Entry(address,ret,lambda mem,variant:None,'authored Match-hook ABI')
+
+class KeyPollBoundaryTests(unittest.TestCase):
+ def test_positive_cases_finish_and_all_boundaries_return(self):
+  visited=set();called=set()
+  for case in range(26):
+   pair=[]
+   for cls in [base.Oracle,base.PortMachine]:
+    result,_=base.exercise(cls,case)
+    self.assertIsNone(result['error'],(case,result['error']))
+    pair.append(result)
+   self.assertEqual(*pair)
+   visited.update(s for s,_ in pair[0]['visits']);called.update(pair[0]['calls'])
+  self.assertTrue(set(base.RETURNS)<=visited,set(base.RETURNS)-visited)
+  self.assertTrue(set(base.TARGETS)<=called,set(base.TARGETS)-called)
