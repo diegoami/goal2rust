@@ -1,0 +1,8 @@
+test_errors_and_variants (test_player_update.PlayerUpdateTests.test_errors_and_variants) ... ok
+test_native_caller (test_player_update.PlayerUpdateTests.test_native_caller) ... ok
+test_positive_dispatch_and_observers (test_player_update.PlayerUpdateTests.test_positive_dispatch_and_observers) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 4.716s
+
+OK

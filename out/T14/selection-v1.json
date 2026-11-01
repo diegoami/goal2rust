@@ -1,0 +1,130 @@
+{
+  "selected": {
+    "body_self_s": 0.648182991,
+    "cumulative_s": 2.5035188670000004,
+    "function": "update_player",
+    "guest_entries": 75781,
+    "module": "motion",
+    "native_entries": 0,
+    "python_calls_or_resumes": 282057,
+    "python_entries": 75781
+  },
+  "source_sha256": "4e7bab13c1e196464ecb41fd2ddb3a41878c217885c238fd2e80cd8329746eb2",
+  "profile_sha256": "f11f472b69b126ef372c44e3bd6023072bb2071f9c5550b999076f575c37ba2f",
+  "call_sites": [
+    {
+      "state": 5,
+      "target": "0791:57AC",
+      "ret": "0791:8B1B",
+      "far": true,
+      "args": 2
+    },
+    {
+      "state": 13,
+      "target": "0791:58E1",
+      "ret": "0791:8B2B",
+      "far": true,
+      "args": 2
+    },
+    {
+      "state": 1,
+      "target": "0791:69BD",
+      "ret": "0791:8B3B",
+      "far": true,
+      "args": 2
+    },
+    {
+      "state": 2,
+      "target": "0791:6AAD",
+      "ret": "0791:8B4A",
+      "far": true,
+      "args": 2
+    },
+    {
+      "state": 3,
+      "target": "0791:6AF7",
+      "ret": "0791:8B59",
+      "far": true,
+      "args": 2
+    },
+    {
+      "state": 6,
+      "target": "0791:6240",
+      "ret": "0791:8B68",
+      "far": true,
+      "args": 2
+    },
+    {
+      "state": 7,
+      "target": "0791:7069",
+      "ret": "0791:8B77",
+      "far": true,
+      "args": 2
+    },
+    {
+      "state": 8,
+      "target": "0791:7287",
+      "ret": "0791:8B86",
+      "far": true,
+      "args": 2
+    },
+    {
+      "state": 9,
+      "target": "0791:715A",
+      "ret": "0791:8B95",
+      "far": true,
+      "args": 2
+    },
+    {
+      "state": 10,
+      "target": "0791:73BA",
+      "ret": "0791:8BA4",
+      "far": true,
+      "args": 2
+    },
+    {
+      "state": 11,
+      "target": "0791:7621",
+      "ret": "0791:8BB3",
+      "far": true,
+      "args": 2
+    },
+    {
+      "target": "0791:8889",
+      "ret": "0791:8BB7",
+      "far": false,
+      "args": 1
+    },
+    {
+      "target": "0791:2CEC",
+      "ret": "0791:8BED",
+      "far": true,
+      "args": 2
+    },
+    {
+      "target": "0791:2AD4",
+      "ret": "0791:8C1D",
+      "far": false,
+      "args": 1
+    },
+    {
+      "target": "0791:869F",
+      "ret": "0791:8C26",
+      "far": true,
+      "args": 2
+    },
+    {
+      "target": "0791:8537",
+      "ret": "0791:8C35",
+      "far": true,
+      "args": 2
+    }
+  ],
+  "all_registered": true,
+  "finite_state_dispatch": true,
+  "expected_native_bodies": 21,
+  "expected_native_entries": 1828188,
+  "expected_python_entries": 1275497,
+  "accepted": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+  "baseline": "fd2d5155c61ff2c47456964b63874724c8e3a3b5"
+}

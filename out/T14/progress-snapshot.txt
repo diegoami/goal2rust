@@ -1,0 +1,9 @@
+"""Preserve completed ALL prefixes; complete strict ALL/F40 gates remain required."""
+import hashlib,json,sys
+from pathlib import Path
+out=Path('out/T14');n=int(sys.argv[1]);source=out/'family-ALL-rust-v1.jsonl';lines=source.read_bytes().splitlines(keepends=True)[:n]
+assert len(lines)==n and all(json.loads(x)['error'] is None for x in lines)
+p=out/f'family-progress-{n}-v1.jsonl'
+with p.open('xb') as f:f.write(b''.join(lines))
+with (out/f'family-progress-{n}-v1.json').open('x') as f:json.dump(dict(source=source.name,source_lines=list(range(1,n+1)),sha256=hashlib.sha256(p.read_bytes()).hexdigest(),line_sha256=[hashlib.sha256(x).hexdigest() for x in lines],snapshot_script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),full_corpus_gate_pending=True),f,indent=2)
+print('Preserved completed ALL records',n)

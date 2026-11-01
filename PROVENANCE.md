@@ -168,3 +168,14 @@ side helpers; no transitive/hardware claim. CurrentBP/argument/table/AX reloads,
 Regs pending stack and destination None/True/False preserve source semantics;
 nondefault variants Python. Scope out/T13/contract.md, exact T12 source/adapter/
 extension baseline bound in out/T13/baseline-snapshot-v1.json.
+
+## T14 player-update caller
+
+Pin:`2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`(state/2). motion.update_player
+**0791:8AE9**(retf4), immediate frame/record and finite HANDLERS dispatch are
+translated in engine/src/player_update.rs and machine.rs continuations. Captured
+frameBP/record offset+segment/unwrapped linear record+code/AXreply/kept versus
+live contents/conditional reads retain source lifetime/order. Return0 fatigue
+versusNone normal remains distinct, same callbacks/flags/stack/ABI.16 registered
+callees remain delegated, no hardware/transitive claim; variants Python. Contract
+out/T14/contract.md, actual T13 baseline bound out/T14/baseline-snapshot-v1.json.

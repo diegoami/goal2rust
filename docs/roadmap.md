@@ -239,6 +239,18 @@ Python entries remain (not code-completion percentage). Closed current proof:
 preserved failed error fixture in [assessment](../out/T13/assessment.md). No runtime
 change for fixture correction. Existing callees remain delegated, no next task.
 
+## 2k. T14: player-update caller
+
+Translate motion.update_player0791:8AE9, hottest remaining Python body after T13
+(75,781 starts). Immediate frame, finite11 handlers/5 fixed calls,16 registered
+callee boundaries stay delegated. Preserve captured frame/linear rec/code/local
+AXreply/kept versus live contents/conditional reads, integer0 versusNone, SENTAX
+versus actual bank and exact observer/stack/ABI semantics. Contract:
+[tasks/T14.md](tasks/T14.md),[out/T14](../out/T14/README.md). Full existing20-body/
+new caller/control/error/observer/ordered/lifecycle/ALL75/F40/profile/artifact
+closure,3 quiet rotated four-arm outcomes, no arbitrary5% floor; no callee/hardware
+implementation claim, same2cbeb36f/private state-v2, actual T13 baseline preserved.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the
