@@ -206,6 +206,20 @@ Full existing18-body/new caller/control/observer/ordered/lifecycle/ALL75/F40/
 profile/artifact gates and three quiet rotated four-arm rounds, report all/no5%
 minimum. Same2cbeb36f/private state-v2 inputs; actual T11 baseline preserved.
 
+T12 full fidelity and three-round measurement gates pass: all rounds improve,
+median 4.03% less CPU versus saved T11. 19 native bodies/1,716,209 native entries,
+1,387,476 Python entries remain (not code-completion percentage). Closed proof:
+[out/T12/validation-v1.json](../out/T12/validation-v1.json), all samples/scope in
+[assessment](../out/T12/assessment.md). Initial wait-counter fixture gap retained
+and resolved before source freeze, no runtime fix. No next task in this increment.
+
+Final T12 upstream recheck: goal2 cee1de0f(PR491) includes the sealed-port match
+route and PyPy 3.11 worker selection via GOAL2_ENGINE_PYTHON/auto-discovery, with
+worker parity tests. This reinforces PyPy as the performance baseline; Rust
+integration must preserve the worker/lifecycle/API boundary and remains separate.
+No selected oracle routine semantic change: retain controlled 2cbeb36f pin/private
+input policy. Archaeology main 2a411f50 remains unchanged.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the

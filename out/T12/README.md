@@ -1,5 +1,13 @@
 # T12 watched sweep caller
 
+## Validation complete
+
+Authoritative validation-v1.json/post-exit-audit-v1.json and real-host process-
+closure-v1.json bind all current proof/measurements and empty groups. See
+assessment.md for all samples/scope. No producer remains; live exact-head CI/
+merge/stop in PR #31/checkpoint #1. Do not restart/overwrite completed receipts/
+baselines or reuse proof after runtime changes.
+
 Task #30, docs/tasks/T12.md /contract.md. Live status/checkpoint #1, recheck all
 heads/checks/groups before resume. Never overwrite completed receipts or old
 artifacts; private game bytes/states/tables remain ignored. Same2cbeb36f/private
