@@ -1,0 +1,5 @@
+"""Final v2 acceptance: completed hook ABI coverage, original v1 evidence retained."""
+from pathlib import Path
+p=Path('out/T10/validate.py')
+s=p.read_text().replace("'keys-'+k+'-v1'","'keys-'+k+'-v2'").replace("'keys-'+label+'-v1'","'keys-'+label+'-v2'").replace('jobs-v1.jsonl','jobs-v2.jsonl')
+exec(compile(s,str(p),'exec'),{'__name__':'__main__','__file__':str(p)})

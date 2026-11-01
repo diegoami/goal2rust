@@ -1,0 +1,20 @@
+{
+  "reason": "All2096 state comparisons and1066 error cases equal, all15 returns/12 targets covered, but test-only source edits began after preflight had started. source_unchanged=False correctly rejects this run. Preserve exact prior source; rerun v3 after source freeze. No runtime/native-binary change.",
+  "source_binding_pass": false,
+  "production_changed": false,
+  "prior_sources": {
+    "engine/tests/test_match_key_poll_boundaries.py": {
+      "preserved": "out/T10/preflight-v2-initial-test_match_key_poll_boundaries.txt",
+      "sha256": "daffda782bad59a574449cd2ddacbd8304e6ccba686d797283892c40f78b8836"
+    },
+    "out/T10/keys_differential_v2.py": {
+      "preserved": "out/T10/preflight-v2-initial-keys_differential_v2.txt",
+      "sha256": "96c46d480b05ae3c5cfc38eefd6d250e4637af1477293210c4fc0f539d8e5a01"
+    },
+    "out/T10/validate_v2.py": {
+      "preserved": "out/T10/preflight-v2-initial-validate_v2.txt",
+      "sha256": "3283bf5aad4c5aac8cae2d21f6d80adc4007e092dba7aca1bbdd59fb8731913b"
+    }
+  },
+  "scope_correction": "1A04 and16D6:0945 are unregistered external guest targets, not demonstrated Match hooks. Authored ABI doubles prove only caller continuation; actual refusal is also compared. No unported callee-body functionality claimed."
+}

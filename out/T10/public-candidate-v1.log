@@ -1,0 +1,8 @@
+test_all_branches_and_observers (test_match_key_poll.MatchKeyPollTests.test_all_branches_and_observers) ... ok
+test_errors_and_variant (test_match_key_poll.MatchKeyPollTests.test_errors_and_variant) ... ok
+test_native_caller (test_match_key_poll.MatchKeyPollTests.test_native_caller) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 7.284s
+
+OK

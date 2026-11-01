@@ -1,0 +1,6 @@
+"""Use explicit authored ABI entries for the two Match-owned hooks; preserve v1 harness."""
+import runpy,sys
+import evidence as e
+sys.path.insert(0,str(e.BASE/'engine/tests'))
+import test_match_key_poll_boundaries
+runpy.run_path(str(e.BASE/'out/T10/keys_differential.py'),run_name='__main__')

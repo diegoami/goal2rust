@@ -1,0 +1,22 @@
+{
+  "provisional_subset": true,
+  "expected": 10,
+  "pass_all": true,
+  "full_ALL75_pending": true,
+  "lines": [
+    "F40/e032-0101: score [1, 0] ticks 4279 draws 192967 cpu 38.561 s -> 130.431 s; identical",
+    "F40/e032-1234: score [1, 1] ticks 4146 draws 184109 cpu 38.619 s -> 127.917 s; identical",
+    "F40/e032-2345: score [0, 1] ticks 4138 draws 187079 cpu 47.599 s -> 135.469 s; identical",
+    "F40/e032-2b7e: score [0, 2] ticks 4029 draws 175773 cpu 46.634 s -> 130.654 s; identical",
+    "F40/e032-4c1d: score [1, 0] ticks 4659 draws 210776 cpu 40.011 s -> 151.376 s; identical",
+    "F40/e032-6a33: score [0, 2] ticks 4159 draws 184733 cpu 34.903 s -> 137.876 s; identical",
+    "F40/e032-8e05: score [1, 0] ticks 4157 draws 186815 cpu 47.617 s -> 132.197 s; identical",
+    "F40/e032-a1f0: score [1, 0] ticks 4281 draws 191805 cpu 49.012 s -> 144.951 s; identical",
+    "F40/e032-c3c3: score [2, 1] ticks 4262 draws 184677 cpu 33.122 s -> 160.429 s; identical",
+    "F40/e032-e719: score [1, 0] ticks 4240 draws 191629 cpu 34.353 s -> 153.242 s; identical",
+    "10 matches expected identical, 10 pass, 0 fail"
+  ],
+  "candidate_sha256": "e6ac9dafacd78c65aa539698b03dc3f030527ec9fe76903cadffa81f9e4e9deb",
+  "comparator_sha256": "fc992531242701b3c4ef419ff301627e411557fe918100fc2f1e6b65b1576e97",
+  "script_sha256": "4e69b9ea704919c3b688ffdfa1616a446b100cc3b769d5381656718c779a2ceb"
+}

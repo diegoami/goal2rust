@@ -119,3 +119,16 @@ DF/flags, dead frame writes, secondary state and value-return timing remain
 source ordered; nondefault variants retain Python bodies. Full contract:
 `out/T09/contract.md`. Baseline T08 sources/binaries and the rejected descriptor
 prototype are preserved, with hashes in `out/T09/`.
+
+## T10 match key-poll caller
+
+Translation pin: `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c` (state/2).
+`port/menus.py` `match_key_poll` **0791:9372** (near ret/no arguments) is reproduced
+in `engine/src/keys.rs` with native continuations in `machine.rs`. Its complete
+six-slot delay-table loop and all key/quick-mode branches retain the15 literal
+guest-call sites and12 distinct external ports. Those existing keyboard/menu/
+library/display/speaker callees remain separately observable delegated routines,
+not newly translated bodies. Fresh actual-AX reads, pending stack bytes, captured
+short-lived arguments and live pointer reloads follow the source. Nondefault
+variants use Python. Contract: out/T10/contract.md; preserved actual T09 baseline
+source/adapter/extension: out/T10/baseline-snapshot-v1.json.

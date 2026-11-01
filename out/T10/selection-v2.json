@@ -1,0 +1,147 @@
+{
+  "profile_sha256": "64e0a1845582517eeaac680f21fe419e3f48aa0958ecc65d4d1ce1493828c035",
+  "source_sha256": "ea87406a9f0300d0d54c3f71d664a8ed2925505fb133b59a481e8fc5f098f053",
+  "selected": {
+    "body_self_s": 3.6542991270000003,
+    "cumulative_s": 17.14930517,
+    "function": "match_key_poll",
+    "guest_entries": 76928,
+    "module": "menus",
+    "native_entries": 0,
+    "python_calls_or_resumes": 154976,
+    "python_entries": 76928
+  },
+  "guest_sites": [
+    {
+      "target": "214B:0723",
+      "ret": "0791:93C2",
+      "far": true,
+      "starred_source_pair": false
+    },
+    {
+      "target": "214B:1E8D",
+      "ret": "0791:93CE",
+      "far": true,
+      "starred_source_pair": false
+    },
+    {
+      "target": "214B:08DD",
+      "ret": "0791:93D3",
+      "far": true,
+      "starred_source_pair": false
+    },
+    {
+      "target": "23E4:19B2",
+      "ret": "0791:93DC",
+      "far": true,
+      "starred_source_pair": false
+    },
+    {
+      "target": "214B:1E8D",
+      "ret": "0791:94C5",
+      "far": true,
+      "starred_source_pair": false
+    },
+    {
+      "target": "0791:1A04",
+      "ret": "0791:93E3",
+      "far": false,
+      "starred_source_pair": false
+    },
+    {
+      "target": "0791:92FC",
+      "ret": "0791:94B9",
+      "far": false,
+      "starred_source_pair": false
+    },
+    {
+      "target": "214B:1D6F",
+      "ret": "0791:9448",
+      "far": true,
+      "starred_source_pair": false
+    },
+    {
+      "target": "0791:0691",
+      "ret": "0791:944B",
+      "far": false,
+      "starred_source_pair": false
+    },
+    {
+      "target": "0791:ED8A",
+      "ret": "0791:945B",
+      "far": false,
+      "starred_source_pair": false
+    },
+    {
+      "target": "23E4:025D",
+      "ret": "0791:947D",
+      "far": true,
+      "starred_source_pair": true
+    },
+    {
+      "target": "16D6:0945",
+      "ret": "0791:9482",
+      "far": true,
+      "starred_source_pair": false
+    },
+    {
+      "target": "23E4:025D",
+      "ret": "0791:9497",
+      "far": true,
+      "starred_source_pair": true
+    },
+    {
+      "target": "214B:1E5A",
+      "ret": "0791:94A2",
+      "far": true,
+      "starred_source_pair": false
+    },
+    {
+      "target": "0791:92FC",
+      "ret": "0791:94AC",
+      "far": false,
+      "starred_source_pair": false
+    }
+  ],
+  "all_targets_literal": true,
+  "delegated_callees": [
+    "0791:0691",
+    "0791:1A04",
+    "0791:92FC",
+    "0791:ED8A",
+    "16D6:0945",
+    "214B:0723",
+    "214B:08DD",
+    "214B:1D6F",
+    "214B:1E5A",
+    "214B:1E8D",
+    "23E4:025D",
+    "23E4:19B2"
+  ],
+  "expected_native_bodies": 17,
+  "expected_native_entries": 1633521,
+  "expected_python_entries": 1470164,
+  "accepted": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+  "upstream_heads": {
+    "archaeology": "2a411f50422ecd1f5d8cf96d05f1873e6257e684",
+    "goal2": "d31bba369d226265e5149db46cc831e91230988d"
+  },
+  "registry_boundaries": [
+    "0791:0691",
+    "0791:92FC",
+    "0791:ED8A",
+    "214B:0723",
+    "214B:08DD",
+    "214B:1D6F",
+    "214B:1E5A",
+    "214B:1E8D",
+    "23E4:025D",
+    "23E4:19B2"
+  ],
+  "unregistered_external_boundaries": [
+    "0791:1A04",
+    "16D6:0945"
+  ],
+  "clarification": "Two unregistered guest targets, not proven Match hooks. Test-only ABI doubles cover caller continuations; separate cases preserve original refusal. No callee-body implementation or admitted-input expansion.",
+  "previous_selection_sha256": "49c2ece8d4c64940a9a03b7a4dc9d1b3f7d61bd2c87090227243da96663fccde"
+}

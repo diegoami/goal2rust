@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/home/diego/projects/goal2rust/.venv/bin/python",
+    "-B",
+    "experiments/E036-match-port/compare.py",
+    "--family",
+    "F40",
+    "--no-screen",
+    "--candidate",
+    "/home/diego/projects/goal2rust/out/T10/family-progress-40-v1.jsonl"
+  ],
+  "exit_code": 0,
+  "candidate_sha256": "c6a5af9537d090c0edf8f113848ddce36746848503cd0955111e7da99036d307",
+  "full_F40": true,
+  "full_ALL75_pending": true
+}

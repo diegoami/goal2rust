@@ -1,0 +1,250 @@
+{
+  "pass_all": true,
+  "node": "IT13",
+  "time_utc": "2026-11-01T08:34:31Z",
+  "supervisor_pid": 4056,
+  "supervisor_exited": true,
+  "groups": [
+    {
+      "kind": "canonical",
+      "pid": 3888,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 3933,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 3974,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 4080,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 4081,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 4082,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 4083,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 4343,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 4426,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 4471,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 4522,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 4570,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 4706,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 4775,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 4960,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 5011,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 5067,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 5125,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 5162,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 5195,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 5261,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 5304,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 5540,
+      "empty": true
+    },
+    {
+      "kind": "canonical",
+      "pid": 7357,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 7373,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 7374,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 7375,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 7376,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 7530,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 7531,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 7532,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 7533,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 7662,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 7663,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 7664,
+      "empty": true
+    },
+    {
+      "kind": "timing",
+      "pid": 7665,
+      "empty": true
+    },
+    {
+      "kind": "pilot",
+      "pid": 3451,
+      "empty": true
+    },
+    {
+      "kind": "pilot",
+      "pid": 3452,
+      "empty": true
+    },
+    {
+      "kind": "historical-failed-preflight",
+      "pid": 3596,
+      "empty": true
+    },
+    {
+      "kind": "historical-failed-preflight",
+      "pid": 3795,
+      "empty": true
+    }
+  ],
+  "canonical_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "timing_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "script_sha256": "40d6744734354465a9f7437e6bdc70110e9c1c32e09a07a4ca2311a34d698754"
+}

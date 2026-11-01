@@ -1,0 +1,38 @@
+🍹 Building a mixed python/rust project
+🐍 Found CPython 3.12 at /home/diego/projects/goal2rust/.venv/bin/python
+🔗 Found pyo3 bindings
+📡 Using build options features from pyproject.toml
+   Compiling goal2rust-engine v0.1.0 (/home/diego/projects/goal2rust/engine)
+error[E0499]: cannot borrow `*h` as mutable more than once at a time
+  --> src/keys.rs:27:41
+   |
+27 |  macro_rules! get {($reg:ident)=>{r.get(h,Reg::$reg)?};}
+   |                                         ^ second mutable borrow occurs here
+...
+36 |     set!(Di,get!(Ax));let b=ds8(h,get!(Di).wrapping_add(0x882))?;set!(Dx,(get!(Dx)&0xff00)|b as u16);
+   |                             --- - -------- in this macro invocation
+   |                             |   |
+   |                             |   first mutable borrow occurs here
+   |                             first borrow later used by call
+   |
+   = note: this error originates in the macro `get` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0499]: cannot borrow `*h` as mutable more than once at a time
+  --> src/keys.rs:27:41
+   |
+27 |  macro_rules! get {($reg:ident)=>{r.get(h,Reg::$reg)?};}
+   |                                         ^ second mutable borrow occurs here
+...
+63 |      let b=ds8(h,get!(Di).wrapping_add(0x7920))?;r.set_al(h,b)?;cbw(h,&mut r)?;let ax=get!(Ax);let ds=h.ds();
+   |            --- - -------- in this macro invocation
+   |            |   |
+   |            |   first mutable borrow occurs here
+   |            first borrow later used by call
+   |
+   = note: this error originates in the macro `get` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+For more information about this error, try `rustc --explain E0499`.
+error: could not compile `goal2rust-engine` (lib) due to 2 previous errors
+💥 maturin failed
+  Caused by: Failed to build a native library through cargo
+  Caused by: Cargo build finished with "exit status: 101": `env -u CARGO PYO3_BUILD_EXTENSION_MODULE="1" PYO3_ENVIRONMENT_SIGNATURE="cpython-3.12-64bit" PYO3_PYTHON="/home/diego/projects/goal2rust/.venv/bin/python" PYTHON_SYS_EXECUTABLE="/home/diego/projects/goal2rust/.venv/bin/python" "cargo" "rustc" "--profile" "release" "--features" "python" "--message-format" "json-render-diagnostics" "--locked" "--manifest-path" "/home/diego/projects/goal2rust/engine/Cargo.toml" "--lib" "--crate-type" "cdylib"`

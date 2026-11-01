@@ -16,3 +16,5 @@ pub mod machine;
 pub mod testhost;
 #[cfg(test)]
 mod tests;
+
+pub mod keys;

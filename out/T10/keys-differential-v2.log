@@ -1,0 +1,23 @@
+denied: unicorn, .sav, .EXE, .DAT
+Eight real RAM capture comparisons complete {'real': {'total': 96, 'equal': 96}}
+Authored inputs complete 100
+Authored inputs complete 200
+Authored inputs complete 300
+Authored inputs complete 400
+Authored inputs complete 500
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T10/keys_differential_v2.py", line 6, in <module>
+    runpy.run_path(str(e.BASE/'out/T10/keys_differential.py'),run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/diego/projects/goal2rust/out/T10/keys_differential.py", line 56, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/diego/projects/goal2rust/out/T10/keys_differential.py", line 54, in main
+    e.write(a.out,report,before);assert report['all_equal']==(a.mutant==0)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/goal2rust/out/T10/evidence.py", line 100, in write
+    assert report['source_unchanged'], 'evidence sources changed during run'
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError: evidence sources changed during run

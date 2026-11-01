@@ -1,0 +1,16 @@
+START 1 baseline 7373
+START 1 candidate 7374
+START 1 python 7375
+START 1 pypy 7376
+ROUND 1 {'baseline': 72.953917369, 'candidate': 66.999287344, 'python': 145.676134738, 'pypy': 54.672967137}
+START 2 candidate 7530
+START 2 baseline 7531
+START 2 pypy 7532
+START 2 python 7533
+ROUND 2 {'candidate': 75.600569977, 'baseline': 77.499184716, 'pypy': 57.960384733, 'python': 154.964613634}
+START 3 baseline 7662
+START 3 candidate 7663
+START 3 python 7664
+START 3 pypy 7665
+ROUND 3 {'baseline': 74.42587158299999, 'candidate': 69.259857134, 'python': 147.90729682399999, 'pypy': 57.950120753}
+ALL THREE MEASURED OUTCOMES RETAINED 0.9305884588366717
