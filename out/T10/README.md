@@ -1,5 +1,14 @@
 # T10 match-key-poll caller
 
+## Validation complete
+
+Authoritative ledger:validation-v3.json, with post-exit-audit-v3.json and real-host
+process-closure-v1.json. All current fidelity and complete three-round measurements
+pass; see assessment.md for every sample and the retained historical failures.
+No producer/child group remains. Live exact-head CI/merge/stop state is in PR #27/
+checkpoint #1. Do not restart completed producers or overwrite receipts/baselines.
+The commands below are historical; any runtime change requires fresh proof.
+
 Task #26; docs/tasks/T10.md and contract.md define scope and Done-when. Resume
 from latest live checkpoint #1, heads/checks and ALL active process groups.
 Baseline .cache/T10-baseline/engine is indexed by baseline-snapshot-v1.json.

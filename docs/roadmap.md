@@ -160,6 +160,16 @@ Full per-caller and existing16-body proofs, ordered/lifecycle/ALL75/F40 evidence
 profile and three quiet paired four-arm rounds; retain all outcomes, no arbitrary
 per-increment5% minimum. Same accepted2cbeb36f/state-v2, no original data in git.
 
+T10's full caller/regression/ordered/lifecycle/ALL75/F40 proofs pass. Three paired
+rounds each improve CPU: median 6.94% less than saved T09, with all samples retained;
+Rust still uses 1.225x PyPy CPU on the reference fixture. 17 native bodies now cover
+1,633,521 guest entries, leaving 1,470,164 Python entries (not code completion).
+Current closed ledger: [out/T10/validation-v3.json](../out/T10/validation-v3.json),
+assessment: [out/T10/assessment.md](../out/T10/assessment.md). Historical invalid
+preflights remain preserved with exact source. Ten registered callees plus two
+unregistered guests remain external; test ABI doubles never enter production.
+No next task is included in this increment.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the

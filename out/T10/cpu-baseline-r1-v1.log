@@ -1,0 +1,2 @@
+denied: unicorn, .sav, .EXE, .DAT
+{"backend": "rust", "mode": "cpu", "events": 831, "drive_cpu_s": 72.953917369, "taps": null}

@@ -1,0 +1,109 @@
+"""Render final prose from the accepted v3 ledger; no runtime changes."""
+import json,statistics
+from pathlib import Path
+out=Path('out/T10');load=lambda n:json.loads((out/(n+'.json')).read_text());v=load('validation-v3');p=load('performance-v1');assert v['pass_all'] and p['measurement_complete']
+ratio=p['median_ratio'];change=100*abs(1-ratio);direction='less' if ratio<1 else 'more';cpy=statistics.median(r['cpu_s']['python']/r['cpu_s']['candidate'] for r in p['rounds']);pypy=statistics.median(r['candidate_to_pypy'] for r in p['rounds'])
+table='\n'.join('| '+str(r['round'])+' | '+' | '.join(f"{r['cpu_s'][a]:.6f}" for a in ['baseline','candidate','python','pypy'])+f" | {r['candidate_to_baseline']:.9f} |" for r in p['rounds'])
+text=f'''# T10 match-key-poll incremental port
+
+## Outcome
+
+One complete caller, menus.match_key_poll0791:9372, now runs in Rust. Its six-slot
+delay-table loop, all key/quick-mode branches and15 literal guest-call sites retain
+the accepted oracle's memory/register/flag/stack/observer behavior. Nondefault
+variants stay Python. This ports the caller, not its transitive callee closure.
+Accepted2cbeb36f/state-v2/private T07 inputs are unchanged.
+
+The reference drive uses17 native bodies /1,633,521 native guest entries and
+1,470,164 Python entries out of3,103,685 total. Exactly76,928 Python entries moved
+to Rust. This remains a partial port; counts do not measure whole-code completion.
+
+## All measured outcomes
+
+Three quiet simultaneous preserved-T09/candidate/plain CPython/PyPy rounds,
+distinct physical cores with rotated assignments and launch order, original
+guards. Every raw event/result/record/full-memory output agrees. No sample is
+removed. Every round faster:{p['all_rounds_improve']}.
+
+| Round | T09 CPU s | Candidate CPU s | CPython CPU s | PyPy CPU s | Candidate/T09 |
+| --- | --- | --- | --- | --- | --- |
+{table}
+
+Median candidate/T09 ratio **{ratio:.9f}**, **{change:.2f}% {direction} CPU**.
+Median paired CPython speed **{cpy:.3f}x**; candidate/PyPy CPU **{pypy:.3f}x**.
+{'Still slower than PyPy.' if pypy>=1 else 'Faster than PyPy on this reference fixture; not a broad workload claim.'}
+This is three rounds on one host/reference fixture. The earlier pilot ratio
+0.94387837 is diagnostic evidence, not a substitute for these samples.
+Owner-approved incremental acceptance has no arbitrary per-step5% minimum;
+all fidelity, full measurement reporting and exact-head CI requirements remain.
+
+## Passing proof and closed bindings
+
+- Public32 each CPython/PyPy, Rust11 and20 lifetime cases pass.
+-54568 normal full-state comparisons across17 native bodies:52472 prior16-body
+  cases plus2096 new caller cases(eight actual RAM entry captures/500 authored
+  cases/four tap-listener combinations). Every scoped body/return control caught.
+-1066 caller error comparisons plus328 existing speaker observer cases agree.
+  All15 return sites and12 external boundaries covered; live-returnAX, saved-BP,
+  speed-loop, alias/wrap and copy-pointer reload mutations exercised.
+- Exact ordered831 events/result/records/full memory/553 stretches/full IO/site/
+  listener digest agree, including158,092,780 IO observations.
+- Four positive-denial sealed lifecycle checks pass,11 independently attested Rust
+  machines; strict ALL75/75 and exact-source F40 40/40 identical,75-machine backend
+  attestation with all17 native bodies.
+- Authoritative **validation-v3.json** binds{len(v['evidence_sha256'])} recursive evidence files.
+  post-exit-audit-v3.json rehashes baseline/candidate/private-input/harness/prefix/
+  observer/current-proof/historical-failure source bindings. Actual-host
+  process-closure-v1.json proves supervisor exit and40 empty process groups:
+  24 canonical,12 timing,2 pilot,2 failed historical preflight groups.
+
+## External scope and preserved failures
+
+Ten callees are registered ports;0791:1A04 and16D6:0945 are unregistered external
+guest targets in this pin. Test-only authored near/far ABI entries allow the
+caller's continuations to be compared, not their implementations. Separate
+public cases remove those doubles and preserve actual unknown-guest refusal.
+Production never installs these doubles, implements new Match hooks or expands
+the admitted input domain. Full drive/lifecycle/family use actual services/callees.
+
+Initial borrow-check build failure and exact Rust source are retained. Preflight
+v1 omitted the two unregistered boundaries: both backends refused equally and
+ordinary equality assertions hid later branches. Explicit successful-positive
+and15-return/12-target coverage checks caught this. V2 all comparisons agreed,
+but test-source edits after startup invalidated source_unchanged. That run is
+rejected/preserved; exact prior bytes are reconstructed/SHA-verified. V3 runs
+with source frozen, passes both controls and full bindings; runtime binaries
+never changed for the harness corrections. Old failed jobs/receipts stay historical,
+not accepted. This is why the final producer/validator revision is v3.
+
+Source/adapter/extension baseline:.cache/T10-baseline/engine, metadata
+baseline-snapshot-v1.json; candidate binaries:.cache/T10-artifacts,
+artifact-archive-v1.json. No original game bytes/states/tables committed or
+oracle semantic fix/model review launched. Existing #6/later A700/ref-121,
+owner-run engine-milestone review and goal2 integration/save-load/cancellation/
+playtest remain separate. Live exact-head CI/merge/stop state stays in PR #27/
+checkpoint #1. No next task is part of this increment.
+'''
+for a,b in [('match_key_poll0791','match_key_poll 0791'),('and15','and 15'),('Accepted2cb','Accepted 2cb'),('uses17','uses 17'),('of3,','of 3,'),('Exactly76,','Exactly 76,'),('faster:','faster: '),('per-step5%','per-step 5%'),('Public32','Public 32'),('Rust11','Rust 11'),('and20','and 20'),('-54568','- 54,568'),('across17','across 17'),('bodies:52472','bodies: 52,472'),('prior16','prior 16'),('plus2096','plus 2,096'),('cases(eight','cases (eight'),('/500','/500'),('-1066','- 1,066'),('plus328','plus 328'),('All15','All 15'),('and12','and 12'),('live-returnAX','live-return AX'),('ordered831','ordered 831'),('including158,','including 158,'),('pass,11','pass, 11'),('identical,75','identical, 75'),('all17','all 17'),('binds{','binds {'),('binds'+str(len(v['evidence_sha256'])),'binds '+str(len(v['evidence_sha256']))),('and40','and 40'),('canonical,12','canonical, 12'),('timing,2','timing, 2'),('pilot,2','pilot, 2'),('ports;0791','ports; 0791'),('and16D6','and 16D6'),('and15-return','and 15-return'),('baseline:.cache','baseline: .cache'),('binaries:.cache','binaries: .cache')]:text=text.replace(a,b)
+(out/'assessment.md').write_text(text)
+pth=out/'README.md';s=pth.read_text();pos=s.index('Task #26');s=s[:pos]+'''## Validation complete
+
+Authoritative ledger:validation-v3.json, with post-exit-audit-v3.json and real-host
+process-closure-v1.json. All current fidelity and complete three-round measurements
+pass; see assessment.md for every sample and the retained historical failures.
+No producer/child group remains. Live exact-head CI/merge/stop state is in PR #27/
+checkpoint #1. Do not restart completed producers or overwrite receipts/baselines.
+The commands below are historical; any runtime change requires fresh proof.
+
+'''+s[pos:];pth.write_text(s)
+Path('/tmp/T10-pr-final.md').write_text(f'''Move the hottest remaining Python caller, menus.match_key_poll0791:9372, to Rust. Preserve its full six-slot delay-table loop, every key/quick branch, all15 guest-call sites, register/flag/dead-stack effects, observer order and variant fallback. This adds one complete native caller(17 bodies total) and removes76,928 Python entries from the reference drive; it does not port the transitive callee closure.
+
+All fidelity and artifact gates pass:32 public tests each CPython/PyPy,11 Rust,20 lifetime cases;54,568 full-state normal comparisons plus1,066 new error/328 speaker observers and caught controls; exact ordered831-event/full-memory/records/callback digest; four sealed lifecycle checks/11 attested machines; strict ALL75/75 and exact-source F40 40/40 identical/75-machine attestation. Final closed ledger out/T10/validation-v3.json, supplemental audit and actual-host closure bind{len(v['evidence_sha256'])} evidence files and verify all40 experiment groups empty. See out/T10/assessment.md.
+
+Three quiet simultaneous preserved-T09/candidate/CPython/PyPy rounds with rotated cores/order retain all results:median candidate/baseline{ratio:.9f}, {change:.2f}% {direction} CPU. Median paired CPython speed{cpy:.3f}x; candidate uses{pypy:.3f}x PyPy CPU. No arbitrary per-increment5% minimum under the owner policy; exact-head CI before squash.
+
+Ten external callees are registered; two are unregistered guests1A04/16D6:0945. Test-only ABI doubles exercise caller continuations, while separate tests preserve actual refusal. No new production stub/Match hook/callee implementation or admitted-input expansion. Early missing-boundary and source-binding-invalid preflights are preserved/rejected, exact old bytes hash-verified; current v3 proof frozen and valid. Runtime unchanged for test fixes. Same accepted2cbeb36f/state-v2/private T07 inputs; no original data committed or automatic review. Existing #6/later A700/ref-121/owner-run engine review/adoption gates remain.
+
+Closes #26.
+''')
+print('Assessment/README/final PR prose rendered from accepted v3 receipts')
