@@ -8,7 +8,7 @@ Same accepted2cbeb36f/private state-v2 T07 inputs. Never commit original data.
 All earlier task receipts remain historical and must not be overwritten.
 T10 completed/failed outputs use exclusive versioned paths. Preserve bound
 production/producer sources and binary bytes during runs. Do not rebuild during
-measured/fidelity producers. No supervisor started yet; live status stays in #1.
+measured/fidelity producers. Supervisor/proof lifecycle and live process state stay in #1.
 An initial borrow-check build failure is retained with exact initial source.
 Public baseline fails the new native-coverage assertion; its behavioral parity
 already passes. New caller proofs use controlled external ABI boundaries, while
