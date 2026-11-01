@@ -1,0 +1,6 @@
+denied: unicorn, .sav, .EXE, .DAT
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T09/observer-matrix.txt", line 47, in <module>
+    assert pair[0][0]['done']==[(root,0x8000)] and pair[0][0]['regs']['eax']&65535==0x1111
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,18 @@
+"""Run on the experiment host after supervisor exits; verify actual PID/PGID closure."""
+import hashlib,json,os,platform,time
+from pathlib import Path
+out=Path('out/T09');load=lambda n:json.loads((out/(n+'.json')).read_text());jobs=[json.loads(x) for x in (out/'jobs-v1.jsonl').read_text().splitlines()]
+starts=[r for r in jobs if r['event']=='start'];exits=[r for r in jobs if r['event']=='exit'];assert len(starts)==len(exits)==21 and all(r['code']==0 for r in exits)
+perf=load('performance-v1');assert len(perf['starts'])==len(perf['exits'])==12 and all(r['code']==0 for r in perf['exits'])
+groups=[dict(kind='canonical',pid=r['pid']) for r in starts]+[dict(kind='timing',pid=r['pid']) for r in perf['starts']]+[dict(kind='pilot',pid=r['pid']) for r in load('pilot-start-v1')['jobs']]
+for r in groups:
+ try:os.killpg(r['pid'],0)
+ except ProcessLookupError:r['empty']=True
+ else:raise AssertionError(('still live group',r))
+supervisor=int(Path('.cache/T09-supervisor.lock').read_text())
+try:os.kill(supervisor,0)
+except ProcessLookupError:pass
+else:raise AssertionError(('supervisor still alive',supervisor))
+report=dict(pass_all=True,node=platform.node(),time_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),supervisor_pid=supervisor,supervisor_exited=True,groups=groups,canonical_exit_codes=[r['code'] for r in exits],timing_exit_codes=[r['code'] for r in perf['exits']],script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
+with (out/'process-closure-v1.json').open('x') as f:json.dump(report,f,indent=2)
+print('Supervisor exited, 21 canonical +12 timing +2 pilot groups empty')

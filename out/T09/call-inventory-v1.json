@@ -1,0 +1,90 @@
+{
+  "all_guest_targets_literal": true,
+  "guest_sites": [
+    {
+      "caller": "speaker_seed_step",
+      "target": "214B:0688",
+      "ret": "0791:94DC",
+      "far": true,
+      "args": 3
+    },
+    {
+      "caller": "speaker_noise_state",
+      "target": "0791:0425",
+      "ret": "0791:9540",
+      "far": false,
+      "args": 1
+    },
+    {
+      "caller": "speaker_noise_state",
+      "target": "0791:94C9",
+      "ret": "0791:94F9",
+      "far": false,
+      "args": 1
+    },
+    {
+      "caller": "speaker_noise_state",
+      "target": "214B:1E8D",
+      "ret": "0791:9532",
+      "far": true,
+      "args": 0
+    },
+    {
+      "caller": "speaker_noise_state",
+      "target": "0791:94C9",
+      "ret": "0791:9522",
+      "far": false,
+      "args": 1
+    },
+    {
+      "caller": "speaker_noise_state",
+      "target": "214B:1EBC",
+      "ret": "0791:952B",
+      "far": true,
+      "args": 1
+    }
+  ],
+  "inline_calls": {
+    "speaker_seed_step": [
+      "PORTS.port",
+      "Regs",
+      "_end",
+      "guest",
+      "r.enter",
+      "r.local16",
+      "ss16"
+    ],
+    "speaker_noise_state": [
+      "PORTS.port",
+      "Regs",
+      "_end",
+      "cwd",
+      "guest",
+      "mem.ds16",
+      "r.enter",
+      "rb",
+      "s16"
+    ],
+    "speaker_off_memory": [
+      "PORTS.port",
+      "Regs",
+      "_end",
+      "mem.ds8",
+      "r.arith",
+      "r.enter",
+      "sub_flags"
+    ]
+  },
+  "rust_call_sites_match": true,
+  "source_sha256": {
+    ".cache/goal2-archaeology/runtime/original_match/port/display.py": "33b298ead7c58815b9463a39f14e0ba862c81a3af02d53cd5f6184b0f4d8da5e",
+    ".cache/goal2-archaeology/runtime/original_match/port/entrypoints.py": "a55d378798ed5ec2c33404739b0961b8fec1e6167d1d301f5512cced4063b5b7",
+    "engine/src/speaker.rs": "e0bae997a1b1e8ef55a4af53aade606bce32bbad3cbcd11405f96e5059d6ca86",
+    "/home/diego/projects/goal2rust/out/T09/call-inventory.txt": "a0e29ce83a1bc5c32765c63cc25ff4813f7ec7f7841fd1c9dafd01b1fceef022"
+  },
+  "unchanged_hardware_stubs": [
+    "214B:1EBC",
+    "0791:0425"
+  ],
+  "claim": "Four data-state bodies only; no hardware implementation or hidden callee collapse"
+}

@@ -1,0 +1,60 @@
+{
+  "profile_source": "out/T08/profile-after-v1.json",
+  "profile_sha256": "ff9d46488f1480f6026ddfe83fd86cbcfb11c7410b8bf183a588912588b093ab",
+  "selected": {
+    "0791:94E8": {
+      "body_self_s": 0.725596046,
+      "cumulative_s": 5.069176414,
+      "function": "speaker_noise_state",
+      "guest_entries": 76847,
+      "module": "display",
+      "native_entries": 0,
+      "python_calls_or_resumes": 263268,
+      "python_entries": 76847
+    },
+    "0791:94C9": {
+      "body_self_s": 0.145005072,
+      "cumulative_s": 1.462920795,
+      "function": "speaker_seed_step",
+      "guest_entries": 32727,
+      "module": "display",
+      "native_entries": 0,
+      "python_calls_or_resumes": 65454,
+      "python_entries": 32727
+    },
+    "214B:0688": {
+      "body_self_s": 0.057984479000000005,
+      "cumulative_s": 2.451273629,
+      "function": "explicit_seed_draw",
+      "guest_entries": 32727,
+      "module": "entrypoints",
+      "native_entries": 0,
+      "python_calls_or_resumes": 32727,
+      "python_entries": 32727
+    },
+    "214B:1E8D": {
+      "body_self_s": 0.188029139,
+      "cumulative_s": 2.167758151,
+      "function": "speaker_off_memory",
+      "guest_entries": 63498,
+      "module": "display",
+      "native_entries": 0,
+      "python_calls_or_resumes": 63498,
+      "python_entries": 63498
+    }
+  },
+  "python_entries_removed": 205799,
+  "expected_native_bodies": 16,
+  "expected_native_entries": 1556593,
+  "expected_python_entries": 1547092,
+  "unchanged_stubs": [
+    "214B:1EBC",
+    "0791:0425"
+  ],
+  "upstream": {
+    "archaeology": "2a411f50422ecd1f5d8cf96d05f1873e6257e684",
+    "goal2": "721dbd1e8692e4da0c0860b4e6989d41bc1e4cc1",
+    "accepted": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+    "assessment": "goal2 PR483 re-vendors sealed kit/tables, PR486 fixes wrapper cancellation; no change to selected port semantics. Retain controlled accepted pin and local private table policy."
+  }
+}

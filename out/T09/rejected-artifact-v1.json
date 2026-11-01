@@ -1,0 +1,5 @@
+{
+  "archive": ".cache/T09-rejected/21fa7280d91499017ee587944d54de19353133cdb92f61e90d0905e8a5001f6c/goal2rust_engine.cpython-312-x86_64-linux-gnu.so",
+  "sha256": "21fa7280d91499017ee587944d54de19353133cdb92f61e90d0905e8a5001f6c",
+  "reason": "Inactive descriptor prototype; source preserved as text, register factory never enabled in production"
+}

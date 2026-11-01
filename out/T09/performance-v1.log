@@ -1,0 +1,20 @@
+START 1 baseline 54603
+START 1 candidate 54604
+START 1 python 54605
+START 1 pypy 54606
+ROUND 1 {'baseline': 67.431070097, 'candidate': 66.25467774799999, 'python': 134.097425392, 'pypy': 47.926957402}
+START 2 candidate 54798
+START 2 baseline 54799
+START 2 pypy 54800
+START 2 python 54801
+ROUND 2 {'candidate': 65.661156774, 'baseline': 68.596781063, 'pypy': 48.492370707, 'python': 134.68521303199998}
+START 3 baseline 54965
+START 3 candidate 54966
+START 3 python 54967
+START 3 pypy 54968
+ROUND 3 {'baseline': 71.044257827, 'candidate': 65.452921333, 'python': 146.591199748, 'pypy': 49.177801714}
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T09/performance.py", line 42, in <module>
+    assert report['pass_performance'],'repeatable performance threshold failed; no merge'
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError: repeatable performance threshold failed; no merge

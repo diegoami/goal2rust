@@ -1,0 +1,22 @@
+"""Close per-routine M2 separately from still-pending full drive/performance M3."""
+import hashlib,json
+from pathlib import Path
+import evidence as e
+e.verify();before=e.hashes();out=e.BASE/'out/T09';load=lambda n:json.loads((out/(n+'.json')).read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();names=[];total=0
+for name,count in [('legacy-v1',28448),('availability-differential-v1',3224),('ball-differential-v1',2128),('skill-differential-v1',6224),('speaker-differential-v1',12448)]:
+ r=load(name);assert r['all_equal'] and r['source_unchanged'];rows=r.get('comparisons',r.get('routines'));assert sum(x['equal'] for x in rows.values())==count
+ total+=count;names.append(name)
+names+=['legacy-body-v1']+[s+'-'+c+'-v1' for s in ['availability','ball','skill'] for c in ['body','return']]+['speaker-'+c+'-v1' for c in ['body','root-return','seed-return']]
+for name in names:
+ r=load(name);assert r['source_unchanged']
+ for path,h in r['source_sha256'].items():assert sha(e.BASE/path)==h
+ if name.endswith(('body-v1','return-v1')):assert not r['all_equal']
+for label in ['differential','body','root-return','seed-return']:
+ r=load('speaker-'+label+'-v1');assert r['control_scope_verified'] and all(v==8 for v in r['captures'].values())
+ assert all(v['equal']==v['total']-v['expected_different'] for v in r['comparisons'].values())
+r=load('observer-matrix-v2');assert r['pass_all'];assert r['error_comparisons']+len(r['variants'])+len(r['live_return_store_observers'])==328
+for name in ['public-cpython-v1.log','public-pypy-v1.log']:
+ text=(out/name).read_text();assert 'Ran 27 tests' in text and text.rstrip().endswith('OK')
+assert total==52472
+report=dict(pass_m2=True,normal_differential_comparisons=total,supplemental_observer_comparisons=328,all_controls_caught=True,receipt_sha256={n:sha(out/(n+'.json')) for n in names+['observer-matrix-v2']},script_sha256=sha(Path(__file__)),m3_full_corpus_ordered_drive_performance_pending=True)
+e.write(out/'m2-proof-v1.json',report,before);print('M2:52472 normal +328 observer comparisons equal; controls caught; M3 pending')

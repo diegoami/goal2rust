@@ -1,0 +1,19 @@
+"""Audit selected source AST guest-call closure without writing private state."""
+import ast,hashlib,json,re
+from pathlib import Path
+out=Path('out/T09');root=Path('.cache/goal2-archaeology/runtime/original_match/port');path=root/'display.py';tree=ast.parse(path.read_text());wanted={'speaker_noise_state','speaker_seed_step','speaker_off_memory'};rows=[];helpers={}
+for fn in tree.body:
+ if isinstance(fn,ast.FunctionDef) and fn.name in wanted:
+  helpers[fn.name]=sorted({ast.unparse(n.func) for n in ast.walk(fn) if isinstance(n,ast.Call)})
+  for n in ast.walk(fn):
+   if isinstance(n,ast.Call) and isinstance(n.func,ast.Name) and n.func.id=='guest':
+    assert len(n.args)>=3 and isinstance(n.args[2],ast.Constant) and isinstance(n.args[2].value,str),'dynamic guest target'
+    target=n.args[2].value;target=target if ':' in target else '0791:'+target
+    kw={k.arg:ast.literal_eval(k.value) for k in n.keywords};ret=kw['ret'];ret=ret if ':' in ret else '0791:'+ret
+    rows.append(dict(caller=fn.name,target=target,ret=ret,far=kw.get('far',True),args=len(n.args)-3))
+assert len(rows)==6
+rust=Path('engine/src/speaker.rs');pairs=set(re.findall(r'"([0-9A-F]{4}:[0-9A-F]{4})","([0-9A-F]{4}:[0-9A-F]{4})"',rust.read_text()))
+assert pairs=={(r['target'],r['ret']) for r in rows}
+r=dict(all_guest_targets_literal=True,guest_sites=rows,inline_calls=helpers,rust_call_sites_match=True,source_sha256={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in [path,root/'entrypoints.py',rust,Path(__file__)]},unchanged_hardware_stubs=['214B:1EBC','0791:0425'],claim='Four data-state bodies only; no hardware implementation or hidden callee collapse')
+with (out/'call-inventory-v1.json').open('x') as f:json.dump(r,f,indent=2)
+print('Six literal guest sites match Rust; original stub boundaries retained')

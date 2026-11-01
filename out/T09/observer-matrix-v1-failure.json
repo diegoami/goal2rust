@@ -1,0 +1,4 @@
+{
+  "reason": "Supplemental harness expected final AX1111 after its store-listener mutation. Both implementations agreed; generic PortFrame._finish correctly restores the cached returned AX8000. Correct v2 checks done/final AX8000 plus one observed store AX mutation. No production change or weakened equality assertion.",
+  "script_sha256": "35d9cda7a67214cb4bbef9878e4f93fd863b0d135440e1ed2ba39d9d76de74cb"
+}

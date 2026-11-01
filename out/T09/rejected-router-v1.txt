@@ -1,0 +1,35 @@
+"""Backend-local selection of descriptor-accelerated original Regs storage/methods.
+
+The accepted Python class keeps its dictionaries/dirty set and stack/flags code.
+Subclasses (notably RealRegs) retain normal construction and original properties.
+"""
+import sys
+from original_match.port.runtime import Regs as OriginalRegs
+from goal2rust_engine import RegisterProperty
+
+class FastRegs(OriginalRegs):
+    __slots__=()
+
+PROPERTIES={name:RegisterProperty(name) for name in OriginalRegs._NAMES}
+for _name,_prop in PROPERTIES.items():setattr(FastRegs,_name,_prop)
+
+class BackendRegs(OriginalRegs):
+    __slots__=()
+    def __new__(cls,mem,resumed=False):
+        if cls is not BackendRegs:return object.__new__(cls)
+        if getattr(mem.m,'_register_cache_accel',False):return FastRegs(mem,resumed)
+        return OriginalRegs(mem,resumed)
+
+_installed=False
+def install():
+    global _installed
+    if _installed:return
+    # Future imports see BackendRegs; already-imported ordinary aliases are routed too.
+    for module in tuple(sys.modules.values()):
+        namespace=getattr(module,'__dict__',None)
+        if namespace and str(namespace.get('__name__','')).startswith('original_match.port'):
+            if namespace.get('Regs') is OriginalRegs:namespace['Regs']=BackendRegs
+    _installed=True
+
+def counts():
+    return {name:list(prop.calls) for name,prop in PROPERTIES.items()}

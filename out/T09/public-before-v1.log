@@ -1,0 +1,677 @@
+test_all_bodies_and_continuations (test_speaker_state.SpeakerStateTests.test_all_bodies_and_continuations) ... FAIL
+test_errors_and_variants (test_speaker_state.SpeakerStateTests.test_errors_and_variants) ... ok
+test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) ... 
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=0, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=0, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=1, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=1, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=2, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=2, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=3, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=3, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=4, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=4, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=5, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=5, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=6, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=6, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=7, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=7, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=8, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=8, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=9, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=9, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=10, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=10, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=11, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=11, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=12, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=12, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=13, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=13, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=14, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=14, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=15, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=15, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=16, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=16, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=17, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=17, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=18, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=18, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=19, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=19, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=20, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=20, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=21, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=21, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=22, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=22, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=23, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=23, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=24, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=24, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=25, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=25, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=26, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=26, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=27, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=27, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=28, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=28, root='214B:1E8D', body=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=29, root='214B:0688', body=True, mutations=True) ... FAIL
+  test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=29, root='214B:1E8D', body=True) ... FAIL
+
+======================================================================
+FAIL: test_all_bodies_and_continuations (test_speaker_state.SpeakerStateTests.test_all_bodies_and_continuations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 92, in test_all_bodies_and_continuations
+    p,_=exercise(Oracle,2);r,n=exercise(PortMachine,2);self.assertEqual(p,r);self.assertEqual(n.get(ROOT),1)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=0, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'ddb60350f347ac4a66de52da88ed7242e5954bcc1[1116 chars]alse} != {'memory': '648614df144139e3e5dc4748197359566e0e2b0de[553 chars]alse}
+Diff is 2603 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=0, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '713c4982e336a77b339eda6138ca00be3e82d9ac5[801 chars]alse} != {'memory': '8b7942fd2cf76a7a923081d3f0e9390a80b3ac716[553 chars]alse}
+Diff is 1527 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=1, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'a18e28907f87215f17ed47b4fc07f252a1f9f4162[1181 chars]alse} != {'memory': '957267d29cd1e95be2156e836f01c52614a30fbdb[552 chars]alse}
+Diff is 2709 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=1, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'be82b0f86199cfdf9dfa1f1c55393e7b5e7099afa[737 chars]alse} != {'memory': 'd4941cf8cee63e6d3a1c03063ab14ee545adba589[552 chars]alse}
+Diff is 1343 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=2, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'a10823096532aa79bf53c9b28f5fc8df6feca35ef[1206 chars]alse} != {'memory': '5338b7c8c3fd5145d43e1cfe7709673f7ab09b807[555 chars]alse}
+Diff is 2746 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=2, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '736ff06ee70a4020e0023f8695546d35dc5f793fd[744 chars]alse} != {'memory': 'c42f1c397ff8a04fafc9e58abf7ea0370abed7215[555 chars]alse}
+Diff is 1356 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=3, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '046cfc5186afb3fbd07598f90749212cf43165e1f[1106 chars]alse} != {'memory': '71cad9664ec3ea73f064dc1877eab6201f85174b6[555 chars]alse}
+Diff is 2601 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=3, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'cb5fe6b93f9a758661d603f50faa3dc3029fa4b05[803 chars]alse} != {'memory': '8f8018679c1e24a5a317997326b55bb5b0ab04c55[555 chars]alse}
+Diff is 1530 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=4, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '6ac42495bee46f1a6a14e915e167d66ce53571aaf[1119 chars]alse} != {'memory': '3518a3b438af2b66c85a78cb1149a607e604c18cc[553 chars]alse}
+Diff is 2603 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=4, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'fb42af4832e1d3f1ff2d3b3f8044b26c4aada9f69[742 chars]alse} != {'memory': 'ed122aad5686902d7a1c26447b08956f1f2b20d48[553 chars]alse}
+Diff is 1354 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=5, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '1092cb8b54db3ac5dcdfc0db55eb4d76360f0c5b4[1116 chars]alse} != {'memory': '8e38b0072f40f10173ecae4f55999bd8270bd0e20[557 chars]alse}
+Diff is 2605 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=5, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '007c229f3f0d1cb92fedaec36e4b55dafd4a14922[749 chars]alse} != {'memory': 'e5061036f1a917bdc0e2684a343d1d9c73a90f900[557 chars]alse}
+Diff is 1361 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=6, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '42e62ee95388b8e5ec034a0640782bfb4423f4d37[1118 chars]alse} != {'memory': 'd1e7f06fadad3daa292d7782a80db91ada764d851[558 chars]alse}
+Diff is 2607 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=6, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'ac5523cab3aace8161c6fbad1f4594fa420288012[804 chars]alse} != {'memory': '73149ef8fa65a7f45837ee1a6b5905429ee33f567[558 chars]alse}
+Diff is 1528 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=7, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'f42fc31647093f97301d152f40eb536fccf0ba685b[1105 chars]alse} != {'memory': 'f68b22fb3866734dd1a9cf8c287ad285c98a4dd30b[552 chars]alse}
+Diff is 2595 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=7, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '51c5def52837fca59a191b252d9bbee2a2d41bb7c[745 chars]alse} != {'memory': '97a18c5216986d1309ab7b70630fae5caeb6f3d79[553 chars]alse}
+Diff is 1356 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=8, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '8aa562262cd8fbc5a6dbcce6c8d21180f49ddfa20[1198 chars]alse} != {'memory': 'a39766b695130376976356d0eec09a7b49a55cdeb[552 chars]alse}
+Diff is 2730 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=8, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '538e5fdb6103721c27590a02ed973bf9f7e2bfe0d[744 chars]alse} != {'memory': 'e2d036534f9450690c74188aaa004c5817978d316[552 chars]alse}
+Diff is 1356 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=9, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'd98b85b05825ce9cc707c68cc3371b06258e3d1eb[1193 chars]alse} != {'memory': 'f5ead44132dfa7a491a223b412e929bcedd593cf0[553 chars]alse}
+Diff is 2628 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=9, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '6ba06c13e6a42df9f9641322cfe8ae6a8bc498a35[801 chars]alse} != {'memory': 'd61bcce1ad81ad409fdc26f7cb6615de5231ab51c[553 chars]alse}
+Diff is 1527 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=10, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'ece708b86137f1576ce7a1a92009ffd16e8289cdb[1120 chars]alse} != {'memory': '9cf4a46c43931d47c857343436683078157e22426[554 chars]alse}
+Diff is 2614 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=10, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'c077837e499f6333ec2626ed1c2b3ab5d1a692dd4[743 chars]alse} != {'memory': '77c905ab6fbf8836b53d1bbf20376e6a16dbadb25[554 chars]alse}
+Diff is 1354 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=11, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '351bc57d58634f1612b309dece9373f9a2e4b5723[1124 chars]alse} != {'memory': 'e5233c84808e317d4e33f285006bedb15bb92e20a[555 chars]alse}
+Diff is 2613 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=11, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '1d2f1e0cb7a94b16678578d6b1a43cf3eaa394a4a[747 chars]alse} != {'memory': '6ba56b68bfe2451794cc570abd911326ac8ca39d6[555 chars]alse}
+Diff is 1359 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=12, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '3d79ef2435823eb73936d4085813a07dfaaf076d2[1108 chars]alse} != {'memory': '2add0d0e79f304d14bbc5872128d78df4fbc97121[557 chars]alse}
+Diff is 2600 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=12, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'e75df32b30c5068a4223423a5aef95fdd9d4866d0[805 chars]alse} != {'memory': '01bb52ccb3d919a89beb7aadebdc2e2ec1f16b213[557 chars]alse}
+Diff is 1532 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=13, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'be475f58f0fdb178bce89beb95a6a9237900fd7fe[1107 chars]alse} != {'memory': 'a51fc146b22932f1af3e0487a81eecf1b052f623c[557 chars]alse}
+Diff is 2593 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=13, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '695f99a6a862e9d186b39c20ca74a314254a60c16[746 chars]alse} != {'memory': '823b3f184d539e02169f95fdffca3e23a28fdc7bd[557 chars]alse}
+Diff is 1356 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=14, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '6586c0125ff74d457fac99a05f6d761a16ca3c230[1116 chars]alse} != {'memory': '31972a1231aef61173080fb886c616448ca190314[553 chars]alse}
+Diff is 2604 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=14, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '4bb2305c491b2f51931bbe5b7a0b4e17a513f845d[745 chars]alse} != {'memory': '34220b562cd5520ed4e22438883de79267d4ecb3a[553 chars]alse}
+Diff is 1356 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=15, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '7b55452d38191144107add109e5f3803c46de9770[1196 chars]alse} != {'memory': 'e30b7a4bfd6a5d5c582b03b90dd9cf3373533459f[554 chars]alse}
+Diff is 2732 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=15, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '0cf385dc13f4a0b7e19a8b68e45b563879d6769ea[802 chars]alse} != {'memory': '3d88ea0ebc86b21cf34c2bcf7455df9679ef53114[554 chars]alse}
+Diff is 1527 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=16, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '6dd0d7f623ba925f35c9f7be49c4c180ce5d88aef[1209 chars]alse} != {'memory': '20736e3e09b1996494cf6295d7988584ebc9f4fbd[553 chars]alse}
+Diff is 2682 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=16, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'ce5175f988ac27ec1c4db01f6e61658ec4b231e95[745 chars]alse} != {'memory': '6d23b3760d2ce1a8c33862944856fc30906dfbaeb[553 chars]alse}
+Diff is 1357 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=17, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '880b0ccab504cc0bf52f0f45c92af024b4d146c2e[1117 chars]alse} != {'memory': 'c49d0595eaf8415d1f1adf640ca1cb5633b329b02[553 chars]alse}
+Diff is 2599 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=17, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'c3c6505c757199d91acd6644b1376131aca8d0d44[742 chars]alse} != {'memory': 'ba00eb0353a512d506284533fd39b052ad42d1ad7[553 chars]alse}
+Diff is 1354 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=18, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'a4c5cb4ade984b587dfdc84de89eb03ae2fd60852[1115 chars]alse} != {'memory': '3f6898d1a09b6df6e233c7cb96deffe758599d4ad[554 chars]alse}
+Diff is 2602 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=18, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '3d877488e7e6b53300c032833eadead149ca9f7f3[802 chars]alse} != {'memory': 'a9ef97a8466c715ab2b26e850cbcedefae77358fb[554 chars]alse}
+Diff is 1527 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=19, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '49ed8841682d322acd8d555610c3cac7544a6b8937[1110 chars]alse} != {'memory': '4cd77338eb84f3b1382e09ee1ac4338e87f8b4c306[557 chars]alse}
+Diff is 2596 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=19, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '6fdf87aa1239ee3ac05e77c53c27ae381a7757977[750 chars]alse} != {'memory': '9896e76a266c7a02d2a1f0512d1670a5573758f2b[558 chars]alse}
+Diff is 1362 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=20, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '607faec3d6d5d405b14b9e09b365523be34dbab93[1120 chars]alse} != {'memory': '48079751b376ace7340d400164e6474201d66063d[557 chars]alse}
+Diff is 2605 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=20, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '8620607826ac358fbe49b77f76e1d056de60a1e63[749 chars]alse} != {'memory': 'f5d81b40be8cf1f391ae4ace4634c1e4fae78cd93[557 chars]alse}
+Diff is 1361 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=21, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '108cb430c51615b2a1d7803838c2139128ebbfc5d[1108 chars]alse} != {'memory': '6b9c0507dbb186dc36751bd4780a825f419cc8606[553 chars]alse}
+Diff is 2604 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=21, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '7493a522b98aa4f70775bf07a749632099b4ab0a1[801 chars]alse} != {'memory': '3d8c7c0b0c11a0c7c2648e5e9238207da9ea1a69f[553 chars]alse}
+Diff is 1523 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=22, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'a00850cee84161668d77ab607075b52955d381374[1215 chars]alse} != {'memory': '69414a62e6c5fcdc63716671c28634cafe4ea7d76[553 chars]alse}
+Diff is 2751 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=22, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'dc8959b183ee1f348a265b2ec08fd20341d6ebd8b[745 chars]alse} != {'memory': '25994fbe0e3e2a518832c316c80d74c5df9e05e5c[553 chars]alse}
+Diff is 1356 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=23, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'a0bf2962513f2b62050b7bbfab0d9bd82109a2fda[1210 chars]alse} != {'memory': 'f67fa5c0ac1d9fdf16aceb1ed8bc6b524ac3baf1c[552 chars]alse}
+Diff is 2737 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=23, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '6ba2de9707e8a90930b0369b7b04656aaf707b498[739 chars]alse} != {'memory': '1c0b716d9904f82732f368a692ed0a9ee5c087eb7[552 chars]alse}
+Diff is 1347 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=24, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '5cb4b4ad076ae801526d0eda30dd6e02e4e5c23bf[1116 chars]alse} != {'memory': '35f41378d0367f10b43b1ca0a26c0774868b906bb[555 chars]alse}
+Diff is 2607 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=24, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '4fab664a0cafadeaf86fcbcdc2ce537fd5a6f27fe[803 chars]alse} != {'memory': 'e0c72e6dab9185b96fd21dc1b7ae83b4876649635[555 chars]alse}
+Diff is 1530 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=25, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '34c5d7ca89d4845e24e4fb9cde62a764ee091ac6d[1109 chars]alse} != {'memory': '43271bf64ce52ebb6a3d7e76f863416f5408f73ee[556 chars]alse}
+Diff is 2600 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=25, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '866ede9e440ab0f96f2eb569379933abdad6d7e86[748 chars]alse} != {'memory': '61cb4b4ae1236bc0bd8665a71daf384c7e6e2d693[556 chars]alse}
+Diff is 1360 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=26, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '3e03017837888e0cfe70e274bc0f18f612037dc99[1110 chars]alse} != {'memory': 'ca346d55f8e06af4d8c4d4be010d10cd723ca20f0[557 chars]alse}
+Diff is 2598 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=26, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '282842e3e26e36e4cddd265f1bb120b781383f20b[749 chars]alse} != {'memory': '347668f8339e2abaf11cc5058fc918c791741b72e[557 chars]alse}
+Diff is 1361 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=27, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '241834dc993511c581da283f3f7fff2e4f82590e8[1108 chars]alse} != {'memory': '388a61f45f864ce311d10c91012ab693ca042c4c4[559 chars]alse}
+Diff is 2603 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=27, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '33197a447354c39a505ec4e93092b880b0330f41b[807 chars]alse} != {'memory': 'd86564360cea65df1c55c5f8d8b0051d3407d517e[559 chars]alse}
+Diff is 1534 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=28, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '8aa9ff88f5efea4617eb198d4fb46ce552b1c6ce0a[1115 chars]alse} != {'memory': '825c705002d402a4d946d9b1086509c64e499c119d[550 chars]alse}
+Diff is 2545 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=28, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': '530053684349054e2ef39211c7878a401f6f0935b[738 chars]alse} != {'memory': '658ab77c7d66a320a95f256f4cfcd17e149b483f7[551 chars]alse}
+Diff is 1347 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=29, root='214B:0688', body=True, mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'b71db48eb5131feebccec785765ea604f08b8d8f4[1213 chars]alse} != {'memory': '9de1ce3a1fa41f3e0e263e78c30cf401bcc486109[554 chars]alse}
+Diff is 2747 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) (case=29, root='214B:1E8D', body=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_speaker_state.py", line 102, in test_leaf_bodies_callbacks_and_done
+    with self.subTest(case=case,**opts):self.assertEqual(exercise(Oracle,case,**opts)[0],exercise(PortMachine,case,**opts)[0])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'memory': 'a618155b8426c2e504a727f714b98dec710bb178a[743 chars]alse} != {'memory': '13bef6bc827481267604ccc344101fee3a8ce5f8a[554 chars]alse}
+Diff is 1353 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.805s
+
+FAILED (failures=61)

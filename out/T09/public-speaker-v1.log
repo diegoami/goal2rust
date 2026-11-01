@@ -1,0 +1,8 @@
+test_all_bodies_and_continuations (test_speaker_state.SpeakerStateTests.test_all_bodies_and_continuations) ... ok
+test_errors_and_variants (test_speaker_state.SpeakerStateTests.test_errors_and_variants) ... ok
+test_leaf_bodies_callbacks_and_done (test_speaker_state.SpeakerStateTests.test_leaf_bodies_callbacks_and_done) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 5.003s
+
+OK

@@ -1,0 +1,55 @@
+//! Descriptor-only acceleration of runtime._register_property (accepted 2cbeb36f).
+//! Python Regs storage, stack/flags methods and reentrant mutation semantics stay intact.
+use std::cell::Cell;
+use pyo3::class::gc::{PyTraverseError,PyVisit};
+use pyo3::prelude::*;
+use pyo3::intern;
+use pyo3::types::{PyDict,PyInt,PySet,PyString};
+
+#[pyclass(unsendable,module="goal2rust_engine")]
+pub struct RegisterProperty { name:Py<PyString>,sp:bool,gets:Cell<u64>,puts:Cell<u64> }
+
+#[pymethods]
+impl RegisterProperty {
+    #[new]
+    fn new(py:Python<'_>,name:&str)->PyResult<Self>{
+        if !["ax","bx","cx","dx","si","di","es","sp","bp"].contains(&name){return Err(pyo3::exceptions::PyValueError::new_err("not a Regs register"));}
+        Ok(Self{name:PyString::intern(py,name).unbind(),sp:name=="sp",gets:Cell::new(0),puts:Cell::new(0)})
+    }
+    fn __get__<'py>(slf:PyRef<'py,Self>,obj:Bound<'py,PyAny>,_owner:Option<Bound<'py,PyAny>>)->PyResult<Bound<'py,PyAny>>{
+        let py=obj.py();
+        if obj.is_none(){return Ok(slf.into_pyobject(py)?.into_any());}
+        slf.gets.set(slf.gets.get()+1);let name=slf.name.bind(py);
+        let values=obj.getattr(intern!(py,"_v"))?;
+        let cached=if values.get_type().is(&py.get_type::<PyDict>()) {
+            values.cast::<PyDict>()?.get_item(name)?.unwrap_or_else(||py.None().into_bound(py))
+        } else {values.call_method1(intern!(py,"get"),(name,))?};
+        if !cached.is_none(){return Ok(cached);}
+        let value=if slf.sp && obj.getattr(intern!(py,"_fresh"))?.is_truthy()? {
+            obj.getattr(intern!(py,"_mem"))?.getattr(intern!(py,"_entries"))?.get_item(-1)?.get_item(0)?
+        } else {
+            obj.getattr(intern!(py,"_mem"))?.call_method1(intern!(py,"reg"),(name,))?.bitand(0xffff)?
+        };
+        // A callback can replace _v while mem.reg runs: source re-fetches the target.
+        obj.getattr(intern!(py,"_v"))?.set_item(name,&value)?;
+        Ok(value)
+    }
+    fn __set__(&self,obj:&Bound<'_,PyAny>,value:&Bound<'_,PyAny>)->PyResult<()>{
+        let py=obj.py();self.puts.set(self.puts.get()+1);
+        let masked=if value.get_type().is(&py.get_type::<PyInt>()) {
+            match value.extract::<i128>() {
+                Ok(v)=>((v&0xffff) as u16).into_pyobject(py)?.into_any(),
+                Err(_)=>value.bitand(0xffff)?,
+            }
+        } else {value.bitand(0xffff)?};
+        // RHS evaluation precedes target lookup; __and__/__setitem__ can mutate fields.
+        obj.getattr(intern!(py,"_v"))?.set_item(self.name.bind(py),masked)?;
+        let dirty=obj.getattr(intern!(py,"_dirty"))?;
+        if dirty.get_type().is(&py.get_type::<PySet>()){dirty.cast::<PySet>()?.add(self.name.bind(py))?;}
+        else {dirty.call_method1(intern!(py,"add"),(self.name.bind(py),))?;}
+        Ok(())
+    }
+    #[getter]
+    fn calls(&self)->(u64,u64){(self.gets.get(),self.puts.get())}
+    fn __traverse__(&self,visit:PyVisit<'_>)->Result<(),PyTraverseError>{visit.call(&self.name)}
+}
