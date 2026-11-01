@@ -1,0 +1,7 @@
+START draw-differential-v1 10242
+EXIT draw-differential-v1 0
+START draw-body-v1 10310
+EXIT draw-body-v1 0
+START draw-return-v1 10336
+EXIT draw-return-v1 0
+Three canonical draw proofs complete; supervisor can resume remaining jobs
