@@ -261,6 +261,19 @@ Upstream rechecked 2026-11-01: archaeology remains `2a411f5`; goal2 is now
 `51e70d3` (PR #494: CI/slow-runner infrastructure and job detachment fallback).
 These changes do not alter the accepted oracle or this translation contract.
 
+## 2l. T15: player sprite caller
+
+Translate motion.move_player_sprite0791:8537, hottest remaining Python body in
+T14's full profile (75,943 starts). Immediate frame, captured linear record and
+sentinel, signed cell arithmetic, old background restoration / sprite draw,
+holder/keeper/interception and ball movement/clamps; five registered guest-call
+boundaries remain delegated. Preserve captured yield replies versus actual AX,
+live pointers/record contents/DS argument and ordered observers. Contract:
+[tasks/T15.md](tasks/T15.md), [out/T15](../out/T15/README.md). Same accepted pin and
+private state-v2, actual T14 baseline preserved. Full prior21-body regression,
+new caller controls/errors/observers, ordered/lifecycle/ALL75/F40/profile/artifact
+closure and three quiet rotated four-arm outcomes, all retained/no 5% floor.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the

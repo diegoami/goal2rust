@@ -1,0 +1,16 @@
+"""Diagnostic paired pilot, not an acceptance measurement; preserve all outcomes."""
+import json,os,subprocess,time,sys
+from pathlib import Path
+out=Path('out/T15');jobs=[]
+for arm,cpu in [('baseline',0),('candidate',2)]:
+ receipt=out/f'pilot-{arm}-v1.json';assert not receipt.exists()
+ command=['taskset','-c',str(cpu),str(Path('.venv/bin/python').absolute()),'-B','out/T15/run_receipt.py','--backend','rust','--mode','cpu','--out',str(receipt)]
+ log=(out/f'pilot-{arm}-v1.log').open('x');p=subprocess.Popen(command,env=dict(os.environ,PYTHONHASHSEED='0',GOAL2RUST_BASELINE='1' if arm=='baseline' else '0'),stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
+ jobs.append((arm,p,log,command))
+with (out/'pilot-start-v1.json').open('x') as f:json.dump(dict(jobs=[dict(arm=a,pid=p.pid,command=c) for a,p,l,c in jobs]),f,indent=2)
+for a,p,l,c in jobs:code=p.wait();l.close();assert code==0,(a,code)
+rows={a:json.loads((out/f'pilot-{a}-v1.json').read_text()) for a,p,l,c in jobs}
+for k in ['events','events_sha256','result_sha256','records_sha256','memory_sha256','stretches']:assert rows['baseline'][k]==rows['candidate'][k],k
+ratio=rows['candidate']['drive_cpu_s']/rows['baseline']['drive_cpu_s']
+with (out/'pilot-assessment-v1.json').open('x') as f:json.dump(dict(outputs_equal=True,diagnostic_only=True,ratio=ratio,cpu_s={a:r['drive_cpu_s'] for a,r in rows.items()}),f,indent=2)
+print('Diagnostic pilot',ratio,flush=True)

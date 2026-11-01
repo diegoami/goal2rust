@@ -179,3 +179,10 @@ live contents/conditional reads retain source lifetime/order. Return0 fatigue
 versusNone normal remains distinct, same callbacks/flags/stack/ABI.16 registered
 callees remain delegated, no hardware/transitive claim; variants Python. Contract
 out/T14/contract.md, actual T13 baseline bound out/T14/baseline-snapshot-v1.json.
+
+## T15 player sprite caller
+
+`engine/src/player_sprite.rs` translates `motion.move_player_sprite` 0791:8537
+and inline `record`, `cell`, `cell_mul`, `lo`, `regs` at the same accepted
+`2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c` pin. Five guest callees remain delegated;
+variants stay Python. See docs/tasks/T15.md and out/T15/contract.md.
