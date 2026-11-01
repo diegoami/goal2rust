@@ -1,0 +1,9 @@
+Preserved suite skill control 5
+denied: unicorn, .sav, .EXE, .DAT
+Real comparisons complete {'real:1771:3A06': {'total': 96, 'equal': 0}, 'real-body:1771:3A06': {'total': 32, 'equal': 0}, 'real:0791:278A': {'total': 96, 'equal': 0}}
+Synthetic inputs complete 100
+Synthetic inputs complete 200
+Synthetic inputs complete 300
+Synthetic inputs complete 400
+Synthetic inputs complete 500
+{"mutant": 5, "comparisons": {"real:1771:3A06": {"total": 96, "equal": 0}, "real-body:1771:3A06": {"total": 32, "equal": 0}, "real:0791:278A": {"total": 96, "equal": 0}, "random-edge:1771:3A06": {"total": 2000, "equal": 0}, "random-body:1771:3A06": {"total": 2000, "equal": 0}, "random-edge:0791:278A": {"total": 2000, "equal": 0}}, "callback_mutations": {"saved": 400, "sent": 144}, "all_equal": false, "source_unchanged": true}
