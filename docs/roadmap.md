@@ -274,6 +274,17 @@ private state-v2, actual T14 baseline preserved. Full prior21-body regression,
 new caller controls/errors/observers, ordered/lifecycle/ALL75/F40/profile/artifact
 closure and three quiet rotated four-arm outcomes, all retained/no 5% floor.
 
+T15 full fidelity and all three measured rounds pass: median 3.91% less CPU
+than saved T14, with every outcome retained. The candidate uses 1.041x PyPy CPU
+on this fixture and remains slower than PyPy. There are now 22 native bodies,
+1,904,131 native guest entries and 1,199,554 remaining Python guest entries
+(not a code-completion percentage). Accepted evidence:
+[out/T15/validation-v1.json](../out/T15/validation-v1.json), complete samples and
+scope in the [assessment](../out/T15/assessment.md). Strict ALL75/F40, exact
+ordered callbacks, sealed lifecycle and independent backend attestation pass.
+All 53 experiment groups are stopped. Upstreams remain archaeology `2a411f5`
+and goal2 `51e70d3`; no roadmap change. No next task included in this increment.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the
