@@ -1,0 +1,706 @@
+{
+  "bodies": {
+    "0791:2BB1": {
+      "address": "0791:2BB1",
+      "end_line": 760,
+      "helper_symbols": [
+        {
+          "line": 120,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/geometry.py",
+          "symbol": "original_match.port.geometry.c2bb1"
+        },
+        {
+          "line": 80,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/geometry.py",
+          "symbol": "original_match.port.geometry.rec8"
+        },
+        {
+          "line": 755,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/geometry.py",
+          "symbol": "original_match.port.geometry.slot_in_side"
+        },
+        {
+          "line": 56,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.args"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 755,
+      "long": false,
+      "module": "original_match.port.geometry",
+      "name": "slot_in_side",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/geometry.py",
+      "pop": 4,
+      "ret": "retf 4",
+      "return_stack_delta": 0,
+      "sites": []
+    },
+    "0791:4532": {
+      "address": "0791:4532",
+      "end_line": 149,
+      "helper_symbols": [
+        {
+          "line": 23,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/mem.py",
+          "symbol": "original_match.port.mem.s8"
+        },
+        {
+          "line": 119,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.depth_step_attack"
+        },
+        {
+          "line": 110,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.far"
+        },
+        {
+          "line": 92,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.guest"
+        },
+        {
+          "line": 114,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.local_far"
+        },
+        {
+          "line": 79,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.pop_ax"
+        },
+        {
+          "line": 64,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.push_word"
+        },
+        {
+          "line": 44,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.r8"
+        },
+        {
+          "line": 105,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.same"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 119,
+      "long": false,
+      "module": "original_match.port.positioning",
+      "name": "depth_step_attack",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+      "pop": 2,
+      "ret": "ret 2",
+      "return_stack_delta": 0,
+      "sites": [
+        {
+          "caller": "0791:4532",
+          "expression": "same(mem, '42CB', seg, off, at='4549')",
+          "far": true,
+          "line": 125,
+          "ret_to": "0791:4549",
+          "target": "0791:42CB"
+        },
+        {
+          "caller": "0791:4532",
+          "expression": "same(mem, '26D7', 7, seg, off, at='455B', ax=7)",
+          "far": true,
+          "line": 127,
+          "ret_to": "0791:455B",
+          "target": "0791:26D7"
+        },
+        {
+          "caller": "0791:4532",
+          "expression": "same(mem, '42CB', seg, off, at='458D')",
+          "far": true,
+          "line": 131,
+          "ret_to": "0791:458D",
+          "target": "0791:42CB"
+        },
+        {
+          "caller": "0791:4532",
+          "expression": "same(mem, '2D10', 0, seg, off, at='45A2', ax=0)",
+          "far": true,
+          "line": 133,
+          "ret_to": "0791:45A2",
+          "target": "0791:2D10"
+        },
+        {
+          "caller": "0791:4532",
+          "expression": "same(mem, '26D7', 1, seg, off, at='45B7', ax=1)",
+          "far": true,
+          "line": 135,
+          "ret_to": "0791:45B7",
+          "target": "0791:26D7"
+        },
+        {
+          "caller": "0791:4532",
+          "expression": "far(mem, '214B:06FA', at='45C0')",
+          "far": true,
+          "line": 137,
+          "ret_to": "0791:45C0",
+          "target": "214B:06FA"
+        },
+        {
+          "caller": "0791:4532",
+          "expression": "same(mem, '2D10', 0, seg, off, at='45E4', ax=0)",
+          "far": true,
+          "line": 140,
+          "ret_to": "0791:45E4",
+          "target": "0791:2D10"
+        },
+        {
+          "caller": "0791:4532",
+          "expression": "same(mem, '26D7', 1, seg, off, at='45F9', ax=1)",
+          "far": true,
+          "line": 142,
+          "ret_to": "0791:45F9",
+          "target": "0791:26D7"
+        },
+        {
+          "caller": "0791:4532",
+          "expression": "same(mem, '2D10', 30, seg, off, at='461E', ax=30)",
+          "far": true,
+          "line": 145,
+          "ret_to": "0791:461E",
+          "target": "0791:2D10"
+        },
+        {
+          "caller": "0791:4532",
+          "expression": "same(mem, '26D7', 7, seg, off, at='4633', ax=7)",
+          "far": true,
+          "line": 147,
+          "ret_to": "0791:4633",
+          "target": "0791:26D7"
+        }
+      ]
+    },
+    "0791:4649": {
+      "address": "0791:4649",
+      "end_line": 186,
+      "helper_symbols": [
+        {
+          "line": 23,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/mem.py",
+          "symbol": "original_match.port.mem.s8"
+        },
+        {
+          "line": 153,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.depth_step_defend"
+        },
+        {
+          "line": 110,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.far"
+        },
+        {
+          "line": 92,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.guest"
+        },
+        {
+          "line": 114,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.local_far"
+        },
+        {
+          "line": 24,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.player"
+        },
+        {
+          "line": 79,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.pop_ax"
+        },
+        {
+          "line": 64,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.push_word"
+        },
+        {
+          "line": 48,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.r16"
+        },
+        {
+          "line": 44,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.r8"
+        },
+        {
+          "line": 18,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.rec"
+        },
+        {
+          "line": 105,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.same"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 153,
+      "long": false,
+      "module": "original_match.port.positioning",
+      "name": "depth_step_defend",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+      "pop": 2,
+      "ret": "ret 2",
+      "return_stack_delta": 0,
+      "sites": [
+        {
+          "caller": "0791:4649",
+          "expression": "same(mem, '42CB', seg, off, at='4660')",
+          "far": true,
+          "line": 159,
+          "ret_to": "0791:4660",
+          "target": "0791:42CB"
+        },
+        {
+          "caller": "0791:4649",
+          "expression": "same(mem, '26D7', 6, seg, off, at='4672', ax=6)",
+          "far": true,
+          "line": 161,
+          "ret_to": "0791:4672",
+          "target": "0791:26D7"
+        },
+        {
+          "caller": "0791:4649",
+          "expression": "same(mem, '26D7', 5, seg, off, at='4689', ax=5)",
+          "far": true,
+          "line": 163,
+          "ret_to": "0791:4689",
+          "target": "0791:26D7"
+        },
+        {
+          "caller": "0791:4649",
+          "expression": "same(mem, '42CB', seg, off, at='46BE')",
+          "far": true,
+          "line": 168,
+          "ret_to": "0791:46BE",
+          "target": "0791:42CB"
+        },
+        {
+          "caller": "0791:4649",
+          "expression": "same(mem, '2D6D', 15, seg, off, at='46D4', ax=15)",
+          "far": true,
+          "line": 170,
+          "ret_to": "0791:46D4",
+          "target": "0791:2D6D"
+        },
+        {
+          "caller": "0791:4649",
+          "expression": "same(mem, '2D6D', 0, seg, off, at='46EE', ax=0)",
+          "far": true,
+          "line": 173,
+          "ret_to": "0791:46EE",
+          "target": "0791:2D6D"
+        },
+        {
+          "caller": "0791:4649",
+          "expression": "same(mem, '2D10', 10, seg, off, at='4709', ax=10)",
+          "far": true,
+          "line": 176,
+          "ret_to": "0791:4709",
+          "target": "0791:2D10"
+        },
+        {
+          "caller": "0791:4649",
+          "expression": "same(mem, '2BB1', seg, off, at='471A')",
+          "far": true,
+          "line": 178,
+          "ret_to": "0791:471A",
+          "target": "0791:2BB1"
+        }
+      ]
+    },
+    "0791:474D": {
+      "address": "0791:474D",
+      "end_line": 209,
+      "helper_symbols": [
+        {
+          "line": 23,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/mem.py",
+          "symbol": "original_match.port.mem.s8"
+        },
+        {
+          "line": 190,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.adjust_depth_offset"
+        },
+        {
+          "line": 40,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.argptr"
+        },
+        {
+          "line": 110,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.far"
+        },
+        {
+          "line": 92,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.guest"
+        },
+        {
+          "line": 101,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.near"
+        },
+        {
+          "line": 24,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.player"
+        },
+        {
+          "line": 48,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.r16"
+        },
+        {
+          "line": 44,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.r8"
+        },
+        {
+          "line": 18,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.rec"
+        },
+        {
+          "line": 105,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.same"
+        },
+        {
+          "line": 52,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+          "symbol": "original_match.port.positioning.w8"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 190,
+      "long": false,
+      "module": "original_match.port.positioning",
+      "name": "adjust_depth_offset",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/positioning.py",
+      "pop": 4,
+      "ret": "retf 4",
+      "return_stack_delta": 0,
+      "sites": [
+        {
+          "caller": "0791:474D",
+          "expression": "same(mem, '2B51', seg, off, at='475C')",
+          "far": true,
+          "line": 193,
+          "ret_to": "0791:475C",
+          "target": "0791:2B51"
+        },
+        {
+          "caller": "0791:474D",
+          "expression": "same(mem, '2D10', 0, seg, off, at='4785', ax=0)",
+          "far": true,
+          "line": 198,
+          "ret_to": "0791:4785",
+          "target": "0791:2D10"
+        },
+        {
+          "caller": "0791:474D",
+          "expression": "near(mem, '4532', f.bp, at='478D')",
+          "far": false,
+          "line": 201,
+          "ret_to": "0791:478D",
+          "target": "0791:4532"
+        },
+        {
+          "caller": "0791:474D",
+          "expression": "near(mem, '4649', f.bp, at='479A')",
+          "far": false,
+          "line": 204,
+          "ret_to": "0791:479A",
+          "target": "0791:4649"
+        },
+        {
+          "caller": "0791:474D",
+          "expression": "same(mem, '2BB1', seg, off, at='47AA')",
+          "far": true,
+          "line": 206,
+          "ret_to": "0791:47AA",
+          "target": "0791:2BB1"
+        }
+      ]
+    },
+    "214B:06FA": {
+      "address": "214B:06FA",
+      "end_line": 139,
+      "helper_symbols": [
+        {
+          "line": 138,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/entrypoints.py",
+          "symbol": "original_match.port.entrypoints.coin"
+        },
+        {
+          "line": 117,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/entrypoints.py",
+          "symbol": "original_match.port.entrypoints.random_core"
+        },
+        {
+          "line": 97,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/entrypoints.py",
+          "symbol": "original_match.port.entrypoints.rng_core"
+        },
+        {
+          "line": 272,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.add_flags"
+        },
+        {
+          "line": 56,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.args"
+        },
+        {
+          "line": 235,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.invoke"
+        },
+        {
+          "line": 249,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.sub_flags"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 138,
+      "long": false,
+      "module": "original_match.port.entrypoints",
+      "name": "coin",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/entrypoints.py",
+      "pop": 0,
+      "ret": "retf",
+      "return_stack_delta": 0,
+      "sites": []
+    }
+  },
+  "boundaries": [
+    "0791:26D7",
+    "0791:2B51",
+    "0791:2D10",
+    "0791:2D6D",
+    "0791:42CB"
+  ],
+  "guest_sites": [
+    {
+      "caller": "0791:474D",
+      "expression": "same(mem, '2B51', seg, off, at='475C')",
+      "far": true,
+      "line": 193,
+      "ret_to": "0791:475C",
+      "target": "0791:2B51"
+    },
+    {
+      "caller": "0791:474D",
+      "expression": "same(mem, '2D10', 0, seg, off, at='4785', ax=0)",
+      "far": true,
+      "line": 198,
+      "ret_to": "0791:4785",
+      "target": "0791:2D10"
+    },
+    {
+      "caller": "0791:474D",
+      "expression": "near(mem, '4532', f.bp, at='478D')",
+      "far": false,
+      "line": 201,
+      "ret_to": "0791:478D",
+      "target": "0791:4532"
+    },
+    {
+      "caller": "0791:474D",
+      "expression": "near(mem, '4649', f.bp, at='479A')",
+      "far": false,
+      "line": 204,
+      "ret_to": "0791:479A",
+      "target": "0791:4649"
+    },
+    {
+      "caller": "0791:474D",
+      "expression": "same(mem, '2BB1', seg, off, at='47AA')",
+      "far": true,
+      "line": 206,
+      "ret_to": "0791:47AA",
+      "target": "0791:2BB1"
+    },
+    {
+      "caller": "0791:4649",
+      "expression": "same(mem, '42CB', seg, off, at='4660')",
+      "far": true,
+      "line": 159,
+      "ret_to": "0791:4660",
+      "target": "0791:42CB"
+    },
+    {
+      "caller": "0791:4649",
+      "expression": "same(mem, '26D7', 6, seg, off, at='4672', ax=6)",
+      "far": true,
+      "line": 161,
+      "ret_to": "0791:4672",
+      "target": "0791:26D7"
+    },
+    {
+      "caller": "0791:4649",
+      "expression": "same(mem, '26D7', 5, seg, off, at='4689', ax=5)",
+      "far": true,
+      "line": 163,
+      "ret_to": "0791:4689",
+      "target": "0791:26D7"
+    },
+    {
+      "caller": "0791:4649",
+      "expression": "same(mem, '42CB', seg, off, at='46BE')",
+      "far": true,
+      "line": 168,
+      "ret_to": "0791:46BE",
+      "target": "0791:42CB"
+    },
+    {
+      "caller": "0791:4649",
+      "expression": "same(mem, '2D6D', 15, seg, off, at='46D4', ax=15)",
+      "far": true,
+      "line": 170,
+      "ret_to": "0791:46D4",
+      "target": "0791:2D6D"
+    },
+    {
+      "caller": "0791:4649",
+      "expression": "same(mem, '2D6D', 0, seg, off, at='46EE', ax=0)",
+      "far": true,
+      "line": 173,
+      "ret_to": "0791:46EE",
+      "target": "0791:2D6D"
+    },
+    {
+      "caller": "0791:4649",
+      "expression": "same(mem, '2D10', 10, seg, off, at='4709', ax=10)",
+      "far": true,
+      "line": 176,
+      "ret_to": "0791:4709",
+      "target": "0791:2D10"
+    },
+    {
+      "caller": "0791:4649",
+      "expression": "same(mem, '2BB1', seg, off, at='471A')",
+      "far": true,
+      "line": 178,
+      "ret_to": "0791:471A",
+      "target": "0791:2BB1"
+    },
+    {
+      "caller": "0791:4532",
+      "expression": "same(mem, '42CB', seg, off, at='4549')",
+      "far": true,
+      "line": 125,
+      "ret_to": "0791:4549",
+      "target": "0791:42CB"
+    },
+    {
+      "caller": "0791:4532",
+      "expression": "same(mem, '26D7', 7, seg, off, at='455B', ax=7)",
+      "far": true,
+      "line": 127,
+      "ret_to": "0791:455B",
+      "target": "0791:26D7"
+    },
+    {
+      "caller": "0791:4532",
+      "expression": "same(mem, '42CB', seg, off, at='458D')",
+      "far": true,
+      "line": 131,
+      "ret_to": "0791:458D",
+      "target": "0791:42CB"
+    },
+    {
+      "caller": "0791:4532",
+      "expression": "same(mem, '2D10', 0, seg, off, at='45A2', ax=0)",
+      "far": true,
+      "line": 133,
+      "ret_to": "0791:45A2",
+      "target": "0791:2D10"
+    },
+    {
+      "caller": "0791:4532",
+      "expression": "same(mem, '26D7', 1, seg, off, at='45B7', ax=1)",
+      "far": true,
+      "line": 135,
+      "ret_to": "0791:45B7",
+      "target": "0791:26D7"
+    },
+    {
+      "caller": "0791:4532",
+      "expression": "far(mem, '214B:06FA', at='45C0')",
+      "far": true,
+      "line": 137,
+      "ret_to": "0791:45C0",
+      "target": "214B:06FA"
+    },
+    {
+      "caller": "0791:4532",
+      "expression": "same(mem, '2D10', 0, seg, off, at='45E4', ax=0)",
+      "far": true,
+      "line": 140,
+      "ret_to": "0791:45E4",
+      "target": "0791:2D10"
+    },
+    {
+      "caller": "0791:4532",
+      "expression": "same(mem, '26D7', 1, seg, off, at='45F9', ax=1)",
+      "far": true,
+      "line": 142,
+      "ret_to": "0791:45F9",
+      "target": "0791:26D7"
+    },
+    {
+      "caller": "0791:4532",
+      "expression": "same(mem, '2D10', 30, seg, off, at='461E', ax=30)",
+      "far": true,
+      "line": 145,
+      "ret_to": "0791:461E",
+      "target": "0791:2D10"
+    },
+    {
+      "caller": "0791:4532",
+      "expression": "same(mem, '26D7', 7, seg, off, at='4633', ax=7)",
+      "far": true,
+      "line": 147,
+      "ret_to": "0791:4633",
+      "target": "0791:26D7"
+    }
+  ],
+  "oracle": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+  "prediction": {
+    "native_bodies": 48,
+    "native_entries": 2508808,
+    "new_native_bodies": 5,
+    "new_native_entries": 103183,
+    "python_entries": 594877,
+    "scope": "unchanged fixture entry prediction only; no speed forecast",
+    "total": 3103685
+  },
+  "profile_sha256": "cf3f43b520d1a12fba42ff5dc4a16d7d4346e50545695f7e599a7b399e3e7bb3",
+  "root": "0791:474D",
+  "site_count": 23,
+  "source_sha256": {
+    ".cache/goal2-archaeology/runtime/original_match/port/engine.py": "6439370e3ffcc5977bb066506431a25a0c300ea374faf28ec3f4fbd9718c6f14",
+    ".cache/goal2-archaeology/runtime/original_match/port/entrypoints.py": "a55d378798ed5ec2c33404739b0961b8fec1e6167d1d301f5512cced4063b5b7",
+    ".cache/goal2-archaeology/runtime/original_match/port/geometry.py": "a665d830ed16c00833a27216393a3b6f406251f44cef1f7fc9e80f7eb6bd3e81",
+    ".cache/goal2-archaeology/runtime/original_match/port/guest.py": "1062b5ea7d72114b5f404485768f6aeca69a5d94ffb0285a31158b266c46de7f",
+    ".cache/goal2-archaeology/runtime/original_match/port/mem.py": "0105113f8102a3e8c3544942a445e156fecc0196f7911089e7f789a7775fe45c",
+    ".cache/goal2-archaeology/runtime/original_match/port/positioning.py": "6a8feb436f745149a010db472a1aed04569d897875cd966eb434a6170b7f839e",
+    ".cache/goal2-archaeology/runtime/original_match/port/runtime.py": "2e94867069cd6e35c28af96426bfade7dcb381e370eb12af106627cbeeced0eb"
+  }
+}
