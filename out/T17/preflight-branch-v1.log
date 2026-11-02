@@ -1,0 +1,140 @@
+{
+  "conditions": {
+    "choose_marking_target:335:mark == 0:true": 230,
+    "choose_marking_target:335:mark == 0:false": 90,
+    "choose_marking_target:348:mark:true": 268,
+    "choose_marking_target:348:mark:false": 52,
+    "choose_marking_target:340:not unavailable & 255:true": 2050,
+    "choose_marking_target:340:not unavailable & 255:false": 250,
+    "choose_marking_target:352:player_id != mark:true": 1782,
+    "choose_marking_target:352:player_id != mark:false": 258,
+    "choose_marking_target:356:unavailable & 255:true": 10,
+    "choose_marking_target:356:unavailable & 255:false": 248,
+    "choose_marking_target:365:keeper_area & 255:true": 14,
+    "choose_marking_target:365:keeper_area & 255:false": 234,
+    "choose_marking_target:373:theirs > ours:true": 51,
+    "choose_marking_target:373:theirs > ours:false": 183,
+    "choose_marking_target:344:within & 255:true": 1730,
+    "choose_marking_target:344:within & 255:false": 320,
+    "near_post_zone:290:r8(mem, p, 18) != 9:true": 420,
+    "near_post_zone:290:r8(mem, p, 18) != 9:false": 900,
+    "near_post_zone:294:close:true": 1128,
+    "near_post_zone:294:close:false": 192
+  },
+  "slots": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "holder_results": [
+    0,
+    1
+  ],
+  "half_results": [
+    0,
+    1
+  ],
+  "zone_results": [
+    false,
+    true
+  ],
+  "rng_cases": [
+    [
+      0,
+      false,
+      -2
+    ],
+    [
+      0,
+      false,
+      2
+    ],
+    [
+      1,
+      false,
+      -2
+    ],
+    [
+      1,
+      false,
+      2
+    ],
+    [
+      2,
+      false,
+      -2
+    ],
+    [
+      2,
+      false,
+      2
+    ],
+    [
+      2,
+      true,
+      -2
+    ],
+    [
+      2,
+      true,
+      2
+    ],
+    [
+      5,
+      false,
+      -2
+    ],
+    [
+      5,
+      false,
+      2
+    ],
+    [
+      5,
+      true,
+      -2
+    ],
+    [
+      5,
+      true,
+      2
+    ],
+    [
+      32767,
+      true,
+      -2
+    ],
+    [
+      32767,
+      true,
+      2
+    ],
+    [
+      32768,
+      true,
+      -2
+    ],
+    [
+      32768,
+      true,
+      2
+    ],
+    [
+      65535,
+      true,
+      -2
+    ],
+    [
+      65535,
+      true,
+      2
+    ]
+  ]
+}

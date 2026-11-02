@@ -1,0 +1,262 @@
+START taps-python-v1 10032
+START legacy-v1 10033
+PROGRESS 0 /75; taps-python-v1,legacy-v1
+PROGRESS 0 /75; taps-python-v1,legacy-v1
+PROGRESS 0 /75; taps-python-v1,legacy-v1
+EXIT legacy-v1 0
+START legacy-body-v1 11143
+PROGRESS 0 /75; taps-python-v1,legacy-body-v1
+PROGRESS 0 /75; taps-python-v1,legacy-body-v1
+PROGRESS 0 /75; taps-python-v1,legacy-body-v1
+EXIT legacy-body-v1 0
+START availability-differential-v1 11509
+PROGRESS 0 /75; taps-python-v1,availability-differential-v1
+EXIT availability-differential-v1 0
+START availability-body-v1 11640
+PROGRESS 0 /75; taps-python-v1,availability-body-v1
+EXIT availability-body-v1 0
+START availability-return-v1 11778
+PROGRESS 0 /75; taps-python-v1,availability-return-v1
+EXIT availability-return-v1 0
+START ball-differential-v1 11930
+PROGRESS 0 /75; taps-python-v1,ball-differential-v1
+PROGRESS 0 /75; taps-python-v1,ball-differential-v1
+PROGRESS 0 /75; taps-python-v1,ball-differential-v1
+PROGRESS 0 /75; taps-python-v1,ball-differential-v1
+PROGRESS 0 /75; taps-python-v1,ball-differential-v1
+PROGRESS 0 /75; taps-python-v1,ball-differential-v1
+EXIT taps-python-v1 0
+PROGRESS 0 /75; ball-differential-v1
+PROGRESS 0 /75; ball-differential-v1
+PROGRESS 0 /75; ball-differential-v1
+EXIT ball-differential-v1 0
+PROGRESS 0 /75; 
+START ball-body-v1 13034
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+EXIT ball-body-v1 0
+PROGRESS 0 /75; 
+START ball-return-v1 13407
+PROGRESS 0 /75; ball-return-v1
+PROGRESS 0 /75; ball-return-v1
+PROGRESS 0 /75; ball-return-v1
+PROGRESS 0 /75; ball-return-v1
+PROGRESS 0 /75; ball-return-v1
+EXIT ball-return-v1 0
+START skill-differential-v1 13571
+PROGRESS 0 /75; skill-differential-v1
+EXIT skill-differential-v1 0
+PROGRESS 0 /75; 
+START skill-body-v1 13643
+PROGRESS 0 /75; skill-body-v1
+EXIT skill-body-v1 0
+PROGRESS 0 /75; 
+START skill-return-v1 13711
+PROGRESS 0 /75; skill-return-v1
+EXIT skill-return-v1 0
+PROGRESS 0 /75; 
+START speaker-differential-v1 13776
+PROGRESS 0 /75; speaker-differential-v1
+PROGRESS 0 /75; speaker-differential-v1
+EXIT speaker-differential-v1 0
+PROGRESS 0 /75; 
+START speaker-body-v1 13849
+PROGRESS 0 /75; speaker-body-v1
+PROGRESS 0 /75; speaker-body-v1
+EXIT speaker-body-v1 0
+PROGRESS 0 /75; 
+START speaker-root-return-v1 13912
+PROGRESS 0 /75; speaker-root-return-v1
+PROGRESS 0 /75; speaker-root-return-v1
+EXIT speaker-root-return-v1 0
+START speaker-seed-return-v1 13970
+PROGRESS 0 /75; speaker-seed-return-v1
+PROGRESS 0 /75; speaker-seed-return-v1
+EXIT speaker-seed-return-v1 0
+START keys-differential-v1 14031
+PROGRESS 0 /75; keys-differential-v1
+PROGRESS 0 /75; keys-differential-v1
+EXIT keys-differential-v1 0
+PROGRESS 0 /75; 
+START keys-body-v1 14104
+PROGRESS 0 /75; keys-body-v1
+PROGRESS 0 /75; keys-body-v1
+EXIT keys-body-v1 0
+START keys-return-v1 14169
+PROGRESS 0 /75; keys-return-v1
+EXIT keys-return-v1 0
+PROGRESS 0 /75; 
+START draw-differential-v1 14252
+PROGRESS 0 /75; draw-differential-v1
+EXIT draw-differential-v1 0
+START draw-body-v1 14289
+PROGRESS 0 /75; draw-body-v1
+EXIT draw-body-v1 0
+START draw-return-v1 14324
+PROGRESS 0 /75; draw-return-v1
+EXIT draw-return-v1 0
+START sweep-differential-v1 14370
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+EXIT sweep-differential-v1 0
+PROGRESS 0 /75; 
+START sweep-body-v1 14575
+PROGRESS 0 /75; sweep-body-v1
+PROGRESS 0 /75; sweep-body-v1
+PROGRESS 0 /75; sweep-body-v1
+PROGRESS 0 /75; sweep-body-v1
+PROGRESS 0 /75; sweep-body-v1
+EXIT sweep-body-v1 0
+START sweep-return-v1 14741
+PROGRESS 0 /75; sweep-return-v1
+PROGRESS 0 /75; sweep-return-v1
+PROGRESS 0 /75; sweep-return-v1
+EXIT sweep-return-v1 0
+START play-differential-v1 14813
+PROGRESS 0 /75; play-differential-v1
+PROGRESS 0 /75; play-differential-v1
+PROGRESS 0 /75; play-differential-v1
+EXIT play-differential-v1 0
+START play-body-v1 14893
+PROGRESS 0 /75; play-body-v1
+PROGRESS 0 /75; play-body-v1
+EXIT play-body-v1 0
+START play-return-v1 14942
+PROGRESS 0 /75; play-return-v1
+EXIT play-return-v1 0
+START update-differential-v1 14985
+PROGRESS 0 /75; update-differential-v1
+PROGRESS 0 /75; update-differential-v1
+PROGRESS 0 /75; update-differential-v1
+PROGRESS 0 /75; update-differential-v1
+EXIT update-differential-v1 0
+START update-body-v1 15071
+PROGRESS 0 /75; update-body-v1
+EXIT update-body-v1 0
+START update-return-v1 15112
+PROGRESS 0 /75; update-return-v1
+EXIT update-return-v1 0
+START sprite-differential-v1 15136
+PROGRESS 0 /75; sprite-differential-v1
+PROGRESS 0 /75; sprite-differential-v1
+EXIT sprite-differential-v1 0
+START sprite-body-v1 15198
+PROGRESS 0 /75; sprite-body-v1
+EXIT sprite-body-v1 0
+START sprite-return-v1 15272
+PROGRESS 0 /75; sprite-return-v1
+EXIT sprite-return-v1 0
+START run-differential-v1 15299
+PROGRESS 0 /75; run-differential-v1
+EXIT run-differential-v1 0
+START run-body-v1 15340
+PROGRESS 0 /75; run-body-v1
+EXIT run-body-v1 0
+START run-position-v1 15367
+PROGRESS 0 /75; run-position-v1
+EXIT run-position-v1 0
+START marking-normal-v1 15400
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+EXIT marking-normal-v1 0
+START marking-body-v1 16098
+PROGRESS 0 /75; marking-body-v1
+PROGRESS 0 /75; marking-body-v1
+PROGRESS 0 /75; marking-body-v1
+PROGRESS 0 /75; marking-body-v1
+PROGRESS 0 /75; marking-body-v1
+EXIT marking-body-v1 0
+PROGRESS 0 /75; 
+START marking-output-v1 16255
+PROGRESS 0 /75; marking-output-v1
+EXIT marking-output-v1 0
+START marking-returns-v1 16279
+PROGRESS 0 /75; marking-returns-v1
+PROGRESS 0 /75; marking-returns-v1
+PROGRESS 0 /75; marking-returns-v1
+EXIT marking-returns-v1 0
+START taps-rust-v1 16363
+PROGRESS 0 /75; taps-rust-v1
+PROGRESS 0 /75; taps-rust-v1
+PROGRESS 0 /75; taps-rust-v1
+PROGRESS 0 /75; taps-rust-v1
+PROGRESS 0 /75; taps-rust-v1
+EXIT taps-rust-v1 0
+WAIT FOR QUIET HOST (1.015625, 1.13134765625, 1.4111328125) 1 /3
+WAIT FOR QUIET HOST (0.85888671875, 1.09375, 1.3955078125) 2 /3
+WAIT FOR QUIET HOST (0.80078125, 1.0732421875, 1.38525390625) 3 /3
+START family-ALL-v1 16556
+START check-v1 16557
+START profile-after-v1 16558
+PROGRESS 0 /75; family-ALL-v1,check-v1,profile-after-v1
+PROGRESS 0 /75; family-ALL-v1,check-v1,profile-after-v1
+PROGRESS 0 /75; family-ALL-v1,check-v1,profile-after-v1
+PROGRESS 2 /75; family-ALL-v1,check-v1,profile-after-v1
+EXIT profile-after-v1 0
+PROGRESS 2 /75; family-ALL-v1,check-v1
+PROGRESS 4 /75; family-ALL-v1,check-v1
+PROGRESS 4 /75; family-ALL-v1,check-v1
+PROGRESS 4 /75; family-ALL-v1,check-v1
+PROGRESS 6 /75; family-ALL-v1,check-v1
+PROGRESS 6 /75; family-ALL-v1,check-v1
+PROGRESS 8 /75; family-ALL-v1,check-v1
+PROGRESS 8 /75; family-ALL-v1,check-v1
+Preserved completed ALL records 10
+Provisional strict prefix 10 equal; full ALL75/F40 pending
+PROGRESS 10 /75; family-ALL-v1,check-v1
+PROGRESS 10 /75; family-ALL-v1,check-v1
+PROGRESS 12 /75; family-ALL-v1,check-v1
+PROGRESS 12 /75; family-ALL-v1,check-v1
+PROGRESS 12 /75; family-ALL-v1,check-v1
+PROGRESS 14 /75; family-ALL-v1,check-v1
+PROGRESS 14 /75; family-ALL-v1,check-v1
+PROGRESS 14 /75; family-ALL-v1,check-v1
+PROGRESS 16 /75; family-ALL-v1,check-v1
+PROGRESS 16 /75; family-ALL-v1,check-v1
+PROGRESS 16 /75; family-ALL-v1,check-v1
+PROGRESS 17 /75; family-ALL-v1,check-v1
+PROGRESS 18 /75; family-ALL-v1,check-v1
+PROGRESS 18 /75; family-ALL-v1,check-v1
+PROGRESS 19 /75; family-ALL-v1,check-v1
+Preserved completed ALL records 20
+Provisional strict prefix 20 equal; full ALL75/F40 pending
+PROGRESS 20 /75; family-ALL-v1,check-v1
+PROGRESS 20 /75; family-ALL-v1,check-v1
+PROGRESS 20 /75; family-ALL-v1,check-v1
+PROGRESS 22 /75; family-ALL-v1,check-v1
+PROGRESS 22 /75; family-ALL-v1,check-v1
+PROGRESS 22 /75; family-ALL-v1,check-v1
+PROGRESS 22 /75; family-ALL-v1,check-v1
+EXIT check-v1 1
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T17/supervise.py", line 72, in <module>
+    producer('profile-after-v1','profile_machine.py');wait(['profile-after-v1','check-v1','family-ALL-v1'])
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/goal2rust/out/T17/supervise.py", line 24, in wait
+    log.close();del jobs[n];append(dict(event='exit',name=n,pid=p.pid,code=code,time=time.time()));print('EXIT',n,code,flush=True);assert code==0,n
+                                                                                                                                          ^^^^^^^
+AssertionError: check-v1

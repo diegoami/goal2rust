@@ -1,0 +1,35 @@
+RECOVERY PROGRESS 40 /75; family exited False check-v2 exited False
+RECOVERY PROGRESS 42 /75; family exited False check-v2 exited False
+RECOVERY PROGRESS 42 /75; family exited False check-v2 exited False
+RECOVERY PROGRESS 44 /75; family exited False check-v2 exited False
+RECOVERY PROGRESS 44 /75; family exited False check-v2 exited False
+RECOVERY PROGRESS 45 /75; family exited False check-v2 exited False
+RECOVERY PROGRESS 46 /75; family exited False check-v2 exited False
+RECOVERY PROGRESS 46 /75; family exited False check-v2 exited False
+RECOVERY PROGRESS 48 /75; family exited False check-v2 exited False
+RECOVERY PROGRESS 48 /75; family exited False check-v2 exited False
+RECOVERY PROGRESS 57 /75; family exited False check-v2 exited False
+RECOVERY PROGRESS 59 /75; family exited False check-v2 exited False
+Preserved completed ALL records 60
+Provisional strict prefix 60 equal; full ALL75/F40 pending
+RECOVERY PROGRESS 60 /75; family exited False check-v2 exited False
+RECOVERY PROGRESS 60 /75; family exited False check-v2 exited True
+RECOVERY PROGRESS 61 /75; family exited False check-v2 exited True
+RECOVERY PROGRESS 62 /75; family exited False check-v2 exited True
+RECOVERY PROGRESS 62 /75; family exited False check-v2 exited True
+RECOVERY PROGRESS 63 /75; family exited False check-v2 exited True
+RECOVERY PROGRESS 66 /75; family exited False check-v2 exited True
+RECOVERY PROGRESS 67 /75; family exited False check-v2 exited True
+RECOVERY PROGRESS 67 /75; family exited False check-v2 exited True
+RECOVERY PROGRESS 68 /75; family exited False check-v2 exited True
+RECOVERY PROGRESS 69 /75; family exited False check-v2 exited True
+RECOVERY PROGRESS 69 /75; family exited False check-v2 exited True
+RECOVERY PROGRESS 71 /75; family exited False check-v2 exited True
+RECOVERY PROGRESS 73 /75; family exited False check-v2 exited True
+RECOVERY PROGRESS 73 /75; family exited False check-v2 exited True
+RECOVERY PROGRESS 75 /75; family exited True check-v2 exited True
+START family-completion-v2 26492
+EXIT family-completion-v2 0
+START performance-v1 26644
+EXIT performance-v1 0
+RECOVERY CANONICAL WRITERS COMPLETE; run supplemental proofs and actual-host shutdown audit after this controller exits

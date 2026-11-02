@@ -126,7 +126,7 @@ Translation pin: `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c` (state/2).
 `port/menus.py` `match_key_poll` **0791:9372** (near ret/no arguments) is reproduced
 in `engine/src/keys.rs` with native continuations in `machine.rs`. Its complete
 six-slot delay-table loop and all key/quick-mode branches retain the15 literal
-guest-call sites and12 distinct external ports. Those existing keyboard/menu/
+guest-call sites and 12 distinct external ports. Those existing keyboard/menu/
 library/display/speaker callees remain separately observable delegated routines,
 not newly translated bodies. Fresh actual-AX reads, pending stack bytes, captured
 short-lived arguments and live pointer reloads follow the source. Nondefault
@@ -141,7 +141,7 @@ helper are reproduced in `engine/src/ball_draw.rs` and `machine.rs` continuation
 Record segment/offset remain captured across membership/travel calls; grid tables,
 coordinates and post-return ZF/AX remain live. Signed-byte coordinates use unsigned
 word MUL exactly as the Python helper, including highDX and unchanged flags.
-Registered23E4:08DF and0791:835F, plus nested23E4:0279, remain delegated source
+Registered23E4:08DF and 0791:835F, plus nested23E4:0279, remain delegated source
 bodies with observable ABI/frames. No hardware or transitive-callee claim. Default
 variant only; others stay Python. Full contract:out/T11/contract.md, preserved
 actual T10 source/adapter/extension:out/T11/baseline-snapshot-v1.json.
@@ -194,3 +194,19 @@ inline `rand`, `coin`, `in_set`, `pitch_slot_side`, `attack_direction`,
 `is_keeper_slot`, `on_target`, `on_pitch`, `can_move` at accepted
 `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`. No guest calls are introduced;
 variants stay Python. See docs/tasks/T16.md and out/T16/contract.md.
+
+## T17 marking-target subtree
+
+At the same accepted `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c` pin,
+`engine/src/marking.rs` translates positioning.choose_marking_target **0791:47C5**,
+positioning.near_post_zone **0791:4438**, geometry.in_own_half **0791:2C54** and
+entrypoints.random_n **214B:06B1**. `geometry.rs` exposes the existing inline
+c2996 as geometry.ball_holder_is_side0 **0791:2996**. Helpers remain inline;
+13 real guest sites retain source arguments/ret_to/far and suspension behavior.
+Default variants close over the new bodies and accepted native 3216/278A/3A06/
+2BE5; nondefault variants stay Python. Source/helper/ABI/observer inventory and
+proof requirements are in out/T17/contract.md and inventory-v1.json. Actual T16
+baseline is preserved in .cache/T17-baseline, bound before builds in
+out/T17/baseline-snapshot-v1.json. Full combined fidelity/performance validation is bound in
+out/T17/validation-final-v2.json; scope, all outcomes and the preserved metadata
+rejection/recovery are documented in out/T17/assessment.md.

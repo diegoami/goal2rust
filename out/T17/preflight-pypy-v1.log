@@ -1,0 +1,9 @@
+test_controlled_callers (test_marking.MarkingTests.test_controlled_callers) ... ok
+test_individual_and_integrated_default (test_marking.MarkingTests.test_individual_and_integrated_default) ... ok
+test_scoped_controls_and_errors (test_marking.MarkingTests.test_scoped_controls_and_errors) ... ok
+test_variants_and_body_controls (test_marking.MarkingTests.test_variants_and_body_controls) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 16.104s
+
+OK

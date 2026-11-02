@@ -1,0 +1,6 @@
+0791:47C5 saved T16 is faithful but fails required native coverage/closed-default proof
+0791:4438 saved T16 is faithful but fails required native coverage/closed-default proof
+0791:2996 saved T16 is faithful but fails required native coverage/closed-default proof
+0791:2C54 saved T16 is faithful but fails required native coverage/closed-default proof
+214B:06B1 saved T16 is faithful but fails required native coverage/closed-default proof
+Five positive before/after native-closure guards fail on the preserved baseline as expected.

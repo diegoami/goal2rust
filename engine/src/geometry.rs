@@ -354,3 +354,12 @@ pub fn unavailable_resume<H: Host>(h: &mut H) -> Result<(), H::Err> {
     r.leave(h)?;
     r.store(h, false)
 }
+
+/// geometry.ball_holder_is_side0, 0791:2996 (ret), accepted2cbeb36f.
+pub fn ball_holder_is_side0<H: Host>(h: &mut H, mutant: bool) -> Result<(), H::Err> {
+    let mut r = Regs::new(false);
+    c2996(h, &mut r)?;
+    r.store(h, false)?;
+    if mutant { crate::marking::corrupt(h)?; }
+    Ok(())
+}

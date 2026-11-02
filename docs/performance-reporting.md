@@ -41,3 +41,21 @@ historical receipts remain immutable; explanatory reports can calculate missing
 ratios from their raw same-round CPU values. No measurement is rerun just to
 improve its headline. Fidelity and all predeclared task checks remain mandatory;
 no new per-translation magnitude floor is introduced.
+
+## T17 same-campaign result
+
+Source: [all raw samples](../out/T17/performance-v1.json) and
+[assessment](../out/T17/assessment.md). Every outcome is retained.
+
+| Round | Saved T16 / PyPy | T17 / PyPy | T17 / saved T16 |
+| --- | ---: | ---: | ---: |
+| 1 | 1.095014 | 1.009414 | 0.921827 |
+| 2 | 1.059106 | 0.974762 | 0.920363 |
+| 3 | 1.045919 | 0.973971 | 0.931211 |
+| Median of per-round ratios | 1.059106 | 0.974762 | 0.921827 |
+
+T17 uses 7.82% less CPU than saved T16. Saved T16 uses 5.91% more CPU than PyPy
+at the median in this campaign; T17 uses 2.52% less. Two PyPy comparisons improve
+and one uses 0.94% more CPU. Treat this as near parity on the reference fixture;
+a general advantage needs the later representative workload set. Historical
+standalone PyPy ratios are not substituted for this campaign's saved baseline.
