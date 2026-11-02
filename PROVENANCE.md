@@ -194,3 +194,18 @@ inline `rand`, `coin`, `in_set`, `pitch_slot_side`, `attack_direction`,
 `is_keeper_slot`, `on_target`, `on_pitch`, `can_move` at accepted
 `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`. No guest calls are introduced;
 variants stay Python. See docs/tasks/T16.md and out/T16/contract.md.
+
+## T17 marking-target subtree (in progress)
+
+At the same accepted `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c` pin,
+`engine/src/marking.rs` translates positioning.choose_marking_target **0791:47C5**,
+positioning.near_post_zone **0791:4438**, geometry.in_own_half **0791:2C54** and
+entrypoints.random_n **214B:06B1**. `geometry.rs` exposes the existing inline
+c2996 as geometry.ball_holder_is_side0 **0791:2996**. Helpers remain inline;
+13 real guest sites retain source arguments/ret_to/far and suspension behavior.
+Default variants close over the new bodies and accepted native 3216/278A/3A06/
+2BE5; nondefault variants stay Python. Source/helper/ABI/observer inventory and
+proof requirements are in out/T17/contract.md and inventory-v1.json. Actual T16
+baseline is preserved in .cache/T17-baseline, bound before builds in
+out/T17/baseline-snapshot-v1.json. Completion awaits the full combined campaign;
+this provenance entry is not acceptance evidence.

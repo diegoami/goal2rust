@@ -102,6 +102,7 @@ impl Port {
     }
 }
 enum NativeContinuation {
+    Marking(crate::marking::Phase,Option<crate::marking::Saved>),
     RunStep,
     PlayerSprite(crate::player_sprite::Phase,Option<crate::player_sprite::Saved>),
     AvailabilityStart,
@@ -847,6 +848,8 @@ impl MachineCore {
         };
         if self.native && frame.port.variant.bind(py).is_none() {
             frame.native = match address.extract::<String>()?.as_str() {
+                "0791:47C5" => Some(NativeContinuation::Marking(crate::marking::Phase::Start,None)),
+                "0791:4438" => Some(NativeContinuation::Marking(crate::marking::Phase::ZoneStart,None)),
                 "0791:2956" => Some(NativeContinuation::AvailabilityStart),
                 "0791:278A" => Some(NativeContinuation::SkillStart),
                 "0791:8889" => Some(NativeContinuation::RunStep),
@@ -948,6 +951,18 @@ impl MachineCore {
         let mut completed_value = py.None();
         let result = (|| -> PyResult<Option<Py<PyAny>>> {
             match f.native.take().unwrap() {
+                NativeContinuation::Marking(phase,saved)=>{
+                    use crate::marking::{Phase,Action};
+                    let first=matches!(phase,Phase::Start|Phase::ZoneStart);
+                    let root=if phase==Phase::ZoneStart||phase==Phase::ZoneDirection{"0791:4438"}else{"0791:47C5"};
+                    let reply=if first{0}else{sent.extract::<u16>()?};
+                    let action=crate::marking::step(&mut h,phase,saved,reply,self.mutant==if root=="0791:4438"{28}else{26})?;
+                    if first{*self.native_calls.borrow_mut().entry(root.into()).or_insert(0)+=1;}
+                    match action{
+                        Action::Call(req)=>{let args=PyTuple::new(py,req.args)?;let call=self.call_type.bind(py).call1((req.target,args,req.ret_to,req.far,false))?;f.native=Some(NativeContinuation::Marking(req.next,Some(req.saved)));Ok(Some(call.unbind()))}
+                        Action::Done(value)=>{completed_value=value.into_pyobject(py)?.into_any().unbind();Ok(None)}
+                    }
+                }
                 NativeContinuation::RunStep=>{
                     crate::run_step::run(&mut h,self.mutant)?;
                     *self.native_calls.borrow_mut().entry("0791:8889".into()).or_insert(0)+=1;
@@ -1119,7 +1134,11 @@ impl MachineCore {
             sp = sp.wrapping_sub(2) & 0xffff;
             let ss = self.reg(m, "ss")?;
             // Mutant 1 corrupts a guest-call return's saved IP; a machine error.
-            let corrupt = self.mutant == 1 || (self.mutant == 4
+            let t17_sites=["0791:47CE","0791:47EF","0791:485D","0791:4888","0791:48E2","0791:4930","0791:494D","0791:496A","0791:4980","0791:499D","0791:49B2","0791:49C0","0791:4493"];
+            let site_mutant=(36..49).contains(&self.mutant) && t17_sites[(self.mutant-36) as usize]==ret_to;
+            let corrupt = site_mutant || (self.mutant == 27 && matches!(ret_to.as_str(),"0791:47CE"|"0791:47EF"|"0791:485D"|"0791:4888"|"0791:48E2"|"0791:4930"|"0791:494D"|"0791:496A"|"0791:4980"|"0791:499D"|"0791:49B2"|"0791:49C0"))
+                || (self.mutant==29 && ret_to=="0791:4493")
+                || self.mutant == 1 || (self.mutant == 4
                 && matches!(ret_to.as_str(), "0791:3013" | "0791:3090" | "0791:30A3"))
                 || (self.mutant == 6 && ret_to == "0791:27EB")
                 || (self.mutant == 8 && matches!(ret_to.as_str(),"0791:94F9"|"0791:9522"|"0791:952B"|"0791:9532"|"0791:9540"))
@@ -1195,6 +1214,9 @@ impl MachineCore {
         };
         use crate::geometry as g;
         match address {
+            "0791:2996" => g::ball_holder_is_side0(&mut h,self.mutant==30)?,
+            "0791:2C54" => crate::marking::in_own_half(&mut h,self.mutant==32)?,
+            "214B:06B1" => crate::marking::random_n(&mut h,self.mutant==34)?,
             "214B:0688" => crate::speaker::rng(&mut h,self.mutant==7)?,
             "214B:1E8D" => crate::speaker::off(&mut h,self.mutant==7)?,
             "1771:3A06" => return Ok(Some(crate::skill::derived(&mut h, self.mutant == 5)?.into_pyobject(m.py())?.into_any().unbind())),
@@ -1207,6 +1229,16 @@ impl MachineCore {
             "0791:2CEC" => g::player_at_ball(&mut h)?,
             "0791:2974" => g::side(&mut h)?,
             _ => return Ok(None),
+        }
+        // T17 leaf controls check full outputs, including preserved flags.
+        if self.mutant==31 && address=="0791:2996" {
+            let ax=h.reg(Reg::Ax)?;h.set_reg(Reg::Ax,ax^1)?;
+        }
+        if self.mutant==33 && address=="0791:2C54" {
+            let flags=h.reg(Reg::Eflags)?;h.set_reg(Reg::Eflags,flags^0x400)?;
+        }
+        if self.mutant==35 && address=="214B:06B1" {
+            let dx=h.reg(Reg::Dx)?;h.set_reg(Reg::Dx,dx^0x8000)?;
         }
         Ok(Some(m.py().None()))
     }
