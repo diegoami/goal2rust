@@ -1,0 +1,521 @@
+{
+  "real_captures_per_body": 8,
+  "authored_per_body": 500,
+  "observer_modes": 4,
+  "normal_comparisons": 16480,
+  "body_control_comparisons": 10480,
+  "output_control_comparisons": 4192,
+  "return_control_comparisons": 3680,
+  "branch_comparisons": 1280,
+  "cases_per_error_selector": 160,
+  "error_selectors": 122,
+  "error_comparisons": 19520,
+  "errors": {
+    "0791:2BB1": [
+      {
+        "selector": "0791:2BB1",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ax",
+        "controlled": false
+      },
+      {
+        "selector": "reg:bp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:cs",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ip",
+        "controlled": false
+      },
+      {
+        "selector": "reg:sp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ss",
+        "controlled": false
+      },
+      {
+        "selector": "write",
+        "controlled": false
+      },
+      {
+        "selector": "write:214B:0000",
+        "controlled": false
+      }
+    ],
+    "0791:4532": [
+      {
+        "selector": "0791:4532",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ax",
+        "controlled": false
+      },
+      {
+        "selector": "reg:bp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:cs",
+        "controlled": false
+      },
+      {
+        "selector": "reg:eflags",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ip",
+        "controlled": false
+      },
+      {
+        "selector": "reg:sp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ss",
+        "controlled": false
+      },
+      {
+        "selector": "write",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4532",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4538",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4549",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:45CA",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4603",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:463D",
+        "controlled": true
+      },
+      {
+        "selector": "0791:42CB",
+        "controlled": true
+      },
+      {
+        "selector": "0791:26D7",
+        "controlled": true
+      },
+      {
+        "selector": "0791:2D10",
+        "controlled": true
+      },
+      {
+        "selector": "214B:06FA",
+        "controlled": true
+      },
+      {
+        "selector": "0791:4549",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4549",
+        "controlled": true
+      },
+      {
+        "selector": "0791:455B",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:455B",
+        "controlled": true
+      },
+      {
+        "selector": "0791:458D",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:458D",
+        "controlled": true
+      },
+      {
+        "selector": "0791:45A2",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:45A2",
+        "controlled": true
+      },
+      {
+        "selector": "0791:45B7",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:45B7",
+        "controlled": true
+      },
+      {
+        "selector": "0791:45C0",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:45C0",
+        "controlled": true
+      },
+      {
+        "selector": "0791:45E4",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:45E4",
+        "controlled": true
+      },
+      {
+        "selector": "0791:45F9",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:45F9",
+        "controlled": true
+      },
+      {
+        "selector": "0791:461E",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:461E",
+        "controlled": true
+      },
+      {
+        "selector": "0791:4633",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4633",
+        "controlled": true
+      }
+    ],
+    "0791:4649": [
+      {
+        "selector": "0791:4649",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ax",
+        "controlled": false
+      },
+      {
+        "selector": "reg:bp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:cs",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ip",
+        "controlled": false
+      },
+      {
+        "selector": "reg:sp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ss",
+        "controlled": false
+      },
+      {
+        "selector": "write",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4649",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:464F",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4660",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4677",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:46D4",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:46EE",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4741",
+        "controlled": true
+      },
+      {
+        "selector": "0791:42CB",
+        "controlled": true
+      },
+      {
+        "selector": "0791:26D7",
+        "controlled": true
+      },
+      {
+        "selector": "0791:2D6D",
+        "controlled": true
+      },
+      {
+        "selector": "0791:2D10",
+        "controlled": true
+      },
+      {
+        "selector": "0791:2BB1",
+        "controlled": true
+      },
+      {
+        "selector": "0791:4660",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4660",
+        "controlled": true
+      },
+      {
+        "selector": "0791:4672",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4672",
+        "controlled": true
+      },
+      {
+        "selector": "0791:4689",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4689",
+        "controlled": true
+      },
+      {
+        "selector": "0791:46BE",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:46BE",
+        "controlled": true
+      },
+      {
+        "selector": "0791:46D4",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:46D4",
+        "controlled": true
+      },
+      {
+        "selector": "0791:46EE",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:46EE",
+        "controlled": true
+      },
+      {
+        "selector": "0791:4709",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4709",
+        "controlled": true
+      },
+      {
+        "selector": "0791:471A",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:471A",
+        "controlled": true
+      }
+    ],
+    "0791:474D": [
+      {
+        "selector": "0791:474D",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ax",
+        "controlled": false
+      },
+      {
+        "selector": "reg:bp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:cs",
+        "controlled": false
+      },
+      {
+        "selector": "reg:eflags",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ip",
+        "controlled": false
+      },
+      {
+        "selector": "reg:sp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ss",
+        "controlled": false
+      },
+      {
+        "selector": "write",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:474D",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4790",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:479D",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:47BB",
+        "controlled": true
+      },
+      {
+        "selector": "0791:2B51",
+        "controlled": true
+      },
+      {
+        "selector": "0791:2D10",
+        "controlled": true
+      },
+      {
+        "selector": "0791:4532",
+        "controlled": true
+      },
+      {
+        "selector": "0791:4649",
+        "controlled": true
+      },
+      {
+        "selector": "0791:2BB1",
+        "controlled": true
+      },
+      {
+        "selector": "0791:475C",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:475C",
+        "controlled": true
+      },
+      {
+        "selector": "0791:4785",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:4785",
+        "controlled": true
+      },
+      {
+        "selector": "0791:478D",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:478D",
+        "controlled": true
+      },
+      {
+        "selector": "0791:479A",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:479A",
+        "controlled": true
+      },
+      {
+        "selector": "0791:47AA",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:47AA",
+        "controlled": true
+      }
+    ],
+    "214B:06FA": [
+      {
+        "selector": "214B:06FA",
+        "controlled": false
+      },
+      {
+        "selector": "reg:bp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:cs",
+        "controlled": false
+      },
+      {
+        "selector": "reg:eflags",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ip",
+        "controlled": false
+      },
+      {
+        "selector": "reg:sp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ss",
+        "controlled": false
+      },
+      {
+        "selector": "write",
+        "controlled": false
+      },
+      {
+        "selector": "write:214B:0000",
+        "controlled": false
+      },
+      {
+        "selector": "write:214B:069F",
+        "controlled": false
+      }
+    ]
+  },
+  "variants": {
+    "0791:4532": [
+      "depth-plus-one"
+    ],
+    "0791:2BB1": [
+      "slot-side-12"
+    ]
+  }
+}

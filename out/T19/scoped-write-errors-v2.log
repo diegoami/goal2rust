@@ -1,0 +1,5 @@
+denied: unicorn, .sav, .EXE, .DAT
+post-return-write:0791:4549 {'total': 160, 'reached': 160, 'equal': 160, 'legacy_pre_return_witnesses': 160}
+post-return-write:0791:4660 {'total': 160, 'reached': 160, 'equal': 160, 'legacy_pre_return_witnesses': 160}
+post-return-write:0791:46D4 {'total': 160, 'reached': 10, 'equal': 160, 'legacy_pre_return_witnesses': 10}
+post-return-write:0791:46EE {'total': 160, 'reached': 10, 'equal': 160, 'legacy_pre_return_witnesses': 10}

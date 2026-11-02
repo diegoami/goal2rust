@@ -1,0 +1,46 @@
+{
+  "preserved_plan_sha256": "7e529b270fd034b742098726621a0c315edda3d325e0cc7961bc0f574f24548d",
+  "preserved_execution_rows": 122,
+  "preserved_comparisons": 19520,
+  "preserved_distinct_selector_keys": 118,
+  "cases_per_selector": 160,
+  "additional_selectors": [
+    {
+      "root": "0791:4532",
+      "site": "0791:4549",
+      "size": 2,
+      "frame_delta": 6,
+      "selector": "post-return-write:0791:4549",
+      "controlled": true
+    },
+    {
+      "root": "0791:4649",
+      "site": "0791:4660",
+      "size": 2,
+      "frame_delta": 6,
+      "selector": "post-return-write:0791:4660",
+      "controlled": true
+    },
+    {
+      "root": "0791:4649",
+      "site": "0791:46D4",
+      "size": 1,
+      "frame_delta": 3,
+      "selector": "post-return-write:0791:46D4",
+      "controlled": true
+    },
+    {
+      "root": "0791:4649",
+      "site": "0791:46EE",
+      "size": 1,
+      "frame_delta": 3,
+      "selector": "post-return-write:0791:46EE",
+      "controlled": true
+    }
+  ],
+  "additional_comparisons": 640,
+  "combined_execution_rows": 126,
+  "combined_comparisons": 20160,
+  "combined_distinct_selector_keys": 122,
+  "reason": "Retain all original rows, including four repeated selector strings; distinguish the four own writes after their guest return, with exact width/frame address and positive pre/post phase witnesses."
+}

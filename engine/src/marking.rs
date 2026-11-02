@@ -161,7 +161,7 @@ pub fn in_own_half<H:Host>(h:&mut H,mutant:bool)->Result<(),H::Err>{
 fn add_flags(a:u16)->u32{let b=1;let result=a.wrapping_add(b);let mut f=0;
     if a==65535{f|=CF;}if (result as u8).count_ones()%2==0{f|=PF;}if (a^b^result)&16!=0{f|=AF;}
     if result==0{f|=ZF;}if result&0x8000!=0{f|=SF;}if (!(a^b)&(a^result)&0x8000)!=0{f|=OF;}f}
-fn rng_core<H:Host>(h:&mut H,r:&mut Regs,off:u16,seg:u16,n:u16)->Result<(),H::Err>{
+pub(crate) fn rng_core<H:Host>(h:&mut H,r:&mut Regs,off:u16,seg:u16,n:u16)->Result<(),H::Err>{
     r.enter(h,2)?;let sp=r.get(h,Reg::Sp)?;r.push(h,h.ds() as u32)?;r.push(h,seg as u32)?;r.push(h,off as u32)?;
     let at=lin(seg,off);let new=h.u16(at)?.wrapping_mul(0x7abd).wrapping_add(0x1b0f);
     h.write(at,&new.to_le_bytes(),lin(h.seg(0x214b),0x069f))?;

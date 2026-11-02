@@ -1,0 +1,21 @@
+{
+  "public_tests_each": 65,
+  "new_public_test_methods": 5,
+  "rust_tests": 11,
+  "actual_state_comparisons": 480,
+  "actual_closure_probes": true,
+  "errors_all_reached": 122,
+  "positive_branch_comparisons": 1280,
+  "live_observer_comparisons": 1280,
+  "runtime_semantic_fix_required": false,
+  "preflight_ss_probe_correction": "Constrain SS swap to actual local-byte write, not every stack write at the shared guest-return address; restore SS at the real return stack delta. Source/native errors were identical before correction; positive success required.",
+  "sha256": {
+    ".cache/T19-public-cpython-preflight-v1.log": "9987897cfa39b33208c9b1b75de9a4fd2812abb950d455787ed0290b93da916e",
+    ".cache/T19-public-pypy-preflight-v1.log": "c07563c1f91386ab79b22f34bcd0952825b320df5bede067ee4cd41e8df70309",
+    ".cache/T19-depth-preflight-v1.log": "ea24a6507a97ab0f3e8f8fc68fafce45d5264d204c53198f94dac97ddf106aa3",
+    ".cache/T19-depth-pypy-preflight-v1.log": "e7ef8fffe19654d725dc7590c6b3c9db96d9388974da517b12d730729daf48c0",
+    ".cache/T19-live-preflight-v2.json": "2ccb97093960e78eb8265bb4f82dca39c2987447d2b075b3ce6d06da5d2f0b42"
+  },
+  "rejected_live_probe_sha256": "827d799263f881629f17cbaf50c7e03bdf9afc6ffdcb5981e68fbec6082d7c07",
+  "rejected_live_log_sha256": "4daf12ad753325f4757823012e7c00c30814c450b4fa100253f63d9f70d79a4d"
+}

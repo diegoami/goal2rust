@@ -1,0 +1,13 @@
+denied: unicorn, .sav, .EXE, .DAT
+attack-stack {'comparisons': 160, 'hits': {'popped-group-live': 160}, 'effect_witnesses': 160}
+defend-stack {'comparisons': 160, 'hits': {'popped-group-and-dead-t6': 160}, 'effect_witnesses': 160}
+parent-captured {'comparisons': 160, 'hits': {'captured-parent-pointer': 160}, 'effect_witnesses': 160}
+root-live {'comparisons': 160, 'hits': {'live-depth-after-step': 160}, 'effect_witnesses': 160}
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T19/live_observers.py", line 78, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/diego/projects/goal2rust/out/T19/live_observers.py", line 69, in main
+    assert p['error'] is None and p==r and ph==rh,(scenario,case,p['error'],r['error'],[k for k in p if p[k]!=r[k]],ph,rh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('result-local-ss', 4, ('PortError', 'no registered port/return at 0791:46EE'), ('PortError', 'no registered port/return at 0791:46EE'), [], {'fresh-ss-live-local': 5}, {'fresh-ss-live-local': 5})
