@@ -19,3 +19,22 @@ input and binary. Preserve completed outputs and rejected epochs. Never build
 or edit bound sources/inputs during a measured run. Production changes after
 freeze require a fresh epoch and all required proofs, not selectively rerun wins.
 No original data in git. Exact-head CI and complete Done-when precede merge.
+
+The concrete final proof selectors/counts/control IDs are sealed in
+proof-plan-v1.json (supplements the M1 contract). captures-v1.json is earlier
+input provenance, not a final-artifact fidelity receipt; the immutable private
+capture bytes are rebound in every canonical producer's source/input ledger.
+Development preflight logs are labelled preflight; they do not replace canonical
+receipts. Both extensions are archived in .cache/T17-artifacts and bound in
+artifact-archive-v1.json. No runtime semantic correction was made during preflight.
+
+Canonical resume (only while every freeze binding still matches):
+PYTHONHASHSEED=0 .venv/bin/python -u -B out/T17/supervise.py
+The supervisor skips completed, source-verified receipts, appends jobs-v1.jsonl,
+preserves strict ALL prefixes and waits for quiet before guarded family/check
+and final three-round timings. An incomplete JSONL is handled only by the source
+family.py documented append/resume behavior; do not overwrite completed lines.
+After all producers exit, run process-closure.txt on the actual host, then
+post-exit-audit.txt and validate.py with a new validation output. Run final
+public CPython/PyPy/Rust/GC and observer-matrix-v2.txt on the frozen artifact;
+completed receipts are never overwritten. Canonical original guards remain.

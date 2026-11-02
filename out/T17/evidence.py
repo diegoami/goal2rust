@@ -60,6 +60,9 @@ def hashes():
              + [ORACLE / 'tests/test_port_seal.py', ORACLE / 'tools/static/port_tables.py', STATE]
              + sorted(TABLES.iterdir())
              + [ENGINE / 'Cargo.toml', ENGINE / 'Cargo.lock', BASE / '.github/workflows/build.yml'])
+    files += sorted((BASE / 'out/T17').glob('*.txt'))
+    files += [BASE / '.cache/T17-raw/captures-v1.pkl', BASE / 'out/T17/gc-parity.txt', BASE / 'out/T17/proof-plan-v1.json', BASE / 'out/T17/artifact-archive-v1.json']
+    files += list((BASE / '.venv-pypy/lib/pypy3.11/site-packages/goal2rust_engine').glob('*.so'))
     result = {str(p.relative_to(BASE)): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
     for p in Path(goal2rust_engine.__file__).parent.glob('*.so'):
         result[str(p.relative_to(BASE))] = hashlib.sha256(p.read_bytes()).hexdigest()

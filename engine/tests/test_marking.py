@@ -35,7 +35,7 @@ def exercise(cls,case,*,root=ROOT,tapped=True,listener=True,pause=None,failure=N
     packet=args(mem,original.pop//2);ret=m.frames[-1].waiting.ret_to;log.append(('call',ad,packet,ret))
     value=0xa700
     if ad==HOLDER:value=0xb800|(case%2)
-    if ad=='1771:3216':value=0xc900|int(mode in (2,3) or (mode==4 and packet[0]%2==0))
+    if ad=='1771:3216':value=0xc900|int(mode in (2,3) or (mode==4 and (packet[0]%2==0 or ret=='0791:48E2')))
     if ad==ZONE:value=0xda00|int(mode not in (0,5))
     if ad==HALF:value=0xeb00|int(mode==6)
     if ad=='0791:278A':value=(100 if packet[-1]==5 else (200 if mode%2 else 50))
@@ -79,6 +79,13 @@ def exercise(cls,case,*,root=ROOT,tapped=True,listener=True,pause=None,failure=N
   side=int(m._memory[ds+0x830b]<12);markoff=0x9a3e+(side==0)*0x28+2*((3-m._memory[ds+0x668+(side==0)])&65535)
   mark=0 if mode in (0,1,2,4,5,7,9,11,13,15) else (3+(16 if side else 0) if mode!=8 else 999)
   put(ds+(markoff&65535),mark,2)
+  if controlled:
+   # Both possible holder flags must select the same planned branch; the ABI
+   # double can intentionally disagree with the real DS:830B fixture byte.
+   for side_flag in (0,1):
+    at=0x9a3e+(side_flag==0)*0x28+2*((3-m._memory[ds+0x668+(side_flag==0)])&65535)
+    selected_mark=0 if mode in (0,1,2,4,5,7,9,11,13,15) else (999 if mode==8 else 3+(16 if side_flag else 0))
+    put(ds+(at&65535),selected_mark,2)
   # Some opponents are in their own half, others outside; source uses signed coordinates.
   if mode in (6,10):
    for slot in range(1,24):put(ds+0x80e8+0x16*slot+1,255 if slot<12 else 1)
