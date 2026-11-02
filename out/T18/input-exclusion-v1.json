@@ -1,0 +1,6 @@
+{
+  "pass_all": true,
+  "added_generated_output": "out/T18/generated-input-exclusion-v1.txt",
+  "before_after_input_set_equal": true,
+  "source_input_count": 401
+}

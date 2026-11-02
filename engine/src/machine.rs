@@ -16,6 +16,10 @@ use crate::host::{Host, Reg};
 use crate::mem::{self, MEM_SIZE};
 use crate::py::port_error;
 
+
+const T18_BODIES: [&str;15] = ["0791:261A", "0791:2B7B", "0791:2C86", "0791:2D10", "0791:2D6D", "0791:2E36", "0791:40BC", "0791:42CB", "0791:4354", "0791:4A28", "0791:4B64", "214B:0D1C", "214B:0D56", "214B:2031", "23E4:08DF"];
+const T18_LEAVES: [&str;10] = ["0791:261A", "0791:2B7B", "0791:2C86", "0791:2D10", "0791:2D6D", "0791:2E36", "214B:0D1C", "214B:0D56", "214B:2031", "23E4:08DF"];
+const T18_RETURNS: [&str;41] = ["0791:4B74", "0791:4B88", "0791:4BB2", "0791:4BCC", "0791:4BF1", "0791:4C14", "0791:4BF6", "0791:4C33", "0791:4C59", "0791:4C6D", "0791:4CCA", "0791:4C7B", "0791:4C94", "0791:4CA8", "0791:4CB5", "0791:4CD8", "0791:4CEB", "0791:4D2A", "0791:4D30", "0791:4D39", "0791:4A4F", "0791:4A5C", "0791:4A77", "0791:4A84", "0791:4A90", "0791:4A9D", "0791:4AB5", "0791:4AC6", "0791:4ACD", "0791:4AE1", "0791:4AFF", "0791:4B1A", "0791:4B27", "0791:40E1", "0791:40E8", "0791:43A7", "0791:4392", "0791:43BC", "0791:442B", "0791:4311", "0791:431E"];
 const NAMES: [&str; 16] = [
     "eax", "ebx", "ecx", "edx", "esi", "edi", "ebp", "esp", "eflags", "eip", "cs", "ds", "es",
     "ss", "fs", "gs",
@@ -102,6 +106,7 @@ impl Port {
     }
 }
 enum NativeContinuation {
+    Destination(crate::destination_flow::Phase,Option<crate::destination_flow::Saved>),
     Marking(crate::marking::Phase,Option<crate::marking::Saved>),
     RunStep,
     PlayerSprite(crate::player_sprite::Phase,Option<crate::player_sprite::Saved>),
@@ -848,6 +853,11 @@ impl MachineCore {
         };
         if self.native && frame.port.variant.bind(py).is_none() {
             frame.native = match address.extract::<String>()?.as_str() {
+                "0791:4B64" => Some(NativeContinuation::Destination(crate::destination_flow::Phase::RootStart,None)),
+                "0791:4A28" => Some(NativeContinuation::Destination(crate::destination_flow::Phase::MarkStart,None)),
+                "0791:4354" => Some(NativeContinuation::Destination(crate::destination_flow::Phase::PostStart,None)),
+                "0791:42CB" => Some(NativeContinuation::Destination(crate::destination_flow::Phase::GroupStart,None)),
+                "0791:40BC" => Some(NativeContinuation::Destination(crate::destination_flow::Phase::AdvancedStart,None)),
                 "0791:47C5" => Some(NativeContinuation::Marking(crate::marking::Phase::Start,None)),
                 "0791:4438" => Some(NativeContinuation::Marking(crate::marking::Phase::ZoneStart,None)),
                 "0791:2956" => Some(NativeContinuation::AvailabilityStart),
@@ -951,6 +961,17 @@ impl MachineCore {
         let mut completed_value = py.None();
         let result = (|| -> PyResult<Option<Py<PyAny>>> {
             match f.native.take().unwrap() {
+                NativeContinuation::Destination(phase,saved)=>{
+                    let first=crate::destination_flow::first(phase);
+                    let reply=if first{0}else{sent.extract::<u16>()?};
+                    let action=crate::destination_flow::step(&mut h,phase,saved,reply)?;
+                    if first{let address:String=f.port.entry.bind(py).getattr("address")?.extract()?;*self.native_calls.borrow_mut().entry(address).or_insert(0)+=1;}
+                    match action{
+                        crate::destination_flow::Action::Call(req)=>{let args=PyTuple::new(py,req.args)?;let call=self.call_type.bind(py).call1((req.target,args,req.ret_to,req.far,false))?;f.native=Some(NativeContinuation::Destination(req.next,Some(req.saved)));Ok(Some(call.unbind()))}
+                        crate::destination_flow::Action::Done(value)=>{if (49..64).contains(&self.mutant){let address:String=f.port.entry.bind(py).getattr("address")?.extract()?;if T18_BODIES[(self.mutant-49) as usize]==address{crate::marking::corrupt(&mut h)?;}}if let Some(value)=value{completed_value=value.into_pyobject(py)?.into_any().unbind();}Ok(None)}
+                    }
+                }
+
                 NativeContinuation::Marking(phase,saved)=>{
                     use crate::marking::{Phase,Action};
                     let first=matches!(phase,Phase::Start|Phase::ZoneStart);
@@ -1136,7 +1157,8 @@ impl MachineCore {
             // Mutant 1 corrupts a guest-call return's saved IP; a machine error.
             let t17_sites=["0791:47CE","0791:47EF","0791:485D","0791:4888","0791:48E2","0791:4930","0791:494D","0791:496A","0791:4980","0791:499D","0791:49B2","0791:49C0","0791:4493"];
             let site_mutant=(36..49).contains(&self.mutant) && t17_sites[(self.mutant-36) as usize]==ret_to;
-            let corrupt = site_mutant || (self.mutant == 27 && matches!(ret_to.as_str(),"0791:47CE"|"0791:47EF"|"0791:485D"|"0791:4888"|"0791:48E2"|"0791:4930"|"0791:494D"|"0791:496A"|"0791:4980"|"0791:499D"|"0791:49B2"|"0791:49C0"))
+            let t18_mutant=(74..115).contains(&self.mutant) && T18_RETURNS[(self.mutant-74) as usize]==ret_to;
+            let corrupt = t18_mutant || site_mutant || (self.mutant == 27 && matches!(ret_to.as_str(),"0791:47CE"|"0791:47EF"|"0791:485D"|"0791:4888"|"0791:48E2"|"0791:4930"|"0791:494D"|"0791:496A"|"0791:4980"|"0791:499D"|"0791:49B2"|"0791:49C0"))
                 || (self.mutant==29 && ret_to=="0791:4493")
                 || self.mutant == 1 || (self.mutant == 4
                 && matches!(ret_to.as_str(), "0791:3013" | "0791:3090" | "0791:30A3"))
@@ -1214,6 +1236,16 @@ impl MachineCore {
         };
         use crate::geometry as g;
         match address {
+            "0791:261A" => crate::destination::draw_table(&mut h)?,
+            "0791:2B7B" => crate::destination::energy_gate(&mut h)?,
+            "0791:2C86" => crate::destination::mirror(&mut h)?,
+            "0791:2D10" => crate::destination::ahead(&mut h,false)?,
+            "0791:2D6D" => crate::destination::ahead(&mut h,true)?,
+            "0791:2E36" => crate::destination::goal_area(&mut h)?,
+            "214B:0D1C" => crate::destination::long_extreme(&mut h,false)?,
+            "214B:0D56" => crate::destination::long_extreme(&mut h,true)?,
+            "214B:2031" => crate::destination::clamp_byte(&mut h)?,
+            "23E4:08DF" => crate::destination::membership(&mut h)?,
             "0791:2996" => g::ball_holder_is_side0(&mut h,self.mutant==30)?,
             "0791:2C54" => crate::marking::in_own_half(&mut h,self.mutant==32)?,
             "214B:06B1" => crate::marking::random_n(&mut h,self.mutant==34)?,
@@ -1229,6 +1261,12 @@ impl MachineCore {
             "0791:2CEC" => g::player_at_ball(&mut h)?,
             "0791:2974" => g::side(&mut h)?,
             _ => return Ok(None),
+        }
+        if (49..64).contains(&self.mutant) && T18_BODIES[(self.mutant-49) as usize]==address { crate::marking::corrupt(&mut h)?; }
+        if (64..74).contains(&self.mutant) && T18_LEAVES[(self.mutant-64) as usize]==address {
+            let reg=if address=="23E4:08DF"{Reg::Eflags}else if matches!(address,"214B:0D1C"|"214B:0D56"){Reg::Dx}else{Reg::Ax};
+            let bit=if reg==Reg::Eflags{0x40}else if address=="214B:2031"{0x8000}else{1};
+            let old=h.reg(reg)?;h.set_reg(reg,old^bit)?;
         }
         // T17 leaf controls check full outputs, including preserved flags.
         if self.mutant==31 && address=="0791:2996" {

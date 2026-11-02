@@ -205,7 +205,7 @@ pub fn keeper<H: Host>(h: &mut H) -> Result<(), H::Err> {
 }
 
 /// geometry.player_byte: the player record's byte `field` of a pitch record.
-fn player_byte<H: Host>(h: &mut H, r: &mut Regs, seg: u16, off: u16, field: u16) -> Result<(), H::Err> {
+pub(crate) fn player_byte<H: Host>(h: &mut H, r: &mut Regs, seg: u16, off: u16, field: u16) -> Result<(), H::Err> {
     r.set(Reg::Es, seg as u32);
     r.set(Reg::Di, off as u32);
     let idx = rec16(h, seg, off, 0xD)?;

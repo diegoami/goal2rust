@@ -1,0 +1,7 @@
+{
+  "rejected": "artifact-archive-v1.json",
+  "accepted": "artifact-archive-v2.json",
+  "reason": "First archive was made while PyPy installation was still in progress and captured the historical T17 PyPy extension. Preserved unchanged; never used by canonical producers. V2 was copied after installation and passing PyPy preflight, with both installed/archive hashes checked.",
+  "production_rebuild_required": false,
+  "canonical_producers_started": false
+}

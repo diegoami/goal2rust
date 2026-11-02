@@ -1,0 +1,10 @@
+test_controlled_callers (test_destination.DestinationTests.test_controlled_callers) ... ok
+test_errors_variants_controls (test_destination.DestinationTests.test_errors_variants_controls) ... ok
+test_individual_guest_return_controls (test_destination.DestinationTests.test_individual_guest_return_controls) ... ok
+test_native_callers (test_destination.DestinationTests.test_native_callers) ... ok
+test_native_leaves (test_destination.DestinationTests.test_native_leaves) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 32.107s
+
+OK

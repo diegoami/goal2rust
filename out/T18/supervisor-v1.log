@@ -1,0 +1,233 @@
+START public-cpython-v1 64732
+START public-pypy-v1 64738
+START gc-parity-v1 64741
+START observer-matrix-v2 64765
+START rust-unit-v1 64790
+START taps-python-v1 64815
+START legacy-v1 64838
+EXIT gc-parity-v1 0
+EXIT rust-unit-v1 0
+PROGRESS 0 /75; public-cpython-v1,public-pypy-v1,observer-matrix-v2,taps-python-v1,legacy-v1
+EXIT observer-matrix-v2 0
+PROGRESS 0 /75; public-cpython-v1,public-pypy-v1,taps-python-v1,legacy-v1
+PROGRESS 0 /75; public-cpython-v1,public-pypy-v1,taps-python-v1,legacy-v1
+EXIT legacy-v1 0
+START legacy-body-v1 65433
+PROGRESS 0 /75; public-cpython-v1,public-pypy-v1,taps-python-v1,legacy-body-v1
+EXIT public-cpython-v1 0
+PROGRESS 0 /75; public-pypy-v1,taps-python-v1,legacy-body-v1
+PROGRESS 0 /75; public-pypy-v1,taps-python-v1,legacy-body-v1
+EXIT public-pypy-v1 0
+EXIT legacy-body-v1 0
+START availability-differential-v1 65764
+PROGRESS 0 /75; taps-python-v1,availability-differential-v1
+EXIT availability-differential-v1 0
+START availability-body-v1 65923
+PROGRESS 0 /75; taps-python-v1,availability-body-v1
+EXIT availability-body-v1 0
+START availability-return-v1 66087
+PROGRESS 0 /75; taps-python-v1,availability-return-v1
+EXIT availability-return-v1 0
+START ball-differential-v1 66223
+PROGRESS 0 /75; taps-python-v1,ball-differential-v1
+PROGRESS 0 /75; taps-python-v1,ball-differential-v1
+PROGRESS 0 /75; taps-python-v1,ball-differential-v1
+PROGRESS 0 /75; taps-python-v1,ball-differential-v1
+EXIT taps-python-v1 0
+PROGRESS 0 /75; ball-differential-v1
+PROGRESS 0 /75; ball-differential-v1
+PROGRESS 0 /75; ball-differential-v1
+PROGRESS 0 /75; ball-differential-v1
+PROGRESS 0 /75; ball-differential-v1
+EXIT ball-differential-v1 0
+START ball-body-v1 66647
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+EXIT ball-body-v1 0
+START ball-return-v1 67217
+PROGRESS 0 /75; ball-return-v1
+PROGRESS 0 /75; ball-return-v1
+PROGRESS 0 /75; ball-return-v1
+PROGRESS 0 /75; ball-return-v1
+PROGRESS 0 /75; ball-return-v1
+EXIT ball-return-v1 0
+START skill-differential-v1 67423
+PROGRESS 0 /75; skill-differential-v1
+PROGRESS 0 /75; skill-differential-v1
+EXIT skill-differential-v1 0
+START skill-body-v1 67536
+PROGRESS 0 /75; skill-body-v1
+PROGRESS 0 /75; skill-body-v1
+EXIT skill-body-v1 0
+START skill-return-v1 67614
+PROGRESS 0 /75; skill-return-v1
+PROGRESS 0 /75; skill-return-v1
+EXIT skill-return-v1 0
+START speaker-differential-v1 67790
+PROGRESS 0 /75; speaker-differential-v1
+PROGRESS 0 /75; speaker-differential-v1
+PROGRESS 0 /75; speaker-differential-v1
+EXIT speaker-differential-v1 0
+START speaker-body-v1 67890
+PROGRESS 0 /75; speaker-body-v1
+PROGRESS 0 /75; speaker-body-v1
+PROGRESS 0 /75; speaker-body-v1
+EXIT speaker-body-v1 0
+START speaker-root-return-v1 68297
+PROGRESS 0 /75; speaker-root-return-v1
+PROGRESS 0 /75; speaker-root-return-v1
+PROGRESS 0 /75; speaker-root-return-v1
+EXIT speaker-root-return-v1 0
+START speaker-seed-return-v1 69280
+PROGRESS 0 /75; speaker-seed-return-v1
+PROGRESS 0 /75; speaker-seed-return-v1
+PROGRESS 0 /75; speaker-seed-return-v1
+EXIT speaker-seed-return-v1 0
+START keys-differential-v1 70117
+PROGRESS 0 /75; keys-differential-v1
+PROGRESS 0 /75; keys-differential-v1
+PROGRESS 0 /75; keys-differential-v1
+PROGRESS 0 /75; keys-differential-v1
+EXIT keys-differential-v1 0
+START keys-body-v1 70812
+PROGRESS 0 /75; keys-body-v1
+PROGRESS 0 /75; keys-body-v1
+PROGRESS 0 /75; keys-body-v1
+EXIT keys-body-v1 0
+START keys-return-v1 71421
+PROGRESS 0 /75; keys-return-v1
+PROGRESS 0 /75; keys-return-v1
+EXIT keys-return-v1 0
+START draw-differential-v1 71947
+PROGRESS 0 /75; draw-differential-v1
+PROGRESS 0 /75; draw-differential-v1
+EXIT draw-differential-v1 0
+START draw-body-v1 72298
+PROGRESS 0 /75; draw-body-v1
+PROGRESS 0 /75; draw-body-v1
+EXIT draw-body-v1 0
+START draw-return-v1 72693
+PROGRESS 0 /75; draw-return-v1
+EXIT draw-return-v1 0
+START sweep-differential-v1 73373
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+EXIT sweep-differential-v1 0
+START sweep-body-v1 74057
+PROGRESS 0 /75; sweep-body-v1
+PROGRESS 0 /75; sweep-body-v1
+PROGRESS 0 /75; sweep-body-v1
+PROGRESS 0 /75; sweep-body-v1
+PROGRESS 0 /75; sweep-body-v1
+EXIT sweep-body-v1 0
+PROGRESS 0 /75; 
+START sweep-return-v1 75562
+PROGRESS 0 /75; sweep-return-v1
+PROGRESS 0 /75; sweep-return-v1
+PROGRESS 0 /75; sweep-return-v1
+PROGRESS 0 /75; sweep-return-v1
+EXIT sweep-return-v1 0
+START play-differential-v1 75961
+PROGRESS 0 /75; play-differential-v1
+PROGRESS 0 /75; play-differential-v1
+PROGRESS 0 /75; play-differential-v1
+PROGRESS 0 /75; play-differential-v1
+EXIT play-differential-v1 0
+START play-body-v1 76431
+PROGRESS 0 /75; play-body-v1
+PROGRESS 0 /75; play-body-v1
+EXIT play-body-v1 0
+START play-return-v1 76492
+PROGRESS 0 /75; play-return-v1
+EXIT play-return-v1 0
+START update-differential-v1 76562
+PROGRESS 0 /75; update-differential-v1
+PROGRESS 0 /75; update-differential-v1
+PROGRESS 0 /75; update-differential-v1
+PROGRESS 0 /75; update-differential-v1
+EXIT update-differential-v1 0
+START update-body-v1 76686
+PROGRESS 0 /75; update-body-v1
+EXIT update-body-v1 0
+PROGRESS 0 /75; 
+START update-return-v1 76756
+PROGRESS 0 /75; update-return-v1
+EXIT update-return-v1 0
+START sprite-differential-v1 76829
+PROGRESS 0 /75; sprite-differential-v1
+PROGRESS 0 /75; sprite-differential-v1
+EXIT sprite-differential-v1 0
+START sprite-body-v1 76919
+PROGRESS 0 /75; sprite-body-v1
+EXIT sprite-body-v1 0
+START sprite-return-v1 76974
+PROGRESS 0 /75; sprite-return-v1
+EXIT sprite-return-v1 0
+START run-differential-v1 77042
+PROGRESS 0 /75; run-differential-v1
+EXIT run-differential-v1 0
+START run-body-v1 77068
+PROGRESS 0 /75; run-body-v1
+EXIT run-body-v1 0
+START run-position-v1 77101
+PROGRESS 0 /75; run-position-v1
+EXIT run-position-v1 0
+START marking-normal-v1 77139
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+EXIT marking-normal-v1 0
+START marking-body-v1 78140
+PROGRESS 0 /75; marking-body-v1
+PROGRESS 0 /75; marking-body-v1
+PROGRESS 0 /75; marking-body-v1
+PROGRESS 0 /75; marking-body-v1
+PROGRESS 0 /75; marking-body-v1
+PROGRESS 0 /75; marking-body-v1
+EXIT marking-body-v1 0
+START marking-output-v1 78392
+PROGRESS 0 /75; marking-output-v1
+EXIT marking-output-v1 0
+START marking-returns-v1 78439
+PROGRESS 0 /75; marking-returns-v1
+PROGRESS 0 /75; marking-returns-v1
+PROGRESS 0 /75; marking-returns-v1
+EXIT marking-returns-v1 0
+START destination-normal-v1 78626
+PROGRESS 0 /75; destination-normal-v1
+EXIT destination-normal-v1 1
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T18/supervise.py", line 71, in <module>
+    name='destination-'+suite+'-v1';producer(name,'destination_differential.py','--suite',suite);wait([name])
+                                                                                                 ^^^^^^^^^^^^
+  File "/home/diego/projects/goal2rust/out/T18/supervise.py", line 27, in wait
+    assert code==0,n
+           ^^^^^^^
+AssertionError: destination-normal-v1

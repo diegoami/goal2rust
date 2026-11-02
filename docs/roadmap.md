@@ -5,7 +5,7 @@ oracle and evidence, profile the Rust machine, then translate complete hot call
 trees. This follows the owner's approval of the upstream assessment. T02 is
 complete; its historical receipts and Done-when remain unchanged.
 
-## Current plan after T17: complete native chunks
+## Current plan after T18: complete native chunks
 
 [owner-approved recalibration] T03-T16 are historical accepted increments. The
 next default work unit is a complete bounded native execution tree with its
@@ -16,9 +16,12 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
    [complete marking-target subtree](tasks/T17.md): 47C5,4438,2996,2C54 and
    214B:06B1, with existing native boundaries. All 28 native bodies and predicted
    entry counts are confirmed. [Results](../out/T17/assessment.md).
-2. **Re-profile and choose the next closed tree:** likely destination/positioning
-   and remaining geometry/random dependencies. Do not treat the entire module as
-   one task without an inventory, or choose another isolated caller by self time alone.
+2. **T18, [PR #45](https://github.com/diegoami/goal2rust/pull/45):**
+   [complete player-destination subtree](tasks/T18.md): all 15 remaining default
+   bodies below 4B64, 41 real guest return sites and their inline helpers. The
+   full profile confirms 43 native bodies and the predicted entry counts.
+   [Results](../out/T18/assessment.md). Choose the following closed tree from
+   the new full profile after this task is accepted; no next task is included.
 3. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
    dominant, define a separate optimization task. A larger PR alone does not remove
    every Python boundary or common dispatch cost.
@@ -28,17 +31,14 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
 5. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
-Current coverage is **28/422 registered non-stub bodies (6.64%)**, while **68.61%**
-of guest entries on the reference fixture are native. Neither is source-line,
-CPU-time or test coverage; no global line/branch percentage is currently reported.
-Use the [current profile](../out/T17/profile-after-v1.json), the historical
-[T16 planning snapshot](plans/post-T16-baseline.json) and
+Current coverage is **43/422 registered non-stub bodies (10.19%)**, while **77.51%**
+of guest entries on the reference fixture are native (2,405,625 native, 698,060
+Python). Neither is source-line, CPU-time or test coverage; no global line/branch
+percentage is currently reported. Use the [current profile](../out/T18/profile-after-v1.json),
+the historical [T16 planning snapshot](plans/post-T16-baseline.json) and
 [same-campaign performance reporting](performance-reporting.md). Every new summary
-shows saved-baseline/PyPy and candidate/PyPy together, not historical gaps as a trend.
-
-T17 completes the first recalibrated chunk; no T18 scope or implementation is
-started. Historical task contracts and receipts below remain intact. No calendar completion date or
-unmeasured PyPy speed promise is inferred from these coverage counts.
+shows saved-baseline/PyPy and candidate/PyPy together. No calendar completion date
+or unmeasured general PyPy speed promise follows from these coverage counts.
 
 ## 1. T03: sealed-engine compatibility
 
@@ -377,10 +377,30 @@ input bindings,193 evidence hashes and actual-host closure of all 61 groups.
 See [assessment](../out/T17/assessment.md) and [final ledger](../out/T17/validation-final-v2.json).
 Live CI/merge/stop status remains checkpoint #1 /PR #43.
 
-The new profile's leading direct Python bodies include geometry 2D10,positioning
-42CB and 4A28; inline Regs/direction work also matters. Select the next closed
-positioning/geometry tree from both body and helper costs. No T18 contract is
-sealed; broad dispatcher optimization remains a separately measured task.
+T17's profile identified geometry 2D10, positioning 42CB and 4A28 plus inline
+Regs/direction work. T18 closes their common destination root and remaining
+default dependencies. Broad dispatcher optimization remains separately measured.
+
+## 2o. T18: complete player-destination subtree
+
+All 15 remaining default bodies below 0791:4B64 are native together, preserving
+41 real guest return sites, inline helpers and captured/live state semantics.
+Fresh prior28 regressions and all new proofs, controls, errors, branches, variants
+and live observers pass. Public60 each CPython/PyPy, Rust11, GC20, exact ordered
+drive, sealed lifecycle, independent backend attestations and strict ALL75/F40
+pass. Profile: 43 native bodies, 2,405,625 native entries, 698,060 Python entries.
+
+All three complete paired rounds improve: median 20.57% less CPU than saved
+T17. Same-campaign saved T17/PyPy 0.963176, T18/PyPy
+0.765050; T18 uses 23.49% less CPU than PyPy on
+this reference fixture. This is a partial port, not a general workload claim.
+The initial mixed-interpreter preflight archive, outside-helper proof rejection
+and incomplete timing campaign remain preserved. The full timing replacement
+repeats every arm/round with unchanged guards and production bindings. Final
+417-input/evidence ledger and actual-host closure of 83 groups:
+[assessment](../out/T18/assessment.md), [validation](../out/T18/validation-final-v3.json).
+Live CI/merge/stop status remains checkpoint #1 / PR #45. Finish T18 and wind down;
+choose any later task from its complete profile in a new session.
 
 ## 3. Engine milestone and goal2 adoption
 
@@ -394,8 +414,8 @@ The owner runs the milestone review from a prompt naming the PR and requesting
 the full report as a PR comment and its URL. Goal2 adoption separately requires
 application fidelity, save/load, cancellation and native lifecycle/playtest.
 T08 historically demonstrated26.73% less CPU than its saved hybrid baseline and
-used 1.46x PyPy CPU (out/T08/assessment.md). Current T17 reaches near PyPy parity
-on the reference fixture, using2.52% less CPU at the three-round median. Broader
+used 1.46x PyPy CPU (out/T08/assessment.md). T18 uses 23.49% less CPU than PyPy
+on the reference fixture at the three-round median in its own campaign. Broader
 adoption still needs its representative performance set and application gates.
 
 Post-T16 upstream check: goal2 is now `1d274622` (archaeology remains `2a411f5`).
@@ -425,3 +445,10 @@ Historical handover e0270981 included PRs
 [#627](https://github.com/diegoami/goal2-archaeology/pull/627),
 [#628](https://github.com/diegoami/goal2-archaeology/pull/628), and
 [goal2#478](https://github.com/diegoami/goal2/issues/478).
+
+Latest upstream check (2026-11-02): goal2 `ed582f99`, archaeology `2a411f50`.
+Goal2 PR #515 requires PyPy child processes for its engine tests; T154 / issue
+#516 plans an application-boundary evaluation after the playable build. A future
+Rust CPython module needs explicit API ownership, threading/GIL release and
+portable target ABI/loading evidence; the current partial port still calls Python.
+These integration requirements do not change the accepted oracle or T18 scope.

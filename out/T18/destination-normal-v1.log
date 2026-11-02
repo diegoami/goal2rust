@@ -1,0 +1,12 @@
+denied: unicorn, .sav, .EXE, .DAT
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T18/destination_differential.py", line 75, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/diego/projects/goal2rust/out/T18/destination_differential.py", line 39, in main
+    for schedule in range(3):pair(root,case,'real',mutant=mutant,snapshot=snapshot,tapped=tapped,listener=listener,pause=root if schedule==1 else None,direct=schedule==2,profile=not mutant)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/goal2rust/out/T18/destination_differential.py", line 23, in pair
+    if opts.get('profile'):assert ps['owned'] and not rs['owned'] and rs['outside']>0;closure[root]=closure.get(root,0)+1
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

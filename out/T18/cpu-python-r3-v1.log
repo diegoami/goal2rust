@@ -1,0 +1,23 @@
+denied: unicorn, .sav, .EXE, .DAT
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T18/run_receipt.py", line 90, in <module>
+    if __name__ == '__main__': main()
+                               ^^^^^^
+  File "/home/diego/projects/goal2rust/out/T18/run_receipt.py", line 73, in main
+    events = harness.drive(m, policy, ())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/goal2rust/.cache/goal2-archaeology/experiments/E033-original-match-kit/save_boundaries.py", line 91, in drive
+    for ev in m.events():
+              ^^^^^^^^^^
+  File "/home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/match.py", line 438, in events
+    self._advance()
+  File "/home/diego/projects/goal2rust/out/T18/run_receipt.py", line 60, in timed
+    try: return advance()
+                ^^^^^^^^^
+  File "/home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/match.py", line 582, in _advance
+    stopped = self.m.run(self.end_lin, self.timeout_s, fresh=fresh)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/engine.py", line 277, in run
+    if time.monotonic() > deadline:raise PortError('plain dispatch time limit exceeded')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+original_match.port.mem.PortError: plain dispatch time limit exceeded

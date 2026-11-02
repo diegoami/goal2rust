@@ -134,7 +134,7 @@ fn c2974<H:Host>(h:&mut H,r:&mut Regs,seg:u16,off:u16)->Result<(),H::Err>{
     let v=u8::from(h.u8(lin(seg,off.wrapping_add(6)))?<12);r.set_al(h,v)?;
     let al=r.al(h)?;r.local8(h,-1,al)?;r.leave(h)
 }
-fn c2be5<H:Host>(h:&mut H,r:&mut Regs,seg:u16,off:u16)->Result<(),H::Err>{
+pub(crate) fn c2be5<H:Host>(h:&mut H,r:&mut Regs,seg:u16,off:u16)->Result<(),H::Err>{
     r.enter(h,2)?;let half=ds8(h,0x8319)?;r.set_al(h,half)?;cbw(h,r)?;
     let ax=r.get(h,Reg::Ax)?;let dx=if ax&0x8000!=0{65535}else{0};r.set(Reg::Dx,dx);r.set(Reg::Cx,ax as u32);r.set(Reg::Bx,dx);
     let left=ds16(h,0x831b)?;r.set(Reg::Ax,left as u32);r.set(Reg::Dx,0);
