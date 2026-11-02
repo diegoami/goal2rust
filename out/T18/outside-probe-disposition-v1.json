@@ -1,0 +1,19 @@
+{
+  "reason": "Outside probe called positioning.pitch but its code was absent from the tracked helper set. The v2 proof adds that helper; inside-root zero-Python assertion and all case counts remain unchanged.",
+  "rejected_stage": "destination-normal-v1",
+  "rejected_log_sha256": "435c253ff873353917c542b03205afbc64e71eaef1b734a2a8ac9ae4d67126ca",
+  "diagnostic_root": "0791:261A",
+  "source_native_equal": true,
+  "before_scope": {
+    "active": false,
+    "owned": {},
+    "outside": 0
+  },
+  "after_scope": {
+    "active": false,
+    "owned": {},
+    "outside": 1
+  },
+  "original_401_bindings_unchanged": true,
+  "production_changed": false
+}
