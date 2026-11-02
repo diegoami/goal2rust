@@ -32,10 +32,10 @@ def body(address):
   seen.add(key);hp=Path(inspect.getsourcefile(helper));ht=ast.parse(hp.read_text());hf=next((n for n in ht.body if isinstance(n,ast.FunctionDef) and n.name==helper.__name__),None)
   if hf is None:continue
   helpers.append(dict(symbol=key,path=str(hp.relative_to(BASE)),line=hf.lineno))
-  for call in ast.walk(hf):
-   if isinstance(call,ast.Call) and isinstance(call.func,ast.Name):
-    v=helper.__globals__.get(call.func.id)
-    if inspect.isfunction(v) and v.__module__.startswith('original_match.port') and call.func.id not in {'call'}:todo.append(v)
+  for ref in ast.walk(hf):
+   if isinstance(ref,ast.Name):
+    v=helper.__globals__.get(ref.id)
+    if inspect.isfunction(v) and v.__module__.startswith('original_match.port') and ref.id not in {'call'}:todo.append(v)
  return dict(address=address,module=e.fn.__module__,name=e.fn.__name__,ret=e.ret,pop=e.pop,long=e.long,return_stack_delta=e.return_stack_delta,path=str(path.relative_to(BASE)),line=fn.lineno,end_line=fn.end_lineno,sites=sorted(sites,key=lambda r:(r['line'],r['ret_to'])),inline_invokes=inline,helper_symbols=sorted(helpers,key=lambda r:r['symbol']))
 def inventory():
  bodies={};bound=set();todo=[ROOT]
