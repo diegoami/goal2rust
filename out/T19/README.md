@@ -36,7 +36,8 @@ append `timing-jobs-v1.jsonl`. No completed receipt is overwritten.
 
 New fixed plan: 16,480 normal pairs, 10,480 body controls, 4,192 output/flag
 controls, 3,680 comparisons for 23 individually reached guest-return controls,
-1,280 branch pairs, 19,520 injected errors across 122 selectors, 112 variants
+1,280 branch pairs, 19,520 error comparisons across 122 declared rows (118
+distinct strings, disambiguated by the final supplemental checks below), 112 variants
 and 10,480 scoped native-lifetime checks. Three live matrices retain T17/T18
 coverage and add 1,280 new source-specific alias pairs. Full prior43 proofs remain
 mandatory. Generated profile outputs are under `generated/`.
