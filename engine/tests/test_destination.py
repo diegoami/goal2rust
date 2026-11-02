@@ -66,9 +66,17 @@ def exercise(cls,case,*,root=ROOT,tapped=True,listener=True,pause=None,failure=N
    for k,v,n in [(0,0,2),(6,slot,1),(13,slot if slot<12 else slot+5,2),(18,9,1)]:put(p+k,v,n)
   pos=[0,0x0101,0x21ff,0xdf01,0x7f80,0x807f,0xffff,0x2304][(case//4)%8]
   for k,v,n in [(0,pos,2),(6,[1,2,3,12,13,22][case%6],1),(9,pos,2),(10,[0,1,127,128,255][case%5],1),(12,[0,1,2,127,128,255][case%6],1),(13,3,2),(18,[9,11,0,1][case%4],1)]:put(rec+k,v,n)
+  if root=='0791:40BC':
+   slot=m._memory[ds+0x830b];held=ds+((0x80e8+22*slot)&65535)
+   y=[0,1,34,35,127,128,255,222,221][(case//4)%9];x=[0,3,4,127,128,255][(case//36)%6]
+   put(held,x);put(held+1,y);put(held+6,slot)
+   put(ds+0x8319,0);put(ds+0x831b,0,2)
+   put(ds+0x7920+int(slot<12),255 if y&128 else 1)
+   for k in (0x82e3,0x82e9):put(ds+k,[0,1,2,32,34,128,255][case%7])
   put(ds+0xa978,[0x100,0xfffe,0xffff,0x200][case%4],2);put(ds+0xa97a,0x8000,2);seedoff=int.from_bytes(m._memory[ds+0xa978:ds+0xa97a],'little');put(0x80000+seedoff,[0,1,65535,0x1234][case%4],2)
   m._memory[m.lin('0791:4B44'):m.lin('0791:4B44')+32]=bytes([255 if mode%2 else 0])*32
-  for k in (0x82e3,0x82e9):put(ds+k,[0,1,127,128,255][case%5])
+  if root!='0791:40BC':
+   for k in (0x82e3,0x82e9):put(ds+k,[0,1,127,128,255][case%5])
   word=[0,1,127,128,255,32767,32768,65535][case%8]
   words=[seg,off]
   if root in ('0791:2C86','0791:2E36'):words=[pos,seg,off]
