@@ -240,3 +240,23 @@ The final timing recovery retains all 409 previous bindings and adds versioned
 proof tooling only: `freeze-v3.json` binds 417 inputs, with no production rebuild
 or guard change. Full final evidence is `out/T18/validation-final-v3.json`; the
 assessment reports both complete replacement timings and the rejected campaign.
+
+## T19 depth-adjustment subtree
+
+At accepted oracle `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`,
+`engine/src/depth.rs` translates positioning.adjust_depth_offset **0791:474D**,
+depth_step_attack **0791:4532**, depth_step_defend **0791:4649**,
+geometry.slot_in_side **0791:2BB1** and entrypoints.coin **214B:06FA**.
+All 23 real guest return sites, near/far return ABI, source argument/read/write
+order and captured versus live callback state remain explicit. The coin keeps
+its RNG inline via the existing source-equivalent `marking::rng_core`; no
+registered random_n call or guest frame is introduced. Nondefault variants remain
+Python. Existing native descendants form the closed tree's boundaries.
+
+Source/helper/site inventory and semantics: `out/T19/inventory-v1.json` and
+`out/T19/contract.md`. The actual accepted T18 source/adapter/tests and both
+interpreter binaries were saved before builds under `.cache/T19-baseline`,
+bound by `out/T19/baseline-snapshot-v1.json`. Candidate archive-v1 was copied
+only after both interpreter installations and passing preflight.
+`out/T19/freeze-v1.json` binds 466 concrete proof/source/binary/private inputs.
+Historical receipts and private state/tables/captures remain preserved.
