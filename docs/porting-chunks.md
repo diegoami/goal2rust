@@ -102,11 +102,32 @@ LOC/test coverage remains unreported. All three paired timing rounds improve: me
 0.781398 and T19/PyPy 0.739004 show 26.10% less
 CPU than PyPy on this fixture. No general workload advantage is claimed.
 
+## Validated scope: T20 chase-gate closure
+
+[T20](tasks/T20.md) closes three remaining default bodies below 5729, including
+both goal-strip queries and their inline helpers. It preserves five guest sites
+and the distinction between live AX and SENT, captured point/parent DI and fresh
+pointers. The larger hot roots still fan out into many unported services; this
+smaller tree is fully closed. [Assessment](../out/T20/assessment.md).
+
+Full prior48/new3 proofs, controls, 99 distinct error selectors/99 execution rows,
+four live matrices, ordered drive, lifecycle and strict ALL75/F40 pass. Independent
+fidelity jobs share a bounded three-process pool before measurement stages; all
+542 bound sources/binaries/inputs remain fixed. No rejected canonical stage or
+replacement timing campaign was needed.
+
+The profile confirms 51 native bodies (12.09% equal-weight count), 2,542,617
+native entries (81.92% fixture frequency) and 561,068 Python entries. All three
+paired rounds improve, median 4.16% less CPU than saved T19. Same-campaign
+saved T19/PyPy 0.748274 and T20/PyPy 0.717119
+show 28.29% less CPU than PyPy on this fixture. No global LOC/test coverage
+or general workload claim. No new per-translation 5% floor.
+
 ## Decide the following chunk from evidence
 
-After T19 is accepted, inspect its complete remaining Python profile and scoped
+After T20 is accepted, inspect its complete remaining Python profile and scoped
 execution/boundary observations before sealing the next closed tree. No next task
-is included in T19.
+is included in T20.
 
 If common dispatch/bridge work dominates instead, define a separate measured
 optimization task with its own predeclared criteria. Native-to-native calls still
@@ -195,3 +216,28 @@ do not change this pinned engine translation. T152 now matches the existing owne
 policy: missing PyPy/explicit engine runtime raises EngineRuntimeMissing, with
 no silent CPython fallback. T154's API/threading/GIL evaluation stays separate.
 These updates strengthen later adoption checks and do not change T19's oracle.
+
+## Upstream plan and design update after T20
+
+Goal2 main is `60fd39e6dfb6072b95e7b23aff470c9d472c94c6`; archaeology
+remains `2a411f50422ecd1f5d8cf96d05f1873e6257e684`. The owner-approved
+[m3 plan #509](https://github.com/diegoami/goal2/issues/509) removes GOAL.EXE,
+Unicorn and the recorded boot-state dependency after m2 and the ZIP playtest.
+GOAL.DAT comes from the player's install first and is replaced later; goal2rust
+continues in parallel and does not change that order.
+
+Goal2 merged [first-run data import #514](https://github.com/diegoami/goal2/pull/514)
+and [T156 original playthrough #528](https://github.com/diegoami/goal2/pull/528).
+The uninterrupted reference spans a new career, watched match, save/quit/reload
+and round-two quick match. It is useful to later whole-game fidelity; it does
+not replace this port's admitted engine corpus or larger engine milestone gates.
+Only references are recorded here; no original renders or game data are copied.
+
+The owner's design phase starts from T156, then T157 screen design and
+[T158 technology evaluation](https://github.com/diegoami/goal2/blob/60fd39e6dfb6072b95e7b23aff470c9d472c94c6/docs/tasks/T158.md).
+T158 absorbs T154 and measures toolkit, route, engine-boundary and portable
+packaging options on Linux/Windows, including the Rust hybrid as a CPython module.
+Its prototypes and owner decision are pending. A hybrid speed result provides
+neither GIL release nor in-process UI-thread safety; preserve explicit API, worker,
+save/load, cancellation and target-extension ABI/loading gates. This does not
+change the accepted engine oracle or authorize an application redesign here.

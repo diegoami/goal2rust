@@ -289,3 +289,9 @@ Candidate artifact-archive-v1 was copied after both installs and public70 each
 passed. Freeze-v1 binds 542 concrete source/binary/private/proof inputs; independent
 fidelity suites use a bounded pool before guarded corpus/profile/timing stages.
 Historical receipts and private state/tables/captures remain preserved.
+
+Final T20 validation is `out/T20/validation-final-v1.json`; source/baseline/profile
+audit is baseline-input-audit-v1.json. All 542 inputs and both binaries remained
+fixed, including all inherited proof sources/metadata. Exact row/distinct-selector
+counts both 99 were sealed before the campaign. Every outcome and the one-fixture
+measurement limit are reported in the assessment.

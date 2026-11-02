@@ -45,3 +45,16 @@ then post_exit_audit.py, baseline_input_audit.py and validate.py with a fresh fi
 output. Expected clean campaign: 68 canonical plus 12 timing groups, all 80 gone,
 with the controller stopped. Exact-head CI/squash/mainCI/merged binding audit and
 checkpoint complete the task. No automatic milestone review or next task included.
+
+## Final selection
+
+All full fidelity gates and three complete timing rounds pass. Final receipts:
+validation-final-v1.json, process-closure-v1.json, post-exit-audit-v1.json and
+baseline-input-audit-v1.json. All 542 inputs/source/artifact bindings and
+202 evidence hashes match. All 80 original producer groups and controller
+are stopped; no canonical stage or timing campaign was rejected/replaced.
+Three paired rounds use median 4.16% less CPU than saved T19; same-campaign
+baseline/PyPy 0.748274, candidate/PyPy 0.717119.
+See [assessment](assessment.md) for raw samples and one-fixture limits. Do not
+restart completed producers. Live CI/merge/stop status remains checkpoint #1.
+No next task is included.
