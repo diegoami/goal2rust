@@ -14,9 +14,9 @@ in [out/T06](out/T06/README.md). Common-bridge performance evidence and
 baseline/confirmation rules are in [out/T08](out/T08/README.md). Read the latest
 [checkpoint](https://github.com/diegoami/goal2rust/issues/1) before restarting work.
 
-The complete depth-adjustment subtree is now native: [T19 results](out/T19/assessment.md).
-The profile confirms 48 native bodies and 80.83% native guest entries on the reference
-fixture. Three paired rounds use 6.78% less CPU than saved T18. In that same
-campaign, saved T18 uses 21.86% less CPU than PyPy and T19 uses 26.10% less.
+The complete chase-gate subtree is now native: [T20 results](out/T20/assessment.md).
+The profile confirms 51 native bodies and 81.92% native guest entries on the reference
+fixture. Three paired rounds use 4.16% less CPU than saved T19. In that same
+campaign, saved T19 uses 25.17% less CPU than PyPy and T20 uses 28.29% less.
 This is a partial engine port and one-fixture result; whole-engine and application
 gates remain in the roadmap. No next task is included.

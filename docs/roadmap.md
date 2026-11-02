@@ -5,7 +5,7 @@ oracle and evidence, profile the Rust machine, then translate complete hot call
 trees. This follows the owner's approval of the upstream assessment. T02 is
 complete; its historical receipts and Done-when remain unchanged.
 
-## Current plan after T19: complete native chunks
+## Current plan after T20: complete native chunks
 
 [owner-approved recalibration] T03-T16 are historical accepted increments. The
 next default work unit is a complete bounded native execution tree with its
@@ -27,19 +27,24 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
    below 474D and all 23 real guest sites. Full fidelity and paired measurements
    pass; [results](../out/T19/assessment.md). Select any following closed tree from
    its full remaining-work profile in a new session; no next task is included.
-4. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
+4. **T20, [PR #49](https://github.com/diegoami/goal2rust/pull/49):**
+   [complete chase-gate subtree](tasks/T20.md): three bodies below 5729 and all
+   five guest sites. Full fidelity and paired measurements pass;
+   [results](../out/T20/assessment.md). Select the next closed tree from its full
+   profile in a new session; no following scope or implementation is included.
+5. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
    dominant, define a separate optimization task. A larger PR alone does not remove
    every Python boundary or common dispatch cost.
-5. **Engine milestone and application adoption:** retain the larger A700 corpus,
+6. **Engine milestone and application adoption:** retain the larger A700 corpus,
    known ref-121 noncompletion and owner review, then worker/save-load/cancellation/
    playtest and representative performance gates. PyPy remains goal2's baseline.
-6. **Whole game later:** tournament, board and career initialization still have
+7. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
-Current coverage is **48/422 registered non-stub bodies (11.37%)**, while **80.83%**
-of guest entries on the reference fixture are native (2,508,808 native, 594,877
+Current coverage is **51/422 registered non-stub bodies (12.09%)**, while **81.92%**
+of guest entries on the reference fixture are native (2,542,617 native, 561,068
 Python). Neither is source-line, CPU-time or test coverage; no global line/branch
-percentage is currently reported. Use the [current profile](../out/T19/profile-after-v1.json),
+percentage is currently reported. Use the [current profile](../out/T20/profile-after-v1.json),
 the historical [T16 planning snapshot](plans/post-T16-baseline.json) and
 [same-campaign performance reporting](performance-reporting.md). Every new summary
 shows saved-baseline/PyPy and candidate/PyPy together. No calendar completion date
@@ -428,6 +433,25 @@ All 75 recorded original/supplemental producer groups and the controller are
 stopped. Live exact-head/main CI, merge and stop status remain checkpoint #1 /
 PR #47. Finish T19 and wind down; no next task is started.
 
+## 2q. T20: complete chase-gate subtree
+
+All three default bodies 5729/2EB8/2EF0 are native, preserving five guest sites,
+inline helpers and captured/live state. Prior48/new3 normal 147,832 pairs and
+all required controls/errors/branches/variants/closure/four live matrices pass.
+New error plan: 99 distinct selectors AND 99 execution rows, 15,840 comparisons.
+Public70 each CPython/PyPy, Rust11, GC20, exact ordered drive, sealed lifecycle
+and independently attested strict ALL75/F40 pass. Bounded fidelity pool before
+guarded measurements; all 542 bound inputs fixed. No rejected canonical stage.
+
+Profile:51 native bodies,2,542,617 native/561,068 Python entries. All three
+paired rounds improve; median 4.16% less CPU than saved T19. Same-campaign
+saved T19/PyPy 0.748274, T20/PyPy 0.717119
+(28.29% less CPU on the reference fixture). This partial port has no global
+coverage/general workload claim or arbitrary incremental 5% floor.
+[Assessment](../out/T20/assessment.md), [final ledger](../out/T20/validation-final-v1.json).
+All 80 recorded producer groups and controller are stopped. Live CI/merge/stop
+status remains checkpoint #1 / PR #49. Finish T20 and wind down; no next task.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the
@@ -440,7 +464,7 @@ The owner runs the milestone review from a prompt naming the PR and requesting
 the full report as a PR comment and its URL. Goal2 adoption separately requires
 application fidelity, save/load, cancellation and native lifecycle/playtest.
 T08 historically demonstrated26.73% less CPU than its saved hybrid baseline and
-used 1.46x PyPy CPU (out/T08/assessment.md). T19 uses 26.10% less CPU than PyPy
+used 1.46x PyPy CPU (out/T08/assessment.md). T20 uses 28.29% less CPU than PyPy
 on the reference fixture at the three-round median in its own campaign. Broader
 adoption still needs its representative performance set and application gates.
 
@@ -486,3 +510,12 @@ diagnostics (#521) matter to later application adoption. T152's amended contract
 (#522) retains EngineRuntimeMissing with no silent CPython fallback. These do
 not change the pinned T19 oracle or supply Rust target ABI/GIL/application proof.
 See [adoption update](porting-chunks.md#upstream-adoption-update-after-t19).
+
+T20 final upstream check: goal2 `60fd39e6`, archaeology `2a411f50`. Owner m3
+removes GOAL.EXE/Unicorn/recorded boot state after m2/ZIP playtest; GOAL.DAT is
+read from the player's install first. Rust proceeds in parallel. First-run import
+(#514) and the uninterrupted original playthrough T156 (#528) are merged. The
+T156→T157→T158 design phase absorbs T154 into a measured technology/route/engine/
+packaging evaluation, followed by the owner's decision. Preserve application,
+GIL/threading and portable ABI gates; no original assets copied and no pin refresh
+during this controlled campaign. See [adoption update](porting-chunks.md#upstream-plan-and-design-update-after-t20).

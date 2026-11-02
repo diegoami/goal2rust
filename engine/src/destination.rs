@@ -8,7 +8,7 @@ fn cbw<H: Host>(h:&mut H,r:&mut Regs)->Result<(),H::Err>{let al=r.al(h)?;r.set_i
 fn cwd<H: Host>(h:&mut H,r:&mut Regs)->Result<(),H::Err>{let ax=r.get(h,Reg::Ax)?;r.set(Reg::Dx,if ax&0x8000!=0{65535}else{0});Ok(())}
 fn imul<H: Host>(h:&mut H,r:&mut Regs)->Result<(),H::Err>{let ax=r.get(h,Reg::Ax)?;let dx=r.get(h,Reg::Dx)?;let p=ax as i16 as i32*dx as i16 as i32;r.set(Reg::Ax,p as u32&65535);r.set(Reg::Dx,(p>>16) as u32&65535);Ok(())}
 fn negate<H: Host>(h:&mut H,r:&mut Regs)->Result<(),H::Err>{let ax=r.get(h,Reg::Ax)?;if ax&0x8000!=0{r.set(Reg::Ax,ax.wrapping_neg() as u32);}Ok(())}
-fn direction<H: Host>(h:&mut H,r:&mut Regs,seg:u16,off:u16,ret:u16)->Result<(),H::Err>{
+pub(crate) fn direction<H: Host>(h:&mut H,r:&mut Regs,seg:u16,off:u16,ret:u16)->Result<(),H::Err>{
  r.set(Reg::Es,seg as u32);r.set(Reg::Di,off as u32);
  invoke(h,r,Some(0x791),ret,&[seg as u32,off as u32],|h,r|crate::marking::c2be5(h,r,seg,off))?;
  cbw(h,r)?;let ax=r.get(h,Reg::Ax)?;r.set(Reg::Dx,ax as u32);Ok(())

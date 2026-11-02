@@ -97,3 +97,22 @@ T19 uses 6.78% less CPU than saved T18; all three rounds improve. In the
 same campaign saved T18 uses 21.86% less CPU than PyPy at the median,
 and T19 uses 26.10% less. This is one-fixture evidence; historical standalone
 PyPy gaps are not substituted for the saved baseline.
+
+## T20 same-campaign result
+
+Source: [every raw sample](../out/T20/performance-v1.json) and
+[assessment](../out/T20/assessment.md). All three complete four-arm rounds are
+retained with unchanged guards; no campaign or timing arm was replaced.
+
+| Round | Saved T19 / PyPy | T20 / PyPy | T20 / saved T19 |
+| --- | ---: | ---: | ---: |
+| 1 | 0.735671 | 0.699836 | 0.951290 |
+| 2 | 0.760225 | 0.748328 | 0.984349 |
+| 3 | 0.748274 | 0.717119 | 0.958364 |
+| Median of per-round ratios | 0.748274 | 0.717119 | 0.958364 |
+
+T20 uses 4.16% less CPU than saved T19, with all three rounds improving.
+Same-campaign saved T19 uses 25.17% less CPU than PyPy at the median,
+and T20 uses 28.29% less. This is one-fixture evidence and below a 5%
+incremental reduction; the owner-approved translation policy has no such floor.
+Historical standalone gaps are not substituted for the saved baseline.
