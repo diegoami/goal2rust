@@ -9,8 +9,14 @@ def append(row):
 def launch(name,args,receipt=None,extra=None):
     path=OUT/(receipt or name+'.json')
     if path.exists():
-        row=json.loads(path.read_text());assert row['source_unchanged']
-        for p,sha in row['source_sha256'].items():assert hashlib.sha256((e.BASE/p).read_bytes()).hexdigest()==sha,(name,p)
+        row=json.loads(path.read_text())
+        bound=[row]
+        if name=='performance-v1':
+            assert row['measurement_complete'] and row['outputs_equal'] and len(row['rounds'])==3 and len(row['exits'])==12 and all(v['code']==0 for v in row['exits'])
+            bound=[json.loads((OUT/f'cpu-{arm}-r{rnd}-v1.json').read_text()) for rnd in range(1,4) for arm in ['baseline','candidate','python','pypy']]
+        for record in bound:
+            assert record['source_unchanged']
+            for p,sha in record['source_sha256'].items():assert hashlib.sha256((e.BASE/p).read_bytes()).hexdigest()==sha,(name,p)
         print('ALREADY COMPLETE',name,flush=True);return
     log=(OUT/(name+'.log')).open('a');env=dict(os.environ,PYTHONHASHSEED='0',**(extra or {}))
     child=subprocess.Popen(args,env=env,cwd=e.BASE,stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
