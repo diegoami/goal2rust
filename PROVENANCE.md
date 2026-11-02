@@ -126,7 +126,7 @@ Translation pin: `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c` (state/2).
 `port/menus.py` `match_key_poll` **0791:9372** (near ret/no arguments) is reproduced
 in `engine/src/keys.rs` with native continuations in `machine.rs`. Its complete
 six-slot delay-table loop and all key/quick-mode branches retain the15 literal
-guest-call sites and12 distinct external ports. Those existing keyboard/menu/
+guest-call sites and 12 distinct external ports. Those existing keyboard/menu/
 library/display/speaker callees remain separately observable delegated routines,
 not newly translated bodies. Fresh actual-AX reads, pending stack bytes, captured
 short-lived arguments and live pointer reloads follow the source. Nondefault
@@ -141,7 +141,7 @@ helper are reproduced in `engine/src/ball_draw.rs` and `machine.rs` continuation
 Record segment/offset remain captured across membership/travel calls; grid tables,
 coordinates and post-return ZF/AX remain live. Signed-byte coordinates use unsigned
 word MUL exactly as the Python helper, including highDX and unchanged flags.
-Registered23E4:08DF and0791:835F, plus nested23E4:0279, remain delegated source
+Registered23E4:08DF and 0791:835F, plus nested23E4:0279, remain delegated source
 bodies with observable ABI/frames. No hardware or transitive-callee claim. Default
 variant only; others stay Python. Full contract:out/T11/contract.md, preserved
 actual T10 source/adapter/extension:out/T11/baseline-snapshot-v1.json.
@@ -195,7 +195,7 @@ inline `rand`, `coin`, `in_set`, `pitch_slot_side`, `attack_direction`,
 `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`. No guest calls are introduced;
 variants stay Python. See docs/tasks/T16.md and out/T16/contract.md.
 
-## T17 marking-target subtree (in progress)
+## T17 marking-target subtree
 
 At the same accepted `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c` pin,
 `engine/src/marking.rs` translates positioning.choose_marking_target **0791:47C5**,
@@ -207,5 +207,6 @@ Default variants close over the new bodies and accepted native 3216/278A/3A06/
 2BE5; nondefault variants stay Python. Source/helper/ABI/observer inventory and
 proof requirements are in out/T17/contract.md and inventory-v1.json. Actual T16
 baseline is preserved in .cache/T17-baseline, bound before builds in
-out/T17/baseline-snapshot-v1.json. Completion awaits the full combined campaign;
-this provenance entry is not acceptance evidence.
+out/T17/baseline-snapshot-v1.json. Full combined fidelity/performance validation is bound in
+out/T17/validation-final-v2.json; scope, all outcomes and the preserved metadata
+rejection/recovery are documented in out/T17/assessment.md.

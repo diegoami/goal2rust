@@ -1,57 +1,59 @@
 # T17 marking-target closure
 
-Read docs/tasks/T17.md, contract.md, inventory-v1.json and live checkpoint #1
-before implementation/builds/producers. Status belongs in GitHub issue #41.
+Full fixed-artifact validation is complete: [assessment](assessment.md),
+[validation-final-v2.json](validation-final-v2.json),
+[post-exit audit](post-exit-audit-final-v2.json) and
+[actual-host shutdown](process-closure-final-v2.json). All producers stopped.
+Live exact-head CI/merge/stop status belongs in PR #43 / checkpoint #1.
 
-Accepted pin 2cbeb36f / private T07 state-v2 and tables. The actual T16 baseline
-was preserved before any T17 build in .cache/T17-baseline/engine, bindings and
-PyPy extension; baseline-snapshot-v1.json binds every copied file. The old
-.cache/T16-baseline is T15 and must never be used as T17's baseline.
+Read docs/tasks/T17.md, contract.md, inventory-v1.json, proof-plan-v1.json and
+the latest checkpoint before resuming. Completed receipts are immutable; never
+rerun a producer into an existing output. No next task is started here.
 
-M1 receipts are exclusive-create and immutable. inventory.py reproduces literal
-registered inbound/outbound sites without executing the engine. contract.md
-seals helper ownership, observer/ABI/error/control and case requirements.
+Accepted oracle2cbeb36f / private T07 state-v2 and tables. Actual T16 baseline
+source/adapter/tests/CPython/PyPy binaries were preserved before builds in
+.cache/T17-baseline, bound by baseline-snapshot-v1.json. .cache/T16-baseline
+is historical T15. Candidate binaries remain in .cache/T17-artifacts, bound by
+artifact-archive-v1.json. No original bytes/state/tables are committed.
 
-Implement/prove all five bodies on one branch, pushing resumable milestones.
-Development preflight runs are not final receipts. Freeze the combined artifact
-before canonical proof/ALL75/F40/profile/timing producers; bind every source,
-input and binary. Preserve completed outputs and rejected epochs. Never build
-or edit bound sources/inputs during a measured run. Production changes after
-freeze require a fresh epoch and all required proofs, not selectively rerun wins.
-No original data in git. Exact-head CI and complete Done-when precede merge.
+Five complete bodies close over13 real guest sites and existing native boundaries.
+Per-body/actual integrated proof, scoped Python-execution detection, full prior 23
+regression, observers/errors/controls, ordered drive, sealed lifecycle, strict
+ALL75/F40, profile and three quiet paired four-arm rounds pass. Report body count,
+fixture entry frequency and same-campaign performance separately. No arbitrary
+per-translation5% floor; historical contracts/receipts unchanged.
 
-The concrete final proof selectors/counts/control IDs are sealed in
-proof-plan-v1.json (supplements the M1 contract). captures-v1.json is earlier
-input provenance, not a final-artifact fidelity receipt; the immutable private
-capture bytes are rebound in every canonical producer's source/input ledger.
-Development preflight logs are labelled preflight; they do not replace canonical
-receipts. Both extensions are archived in .cache/T17-artifacts and bound in
-artifact-archive-v1.json. No runtime semantic correction was made during preflight.
+captures-v1.json records earlier input provenance; private capture bytes are
+rebound by final proofs. Logs labelled preflight are development evidence.
+Production/binaries/private inputs stayed fixed through the complete campaign.
+Original 361 freeze bindings remain unchanged. Five supplemental/audit sources
+were added only after all canonical writers/timings exited and are included in
+the final 366-file source ledger. Production changes require a fresh epoch and
+all required receipts. Never rebuild or edit bound sources/inputs during runs.
 
-Canonical resume (only while every freeze binding still matches):
-PYTHONHASHSEED=0 .venv/bin/python -u -B out/T17/supervise.py
-The supervisor skips completed, source-verified receipts, appends jobs-v1.jsonl,
-preserves strict ALL prefixes and waits for quiet before guarded family/check
-and final three-round timings. An incomplete JSONL is handled only by the source
-family.py documented append/resume behavior; do not overwrite completed lines.
-After all producers exit, run process-closure.txt on the actual host, then
-post-exit-audit.txt and validate.py with a new validation output. Run final
-public CPython/PyPy/Rust/GC and observer-matrix-v2.txt on the frozen artifact;
-completed receipts are never overwritten. Canonical original guards remain.
+## Preserved metadata rejection and accepted recovery
 
-Metadata recovery (see latest checkpoint): the generated profile text was
-mistakenly included by the top-level *.txt input glob. Its unchanged bytes now
-live in profile-report/profile-after-v1.txt, with disposition/hash evidence in
-profile-output-disposition-v1.json. Every original freeze binding is unchanged.
-check-v1.json retains the rejected source_unchanged=false result and four passing
-oracle checks; accepted lifecycle validation must use the fresh check-v2 receipt.
-The original supervisor stopped on that rejection. Do not restart it. The live
-recovery controller is .cache/T17-recover.py, with recovery-v2.log/jobs-v2.jsonl;
-inspect its PID lock and completed receipts before any restart. It adopts the
-unchanged ongoing family producer, preserves strict prefixes, verifies completed
-family records with a separately observed CLI exit, runs full strict ALL/F40,
-and starts all three original paired timing rounds. No runtime/binary/input,
-original guard or fidelity assertion was changed. Rejected receipts remain.
-Final validation/audit drivers will explicitly select accepted check-v2, account
-for the rejected metadata attempt and both process ledgers, and be added/bound
-after all canonical writers exit. The old v1 drivers remain preserved.
+The original supervisor stopped after check-v1's wrapper rejected a generated
+profile text report incorrectly matched as an input. All four source lifecycle
+checks passed, but source_unchanged=false is retained and rejected. The text's
+unchanged bytes live at profile-report/profile-after-v1.txt, bound by
+profile-output-disposition-v1.json. No original input/source/binary changed.
+
+Accepted lifecycle evidence is check-v2.json / attest-check-v2 with separately
+observed exit0. recover.py (executed unchanged from .cache/T17-recover.py) adopts
+the original family producer, preserves strict prefixes, independently rechecks
+completed family records without changing them, and runs unchanged strict
+ALL/F40 and all three timings. recovery-v2.json / jobs-v2.jsonl accompany the
+original jobs-v1.jsonl / rejected check-v1 and controller log. Every attempt is
+retained. Do not restart the original supervise.py against rejected check-v1.
+
+The final drivers process_closure_final.py, post_exit_audit_final.py and
+validate_final.py explicitly audit both ledgers, the rejected metadata attempt,
+accepted check-v2, the unchanged compiled artifact and all original gates. The
+original v1 drivers remain preserved. live_observers.py adds1280 required
+live-stack/pointer/separate-SS/RNG comparisons on the same artifact.
+
+After completion, verify hashes against validation-final-v2.json and the baseline/
+archive manifests; inspect the live checkpoint before any new work. Perform PID/
+PGID checks in the actual host namespace. Whole-engine A700/ref-121/owner-review,
+issue #6 and later application adoption remain separate gates.

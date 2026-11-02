@@ -5,7 +5,7 @@ subtrees. The default unit is a complete execution path with its remaining
 Python callees, rather than one registered routine per full validation campaign.
 The engine-first / whole-game-later objective and accepted oracle are unchanged.
 
-## Current baseline
+## Historical planning baseline after T16
 
 T16 is accepted on main `b3ad14188454ef200b7cfa06500227b0de0a5723`.
 Figures below come from `out/T16/profile-after-v1.json` at accepted oracle
@@ -48,24 +48,22 @@ This batches the expensive full campaign; it does not drop prior-body regression
 controls, errors, callbacks, lifecycle, ALL75/F40, profiling or paired timings.
 The oracle is never changed to make a candidate pass.
 
-## Immediate work: T17 marking-target closure
+## Validated chunk: T17 marking-target closure
 
-[T17](tasks/T17.md) ports five currently Python bodies together: marking-target
-selection, its zone test, holder/half queries and the registered random draw.
-All remaining registered guest callees of that root are then native under the
-default variants. This is a larger unit than another isolated marking caller.
+[T17](tasks/T17.md) ports marking-target selection, its zone test, holder/half
+queries and the full-word registered random draw together. All remaining default
+guest callees close through native bodies. Variants stay Python. Per-body,
+actual integrated and scoped Python-execution proofs pass on the combined artifact.
 
-On the unchanged reference fixture, the five new bodies account for 149,652
-entries. Expected after faithful replacement: 28 native bodies, 2,129,564 native
-entries and 974,121 Python entries. These are coverage predictions, not speed
-forecasts or acceptance substitutes; confirm them with the new full profile.
+The profile confirms 28 native bodies,2,129,564 native entries and 974,121 Python
+entries of 3,103,685: exactly149,652 entries moved. This is6.64% equal-weight body
+count and 68.61% entry frequency on one fixture. Global LOC/test coverage remains
+unreported. See [assessment](../out/T17/assessment.md) and the
+[closed ledger](../out/T17/validation-final-v2.json).
 
-Prove both individual bodies and the integrated root using actual callees. In
-instrumented proof runs, assert that no default-path Python routine or inline
-helper owned by the selected subtree executes while that subtree is active.
-Scope that assertion to its actual frame lifetime: shared helpers used elsewhere
-and intentional nondefault Python variants remain valid. Guest entry counts alone
-are insufficient to prove that a native wrapper does not delegate work to Python.
+T17 uses 7.82% less CPU than saved T16 at the paired median. Same-campaign saved
+T16/PyPy 1.059106 and T17/PyPy 0.974762 show the gap closing to near parity: two
+rounds use less CPU than PyPy, one0.94% more. This is one-fixture evidence.
 
 ## Decide the following chunk from evidence
 
@@ -113,3 +111,15 @@ serves the owner's playtest using the private data folder. Those are upstream
 plans, not completed Rust milestones. Do not block goal2's playable build on this
 port or bundle original data here. Independent public whole-game distribution
 still needs the remaining original-game dependencies removed.
+
+## Evidence input/output lesson
+
+Keep generated reports in an output directory excluded from input/source globs.
+Bind executable proof sources explicitly. T17's broad root *.txt matcher included
+a newly generated profile view, correctly rejecting the first lifecycle receipt's
+source stability. Its unchanged bytes and rejection remain preserved; source-clean
+check-v2 repeats every lifecycle gate on the same binary. Final drivers explicitly
+account for rejected and accepted attempts. Never suppress source_unchanged or
+edit a completed receipt to repair classification. Supplemental proof sources can
+be added and bound after canonical writers exit, with every original binding
+retained and no production change.

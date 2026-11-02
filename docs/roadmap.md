@@ -5,16 +5,17 @@ oracle and evidence, profile the Rust machine, then translate complete hot call
 trees. This follows the owner's approval of the upstream assessment. T02 is
 complete; its historical receipts and Done-when remain unchanged.
 
-## Current plan after T16: complete native chunks
+## Current plan after T17: complete native chunks
 
 [owner-approved recalibration] T03-T16 are historical accepted increments. The
 next default work unit is a complete bounded native execution tree with its
 remaining Python callees. Keep individual proofs, then validate the whole frozen
 bundle in one full campaign. See [chunk policy](porting-chunks.md).
 
-1. **T17, planned:** [complete marking-target subtree](tasks/T17.md): 47C5, 4438,
-   2996, 2C54 and 214B:06B1 together, with existing native boundaries. Expected
-   28 native bodies on the unchanged fixture, subject to proof/profile confirmation.
+1. **T17, validated in [PR #43](https://github.com/diegoami/goal2rust/pull/43):**
+   [complete marking-target subtree](tasks/T17.md): 47C5,4438,2996,2C54 and
+   214B:06B1, with existing native boundaries. All 28 native bodies and predicted
+   entry counts are confirmed. [Results](../out/T17/assessment.md).
 2. **Re-profile and choose the next closed tree:** likely destination/positioning
    and remaining geometry/random dependencies. Do not treat the entire module as
    one task without an inventory, or choose another isolated caller by self time alone.
@@ -27,15 +28,16 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
 5. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
-Current coverage is **23/422 registered non-stub bodies (5.45%)**, while **63.79%**
+Current coverage is **28/422 registered non-stub bodies (6.64%)**, while **68.61%**
 of guest entries on the reference fixture are native. Neither is source-line,
 CPU-time or test coverage; no global line/branch percentage is currently reported.
-Use [the planning snapshot](plans/post-T16-baseline.json) and
+Use the [current profile](../out/T17/profile-after-v1.json), the historical
+[T16 planning snapshot](plans/post-T16-baseline.json) and
 [same-campaign performance reporting](performance-reporting.md). Every new summary
 shows saved-baseline/PyPy and candidate/PyPy together, not historical gaps as a trend.
 
-No runtime work or T17 producer starts as part of this planning change. Historical
-task contracts and receipts below remain intact. No calendar completion date or
+T17 completes the first recalibrated chunk; no T18 scope or implementation is
+started. Historical task contracts and receipts below remain intact. No calendar completion date or
 unmeasured PyPy speed promise is inferred from these coverage counts.
 
 ## 1. T03: sealed-engine compatibility
@@ -185,7 +187,7 @@ this port's strict ALL75/F40 gates or change the accepted semantic pin.
 
 Translate menus.match_key_poll0791:9372, the largest remaining registered Python
 body self cost in the post-T09 profile (76,928 starts). One complete caller, all
-six-slot delay-table and key/quick branches; its15 literal guest-call sites and12
+six-slot delay-table and key/quick branches; its15 literal guest-call sites and 12
 existing external callee bodies remain observable. This bounded increment does
 not claim the transitive menu/service closure. Contract:[tasks/T10.md](tasks/T10.md),
 [out/T10](../out/T10/README.md). Preserve actual T09 baseline before building.
@@ -215,7 +217,7 @@ actual T10 baseline preserved. Full old17-body/new caller/control/observer, orde
 sealed lifecycle/ALL75/F40/profile/artifact proof and three quiet four-arm rounds,
 all outcomes retained/reported, no arbitrary per-increment5% floor.
 
-Upstreams rechecked before T11: archaeology2a411f50 unchanged; goal2 advances
+Upstreams rechecked before T11: archaeology 2a411f50 unchanged; goal2 advances
 65c47459(PR490: CI scheduling/timeout and cancellation-test changes). No selected
 engine semantic change or reason to alter the controlled accepted pin/full corpus.
 
@@ -262,7 +264,7 @@ registered callees remain explicit. Live own pointers/currentBP/actualAX/record/
 flag/table semantics and None/True/False destination choice require exact tests.
 Contract[tasks/T13.md](tasks/T13.md),[out/T13](../out/T13/README.md). Same pin/private
 state-v2, T12 baseline preserved; full previous19-body/new caller/error/control/
-observer/ordered/lifecycle/ALL75/F40/profile/artifact/closure proof and3 quiet
+observer/ordered/lifecycle/ALL75/F40/profile/artifact/closure proof and 3 quiet
 rotated four-arm measured outcomes, no arbitrary5% floor. No callee/hardware claim.
 
 T13 complete fidelity and measurements pass: all three rounds faster, median
@@ -303,7 +305,7 @@ holder/keeper/interception and ball movement/clamps; five registered guest-call
 boundaries remain delegated. Preserve captured yield replies versus actual AX,
 live pointers/record contents/DS argument and ordered observers. Contract:
 [tasks/T15.md](tasks/T15.md), [out/T15](../out/T15/README.md). Same accepted pin and
-private state-v2, actual T14 baseline preserved. Full prior21-body regression,
+private state-v2, actual T14 baseline preserved. Full prior 21-body regression,
 new caller controls/errors/observers, ordered/lifecycle/ALL75/F40/profile/artifact
 closure and three quiet rotated four-arm outcomes, all retained/no 5% floor.
 
@@ -327,7 +329,7 @@ frame prologue. Preserve the nested parent-frame pointer, captured record and
 deltas/random value, live content/pointers, seed writes, pitch/picture blocking
 and unbounded source retry semantics. Contract: [tasks/T16.md](tasks/T16.md),
 [out/T16](../out/T16/README.md). Same accepted pin/private state-v2 and saved T15
-baseline. Full prior22-body and new proof/controls/errors/source branch traces,
+baseline. Full prior 22-body and new proof/controls/errors/source branch traces,
 ordered/lifecycle/ALL75/F40/profile, closed artifact ledger and three quiet paired
 four-arm outcomes; all outcomes retained, no 5% floor. No artificial guest-return
 control, callee-frame or separate registered 86D0 implementation claim.
@@ -347,13 +349,38 @@ to `0ea62a7` ([PR #499](https://github.com/diegoami/goal2/pull/499)), reporting
 completed and still-running test modules promptly. This changes test reporting,
 not the accepted oracle or worker API; no roadmap change. No next task included.
 
-## 2n. T17: complete marking-target subtree (planned)
+## 2n. T17: complete marking-target subtree
 
-The owner-approved larger-chunk plan is [T17](tasks/T17.md): port all five remaining
-Python bodies of the 47C5 marking-target subtree together. Most other callees are
-already native. Per-body proofs remain, but the full campaign runs once for the
-combined frozen artifact, with actual integrated callee and scoped closure proof.
-No implementation or experiment has started; live status stays in checkpoint #1.
+All five remaining Python bodies of the47C5 subtree are native together, with
+13 real guest sites and unchanged inline/captured/live-state semantics. Contract:
+[tasks/T17.md](tasks/T17.md), [evidence](../out/T17/README.md). Original source/
+artifact/input bindings stayed fixed throughout measurements; variants use Python.
+
+Fresh prior 23-body 67,144 normal comparisons, new 14,480 individual/integrated/ABI
+comparisons,11,200 new errors,1120 source-branch comparisons,160 variants and all
+body/output/13 return controls pass. An additional1280 live stack/pointer/SS/RNG
+comparisons pass. Public 54 each CPython/PyPy,11 Rust,20GC, exact ordered full drive,
+sealed lifecycle/independent backend attestations, strict ALL75/F40 and the full
+profile pass. No new semantic fix, original data distribution or automatic review.
+
+Profile:28 native bodies,2,129,564 native entries,974,121 Python entries. All three
+paired rounds improve over saved T16; median7.82% less CPU. Same-campaign T16/PyPy
+CPU 1.059106 versus T17/PyPy 0.974762; two rounds improve on PyPy and one uses 0.94%
+more CPU. This is near parity on one fixture, with 2.52% less CPU at the median;
+paired CPython speed2.861x. No general workload advantage or completion percentage.
+
+A generated profile text report was initially classified as an input, causing a
+metadata-only lifecycle wrapper rejection. The rejected receipt/report bytes are
+preserved; source-clean check-v2 repeats all gates on the unchanged artifact.
+Final validation explicitly checks that recovery, both ledgers,366 source/artifact/
+input bindings,193 evidence hashes and actual-host closure of all 61 groups.
+See [assessment](../out/T17/assessment.md) and [final ledger](../out/T17/validation-final-v2.json).
+Live CI/merge/stop status remains checkpoint #1 /PR #43.
+
+The new profile's leading direct Python bodies include geometry 2D10,positioning
+42CB and 4A28; inline Regs/direction work also matters. Select the next closed
+positioning/geometry tree from both body and helper costs. No T18 contract is
+sealed; broad dispatcher optimization remains a separately measured task.
 
 ## 3. Engine milestone and goal2 adoption
 
@@ -366,9 +393,10 @@ or replace it. T79's 699 equal completed matches prove the Python port, not Rust
 The owner runs the milestone review from a prompt naming the PR and requesting
 the full report as a PR comment and its URL. Goal2 adoption separately requires
 application fidelity, save/load, cancellation and native lifecycle/playtest.
-The hybrid Rust engine has not beaten PyPy. T08 demonstrates a 26.73% median
-CPU reduction against the preserved hybrid baseline in three simultaneous rounds;
-the candidate still uses about 1.46x PyPy CPU (out/T08/assessment.md).
+T08 historically demonstrated26.73% less CPU than its saved hybrid baseline and
+used 1.46x PyPy CPU (out/T08/assessment.md). Current T17 reaches near PyPy parity
+on the reference fixture, using2.52% less CPU at the three-round median. Broader
+adoption still needs its representative performance set and application gates.
 
 Post-T16 upstream check: goal2 is now `1d274622` (archaeology remains `2a411f5`).
 [PR #502](https://github.com/diegoami/goal2/pull/502) moves engine tests into PyPy

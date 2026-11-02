@@ -1,0 +1,10 @@
+{
+  "exec_session": 79782,
+  "observed_exec_exit_code": 0,
+  "pid": 24006,
+  "pgid": 24003,
+  "receipt": "check-v2.json",
+  "all_checks_passed": true,
+  "source_unchanged": true,
+  "time": 1793617391.8718808
+}
