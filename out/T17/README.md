@@ -38,3 +38,20 @@ After all producers exit, run process-closure.txt on the actual host, then
 post-exit-audit.txt and validate.py with a new validation output. Run final
 public CPython/PyPy/Rust/GC and observer-matrix-v2.txt on the frozen artifact;
 completed receipts are never overwritten. Canonical original guards remain.
+
+Metadata recovery (see latest checkpoint): the generated profile text was
+mistakenly included by the top-level *.txt input glob. Its unchanged bytes now
+live in profile-report/profile-after-v1.txt, with disposition/hash evidence in
+profile-output-disposition-v1.json. Every original freeze binding is unchanged.
+check-v1.json retains the rejected source_unchanged=false result and four passing
+oracle checks; accepted lifecycle validation must use the fresh check-v2 receipt.
+The original supervisor stopped on that rejection. Do not restart it. The live
+recovery controller is .cache/T17-recover.py, with recovery-v2.log/jobs-v2.jsonl;
+inspect its PID lock and completed receipts before any restart. It adopts the
+unchanged ongoing family producer, preserves strict prefixes, verifies completed
+family records with a separately observed CLI exit, runs full strict ALL/F40,
+and starts all three original paired timing rounds. No runtime/binary/input,
+original guard or fidelity assertion was changed. Rejected receipts remain.
+Final validation/audit drivers will explicitly select accepted check-v2, account
+for the rejected metadata attempt and both process ledgers, and be added/bound
+after all canonical writers exit. The old v1 drivers remain preserved.

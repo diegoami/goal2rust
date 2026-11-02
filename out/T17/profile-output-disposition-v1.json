@@ -1,0 +1,17 @@
+{
+  "added_at_failure": [
+    "out/T17/profile-after-v1.txt"
+  ],
+  "all_four_lifecycle_checks_passed": true,
+  "changed_original_bindings": [],
+  "oracle_checks_exit": 0,
+  "original": "out/T17/profile-after-v1.txt",
+  "original_freeze_bindings": 361,
+  "preserved": "out/T17/profile-report/profile-after-v1.txt",
+  "reason": "Generated cProfile text output was incorrectly included by the top-level *.txt input glob. Its bytes are preserved under profile-report; no frozen source/binary/private-input file changed.",
+  "rejected_receipt": "check-v1.json",
+  "rejected_wrapper_exit": 1,
+  "restored_original_input_set": true,
+  "sha256": "de175925f5fa04209b7e8f7aed5fdaf2bc7f668d6e14ef2239b5be6597cecafd",
+  "time_utc": "2026-11-02T10:48:00Z"
+}
