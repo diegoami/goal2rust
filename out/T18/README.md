@@ -26,3 +26,24 @@ source verification strict; preserve every rejected attempt and completed receip
 Never edit bound code/tests/binaries/private inputs or rebuild during runs.
 Production changes after freeze require a new epoch and fresh required proofs.
 Actual PID/PGID checks must run in the real host namespace.
+
+M2 preflight is complete: all15 bodies implemented;40,000 authored pairs,
+1440 real pairs/body controls,3200 positive branch pairs,44,480 reached errors,
+1280 live alias pairs and all41 individual return controls pass. Public60 tests
+pass; new PyPy subtree tests pass. Accepted binary archive is artifact-archive-v2
+(.cache/T18-artifacts-v2). V1 is retained as a rejected preflight archive: it
+captured the historical PyPy library while installation was still in progress;
+no canonical producer used it. archive-disposition-v1.json records the reason.
+
+source-inputs-v1.json explicitly names every current executable proof source.
+proof-plan-v1.json fixes all counts/278 error selectors/variants. The generated
+root-text exclusion probe passes. Profile text goes under generated/; outputs
+never become inputs. This preserves strict before/after verification.
+
+Canonical resume: PYTHONHASHSEED=0 .venv/bin/python -u -B out/T18/supervise.py
+Verify all bindings first. It preserves/skips completed source-verified receipts,
+appends jobs-v1.jsonl, retains strict prefixes and waits for quiet before guarded
+ALL/check and three paired timing rounds. Never overwrite outputs or rebuild.
+After supervisor exit, run process_closure.py in the actual host namespace, then
+post_exit_audit.py and validate.py with a fresh validation output. Every final
+source and input must match; no automatic review or next task is included.

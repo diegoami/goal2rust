@@ -68,6 +68,9 @@ def hashes():
              + sorted(TABLES.iterdir())
              + [ENGINE / 'Cargo.toml', ENGINE / 'Cargo.lock', BASE / '.github/workflows/build.yml'])
     files += [BASE / '.cache/T17-raw/captures-v1.pkl']
+    for name in ['source-inputs-v1.json','proof-plan-v1.json','artifact-archive-v2.json']:
+        path=BASE/'out/T18'/name
+        if path.exists(): files.append(path)
     captures=BASE / '.cache/T18-raw/captures-v1.pkl'
     if captures.exists() and os.environ.get('GOAL2RUST_CAPTURING')!='1': files.append(captures)
     files += list((BASE / '.venv-pypy/lib/pypy3.11/site-packages/goal2rust_engine').glob('*.so'))
