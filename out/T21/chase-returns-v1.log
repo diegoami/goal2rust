@@ -1,0 +1,7 @@
+denied: unicorn, .sav, .EXE, .DAT
+RETURN CONTROL 0791:5740 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN CONTROL 0791:5751 {'total': 160, 'reached': 80, 'detected': 80}
+RETURN CONTROL 0791:5766 {'total': 160, 'reached': 40, 'detected': 40}
+RETURN CONTROL 0791:5781 {'total': 160, 'reached': 20, 'detected': 20}
+RETURN CONTROL 0791:5796 {'total': 160, 'reached': 10, 'detected': 10}
+returns COMPLETE
