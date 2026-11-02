@@ -1,0 +1,12 @@
+denied: unicorn, .sav, .EXE, .DAT
+output 0791:2BB1 100
+output 0791:2BB1 200
+output 0791:2BB1 300
+output 0791:2BB1 400
+output 0791:2BB1 500
+output 214B:06FA 100
+output 214B:06FA 200
+output 214B:06FA 300
+output 214B:06FA 400
+output 214B:06FA 500
+output COMPLETE
