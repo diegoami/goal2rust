@@ -1,0 +1,22 @@
+{"event": "start", "name": "destination-normal-v2", "pid": 79196, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T18/producer_v2.py", "destination_differential_v2.py", "--suite", "normal", "--out", "out/T18/destination-normal-v2.json"], "time": 1793630411.8073208}
+{"event": "exit", "name": "destination-normal-v2", "pid": 79196, "code": 0, "time": 1793631231.860893}
+{"event": "start", "name": "destination-body-v2", "pid": 80407, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T18/producer_v2.py", "destination_differential_v2.py", "--suite", "body", "--out", "out/T18/destination-body-v2.json"], "time": 1793631231.8617768}
+{"event": "exit", "name": "destination-body-v2", "pid": 80407, "code": 0, "time": 1793631566.8870265}
+{"event": "start", "name": "destination-output-v2", "pid": 87589, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T18/producer_v2.py", "destination_differential_v2.py", "--suite", "output", "--out", "out/T18/destination-output-v2.json"], "time": 1793631566.8878465}
+{"event": "exit", "name": "destination-output-v2", "pid": 87589, "code": 0, "time": 1793631726.9006476}
+{"event": "start", "name": "destination-returns-v2", "pid": 94664, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T18/producer_v2.py", "destination_differential_v2.py", "--suite", "returns", "--out", "out/T18/destination-returns-v2.json"], "time": 1793631726.90169}
+{"event": "exit", "name": "destination-returns-v2", "pid": 94664, "code": 0, "time": 1793631836.9093447}
+{"event": "start", "name": "prior-live-observers-v1", "pid": 94910, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T18/producer_v2.py", "prior_live_observers.py", "--out", "out/T18/prior-live-observers-v1.json"], "time": 1793631836.910131}
+{"event": "exit", "name": "prior-live-observers-v1", "pid": 94910, "code": 0, "time": 1793631901.914413}
+{"event": "start", "name": "live-observers-v1", "pid": 95181, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T18/producer_v2.py", "live_observers.py", "--out", "out/T18/live-observers-v1.json"], "time": 1793631901.9151165}
+{"event": "exit", "name": "live-observers-v1", "pid": 95181, "code": 0, "time": 1793631921.9166658}
+{"event": "start", "name": "taps-rust-v1", "pid": 95242, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T18/producer_v2.py", "run_receipt.py", "--backend", "rust", "--mode", "taps", "--out", "out/T18/taps-rust-v1.json"], "time": 1793631921.917601}
+{"event": "exit", "name": "taps-rust-v1", "pid": 95242, "code": 0, "time": 1793632091.9290574}
+{"event": "start", "name": "family-ALL-v1", "pid": 107473, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T18/producer_v2.py", "run_family.py", "--out", "out/T18/family-ALL-rust-v1.jsonl", "--attest", "out/T18/attest-family-ALL-v1"], "time": 1793633892.0104766}
+{"event": "start", "name": "check-v1", "pid": 107474, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T18/producer_v2.py", "run_check.py", "--out", "out/T18/check-v1.json"], "time": 1793633892.016595}
+{"event": "start", "name": "profile-after-v1", "pid": 107475, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T18/producer_v2.py", "profile_machine.py", "--out", "out/T18/profile-after-v1.json"], "time": 1793633892.0171416}
+{"event": "exit", "name": "profile-after-v1", "pid": 107475, "code": 0, "time": 1793633972.0226724}
+{"event": "exit", "name": "check-v1", "pid": 107474, "code": 0, "time": 1793634848.652919}
+{"event": "exit", "name": "family-ALL-v1", "pid": 107473, "code": 0, "time": 1793636221.0965211}
+{"event": "start", "name": "performance-v1", "pid": 123390, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T18/producer_v2.py", "performance.py"], "time": 1793636221.7106166}
+{"event": "exit", "name": "performance-v1", "pid": 123390, "code": 1, "time": 1793637097.126635}

@@ -1,0 +1,104 @@
+{
+  "rejected": "performance-v1",
+  "reason": "Third-round plain CPython exceeded unchanged 60-second per-dispatch wall guard; no final report was produced.",
+  "failed": {
+    "round": 3,
+    "arm": "python",
+    "exit_code": 1
+  },
+  "starts": [
+    {
+      "round": 1,
+      "arm": "baseline",
+      "pid": 124319
+    },
+    {
+      "round": 1,
+      "arm": "candidate",
+      "pid": 124320
+    },
+    {
+      "round": 1,
+      "arm": "python",
+      "pid": 124321
+    },
+    {
+      "round": 1,
+      "arm": "pypy",
+      "pid": 124322
+    },
+    {
+      "round": 2,
+      "arm": "candidate",
+      "pid": 126287
+    },
+    {
+      "round": 2,
+      "arm": "baseline",
+      "pid": 126288
+    },
+    {
+      "round": 2,
+      "arm": "pypy",
+      "pid": 126289
+    },
+    {
+      "round": 2,
+      "arm": "python",
+      "pid": 126290
+    },
+    {
+      "round": 3,
+      "arm": "baseline",
+      "pid": 127435
+    },
+    {
+      "round": 3,
+      "arm": "candidate",
+      "pid": 127436
+    },
+    {
+      "round": 3,
+      "arm": "python",
+      "pid": 127437
+    },
+    {
+      "round": 3,
+      "arm": "pypy",
+      "pid": 127438
+    }
+  ],
+  "completed_receipts_sha256": {
+    "cpu-baseline-r1-v1.json": "ba13a09c8ee2ddfdedd7d86a53bd19f166821368a68e3b00b6dbc4803a108fca",
+    "cpu-baseline-r2-v1.json": "dc187edcc2f1e8aca616ab8af78568bb4107500d57631578441f31a37540b522",
+    "cpu-baseline-r3-v1.json": "cf172767a1e5c5a5024944897d987454ca699d62c297e4f7bec4726936b1c5f0",
+    "cpu-candidate-r1-v1.json": "e66b93fdc8eb7994075245b8d017261e80d149e6e3f4c359c021bd76de3b206c",
+    "cpu-candidate-r2-v1.json": "7d706dd529a6435229d6bbf8b650d8c44398f2ff6dfca4de70fb5c0162d87718",
+    "cpu-candidate-r3-v1.json": "916137e0e10a55e05f2ceadf8e93883e6c1a1498f2e8d469f4cee63ed609ad26",
+    "cpu-pypy-r1-v1.json": "72439b1aad90f7f73acc65f0c9d7cded4f470d3d081aad087630e510d7fad8a4",
+    "cpu-pypy-r2-v1.json": "8e457b80ccda35e069d5a18fd731cbe821737feda1d722dfb1ffbc47b75b0adb",
+    "cpu-pypy-r3-v1.json": "9a97333e3581b8669775bc0140a8766e61a13284f20d03cac5080671cb9973bf",
+    "cpu-python-r1-v1.json": "fdddb82a2755aae8989ed8928abbba932b805248fcc94f32d19e294979888556",
+    "cpu-python-r2-v1.json": "7743a4036f55db491bfc49f034eb11849daf60a4fb6206592a37254d1143cc6e"
+  },
+  "preserved_logs_sha256": {
+    "cpu-baseline-r1-v1.log": "381f73249c862c1100004ea0ec445e7c295d11754707bcc09a148863e2a2a7ba",
+    "cpu-baseline-r2-v1.log": "80610205946d042ba43f85a42e78f060527fc301657c5485d12edf214d1b2880",
+    "cpu-baseline-r3-v1.log": "76d2356e2882be6c935a7a704bf96bd3d1a73e08eea3d256ceb1197b7fe030c4",
+    "cpu-candidate-r1-v1.log": "751ca379efe111e3fcd5d873fb95a1aa4e968cb885ad4973e8818fb95174be2f",
+    "cpu-candidate-r2-v1.log": "566837999719d0b2b179acb97b5b416243f575c9d5a12a4debe30961b3e1c1f9",
+    "cpu-candidate-r3-v1.log": "ed7ad2d12b989202f0f0de97e765e30f6dc9fb5cd1eeb0ad9635d174f5014a92",
+    "cpu-pypy-r1-v1.log": "99b727d1c2c8e02f692d64677b4ef21b928d417f2dfbfdcdc86b318e40d2f5c7",
+    "cpu-pypy-r2-v1.log": "820f2c5ca520fe43905311fbd010effed857f49422e9fb490fb8b66baf4c2689",
+    "cpu-pypy-r3-v1.log": "a97a86d0a1be28d98643dc57bae2d988e1dff18cf68ff0c6bf2c4f29e946107b",
+    "cpu-python-r1-v1.log": "c6b35dc27bc6960ba2b1a067c8f6745a7ce5bdc477dadf3fe467141451823c65",
+    "cpu-python-r2-v1.log": "da831747d250847e58bdb4dde7e2451290160afea24dd8b7398d3b903bcd8c5f",
+    "cpu-python-r3-v1.log": "af451b405dac420fa23c67223b27114ba9b8983dd86ac96a2dbebb3746b889b5",
+    "performance-v1.log": "f75a6b6a67837cafb41720c250896d22a4f858d692e45344e7003944e9f8a748",
+    "supervisor-v2.log": "d5be9e5a230d9eb3abbea3bb8951050b4d925dcf0992e437ae06b14bc0debe94",
+    "jobs-v2.jsonl": "e42d9d10e83da2c064ac447873b8f5e6c799992a73f326fe85717843cc3d6adc"
+  },
+  "replacement": "performance-v2.json",
+  "replacement_policy": "Repeat all three simultaneous rotated four-arm rounds, same artifact/input/guards/quiet criteria; retain all failed-campaign samples. No selective missing-arm replacement.",
+  "production_changed": false
+}

@@ -1,0 +1,24 @@
+START 1 baseline 124319
+START 1 candidate 124320
+START 1 python 124321
+START 1 pypy 124322
+ROUND 1 {'baseline': 51.419829982, 'candidate': 41.947517053, 'python': 181.631355548, 'pypy': 55.32427543}
+START 2 candidate 126287
+START 2 baseline 126288
+START 2 pypy 126289
+START 2 python 126290
+ROUND 2 {'candidate': 44.690649383, 'baseline': 57.858912172000004, 'pypy': 67.434682053, 'python': 160.546366888}
+START 3 baseline 127435
+START 3 candidate 127436
+START 3 python 127437
+START 3 pypy 127438
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T18/producer_v2.py", line 6, in <module>
+    runpy.run_path(str(evidence_v2.BASE/'out/T18'/script),run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/diego/projects/goal2rust/out/T18/performance.py", line 29, in <module>
+    code=p.wait();log.close();exits.append(dict(round=round_index+1,arm=name,pid=p.pid,code=code,time=time.time()));assert code==0,(round_index,name,code)
+                                                                                                                           ^^^^^^^
+AssertionError: (2, 'python', 1)
