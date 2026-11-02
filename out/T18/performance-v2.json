@@ -1,0 +1,1198 @@
+{
+  "outputs_equal": true,
+  "incremental_port_no_magnitude_minimum": true,
+  "rounds": [
+    {
+      "round": 1,
+      "cpu_s": {
+        "baseline": 46.3362412,
+        "candidate": 36.441489815,
+        "python": 162.903567501,
+        "pypy": 46.452945748
+      },
+      "candidate_to_baseline": 0.7864576165707631,
+      "baseline_to_pypy": 0.9974876825113934,
+      "cpython_to_candidate": 4.470277376913,
+      "candidate_to_pypy": 0.7844817853466045
+    },
+    {
+      "round": 2,
+      "cpu_s": {
+        "baseline": 53.808447306,
+        "candidate": 43.962363247000006,
+        "python": 147.658608841,
+        "pypy": 58.733379369
+      },
+      "candidate_to_baseline": 0.8170160160354211,
+      "baseline_to_pypy": 0.9161476469443639,
+      "cpython_to_candidate": 3.3587504841673,
+      "candidate_to_pypy": 0.7485073006067098
+    },
+    {
+      "round": 3,
+      "cpu_s": {
+        "baseline": 46.956566983,
+        "candidate": 37.297551932000005,
+        "python": 131.17687109099998,
+        "pypy": 48.751780201
+      },
+      "candidate_to_baseline": 0.794298951742002,
+      "baseline_to_pypy": 0.9631764581601232,
+      "cpython_to_candidate": 3.5170370251151732,
+      "candidate_to_pypy": 0.7650500510591601
+    }
+  ],
+  "ratios": [
+    0.7864576165707631,
+    0.8170160160354211,
+    0.794298951742002
+  ],
+  "median_ratio": 0.794298951742002,
+  "median_baseline_to_pypy": 0.9631764581601232,
+  "median_candidate_to_pypy": 0.7650500510591601,
+  "median_cpython_to_candidate": 3.5170370251151732,
+  "all_rounds_improve": true,
+  "measurement_complete": true,
+  "quiet_observations": [
+    {
+      "round": 1,
+      "time": 1793637200.2589524,
+      "load": [
+        6.8544921875,
+        5.2333984375,
+        5.48486328125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637210.25908,
+      "load": [
+        7.2255859375,
+        5.37255859375,
+        5.52783203125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637220.259234,
+      "load": [
+        7.62353515625,
+        5.5107421875,
+        5.57080078125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637230.2595782,
+      "load": [
+        7.78369140625,
+        5.62353515625,
+        5.607421875
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637240.2597349,
+      "load": [
+        7.85205078125,
+        5.71630859375,
+        5.63818359375
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637250.2598825,
+      "load": [
+        7.990234375,
+        5.82275390625,
+        5.673828125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637260.2600951,
+      "load": [
+        9.068359375,
+        6.12548828125,
+        5.7744140625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637270.260283,
+      "load": [
+        8.7119140625,
+        6.15234375,
+        5.78759765625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637280.2604308,
+      "load": [
+        8.865234375,
+        6.27685546875,
+        5.83251953125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637290.2606275,
+      "load": [
+        8.9375,
+        6.36865234375,
+        5.86669921875
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637300.2607868,
+      "load": [
+        9.13623046875,
+        6.5029296875,
+        5.916015625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637310.2609155,
+      "load": [
+        8.2724609375,
+        6.4033203125,
+        5.8896484375
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637320.261158,
+      "load": [
+        8.3330078125,
+        6.48681640625,
+        5.9228515625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637330.2613184,
+      "load": [
+        7.205078125,
+        6.3056640625,
+        5.86962890625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637340.2615876,
+      "load": [
+        7.6572265625,
+        6.44140625,
+        5.9189453125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637350.2617571,
+      "load": [
+        8.0625,
+        6.56005859375,
+        5.962890625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637360.2619095,
+      "load": [
+        8.2578125,
+        6.642578125,
+        5.99560546875
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637370.2624135,
+      "load": [
+        9.52197265625,
+        6.9677734375,
+        6.10888671875
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637380.2625396,
+      "load": [
+        9.67626953125,
+        7.0849609375,
+        6.15625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637390.2626758,
+      "load": [
+        9.52734375,
+        7.146484375,
+        6.1865234375
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637400.2628257,
+      "load": [
+        9.24462890625,
+        7.15966796875,
+        6.20068359375
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637410.2629662,
+      "load": [
+        9.0849609375,
+        7.1884765625,
+        6.2197265625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637420.2631829,
+      "load": [
+        8.57861328125,
+        7.14794921875,
+        6.21728515625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637430.2633185,
+      "load": [
+        9.49267578125,
+        7.390625,
+        6.306640625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637440.2634785,
+      "load": [
+        10.25341796875,
+        7.62451171875,
+        6.39501953125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637450.2636213,
+      "load": [
+        10.5029296875,
+        7.76806640625,
+        6.45556640625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637460.2637568,
+      "load": [
+        11.04736328125,
+        7.9736328125,
+        6.53662109375
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637470.2639277,
+      "load": [
+        10.98876953125,
+        8.07080078125,
+        6.58447265625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637480.2640576,
+      "load": [
+        10.4072265625,
+        8.037109375,
+        6.5888671875
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637490.2643614,
+      "load": [
+        9.63623046875,
+        7.9521484375,
+        6.5771484375
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637500.2645137,
+      "load": [
+        9.35888671875,
+        7.95263671875,
+        6.59228515625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637510.2646403,
+      "load": [
+        10.30029296875,
+        8.20166015625,
+        6.68798828125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637520.2647834,
+      "load": [
+        9.90185546875,
+        8.193359375,
+        6.70166015625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637530.2649202,
+      "load": [
+        10.919921875,
+        8.4677734375,
+        6.80712890625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637540.2650888,
+      "load": [
+        11.68896484375,
+        8.7158203125,
+        6.90625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637550.2652733,
+      "load": [
+        11.375,
+        8.74267578125,
+        6.9345703125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637560.2654521,
+      "load": [
+        9.62548828125,
+        8.4541015625,
+        6.85986328125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637570.2656019,
+      "load": [
+        8.14501953125,
+        8.17529296875,
+        6.78564453125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637580.2658904,
+      "load": [
+        6.892578125,
+        7.90576171875,
+        6.71240234375
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637590.2662818,
+      "load": [
+        5.83251953125,
+        7.64501953125,
+        6.64013671875
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637600.26656,
+      "load": [
+        4.935546875,
+        7.39306640625,
+        6.568359375
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637610.2667506,
+      "load": [
+        4.17626953125,
+        7.14892578125,
+        6.49755859375
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637620.2670946,
+      "load": [
+        3.6875,
+        6.94580078125,
+        6.43798828125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637630.267245,
+      "load": [
+        3.1201171875,
+        6.71630859375,
+        6.36865234375
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637640.267387,
+      "load": [
+        2.64013671875,
+        6.49462890625,
+        6.2998046875
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637650.26761,
+      "load": [
+        2.23388671875,
+        6.2802734375,
+        6.23193359375
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637660.2678807,
+      "load": [
+        1.89013671875,
+        6.0732421875,
+        6.16455078125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637670.2681532,
+      "load": [
+        1.6728515625,
+        5.88916015625,
+        6.103515625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637680.2682636,
+      "load": [
+        1.4150390625,
+        5.69482421875,
+        6.03759765625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637690.2684536,
+      "load": [
+        1.27685546875,
+        5.5234375,
+        5.9775390625
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637700.2687201,
+      "load": [
+        1.080078125,
+        5.34130859375,
+        5.9130859375
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637710.2689724,
+      "load": [
+        0.91357421875,
+        5.1650390625,
+        5.84912109375
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637720.2692559,
+      "load": [
+        0.77294921875,
+        4.99462890625,
+        5.7861328125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637730.2695353,
+      "load": [
+        0.65380859375,
+        4.830078125,
+        5.7236328125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637740.2698424,
+      "load": [
+        0.552734375,
+        4.67041015625,
+        5.662109375
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637750.2699504,
+      "load": [
+        0.46728515625,
+        4.51611328125,
+        5.60107421875
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637760.2702456,
+      "load": [
+        0.39501953125,
+        4.3671875,
+        5.54052734375
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637770.2704284,
+      "load": [
+        0.333984375,
+        4.22265625,
+        5.48095703125
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637780.2706535,
+      "load": [
+        0.2822265625,
+        4.0830078125,
+        5.421875
+      ],
+      "quiet": 0
+    },
+    {
+      "round": 1,
+      "time": 1793637790.2708476,
+      "load": [
+        0.3125,
+        3.96435546875,
+        5.36865234375
+      ],
+      "quiet": 1
+    },
+    {
+      "round": 1,
+      "time": 1793637800.2710319,
+      "load": [
+        0.263671875,
+        3.83349609375,
+        5.310546875
+      ],
+      "quiet": 2
+    },
+    {
+      "round": 1,
+      "time": 1793637810.2712138,
+      "load": [
+        0.22265625,
+        3.70654296875,
+        5.2529296875
+      ],
+      "quiet": 3
+    },
+    {
+      "round": 2,
+      "time": 1793637974.9241314,
+      "load": [
+        2.9501953125,
+        3.42138671875,
+        4.8916015625
+      ],
+      "quiet": 1
+    },
+    {
+      "round": 2,
+      "time": 1793637984.924567,
+      "load": [
+        2.64990234375,
+        3.34130859375,
+        4.849609375
+      ],
+      "quiet": 2
+    },
+    {
+      "round": 2,
+      "time": 1793637994.9248915,
+      "load": [
+        2.39599609375,
+        3.263671875,
+        4.8076171875
+      ],
+      "quiet": 3
+    },
+    {
+      "round": 3,
+      "time": 1793638143.3723915,
+      "load": [
+        1.6064453125,
+        2.78759765625,
+        4.41064453125
+      ],
+      "quiet": 1
+    },
+    {
+      "round": 3,
+      "time": 1793638153.3728437,
+      "load": [
+        1.5068359375,
+        2.72802734375,
+        4.37353515625
+      ],
+      "quiet": 2
+    },
+    {
+      "round": 3,
+      "time": 1793638163.3731213,
+      "load": [
+        1.2744140625,
+        2.6376953125,
+        4.326171875
+      ],
+      "quiet": 3
+    }
+  ],
+  "starts": [
+    {
+      "round": 1,
+      "arm": "baseline",
+      "pid": 132841,
+      "cpu": 0,
+      "time": 1793637810.2747262,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T18/producer_v3.py",
+        "run_receipt.py",
+        "--backend",
+        "rust",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T18/cpu-baseline-r1-v2.json"
+      ]
+    },
+    {
+      "round": 1,
+      "arm": "candidate",
+      "pid": 132842,
+      "cpu": 2,
+      "time": 1793637810.2759874,
+      "command": [
+        "taskset",
+        "-c",
+        "2",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T18/producer_v3.py",
+        "run_receipt.py",
+        "--backend",
+        "rust",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T18/cpu-candidate-r1-v2.json"
+      ]
+    },
+    {
+      "round": 1,
+      "arm": "python",
+      "pid": 132843,
+      "cpu": 4,
+      "time": 1793637810.2786124,
+      "command": [
+        "taskset",
+        "-c",
+        "4",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T18/producer_v3.py",
+        "run_receipt.py",
+        "--backend",
+        "python",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T18/cpu-python-r1-v2.json"
+      ]
+    },
+    {
+      "round": 1,
+      "arm": "pypy",
+      "pid": 132844,
+      "cpu": 6,
+      "time": 1793637810.279028,
+      "command": [
+        "taskset",
+        "-c",
+        "6",
+        "/home/diego/projects/goal2rust/.venv-pypy/bin/python",
+        "-B",
+        "out/T18/producer_v3.py",
+        "run_receipt.py",
+        "--backend",
+        "python",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T18/cpu-pypy-r1-v2.json"
+      ]
+    },
+    {
+      "round": 2,
+      "arm": "candidate",
+      "pid": 133659,
+      "cpu": 0,
+      "time": 1793637994.9258657,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T18/producer_v3.py",
+        "run_receipt.py",
+        "--backend",
+        "rust",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T18/cpu-candidate-r2-v2.json"
+      ]
+    },
+    {
+      "round": 2,
+      "arm": "baseline",
+      "pid": 133660,
+      "cpu": 2,
+      "time": 1793637994.9269733,
+      "command": [
+        "taskset",
+        "-c",
+        "2",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T18/producer_v3.py",
+        "run_receipt.py",
+        "--backend",
+        "rust",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T18/cpu-baseline-r2-v2.json"
+      ]
+    },
+    {
+      "round": 2,
+      "arm": "pypy",
+      "pid": 133661,
+      "cpu": 4,
+      "time": 1793637994.9276423,
+      "command": [
+        "taskset",
+        "-c",
+        "4",
+        "/home/diego/projects/goal2rust/.venv-pypy/bin/python",
+        "-B",
+        "out/T18/producer_v3.py",
+        "run_receipt.py",
+        "--backend",
+        "python",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T18/cpu-pypy-r2-v2.json"
+      ]
+    },
+    {
+      "round": 2,
+      "arm": "python",
+      "pid": 133662,
+      "cpu": 6,
+      "time": 1793637994.9286723,
+      "command": [
+        "taskset",
+        "-c",
+        "6",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T18/producer_v3.py",
+        "run_receipt.py",
+        "--backend",
+        "python",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T18/cpu-python-r2-v2.json"
+      ]
+    },
+    {
+      "round": 3,
+      "arm": "baseline",
+      "pid": 134095,
+      "cpu": 0,
+      "time": 1793638163.374205,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T18/producer_v3.py",
+        "run_receipt.py",
+        "--backend",
+        "rust",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T18/cpu-baseline-r3-v2.json"
+      ]
+    },
+    {
+      "round": 3,
+      "arm": "candidate",
+      "pid": 134096,
+      "cpu": 2,
+      "time": 1793638163.374922,
+      "command": [
+        "taskset",
+        "-c",
+        "2",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T18/producer_v3.py",
+        "run_receipt.py",
+        "--backend",
+        "rust",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T18/cpu-candidate-r3-v2.json"
+      ]
+    },
+    {
+      "round": 3,
+      "arm": "python",
+      "pid": 134097,
+      "cpu": 4,
+      "time": 1793638163.3755157,
+      "command": [
+        "taskset",
+        "-c",
+        "4",
+        "/home/diego/projects/goal2rust/.venv/bin/python",
+        "-B",
+        "out/T18/producer_v3.py",
+        "run_receipt.py",
+        "--backend",
+        "python",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T18/cpu-python-r3-v2.json"
+      ]
+    },
+    {
+      "round": 3,
+      "arm": "pypy",
+      "pid": 134098,
+      "cpu": 6,
+      "time": 1793638163.3761196,
+      "command": [
+        "taskset",
+        "-c",
+        "6",
+        "/home/diego/projects/goal2rust/.venv-pypy/bin/python",
+        "-B",
+        "out/T18/producer_v3.py",
+        "run_receipt.py",
+        "--backend",
+        "python",
+        "--mode",
+        "cpu",
+        "--out",
+        "/home/diego/projects/goal2rust/out/T18/cpu-pypy-r3-v2.json"
+      ]
+    }
+  ],
+  "exits": [
+    {
+      "round": 1,
+      "arm": "baseline",
+      "pid": 132841,
+      "code": 0,
+      "time": 1793637857.8160083
+    },
+    {
+      "round": 1,
+      "arm": "candidate",
+      "pid": 132842,
+      "code": 0,
+      "time": 1793637857.8161852
+    },
+    {
+      "round": 1,
+      "arm": "python",
+      "pid": 132843,
+      "code": 0,
+      "time": 1793637974.922211
+    },
+    {
+      "round": 1,
+      "arm": "pypy",
+      "pid": 132844,
+      "code": 0,
+      "time": 1793637974.9226978
+    },
+    {
+      "round": 2,
+      "arm": "candidate",
+      "pid": 133659,
+      "code": 0,
+      "time": 1793638039.9138505
+    },
+    {
+      "round": 2,
+      "arm": "baseline",
+      "pid": 133660,
+      "code": 0,
+      "time": 1793638049.575527
+    },
+    {
+      "round": 2,
+      "arm": "pypy",
+      "pid": 133661,
+      "code": 0,
+      "time": 1793638055.0498385
+    },
+    {
+      "round": 2,
+      "arm": "python",
+      "pid": 133662,
+      "code": 0,
+      "time": 1793638143.371447
+    },
+    {
+      "round": 3,
+      "arm": "baseline",
+      "pid": 134095,
+      "code": 0,
+      "time": 1793638211.0889647
+    },
+    {
+      "round": 3,
+      "arm": "candidate",
+      "pid": 134096,
+      "code": 0,
+      "time": 1793638211.089157
+    },
+    {
+      "round": 3,
+      "arm": "python",
+      "pid": 134097,
+      "code": 0,
+      "time": 1793638295.2704194
+    },
+    {
+      "round": 3,
+      "arm": "pypy",
+      "pid": 134098,
+      "code": 0,
+      "time": 1793638295.2706025
+    }
+  ],
+  "topology": {
+    "0": {
+      "package": "0",
+      "core": "0",
+      "siblings": "0-1"
+    },
+    "1": {
+      "package": "0",
+      "core": "0",
+      "siblings": "0-1"
+    },
+    "2": {
+      "package": "0",
+      "core": "1",
+      "siblings": "2-3"
+    },
+    "3": {
+      "package": "0",
+      "core": "1",
+      "siblings": "2-3"
+    },
+    "4": {
+      "package": "0",
+      "core": "2",
+      "siblings": "4-5"
+    },
+    "5": {
+      "package": "0",
+      "core": "2",
+      "siblings": "4-5"
+    },
+    "6": {
+      "package": "0",
+      "core": "3",
+      "siblings": "6-7"
+    },
+    "7": {
+      "package": "0",
+      "core": "3",
+      "siblings": "6-7"
+    },
+    "8": {
+      "package": "0",
+      "core": "4",
+      "siblings": "8-9"
+    },
+    "9": {
+      "package": "0",
+      "core": "4",
+      "siblings": "8-9"
+    },
+    "10": {
+      "package": "0",
+      "core": "5",
+      "siblings": "10-11"
+    },
+    "11": {
+      "package": "0",
+      "core": "5",
+      "siblings": "10-11"
+    },
+    "12": {
+      "package": "0",
+      "core": "6",
+      "siblings": "12-13"
+    },
+    "13": {
+      "package": "0",
+      "core": "6",
+      "siblings": "12-13"
+    },
+    "14": {
+      "package": "0",
+      "core": "7",
+      "siblings": "14-15"
+    },
+    "15": {
+      "package": "0",
+      "core": "7",
+      "siblings": "14-15"
+    },
+    "16": {
+      "package": "0",
+      "core": "8",
+      "siblings": "16-17"
+    },
+    "17": {
+      "package": "0",
+      "core": "8",
+      "siblings": "16-17"
+    },
+    "18": {
+      "package": "0",
+      "core": "9",
+      "siblings": "18-19"
+    },
+    "19": {
+      "package": "0",
+      "core": "9",
+      "siblings": "18-19"
+    }
+  },
+  "selected_physical_cores": [
+    0,
+    2,
+    4,
+    6
+  ]
+}

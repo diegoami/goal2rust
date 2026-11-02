@@ -65,13 +65,31 @@ T17 uses 7.82% less CPU than saved T16 at the paired median. Same-campaign saved
 T16/PyPy 1.059106 and T17/PyPy 0.974762 show the gap closing to near parity: two
 rounds use less CPU than PyPy, one0.94% more. This is one-fixture evidence.
 
+## Validated scope: T18 player-destination closure
+
+[T18](tasks/T18.md) ports all 15 remaining default bodies below
+`positioning.update_player_destination` (0791:4B64), including marking destination,
+post destination, position group, geometry queries, random table/energy helpers,
+long extrema, byte clamp and membership. All 41 real guest return sites remain
+observable. The helper inventory follows functions passed to inline `invoke`;
+scoped execution checks prove zero owned Python execution during native lifetimes.
+
+The profile confirms 43 native bodies, 2,405,625 native guest entries and 698,060
+Python entries of 3,103,685: 276,061 entries moved. This is 10.19% equal-weight body
+count and 77.51% entry frequency on one fixture. Global LOC/test coverage remains
+unreported. See [evidence](../out/T18/README.md).
+
+The complete three-round campaign uses 20.57% less CPU than saved T17.
+Same-campaign saved T17/PyPy is 0.963176 and T18/PyPy
+0.765050: 23.49% less CPU at the median on this
+fixture, with all rounds improving. The failed earlier timing campaign is retained
+and the complete replacement uses unchanged guards. [Assessment](../out/T18/assessment.md).
+
 ## Decide the following chunk from evidence
 
-After T17, inspect the new profile and scoped execution/boundary observations.
-The next likely region is destination/positioning: `update_marking_destination`,
-`set_destination_from_post`, `position_group`, depth adjustment and their
-remaining geometry/random dependencies. This is a candidate region, not a sealed
-T18 scope or permission to port the entire module without an inventory.
+After T18 is accepted, inspect its complete remaining Python profile and scoped
+execution/boundary observations before sealing the next closed tree. No next task
+is included in T18.
 
 If common dispatch/bridge work dominates instead, define a separate measured
 optimization task with its own predeclared criteria. Native-to-native calls still
@@ -123,3 +141,20 @@ account for rejected and accepted attempts. Never suppress source_unchanged or
 edit a completed receipt to repair classification. Supplemental proof sources can
 be added and bound after canonical writers exit, with every original binding
 retained and no production change.
+
+## Upstream application boundary, checked 2026-11-02
+
+Goal2 main is `ed582f99d5b7a56d53ccb7ae89394581d7fa7b83`; archaeology
+main remains `2a411f50422ecd1f5d8cf96d05f1873e6257e684`. Goal2
+[PR #515](https://github.com/diegoami/goal2/pull/515) requires PyPy child processes
+for its engine tests. Our declared CPython/PyPy fidelity and four-arm measurements
+remain required.
+
+Goal2's planned [T154 evaluation, issue #516](https://github.com/diegoami/goal2/issues/516)
+will assess a long-lived PyPy engine over a pipe after the playable build, and a
+future Rust CPython module. Its suggested Rust thread assumes GIL release; this
+partial port still invokes Python bodies/callbacks and holds interpreter-dependent
+state, so T18 does not provide that thread/API guarantee. A separate integration
+task must establish API ownership, threading/GIL release, cancellation, target ABI
+and portable ZIP loading, with Windows/Linux measurements. Keep the accepted
+oracle fixed and let the playable goal2 build proceed independently.

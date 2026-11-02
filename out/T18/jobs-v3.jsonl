@@ -1,0 +1,2 @@
+{"event": "start", "name": "performance-v2", "pid": 129416, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T18/producer_v3.py", "performance_v2.py"], "time": 1793637200.2036498}
+{"event": "exit", "name": "performance-v2", "pid": 129416, "code": 0, "time": 1793638295.27825}

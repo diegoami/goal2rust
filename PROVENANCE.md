@@ -210,3 +210,33 @@ baseline is preserved in .cache/T17-baseline, bound before builds in
 out/T17/baseline-snapshot-v1.json. Full combined fidelity/performance validation is bound in
 out/T17/validation-final-v2.json; scope, all outcomes and the preserved metadata
 rejection/recovery are documented in out/T17/assessment.md.
+
+## T18 player-destination subtree
+
+At accepted oracle `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`,
+`engine/src/destination.rs` translates geometry.draw_table_byte **0791:261A**,
+energy_gate_chance **0791:2B7B**, mirror_to_team_frame **0791:2C86**,
+ball_ahead_of_by **0791:2D10**, ahead_of_ball_by **0791:2D6D**,
+in_own_goal_area **0791:2E36**; runtime.min_longint **214B:0D1C**,
+max_longint **214B:0D56**, clamp_byte **214B:2031**; and
+entrypoints.membership **23E4:08DF**.
+
+`engine/src/destination_flow.rs` translates ball.holder_in_advanced_central_strip
+**0791:40BC**, positioning.position_group **0791:42CB**,
+set_destination_from_post **0791:4354**, update_marking_destination **0791:4A28**
+and update_player_destination **0791:4B64**. All 41 real guest return sites,
+ABI/pop/long behavior and captured versus live callback state follow the source.
+Source-inline Regs, geometry/direction and random operations remain inline;
+nondefault variants remain Python. Existing native descendants bound the closure.
+
+The complete source/helper inventory is `out/T18/inventory-v2.json` (v1 retained),
+with semantics in `out/T18/contract.md`. The accepted T17 baseline was saved before
+builds under `.cache/T18-baseline`, bound by `baseline-snapshot-v1.json`.
+Accepted candidate archive: `artifact-archive-v2.json`; v1 is retained as a rejected
+preflight archive. `freeze-v2.json` binds the unchanged production artifact and
+versioned proof recovery. Private state/tables/captures remain outside git.
+
+The final timing recovery retains all 409 previous bindings and adds versioned
+proof tooling only: `freeze-v3.json` binds 417 inputs, with no production rebuild
+or guard change. Full final evidence is `out/T18/validation-final-v3.json`; the
+assessment reports both complete replacement timings and the rejected campaign.

@@ -59,3 +59,23 @@ at the median in this campaign; T17 uses 2.52% less. Two PyPy comparisons improv
 and one uses 0.94% more CPU. Treat this as near parity on the reference fixture;
 a general advantage needs the later representative workload set. Historical
 standalone PyPy ratios are not substituted for this campaign's saved baseline.
+
+## T18 same-campaign result
+
+Source: [complete replacement campaign](../out/T18/performance-v2.json) and
+[assessment including rejected campaign samples](../out/T18/assessment.md).
+The initial timing campaign is preserved after its third CPython arm hit the
+unchanged dispatch guard. The replacement repeats all three four-arm rounds;
+no missing-arm substitution or selective timing headline is used.
+
+| Round | Saved T17 / PyPy | T18 / PyPy | T18 / saved T17 |
+| --- | ---: | ---: | ---: |
+| 1 | 0.997488 | 0.784482 | 0.786458 |
+| 2 | 0.916148 | 0.748507 | 0.817016 |
+| 3 | 0.963176 | 0.765050 | 0.794299 |
+| Median of per-round ratios | 0.963176 | 0.765050 | 0.794299 |
+
+T18 uses 20.57% less CPU than saved T17, with all three rounds improving.
+Saved T17 uses 3.68% less CPU than PyPy at the median in this campaign; T18
+uses 23.49% less, with all three PyPy comparisons improving. This is a
+single-fixture result. Historical T17/PyPy ratios do not establish this change.
