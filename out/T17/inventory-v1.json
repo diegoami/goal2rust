@@ -1,0 +1,480 @@
+{
+  "bodies": {
+    "0791:2996": {
+      "guest_sites": [],
+      "line": 514,
+      "module": "geometry",
+      "name": "ball_holder_is_side0",
+      "ret": "ret"
+    },
+    "0791:2C54": {
+      "guest_sites": [],
+      "line": 778,
+      "module": "geometry",
+      "name": "in_own_half",
+      "ret": "retf 4"
+    },
+    "0791:4438": {
+      "guest_sites": [
+        {
+          "caller": "0791:4438",
+          "far": true,
+          "line": 295,
+          "module": "positioning",
+          "ret_to": "0791:4493",
+          "target": "0791:2BE5"
+        }
+      ],
+      "line": 285,
+      "module": "positioning",
+      "name": "near_post_zone",
+      "ret": "retf 6"
+    },
+    "0791:47C5": {
+      "guest_sites": [
+        {
+          "caller": "0791:47C5",
+          "far": false,
+          "line": 322,
+          "module": "positioning",
+          "ret_to": "0791:47CE",
+          "target": "0791:2996"
+        },
+        {
+          "caller": "0791:47C5",
+          "far": false,
+          "line": 328,
+          "module": "positioning",
+          "ret_to": "0791:47EF",
+          "target": "0791:2996"
+        },
+        {
+          "caller": "0791:47C5",
+          "far": true,
+          "line": 339,
+          "module": "positioning",
+          "ret_to": "0791:485D",
+          "target": "1771:3216"
+        },
+        {
+          "caller": "0791:47C5",
+          "far": true,
+          "line": 355,
+          "module": "positioning",
+          "ret_to": "0791:48E2",
+          "target": "1771:3216"
+        },
+        {
+          "caller": "0791:47C5",
+          "far": true,
+          "line": 363,
+          "module": "positioning",
+          "ret_to": "0791:4930",
+          "target": "0791:2C54"
+        },
+        {
+          "caller": "0791:47C5",
+          "far": true,
+          "line": 368,
+          "module": "positioning",
+          "ret_to": "0791:494D",
+          "target": "0791:278A"
+        },
+        {
+          "caller": "0791:47C5",
+          "far": true,
+          "line": 370,
+          "module": "positioning",
+          "ret_to": "0791:496A",
+          "target": "0791:278A"
+        },
+        {
+          "caller": "0791:47C5",
+          "far": true,
+          "line": 380,
+          "module": "positioning",
+          "ret_to": "0791:49B2",
+          "target": "214B:06B1"
+        },
+        {
+          "caller": "0791:47C5",
+          "far": true,
+          "line": 382,
+          "module": "positioning",
+          "ret_to": "0791:49C0",
+          "target": "0791:2BE5"
+        },
+        {
+          "caller": "0791:47C5",
+          "far": true,
+          "line": 343,
+          "module": "positioning",
+          "ret_to": "0791:4888",
+          "target": "0791:4438"
+        },
+        {
+          "caller": "0791:47C5",
+          "far": true,
+          "line": 374,
+          "module": "positioning",
+          "ret_to": "0791:4980",
+          "target": "0791:278A"
+        },
+        {
+          "caller": "0791:47C5",
+          "far": true,
+          "line": 376,
+          "module": "positioning",
+          "ret_to": "0791:499D",
+          "target": "0791:278A"
+        }
+      ],
+      "line": 317,
+      "module": "positioning",
+      "name": "choose_marking_target",
+      "ret": "ret 2"
+    },
+    "214B:06B1": {
+      "guest_sites": [],
+      "line": 133,
+      "module": "entrypoints",
+      "name": "random_n",
+      "ret": "retf 2"
+    }
+  },
+  "guest_sites": [
+    {
+      "caller": "0791:4438",
+      "far": true,
+      "line": 295,
+      "module": "positioning",
+      "ret_to": "0791:4493",
+      "target": "0791:2BE5"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": false,
+      "line": 322,
+      "module": "positioning",
+      "ret_to": "0791:47CE",
+      "target": "0791:2996"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": false,
+      "line": 328,
+      "module": "positioning",
+      "ret_to": "0791:47EF",
+      "target": "0791:2996"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": true,
+      "line": 339,
+      "module": "positioning",
+      "ret_to": "0791:485D",
+      "target": "1771:3216"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": true,
+      "line": 355,
+      "module": "positioning",
+      "ret_to": "0791:48E2",
+      "target": "1771:3216"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": true,
+      "line": 363,
+      "module": "positioning",
+      "ret_to": "0791:4930",
+      "target": "0791:2C54"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": true,
+      "line": 368,
+      "module": "positioning",
+      "ret_to": "0791:494D",
+      "target": "0791:278A"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": true,
+      "line": 370,
+      "module": "positioning",
+      "ret_to": "0791:496A",
+      "target": "0791:278A"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": true,
+      "line": 380,
+      "module": "positioning",
+      "ret_to": "0791:49B2",
+      "target": "214B:06B1"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": true,
+      "line": 382,
+      "module": "positioning",
+      "ret_to": "0791:49C0",
+      "target": "0791:2BE5"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": true,
+      "line": 343,
+      "module": "positioning",
+      "ret_to": "0791:4888",
+      "target": "0791:4438"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": true,
+      "line": 374,
+      "module": "positioning",
+      "ret_to": "0791:4980",
+      "target": "0791:278A"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": true,
+      "line": 376,
+      "module": "positioning",
+      "ret_to": "0791:499D",
+      "target": "0791:278A"
+    }
+  ],
+  "inbound_note": "Static literal sites only; registry dispatch can also invoke each registered body directly. Inline runtime.invoke calls remain inline.",
+  "literal_registered_inbound_sites": [
+    {
+      "caller": "0791:3B15",
+      "far": true,
+      "line": 335,
+      "module": "ball",
+      "ret_to": "0791:3B42",
+      "target": "214B:06B1"
+    },
+    {
+      "caller": "0791:3B9E",
+      "far": true,
+      "line": 391,
+      "module": "ball",
+      "ret_to": "0791:3BBE",
+      "target": "0791:2C54"
+    },
+    {
+      "caller": "0791:3EF8",
+      "far": true,
+      "line": 455,
+      "module": "ball",
+      "ret_to": "0791:3F56",
+      "target": "214B:06B1"
+    },
+    {
+      "caller": "0791:40BC",
+      "far": true,
+      "line": 511,
+      "module": "ball",
+      "ret_to": "0791:40E1",
+      "target": "0791:2C54"
+    },
+    {
+      "caller": "0791:40BC",
+      "far": false,
+      "line": 516,
+      "module": "ball",
+      "ret_to": "0791:40E8",
+      "target": "0791:2996"
+    },
+    {
+      "caller": "0791:3FAD",
+      "far": true,
+      "line": 584,
+      "module": "ball",
+      "ret_to": "0791:3FF5",
+      "target": "214B:06B1"
+    },
+    {
+      "caller": "0791:3FAD",
+      "far": true,
+      "line": 598,
+      "module": "ball",
+      "ret_to": "0791:401F",
+      "target": "214B:06B1"
+    },
+    {
+      "caller": "0791:3DF6",
+      "far": true,
+      "line": 672,
+      "module": "ball",
+      "ret_to": "0791:3E4C",
+      "target": "214B:06B1"
+    },
+    {
+      "caller": "0791:3D38",
+      "far": false,
+      "line": 808,
+      "module": "ball",
+      "ret_to": "0791:3D41",
+      "target": "0791:2996"
+    },
+    {
+      "caller": "0791:3D38",
+      "far": false,
+      "line": 817,
+      "module": "ball",
+      "ret_to": "0791:3D53",
+      "target": "0791:2996"
+    },
+    {
+      "caller": "0791:333F",
+      "far": false,
+      "line": 924,
+      "module": "ball",
+      "ret_to": "0791:33CB",
+      "target": "0791:2996"
+    },
+    {
+      "caller": "0791:3111",
+      "far": true,
+      "line": 1000,
+      "module": "ball",
+      "ret_to": "0791:3131",
+      "target": "0791:2C54"
+    },
+    {
+      "caller": "0791:384C",
+      "far": true,
+      "line": 1244,
+      "module": "ball",
+      "ret_to": "0791:38F2",
+      "target": "214B:06B1"
+    },
+    {
+      "caller": "0791:34C1",
+      "far": true,
+      "line": 1657,
+      "module": "ball",
+      "ret_to": "0791:3765",
+      "target": "214B:06B1"
+    },
+    {
+      "caller": "0791:83A2",
+      "far": false,
+      "line": 223,
+      "module": "motion",
+      "ret_to": "0791:8512",
+      "target": "0791:2996"
+    },
+    {
+      "caller": "0791:9119",
+      "far": true,
+      "line": 501,
+      "module": "motion",
+      "ret_to": "0791:91D1",
+      "target": "214B:06B1"
+    },
+    {
+      "caller": "0791:9119",
+      "far": true,
+      "line": 512,
+      "module": "motion",
+      "ret_to": "0791:91F6",
+      "target": "214B:06B1"
+    },
+    {
+      "caller": "0791:4354",
+      "far": true,
+      "line": 267,
+      "module": "positioning",
+      "ret_to": "0791:43A7",
+      "target": "214B:06B1"
+    },
+    {
+      "caller": "0791:4354",
+      "far": true,
+      "line": 272,
+      "module": "positioning",
+      "ret_to": null,
+      "target": "214B:06B1"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": false,
+      "line": 322,
+      "module": "positioning",
+      "ret_to": "0791:47CE",
+      "target": "0791:2996"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": false,
+      "line": 328,
+      "module": "positioning",
+      "ret_to": "0791:47EF",
+      "target": "0791:2996"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": true,
+      "line": 363,
+      "module": "positioning",
+      "ret_to": "0791:4930",
+      "target": "0791:2C54"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": true,
+      "line": 380,
+      "module": "positioning",
+      "ret_to": "0791:49B2",
+      "target": "214B:06B1"
+    },
+    {
+      "caller": "0791:47C5",
+      "far": true,
+      "line": 343,
+      "module": "positioning",
+      "ret_to": "0791:4888",
+      "target": "0791:4438"
+    },
+    {
+      "caller": "0791:4A28",
+      "far": false,
+      "line": 421,
+      "module": "positioning",
+      "ret_to": "0791:4AE1",
+      "target": "0791:47C5"
+    },
+    {
+      "caller": "0791:4A28",
+      "far": true,
+      "line": 426,
+      "module": "positioning",
+      "ret_to": "0791:4AFF",
+      "target": "214B:06B1"
+    },
+    {
+      "caller": "0791:6E11",
+      "far": false,
+      "line": 25,
+      "module": "restarts",
+      "ret_to": "0791:6E26",
+      "target": "0791:2996"
+    }
+  ],
+  "oracle": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+  "source_sha256": {
+    ".cache/goal2-archaeology/runtime/original_match/port/engine.py": "6439370e3ffcc5977bb066506431a25a0c300ea374faf28ec3f4fbd9718c6f14",
+    ".cache/goal2-archaeology/runtime/original_match/port/entrypoints.py": "a55d378798ed5ec2c33404739b0961b8fec1e6167d1d301f5512cced4063b5b7",
+    ".cache/goal2-archaeology/runtime/original_match/port/geometry.py": "a665d830ed16c00833a27216393a3b6f406251f44cef1f7fc9e80f7eb6bd3e81",
+    ".cache/goal2-archaeology/runtime/original_match/port/guest.py": "1062b5ea7d72114b5f404485768f6aeca69a5d94ffb0285a31158b266c46de7f",
+    ".cache/goal2-archaeology/runtime/original_match/port/mem.py": "0105113f8102a3e8c3544942a445e156fecc0196f7911089e7f789a7775fe45c",
+    ".cache/goal2-archaeology/runtime/original_match/port/positioning.py": "6a8feb436f745149a010db472a1aed04569d897875cd966eb434a6170b7f839e",
+    ".cache/goal2-archaeology/runtime/original_match/port/runtime.py": "2e94867069cd6e35c28af96426bfade7dcb381e370eb12af106627cbeeced0eb"
+  }
+}
