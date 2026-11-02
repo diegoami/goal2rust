@@ -17,6 +17,8 @@ use crate::mem::{self, MEM_SIZE};
 use crate::py::port_error;
 
 
+const T20_BODIES: [&str;3] = ["0791:2EB8", "0791:2EF0", "0791:5729"];
+const T20_RETURNS: [&str;5] = ["0791:5740", "0791:5751", "0791:5766", "0791:5781", "0791:5796"];
 const T19_BODIES: [&str;5] = ["0791:2BB1", "0791:4532", "0791:4649", "0791:474D", "214B:06FA"];
 const T19_RETURNS: [&str;23] = ["0791:475C", "0791:4785", "0791:478D", "0791:479A", "0791:47AA", "0791:4660", "0791:4672", "0791:4689", "0791:46BE", "0791:46D4", "0791:46EE", "0791:4709", "0791:471A", "0791:4549", "0791:455B", "0791:458D", "0791:45A2", "0791:45B7", "0791:45C0", "0791:45E4", "0791:45F9", "0791:461E", "0791:4633"];
 const T18_BODIES: [&str;15] = ["0791:261A", "0791:2B7B", "0791:2C86", "0791:2D10", "0791:2D6D", "0791:2E36", "0791:40BC", "0791:42CB", "0791:4354", "0791:4A28", "0791:4B64", "214B:0D1C", "214B:0D56", "214B:2031", "23E4:08DF"];
@@ -110,6 +112,7 @@ impl Port {
 enum NativeContinuation {
     Destination(crate::destination_flow::Phase,Option<crate::destination_flow::Saved>),
     Depth(crate::depth::Phase,Option<crate::depth::Saved>),
+    Chase(crate::chase::Phase),
     Marking(crate::marking::Phase,Option<crate::marking::Saved>),
     RunStep,
     PlayerSprite(crate::player_sprite::Phase,Option<crate::player_sprite::Saved>),
@@ -856,6 +859,7 @@ impl MachineCore {
         };
         if self.native && frame.port.variant.bind(py).is_none() {
             frame.native = match address.extract::<String>()?.as_str() {
+                "0791:5729" => Some(NativeContinuation::Chase(crate::chase::Phase::Start)),
                 "0791:474D" => Some(NativeContinuation::Depth(crate::depth::Phase::Start,None)),
                 "0791:4532" => Some(NativeContinuation::Depth(crate::depth::Phase::AttackStart,None)),
                 "0791:4649" => Some(NativeContinuation::Depth(crate::depth::Phase::DefendStart,None)),
@@ -967,6 +971,15 @@ impl MachineCore {
         let mut completed_value = py.None();
         let result = (|| -> PyResult<Option<Py<PyAny>>> {
             match f.native.take().unwrap() {
+                NativeContinuation::Chase(phase)=>{
+                    let first=phase==crate::chase::Phase::Start;
+                    let action=crate::chase::step(&mut h,phase)?;
+                    if first{*self.native_calls.borrow_mut().entry("0791:5729".to_string()).or_insert(0)+=1;}
+                    match action{
+                        crate::chase::Action::Call(req)=>{let args=PyTuple::new(py,req.args)?;let call=self.call_type.bind(py).call1((req.target,args,req.ret_to,req.far,false))?;f.native=Some(NativeContinuation::Chase(req.next));Ok(Some(call.unbind()))}
+                        crate::chase::Action::Done(value)=>{if self.mutant==147{crate::marking::corrupt(&mut h)?;}completed_value=value.into_pyobject(py)?.into_any().unbind();Ok(None)}
+                    }
+                }
                 NativeContinuation::Depth(phase,saved)=>{
                     let first=crate::depth::first(phase);
                     let reply=if first{0}else{sent.extract::<u16>()?};
@@ -1174,9 +1187,10 @@ impl MachineCore {
             // Mutant 1 corrupts a guest-call return's saved IP; a machine error.
             let t17_sites=["0791:47CE","0791:47EF","0791:485D","0791:4888","0791:48E2","0791:4930","0791:494D","0791:496A","0791:4980","0791:499D","0791:49B2","0791:49C0","0791:4493"];
             let site_mutant=(36..49).contains(&self.mutant) && t17_sites[(self.mutant-36) as usize]==ret_to;
+            let t20_mutant=(150..155).contains(&self.mutant) && T20_RETURNS[(self.mutant-150) as usize]==ret_to;
             let t19_mutant=(122..145).contains(&self.mutant) && T19_RETURNS[(self.mutant-122) as usize]==ret_to;
             let t18_mutant=(74..115).contains(&self.mutant) && T18_RETURNS[(self.mutant-74) as usize]==ret_to;
-            let corrupt = t19_mutant || t18_mutant || site_mutant || (self.mutant == 27 && matches!(ret_to.as_str(),"0791:47CE"|"0791:47EF"|"0791:485D"|"0791:4888"|"0791:48E2"|"0791:4930"|"0791:494D"|"0791:496A"|"0791:4980"|"0791:499D"|"0791:49B2"|"0791:49C0"))
+            let corrupt = t20_mutant || t19_mutant || t18_mutant || site_mutant || (self.mutant == 27 && matches!(ret_to.as_str(),"0791:47CE"|"0791:47EF"|"0791:485D"|"0791:4888"|"0791:48E2"|"0791:4930"|"0791:494D"|"0791:496A"|"0791:4980"|"0791:499D"|"0791:49B2"|"0791:49C0"))
                 || (self.mutant==29 && ret_to=="0791:4493")
                 || self.mutant == 1 || (self.mutant == 4
                 && matches!(ret_to.as_str(), "0791:3013" | "0791:3090" | "0791:30A3"))
@@ -1254,6 +1268,8 @@ impl MachineCore {
         };
         use crate::geometry as g;
         match address {
+            "0791:2EB8" => crate::chase::goal_strip(&mut h,false)?,
+            "0791:2EF0" => crate::chase::goal_strip(&mut h,true)?,
             "0791:2BB1" => crate::depth::slot(&mut h)?,
             "214B:06FA" => crate::depth::coin(&mut h)?,
             "0791:261A" => crate::destination::draw_table(&mut h)?,
@@ -1282,6 +1298,8 @@ impl MachineCore {
             "0791:2974" => g::side(&mut h)?,
             _ => return Ok(None),
         }
+        if (145..148).contains(&self.mutant) && T20_BODIES[(self.mutant-145) as usize]==address { crate::marking::corrupt(&mut h)?; }
+        if (self.mutant==148 && address=="0791:2EB8") || (self.mutant==149 && address=="0791:2EF0") { let reg=if self.mutant==148{Reg::Ax}else{Reg::Eflags};let value=h.reg(reg)?;h.set_reg(reg,value^if self.mutant==148{0x8000}else{0x400})?; }
         if (115..120).contains(&self.mutant) && T19_BODIES[(self.mutant-115) as usize]==address { crate::marking::corrupt(&mut h)?; }
         if (self.mutant==120 && address=="0791:2BB1") || (self.mutant==121 && address=="214B:06FA") { let reg=if self.mutant==120 {Reg::Ax}else{Reg::Eflags};let old=h.reg(reg)?;h.set_reg(reg,old^1)?; }
         if (49..64).contains(&self.mutant) && T18_BODIES[(self.mutant-49) as usize]==address { crate::marking::corrupt(&mut h)?; }

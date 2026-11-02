@@ -1,0 +1,19 @@
+{
+  "public_tests_each": 70,
+  "new_public_test_methods": 5,
+  "rust_tests": 11,
+  "actual_state_comparisons": 288,
+  "actual_closure_probes": true,
+  "errors_all_reached": 99,
+  "error_execution_rows": 99,
+  "distinct_error_selectors": 99,
+  "positive_branch_comparisons": 640,
+  "live_observer_comparisons": 1280,
+  "runtime_semantic_fix_required": false,
+  "sha256": {
+    ".cache/T20-public-cpython-preflight-v1.log": "8a24abb8cc0c6cb7497810a9fb4754aff50556376e30425fa1fa403ff84ebbb6",
+    ".cache/T20-public-pypy-preflight-v1.log": "fba1c9ed6af1987e59f8641d282ebcc1272dfc41c5abe8ef983c7060448599b6",
+    ".cache/T20-rust-preflight-v2.log": "827217e520d3eeeb059c2ded08735231e06bd0005309444f749d2f8fb37aa0e1",
+    ".cache/T20-live-preflight-v1.json": "46b4bd777453af77a8758825c8e7455cafbd91b87f1113526b8dd8b7df32d923"
+  }
+}
