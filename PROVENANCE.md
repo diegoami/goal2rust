@@ -295,3 +295,26 @@ audit is baseline-input-audit-v1.json. All 542 inputs and both binaries remained
 fixed, including all inherited proof sources/metadata. Exact row/distinct-selector
 counts both 99 were sealed before the campaign. Every outcome and the one-fixture
 measurement limit are reported in the assessment.
+
+## T21 ball-travel and long-multiply subtree
+
+At accepted oracle `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`,
+`engine/src/travel.rs` translates motion.ball_travel **0791:835F** and
+runtime.sys_long_mul **23E4:0279**. The single far guest return **0791:8396**
+remains explicit; neither entry has long=True. The caller preserves its captured
+low SENT return and live DX. Its single live-SS far-pointer read, wrapped abs/sum,
+register writes and later live scale read keep source order.
+
+The multiply captures AX/DX/BX/CX before flushing, retains its dead pushes and
+scratch outputs, and uses the last 16-bit addition's six arithmetic flags. The
+existing source-equivalent `speaker::add_flags` is exposed crate-locally. No new
+frame prologue or returned long object is invented. Variants remain Python.
+Inventory/helper/ABI/observer contract: out/T21/inventory-v1.json and contract.md.
+
+Actual accepted T20 source/adapter/tests and both interpreter binaries were
+preserved before builds under `.cache/T21-baseline`, bound by the 58-file
+baseline-snapshot-v1.json. Both installs/public76 completed before archive-v1.
+Freeze-v1 binds 598 source/binary/private/proof inputs. The earlier draw-state
+instrumented wrappers now have explicit nondefault tags; all original tracing/
+fault assertions remain, with an added actual-native integration test. Rejected
+preflight logs and original harness are preserved. No original bytes in git.
