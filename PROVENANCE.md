@@ -266,3 +266,26 @@ sources are explicitly bound, retaining all 466 original inputs and both binarie
 A selector-cardinality rejection retained the original 19,520 comparisons and
 added 640 scoped own-write cases for 122 distinct selectors; no runtime rebuild
 or timing rerun. All results, limits and rejected logs are in the assessment.
+
+## T20 chase-gate subtree
+
+At accepted oracle `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`,
+`engine/src/chase.rs` translates contests.chase_ball_gate **0791:5729** and
+geometry.in_own_goal_strip **0791:2EB8** / in_opposing_goal_strip **0791:2EF0**.
+The five real guest return sites preserve their near/far ABI and suspensions.
+The gate resumes with fresh Regs and reads live AX, ignoring SENT. Repeated
+parent-pointer reads remain separate from the captured point/parent DI.
+
+Both leaf queries retain source-inline direction_in_dx/c2be5 and c2e82, including
+argument/return words, queued stack writes, scratch state and flag behavior. The
+existing source-equivalent `destination::direction` is exposed crate-locally;
+no registered goal-strip helper call or guest frame is invented. Nondefault
+variants remain Python. Contract/helper/site inventory: `out/T20/contract.md`
+and `out/T20/inventory-v1.json`.
+
+Actual accepted T19 source/adapter/tests and both interpreter binaries were saved
+before builds in `.cache/T20-baseline`, bound by baseline-snapshot-v1.json.
+Candidate artifact-archive-v1 was copied after both installs and public70 each
+passed. Freeze-v1 binds 542 concrete source/binary/private/proof inputs; independent
+fidelity suites use a bounded pool before guarded corpus/profile/timing stages.
+Historical receipts and private state/tables/captures remain preserved.
