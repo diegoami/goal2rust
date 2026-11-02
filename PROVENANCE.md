@@ -260,3 +260,9 @@ bound by `out/T19/baseline-snapshot-v1.json`. Candidate archive-v1 was copied
 only after both interpreter installations and passing preflight.
 `out/T19/freeze-v1.json` binds 466 concrete proof/source/binary/private inputs.
 Historical receipts and private state/tables/captures remain preserved.
+
+Final T19 validation is `out/T19/validation-final-v2.json`. Post-writer supplemental
+sources are explicitly bound, retaining all 466 original inputs and both binaries.
+A selector-cardinality rejection retained the original 19,520 comparisons and
+added 640 scoped own-write cases for 122 distinct selectors; no runtime rebuild
+or timing rerun. All results, limits and rejected logs are in the assessment.

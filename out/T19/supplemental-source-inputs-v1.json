@@ -1,0 +1,6 @@
+{
+  "reason": "Post-writer historical-input/baseline/counter audit; retain all466 original source/input bindings without any runtime change.",
+  "source_sha256": {
+    "out/T19/supplemental_audit.py": "e24c935f82f43ec0554a2f48e6e379fee308d1237e48b390e8c669a9cc9a34ab"
+  }
+}

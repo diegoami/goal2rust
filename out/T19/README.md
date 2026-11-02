@@ -48,3 +48,27 @@ and the supervisor PID gone. Any rejected attempt requires preserved evidence
 and versioned recovery; do not suppress a source-stability assertion or reuse
 an incomplete timing campaign as a headline. Exact-head CI, squash merge, main
 CI, merged binding audit and checkpoint complete the task.
+
+## Final selection and preserved validation recovery
+
+All full fidelity gates and three paired timing rounds pass. Use
+`validation-final-v2.json`, `process-closure-v2.json`, the original passing
+`post-exit-audit-v1.json` and `supplemental-audit-v1.json`. The original final
+validator rejection is preserved: 122 planned execution rows contained four
+repeated write-selector strings, giving 118 distinct dictionary keys.
+`proof-plan-v2.json` retains every original row and adds 640 comparisons for
+four distinct post-return own-write selectors; all 122 distinct selectors are
+positive across 20,160 comparisons. `scoped-write-errors-v1.json` records the
+passing proof; its log is scoped-write-errors-v2.log. The earlier unseeded launch
+stopped before any case and is retained separately with its disposition.
+
+Do not rerun completed producers or original rejected validation. Supplemental
+source manifests v1/v2 bind post-writer audits/proofs without changing any of the
+466 original bindings. All 74 original groups plus the additional proof group
+and the controller are stopped. Every historical/rejected receipt remains
+immutable. Live CI/merge/stop status belongs in checkpoint #1.
+
+Three complete same-campaign rounds use median 6.78% less CPU than saved
+T18; baseline/PyPy 0.781398, candidate/PyPy
+0.739004. See [assessment](assessment.md) for raw samples
+and one-fixture limits. No next task is included.

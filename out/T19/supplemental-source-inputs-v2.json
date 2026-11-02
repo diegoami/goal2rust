@@ -1,0 +1,9 @@
+{
+  "reason": "Post-writer validation count recovery strengthens distinct own-write error coverage; all466 original bindings and every original comparison retained.",
+  "source_sha256": {
+    "out/T19/scoped_write_errors.py": "e2dff9ed11d2cfebe214fb268f31e9294e22c94e84bb7d6157a174386947ba8e",
+    "out/T19/process_closure_v2.py": "8e704e2d256d021b3d96687773cfca49cbffea82ebccc03bc476f880ba0371fa",
+    "out/T19/validate_v2.py": "24d367dbdde13b4a1f86b4451109d4efa90c658eff22b0cc6e8591a3d6ef62e3",
+    "out/T19/proof-plan-v2.json": "a688632c10011068da31cdb44831a9d1b2e036eaee9f2feb544ab5e03c51bc39"
+  }
+}

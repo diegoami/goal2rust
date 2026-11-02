@@ -85,11 +85,28 @@ Same-campaign saved T17/PyPy is 0.963176 and T18/PyPy
 fixture, with all rounds improving. The failed earlier timing campaign is retained
 and the complete replacement uses unchanged guards. [Assessment](../out/T18/assessment.md).
 
+## Validated scope: T19 depth-adjustment closure
+
+[T19](tasks/T19.md) closes all five remaining default bodies below 474D, including
+attack/defend depth steps, slot side and the inline-RNG coin. All 23 guest sites
+and captured/live semantics remain explicit. Full prior43/new5 proofs, controls,
+three live matrices, ordered drive, lifecycle and strict ALL75/F40 pass. A final
+selector-count audit retained all original rows and added four scoped own-write
+selectors: 20,160 comparisons across 122 distinct selectors, with no runtime
+change or timing rerun. [Assessment](../out/T19/assessment.md).
+
+The profile confirms 48 native bodies (11.37% equal-weight count), 2,508,808
+native guest entries (80.83% fixture frequency) and 594,877 Python entries. Global
+LOC/test coverage remains unreported. All three paired timing rounds improve: median
+6.78% less CPU than saved T18. Same-campaign saved T18/PyPy
+0.781398 and T19/PyPy 0.739004 show 26.10% less
+CPU than PyPy on this fixture. No general workload advantage is claimed.
+
 ## Decide the following chunk from evidence
 
-After T18 is accepted, inspect its complete remaining Python profile and scoped
+After T19 is accepted, inspect its complete remaining Python profile and scoped
 execution/boundary observations before sealing the next closed tree. No next task
-is included in T18.
+is included in T19.
 
 If common dispatch/bridge work dominates instead, define a separate measured
 optimization task with its own predeclared criteria. Native-to-native calls still
@@ -158,3 +175,23 @@ state, so T18 does not provide that thread/API guarantee. A separate integration
 task must establish API ownership, threading/GIL release, cancellation, target ABI
 and portable ZIP loading, with Windows/Linux measurements. Keep the accepted
 oracle fixed and let the playable goal2 build proceed independently.
+
+## Upstream adoption update after T19
+
+Goal2 main is now `6bfdfbbd00107cddbb519a48629c41ac51ca6d6c`; archaeology
+remains `2a411f50422ecd1f5d8cf96d05f1873e6257e684`. Since T19 began, goal2
+merged [portable Windows packaging #510](https://github.com/diegoami/goal2/pull/510),
+bundling CPython 3.13 for the UI and PyPy 3.11 for workers. Rust extension ABI
+and portable ZIP loading need explicit target-platform proof; current Linux
+CPython 3.12/PyPy tests do not supply it.
+
+[Core-save launch/resume #519](https://github.com/diegoami/goal2/pull/519) and
+[viewer lifecycle #517](https://github.com/diegoami/goal2/pull/517) add adoption
+contracts: preserve core-save routing and distinguish a released viewer from an
+unexpectedly exited viewer, retaining the designed resumable stop. Replay timeout
+[diagnostics #521](https://github.com/diegoami/goal2/pull/521) and the
+[T152 contract correction #522](https://github.com/diegoami/goal2/issues/522)
+do not change this pinned engine translation. T152 now matches the existing owner
+policy: missing PyPy/explicit engine runtime raises EngineRuntimeMissing, with
+no silent CPython fallback. T154's API/threading/GIL evaluation stays separate.
+These updates strengthen later adoption checks and do not change T19's oracle.

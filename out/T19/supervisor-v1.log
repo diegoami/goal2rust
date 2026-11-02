@@ -1,0 +1,457 @@
+START public-cpython-v1 140333
+START public-pypy-v1 140337
+START gc-parity-v1 140338
+START observer-matrix-v2 140363
+START rust-unit-v1 140394
+START taps-python-v1 140419
+START legacy-v1 140442
+EXIT gc-parity-v1 0
+EXIT rust-unit-v1 0
+PROGRESS 0 /75; public-cpython-v1,public-pypy-v1,observer-matrix-v2,taps-python-v1,legacy-v1
+EXIT observer-matrix-v2 0
+PROGRESS 0 /75; public-cpython-v1,public-pypy-v1,taps-python-v1,legacy-v1
+PROGRESS 0 /75; public-cpython-v1,public-pypy-v1,taps-python-v1,legacy-v1
+EXIT legacy-v1 0
+START legacy-body-v1 140568
+PROGRESS 0 /75; public-cpython-v1,public-pypy-v1,taps-python-v1,legacy-body-v1
+PROGRESS 0 /75; public-cpython-v1,public-pypy-v1,taps-python-v1,legacy-body-v1
+EXIT public-cpython-v1 0
+EXIT legacy-body-v1 0
+PROGRESS 0 /75; public-pypy-v1,taps-python-v1
+START availability-differential-v1 140712
+PROGRESS 0 /75; public-pypy-v1,taps-python-v1,availability-differential-v1
+EXIT public-pypy-v1 0
+EXIT availability-differential-v1 0
+START availability-body-v1 140770
+PROGRESS 0 /75; taps-python-v1,availability-body-v1
+EXIT availability-body-v1 0
+START availability-return-v1 140854
+PROGRESS 0 /75; taps-python-v1,availability-return-v1
+EXIT availability-return-v1 0
+START ball-differential-v1 140912
+PROGRESS 0 /75; taps-python-v1,ball-differential-v1
+PROGRESS 0 /75; taps-python-v1,ball-differential-v1
+PROGRESS 0 /75; taps-python-v1,ball-differential-v1
+PROGRESS 0 /75; taps-python-v1,ball-differential-v1
+EXIT taps-python-v1 0
+PROGRESS 0 /75; ball-differential-v1
+PROGRESS 0 /75; ball-differential-v1
+PROGRESS 0 /75; ball-differential-v1
+PROGRESS 0 /75; ball-differential-v1
+PROGRESS 0 /75; ball-differential-v1
+EXIT ball-differential-v1 0
+START ball-body-v1 141331
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+PROGRESS 0 /75; ball-body-v1
+EXIT ball-body-v1 0
+PROGRESS 0 /75; 
+START ball-return-v1 141655
+PROGRESS 0 /75; ball-return-v1
+PROGRESS 0 /75; ball-return-v1
+PROGRESS 0 /75; ball-return-v1
+PROGRESS 0 /75; ball-return-v1
+PROGRESS 0 /75; ball-return-v1
+EXIT ball-return-v1 0
+START skill-differential-v1 141901
+PROGRESS 0 /75; skill-differential-v1
+EXIT skill-differential-v1 0
+PROGRESS 0 /75; 
+START skill-body-v1 141968
+PROGRESS 0 /75; skill-body-v1
+EXIT skill-body-v1 0
+PROGRESS 0 /75; 
+START skill-return-v1 142095
+PROGRESS 0 /75; skill-return-v1
+EXIT skill-return-v1 0
+PROGRESS 0 /75; 
+START speaker-differential-v1 142162
+PROGRESS 0 /75; speaker-differential-v1
+PROGRESS 0 /75; speaker-differential-v1
+EXIT speaker-differential-v1 0
+PROGRESS 0 /75; 
+START speaker-body-v1 142289
+PROGRESS 0 /75; speaker-body-v1
+PROGRESS 0 /75; speaker-body-v1
+EXIT speaker-body-v1 0
+PROGRESS 0 /75; 
+START speaker-root-return-v1 142362
+PROGRESS 0 /75; speaker-root-return-v1
+PROGRESS 0 /75; speaker-root-return-v1
+EXIT speaker-root-return-v1 0
+START speaker-seed-return-v1 142451
+PROGRESS 0 /75; speaker-seed-return-v1
+PROGRESS 0 /75; speaker-seed-return-v1
+EXIT speaker-seed-return-v1 0
+START keys-differential-v1 142575
+PROGRESS 0 /75; keys-differential-v1
+PROGRESS 0 /75; keys-differential-v1
+EXIT keys-differential-v1 0
+PROGRESS 0 /75; 
+START keys-body-v1 142715
+PROGRESS 0 /75; keys-body-v1
+PROGRESS 0 /75; keys-body-v1
+EXIT keys-body-v1 0
+START keys-return-v1 142801
+PROGRESS 0 /75; keys-return-v1
+EXIT keys-return-v1 0
+START draw-differential-v1 142837
+PROGRESS 0 /75; draw-differential-v1
+EXIT draw-differential-v1 0
+START draw-body-v1 142882
+PROGRESS 0 /75; draw-body-v1
+EXIT draw-body-v1 0
+START draw-return-v1 142968
+PROGRESS 0 /75; draw-return-v1
+EXIT draw-return-v1 0
+START sweep-differential-v1 143003
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+PROGRESS 0 /75; sweep-differential-v1
+EXIT sweep-differential-v1 0
+START sweep-body-v1 143270
+PROGRESS 0 /75; sweep-body-v1
+PROGRESS 0 /75; sweep-body-v1
+PROGRESS 0 /75; sweep-body-v1
+PROGRESS 0 /75; sweep-body-v1
+PROGRESS 0 /75; sweep-body-v1
+EXIT sweep-body-v1 0
+START sweep-return-v1 143490
+PROGRESS 0 /75; sweep-return-v1
+PROGRESS 0 /75; sweep-return-v1
+PROGRESS 0 /75; sweep-return-v1
+EXIT sweep-return-v1 0
+START play-differential-v1 143622
+PROGRESS 0 /75; play-differential-v1
+PROGRESS 0 /75; play-differential-v1
+PROGRESS 0 /75; play-differential-v1
+EXIT play-differential-v1 0
+START play-body-v1 143744
+PROGRESS 0 /75; play-body-v1
+PROGRESS 0 /75; play-body-v1
+EXIT play-body-v1 0
+START play-return-v1 143843
+PROGRESS 0 /75; play-return-v1
+EXIT play-return-v1 0
+START update-differential-v1 144043
+PROGRESS 0 /75; update-differential-v1
+PROGRESS 0 /75; update-differential-v1
+PROGRESS 0 /75; update-differential-v1
+PROGRESS 0 /75; update-differential-v1
+EXIT update-differential-v1 0
+PROGRESS 0 /75; 
+START update-body-v1 144267
+PROGRESS 0 /75; update-body-v1
+EXIT update-body-v1 0
+PROGRESS 0 /75; 
+START update-return-v1 144325
+PROGRESS 0 /75; update-return-v1
+EXIT update-return-v1 0
+START sprite-differential-v1 144374
+PROGRESS 0 /75; sprite-differential-v1
+PROGRESS 0 /75; sprite-differential-v1
+EXIT sprite-differential-v1 0
+START sprite-body-v1 144496
+PROGRESS 0 /75; sprite-body-v1
+EXIT sprite-body-v1 0
+PROGRESS 0 /75; 
+START sprite-return-v1 144632
+PROGRESS 0 /75; sprite-return-v1
+EXIT sprite-return-v1 0
+START run-differential-v1 144699
+PROGRESS 0 /75; run-differential-v1
+EXIT run-differential-v1 0
+START run-body-v1 144781
+PROGRESS 0 /75; run-body-v1
+EXIT run-body-v1 0
+START run-position-v1 144804
+PROGRESS 0 /75; run-position-v1
+EXIT run-position-v1 0
+START marking-normal-v1 144867
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+PROGRESS 0 /75; marking-normal-v1
+EXIT marking-normal-v1 0
+PROGRESS 0 /75; 
+START marking-body-v1 146399
+PROGRESS 0 /75; marking-body-v1
+PROGRESS 0 /75; marking-body-v1
+PROGRESS 0 /75; marking-body-v1
+PROGRESS 0 /75; marking-body-v1
+PROGRESS 0 /75; marking-body-v1
+PROGRESS 0 /75; marking-body-v1
+PROGRESS 0 /75; marking-body-v1
+EXIT marking-body-v1 0
+START marking-output-v1 147914
+PROGRESS 0 /75; marking-output-v1
+EXIT marking-output-v1 0
+PROGRESS 0 /75; 
+START marking-returns-v1 148003
+PROGRESS 0 /75; marking-returns-v1
+PROGRESS 0 /75; marking-returns-v1
+PROGRESS 0 /75; marking-returns-v1
+EXIT marking-returns-v1 0
+PROGRESS 0 /75; 
+START destination-normal-v1 148208
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+PROGRESS 0 /75; destination-normal-v1
+EXIT destination-normal-v1 0
+START destination-body-v1 161482
+PROGRESS 0 /75; destination-body-v1
+PROGRESS 0 /75; destination-body-v1
+PROGRESS 0 /75; destination-body-v1
+PROGRESS 0 /75; destination-body-v1
+PROGRESS 0 /75; destination-body-v1
+PROGRESS 0 /75; destination-body-v1
+PROGRESS 0 /75; destination-body-v1
+PROGRESS 0 /75; destination-body-v1
+PROGRESS 0 /75; destination-body-v1
+PROGRESS 0 /75; destination-body-v1
+PROGRESS 0 /75; destination-body-v1
+PROGRESS 0 /75; destination-body-v1
+PROGRESS 0 /75; destination-body-v1
+PROGRESS 0 /75; destination-body-v1
+PROGRESS 0 /75; destination-body-v1
+EXIT destination-body-v1 0
+PROGRESS 0 /75; 
+START destination-output-v1 162524
+PROGRESS 0 /75; destination-output-v1
+PROGRESS 0 /75; destination-output-v1
+PROGRESS 0 /75; destination-output-v1
+PROGRESS 0 /75; destination-output-v1
+PROGRESS 0 /75; destination-output-v1
+PROGRESS 0 /75; destination-output-v1
+EXIT destination-output-v1 0
+START destination-returns-v1 162923
+PROGRESS 0 /75; destination-returns-v1
+PROGRESS 0 /75; destination-returns-v1
+PROGRESS 0 /75; destination-returns-v1
+PROGRESS 0 /75; destination-returns-v1
+PROGRESS 0 /75; destination-returns-v1
+PROGRESS 0 /75; destination-returns-v1
+EXIT destination-returns-v1 0
+START depth-normal-v1 163312
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+PROGRESS 0 /75; depth-normal-v1
+EXIT depth-normal-v1 0
+START depth-body-v1 164599
+PROGRESS 0 /75; depth-body-v1
+PROGRESS 0 /75; depth-body-v1
+PROGRESS 0 /75; depth-body-v1
+PROGRESS 0 /75; depth-body-v1
+PROGRESS 0 /75; depth-body-v1
+EXIT depth-body-v1 0
+PROGRESS 0 /75; 
+START depth-output-v1 165225
+PROGRESS 0 /75; depth-output-v1
+EXIT depth-output-v1 0
+START depth-returns-v1 165249
+PROGRESS 0 /75; depth-returns-v1
+PROGRESS 0 /75; depth-returns-v1
+EXIT depth-returns-v1 0
+START prior-destination-live-observers-v1 165896
+PROGRESS 0 /75; prior-destination-live-observers-v1
+EXIT prior-destination-live-observers-v1 0
+START prior-live-observers-v1 165987
+PROGRESS 0 /75; prior-live-observers-v1
+PROGRESS 0 /75; prior-live-observers-v1
+PROGRESS 0 /75; prior-live-observers-v1
+EXIT prior-live-observers-v1 0
+START live-observers-v1 166920
+PROGRESS 0 /75; live-observers-v1
+EXIT live-observers-v1 0
+START taps-rust-v1 167112
+PROGRESS 0 /75; taps-rust-v1
+PROGRESS 0 /75; taps-rust-v1
+PROGRESS 0 /75; taps-rust-v1
+PROGRESS 0 /75; taps-rust-v1
+PROGRESS 0 /75; taps-rust-v1
+PROGRESS 0 /75; taps-rust-v1
+EXIT taps-rust-v1 0
+WAIT FOR QUIET HOST (1.560546875, 2.18017578125, 2.44482421875) 1 /3
+WAIT FOR QUIET HOST (1.3203125, 2.10791015625, 2.41845703125) 2 /3
+WAIT FOR QUIET HOST (1.3447265625, 2.08740234375, 2.408203125) 3 /3
+START family-ALL-v1 169128
+START check-v1 169151
+START profile-after-v1 169230
+PROGRESS 0 /75; family-ALL-v1,check-v1,profile-after-v1
+PROGRESS 0 /75; family-ALL-v1,check-v1,profile-after-v1
+PROGRESS 0 /75; family-ALL-v1,check-v1,profile-after-v1
+PROGRESS 2 /75; family-ALL-v1,check-v1,profile-after-v1
+EXIT profile-after-v1 0
+PROGRESS 2 /75; family-ALL-v1,check-v1
+PROGRESS 4 /75; family-ALL-v1,check-v1
+PROGRESS 4 /75; family-ALL-v1,check-v1
+PROGRESS 6 /75; family-ALL-v1,check-v1
+PROGRESS 6 /75; family-ALL-v1,check-v1
+PROGRESS 8 /75; family-ALL-v1,check-v1
+PROGRESS 8 /75; family-ALL-v1,check-v1
+Preserved completed ALL records 10
+Provisional strict prefix 10 equal; full ALL75/F40 pending
+PROGRESS 10 /75; family-ALL-v1,check-v1
+PROGRESS 10 /75; family-ALL-v1,check-v1
+PROGRESS 12 /75; family-ALL-v1,check-v1
+PROGRESS 12 /75; family-ALL-v1,check-v1
+PROGRESS 14 /75; family-ALL-v1,check-v1
+PROGRESS 14 /75; family-ALL-v1,check-v1
+PROGRESS 16 /75; family-ALL-v1,check-v1
+PROGRESS 16 /75; family-ALL-v1,check-v1
+PROGRESS 18 /75; family-ALL-v1,check-v1
+PROGRESS 18 /75; family-ALL-v1,check-v1
+Preserved completed ALL records 20
+Provisional strict prefix 20 equal; full ALL75/F40 pending
+PROGRESS 20 /75; family-ALL-v1,check-v1
+PROGRESS 21 /75; family-ALL-v1,check-v1
+PROGRESS 22 /75; family-ALL-v1,check-v1
+PROGRESS 22 /75; family-ALL-v1,check-v1
+EXIT check-v1 0
+PROGRESS 24 /75; family-ALL-v1
+PROGRESS 24 /75; family-ALL-v1
+PROGRESS 25 /75; family-ALL-v1
+PROGRESS 26 /75; family-ALL-v1
+PROGRESS 26 /75; family-ALL-v1
+PROGRESS 27 /75; family-ALL-v1
+PROGRESS 28 /75; family-ALL-v1
+PROGRESS 28 /75; family-ALL-v1
+PROGRESS 29 /75; family-ALL-v1
+Preserved completed ALL records 30
+Provisional strict prefix 30 equal; full ALL75/F40 pending
+PROGRESS 30 /75; family-ALL-v1
+PROGRESS 30 /75; family-ALL-v1
+PROGRESS 32 /75; family-ALL-v1
+PROGRESS 32 /75; family-ALL-v1
+PROGRESS 32 /75; family-ALL-v1
+PROGRESS 34 /75; family-ALL-v1
+PROGRESS 34 /75; family-ALL-v1
+PROGRESS 34 /75; family-ALL-v1
+PROGRESS 36 /75; family-ALL-v1
+PROGRESS 38 /75; family-ALL-v1
+PROGRESS 38 /75; family-ALL-v1
+PROGRESS 40 /75; family-ALL-v1
+PROGRESS 40 /75; family-ALL-v1
+PROGRESS 42 /75; family-ALL-v1
+PROGRESS 44 /75; family-ALL-v1
+PROGRESS 44 /75; family-ALL-v1
+PROGRESS 46 /75; family-ALL-v1
+PROGRESS 47 /75; family-ALL-v1
+PROGRESS 48 /75; family-ALL-v1
+PROGRESS 57 /75; family-ALL-v1
+PROGRESS 60 /75; family-ALL-v1
+Preserved completed ALL records 60
+Provisional strict prefix 60 equal; full ALL75/F40 pending
+PROGRESS 60 /75; family-ALL-v1
+PROGRESS 62 /75; family-ALL-v1
+PROGRESS 63 /75; family-ALL-v1
+PROGRESS 66 /75; family-ALL-v1
+PROGRESS 67 /75; family-ALL-v1
+PROGRESS 68 /75; family-ALL-v1
+PROGRESS 69 /75; family-ALL-v1
+PROGRESS 71 /75; family-ALL-v1
+PROGRESS 73 /75; family-ALL-v1
+EXIT family-ALL-v1 0
+PROGRESS 75 /75; 
+START performance-v1 192296
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+PROGRESS 75 /75; performance-v1
+EXIT performance-v1 0
+ALL PRODUCERS EXITED; run post-exit audit after this writer exits
