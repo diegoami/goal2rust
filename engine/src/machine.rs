@@ -113,6 +113,7 @@ enum NativeContinuation {
     Destination(crate::destination_flow::Phase,Option<crate::destination_flow::Saved>),
     Depth(crate::depth::Phase,Option<crate::depth::Saved>),
     Chase(crate::chase::Phase),
+    BallTravel(bool),
     Marking(crate::marking::Phase,Option<crate::marking::Saved>),
     RunStep,
     PlayerSprite(crate::player_sprite::Phase,Option<crate::player_sprite::Saved>),
@@ -859,6 +860,7 @@ impl MachineCore {
         };
         if self.native && frame.port.variant.bind(py).is_none() {
             frame.native = match address.extract::<String>()?.as_str() {
+                "0791:835F" => Some(NativeContinuation::BallTravel(true)),
                 "0791:5729" => Some(NativeContinuation::Chase(crate::chase::Phase::Start)),
                 "0791:474D" => Some(NativeContinuation::Depth(crate::depth::Phase::Start,None)),
                 "0791:4532" => Some(NativeContinuation::Depth(crate::depth::Phase::AttackStart,None)),
@@ -971,6 +973,14 @@ impl MachineCore {
         let mut completed_value = py.None();
         let result = (|| -> PyResult<Option<Py<PyAny>>> {
             match f.native.take().unwrap() {
+                NativeContinuation::BallTravel(first)=>{
+                    if first{
+                        crate::travel::start(&mut h)?;*self.native_calls.borrow_mut().entry("0791:835F".to_string()).or_insert(0)+=1;
+                        let args=PyTuple::empty(py);let call=self.call_type.bind(py).call1(("23E4:0279",args,"0791:8396",true,false))?;f.native=Some(NativeContinuation::BallTravel(false));Ok(Some(call.unbind()))
+                    }else{
+                        let reply=sent.extract::<u16>()?;if self.mutant==155{crate::marking::corrupt(&mut h)?;}completed_value=reply.into_pyobject(py)?.into_any().unbind();Ok(None)
+                    }
+                }
                 NativeContinuation::Chase(phase)=>{
                     let first=phase==crate::chase::Phase::Start;
                     let action=crate::chase::step(&mut h,phase)?;
@@ -1187,10 +1197,11 @@ impl MachineCore {
             // Mutant 1 corrupts a guest-call return's saved IP; a machine error.
             let t17_sites=["0791:47CE","0791:47EF","0791:485D","0791:4888","0791:48E2","0791:4930","0791:494D","0791:496A","0791:4980","0791:499D","0791:49B2","0791:49C0","0791:4493"];
             let site_mutant=(36..49).contains(&self.mutant) && t17_sites[(self.mutant-36) as usize]==ret_to;
+            let t21_mutant=self.mutant==160 && ret_to=="0791:8396";
             let t20_mutant=(150..155).contains(&self.mutant) && T20_RETURNS[(self.mutant-150) as usize]==ret_to;
             let t19_mutant=(122..145).contains(&self.mutant) && T19_RETURNS[(self.mutant-122) as usize]==ret_to;
             let t18_mutant=(74..115).contains(&self.mutant) && T18_RETURNS[(self.mutant-74) as usize]==ret_to;
-            let corrupt = t20_mutant || t19_mutant || t18_mutant || site_mutant || (self.mutant == 27 && matches!(ret_to.as_str(),"0791:47CE"|"0791:47EF"|"0791:485D"|"0791:4888"|"0791:48E2"|"0791:4930"|"0791:494D"|"0791:496A"|"0791:4980"|"0791:499D"|"0791:49B2"|"0791:49C0"))
+            let corrupt = t21_mutant || t20_mutant || t19_mutant || t18_mutant || site_mutant || (self.mutant == 27 && matches!(ret_to.as_str(),"0791:47CE"|"0791:47EF"|"0791:485D"|"0791:4888"|"0791:48E2"|"0791:4930"|"0791:494D"|"0791:496A"|"0791:4980"|"0791:499D"|"0791:49B2"|"0791:49C0"))
                 || (self.mutant==29 && ret_to=="0791:4493")
                 || self.mutant == 1 || (self.mutant == 4
                 && matches!(ret_to.as_str(), "0791:3013" | "0791:3090" | "0791:30A3"))
@@ -1268,6 +1279,7 @@ impl MachineCore {
         };
         use crate::geometry as g;
         match address {
+            "23E4:0279" => crate::travel::multiply(&mut h)?,
             "0791:2EB8" => crate::chase::goal_strip(&mut h,false)?,
             "0791:2EF0" => crate::chase::goal_strip(&mut h,true)?,
             "0791:2BB1" => crate::depth::slot(&mut h)?,
@@ -1298,6 +1310,8 @@ impl MachineCore {
             "0791:2974" => g::side(&mut h)?,
             _ => return Ok(None),
         }
+        if self.mutant==156 && address=="23E4:0279"{crate::marking::corrupt(&mut h)?;}
+        if (157..160).contains(&self.mutant) && address=="23E4:0279"{let reg=match self.mutant{157=>Reg::Ax,158=>Reg::Dx,_=>Reg::Eflags};let value=h.reg(reg)?;h.set_reg(reg,value^if reg==Reg::Eflags{1}else{0x8000})?;}
         if (145..148).contains(&self.mutant) && T20_BODIES[(self.mutant-145) as usize]==address { crate::marking::corrupt(&mut h)?; }
         if (self.mutant==148 && address=="0791:2EB8") || (self.mutant==149 && address=="0791:2EF0") { let reg=if self.mutant==148{Reg::Ax}else{Reg::Eflags};let value=h.reg(reg)?;h.set_reg(reg,value^if self.mutant==148{0x8000}else{0x400})?; }
         if (115..120).contains(&self.mutant) && T19_BODIES[(self.mutant-115) as usize]==address { crate::marking::corrupt(&mut h)?; }
