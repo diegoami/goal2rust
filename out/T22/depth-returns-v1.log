@@ -1,0 +1,25 @@
+denied: unicorn, .sav, .EXE, .DAT
+RETURN CONTROL 0791:475C {'total': 160, 'reached': 160, 'detected': 160}
+RETURN CONTROL 0791:4785 {'total': 160, 'reached': 36, 'detected': 36}
+RETURN CONTROL 0791:478D {'total': 160, 'reached': 62, 'detected': 62}
+RETURN CONTROL 0791:479A {'total': 160, 'reached': 98, 'detected': 98}
+RETURN CONTROL 0791:47AA {'total': 160, 'reached': 98, 'detected': 98}
+RETURN CONTROL 0791:4660 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN CONTROL 0791:4672 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN CONTROL 0791:4689 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN CONTROL 0791:46BE {'total': 160, 'reached': 47, 'detected': 47}
+RETURN CONTROL 0791:46D4 {'total': 160, 'reached': 10, 'detected': 10}
+RETURN CONTROL 0791:46EE {'total': 160, 'reached': 10, 'detected': 10}
+RETURN CONTROL 0791:4709 {'total': 160, 'reached': 9, 'detected': 9}
+RETURN CONTROL 0791:471A {'total': 160, 'reached': 3, 'detected': 3}
+RETURN CONTROL 0791:4549 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN CONTROL 0791:455B {'total': 160, 'reached': 160, 'detected': 160}
+RETURN CONTROL 0791:458D {'total': 160, 'reached': 96, 'detected': 96}
+RETURN CONTROL 0791:45A2 {'total': 160, 'reached': 18, 'detected': 18}
+RETURN CONTROL 0791:45B7 {'total': 160, 'reached': 6, 'detected': 6}
+RETURN CONTROL 0791:45C0 {'total': 160, 'reached': 2, 'detected': 2}
+RETURN CONTROL 0791:45E4 {'total': 160, 'reached': 18, 'detected': 18}
+RETURN CONTROL 0791:45F9 {'total': 160, 'reached': 7, 'detected': 7}
+RETURN CONTROL 0791:461E {'total': 160, 'reached': 22, 'detected': 22}
+RETURN CONTROL 0791:4633 {'total': 160, 'reached': 9, 'detected': 9}
+returns COMPLETE

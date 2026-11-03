@@ -277,3 +277,54 @@ No original help, renders or game data are copied here. T158's measured technolo
 engine-boundary/packaging evaluation and the owner decision remain separate,
 alongside explicit GIL/threading/ABI/save/load/cancellation/playtest gates.
 The controlled engine pin and Rust-in-parallel m3 order are unchanged.
+
+## T22 scope and upstream adoption update, 2026-11-03
+
+T22 selects the complete8CF5/8E24/90C5 offside-line/display tree from T21's
+full remaining-work profile. Direction2BE5 is already native. All four guest
+sites remain observable;9,389 entries are predicted to move, with no speed
+forecast. [Task](tasks/T22.md), [inventory](../out/T22/inventory-v1.json).
+
+Upstream goal2 at`c81565c341ea4678680230e6c38324b83677e7f2` now records the
+owner-approved[T158 technology choice](https://github.com/diegoami/goal2/pull/532):
+PySide6 Essentials with the pitch inside the window, grow the Python route and
+retain the Core as test oracle, use one long-lived PyPy engine process over a
+pipe, then adopt the Rust hybrid inside that process once its gates pass.
+Track A(T159-T169) owns UI/protocol; Track B(T170-T175 plus upstream ports) owns
+native whole-game rules. This repository continues Rust translation in parallel.
+T158's independent30-match/platform probes are useful adoption evidence, bound
+to T20; they do not revalidate T22 or replace its exact artifact/corpus gates.
+The hybrid still invokes Python and holds interpreter-dependent state; no UI
+thread/GIL-release guarantee follows. Explicit worker/protocol/save-load/cancel/
+ABI/loading/representative performance and owner engine milestone gates remain.
+Archaeology main2a411f50 is unchanged; controlled oracle2cbeb36f stays fixed.
+
+## T22 validated outcome and current upstream boundary
+
+[T22](tasks/T22.md) closes8CF5/8E24/90C5 with all four far sites. All fidelity,
+strict ALL75/F40, lifecycle, source/baseline and process-closure gates pass;
+[assessment](../out/T22/assessment.md). The post-writer all-inventory scope proof
+adds shared s8/s16 to the canonical motion-helper set on the same artifact:
+6,288 comparisons/64 variants, positive source witnesses and zero native-lifetime
+owned Python calls. Two additive proof/audit sources are separately sealed;
+all661 primary bindings and every canonical receipt remain fixed.
+
+Profile:56 native bodies(13.27% equal-weight count),2,593,590 native entries
+(83.56% fixture frequency),510,095 Python. Timings are mixed: two faster rounds,
+one1.24% slower, paired median1.01% less CPU than T21. Same-campaign T21/PyPy
+0.691683 and T22/PyPy0.694602 are independent medians from different rounds.
+No repeatable gain or global LOC/test-coverage claim; all samples remain.
+
+Upstreams rechecked at goal2`185886f39ef51a4d9c5f9a68cf4f5ce62c85ab78`
+and archaeology`26fe704d58b483e5a8a2acbb4dca4ee4a16581aa`.
+Goal2[T159/#545](https://github.com/diegoami/goal2/pull/545) now provides the
+long-lived engine process and bounded binary-header/payload pipe protocol,
+ready/open/match/ack/pause/answer/cancel/quit messages, stderr isolation, death/
+restart, input-EOF shutdown and cancel/close deadlines. T160 routes watched and
+competitive matches onto it next. Rust adoption must test this actual protocol,
+restart/game replay, cancellation/EOF and target ABI/loading; T22 does not wire
+Rust into the application or release the GIL.
+Archaeology's new T118a-c documents the route(b) write-set/post-match-news scope;
+only task docs changed, not the selected engine semantics. Keep controlled
+2cbeb36f/private T07 inputs for this accepted comparison. Whole-game Track B
+and UI/protocol Track A still proceed independently of Rust translation.

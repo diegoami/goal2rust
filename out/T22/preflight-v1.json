@@ -1,0 +1,21 @@
+{
+  "public_cpython": 81,
+  "public_pypy": 81,
+  "new_public": 5,
+  "all_pass": true,
+  "rejected_fixture": {
+    "log": "out/T22/rejected-offside-preflight-v1.log",
+    "log_sha256": "b7cdbe4a3566b5289364d8b2fdd54d00d4314f0fbd89d2ff14b89f215f8bc6fa",
+    "source": "out/T22/rejected_offside_fixture_v1.py",
+    "source_sha256": "bd37f170017b63c13da0f4e002ddc92cd9b44ccc1fc86485edefd8dd19ad82fd",
+    "reason": "Fixture incorrectly entered near-returning8CF5 as a far call. Corrected near entry; all assertions retained."
+  },
+  "no_runtime_semantic_fix": true,
+  "live_preflight": {
+    "file": ".cache/T22-live-preflight-v1.json",
+    "comparisons": 1280
+  },
+  "public-cpython-preflight-v1.log": "fbb5b7eb8798d6d30887f422537e4e071303deccc9beb2b7fb1d0152a8592e04",
+  "public-pypy-preflight-v1.log": "dd0029c7f3e3110f787ab5c9760b6d6c7c2e6a395a3c928c55ae49d86f52a6e2",
+  "offside-preflight-v2.log": "d757ae027ca7dad14d8e749a467b34f4ced1158f5b6e6f22edbd59ead2a9cda0"
+}

@@ -14,9 +14,10 @@ in [out/T06](out/T06/README.md). Common-bridge performance evidence and
 baseline/confirmation rules are in [out/T08](out/T08/README.md). Read the latest
 [checkpoint](https://github.com/diegoami/goal2rust/issues/1) before restarting work.
 
-The complete ball-travel/multiply subtree is now native: [T21 results](out/T21/assessment.md).
-The profile confirms 53 native bodies and 83.26% native guest entries on the reference
-fixture. Three paired rounds use 1.90% less CPU than saved T20. In that same
-campaign, saved T20 uses 30.09% less CPU than PyPy and T21 uses 31.35% less.
-This is a partial engine port and one-fixture result; whole-engine and application
-gates remain in the roadmap. No next task is included.
+The complete offside-line/display tree is native: [T22 results](out/T22/assessment.md).
+The profile confirms 56 native bodies and 83.56% native guest entries on the reference
+fixture. Timings are mixed: two rounds improve, one uses 1.24% more CPU; the median
+uses 1.01% less than saved T21. A repeatable gain is not established. Same-campaign
+T21/PyPy and T22/PyPy median CPU ratios are 0.691683 and 0.694602.
+This is a partial engine port and one-fixture result. Routine counts and guest-entry
+frequency are not overall port or test coverage. No next task is included.

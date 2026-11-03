@@ -5,7 +5,7 @@ oracle and evidence, profile the Rust machine, then translate complete hot call
 trees. This follows the owner's approval of the upstream assessment. T02 is
 complete; its historical receipts and Done-when remain unchanged.
 
-## Current plan after T21: complete native chunks
+## Current plan after T22: complete native chunks
 
 [owner-approved recalibration] T03-T16 are historical accepted increments. The
 next default work unit is a complete bounded native execution tree with its
@@ -37,19 +37,26 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
    bodies and far8396. Full fidelity/paired measurements pass;
    [results](../out/T21/assessment.md). Owner requested winding down after this
    task; select any following scope in a new session from the full profile.
-6. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
+6. **T22, [PR #53](https://github.com/diegoami/goal2rust/pull/53):**
+   [complete offside-line/display tree](tasks/T22.md),8CF5/8E24/90C5 and all four
+   guest returns. Full prior53/new3, all-inventory helper closure, ordered drive,
+   lifecycle and strict ALL75/F40 pass. Timings are mixed: two faster rounds,
+   one1.24% slower, median1.01% less CPU than saved T21; no repeatable gain claim.
+   [Assessment](../out/T22/assessment.md). No following task is included; select
+   any next closed tree from the full T22 profile in a new session.
+7. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
    dominant, define a separate optimization task. A larger PR alone does not remove
    every Python boundary or common dispatch cost.
-7. **Engine milestone and application adoption:** retain the larger A700 corpus,
+8. **Engine milestone and application adoption:** retain the larger A700 corpus,
    known ref-121 noncompletion and owner review, then worker/save-load/cancellation/
    playtest and representative performance gates. PyPy remains goal2's baseline.
-8. **Whole game later:** tournament, board and career initialization still have
+9. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
-Current coverage is **53/422 registered non-stub bodies (12.56%)**, while **83.26%**
-of guest entries on the reference fixture are native (2,584,201 native, 519,484
+Current coverage is **56/422 registered non-stub bodies (13.27%)**, while **83.56%**
+of guest entries on the reference fixture are native (2,593,590 native, 510,095
 Python). Neither is source-line, CPU-time or test coverage; no global line/branch
-percentage is currently reported. Use the [current profile](../out/T21/profile-after-v1.json),
+percentage is currently reported. Use the [current profile](../out/T22/profile-after-v1.json),
 the historical [T16 planning snapshot](plans/post-T16-baseline.json) and
 [same-campaign performance reporting](performance-reporting.md). Every new summary
 shows saved-baseline/PyPy and candidate/PyPy together. No calendar completion date
@@ -551,3 +558,7 @@ original-faithful screen/flow design T157 (#530), optional checked help import
 for later application parity; they do not alter the accepted match-engine pin
 or prove Rust GIL/thread/portable ABI adoption. T158/owner technology decision and
 Rust-in-parallel m3 order remain. See [adoption update](porting-chunks.md#upstream-adoption-update-after-t21).
+
+Upstream now approved the T158 long-lived PyPy engine process over a pipe, with
+the Rust hybrid adopted inside it later after its gates. Track A owns UI/process
+protocol; Track B owns native whole-game rules. See the [T22 upstream update](porting-chunks.md#t22-scope-and-upstream-adoption-update-2026-11-03).

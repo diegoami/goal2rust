@@ -135,3 +135,25 @@ campaign saved T20 uses 30.09% less CPU than PyPy at the median, and T21
 uses 31.35% less. This modest incremental gain is below 5%, with no arbitrary
 translation magnitude floor. Historical gaps do not establish this change; this
 is one-fixture evidence.
+
+## T22 same-campaign result
+
+Sources:[all raw samples](../out/T22/performance-v1.json) and
+[assessment](../out/T22/assessment.md). All three complete four-arm rounds and
+the slower third candidate sample are retained.
+
+| Round | Saved T21 / PyPy | T22 / PyPy | T22 / saved T21 |
+| --- | ---: | ---: | ---: |
+| 1 | 0.686521509 | 0.679584427 | 0.989895318 |
+| 2 | 0.701939811 | 0.694601884 | 0.989546217 |
+| 3 | 0.691682678 | 0.700229219 | 1.012356158 |
+| Median of per-round ratios | 0.691682678 | 0.694601884 | 0.989895318 |
+
+Paired median T22/T21 is1.01% less CPU; two rounds improve and round3
+regresses1.24%. Repeatable improvement is not established. Same-campaign
+T21 uses30.83% less CPU than PyPy and T22 uses
+30.54% less, at their independent ratio medians.
+The medians select different rounds; do not divide independent column medians.
+Use every raw row and report the mixed outcome. The incremental translation's
+predeclared criteria require fidelity and full measurement, without an arbitrary
+5% floor. No regression or sample was discarded. One fixture only.

@@ -1,0 +1,129 @@
+"""Pinned T22 evidence utilities. Private state/tables never leave ignored cache."""
+import builtins
+import hashlib
+import importlib.util
+import io
+import json
+import os
+from pathlib import Path
+import platform
+import subprocess
+import sys
+
+BASE = Path(__file__).resolve().parents[2]
+ORACLE = BASE / '.cache/goal2-archaeology'
+PIN = '2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c'
+TABLES = BASE / '.cache/T07-tables'
+STATE = BASE / '.cache/T07-state-v2-v1.json'
+BASELINE = os.environ.get('GOAL2RUST_BASELINE') == '1'
+ENGINE = BASE / ('.cache/T22-baseline/engine' if BASELINE else 'engine')
+sys.path[:0] = [str(ORACLE), str(ORACLE / 'runtime')]
+if platform.python_implementation() == 'CPython':
+    sys.path.insert(0, str(ENGINE / 'python'))
+
+
+def git(*args, root=BASE):
+    return subprocess.check_output(['git', *args], cwd=root, text=True).strip()
+
+
+def digest(value):
+    return hashlib.sha256(json.dumps(value, sort_keys=True, default=repr).encode()).hexdigest()
+
+
+def source_names():
+    manifest=BASE / 'out/T22/source-inputs-v1.json'
+    if manifest.exists():return json.loads(manifest.read_text())['proof_sources']
+    return ['inventory.py','evidence.py','capture.py']
+
+
+def hashes():
+    import goal2rust_engine
+    import goal2rust.machine
+    # Installed pure-Python adapter must match the sources, including on PyPy.
+    assert Path(goal2rust.machine.__file__).read_bytes() == (ENGINE / 'python/goal2rust/machine.py').read_bytes()
+    files = (sorted((ENGINE / 'src').glob('*.rs'))
+             + sorted((ENGINE / 'python').rglob('*.py'))
+             + sorted((BASE / 'engine/tests').glob('*.py'))
+             + sorted((ORACLE / 'runtime/original_match').rglob('*.py'))
+             + sorted((BASE / 'out/T03').glob('*.py'))
+             + sorted((BASE / 'out/T04').glob('*.py'))
+             + sorted((BASE / 'out/T05').glob('*.py'))
+             + sorted((BASE / 'out/T06').glob('*.py'))
+             + sorted((BASE / 'out/T07').glob('*.py'))
+             + sorted((BASE / 'out/T08').glob('*.py'))
+             + sorted((BASE / 'out/T09').glob('*.py'))
+             + sorted((BASE / 'out/T10').glob('*.py'))
+             + sorted((BASE / 'out/T11').glob('*.py'))
+             + sorted((BASE / 'out/T12').glob('*.py'))
+             + sorted((BASE / 'out/T13').glob('*.py'))
+             + sorted((BASE / 'out/T14').glob('*.py'))
+             + sorted((BASE / 'out/T15').glob('*.py'))
+             + sorted((BASE / 'out/T16').glob('*.py'))
+             + sorted((BASE / 'out/T17').glob('*.py'))
+             + sorted((BASE / 'out/T18').glob('*.py'))
+             + sorted((BASE / 'out/T19').glob('*.py'))
+             + sorted((BASE / 'out/T20').glob('*.py'))
+             + sorted((BASE / 'out/T21').glob('*.py'))
+             + [BASE / 'out/T22' / n for n in source_names()]
+             + [BASE / 'out/T02/differential_v1.py', BASE / 'out/T02/differential_helpers.py',
+                BASE / 'out/T02/mutant_v1.py', ORACLE / 'experiments/E033-original-match-kit/save_boundaries.py']
+             + sorted((ORACLE / 'experiments/E036-match-port').glob('*.py'))
+             + [ORACLE / 'tests/test_port_seal.py', ORACLE / 'tools/static/port_tables.py', STATE]
+             + sorted(TABLES.iterdir())
+             + [ENGINE / 'Cargo.toml', ENGINE / 'Cargo.lock', BASE / '.github/workflows/build.yml'])
+    files += [BASE / '.cache/T17-raw/captures-v1.pkl', BASE / '.cache/T18-raw/captures-v1.pkl', BASE / '.cache/T19-raw/captures-v1.pkl', BASE / '.cache/T20-raw/captures-v1.pkl', BASE / '.cache/T21-raw/captures-v1.pkl']
+    for name in ['source-inputs-v1.json','proof-plan-v1.json','artifact-archive-v1.json']:
+        path=BASE/'out/T22'/name
+        if path.exists(): files.append(path)
+    captures=BASE / '.cache/T22-raw/captures-v1.pkl'
+    if captures.exists() and os.environ.get('GOAL2RUST_CAPTURING')!='1': files.append(captures)
+    files += [BASE / p for p in ['out/T17/captures-v1.json', 'out/T17/inventory-v1.json', 'out/T17/profile-after-v1.json', 'out/T18/captures-v1.json', 'out/T18/inventory-v2.json', 'out/T18/proof-plan-v1.json', 'out/T18/profile-after-v1.json', 'out/T19/captures-v1.json', 'out/T19/inventory-v1.json', 'out/T19/proof-plan-v1.json', 'out/T19/proof-plan-v2.json', 'out/T19/profile-after-v1.json', 'out/T19/supplemental-source-inputs-v1.json', 'out/T19/supplemental-source-inputs-v2.json', 'out/T20/inventory-v1.json', 'out/T20/captures-v1.json', 'out/T20/proof-plan-v1.json', 'out/T20/profile-after-v1.json', 'out/T20/validation-final-v1.json', 'out/T22/preflight-v1.json', 'out/T22/inventory-v1.json', 'out/T22/captures-v1.json', 'out/T22/baseline-snapshot-v1.json', 'out/T19/validation-final-v2.json', 'out/T09/rejected-descriptor-v1.json', 'out/T09/rejected-artifact-v1.json'] if (BASE / p).exists()]
+    files += [BASE / 'out/T21' / name for name in ['preflight-v1.json','inventory-v1.json','captures-v1.json','baseline-snapshot-v1.json','source-inputs-v1.json','proof-plan-v1.json','validation-final-v1.json','profile-after-v1.json']]
+    for stage in ['T07','T08','T09','T10','T11','T12','T13','T14','T15','T16','T17','T18','T19','T20','T21']:
+        files += sorted((BASE/'out'/stage).glob('artifact-archive-v*.json'))
+    files += list((BASE / '.venv-pypy/lib/pypy3.11/site-packages/goal2rust_engine').glob('*.so'))
+    result = {str(p.relative_to(BASE)): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
+    for p in Path(goal2rust_engine.__file__).parent.glob('*.so'):
+        result[str(p.relative_to(BASE))] = hashlib.sha256(p.read_bytes()).hexdigest()
+    return result
+
+
+def verify():
+    assert git('rev-parse', 'HEAD', root=ORACLE) == PIN
+    assert not git('status', '--porcelain', root=ORACLE)
+    assert os.environ.get('PYTHONHASHSEED') == '0'
+
+
+def deny_original():
+    spec = importlib.util.spec_from_file_location('seal_test', ORACLE / 'tests/test_port_seal.py')
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    exec(module.BOOTSTRAP.split("sys.argv = ['original_match.check']")[0], {})
+
+
+def image():
+    from original_match import Image
+    from original_match.port import tables
+    return Image.from_state(json.loads(STATE.read_text()), tables.load(TABLES))
+
+
+def select(backend):
+    if backend == 'rust':
+        from goal2rust import install
+        install()
+
+
+def identity(match):
+    core = getattr(match.m, '_core', None)
+    return dict(machine_type=type(match.m).__module__ + '.' + type(match.m).__name__,
+                native_calls={} if core is None else core.native_calls,
+                arm=('baseline' if BASELINE else 'candidate') if core is not None else 'plain',
+                bridge_fast_calls={} if core is None else getattr(core, 'bridge_fast_calls', {}))
+
+
+def write(path, report, before):
+    report.update(oracle=PIN, source_sha256=before, source_unchanged=before == hashes(),
+                  python=sys.version, node=platform.node())
+    with Path(path).open('x') as f:
+        json.dump(report, f, indent=2, sort_keys=True)
+    assert report['source_unchanged'], 'evidence sources changed during run'
