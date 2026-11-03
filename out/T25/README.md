@@ -26,3 +26,20 @@ generated reports. Freeze all actual inputs,including the profile's reference
 receipt and historical supplemental audit sources/inputs. Keep sources/binaries
 fixed;never rebuild during a measured run. Preserve/reject full loaded timing
 campaigns and repeat ALL3 unchanged. Read checkpoint before any live restart.
+
+Genuine capture is complete:49 sealed inputs/48 exclusive shards/eight entries
+per body/two original prefixes;capture PID956138 exited0. Do not rerun it.
+The current implementation's six public tests,500 authored cases per body,
+576 real schedules,1600 branch pairs/ten separate conditional outcomes/eight
+returns and1280 live callbacks pass development checks. These diagnostics do
+not replace the fresh canonical gates. The first equal-expression branch-label
+epoch and CPython development input map are preserved in ignored archives and
+development-provenance-v1.json. The error plan seals171 rows=171 distinct
+selectors/27,360 pairs;early/mid/last ordinal sampling is explicit.
+
+The canonical controller queues87 M2 stages and92 canonical producer groups in
+total,plus12 per full timing campaign. It admits no new local gate while an
+IT13 runner is busy. Timings additionally require every sampled runner state
+known/idle;load samples remain independently taken every five seconds. Sources
+and installed binaries are not yet archived/frozen;check checkpoint for build/
+full-public-preflight progress before running producers. No speed result yet.

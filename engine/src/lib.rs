@@ -48,3 +48,5 @@ pub mod offside;
 pub mod pascal;
 
 pub mod keyboard;
+
+pub mod text;

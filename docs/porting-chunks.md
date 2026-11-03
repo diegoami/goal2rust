@@ -462,3 +462,28 @@ All111 canonical/timing groups,controller and three capture PIDs exited. Final
 CI/merge/mainCI/merged-binding status lives in checkpoint#1. The owner requests
 a pause after this task;no T25 is selected or started. A later task must inventory
 a complete bounded tree from the fresh profile,including dynamic helper callees.
+
+## T25 selected text-cell closure and upstream update
+
+The owner resumed after T24. [T25](tasks/T25.md) selects four connected Pascal
+text callers and their forward/backward cell-writing callees,six exports and
+14 owned functions in total. Existing native0644 closes the remaining guest
+boundary;all eight real return sites remain. The fixed fixture predicts10,810
+moved entries,not a speed result. This tree is bounded even though the hotter
+duel/contest roots still fan out through larger unported helper-dispatched trees.
+
+Upstream snapshots:goal2 e1735b657a6812d86851ab38069819bf91b24e89 and
+archaeology9e77f0066216d0cddfbf76aed2dfa53866a97d9d. Goal2's T160 pipe-based
+watched/competitive matches and new-window pitch/boards are implemented;save/
+quit/load work is planned separately. Archaeology's T119a route harness and
+Match(tail=False) are merged,but T119c must preserve competitive fixture round
+bytes and name table-read key sites;T121 now depends on that correction. No
+controlled pin refresh or adoption into T25's default-match semantics follows.
+
+Goal2's shared-host runner rule now caps each runner at six gate jobs and
+requires checking IT13 runner activity before a local gate. T25 honors that
+admission rule and records independent runner observations during timings;
+a busy/unknown runner state rejects an entire timing campaign. Continuous
+five-second load monitoring remains separate from network queries. No unrelated
+process/runner is stopped or reconfigured. Original source/corpus/quality guards
+and the quiet-IT13 preference remain.

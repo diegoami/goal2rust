@@ -1,0 +1,11 @@
+test_body_and_outputs (test_text.TextTests.test_body_and_outputs) ... ok
+test_controlled_ABI (test_text.TextTests.test_controlled_ABI) ... ok
+test_failures_and_variants (test_text.TextTests.test_failures_and_variants) ... ok
+test_native_callers (test_text.TextTests.test_native_callers) ... ok
+test_native_leaves (test_text.TextTests.test_native_leaves) ... ok
+test_return_controls (test_text.TextTests.test_return_controls) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.731s
+
+OK

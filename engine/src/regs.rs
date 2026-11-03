@@ -202,6 +202,9 @@ impl Regs {
     /// CLD: defer DF clearing until store; other live flag bits remain untouched.
     pub fn cld(&mut self) { self.flags_off |= 0x400; self.flags_on &= !0x400; }
 
+    /// STD: defer DF setting until store, preserving all other live flag bits.
+    pub fn std(&mut self) { self.flags_on |= 0x400; self.flags_off &= !0x400; }
+
     /// The six arithmetic flags as the listing's last flag-setting instruction leaves them.
     pub fn arith(&mut self, bits: u32) {
         self.flags_on = (self.flags_on & !ARITH) | bits;

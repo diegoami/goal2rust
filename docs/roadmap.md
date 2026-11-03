@@ -61,13 +61,19 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
    retained. [Assessment](../out/T24/assessment.md). Owner requests a pause
    after completion;no following task selected. The actual kit callback/stop
    boundary remains;the separate whole-game first-poll policy is not adopted.
-9. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
+9. **T25, in progress, [PR #59](https://github.com/diegoami/goal2rust/pull/59):**
+   [Complete text-cell rendering chunk](tasks/T25.md): six connected display
+   exports00FF/0123/01A3/0205/026D/02C8,all14 owned functions/eight guest returns,
+   with existing native0644 boundary. Fixed-fixture prediction:+10,810 native
+   entries,69 bodies;no speed forecast. Accepted figures remain T24 until full
+   combined-artifact validation. Check IT13 runner activity before local gates.
+10. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
    dominant, define a separate optimization task. A larger PR alone does not remove
    every Python boundary or common dispatch cost.
-10. **Engine milestone and application adoption:** retain the larger A700 corpus,
+11. **Engine milestone and application adoption:** retain the larger A700 corpus,
    known ref-121 noncompletion and owner review, then worker/save-load/cancellation/
    playtest and representative performance gates. PyPy remains goal2's baseline.
-11. **Whole game later:** tournament, board and career initialization still have
+12. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
 Current coverage is **63/422 registered non-stub bodies (14.93%)**, while **86.62%**
