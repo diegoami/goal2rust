@@ -386,3 +386,25 @@ T23/PyPy0.678089 medians are retained alongside all raw rows. No repeatable
 speed claim or cherry-picked arm. Final-v2 ledger binds731 primary inputs,
 263 evidence hashes and two additive measurement/audit sources;107 process
 groups/controller stopped. Original v1 sources/receipts/ledger remain unchanged.
+
+## T24 selected chunk and upstream dependency update
+
+The full T23 profile selects the complete keyboard-service chunk214B:0723,
+08DD,0983 and0993,with their nine owned function helpers. The wait/clear caller's
+only guest,08DD at098A,is included. This cohesive kit-service path moves78,172
+fixture entries;prediction63 bodies/2,688,294 native/415,391 Python,no speed
+forecast. The actual per-port memory view/kit callbacks remain the semantic API;
+no BIOS prologue or automatic-answer policy is invented. [Task](tasks/T24.md).
+
+Upstreams rechecked at goal2`4368facda28d807500eb382854e2cc3f3d157d54`
+and archaeology`ddc888b9dc3b13921928e50770c649c24a1d45d7`.
+Goal2[T163/#553](https://github.com/diegoami/goal2/pull/553) merges the new-window
+start/new-game screens. Its process now serializes local gates per computer
+after two WSL crashes;independent tasks still coordinate the shared host. The
+owner's first-key-poll choice concerns animation/RNG during post-match news in
+the NEW whole-game harness,not this pinned match-engine service behavior.
+Archaeology plansT119-T123:a route harness,then silent path,route_fixture/news,
+and sealed route handover;T118c's behavioral corroboration folds intoT119.
+These task docs do not change selected runtime/original_match/port semantics.
+Keep controlled2cbeb36f/private T07 inputs and Rust-in-parallel scope. No original
+screens/help/game assets copied. Application/route/UI/ABI/GIL gates remain apart.

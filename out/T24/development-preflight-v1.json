@@ -1,0 +1,11 @@
+{
+  "new_targeted_tests": 5,
+  "all_pass": true,
+  "live_comparisons": 1280,
+  "private_live_receipt": ".cache/T24-live-preflight-v1.json",
+  "targeted_log_sha256": "b69320464e6485a5cad76fb9e24c18c46f0d8750aa89719dea13ed911b4b3705",
+  "live_log_sha256": "400c6d8a6844db4f71987c6f5f4411c5d18286f929e9ea792621e78c49596076",
+  "capture_v1_rejected": true,
+  "capture_v2_pending": true,
+  "no_canonical_started": true
+}

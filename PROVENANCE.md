@@ -370,3 +370,25 @@ no repeatable gain claim. Final-v2 ledger binds731 primary inputs/263 evidence
 hashes,two additive measurement/audit sources and five immutable supplemental
 inputs. All107 producer groups/controller stopped. Live CI/merge status is
 checkpoint#1;source contracts and original Done-when remain unchanged.
+
+## T24 keyboard-service chunk (in development)
+
+At accepted oracle`2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`,
+engine/src/keyboard.rs and native dispatch translate menus.key_pressed214B:0723,
+read_key08DD,wait_key_clear0983 and push_back_key0993. The wait caller retains
+its sole actual far guest08DD/return098A. All nine owned function helpers are
+scoped;generic Mem key/poll/read/stop primitives remain the kit service boundary.
+No BIOS frame or new first-poll auto-answer policy is added. Source return-site
+word/SS/load ordering,callback truth and live AH,pushed-key frames,pending flag/
+prologue ordering,source-style fresh resumed Regs and stop/error behavior remain.
+Nondefault variants stay Python. Native bodies use the existing per-port memory
+view rather than creating one without its kit. Source load subtraction retains
+unbounded integer/operator fallback behavior in return-site formatting.
+
+Actual accepted T23 source/tests/adapter/both interpreter artifacts preserved
+before builds in.cache/T24-baseline(73 files),after731 primary/263 evidence/two
+source/five input hashes passed. Initial genuine-entry capture hit the unchanged
+dispatch guard on a loaded host;failed log/source identity/harness preserved.
+Quiet capture_v2 uses genuine source drives and append-only private entry shards,
+keeping the original guard;no fabricated entry state or original bytes in git.
+Full combined-artifact acceptance remains pending.

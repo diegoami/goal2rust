@@ -1,0 +1,10 @@
+test_errors_variants_controls (test_keyboard.KeyboardTests.test_errors_variants_controls) ... ok
+test_kit_failures_and_stop_rules (test_keyboard.KeyboardTests.test_kit_failures_and_stop_rules) ... ok
+test_native_leaves (test_keyboard.KeyboardTests.test_native_leaves) ... ok
+test_wait_actual_and_controlled (test_keyboard.KeyboardTests.test_wait_actual_and_controlled) ... ok
+test_wait_return_control (test_keyboard.KeyboardTests.test_wait_return_control) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 4.240s
+
+OK

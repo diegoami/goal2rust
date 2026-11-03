@@ -1,0 +1,177 @@
+{
+  "bodies": {
+    "214B:0723": {
+      "address": "214B:0723",
+      "end_line": 43,
+      "helper_symbols": [
+        {
+          "line": 34,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/menus.py",
+          "symbol": "original_match.port.menus._ret_site"
+        },
+        {
+          "line": 40,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/menus.py",
+          "symbol": "original_match.port.menus.key_pressed"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 40,
+      "long": false,
+      "module": "original_match.port.menus",
+      "name": "key_pressed",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/menus.py",
+      "pop": 0,
+      "ret": "retf",
+      "return_stack_delta": 0,
+      "sites": []
+    },
+    "214B:08DD": {
+      "address": "214B:08DD",
+      "end_line": 56,
+      "helper_symbols": [
+        {
+          "line": 34,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/menus.py",
+          "symbol": "original_match.port.menus._ret_site"
+        },
+        {
+          "line": 47,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/menus.py",
+          "symbol": "original_match.port.menus.read_key"
+        },
+        {
+          "line": 110,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/restarts.py",
+          "symbol": "original_match.port.restarts._end"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 47,
+      "long": false,
+      "module": "original_match.port.menus",
+      "name": "read_key",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/menus.py",
+      "pop": 0,
+      "ret": "retf",
+      "return_stack_delta": 0,
+      "sites": []
+    },
+    "214B:0983": {
+      "address": "214B:0983",
+      "end_line": 73,
+      "helper_symbols": [
+        {
+          "line": 24,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/menus.py",
+          "symbol": "original_match.port.menus._g"
+        },
+        {
+          "line": 69,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/menus.py",
+          "symbol": "original_match.port.menus.wait_key_clear"
+        },
+        {
+          "line": 110,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/restarts.py",
+          "symbol": "original_match.port.restarts._end"
+        },
+        {
+          "line": 52,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/setup.py",
+          "symbol": "original_match.port.setup.guest"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 69,
+      "long": false,
+      "module": "original_match.port.menus",
+      "name": "wait_key_clear",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/menus.py",
+      "pop": 0,
+      "ret": "retf",
+      "return_stack_delta": 0,
+      "sites": [
+        {
+          "caller": "214B:0983",
+          "expression": "_g(mem, r, '08DD', ret='098A')",
+          "far": true,
+          "line": 71,
+          "ret_to": "214B:098A",
+          "target": "214B:08DD"
+        }
+      ]
+    },
+    "214B:0993": {
+      "address": "214B:0993",
+      "end_line": 65,
+      "helper_symbols": [
+        {
+          "line": 40,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/contests.py",
+          "symbol": "original_match.port.contests.ss8"
+        },
+        {
+          "line": 60,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/menus.py",
+          "symbol": "original_match.port.menus.push_back_key"
+        },
+        {
+          "line": 110,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/restarts.py",
+          "symbol": "original_match.port.restarts._end"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 60,
+      "long": false,
+      "module": "original_match.port.menus",
+      "name": "push_back_key",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/menus.py",
+      "pop": 2,
+      "ret": "retf 2",
+      "return_stack_delta": 0,
+      "sites": []
+    }
+  },
+  "boundaries": [],
+  "guest_sites": [
+    {
+      "caller": "214B:0983",
+      "expression": "_g(mem, r, '08DD', ret='098A')",
+      "far": true,
+      "line": 71,
+      "ret_to": "214B:098A",
+      "target": "214B:08DD"
+    }
+  ],
+  "oracle": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+  "prediction": {
+    "native_bodies": 63,
+    "native_entries": 2688294,
+    "new_native_bodies": 4,
+    "new_native_entries": 78172,
+    "python_entries": 415391,
+    "scope": "unchanged fixture entry prediction only; no speed forecast",
+    "total": 3103685
+  },
+  "profile_sha256": "956c96c8beea5387846718af225c1db293f6f4bb8fc6f06d6eaca08d6d42ca90",
+  "root": "214B:0983",
+  "roots": [
+    "214B:0723",
+    "214B:08DD",
+    "214B:0983",
+    "214B:0993"
+  ],
+  "site_count": 1,
+  "source_sha256": {
+    ".cache/goal2-archaeology/runtime/original_match/port/contests.py": "b4db099959a09a1dcb78f031e9a44dc64624a5ffd8ea7b0be3441298bb0ec40e",
+    ".cache/goal2-archaeology/runtime/original_match/port/engine.py": "6439370e3ffcc5977bb066506431a25a0c300ea374faf28ec3f4fbd9718c6f14",
+    ".cache/goal2-archaeology/runtime/original_match/port/guest.py": "1062b5ea7d72114b5f404485768f6aeca69a5d94ffb0285a31158b266c46de7f",
+    ".cache/goal2-archaeology/runtime/original_match/port/mem.py": "0105113f8102a3e8c3544942a445e156fecc0196f7911089e7f789a7775fe45c",
+    ".cache/goal2-archaeology/runtime/original_match/port/menus.py": "ea87406a9f0300d0d54c3f71d664a8ed2925505fb133b59a481e8fc5f098f053",
+    ".cache/goal2-archaeology/runtime/original_match/port/restarts.py": "c378834575a59d89f31fea8f9ee5ffca7daaf98754a36e848164bb819ad87977",
+    ".cache/goal2-archaeology/runtime/original_match/port/runtime.py": "2e94867069cd6e35c28af96426bfade7dcb381e370eb12af106627cbeeced0eb",
+    ".cache/goal2-archaeology/runtime/original_match/port/setup.py": "0f703063621cd8a96d9ac0acde56da89754aa885a3d94d9333991a115e8185e2"
+  }
+}
