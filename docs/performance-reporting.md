@@ -157,3 +157,28 @@ The medians select different rounds; do not divide independent column medians.
 Use every raw row and report the mixed outcome. The incremental translation's
 predeclared criteria require fidelity and full measurement, without an arbitrary
 5% floor. No regression or sample was discarded. One fixture only.
+
+## T23 selected quiet repeat
+
+Sources:[accepted v2 samples](../out/T23/performance-v2.json),
+[rejected v1](../out/T23/rejected-performance-v1.json) and
+[full assessment](../out/T23/assessment.md). The first entire campaign is retained
+but rejected after late load contaminated its third CPython arm. All three rounds
+were repeated on the unchanged artifact; every arm's load endpoints and sampled
+load now pass the sealed quality checks.
+
+| Round | Saved T22 / PyPy | T23 / PyPy | T23 / saved T22 |
+| --- | ---: | ---: | ---: |
+| 1 | 0.689977418 | 0.678088515 | 0.982769141 |
+| 2 | 0.659502296 | 0.679384548 | 1.030147358 |
+| 3 | 0.661588521 | 0.657466682 | 0.993769784 |
+| Median of per-round ratios | 0.661588521 | 0.678088515 | 0.993769784 |
+
+Selected paired median:0.62% less CPU than saved T22, with two faster
+rounds and one3.01% slower. Repeatable improvement is not established.
+Same-campaign T22 uses33.84% less CPU than
+PyPy and T23 uses32.19% less at their
+independent ratio medians. Each median may select a different row; do not divide
+column medians or infer a trend from earlier campaigns' standalone PyPy gaps.
+No sample was discarded or selectively replaced; full v1 and v2 raw seconds
+are in the assessment. One fixture only; no arbitrary5% translation floor.

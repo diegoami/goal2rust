@@ -72,3 +72,17 @@ If an entire repeat is contaminated, preserve it and repeat all3 rounds with
 argument3(v3 outputs), using the SAME sealed driver; never selectively replace
 an arm/round. Final selection must be a complete quiet campaign. Live status
 remains checkpoint#1.
+
+## Final selection
+
+validate_performance_resume.py2 passes validation-final-v2,selecting the complete
+quiet performance-v2 repeat. All731 primary bindings/263 evidence hashes,two
+additive source/five input bindings and all107 producer groups/controller exits
+pass. Original fidelity/lifecycle/ALL75/F40/profile gates remain unchanged and
+rehash-verified; all v1 samples/ledger/rejection are preserved. Never rerun
+completed producers or overwrite a receipt.
+
+The selected repeat is mixed:two faster rounds,one3.01% slower;paired median
+0.62% less CPU than saved T22. No repeatable improvement claim. Raw selected and
+rejected four-arm seconds/independent medians/quality checks are in assessment.md.
+Live CI/merge/stop state remains checkpoint#1/PR#55.

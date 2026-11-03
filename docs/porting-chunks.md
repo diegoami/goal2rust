@@ -368,3 +368,21 @@ The controlled2cbeb36f engine pin/private T07 inputs stay fixed throughout T23.
 Rust translation, application pipe/ABI adoption, Track A UI and Track B native
 whole-game rules continue as separate gates. No original screenshots/help/game
 assets are copied into this repository.
+
+## T23 final result
+
+[T23](tasks/T23.md) translates062A/0644/06B7 and all seven inventoried source
+body/helper functions; zero registered guest calls. Full prior56/new3 fidelity,
+ordered drive,lifecycle,strict ALL75/F40 and all source/error/callback/control/
+variant/closure assertions pass.59 bodies(13.98% count),2,610,122 native entries
+(84.10% fixture frequency),493,563 Python;no LOC/global test/CPU coverage claim.
+
+The first full timing campaign is retained but rejected because the third
+CPython arm ended under external load. A separately sealed full three-round
+repeat on the unchanged artifact passes pre/post/per-round sampled quietness.
+Its result remains mixed:two faster rounds,one3.01% slower;paired median0.62%
+less CPU than saved T22. Same-campaign independent T22/PyPy0.661589 and
+T23/PyPy0.678089 medians are retained alongside all raw rows. No repeatable
+speed claim or cherry-picked arm. Final-v2 ledger binds731 primary inputs,
+263 evidence hashes and two additive measurement/audit sources;107 process
+groups/controller stopped. Original v1 sources/receipts/ledger remain unchanged.
