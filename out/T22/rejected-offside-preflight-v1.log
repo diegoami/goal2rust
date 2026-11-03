@@ -1,0 +1,1298 @@
+test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) ... 
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=0) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=1) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=2) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=3) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=4) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=5) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=6) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=7) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=8) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=9) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=10) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=11) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=12) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=13) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=14) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=15) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=16) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=17) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=18) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=19) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=20) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=21) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=22) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=23) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=24) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=25) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=26) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=27) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=28) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=29) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=30) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=31) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=32) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=33) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=34) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=35) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=36) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=37) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=38) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=39) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=40) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=41) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=42) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=43) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=44) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=45) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=46) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=47) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=48) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=49) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=50) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=51) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=52) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=53) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=54) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=55) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=56) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=57) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=58) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=59) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=60) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=61) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=62) ... FAIL
+  test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=63) ... FAIL
+test_errors_variants_controls (test_offside.OffsideTests.test_errors_variants_controls) ... ok
+test_individual_guest_return_controls (test_offside.OffsideTests.test_individual_guest_return_controls) ... FAIL
+test_native_callers (test_offside.OffsideTests.test_native_callers) ... 
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=0) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=1) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=2) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=3) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=4) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=5) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=6) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=7) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=8) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=9) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=10) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=11) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=12) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=13) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=14) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=15) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=16) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=17) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=18) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=19) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=20) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=21) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=22) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=23) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=24) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=25) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=26) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=27) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=28) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=29) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=30) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=31) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=32) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=33) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=34) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=35) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=36) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=37) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=38) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=39) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=40) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=41) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=42) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=43) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=44) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=45) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=46) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=47) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=48) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=49) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=50) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=51) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=52) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=53) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=54) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=55) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=56) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=57) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=58) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=59) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=60) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=61) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=62) ... FAIL
+  test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=63) ... FAIL
+test_native_leaves (test_offside.OffsideTests.test_native_leaves) ... ok
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=7)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=8)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=9)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=10)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=11)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=12)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=13)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=14)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=15)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=16)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=17)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=18)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=19)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=20)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=21)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=22)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=23)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=24)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=25)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=26)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=27)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=28)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=29)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=30)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=31)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=32)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=33)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=34)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=35)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=36)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=37)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=38)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=39)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=40)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=41)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=42)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=43)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=44)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=45)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=46)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=47)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=48)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=49)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=50)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=51)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=52)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=53)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=54)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=55)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=56)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=57)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=58)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=59)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=60)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=61)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=62)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_controlled_callers (test_offside.OffsideTests.test_controlled_callers) (root='0791:8CF5', case=63)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 141, in test_controlled_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_individual_guest_return_controls (test_offside.OffsideTests.test_individual_guest_return_controls)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 159, in test_individual_guest_return_controls
+    self.assertIsNone(p['error'],(root,ret,case,p['error']))
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('0791:8CF5', '0791:8D42', 0, ('PortError', 'no registered port/return at 0791:0300'))
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=7)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=8)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=9)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=10)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=11)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=12)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=13)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=14)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=15)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=16)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=17)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=18)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=19)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=20)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=21)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=22)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=23)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=24)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=25)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=26)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=27)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=28)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=29)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=30)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=31)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=32)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=33)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=34)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=35)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=36)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=37)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=38)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=39)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=40)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=41)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=42)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=43)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=44)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=45)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=46)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=47)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=48)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=49)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=50)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=51)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=52)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=53)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=54)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=55)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=56)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=57)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=58)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=59)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=60)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=61)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=62)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+======================================================================
+FAIL: test_native_callers (test_offside.OffsideTests.test_native_callers) (root='0791:8CF5', case=63)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_offside.py", line 134, in test_native_callers
+    self.assertIsNone(p['error'],p['error']);self.assertEqual(p,r);self.assertEqual(n.get(root),1);self.assertTrue(ps['owned']);self.assertFalse(rs['owned'],rs)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('PortError', 'no registered port/return at 0791:0300') is not None : ('PortError', 'no registered port/return at 0791:0300')
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.811s
+
+FAILED (failures=129)

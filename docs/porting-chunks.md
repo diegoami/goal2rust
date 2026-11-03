@@ -277,3 +277,24 @@ No original help, renders or game data are copied here. T158's measured technolo
 engine-boundary/packaging evaluation and the owner decision remain separate,
 alongside explicit GIL/threading/ABI/save/load/cancellation/playtest gates.
 The controlled engine pin and Rust-in-parallel m3 order are unchanged.
+
+## T22 scope and upstream adoption update, 2026-11-03
+
+T22 selects the complete8CF5/8E24/90C5 offside-line/display tree from T21's
+full remaining-work profile. Direction2BE5 is already native. All four guest
+sites remain observable;9,389 entries are predicted to move, with no speed
+forecast. [Task](tasks/T22.md), [inventory](../out/T22/inventory-v1.json).
+
+Upstream goal2 at`c81565c341ea4678680230e6c38324b83677e7f2` now records the
+owner-approved[T158 technology choice](https://github.com/diegoami/goal2/pull/532):
+PySide6 Essentials with the pitch inside the window, grow the Python route and
+retain the Core as test oracle, use one long-lived PyPy engine process over a
+pipe, then adopt the Rust hybrid inside that process once its gates pass.
+Track A(T159-T169) owns UI/protocol; Track B(T170-T175 plus upstream ports) owns
+native whole-game rules. This repository continues Rust translation in parallel.
+T158's independent30-match/platform probes are useful adoption evidence, bound
+to T20; they do not revalidate T22 or replace its exact artifact/corpus gates.
+The hybrid still invokes Python and holds interpreter-dependent state; no UI
+thread/GIL-release guarantee follows. Explicit worker/protocol/save-load/cancel/
+ABI/loading/representative performance and owner engine milestone gates remain.
+Archaeology main2a411f50 is unchanged; controlled oracle2cbeb36f stays fixed.
