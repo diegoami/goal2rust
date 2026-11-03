@@ -1,8 +1,9 @@
 # T24 keyboard-service chunk
 
-Status: all 82 per-body proof stages and the complete ordered drive pass.
-The full remaining-work profile and sealed lifecycle checks also pass. The
-family corpus is running; the performance campaign follows.
+Status: all 82 per-body proof stages, complete ordered drive, full remaining-work
+profile, sealed lifecycle and strict ALL75/F40 gates pass. Timing is in progress;
+external load contaminated its first round, so the entire initial campaign must
+be retained and replaced by a complete quiet campaign on the same artifact.
 Live completion, merge and stop/resume authority remain in checkpoint #1.
 No T24 performance result is available yet.
 
@@ -103,19 +104,30 @@ pass_receiver_destination (35,723) and challenge_duel (35,193). These are
 selection inputs for a future bounded-tree inventory, not a new task or CPU
 speed forecast.
 
-## Remaining completion gates
+## Complete family and lifecycle evidence
 
 All four sealed lifecycle gates (engine, interactive, goals and knockout) pass,
 with 11 independently attested Rust machines and all 63 native bodies.
 
-Strict ALL75/exact-source F40, immutable 10/20/30/60 prefix comparisons, sealed
-family backend attestation are running; the full remaining-work profile passed.
+All 75 admitted corpus records complete without errors and stop at the board.
+Strict ALL and exact-source F40 comparisons pass. Immutable 10/20/30/60 prefix
+snapshots/comparisons pass. Independent family attestation verifies 75 Rust
+machines and all 63 native bodies. The full remaining-work profile also passes.
+
+## Timing and remaining completion gates
+
 Three complete simultaneous rotated saved-T23/candidate/CPython/PyPy rounds
-follow, retaining every sample and regression. From the first campaign, require
+run, retaining every sample and regression. From the first campaign, require
 three original quiet-start observations, every arm's start/end load below four
 and continuous five-second total-load samples below eight. A loaded entire
 campaign is retained and rejected; all three rounds repeat on the unchanged
 artifact. No selected arm replacement or arbitrary incremental 5% gain floor.
+
+Initial v1 round one failed both arm-endpoint and continuous-load quality after
+external host load rose during the round. The controller waits for quiet IT13
+before finishing the remaining original rounds; it must then retain/reject this
+entire campaign and repeat all three rounds. These contaminated partial results
+are not an accepted performance result. No production change or rebuild occurs.
 
 After every writer/controller exits, the process, genuine-capture, historical
 baseline/input and supplemental audits precede the final evidence ledger.
