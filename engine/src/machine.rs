@@ -1293,6 +1293,12 @@ impl MachineCore {
         };
         use crate::geometry as g;
         match address {
+            "23E4:062A"|"23E4:0644"|"23E4:06B7" => {
+                let index=match address{"23E4:062A"=>0,"23E4:0644"=>1,_=>2};
+                crate::pascal::run(&mut h,index)?;
+                if self.mutant==170+index{crate::marking::corrupt(&mut h)?;}
+                if (173..185).contains(&self.mutant) && (self.mutant-173)/4==index{let reg=match (self.mutant-173)%4{0=>Reg::Ax,1=>Reg::Si,2=>Reg::Di,_=>Reg::Eflags};let old=h.reg(reg)?;h.set_reg(reg,old^if reg==Reg::Eflags{0x400}else{0x8000})?;}
+            },
             "0791:8E24" => {let mut value=crate::offside::sprite(&mut h)?;if self.mutant==162{crate::marking::corrupt(&mut h)?;}if self.mutant==164{value^=0x8000;}if self.mutant==165{let dx=h.reg(Reg::Dx)?;h.set_reg(Reg::Dx,dx^0x8000)?;}return Ok(Some(value.into_pyobject(m.py())?.into_any().unbind()));},
             "23E4:0279" => crate::travel::multiply(&mut h)?,
             "0791:2EB8" => crate::chase::goal_strip(&mut h,false)?,
@@ -1427,6 +1433,11 @@ impl Host for NativeHost<'_, '_> {
                 format!("plain-memory read/write outside mapped range: {l}+2"),
             )
         })
+    }
+    fn read_snapshot(&mut self, l: u32, n: usize) -> PyResult<Vec<u8>> {
+        if n>u32::MAX as usize || !mem::in_bounds(l,n as u32){return Err(port_error(self.m.py(),format!("plain-memory read/write outside mapped range: {l}+{n}")));}
+        let bytes=unsafe { self.core.memory.bind(self.m.py()).as_bytes() };
+        bytes.get(l as usize..(l as usize).saturating_add(n)).map(|s|s.to_vec()).ok_or_else(||port_error(self.m.py(),format!("plain-memory read/write outside mapped range: {l}+{n}")))
     }
     fn write(&mut self, l: u32, data: &[u8], at: u32) -> PyResult<()> {
         self.core.write_native(&self.m, l, data, at)

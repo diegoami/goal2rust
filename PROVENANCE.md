@@ -345,3 +345,22 @@ adds shared s8/s16 instrumentation with6,288 scoped/64 variant pairs, separately
 sealed by supplemental-source-inputs-v1 for both proof/audit drivers. Canonical
 sources/artifacts/receipts remain fixed; all91 producer groups/controller stopped.
 Live CI/merge status remains checkpoint#1.
+
+## T23 Pascal string-write chunk (in validation)
+
+At accepted oracle`2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`,
+engine/src/pascal.rs translates runtime.sys_str_store23E4:062A,
+sys_str_store_max23E4:0644 andsys_str_concat23E4:06B7, including their complete
+_copy_forward/str_concat helpers. All seven inventoried source body/helper
+functions are included in the first scoped-closure probe. Zero guest calls;
+retf4 for062A/06B7 despite four input words, retf10 for0644. Variants remain
+Python. The source's disjoint/no-wrap/read-ahead snapshot is retained separately
+from live per-byte overlap/wrap reads, including unmasked helper-entry offsets.
+A pure untapped Host::read_snapshot primitive captures input blocks without
+running Python callbacks while borrowed; existing host paths remain unchanged.
+Regs::cld defers DF clearing to the late flags store and preserves other live
+bits. Inventory and read/write/register/flag/callback contract are in out/T23.
+Actual accepted T22 source/tests/adapter/CPython/PyPy artifacts were preserved
+before builds in.cache/T23-baseline(71 files), after verifying661 primary/230
+old evidence/two supplemental bindings. No original bytes enter git. Full
+combined-artifact fidelity/performance acceptance remains pending.

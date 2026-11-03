@@ -1,0 +1,14 @@
+{
+  "public_cpython": 83,
+  "public_pypy": 83,
+  "new_public": 2,
+  "all_pass": true,
+  "no_canonical_started": true,
+  "live_preflight": {
+    "private_file": ".cache/T23-live-preflight-v1.json",
+    "comparisons": 1280
+  },
+  "public-cpython-preflight-v1.log": "73d14618d9e16ef14650c2e094a95654ee5493eb19fa253f546071ed3f017ad7",
+  "public-pypy-preflight-v1.log": "b634485383209529b66eeea645ffb39cd9a97170614edf9d932d294701b98595",
+  "pascal-preflight-v1.log": "3e62ab7ffa182396fd2b59e5c5c5ff1bceadf1b0571ff3329c5c86158a1d04e2"
+}

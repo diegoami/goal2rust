@@ -328,3 +328,22 @@ Archaeology's new T118a-c documents the route(b) write-set/post-match-news scope
 only task docs changed, not the selected engine semantics. Keep controlled
 2cbeb36f/private T07 inputs for this accepted comparison. Whole-game Track B
 and UI/protocol Track A still proceed independently of Rust translation.
+
+## T23 selected chunk: Pascal string writes
+
+The full T22 profile selects three hot exports sharing runtime._copy_forward:
+23E4:062A assignment,0644 bounded assignment and06B7 concatenation. All complete
+caller/helper trees move together; no registered guest callee remains below them.
+The shared helper's eager read-ahead branch and bytewise live overlap/wrap branch
+are distinct observable semantics. This coherent helper-connected chunk moves
+16,532 fixture entries; no speed forecast. [Task](tasks/T23.md),
+[inventory](../out/T23/inventory-v1.json). The broader commentary/duel roots reach
+larger closures through helper-dispatched call tables, so their literal-call
+counts alone are insufficient to seal a complete tree.
+
+T23 includes every inventory helper in its first closure probe. It also replays
+T22 offside closure with shared s8/s16 in the canonical OWNED set and positive
+source witnesses, preserving the prior additive proof's assertions. Baseline is
+actual accepted T22, preserved before builds; historical .cache/T22-baseline is
+T21. Accepted oracle/upstream heads are unchanged from T22. The current accepted
+counts and mixed T22 measurements remain until T23's full combined campaign.

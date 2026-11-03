@@ -41,6 +41,8 @@ pub trait Host {
     fn u8(&mut self, linear: u32) -> Result<u8, Self::Err>;
     /// The port's own read of a word.
     fn u16(&mut self, linear: u32) -> Result<u16, Self::Err>;
+    /// A port-own, untapped block read: capture bytes before any subsequent callback.
+    fn read_snapshot(&mut self, linear: u32, n: usize) -> Result<Vec<u8>, Self::Err>;
     /// `Machine.write_as(linear, len(data), value, at)`: every listener whose range holds `linear` sees it first.
     fn write(&mut self, linear: u32, data: &[u8], at: u32) -> Result<(), Self::Err>;
     /// `mem.ss_lin(off)`: SS * 16 + (off & 0xFFFF), SS read through `reg` when an io_tap listens.

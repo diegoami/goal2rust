@@ -44,13 +44,17 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
    one1.24% slower, median1.01% less CPU than saved T21; no repeatable gain claim.
    [Assessment](../out/T22/assessment.md). No following task is included; select
    any next closed tree from the full T22 profile in a new session.
-7. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
+7. **T23, in progress:** [Pascal string-write chunk](tasks/T23.md),
+   062A/0644/06B7 and their shared forward-copy/concat helpers. Three complete
+   caller/helper trees, zero guest calls,16,532 predicted moved entries. Full
+   fidelity/paired measurements are pending; accepted figures below remain T22.
+8. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
    dominant, define a separate optimization task. A larger PR alone does not remove
    every Python boundary or common dispatch cost.
-8. **Engine milestone and application adoption:** retain the larger A700 corpus,
+9. **Engine milestone and application adoption:** retain the larger A700 corpus,
    known ref-121 noncompletion and owner review, then worker/save-load/cancellation/
    playtest and representative performance gates. PyPy remains goal2's baseline.
-9. **Whole game later:** tournament, board and career initialization still have
+10. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
 Current coverage is **56/422 registered non-stub bodies (13.27%)**, while **83.56%**
