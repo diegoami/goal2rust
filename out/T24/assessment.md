@@ -131,6 +131,13 @@ are not an accepted performance result. No production change or rebuild occurs.
 
 After every writer/controller exits, the process, genuine-capture, historical
 baseline/input and supplemental audits precede the final evidence ledger.
+An additive profile-reference audit is sealed before execution with one source
+and four input receipts. The canonical profile used an unchanged older T21
+comparison receipt that was not directly in the primary input list. The audit
+binds it to its accepted ledger/tree and independently checks all profile
+observations and native counts against fresh T24 Python/Rust receipts. The
+original 852 primary bindings and 59 canonical proof sources remain unchanged.
+Final evidence and the merged audit must include/check this supplemental proof.
 Exact-head CI, squash merge, green main CI and the merged binding audit/checkpoint
 are required. Final measurements and ledgers will be reported here after they
 complete. No following task has been selected.

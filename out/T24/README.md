@@ -60,8 +60,17 @@ profile gates and complete versioned timing campaigns. All run on the same fixed
 artifacts. Expected producer groups:87 canonical plus12 per timing campaign.
 
 After every writer exits,run in the actual host namespace:process_closure.py,
-capture_input_audit.py,post_exit_audit.py,baseline_input_audit.py,then
+capture_input_audit.py,profile_reference_audit.py,post_exit_audit.py,baseline_input_audit.py,then
 validate.py out/T24/validation-final-v1.json. Never run final indexing while
 writers remain. The capture audit separately checks the three historical capture
 PIDs and the accepted47-source historical mapping. Final docs/CI/merge/main CI/
 merged-binding audit/checkpoint remain required by docs/tasks/T24.md.
+
+The additive profile_reference_audit.py is sealed by
+supplemental-source-inputs-v1.json(one source/four immutable input receipts),
+without editing the852 primary bindings or59 canonical proof/audit sources.
+It verifies the historical T21 profile comparator against its accepted ledger
+and accepted main tree,and independently checks profile observations/native
+counts against fresh T24 Python/Rust receipts. Run after process closure and
+before final validation;never overwrite the manifest/audit receipt. The final
+evidence ledger and merged audit must bind and check both supplemental files.
