@@ -1,0 +1,9 @@
+denied: unicorn, .sav, .EXE, .DAT
+parent-live {'comparisons': 160, 'hits': {'fresh-parent-far-pointer': 240}, 'effect_witnesses': 160}
+actual-bank {'comparisons': 160, 'hits': {'actual-AX-after-captured-SENT': 160}, 'effect_witnesses': 160}
+root-cached-local-ss {'comparisons': 160, 'hits': {'captured-AL-cached-stack-SS': 160, 'restored-return-ss': 160}, 'effect_witnesses': 160}
+leaf-args-captured {'comparisons': 160, 'hits': {'captured-word-and-far-pointer': 526}, 'effect_witnesses': 160}
+direction-live {'comparisons': 160, 'hits': {'live-direction-after-args': 160}, 'effect_witnesses': 160}
+flags-live {'comparisons': 160, 'hits': {'preserved-live-flags': 526}, 'effect_witnesses': 160}
+split-point-pointer {'comparisons': 160, 'hits': {'captured-point-new-far-pointer': 20}, 'effect_witnesses': 20}
+captured-parent-di {'comparisons': 160, 'hits': {'captured-parent-DI-during-offset-read': 80}, 'effect_witnesses': 80}
