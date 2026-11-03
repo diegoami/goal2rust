@@ -1,0 +1,23 @@
+{
+  "accepted_for_performance": false,
+  "reason": "Third-round CPython arm ended during external host load; complete four-arm campaign not quiet.",
+  "campaign": "performance-v1.json",
+  "round": 3,
+  "arm": "python",
+  "load_before": [
+    0.9599609375,
+    1.837890625,
+    3.48095703125
+  ],
+  "load_after": [
+    19.88623046875,
+    11.27734375,
+    6.8486328125
+  ],
+  "drive_cpu_s": 243.729066469,
+  "drive_wall_s": 246.29327321399978,
+  "all_three_rounds_preserved": true,
+  "repeat_entire_three_round_campaign": true,
+  "no_production_change": true,
+  "original_validator_limitation": "v1 checks pre-round quiet observations only; late interference found in final load audit"
+}
