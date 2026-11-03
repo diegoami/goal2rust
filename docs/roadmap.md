@@ -576,3 +576,12 @@ Rust-in-parallel m3 order remain. See [adoption update](porting-chunks.md#upstre
 Upstream now approved the T158 long-lived PyPy engine process over a pipe, with
 the Rust hybrid adopted inside it later after its gates. Track A owns UI/process
 protocol; Track B owns native whole-game rules. See the [T22 upstream update](porting-chunks.md#t22-scope-and-upstream-adoption-update-2026-11-03).
+
+During T24, goal2 `e44a66fe` adds the T170 whole-season task contract, dependent
+on archaeology T123 **and the new T124 round-end ports**. Archaeology `82984287`
+splits the route harness into T119a/b and adds stage dispatch/builders/news as
+explicit missing scope. These are plans and static findings; no selected
+match-engine runtime change appears in either upstream diff. Keep T24 frozen
+and its oracle pinned. Future whole-game adoption requires the round-end proofs
+as well as route continuation; the match-engine body/entry counts are not a
+whole-game denominator. See the [dependency update](porting-chunks.md#upstream-whole-season-dependency-update-during-t24).

@@ -408,3 +408,31 @@ and sealed route handover;T118c's behavioral corroboration folds intoT119.
 These task docs do not change selected runtime/original_match/port semantics.
 Keep controlled2cbeb36f/private T07 inputs and Rust-in-parallel scope. No original
 screens/help/game assets copied. Application/route/UI/ABI/GIL gates remain apart.
+
+## Upstream whole-season dependency update during T24
+
+Rechecked goal2 `e44a66fe2f3724086ba0e722d5c6468394cf62e8` and archaeology
+`8298428759ce47f848981d30e90333bbf98493e7`. Goal2's
+[T170 season plan](https://github.com/diegoami/goal2/blob/e44a66fe2f3724086ba0e722d5c6468394cf62e8/docs/tasks/T170.md)
+depends on upstream T123 **and T124**. This commit adds the task contract;
+it does not implement a season on the Python route. New qualifier-viewing and
+fixtures/history work is also planned; T164 desk/team-info UI is implemented.
+The changed-file comparison contains no selected match-engine runtime changes.
+
+Archaeology split the route harness into
+[T119a](https://github.com/diegoami/goal2-archaeology/blob/8298428759ce47f848981d30e90333bbf98493e7/docs/tasks/T119a.md)
+(harness) and T119b (recorded runs, incorporating T118c). Its proposed
+`Match(tail=False)` split must retain the existing default behavior. The harness
+owns first-poll answers and ordered writes/RNG/key-site records; that future
+policy does not replace T24's pinned kit callbacks.
+
+[T124](https://github.com/diegoami/goal2-archaeology/blob/8298428759ce47f848981d30e90333bbf98493e7/docs/tasks/T124.md)
+adds the previously missing round-end scope: stage dispatch, six builders and
+remaining stage-news helpers. It must split into bounded builder tasks and prove
+draw order as well as the calendar. Yearly ageing/retirement remains separate.
+The new merged archaeology work is static sacking/write-set evidence and task
+design, not changes to the selected runtime port. The controlled T24 artifact
+and oracle stay fixed. Broader whole-game adoption must include these upstream
+dependencies; the current 422-body match-engine denominator is not a whole-game
+completion estimate. Select the next native chunk separately from T24's fresh
+profile, after T24 completes all acceptance and merge gates.

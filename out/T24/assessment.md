@@ -1,8 +1,8 @@
 # T24 keyboard-service chunk
 
 Status: all 82 per-body proof stages and the complete ordered drive pass.
-The full remaining-work profile also passes. Family and lifecycle checks are
-running; the performance campaign follows.
+The full remaining-work profile and sealed lifecycle checks also pass. The
+family corpus is running; the performance campaign follows.
 Live completion, merge and stop/resume authority remain in checkpoint #1.
 No T24 performance result is available yet.
 
@@ -105,8 +105,11 @@ speed forecast.
 
 ## Remaining completion gates
 
+All four sealed lifecycle gates (engine, interactive, goals and knockout) pass,
+with 11 independently attested Rust machines and all 63 native bodies.
+
 Strict ALL75/exact-source F40, immutable 10/20/30/60 prefix comparisons, sealed
-lifecycle/backend attestation are running; the full remaining-work profile passed.
+family backend attestation are running; the full remaining-work profile passed.
 Three complete simultaneous rotated saved-T23/candidate/CPython/PyPy rounds
 follow, retaining every sample and regression. From the first campaign, require
 three original quiet-start observations, every arm's start/end load below four
@@ -129,3 +132,10 @@ Engine A700/ref-121 and the owner-run milestone review, issue 6, application pip
 GIL/threading, target ABI/loading, save/load, cancellation and playtest gates
 remain separate. Upstream's new first-key-poll decision concerns the separate
 whole-game news harness; it does not change the pinned match-engine boundary.
+
+The final-phase upstream check found goal2 `e44a66fe` and archaeology `82984287`:
+new whole-season T170 requires T123 and the newly identified T124 round-end
+stage builders/news. T119 is now split into harness and recorded-run tasks.
+These commits add plans/static evidence and UI work; the selected runtime port
+is unchanged. The broader roadmap now includes these missing dependencies,
+while T24's frozen artifact and accepted oracle remain fixed.
