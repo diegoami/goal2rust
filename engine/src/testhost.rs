@@ -73,6 +73,10 @@ impl Host for TestHost {
     fn u16(&mut self, linear: u32) -> Result<u16, String> {
         mem::u16_at(&self.memory, linear).ok_or_else(|| format!("out of range {linear}+2"))
     }
+    fn read_snapshot(&mut self, linear: u32, n: usize) -> Result<Vec<u8>,String> {
+        if n>u32::MAX as usize || !mem::in_bounds(linear,n as u32){return Err(format!("out of range {linear}+{n}"));}
+        self.memory.get(linear as usize..(linear as usize).saturating_add(n)).map(|s|s.to_vec()).ok_or_else(||format!("out of range {linear}+{n}"))
+    }
     fn write(&mut self, linear: u32, data: &[u8], at: u32) -> Result<(), String> {
         if !mem::put(&mut self.memory, linear, data) {
             return Err(format!("out of range {linear}+{}", data.len()));

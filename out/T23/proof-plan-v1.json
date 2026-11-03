@@ -1,0 +1,375 @@
+{
+  "real_captures_per_body": 8,
+  "authored_per_body": 500,
+  "observer_modes": 4,
+  "normal_comparisons": 6288,
+  "body_control_comparisons": 6288,
+  "output_control_comparisons": 25152,
+  "guest_sites": 0,
+  "branch_comparisons": 480,
+  "cases_per_error_selector": 160,
+  "error_execution_rows": 75,
+  "distinct_error_selectors": 75,
+  "error_comparisons": 12000,
+  "errors": {
+    "23E4:062A": [
+      {
+        "selector": "23E4:062A",
+        "controlled": false
+      },
+      {
+        "selector": "read-index:1",
+        "controlled": false
+      },
+      {
+        "selector": "read-index:2",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ax",
+        "controlled": false
+      },
+      {
+        "selector": "reg:bp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:cs",
+        "controlled": false
+      },
+      {
+        "selector": "reg:eflags",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ip",
+        "controlled": false
+      },
+      {
+        "selector": "reg:sp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ss",
+        "controlled": false
+      },
+      {
+        "selector": "write",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:1",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:10",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:128",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:16",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:17",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:2",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:255",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:256",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:3",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:65",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:8",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:9",
+        "controlled": false
+      },
+      {
+        "selector": "write:23E4:0638",
+        "controlled": false
+      },
+      {
+        "selector": "write:23E4:063D",
+        "controlled": false
+      }
+    ],
+    "23E4:0644": [
+      {
+        "selector": "23E4:0644",
+        "controlled": false
+      },
+      {
+        "selector": "read-index:1",
+        "controlled": false
+      },
+      {
+        "selector": "read-index:2",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ax",
+        "controlled": false
+      },
+      {
+        "selector": "reg:bp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:cs",
+        "controlled": false
+      },
+      {
+        "selector": "reg:eflags",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ip",
+        "controlled": false
+      },
+      {
+        "selector": "reg:sp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ss",
+        "controlled": false
+      },
+      {
+        "selector": "write",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:1",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:10",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:128",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:16",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:17",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:2",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:255",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:256",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:3",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:65",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:8",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:9",
+        "controlled": false
+      },
+      {
+        "selector": "write:23E4:065C",
+        "controlled": false
+      },
+      {
+        "selector": "write:23E4:0661",
+        "controlled": false
+      }
+    ],
+    "23E4:06B7": [
+      {
+        "selector": "23E4:06B7",
+        "controlled": false
+      },
+      {
+        "selector": "read-index:1",
+        "controlled": false
+      },
+      {
+        "selector": "read-index:2",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ax",
+        "controlled": false
+      },
+      {
+        "selector": "reg:bp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:cs",
+        "controlled": false
+      },
+      {
+        "selector": "reg:eflags",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ip",
+        "controlled": false
+      },
+      {
+        "selector": "reg:sp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ss",
+        "controlled": false
+      },
+      {
+        "selector": "write",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:1",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:10",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:128",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:16",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:17",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:2",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:255",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:3",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:65",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:8",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:9",
+        "controlled": false
+      },
+      {
+        "selector": "write:23E4:06CA",
+        "controlled": false
+      },
+      {
+        "selector": "write:23E4:06CF",
+        "controlled": false
+      },
+      {
+        "selector": "write:23E4:06DC",
+        "controlled": false
+      }
+    ]
+  },
+  "variants": {},
+  "observed_maxima": {
+    "23E4:062A": {
+      "max_writes": 256,
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        8,
+        9,
+        10,
+        16,
+        17,
+        65,
+        128,
+        255,
+        256
+      ]
+    },
+    "23E4:0644": {
+      "max_writes": 256,
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        8,
+        9,
+        10,
+        16,
+        17,
+        65,
+        128,
+        255,
+        256
+      ]
+    },
+    "23E4:06B7": {
+      "max_writes": 255,
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        8,
+        9,
+        10,
+        16,
+        17,
+        65,
+        128,
+        255
+      ]
+    }
+  }
+}

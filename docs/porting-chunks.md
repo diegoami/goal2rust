@@ -328,3 +328,61 @@ Archaeology's new T118a-c documents the route(b) write-set/post-match-news scope
 only task docs changed, not the selected engine semantics. Keep controlled
 2cbeb36f/private T07 inputs for this accepted comparison. Whole-game Track B
 and UI/protocol Track A still proceed independently of Rust translation.
+
+## T23 selected chunk: Pascal string writes
+
+The full T22 profile selects three hot exports sharing runtime._copy_forward:
+23E4:062A assignment,0644 bounded assignment and06B7 concatenation. All complete
+caller/helper trees move together; no registered guest callee remains below them.
+The shared helper's eager read-ahead branch and bytewise live overlap/wrap branch
+are distinct observable semantics. This coherent helper-connected chunk moves
+16,532 fixture entries; no speed forecast. [Task](tasks/T23.md),
+[inventory](../out/T23/inventory-v1.json). The broader commentary/duel roots reach
+larger closures through helper-dispatched call tables, so their literal-call
+counts alone are insufficient to seal a complete tree.
+
+T23 includes every inventory helper in its first closure probe. It also replays
+T22 offside closure with shared s8/s16 in the canonical OWNED set and positive
+source witnesses, preserving the prior additive proof's assertions. Baseline is
+actual accepted T22, preserved before builds; historical .cache/T22-baseline is
+T21. Accepted oracle/upstream heads are unchanged from T22. The current accepted
+counts and mixed T22 measurements remain until T23's full combined campaign.
+
+## Upstream progress during T23 validation
+
+Goal2 main`b755eb67f04fac41f7fafd7d7e342088ce3db8c8` merged the
+[T162 UI foundation](https://github.com/diegoami/goal2/pull/544): shared theme,
+VGA font, screen stack, data import and original-help presentation. T163(start/
+new game) andT165(squad/tactics) are the next UI work. The owner explicitly
+leaves Python-route bulletins awaiting Track B's news port and the assistant
+awaiting its port. These are whole-game/UI dependencies, not a reason to change
+this engine translation or claim those features exist here.
+
+Archaeology main`4f40e9995a3e167bf1da146c6a77139615613d14` merged
+[T118a/#642](https://github.com/diegoami/goal2-archaeology/pull/642), the static
+played-fixture write-set inventory/listing checks and proposed F039 findings.
+Post-match news/sacking work is split into T118b1/b2, followed by behavioral
+corroboration T118c. The changed files are findings/specs/static annotations/
+task docs/write-set tests; selected runtime/original_match/port code is unchanged.
+The controlled2cbeb36f engine pin/private T07 inputs stay fixed throughout T23.
+Rust translation, application pipe/ABI adoption, Track A UI and Track B native
+whole-game rules continue as separate gates. No original screenshots/help/game
+assets are copied into this repository.
+
+## T23 final result
+
+[T23](tasks/T23.md) translates062A/0644/06B7 and all seven inventoried source
+body/helper functions; zero registered guest calls. Full prior56/new3 fidelity,
+ordered drive,lifecycle,strict ALL75/F40 and all source/error/callback/control/
+variant/closure assertions pass.59 bodies(13.98% count),2,610,122 native entries
+(84.10% fixture frequency),493,563 Python;no LOC/global test/CPU coverage claim.
+
+The first full timing campaign is retained but rejected because the third
+CPython arm ended under external load. A separately sealed full three-round
+repeat on the unchanged artifact passes pre/post/per-round sampled quietness.
+Its result remains mixed:two faster rounds,one3.01% slower;paired median0.62%
+less CPU than saved T22. Same-campaign independent T22/PyPy0.661589 and
+T23/PyPy0.678089 medians are retained alongside all raw rows. No repeatable
+speed claim or cherry-picked arm. Final-v2 ledger binds731 primary inputs,
+263 evidence hashes and two additive measurement/audit sources;107 process
+groups/controller stopped. Original v1 sources/receipts/ledger remain unchanged.

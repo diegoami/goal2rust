@@ -138,6 +138,12 @@ impl<'py> Host for PyHost<'py> {
         mem::u16_at(s, linear).ok_or_else(|| bounds_error(self.py, linear, 2))
     }
 
+    fn read_snapshot(&mut self, linear: u32, n: usize) -> PyResult<Vec<u8>> {
+        if n>u32::MAX as usize || !mem::in_bounds(linear,n as u32){return Err(bounds_error(self.py,linear,n as u32));}
+        let bytes=unsafe { self.memory.as_bytes() };
+        bytes.get(linear as usize..(linear as usize).saturating_add(n)).map(|s|s.to_vec()).ok_or_else(||bounds_error(self.py,linear,n as u32))
+    }
+
     fn write(&mut self, linear: u32, data: &[u8], at: u32) -> PyResult<()> {
         let size = data.len() as u32;
         if !mem::in_bounds(linear, size) {

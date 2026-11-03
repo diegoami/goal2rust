@@ -1,0 +1,19 @@
+{
+  "source_sha256": {
+    "out/T23/performance_resume.py": "02ac25049ff6fa688eeeb816f5dd32c6a358a339af07f5d7e36e92b82e16c2ce",
+    "out/T23/validate_performance_resume.py": "b4988f00896971eb04deb725053ce9db1a70fbdf0dff3847c661bb4fecb3186c"
+  },
+  "input_sha256": {
+    "out/T23/freeze-v1.json": "8d581d133f598bd71776f52084dc2aaeed5417e6b825af5351c4cf198d71506d",
+    "out/T23/validation-final-v1.json": "629df8257e4890fcf968a34066b558820c71758f4025c7631fc3b8754a30d86d",
+    "out/T23/performance-v1.json": "9cc174051cf66a16ceb551dadbc2cb58c792a0b6c8ec84af7d3f57616b6cf6a9",
+    "out/T23/process-closure-v1.json": "2d0051042f0e4f7df17cccb9ffb97962e0555dd715c5a41803b64f8934552d83",
+    "out/T23/rejected-performance-v1.json": "bd0adf8b45028985c31ee4e6c5e69aac8c090ac1bedf5f869d4d2eb919265696"
+  },
+  "primary_binding_count": 731,
+  "no_production_change": true,
+  "repeat_all_three_four_arm_rounds": true,
+  "quiet_start_and_every_arm_end_max_first2_below4": true,
+  "continuous_load_max_first2_below8": true,
+  "continuous_load_reason": "Records every five seconds; ceiling8 allows up to four owned arms plus the original pre-round load budget. All per-arm before/after samples must additionally stay below4."
+}

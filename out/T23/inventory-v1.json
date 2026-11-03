@@ -1,0 +1,143 @@
+{
+  "bodies": {
+    "23E4:062A": {
+      "address": "23E4:062A",
+      "end_line": 1158,
+      "helper_symbols": [
+        {
+          "line": 314,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime._copy_forward"
+        },
+        {
+          "line": 56,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.args"
+        },
+        {
+          "line": 51,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.entry_sp"
+        },
+        {
+          "line": 1146,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.sys_str_store"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 1146,
+      "long": false,
+      "module": "original_match.port.runtime",
+      "name": "sys_str_store",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+      "pop": 4,
+      "ret": "retf 4",
+      "return_stack_delta": 0,
+      "sites": []
+    },
+    "23E4:0644": {
+      "address": "23E4:0644",
+      "end_line": 1176,
+      "helper_symbols": [
+        {
+          "line": 314,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime._copy_forward"
+        },
+        {
+          "line": 56,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.args"
+        },
+        {
+          "line": 51,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.entry_sp"
+        },
+        {
+          "line": 1162,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.sys_str_store_max"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 1162,
+      "long": false,
+      "module": "original_match.port.runtime",
+      "name": "sys_str_store_max",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+      "pop": 10,
+      "ret": "retf 0xa",
+      "return_stack_delta": 0,
+      "sites": []
+    },
+    "23E4:06B7": {
+      "address": "23E4:06B7",
+      "end_line": 1236,
+      "helper_symbols": [
+        {
+          "line": 314,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime._copy_forward"
+        },
+        {
+          "line": 56,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.args"
+        },
+        {
+          "line": 51,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.entry_sp"
+        },
+        {
+          "line": 1213,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.str_concat"
+        },
+        {
+          "line": 1229,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.sys_str_concat"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 1229,
+      "long": false,
+      "module": "original_match.port.runtime",
+      "name": "sys_str_concat",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+      "pop": 4,
+      "ret": "retf 4",
+      "return_stack_delta": 0,
+      "sites": []
+    }
+  },
+  "boundaries": [],
+  "guest_sites": [],
+  "oracle": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+  "prediction": {
+    "native_bodies": 59,
+    "native_entries": 2610122,
+    "new_native_bodies": 3,
+    "new_native_entries": 16532,
+    "python_entries": 493563,
+    "scope": "unchanged fixture entry prediction only; no speed forecast",
+    "total": 3103685
+  },
+  "profile_sha256": "5fff72aeebfccdddab5356b0a023144f2df6ea228f75f22f962da5463db31e46",
+  "root": "23E4:062A",
+  "roots": [
+    "23E4:062A",
+    "23E4:0644",
+    "23E4:06B7"
+  ],
+  "site_count": 0,
+  "source_sha256": {
+    ".cache/goal2-archaeology/runtime/original_match/port/engine.py": "6439370e3ffcc5977bb066506431a25a0c300ea374faf28ec3f4fbd9718c6f14",
+    ".cache/goal2-archaeology/runtime/original_match/port/guest.py": "1062b5ea7d72114b5f404485768f6aeca69a5d94ffb0285a31158b266c46de7f",
+    ".cache/goal2-archaeology/runtime/original_match/port/mem.py": "0105113f8102a3e8c3544942a445e156fecc0196f7911089e7f789a7775fe45c",
+    ".cache/goal2-archaeology/runtime/original_match/port/runtime.py": "2e94867069cd6e35c28af96426bfade7dcb381e370eb12af106627cbeeced0eb"
+  }
+}
