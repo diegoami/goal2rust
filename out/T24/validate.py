@@ -254,6 +254,7 @@ for campaign in campaigns:
   for arm in ['baseline','candidate','python','pypy']:
    row=load(f"cpu-{arm}-r{rnd}-{campaign['version']}");assert row['source_unchanged']
    for path,h in row['source_sha256'].items():assert sha(e.BASE/path)==h
+assert load('capture-input-audit-v1')['pass_all']
 result=dict(pass_all=True,new_error_comparisons=12320,new_distinct_error_selectors=77,selected_performance_version=version,prior_chase_error_comparisons=15840,prior_depth_error_comparisons=20160,all_writers_finished=True,comparisons=comparisons,attestation=attest,performance_ratios=ratios,median_performance_ratio=statistics.median(ratios),incremental_port_no_magnitude_minimum=True,all_rounds_improve=all(r<1 for r in ratios),
  evidence_sha256={str(p.relative_to(out)):sha(p) for p in sorted(out.rglob('*')) if p.is_file() and p.suffix in ['.json','.jsonl','.log','.txt','.prof'] and not p.name.startswith('validation-')})
 e.write(sys.argv[1],result,e.hashes());print('T24 fidelity, complete measurements and closed source/binary/input/evidence gates pass')
