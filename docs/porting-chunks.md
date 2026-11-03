@@ -347,3 +347,24 @@ source witnesses, preserving the prior additive proof's assertions. Baseline is
 actual accepted T22, preserved before builds; historical .cache/T22-baseline is
 T21. Accepted oracle/upstream heads are unchanged from T22. The current accepted
 counts and mixed T22 measurements remain until T23's full combined campaign.
+
+## Upstream progress during T23 validation
+
+Goal2 main`b755eb67f04fac41f7fafd7d7e342088ce3db8c8` merged the
+[T162 UI foundation](https://github.com/diegoami/goal2/pull/544): shared theme,
+VGA font, screen stack, data import and original-help presentation. T163(start/
+new game) andT165(squad/tactics) are the next UI work. The owner explicitly
+leaves Python-route bulletins awaiting Track B's news port and the assistant
+awaiting its port. These are whole-game/UI dependencies, not a reason to change
+this engine translation or claim those features exist here.
+
+Archaeology main`4f40e9995a3e167bf1da146c6a77139615613d14` merged
+[T118a/#642](https://github.com/diegoami/goal2-archaeology/pull/642), the static
+played-fixture write-set inventory/listing checks and proposed F039 findings.
+Post-match news/sacking work is split into T118b1/b2, followed by behavioral
+corroboration T118c. The changed files are findings/specs/static annotations/
+task docs/write-set tests; selected runtime/original_match/port code is unchanged.
+The controlled2cbeb36f engine pin/private T07 inputs stay fixed throughout T23.
+Rust translation, application pipe/ABI adoption, Track A UI and Track B native
+whole-game rules continue as separate gates. No original screenshots/help/game
+assets are copied into this repository.
