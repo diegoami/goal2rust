@@ -1,0 +1,507 @@
+{
+  "bodies": {
+    "214B:00FF": {
+      "address": "214B:00FF",
+      "end_line": 630,
+      "helper_symbols": [
+        {
+          "line": 35,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/contests.py",
+          "symbol": "original_match.port.contests.ss16"
+        },
+        {
+          "line": 600,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+          "symbol": "original_match.port.display._text_cells"
+        },
+        {
+          "line": 628,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+          "symbol": "original_match.port.display.text_cells_forward"
+        },
+        {
+          "line": 110,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/restarts.py",
+          "symbol": "original_match.port.restarts._end"
+        },
+        {
+          "line": 90,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/setup.py",
+          "symbol": "original_match.port.setup.w16"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 628,
+      "long": false,
+      "module": "original_match.port.display",
+      "name": "text_cells_forward",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "pop": 12,
+      "ret": "retf 12",
+      "return_stack_delta": 0,
+      "sites": []
+    },
+    "214B:0123": {
+      "address": "214B:0123",
+      "end_line": 636,
+      "helper_symbols": [
+        {
+          "line": 35,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/contests.py",
+          "symbol": "original_match.port.contests.ss16"
+        },
+        {
+          "line": 600,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+          "symbol": "original_match.port.display._text_cells"
+        },
+        {
+          "line": 634,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+          "symbol": "original_match.port.display.text_cells_backward"
+        },
+        {
+          "line": 110,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/restarts.py",
+          "symbol": "original_match.port.restarts._end"
+        },
+        {
+          "line": 90,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/setup.py",
+          "symbol": "original_match.port.setup.w16"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 634,
+      "long": false,
+      "module": "original_match.port.display",
+      "name": "text_cells_backward",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "pop": 12,
+      "ret": "ret 12",
+      "return_stack_delta": 0,
+      "sites": []
+    },
+    "214B:01A3": {
+      "address": "214B:01A3",
+      "end_line": 686,
+      "helper_symbols": [
+        {
+          "line": 35,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/contests.py",
+          "symbol": "original_match.port.contests.ss16"
+        },
+        {
+          "line": 639,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+          "symbol": "original_match.port.display._string_cells"
+        },
+        {
+          "line": 684,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+          "symbol": "original_match.port.display.string_at_attr"
+        },
+        {
+          "line": 62,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/geometry.py",
+          "symbol": "original_match.port.geometry.mul"
+        },
+        {
+          "line": 110,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/restarts.py",
+          "symbol": "original_match.port.restarts._end"
+        },
+        {
+          "line": 66,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/setup.py",
+          "symbol": "original_match.port.setup.farg"
+        },
+        {
+          "line": 52,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/setup.py",
+          "symbol": "original_match.port.setup.guest"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 684,
+      "long": false,
+      "module": "original_match.port.display",
+      "name": "string_at_attr",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "pop": 12,
+      "ret": "retf 12",
+      "return_stack_delta": 0,
+      "sites": [
+        {
+          "caller": "214B:01A3",
+          "far": true,
+          "helper": "display._string_cells",
+          "line": 644,
+          "ret_to": "214B:01BE",
+          "target": "23E4:0644"
+        },
+        {
+          "caller": "214B:01A3",
+          "far": false,
+          "helper": "display._string_cells",
+          "line": 683,
+          "ret_to": "214B:01FF",
+          "target": "214B:0123"
+        }
+      ],
+      "specialized_helper": {
+        "attribute_site": null,
+        "backwards": true,
+        "copied_ret": "214B:01BE",
+        "set_attr": false,
+        "symbol": "original_match.port.display._string_cells",
+        "written_ret": "214B:01FF"
+      }
+    },
+    "214B:0205": {
+      "address": "214B:0205",
+      "end_line": 692,
+      "helper_symbols": [
+        {
+          "line": 35,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/contests.py",
+          "symbol": "original_match.port.contests.ss16"
+        },
+        {
+          "line": 639,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+          "symbol": "original_match.port.display._string_cells"
+        },
+        {
+          "line": 690,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+          "symbol": "original_match.port.display.string_at_set_attr"
+        },
+        {
+          "line": 62,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/geometry.py",
+          "symbol": "original_match.port.geometry.mul"
+        },
+        {
+          "line": 110,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/restarts.py",
+          "symbol": "original_match.port.restarts._end"
+        },
+        {
+          "line": 66,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/setup.py",
+          "symbol": "original_match.port.setup.farg"
+        },
+        {
+          "line": 52,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/setup.py",
+          "symbol": "original_match.port.setup.guest"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 690,
+      "long": false,
+      "module": "original_match.port.display",
+      "name": "string_at_set_attr",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "pop": 14,
+      "ret": "retf 14",
+      "return_stack_delta": 0,
+      "sites": [
+        {
+          "caller": "214B:0205",
+          "far": true,
+          "helper": "display._string_cells",
+          "line": 644,
+          "ret_to": "214B:0220",
+          "target": "23E4:0644"
+        },
+        {
+          "caller": "214B:0205",
+          "far": false,
+          "helper": "display._string_cells",
+          "line": 683,
+          "ret_to": "214B:0267",
+          "target": "214B:0123"
+        }
+      ],
+      "specialized_helper": {
+        "attribute_site": "214B:0223",
+        "backwards": true,
+        "copied_ret": "214B:0220",
+        "set_attr": true,
+        "symbol": "original_match.port.display._string_cells",
+        "written_ret": "214B:0267"
+      }
+    },
+    "214B:026D": {
+      "address": "214B:026D",
+      "end_line": 698,
+      "helper_symbols": [
+        {
+          "line": 35,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/contests.py",
+          "symbol": "original_match.port.contests.ss16"
+        },
+        {
+          "line": 639,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+          "symbol": "original_match.port.display._string_cells"
+        },
+        {
+          "line": 696,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+          "symbol": "original_match.port.display.string_forward_attr"
+        },
+        {
+          "line": 62,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/geometry.py",
+          "symbol": "original_match.port.geometry.mul"
+        },
+        {
+          "line": 110,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/restarts.py",
+          "symbol": "original_match.port.restarts._end"
+        },
+        {
+          "line": 66,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/setup.py",
+          "symbol": "original_match.port.setup.farg"
+        },
+        {
+          "line": 52,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/setup.py",
+          "symbol": "original_match.port.setup.guest"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 696,
+      "long": false,
+      "module": "original_match.port.display",
+      "name": "string_forward_attr",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "pop": 12,
+      "ret": "retf 12",
+      "return_stack_delta": 0,
+      "sites": [
+        {
+          "caller": "214B:026D",
+          "far": true,
+          "helper": "display._string_cells",
+          "line": 644,
+          "ret_to": "214B:0288",
+          "target": "23E4:0644"
+        },
+        {
+          "caller": "214B:026D",
+          "far": true,
+          "helper": "display._string_cells",
+          "line": 683,
+          "ret_to": "214B:02C2",
+          "target": "214B:00FF"
+        }
+      ],
+      "specialized_helper": {
+        "attribute_site": null,
+        "backwards": false,
+        "copied_ret": "214B:0288",
+        "set_attr": false,
+        "symbol": "original_match.port.display._string_cells",
+        "written_ret": "214B:02C2"
+      }
+    },
+    "214B:02C8": {
+      "address": "214B:02C8",
+      "end_line": 704,
+      "helper_symbols": [
+        {
+          "line": 35,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/contests.py",
+          "symbol": "original_match.port.contests.ss16"
+        },
+        {
+          "line": 639,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+          "symbol": "original_match.port.display._string_cells"
+        },
+        {
+          "line": 702,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+          "symbol": "original_match.port.display.string_forward_set_attr"
+        },
+        {
+          "line": 62,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/geometry.py",
+          "symbol": "original_match.port.geometry.mul"
+        },
+        {
+          "line": 110,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/restarts.py",
+          "symbol": "original_match.port.restarts._end"
+        },
+        {
+          "line": 66,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/setup.py",
+          "symbol": "original_match.port.setup.farg"
+        },
+        {
+          "line": 52,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/setup.py",
+          "symbol": "original_match.port.setup.guest"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 702,
+      "long": false,
+      "module": "original_match.port.display",
+      "name": "string_forward_set_attr",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "pop": 14,
+      "ret": "retf 14",
+      "return_stack_delta": 0,
+      "sites": [
+        {
+          "caller": "214B:02C8",
+          "far": true,
+          "helper": "display._string_cells",
+          "line": 644,
+          "ret_to": "214B:02E3",
+          "target": "23E4:0644"
+        },
+        {
+          "caller": "214B:02C8",
+          "far": true,
+          "helper": "display._string_cells",
+          "line": 683,
+          "ret_to": "214B:0323",
+          "target": "214B:00FF"
+        }
+      ],
+      "specialized_helper": {
+        "attribute_site": "214B:02E6",
+        "backwards": false,
+        "copied_ret": "214B:02E3",
+        "set_attr": true,
+        "symbol": "original_match.port.display._string_cells",
+        "written_ret": "214B:0323"
+      }
+    }
+  },
+  "boundaries": [
+    "23E4:0644"
+  ],
+  "guest_sites": [
+    {
+      "caller": "214B:01A3",
+      "far": true,
+      "helper": "display._string_cells",
+      "line": 644,
+      "ret_to": "214B:01BE",
+      "target": "23E4:0644"
+    },
+    {
+      "caller": "214B:01A3",
+      "far": false,
+      "helper": "display._string_cells",
+      "line": 683,
+      "ret_to": "214B:01FF",
+      "target": "214B:0123"
+    },
+    {
+      "caller": "214B:0205",
+      "far": true,
+      "helper": "display._string_cells",
+      "line": 644,
+      "ret_to": "214B:0220",
+      "target": "23E4:0644"
+    },
+    {
+      "caller": "214B:0205",
+      "far": false,
+      "helper": "display._string_cells",
+      "line": 683,
+      "ret_to": "214B:0267",
+      "target": "214B:0123"
+    },
+    {
+      "caller": "214B:026D",
+      "far": true,
+      "helper": "display._string_cells",
+      "line": 644,
+      "ret_to": "214B:0288",
+      "target": "23E4:0644"
+    },
+    {
+      "caller": "214B:026D",
+      "far": true,
+      "helper": "display._string_cells",
+      "line": 683,
+      "ret_to": "214B:02C2",
+      "target": "214B:00FF"
+    },
+    {
+      "caller": "214B:02C8",
+      "far": true,
+      "helper": "display._string_cells",
+      "line": 644,
+      "ret_to": "214B:02E3",
+      "target": "23E4:0644"
+    },
+    {
+      "caller": "214B:02C8",
+      "far": true,
+      "helper": "display._string_cells",
+      "line": 683,
+      "ret_to": "214B:0323",
+      "target": "214B:00FF"
+    }
+  ],
+  "inventory_script_sha256": "3c6cf7707a71c375ea2cbee2bbe9c87c3b42b2276c89c0c310db5699e8d97b59",
+  "oracle": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+  "owned_symbols": [
+    "original_match.port.contests.ss16",
+    "original_match.port.display._string_cells",
+    "original_match.port.display._text_cells",
+    "original_match.port.display.string_at_attr",
+    "original_match.port.display.string_at_set_attr",
+    "original_match.port.display.string_forward_attr",
+    "original_match.port.display.string_forward_set_attr",
+    "original_match.port.display.text_cells_backward",
+    "original_match.port.display.text_cells_forward",
+    "original_match.port.geometry.mul",
+    "original_match.port.restarts._end",
+    "original_match.port.setup.farg",
+    "original_match.port.setup.guest",
+    "original_match.port.setup.w16"
+  ],
+  "prediction": {
+    "native_bodies": 69,
+    "native_entries": 2699104,
+    "new_native_bodies": 6,
+    "new_native_entries": 10810,
+    "python_entries": 404581,
+    "scope": "fixed-fixture entry prediction, not speed/LOC/test coverage",
+    "total": 3103685
+  },
+  "profile_sha256": "9330e46ec4d43f3980bd1ae5cb9f5dd3d72b6ba97e868ed30c0732bcf36effa6",
+  "roots": [
+    "214B:00FF",
+    "214B:0123",
+    "214B:01A3",
+    "214B:0205",
+    "214B:026D",
+    "214B:02C8"
+  ],
+  "site_count": 8,
+  "source_sha256": {
+    ".cache/goal2-archaeology/runtime/original_match/port/contests.py": "b4db099959a09a1dcb78f031e9a44dc64624a5ffd8ea7b0be3441298bb0ec40e",
+    ".cache/goal2-archaeology/runtime/original_match/port/display.py": "33b298ead7c58815b9463a39f14e0ba862c81a3af02d53cd5f6184b0f4d8da5e",
+    ".cache/goal2-archaeology/runtime/original_match/port/engine.py": "6439370e3ffcc5977bb066506431a25a0c300ea374faf28ec3f4fbd9718c6f14",
+    ".cache/goal2-archaeology/runtime/original_match/port/geometry.py": "a665d830ed16c00833a27216393a3b6f406251f44cef1f7fc9e80f7eb6bd3e81",
+    ".cache/goal2-archaeology/runtime/original_match/port/guest.py": "1062b5ea7d72114b5f404485768f6aeca69a5d94ffb0285a31158b266c46de7f",
+    ".cache/goal2-archaeology/runtime/original_match/port/mem.py": "0105113f8102a3e8c3544942a445e156fecc0196f7911089e7f789a7775fe45c",
+    ".cache/goal2-archaeology/runtime/original_match/port/restarts.py": "c378834575a59d89f31fea8f9ee5ffca7daaf98754a36e848164bb819ad87977",
+    ".cache/goal2-archaeology/runtime/original_match/port/runtime.py": "2e94867069cd6e35c28af96426bfade7dcb381e370eb12af106627cbeeced0eb",
+    ".cache/goal2-archaeology/runtime/original_match/port/setup.py": "0f703063621cd8a96d9ac0acde56da89754aa885a3d94d9333991a115e8185e2"
+  }
+}
