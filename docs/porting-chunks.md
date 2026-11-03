@@ -390,7 +390,7 @@ groups/controller stopped. Original v1 sources/receipts/ledger remain unchanged.
 ## T24 selected chunk and upstream dependency update
 
 The full T23 profile selects the complete keyboard-service chunk214B:0723,
-08DD,0983 and0993,with their nine owned function helpers. The wait/clear caller's
+08DD,0983 and0993,with nine owned body/helper functions in total. The wait/clear caller's
 only guest,08DD at098A,is included. This cohesive kit-service path moves78,172
 fixture entries;prediction63 bodies/2,688,294 native/415,391 Python,no speed
 forecast. The actual per-port memory view/kit callbacks remain the semantic API;
@@ -436,3 +436,29 @@ and oracle stay fixed. Broader whole-game adoption must include these upstream
 dependencies; the current 422-body match-engine denominator is not a whole-game
 completion estimate. Select the next native chunk separately from T24's fresh
 profile, after T24 completes all acceptance and merge gates.
+
+## T24 final result and pause
+
+[T24](tasks/T24.md) moves the four complete keyboard-service exports and all
+nine owned body/helper functions, retaining the wait/read real guest at098A
+and generic kit callbacks. All prior59/new4 per-body/error/branch/variant/helper/
+callback/control proofs, ordered drive, lifecycle and strict ALL75/F40/prefixes
+pass. Full profile:63 bodies(14.93% count),2,688,294 native/415,391 Python entries,
+86.62% native fixture entry frequency. No CPU/LOC/global-test/whole-port coverage
+claim follows from those counts.
+
+The entire original timing campaign is retained/rejected for external load in
+round one. Its full replacement on the same artifact passes all quiet-start,
+arm-endpoint and continuous-load checks. Selected result:1.00% MORE CPU than
+saved T23 at the paired median;one1.50% faster round,two1.00%/2.55% slower.
+Same-campaign independent T23/PyPy0.623213354 and T24/PyPy0.629437938 medians
+remain beside all raw values. No repeatable gain or selectively replaced sample.
+This translation task has no positive magnitude or all-round speed gate.
+
+Final ledger binds852 primary files/281 evidence hashes. A separately sealed
+one-source/four-input profile-reference audit verifies the unchanged historical
+comparator and all profile observations against fresh Python/Rust receipts.
+All111 canonical/timing groups,controller and three capture PIDs exited. Final
+CI/merge/mainCI/merged-binding status lives in checkpoint#1. The owner requests
+a pause after this task;no T25 is selected or started. A later task must inventory
+a complete bounded tree from the fresh profile,including dynamic helper callees.

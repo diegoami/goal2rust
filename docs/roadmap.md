@@ -5,7 +5,7 @@ oracle and evidence, profile the Rust machine, then translate complete hot call
 trees. This follows the owner's approval of the upstream assessment. T02 is
 complete; its historical receipts and Done-when remain unchanged.
 
-## Current plan after T23: complete native chunks
+## Current plan after T24: complete native chunks
 
 [owner-approved recalibration] T03-T16 are historical accepted increments. The
 next default work unit is a complete bounded native execution tree with its
@@ -52,12 +52,15 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
    faster rounds,one3.01% slower,paired median0.62% less CPU than saved T22.
    [Assessment](../out/T23/assessment.md);no repeatable gain claim. Select any
    following closed tree separately from the full T23 remaining-work profile.
-8. **T24,in progress:** [complete keyboard-service chunk](tasks/T24.md),
-   0723/08DD/0983/0993 and owned helpers,including real far return098A.
-   78,172 predicted moved entries;preserve the actual kit callback and stop
-   boundary. New upstream first-key-poll policy belongs to its whole-game
-   harness and is not adopted into this pinned engine. Accepted figures remain
-   T23 until T24 full validation/measurement succeeds.
+8. **T24, [PR #57](https://github.com/diegoami/goal2rust/pull/57):**
+   [complete keyboard-service chunk](tasks/T24.md),0723/08DD/0983/0993 and all
+   nine owned body/helper functions,including real far return098A. All fidelity/strict corpus
+   and selected quiet-measurement gates pass;78,172 moved entries confirmed.
+   Performance regresses at the paired median:1.00% more CPU than saved T23,
+   one faster/two slower rounds. Entire loaded v1 and quiet replacement v2
+   retained. [Assessment](../out/T24/assessment.md). Owner requests a pause
+   after completion;no following task selected. The actual kit callback/stop
+   boundary remains;the separate whole-game first-poll policy is not adopted.
 9. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
    dominant, define a separate optimization task. A larger PR alone does not remove
    every Python boundary or common dispatch cost.
@@ -67,10 +70,10 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
 11. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
-Current coverage is **59/422 registered non-stub bodies (13.98%)**, while **84.10%**
-of guest entries on the reference fixture are native (2,610,122 native, 493,563
+Current coverage is **63/422 registered non-stub bodies (14.93%)**, while **86.62%**
+of guest entries on the reference fixture are native (2,688,294 native, 415,391
 Python). Neither is source-line, CPU-time or test coverage; no global line/branch
-percentage is currently reported. Use the [current profile](../out/T23/profile-after-v1.json),
+percentage is currently reported. Use the [current profile](../out/T24/profile-after-v1.json),
 the historical [T16 planning snapshot](plans/post-T16-baseline.json) and
 [same-campaign performance reporting](performance-reporting.md). Every new summary
 shows saved-baseline/PyPy and candidate/PyPy together. No calendar completion date

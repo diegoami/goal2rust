@@ -74,3 +74,16 @@ and accepted main tree,and independently checks profile observations/native
 counts against fresh T24 Python/Rust receipts. Run after process closure and
 before final validation;never overwrite the manifest/audit receipt. The final
 evidence ledger and merged audit must bind and check both supplemental files.
+
+## Final validation receipts
+
+All fidelity and selected quiet-measurement/post-writer gates pass.
+validation-final-v1 binds852 primary files and281 evidence hashes;the separate
+profile-reference audit binds one source/four input receipts. Full timing v1
+is preserved/rejected for round-one external load;full v2 is selected after all
+three replacement rounds pass every quality check. Report both complete sets.
+The selected paired median regresses1.00%,one faster/two slower rounds;see
+assessment.md. All111 canonical/timing groups,controller and three capture PIDs
+are stopped. Never rerun producers/audits into these completed receipt paths.
+Exact-head CI/merge/mainCI/merged-binding and stop/resume status live in
+checkpoint#1. No following task is selected here.

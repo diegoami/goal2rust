@@ -1,0 +1,174 @@
+{"event": "start", "name": "public-cpython-v1", "pid": 678081, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-m", "unittest", "discover", "-s", "engine/tests", "-v"], "time": 1793722616.513378}
+{"event": "start", "name": "public-pypy-v1", "pid": 678085, "command": ["/home/diego/projects/goal2rust/.venv-pypy/bin/python", "-m", "unittest", "discover", "-s", "engine/tests", "-v"], "time": 1793722616.9758162}
+{"event": "start", "name": "gc-parity-v1", "pid": 678096, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-B", "out/T24/gc_parity.py"], "time": 1793722617.468907}
+{"event": "exit", "name": "gc-parity-v1", "pid": 678096, "code": 0, "time": 1793722622.4694757}
+{"event": "start", "name": "observer-matrix-v2", "pid": 678130, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-B", "out/T24/observer_matrix.py"], "time": 1793722627.9635355}
+{"event": "exit", "name": "observer-matrix-v2", "pid": 678130, "code": 0, "time": 1793722632.964282}
+{"event": "start", "name": "rust-unit-v1", "pid": 678162, "command": ["/home/diego/projects/goal2rust/.cache/cargo/bin/cargo", "test", "--locked", "--manifest-path", "engine/Cargo.toml"], "time": 1793722638.4581525}
+{"event": "exit", "name": "rust-unit-v1", "pid": 678162, "code": 0, "time": 1793722643.4587407}
+{"event": "start", "name": "taps-python-v1", "pid": 678462, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_receipt.py", "--backend", "python", "--mode", "taps", "--out", "out/T24/taps-python-v1.json"], "time": 1793722649.3387883}
+{"event": "exit", "name": "public-cpython-v1", "pid": 678081, "code": 0, "time": 1793722734.34539}
+{"event": "start", "name": "legacy-v1", "pid": 678838, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_legacy.py", "--out", "out/T24/legacy-v1.json"], "time": 1793722740.3437934}
+{"event": "exit", "name": "public-pypy-v1", "pid": 678085, "code": 0, "time": 1793722790.3475192}
+{"event": "start", "name": "legacy-body-v1", "pid": 679210, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_legacy.py", "--body-mutant", "1", "--out", "out/T24/legacy-body-v1.json"], "time": 1793722796.3648648}
+{"event": "exit", "name": "legacy-v1", "pid": 678838, "code": 0, "time": 1793722801.3653483}
+{"event": "start", "name": "availability-differential-v1", "pid": 679260, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_tree.py", "--suite", "availability", "--mutant", "0", "--out", "out/T24/availability-differential-v1.json"], "time": 1793722806.7916765}
+{"event": "exit", "name": "availability-differential-v1", "pid": 679260, "code": 0, "time": 1793722826.793195}
+{"event": "start", "name": "availability-body-v1", "pid": 679377, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_tree.py", "--suite", "availability", "--mutant", "2", "--out", "out/T24/availability-body-v1.json"], "time": 1793722832.2414076}
+{"event": "exit", "name": "availability-body-v1", "pid": 679377, "code": 0, "time": 1793722852.243381}
+{"event": "start", "name": "availability-return-v1", "pid": 679461, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_tree.py", "--suite", "availability", "--mutant", "1", "--out", "out/T24/availability-return-v1.json"], "time": 1793722857.6564193}
+{"event": "exit", "name": "legacy-body-v1", "pid": 679210, "code": 0, "time": 1793722857.6565895}
+{"event": "start", "name": "ball-differential-v1", "pid": 679532, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_tree.py", "--suite", "ball", "--mutant", "0", "--out", "out/T24/ball-differential-v1.json"], "time": 1793722863.083865}
+{"event": "exit", "name": "availability-return-v1", "pid": 679461, "code": 0, "time": 1793722873.0846713}
+{"event": "start", "name": "ball-body-v1", "pid": 679653, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_tree.py", "--suite", "ball", "--mutant", "3", "--out", "out/T24/ball-body-v1.json"], "time": 1793722878.5260913}
+{"event": "exit", "name": "taps-python-v1", "pid": 678462, "code": 0, "time": 1793722953.531271}
+{"event": "start", "name": "ball-return-v1", "pid": 679873, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_tree.py", "--suite", "ball", "--mutant", "4", "--out", "out/T24/ball-return-v1.json"], "time": 1793722958.9515924}
+{"event": "exit", "name": "ball-body-v1", "pid": 679653, "code": 0, "time": 1793723098.9626608}
+{"event": "start", "name": "skill-differential-v1", "pid": 680656, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_tree.py", "--suite", "skill", "--mutant", "0", "--out", "out/T24/skill-differential-v1.json"], "time": 1793723104.3923092}
+{"event": "exit", "name": "ball-return-v1", "pid": 679873, "code": 0, "time": 1793723124.3937123}
+{"event": "start", "name": "skill-body-v1", "pid": 681995, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_tree.py", "--suite", "skill", "--mutant", "5", "--out", "out/T24/skill-body-v1.json"], "time": 1793723129.8366196}
+{"event": "exit", "name": "skill-differential-v1", "pid": 680656, "code": 0, "time": 1793723144.8375068}
+{"event": "start", "name": "skill-return-v1", "pid": 682326, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_tree.py", "--suite", "skill", "--mutant", "6", "--out", "out/T24/skill-return-v1.json"], "time": 1793723150.2738535}
+{"event": "exit", "name": "ball-differential-v1", "pid": 679532, "code": 0, "time": 1793723150.2740214}
+{"event": "start", "name": "speaker-differential-v1", "pid": 682445, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/speaker_differential.py", "--mutant", "0", "--out", "out/T24/speaker-differential-v1.json"], "time": 1793723155.7126005}
+{"event": "exit", "name": "skill-body-v1", "pid": 681995, "code": 0, "time": 1793723170.7135828}
+{"event": "start", "name": "speaker-body-v1", "pid": 682760, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/speaker_differential.py", "--mutant", "7", "--out", "out/T24/speaker-body-v1.json"], "time": 1793723176.2149117}
+{"event": "exit", "name": "skill-return-v1", "pid": 682326, "code": 0, "time": 1793723191.215907}
+{"event": "start", "name": "speaker-root-return-v1", "pid": 682995, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/speaker_differential.py", "--mutant", "8", "--out", "out/T24/speaker-root-return-v1.json"], "time": 1793723196.6667666}
+{"event": "exit", "name": "speaker-differential-v1", "pid": 682445, "code": 0, "time": 1793723241.6702328}
+{"event": "start", "name": "speaker-seed-return-v1", "pid": 683076, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/speaker_differential.py", "--mutant", "9", "--out", "out/T24/speaker-seed-return-v1.json"], "time": 1793723247.1407604}
+{"event": "exit", "name": "speaker-body-v1", "pid": 682760, "code": 0, "time": 1793723262.142395}
+{"event": "start", "name": "keys-differential-v1", "pid": 683162, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/keys_differential.py", "--mutant", "0", "--out", "out/T24/keys-differential-v1.json"], "time": 1793723267.6131642}
+{"event": "exit", "name": "speaker-root-return-v1", "pid": 682995, "code": 0, "time": 1793723267.613371}
+{"event": "start", "name": "keys-body-v1", "pid": 683185, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/keys_differential.py", "--mutant", "10", "--out", "out/T24/keys-body-v1.json"], "time": 1793723273.2311711}
+{"event": "exit", "name": "speaker-seed-return-v1", "pid": 683076, "code": 0, "time": 1793723323.2347527}
+{"event": "start", "name": "keys-return-v1", "pid": 683408, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/keys_differential.py", "--mutant", "11", "--out", "out/T24/keys-return-v1.json"], "time": 1793723328.9363825}
+{"event": "exit", "name": "keys-body-v1", "pid": 683185, "code": 0, "time": 1793723343.9375973}
+{"event": "start", "name": "draw-differential-v1", "pid": 683458, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/draw_differential.py", "--mutant", "0", "--out", "out/T24/draw-differential-v1.json"], "time": 1793723349.4857724}
+{"event": "exit", "name": "keys-differential-v1", "pid": 683162, "code": 0, "time": 1793723364.4869983}
+{"event": "start", "name": "draw-body-v1", "pid": 683571, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/draw_differential.py", "--mutant", "12", "--out", "out/T24/draw-body-v1.json"], "time": 1793723370.017996}
+{"event": "exit", "name": "keys-return-v1", "pid": 683408, "code": 0, "time": 1793723375.0187423}
+{"event": "start", "name": "draw-return-v1", "pid": 683615, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/draw_differential.py", "--mutant", "13", "--out", "out/T24/draw-return-v1.json"], "time": 1793723380.563603}
+{"event": "exit", "name": "draw-differential-v1", "pid": 683458, "code": 0, "time": 1793723385.5640717}
+{"event": "start", "name": "sweep-differential-v1", "pid": 683660, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/sweep_differential.py", "--mutant", "0", "--out", "out/T24/sweep-differential-v1.json"], "time": 1793723391.0896919}
+{"event": "exit", "name": "draw-body-v1", "pid": 683571, "code": 0, "time": 1793723401.0907893}
+{"event": "start", "name": "sweep-body-v1", "pid": 683711, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/sweep_differential.py", "--mutant", "16", "--out", "out/T24/sweep-body-v1.json"], "time": 1793723406.592766}
+{"event": "exit", "name": "draw-return-v1", "pid": 683615, "code": 0, "time": 1793723406.5929759}
+{"event": "start", "name": "sweep-return-v1", "pid": 683734, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/sweep_differential.py", "--mutant", "17", "--out", "out/T24/sweep-return-v1.json"], "time": 1793723412.186296}
+{"event": "exit", "name": "sweep-return-v1", "pid": 683734, "code": 0, "time": 1793723527.1934369}
+{"event": "start", "name": "play-differential-v1", "pid": 685126, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/play_differential.py", "--mutant", "0", "--out", "out/T24/play-differential-v1.json"], "time": 1793723532.6856735}
+{"event": "exit", "name": "sweep-body-v1", "pid": 683711, "code": 0, "time": 1793723622.6912203}
+{"event": "start", "name": "play-body-v1", "pid": 687401, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/play_differential.py", "--mutant", "18", "--out", "out/T24/play-body-v1.json"], "time": 1793723628.2633765}
+{"event": "exit", "name": "play-differential-v1", "pid": 685126, "code": 0, "time": 1793723663.2655432}
+{"event": "start", "name": "play-return-v1", "pid": 689049, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/play_differential.py", "--mutant", "19", "--out", "out/T24/play-return-v1.json"], "time": 1793723668.7962546}
+{"event": "exit", "name": "sweep-differential-v1", "pid": 683660, "code": 0, "time": 1793723673.7966728}
+{"event": "start", "name": "update-differential-v1", "pid": 689633, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/update_differential.py", "--mutant", "0", "--out", "out/T24/update-differential-v1.json"], "time": 1793723679.367005}
+{"event": "exit", "name": "play-body-v1", "pid": 687401, "code": 0, "time": 1793723684.3674088}
+{"event": "start", "name": "update-body-v1", "pid": 690334, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/update_differential.py", "--mutant", "20", "--out", "out/T24/update-body-v1.json"], "time": 1793723689.8773077}
+{"event": "exit", "name": "play-return-v1", "pid": 689049, "code": 0, "time": 1793723709.8784218}
+{"event": "start", "name": "update-return-v1", "pid": 692335, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/update_differential.py", "--mutant", "21", "--out", "out/T24/update-return-v1.json"], "time": 1793723715.6362839}
+{"event": "exit", "name": "update-body-v1", "pid": 690334, "code": 0, "time": 1793723740.63829}
+{"event": "start", "name": "sprite-differential-v1", "pid": 694945, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/sprite_differential.py", "--mutant", "0", "--out", "out/T24/sprite-differential-v1.json"], "time": 1793723746.128955}
+{"event": "exit", "name": "update-return-v1", "pid": 692335, "code": 0, "time": 1793723746.129149}
+{"event": "start", "name": "sprite-body-v1", "pid": 695297, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/sprite_differential.py", "--mutant", "22", "--out", "out/T24/sprite-body-v1.json"], "time": 1793723751.6474006}
+{"event": "exit", "name": "sprite-body-v1", "pid": 695297, "code": 0, "time": 1793723791.6498415}
+{"event": "start", "name": "sprite-return-v1", "pid": 698395, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/sprite_differential.py", "--mutant", "23", "--out", "out/T24/sprite-return-v1.json"], "time": 1793723797.222225}
+{"event": "exit", "name": "sprite-differential-v1", "pid": 694945, "code": 0, "time": 1793723827.223995}
+{"event": "exit", "name": "sprite-return-v1", "pid": 698395, "code": 0, "time": 1793723827.2242386}
+{"event": "start", "name": "run-differential-v1", "pid": 700615, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_step_differential.py", "--mutant", "0", "--out", "out/T24/run-differential-v1.json"], "time": 1793723832.7307696}
+{"event": "start", "name": "run-body-v1", "pid": 700667, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_step_differential.py", "--mutant", "24", "--out", "out/T24/run-body-v1.json"], "time": 1793723833.2650151}
+{"event": "exit", "name": "run-body-v1", "pid": 700667, "code": 0, "time": 1793723843.265861}
+{"event": "start", "name": "run-position-v1", "pid": 701281, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_step_differential.py", "--mutant", "25", "--out", "out/T24/run-position-v1.json"], "time": 1793723848.813682}
+{"event": "exit", "name": "update-differential-v1", "pid": 689633, "code": 0, "time": 1793723848.8139377}
+{"event": "start", "name": "marking-normal-v1", "pid": 701433, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/marking_differential.py", "--suite", "normal", "--out", "out/T24/marking-normal-v1.json"], "time": 1793723854.3757215}
+{"event": "exit", "name": "run-differential-v1", "pid": 700615, "code": 0, "time": 1793723859.3762565}
+{"event": "exit", "name": "run-position-v1", "pid": 701281, "code": 0, "time": 1793723859.3764896}
+{"event": "start", "name": "marking-body-v1", "pid": 701714, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/marking_differential.py", "--suite", "body", "--out", "out/T24/marking-body-v1.json"], "time": 1793723864.895992}
+{"event": "start", "name": "marking-output-v1", "pid": 701737, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/marking_differential.py", "--suite", "output", "--out", "out/T24/marking-output-v1.json"], "time": 1793723865.4231215}
+{"event": "exit", "name": "marking-output-v1", "pid": 701737, "code": 0, "time": 1793723900.4252338}
+{"event": "start", "name": "marking-returns-v1", "pid": 703523, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/marking_differential.py", "--suite", "returns", "--out", "out/T24/marking-returns-v1.json"], "time": 1793723905.988562}
+{"event": "exit", "name": "marking-returns-v1", "pid": 703523, "code": 0, "time": 1793724020.9952455}
+{"event": "start", "name": "destination-normal-v1", "pid": 710226, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/destination_differential.py", "--suite", "normal", "--out", "out/T24/destination-normal-v1.json"], "time": 1793724026.5243223}
+{"event": "exit", "name": "marking-body-v1", "pid": 701714, "code": 0, "time": 1793724116.5299861}
+{"event": "start", "name": "destination-body-v1", "pid": 715464, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/destination_differential.py", "--suite", "body", "--out", "out/T24/destination-body-v1.json"], "time": 1793724122.0758028}
+{"event": "exit", "name": "destination-body-v1", "pid": 715464, "code": 0, "time": 1793724547.1037526}
+{"event": "start", "name": "destination-output-v1", "pid": 729088, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/destination_differential.py", "--suite", "output", "--out", "out/T24/destination-output-v1.json"], "time": 1793724552.620445}
+{"event": "exit", "name": "marking-normal-v1", "pid": 701433, "code": 0, "time": 1793724652.6271002}
+{"event": "start", "name": "destination-returns-v1", "pid": 729394, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/destination_differential.py", "--suite", "returns", "--out", "out/T24/destination-returns-v1.json"], "time": 1793724658.1755917}
+{"event": "exit", "name": "destination-output-v1", "pid": 729088, "code": 0, "time": 1793724713.1798167}
+{"event": "start", "name": "depth-normal-v1", "pid": 729482, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/depth_differential.py", "--suite", "normal", "--out", "out/T24/depth-normal-v1.json"], "time": 1793724718.6975741}
+{"event": "exit", "name": "destination-returns-v1", "pid": 729394, "code": 0, "time": 1793724788.7030869}
+{"event": "start", "name": "depth-body-v1", "pid": 729968, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/depth_differential.py", "--suite", "body", "--out", "out/T24/depth-body-v1.json"], "time": 1793724794.2198887}
+{"event": "exit", "name": "depth-body-v1", "pid": 729968, "code": 0, "time": 1793724969.2331183}
+{"event": "start", "name": "depth-output-v1", "pid": 730801, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/depth_differential.py", "--suite", "output", "--out", "out/T24/depth-output-v1.json"], "time": 1793724974.731955}
+{"event": "exit", "name": "depth-output-v1", "pid": 730801, "code": 0, "time": 1793725029.7371151}
+{"event": "start", "name": "depth-returns-v1", "pid": 732033, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/depth_differential.py", "--suite", "returns", "--out", "out/T24/depth-returns-v1.json"], "time": 1793725035.428399}
+{"event": "exit", "name": "depth-returns-v1", "pid": 732033, "code": 0, "time": 1793725110.4343965}
+{"event": "start", "name": "prior-destination-live-observers-v1", "pid": 732329, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/prior_destination_live_observers.py", "--out", "out/T24/prior-destination-live-observers-v1.json"], "time": 1793725116.0256422}
+{"event": "exit", "name": "prior-destination-live-observers-v1", "pid": 732329, "code": 0, "time": 1793725146.0282373}
+{"event": "start", "name": "prior-live-observers-v1", "pid": 732377, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/prior_live_observers.py", "--out", "out/T24/prior-live-observers-v1.json"], "time": 1793725151.619063}
+{"event": "exit", "name": "prior-live-observers-v1", "pid": 732377, "code": 0, "time": 1793725251.6264315}
+{"event": "start", "name": "prior-depth-live-observers-v1", "pid": 733054, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/prior_depth_live_observers.py", "--out", "out/T24/prior-depth-live-observers-v1.json"], "time": 1793725257.2702618}
+{"event": "exit", "name": "prior-depth-live-observers-v1", "pid": 733054, "code": 0, "time": 1793725292.2731469}
+{"event": "start", "name": "scoped-write-errors-v1", "pid": 733129, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/prior_scoped_write_errors.py", "--out", "out/T24/scoped-write-errors-v1.json"], "time": 1793725297.830455}
+{"event": "exit", "name": "scoped-write-errors-v1", "pid": 733129, "code": 0, "time": 1793725317.832131}
+{"event": "start", "name": "chase-normal-v1", "pid": 733170, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/chase_differential.py", "--suite", "normal", "--out", "out/T24/chase-normal-v1.json"], "time": 1793725323.396044}
+{"event": "exit", "name": "destination-normal-v1", "pid": 710226, "code": 0, "time": 1793725323.3966494}
+{"event": "start", "name": "chase-body-v1", "pid": 733195, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/chase_differential.py", "--suite", "body", "--out", "out/T24/chase-body-v1.json"], "time": 1793725328.9501553}
+{"event": "exit", "name": "depth-normal-v1", "pid": 729482, "code": 0, "time": 1793725338.951293}
+{"event": "start", "name": "chase-output-v1", "pid": 733275, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/chase_differential.py", "--suite", "output", "--out", "out/T24/chase-output-v1.json"], "time": 1793725344.4992313}
+{"event": "exit", "name": "chase-output-v1", "pid": 733275, "code": 0, "time": 1793725384.5027003}
+{"event": "start", "name": "chase-returns-v1", "pid": 733689, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/chase_differential.py", "--suite", "returns", "--out", "out/T24/chase-returns-v1.json"], "time": 1793725390.2861726}
+{"event": "exit", "name": "chase-body-v1", "pid": 733195, "code": 0, "time": 1793725410.2876732}
+{"event": "exit", "name": "chase-returns-v1", "pid": 733689, "code": 0, "time": 1793725410.2880082}
+{"event": "start", "name": "prior-chase-live-observers-v1", "pid": 733837, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/prior_chase_live_observers.py", "--out", "out/T24/prior-chase-live-observers-v1.json"], "time": 1793725415.9765007}
+{"event": "start", "name": "travel-normal-v1", "pid": 733860, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/travel_differential.py", "--suite", "normal", "--out", "out/T24/travel-normal-v1.json"], "time": 1793725416.6642373}
+{"event": "exit", "name": "prior-chase-live-observers-v1", "pid": 733837, "code": 0, "time": 1793725446.6667175}
+{"event": "start", "name": "travel-body-v1", "pid": 733906, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/travel_differential.py", "--suite", "body", "--out", "out/T24/travel-body-v1.json"], "time": 1793725452.197409}
+{"event": "exit", "name": "travel-body-v1", "pid": 733906, "code": 0, "time": 1793725497.2007296}
+{"event": "start", "name": "travel-output-v1", "pid": 734320, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/travel_differential.py", "--suite", "output", "--out", "out/T24/travel-output-v1.json"], "time": 1793725502.9324098}
+{"event": "exit", "name": "travel-normal-v1", "pid": 733860, "code": 0, "time": 1793725557.9367146}
+{"event": "exit", "name": "travel-output-v1", "pid": 734320, "code": 0, "time": 1793725557.9369776}
+{"event": "start", "name": "travel-returns-v1", "pid": 734426, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/travel_differential.py", "--suite", "returns", "--out", "out/T24/travel-returns-v1.json"], "time": 1793725563.4722552}
+{"event": "start", "name": "prior-travel-live-observers-v1", "pid": 734449, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/prior_travel_live_observers.py", "--out", "out/T24/prior-travel-live-observers-v1.json"], "time": 1793725563.997448}
+{"event": "exit", "name": "travel-returns-v1", "pid": 734426, "code": 0, "time": 1793725568.9981008}
+{"event": "start", "name": "offside-normal-v1", "pid": 734474, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/offside_differential.py", "--suite", "normal", "--out", "out/T24/offside-normal-v1.json"], "time": 1793725574.5386934}
+{"event": "exit", "name": "prior-travel-live-observers-v1", "pid": 734449, "code": 0, "time": 1793725584.539929}
+{"event": "start", "name": "offside-body-v1", "pid": 734559, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/offside_differential.py", "--suite", "body", "--out", "out/T24/offside-body-v1.json"], "time": 1793725590.095833}
+{"event": "exit", "name": "chase-normal-v1", "pid": 733170, "code": 0, "time": 1793725650.1004858}
+{"event": "start", "name": "offside-output-v1", "pid": 734770, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/offside_differential.py", "--suite", "output", "--out", "out/T24/offside-output-v1.json"], "time": 1793725655.6619883}
+{"event": "exit", "name": "offside-body-v1", "pid": 734559, "code": 0, "time": 1793725665.6631722}
+{"event": "start", "name": "offside-returns-v1", "pid": 734830, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/offside_differential.py", "--suite", "returns", "--out", "out/T24/offside-returns-v1.json"], "time": 1793725671.1953568}
+{"event": "exit", "name": "offside-output-v1", "pid": 734770, "code": 0, "time": 1793725676.195946}
+{"event": "start", "name": "prior-offside-live-observers-v1", "pid": 734959, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/prior_offside_live_observers.py", "--out", "out/T24/prior-offside-live-observers-v1.json"], "time": 1793725681.7580445}
+{"event": "exit", "name": "offside-returns-v1", "pid": 734830, "code": 0, "time": 1793725681.7584176}
+{"event": "start", "name": "pascal-normal-v1", "pid": 735004, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/pascal_differential.py", "--suite", "normal", "--out", "out/T24/pascal-normal-v1.json"], "time": 1793725687.2738082}
+{"event": "exit", "name": "prior-offside-live-observers-v1", "pid": 734959, "code": 0, "time": 1793725707.2755747}
+{"event": "start", "name": "pascal-body-v1", "pid": 735290, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/pascal_differential.py", "--suite", "body", "--out", "out/T24/pascal-body-v1.json"], "time": 1793725712.8496053}
+{"event": "exit", "name": "pascal-body-v1", "pid": 735290, "code": 0, "time": 1793725747.852678}
+{"event": "start", "name": "pascal-output-v1", "pid": 735734, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/pascal_differential.py", "--suite", "output", "--out", "out/T24/pascal-output-v1.json"], "time": 1793725753.4030418}
+{"event": "exit", "name": "pascal-normal-v1", "pid": 735004, "code": 0, "time": 1793725788.406299}
+{"event": "start", "name": "prior-pascal-live-observers-v1", "pid": 735906, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/prior_pascal_live_observers.py", "--out", "out/T24/prior-pascal-live-observers-v1.json"], "time": 1793725793.9888427}
+{"event": "exit", "name": "prior-pascal-live-observers-v1", "pid": 735906, "code": 0, "time": 1793725808.9907365}
+{"event": "start", "name": "keyboard-normal-v1", "pid": 736219, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/keyboard_differential.py", "--suite", "normal", "--out", "out/T24/keyboard-normal-v1.json"], "time": 1793725814.6526136}
+{"event": "exit", "name": "pascal-output-v1", "pid": 735734, "code": 0, "time": 1793725879.6585608}
+{"event": "start", "name": "keyboard-body-v1", "pid": 736317, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/keyboard_differential.py", "--suite", "body", "--out", "out/T24/keyboard-body-v1.json"], "time": 1793725885.2167017}
+{"event": "exit", "name": "keyboard-body-v1", "pid": 736317, "code": 0, "time": 1793725930.2213416}
+{"event": "start", "name": "keyboard-output-v1", "pid": 736818, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/keyboard_differential.py", "--suite", "output", "--out", "out/T24/keyboard-output-v1.json"], "time": 1793725935.7881906}
+{"event": "exit", "name": "keyboard-normal-v1", "pid": 736219, "code": 0, "time": 1793725945.7892091}
+{"event": "start", "name": "keyboard-returns-v1", "pid": 736846, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/keyboard_differential.py", "--suite", "returns", "--out", "out/T24/keyboard-returns-v1.json"], "time": 1793725951.3418045}
+{"event": "exit", "name": "keyboard-returns-v1", "pid": 736846, "code": 0, "time": 1793725956.3424459}
+{"event": "start", "name": "live-observers-v1", "pid": 736889, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/live_observers.py", "--out", "out/T24/live-observers-v1.json"], "time": 1793725961.9341476}
+{"event": "exit", "name": "live-observers-v1", "pid": 736889, "code": 0, "time": 1793725976.935553}
+{"event": "exit", "name": "keyboard-output-v1", "pid": 736818, "code": 0, "time": 1793726021.940096}
+{"event": "exit", "name": "offside-normal-v1", "pid": 734474, "code": 0, "time": 1793726046.9424481}
+{"event": "start", "name": "taps-rust-v1", "pid": 737363, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/run_receipt.py", "--backend", "rust", "--mode", "taps", "--out", "out/T24/taps-rust-v1.json"], "time": 1793726047.4092045}
+{"event": "exit", "name": "taps-rust-v1", "pid": 737363, "code": 0, "time": 1793726207.4209485}
+{"event": "start", "name": "family-ALL-v1", "pid": 737802, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-B", "out/T24/run_family.py", "--out", "out/T24/family-ALL-rust-v1.jsonl", "--attest", "out/T24/attest-family-ALL-v1"], "time": 1793726227.9258852}
+{"event": "start", "name": "check-v1", "pid": 737832, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-B", "out/T24/run_check.py", "--out", "out/T24/check-v1.json"], "time": 1793726228.4940848}
+{"event": "start", "name": "profile-after-v1", "pid": 737943, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/profile_machine.py", "--out", "out/T24/profile-after-v1.json"], "time": 1793726229.058519}
+{"event": "exit", "name": "profile-after-v1", "pid": 737943, "code": 0, "time": 1793726319.06549}
+{"event": "exit", "name": "check-v1", "pid": 737832, "code": 0, "time": 1793726910.3945937}
+{"event": "exit", "name": "family-ALL-v1", "pid": 737802, "code": 0, "time": 1793727801.8985877}
+{"event": "start", "name": "performance-v1", "pid": 745955, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T24/performance.py"], "time": 1793727802.8274772}
+{"event": "exit", "name": "performance-v1", "pid": 745955, "code": 0, "time": 1793729758.9836884}

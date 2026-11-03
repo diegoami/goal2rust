@@ -182,3 +182,28 @@ independent ratio medians. Each median may select a different row; do not divide
 column medians or infer a trend from earlier campaigns' standalone PyPy gaps.
 No sample was discarded or selectively replaced; full v1 and v2 raw seconds
 are in the assessment. One fixture only; no arbitrary5% translation floor.
+
+## T24 selected quiet campaign
+
+Sources: [selected v2 samples](../out/T24/performance-v2.json),
+[rejected complete v1](../out/T24/performance-v1.json) and
+[full assessment with every raw CPU value](../out/T24/assessment.md). External
+load contaminated original round one. Both entire three-round campaigns remain;
+the replacement repeats all three rounds on unchanged artifacts and passes
+quiet-start, every-arm endpoint and continuous-load checks.
+
+| Round | Saved T23 / PyPy | T24 / PyPy | T24 / saved T23 | CPython / T24 |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 0.673806133 | 0.663699883 | 0.985001250 | 4.204833459 |
+| 2 | 0.623213354 | 0.629437938 | 1.009987886 | 4.177058130 |
+| 3 | 0.593283331 | 0.608433229 | 1.025535687 | 4.192077511 |
+| Median of per-round ratios | 0.623213354 | 0.629437938 | 1.009987886 | 4.192077511 |
+
+T24 uses **1.00% more CPU** than saved T23 at the paired median. Round one is
+1.50% faster, rounds two and three are 1.00% and 2.55% slower: a mixed result
+with a median regression. No repeatable gain is established or regression hidden.
+Same-campaign saved T23 uses 37.68% less CPU than PyPy and T24 uses 37.06% less,
+at independent ratio medians. Historical standalone gaps do not establish this
+change. All raw samples, including rejected v1 and every slower round, remain.
+The predeclared translation criteria impose fidelity and full measurement, with
+no positive magnitude threshold or all-round speed-improvement gate. One fixture.

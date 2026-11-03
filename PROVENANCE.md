@@ -371,12 +371,12 @@ hashes,two additive measurement/audit sources and five immutable supplemental
 inputs. All107 producer groups/controller stopped. Live CI/merge status is
 checkpoint#1;source contracts and original Done-when remain unchanged.
 
-## T24 keyboard-service chunk (in development)
+## T24 keyboard-service chunk
 
 At accepted oracle`2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`,
 engine/src/keyboard.rs and native dispatch translate menus.key_pressed214B:0723,
 read_key08DD,wait_key_clear0983 and push_back_key0993. The wait caller retains
-its sole actual far guest08DD/return098A. All nine owned function helpers are
+its sole actual far guest08DD/return098A. All nine owned body/helper functions are
 scoped;generic Mem key/poll/read/stop primitives remain the kit service boundary.
 No BIOS frame or new first-poll auto-answer policy is added. Source return-site
 word/SS/load ordering,callback truth and live AH,pushed-key frames,pending flag/
@@ -397,4 +397,12 @@ evidence.py source hash maps only to the exact archived pre-extension version
 in.cache/T24-capture-v2-source/evidence.py. No fabricated entry state or original
 bytes in git. Both interpreter builds/full88-test preflights preceded archive;
 the canonical combined-artifact campaign binds852 fixed files and59 proof/audit
-sources. Full combined-artifact acceptance remains pending in checkpoint#1.
+sources. All combined-artifact fidelity/lifecycle/strict ALL75/F40/prefix and
+selected quiet-measurement gates pass. Loaded v1 and complete quiet replacement
+v2 are both preserved;paired median is1.00% more CPU than saved T23,one faster
+and two slower rounds. No speed improvement is claimed. Final validation binds
+852 primary files/281 evidence hashes. The separate profile-reference audit is
+sealed by supplemental-source-inputs-v1(one source/four receipts),proving the
+older comparator against accepted history and the profile against fresh drives.
+All111 canonical/timing groups,controller and three capture PIDs exited. Live
+CI/merge/mainCI/merged audit and owner-requested pause remain in checkpoint#1.

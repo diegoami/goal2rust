@@ -1,11 +1,10 @@
 # T24 keyboard-service chunk
 
-Status: all 82 per-body proof stages, complete ordered drive, full remaining-work
-profile, sealed lifecycle and strict ALL75/F40 gates pass. Timing is in progress;
-external load contaminated its first round, so the entire initial campaign must
-be retained and replaced by a complete quiet campaign on the same artifact.
-Live completion, merge and stop/resume authority remain in checkpoint #1.
-No T24 performance result is available yet.
+Status: all T24 fidelity, selected quiet-measurement and final post-writer
+ledger gates pass. Performance regresses at the paired median: 1.00% more CPU
+than saved T23, with one faster and two slower rounds. Exact-head CI, merge,
+main CI and merged-audit status remain in checkpoint #1. Pause after completion;
+no next task is included.
 
 ## Translation and semantics
 
@@ -107,40 +106,98 @@ speed forecast.
 ## Complete family and lifecycle evidence
 
 All four sealed lifecycle gates (engine, interactive, goals and knockout) pass,
-with 11 independently attested Rust machines and all 63 native bodies.
-
-All 75 admitted corpus records complete without errors and stop at the board.
-Strict ALL and exact-source F40 comparisons pass. Immutable 10/20/30/60 prefix
-snapshots/comparisons pass. Independent family attestation verifies 75 Rust
+with 11 independently attested Rust machines and all 63 native bodies. All 75
+admitted corpus records complete without errors and stop at the board. Strict
+ALL and exact-source F40 comparisons pass. Immutable 10/20/30/60 snapshots and
+strict prefix comparisons pass. Independent family attestation verifies 75 Rust
 machines and all 63 native bodies. The full remaining-work profile also passes.
 
-## Timing and remaining completion gates
+## Rejected complete original timing campaign (v1)
 
-Three complete simultaneous rotated saved-T23/candidate/CPython/PyPy rounds
-run, retaining every sample and regression. From the first campaign, require
-three original quiet-start observations, every arm's start/end load below four
-and continuous five-second total-load samples below eight. A loaded entire
-campaign is retained and rejected; all three rounds repeat on the unchanged
-artifact. No selected arm replacement or arbitrary incremental 5% gain floor.
+The first round began quiet, but external Python/PyPy workloads raised host load
+during the round. Both arm-endpoint and continuous-load quality failed. All
+three original four-arm rounds were completed and retained; the controller
+waited for quiet IT13 before rounds two and three. The ENTIRE campaign is
+rejected. Its two later quiet rounds are not substituted into the replacement.
+No source, binary or private input changed and no unrelated workload was stopped.
 
-Initial v1 round one failed both arm-endpoint and continuous-load quality after
-external host load rose during the round. The controller waits for quiet IT13
-before finishing the remaining original rounds; it must then retain/reject this
-entire campaign and repeat all three rounds. These contaminated partial results
-are not an accepted performance result. No production change or rebuild occurs.
+| Round | Saved T23 CPU s | T24 CPU s | CPython CPU s | PyPy CPU s |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 35.909797661 | 32.785316048 | 186.057436747 | 51.386064621 |
+| 2 | 30.765450059 | 31.166074222 | 129.378189844 | 49.739462714 |
+| 3 | 30.480623093 | 31.272495679 | 130.018198894 | 47.488113206 |
 
-After every writer/controller exits, the process, genuine-capture, historical
-baseline/input and supplemental audits precede the final evidence ledger.
-An additive profile-reference audit is sealed before execution with one source
-and four input receipts. The canonical profile used an unchanged older T21
-comparison receipt that was not directly in the primary input list. The audit
-binds it to its accepted ledger/tree and independently checks all profile
-observations and native counts against fresh T24 Python/Rust receipts. The
-original 852 primary bindings and 59 canonical proof sources remain unchanged.
-Final evidence and the merged audit must include/check this supplemental proof.
-Exact-head CI, squash merge, green main CI and the merged binding audit/checkpoint
-are required. Final measurements and ledgers will be reported here after they
-complete. No following task has been selected.
+| Round | Saved T23 / PyPy | T24 / PyPy | T24 / saved T23 | CPython / T24 |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 0.698823658 | 0.638019593 | 0.912990832 | 5.675023430 |
+| 2 | 0.618532014 | 0.626586467 | 1.013021885 | 4.151250777 |
+| 3 | 0.641857952 | 0.658533127 | 1.025979541 | 4.157589475 |
+| Median of per-round ratios | 0.641857952 | 0.638019593 | 1.013021885 | 4.157589475 |
+
+## Selected complete quiet replacement (v2)
+
+All three simultaneous four-arm rounds were repeated on the SAME artifact and
+saved T23 baseline, with physical-core/launch rotation and the original guards.
+Every round passed three original quiet-start observations (max 1/5-minute
+load below four), every arm's start/end load below four, and continuous
+five-second total-load samples below eight. All outputs match the reference.
+No selected arm or round was replaced. Both entire campaigns remain preserved.
+
+| Round | Saved T23 CPU s | T24 CPU s | CPython CPU s | PyPy CPU s |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 30.655384892 | 30.195592424 | 126.967437340 | 45.495853187 |
+| 2 | 30.280935934 | 30.583378480 | 127.748549712 | 48.588393908 |
+| 3 | 31.181017620 | 31.977246327 | 134.051095199 | 52.556705998 |
+
+| Round | Saved T23 / PyPy | T24 / PyPy | T24 / saved T23 | CPython / T24 |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 0.673806133 | 0.663699883 | 0.985001250 | 4.204833459 |
+| 2 | 0.623213354 | 0.629437938 | 1.009987886 | 4.177058130 |
+| 3 | 0.593283331 | 0.608433229 | 1.025535687 | 4.192077511 |
+| Median of per-round ratios | 0.623213354 | 0.629437938 | 1.009987886 | 4.192077511 |
+
+The paired median T24/T23 ratio is 1.009987886328: **1.00% more CPU**.
+Round one uses 1.50% less; rounds two and three use 1.00% and 2.55% more,
+respectively. This is a mixed outcome with a median regression, not an established
+speed improvement. The predeclared incremental translation criteria require
+fidelity and complete measurements, with no positive magnitude threshold or
+all-round speed-improvement gate. No such criterion was changed after results.
+
+Same-campaign saved T23/PyPy median is 0.623213354 (37.68% less CPU), while
+T24/PyPy is 0.629437938 (37.06% less). CPython/T24 median CPU-speed ratio is
+4.192077511. Each median is computed independently from its per-round column.
+Do not divide independent medians or infer a regression trend from historical
+standalone PyPy comparisons. This remains one-fixture performance evidence.
+
+## Final ledger and process closure
+
+All post-writer audits pass. validation-final-v1 binds 852 primary files and
+281 evidence hashes. The unchanged 59-source canonical proof allowlist remains.
+An additive profile-reference audit, sealed before execution, binds one source
+and four immutable input receipts. The canonical profile's older T21 comparison
+receipt was not directly enumerated among primary inputs; the audit verifies its
+identity against accepted T21 evidence and accepted main's tree, then verifies
+all profile observations/native counts against fresh T24 Python/Rust receipts.
+The supplemental manifest and positive audit receipt are bound by the final
+ledger, and their source/input hashes are required by the merged audit.
+
+The capture audit independently verifies all 47 historical capture inputs, the
+exact archived evidence.py mapping, all 32 genuine shards/bundle/journal, failed
+v1's 747 input bindings and the empty superseded v2 attempt. All three historical
+capture PIDs have exited. The baseline/input audit preserves all 731 accepted
+T23 primary bindings, 263 evidence hashes, its two additive sources/five inputs,
+older supplemental proofs, all historical profiles and the three before/after
+new-native-presence witnesses. Actual saved T23 baseline contains 73 files.
+
+All 87 canonical and 24 timing producer groups have exited: **111 groups**, plus
+the exclusive controller and three capture PIDs. Shutdown checks use the actual
+host PID namespace. The merged audit also verifies all 38 historical/current
+artifact-archive bindings, exact checked/merged tree identity and green main CI.
+Exact-head CI/merge/main-CI/merged-audit status remains in checkpoint #1/PR #57.
+
+The owner requested a pause after this task finishes. No T25 is selected or
+started; future scope must come from the fresh profile and a complete bounded
+call-tree inventory.
 
 ## Limits
 
