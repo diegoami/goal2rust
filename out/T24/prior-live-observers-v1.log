@@ -1,0 +1,10 @@
+denied: unicorn, .sav, .EXE, .DAT
+split-frame-ss {'comparisons': 160, 'hits': {'wrapped-parent': 23, 'split-begin': 160, 'split-end': 160}, 'effect_witnesses': 160}
+captured-country {'comparisons': 160, 'hits': {'country-pointer': 160}, 'effect_witnesses': 160}
+live-first-skill {'comparisons': 160, 'hits': {'stack-word': 90}, 'effect_witnesses': 90}
+live-second-skill {'comparisons': 160, 'hits': {'stack-word': 51}, 'effect_witnesses': 51}
+live-draw {'comparisons': 160, 'hits': {'stack-word': 90}, 'effect_witnesses': 90}
+zone-record-args {'comparisons': 160, 'hits': {'zone-record-args': 160}, 'effect_witnesses': 160}
+zone-live-local {'comparisons': 160, 'hits': {'zone-local': 64}, 'effect_witnesses': 59}
+rng-captured-arg {'comparisons': 160, 'hits': {'rng-arg-pointer-df': 160}, 'effect_witnesses': 160}
+Supplementary live observer comparisons passed 1280
