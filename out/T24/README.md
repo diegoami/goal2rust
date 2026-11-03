@@ -20,7 +20,9 @@ campaign:three quiet pre-round observations,each arm's start/end max1/5-minute
 load<4,5-second total-load sampling<8. Reject and preserve a contaminated whole
 campaign and repeat ALL3 rounds on the unchanged artifact. Never selectively
 replace a slow arm/round. Consult checkpoint before any producer or live restart.
-No canonical controller yet;status lives in checkpoint#1.
+Canonical controller status and stop/resume authority live in checkpoint#1.
+Inspect its PID and append-only supervisor/jobs journals before any restart;
+never start a duplicate or edit frozen inputs while it runs.
 
 ## Genuine capture v3 selection before canonical freeze
 
@@ -35,14 +37,31 @@ genuine Match drives with the same source/guard. Each drive may stop after every
 still-needed service gained an entry;unused tails are not replayed. This changes
 capture cost,not the entry-count/fidelity requirement. Exclusive private shards
 .cache/T24-raw/capture-shards-v3 persist every actual entry and support resume.
-Final accepted bundle/metadata will be captures-v3.pkl/out/T24/captures-v3.json;
-new canonical keyboard driver selects that metadata.
+The accepted bundle/metadata are captures-v3.pkl/out/T24/captures-v3.json;
+the canonical keyboard driver selects that metadata. All32 exclusive entry
+shards and eight genuine prefix-drive journal rows are complete. The v3
+producer exited0 before canonical freeze;do not restart completed capture.
 
 Do not edit any of47 source/input files while this capture runs,especially
 out/T24/evidence.py. Its exact capture-used version is already archived at
 .cache/T24-capture-v2-source/evidence.py(the v2/v3 manifest hash is identical).
-After capture completes,canonical evidence bindings may be extended for accepted
+After capture exited,canonical evidence bindings were extended for the accepted
 v3 bundle/shards/metadata/journal;the historical source-manifest evidence.py path
-must map to that archived version in input audits. Never overwrite either capture
+maps to that archived version in input audits. Never overwrite either capture
 manifest/attempt/receipt. Both88-test interpreter preflights and1280 callback
-preflight pass;both installed artifacts already archived after both passed.
+preflight pass;both installed artifacts were archived after both passed.
+
+## Frozen canonical campaign
+
+freeze-v1 binds852 source/input/binary files,including59 explicit proof/audit
+sources. Generated reports are excluded from the source allowlist. The controller
+runs82 M2 stages in a bounded pool,then ordered drive,quiet-host family/lifecycle/
+profile gates and complete versioned timing campaigns. All run on the same fixed
+artifacts. Expected producer groups:87 canonical plus12 per timing campaign.
+
+After every writer exits,run in the actual host namespace:process_closure.py,
+capture_input_audit.py,post_exit_audit.py,baseline_input_audit.py,then
+validate.py out/T24/validation-final-v1.json. Never run final indexing while
+writers remain. The capture audit separately checks the three historical capture
+PIDs and the accepted47-source historical mapping. Final docs/CI/merge/main CI/
+merged-binding audit/checkpoint remain required by docs/tasks/T24.md.

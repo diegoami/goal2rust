@@ -389,6 +389,12 @@ Actual accepted T23 source/tests/adapter/both interpreter artifacts preserved
 before builds in.cache/T24-baseline(73 files),after731 primary/263 evidence/two
 source/five input hashes passed. Initial genuine-entry capture hit the unchanged
 dispatch guard on a loaded host;failed log/source identity/harness preserved.
-Quiet capture_v2 uses genuine source drives and append-only private entry shards,
-keeping the original guard;no fabricated entry state or original bytes in git.
-Full combined-artifact acceptance remains pending.
+The idle v2 capture was superseded before collecting any entries;its empty
+attempt/input/log receipt remains. Accepted capture-v3 obtains32 real entries
+(eight per body) from eight genuine source-drive prefixes,with append-only
+private shards/journal and the unchanged dispatch guard. Its historical
+evidence.py source hash maps only to the exact archived pre-extension version
+in.cache/T24-capture-v2-source/evidence.py. No fabricated entry state or original
+bytes in git. Both interpreter builds/full88-test preflights preceded archive;
+the canonical combined-artifact campaign binds852 fixed files and59 proof/audit
+sources. Full combined-artifact acceptance remains pending in checkpoint#1.
