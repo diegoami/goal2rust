@@ -66,7 +66,9 @@ def hashes():
     files += [BASE/p for p in ['.cache/T25-live-development-v1.json','.cache/T25-branch-probe-development-v1.py','.cache/T25-evidence-development-v1.py','out/T25/development-provenance-v1.json']]
     for name in ['source-inputs-v1.json','proof-plan-v1.json','artifact-archive-v1.json']:
         p=BASE/'out/T25'/name
-        if p.exists():files.append(p)
+        if p.exists():
+            files.append(p)
+            if name=='artifact-archive-v1.json':files += [BASE/r['archive'] for r in json.loads(p.read_text())['artifacts']]
     files += sorted((BASE/'.venv-pypy/lib/pypy3.11/site-packages/goal2rust_engine').glob('*.so'))
     files += sorted(Path(goal2rust_engine.__file__).parent.glob('*.so'))
     return {str(p.relative_to(BASE)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(set(files))}
