@@ -1,7 +1,8 @@
 # T22 offside-line display tree
 
-Status: per-body and ordered full-drive fidelity passed. Lifecycle, ALL75/F40,
-profile confirmation, paired timings, final audits and merge are pending.
+Status: per-body, ordered full-drive, lifecycle and profile fidelity passed.
+ALL75/F40, paired timings, a supplemental shared-helper closure check, final
+audits and merge are pending.
 
 ## Translation
 
@@ -70,12 +71,20 @@ The exact full drive matches831 events,553 stretches, result, records and full
 memory. Ordered observers match158,092,780 IO,114,492 listener enters/leaves,
 81,134 site enters/leaves and4 writes. Digest:
 `096f56c262844705a0fcf7348fa4563c40e7d3ff4554b05c5224ffb0a7080ea9`.
-This fresh drive independently observes56 native bodies and2,593,590 native
-entries; the full remaining-work profile is still pending.
+The fresh full profile confirms56 native bodies,2,593,590 native entries and
+510,095 Python entries of3,103,685 total(83.56485919% native fixture frequency).
+All four sealed lifecycle gates pass;11 independently attested Rust machines
+observe all56 bodies.
 
 ## Remaining gates
 
-Lifecycle, strict ALL75/exact-source F40, full profile, three quiet simultaneous
+The canonical closure probe tracks motion-module bodies/helpers. Its inventory
+also names shared mem.s8/mem.s16 signed conversions, which are not in that probe
+set. An additive all-inventory-helper closure proof will run after the canonical
+controller exits, bound separately while preserving every661-bound canonical
+source/artifact and completed receipt. No production change is planned.
+
+Strict ALL75/exact-source F40, three quiet simultaneous
 rotated saved-T21/candidate/CPython/PyPy rounds and final audits remain pending.
 There is no T22 speed result yet. All outcomes, including regressions, will be
 reported using medians of per-round ratios, with baseline/PyPy and candidate/PyPy
