@@ -40,3 +40,35 @@ After controller EXIT, run process_closure.py in the actual host namespace, then
 post_exit_audit.py,baseline_input_audit.py andvalidate.py to a fresh final file.
 Every original guard/receipt and historical artifact stays intact. Exact-head CI,
 squash/mainCI/merged binding/shutdown audit/checkpoint complete the task.
+
+## Performance v1 rejection and full repeat
+
+All original fidelity/lifecycle/ALL75/F40/profile gates passed. The complete
+v1 timing campaign is preserved but rejected for performance acceptance:
+round3's CPython arm ended at load19.886/11.277(first1/5-minute averages), after
+its peer arms had finished. The original validator checked pre-round quietness
+only; validation-final-v1 remains immutable historical evidence, not the final
+selected performance ledger. See rejected-performance-v1.json.
+
+After every original writer/controller exited and all94 groups were audited,
+performance-resume-inputs-v2 seals two additive sources and five input hashes.
+The SAME731-bound source/binary artifact and saved T22 baseline are unchanged.
+Run a complete repeat as:
+`PYTHONHASHSEED=0 .venv/bin/python -u -B out/T23/performance_resume.py 2`.
+Consult checkpoint for the live PID/session before any invocation. Never restart
+an active attempt. New v2 CPU receipts,performance-v2.json/log and timing-jobs-v2
+are exclusive; no v1 file is overwritten. All THREE complete four-arm rounds
+repeat, not the slower arm alone. Each repeat samples load every5 seconds;
+pre-round original three observations and every arm's start/end must be<4 on
+1/5-minute averages. The continuous total-load ceiling8 allows four owned arms
+plus the original pre-round budget; end checks remain the stricter4. This adds
+load-quality enforcement and weakens no original guard or corpus.
+
+After the repeat process exits, run validate_performance_resume.py 2 in the
+actual host namespace. It rehashes every original fidelity/evidence binding,
+checks the additional sealed sources/inputs, every new output/ratio/load/affinity
+and ALL original+repeat process groups, then writes fresh validation-final-v2.
+If an entire repeat is contaminated, preserve it and repeat all3 rounds with
+argument3(v3 outputs), using the SAME sealed driver; never selectively replace
+an arm/round. Final selection must be a complete quiet campaign. Live status
+remains checkpoint#1.

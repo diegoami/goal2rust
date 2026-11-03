@@ -1,9 +1,11 @@
 # T23 Pascal string-write chunk
 
 Status: all per-body/inherited fidelity and exact ordered full-drive proofs pass.
-Sealed lifecycle and full profile also pass. ALL75/F40, timings and final audits
+Sealed lifecycle and full profile also pass. ALL75/F40 also pass. Accepted quiet timings and final selection/merge audits
 remain pending.
-No T23 speed result is claimed.
+No accepted T23 speed result is claimed. The first complete timing campaign was
+rejected after late external load contaminated its third CPython arm; every
+v1 sample and ledger is preserved. A full three-round repeat is pending.
 
 ## Translation and source semantics
 
@@ -80,6 +82,15 @@ exhaustive global error or branch percentage.
 
 ## Remaining gates and limits
 
+All75 corpus records and strict ALL/exact-source F40 now pass. Performance-v1
+remains rejected for quiet-host acceptance:round3 CPython ended at load19.886,
+after its peers finished. The primary validator checks pre-round load only; its
+v1 ledger is retained as historical fidelity evidence. The separately sealed
+performance_resume/validate_performance_resume sources repeat ALL three rounds
+on the unchanged artifact and enforce sampled plus per-arm end load checks.
+A fresh validation-final-v2 will select only a complete quiet campaign.
+
+
 The full ordered Rust/reference drive matches831 events,553 stretches, result,
 records and full memory. Ordered observers match158,092,780 IO,114,492 listener
 enters/leaves,81,134 site enters/leaves and4 writes, digest
@@ -91,9 +102,9 @@ All four sealed lifecycle gates pass with11 independently attested Rust machines
 and all59 bodies. The full profile confirms59 bodies,2,610,122 native entries
 and493,563 Python of3,103,685 total(84.09751634% native fixture frequency).
 
-Strict ALL75/exact-source
-F40 with10/20/30/60 immutable prefix comparisons, independent backend attestation
-and full profile remain. Three quiet simultaneous rotated saved-T22/candidate/
+Strict ALL75/exact-source F40, all10/20/30/60 immutable prefix comparisons,
+independent backend attestation and full profile pass. The remaining complete
+quiet three-round repeat uses simultaneous rotated saved-T22/candidate/
 CPython/PyPy rounds must retain every outcome, including regressions. Report raw
 CPU seconds and medians of per-round ratios, with baseline/PyPy alongside
 candidate/PyPy; no arbitrary incremental5% floor or pilot-only speed claim.
