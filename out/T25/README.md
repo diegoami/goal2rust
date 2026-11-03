@@ -43,3 +43,33 @@ IT13 runner is busy. Timings additionally require every sampled runner state
 known/idle;load samples remain independently taken every five seconds. Sources
 and installed binaries are not yet archived/frozen;check checkpoint for build/
 full-public-preflight progress before running producers. No speed result yet.
+
+## Preserved wrapper failure and additive continuation
+
+The first controller exited after57 passing stages and one pre-proof failure:
+prior_scoped_write_errors.py retained OUT=out/T24 and compared1083 T25 bindings
+against T24's852-file freeze. It failed before any routine/error case ran.
+All58 original process groups/controller are stopped;rejected-canonical-v1.json,
+original jobs/supervisor/failure logs and every completed receipt remain intact.
+
+resume-source-inputs-v2 seals six additive sources/121 immutable inputs BEFORE
+continuation. scoped_write_errors_current.py changes ONLY that OUT directory;
+all four selectors/640 comparisons and every assertion remain. The original65
+source files/1083 bindings/both artifacts remain fixed. supervise_resume.py
+verifies/reuses the57 completed stages,uses jobs-v2.jsonl/supervisor-v2.log and
+exclusive.cache/T25-supervisor-v2.lock;the corrected stage has a new failure-free
+scoped-write-errors-v2.log and its first successful logical v1 JSON receipt.
+Do not edit sealed sidecars or restart a live controller.
+
+Final accounting requires92 successful logical stages and93 physical canonical
+groups,including the retained failed pre-proof invocation,plus12 timing groups
+per full campaign. Both original and resumed controllers must be stopped.
+After ALL writers exit run actual-host:attempt_audit.py(derives exclusive
+jobs-accepted-v2.jsonl and reconciles BOTH raw journals),process_closure_resume.py,
+capture_input_audit.py,post_exit_audit_resume.py,baseline_input_audit.py,then
+validate_resume.py out/T25/validation-final-v2.json. All frozen validator
+fidelity/corpus/control assertions remain;the additive validator checks the raw
+failure,all92 required successes,the path-only correction and all six source/
+121 input bindings. It does not erase or count the failed invocation as a pass.
+The original frozen controller/audits/validator remain unchanged. Consult live
+checkpoint for launch/session status. No production change or rebuild occurred.

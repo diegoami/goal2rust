@@ -1,0 +1,204 @@
+START public-cpython-v1 1006550
+START public-pypy-v1 1006568
+START gc-parity-v1 1006586
+ACTIVE public-cpython-v1,public-pypy-v1,gc-parity-v1 PENDING 84
+EXIT gc-parity-v1 0
+START observer-matrix-v2 1006678
+EXIT observer-matrix-v2 0
+START rust-unit-v1 1006727
+EXIT rust-unit-v1 0
+START taps-python-v1 1006952
+ACTIVE public-cpython-v1,public-pypy-v1,taps-python-v1 PENDING 81
+ACTIVE public-cpython-v1,public-pypy-v1,taps-python-v1 PENDING 81
+ACTIVE public-cpython-v1,public-pypy-v1,taps-python-v1 PENDING 81
+EXIT public-cpython-v1 0
+START legacy-v1 1007156
+ACTIVE public-pypy-v1,taps-python-v1,legacy-v1 PENDING 80
+ACTIVE public-pypy-v1,taps-python-v1,legacy-v1 PENDING 80
+ACTIVE public-pypy-v1,taps-python-v1,legacy-v1 PENDING 80
+EXIT public-pypy-v1 0
+START legacy-body-v1 1007486
+EXIT legacy-v1 0
+START availability-differential-v1 1007539
+ACTIVE taps-python-v1,legacy-body-v1,availability-differential-v1 PENDING 78
+EXIT availability-differential-v1 0
+START availability-body-v1 1007652
+ACTIVE taps-python-v1,legacy-body-v1,availability-body-v1 PENDING 77
+EXIT availability-body-v1 0
+START availability-return-v1 1007756
+EXIT legacy-body-v1 0
+START ball-differential-v1 1007817
+EXIT availability-return-v1 0
+ACTIVE taps-python-v1,ball-differential-v1 PENDING 75
+START ball-body-v1 1007915
+ACTIVE taps-python-v1,ball-differential-v1,ball-body-v1 PENDING 74
+ACTIVE taps-python-v1,ball-differential-v1,ball-body-v1 PENDING 74
+ACTIVE taps-python-v1,ball-differential-v1,ball-body-v1 PENDING 74
+EXIT taps-python-v1 0
+START ball-return-v1 1008235
+ACTIVE ball-differential-v1,ball-body-v1,ball-return-v1 PENDING 73
+ACTIVE ball-differential-v1,ball-body-v1,ball-return-v1 PENDING 73
+ACTIVE ball-differential-v1,ball-body-v1,ball-return-v1 PENDING 73
+ACTIVE ball-differential-v1,ball-body-v1,ball-return-v1 PENDING 73
+ACTIVE ball-differential-v1,ball-body-v1,ball-return-v1 PENDING 73
+EXIT ball-body-v1 0
+START skill-differential-v1 1008521
+ACTIVE ball-differential-v1,ball-return-v1,skill-differential-v1 PENDING 72
+EXIT ball-return-v1 0
+START skill-body-v1 1008613
+EXIT ball-differential-v1 0
+ACTIVE skill-differential-v1,skill-body-v1 PENDING 71
+START skill-return-v1 1008686
+EXIT skill-differential-v1 0
+START speaker-differential-v1 1008758
+EXIT skill-body-v1 0
+ACTIVE skill-return-v1,speaker-differential-v1 PENDING 69
+START speaker-body-v1 1008803
+EXIT skill-return-v1 0
+START speaker-root-return-v1 1008841
+ACTIVE speaker-differential-v1,speaker-body-v1,speaker-root-return-v1 PENDING 67
+EXIT speaker-differential-v1 0
+ACTIVE speaker-body-v1,speaker-root-return-v1 PENDING 67
+START speaker-seed-return-v1 1008997
+EXIT speaker-body-v1 0
+EXIT speaker-root-return-v1 0
+START keys-differential-v1 1009103
+START keys-body-v1 1009139
+ACTIVE speaker-seed-return-v1,keys-differential-v1,keys-body-v1 PENDING 64
+ACTIVE speaker-seed-return-v1,keys-differential-v1,keys-body-v1 PENDING 64
+EXIT speaker-seed-return-v1 0
+START keys-return-v1 1009258
+EXIT keys-body-v1 0
+START draw-differential-v1 1009315
+ACTIVE keys-differential-v1,keys-return-v1,draw-differential-v1 PENDING 62
+EXIT keys-differential-v1 0
+START draw-body-v1 1009433
+EXIT keys-return-v1 0
+START draw-return-v1 1009478
+EXIT draw-differential-v1 0
+ACTIVE draw-body-v1,draw-return-v1 PENDING 60
+START sweep-differential-v1 1009523
+EXIT draw-body-v1 0
+EXIT draw-return-v1 0
+START sweep-body-v1 1009617
+START sweep-return-v1 1009653
+ACTIVE sweep-differential-v1,sweep-body-v1,sweep-return-v1 PENDING 57
+ACTIVE sweep-differential-v1,sweep-body-v1,sweep-return-v1 PENDING 57
+ACTIVE sweep-differential-v1,sweep-body-v1,sweep-return-v1 PENDING 57
+ACTIVE sweep-differential-v1,sweep-body-v1,sweep-return-v1 PENDING 57
+EXIT sweep-return-v1 0
+START play-differential-v1 1009882
+ACTIVE sweep-differential-v1,sweep-body-v1,play-differential-v1 PENDING 56
+ACTIVE sweep-differential-v1,sweep-body-v1,play-differential-v1 PENDING 56
+EXIT sweep-body-v1 0
+START play-body-v1 1010041
+ACTIVE sweep-differential-v1,play-differential-v1,play-body-v1 PENDING 55
+EXIT sweep-differential-v1 0
+EXIT play-differential-v1 0
+START play-return-v1 1010153
+START update-differential-v1 1010190
+ACTIVE play-body-v1,play-return-v1,update-differential-v1 PENDING 53
+EXIT play-body-v1 0
+START update-body-v1 1010263
+EXIT play-return-v1 0
+ACTIVE update-differential-v1,update-body-v1 PENDING 52
+START update-return-v1 1010380
+EXIT update-body-v1 0
+START sprite-differential-v1 1010492
+EXIT update-return-v1 0
+ACTIVE update-differential-v1,sprite-differential-v1 PENDING 50
+START sprite-body-v1 1010620
+ACTIVE update-differential-v1,sprite-differential-v1,sprite-body-v1 PENDING 49
+EXIT sprite-body-v1 0
+START sprite-return-v1 1010794
+EXIT sprite-differential-v1 0
+ACTIVE update-differential-v1,sprite-return-v1 PENDING 48
+START run-differential-v1 1010869
+EXIT update-differential-v1 0
+EXIT sprite-return-v1 0
+START run-body-v1 1010911
+START run-position-v1 1010945
+EXIT run-differential-v1 0
+EXIT run-body-v1 0
+EXIT run-position-v1 0
+START marking-normal-v1 1011030
+START marking-body-v1 1011067
+START marking-output-v1 1011103
+ACTIVE marking-normal-v1,marking-body-v1,marking-output-v1 PENDING 42
+EXIT marking-output-v1 0
+ACTIVE marking-normal-v1,marking-body-v1 PENDING 42
+START marking-returns-v1 1011196
+ACTIVE marking-normal-v1,marking-body-v1,marking-returns-v1 PENDING 41
+ACTIVE marking-normal-v1,marking-body-v1,marking-returns-v1 PENDING 41
+ACTIVE marking-normal-v1,marking-body-v1,marking-returns-v1 PENDING 41
+EXIT marking-returns-v1 0
+START destination-normal-v1 1011407
+ACTIVE marking-normal-v1,marking-body-v1,destination-normal-v1 PENDING 40
+ACTIVE marking-normal-v1,marking-body-v1,destination-normal-v1 PENDING 40
+EXIT marking-body-v1 0
+ACTIVE marking-normal-v1,destination-normal-v1 PENDING 40
+START destination-body-v1 1011730
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 39
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 39
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 39
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 39
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 39
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 39
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 39
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 39
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 39
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 39
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 39
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 39
+EXIT destination-body-v1 0
+START destination-output-v1 1012638
+ACTIVE marking-normal-v1,destination-normal-v1,destination-output-v1 PENDING 38
+ACTIVE marking-normal-v1,destination-normal-v1,destination-output-v1 PENDING 38
+ACTIVE marking-normal-v1,destination-normal-v1,destination-output-v1 PENDING 38
+EXIT marking-normal-v1 0
+START destination-returns-v1 1012850
+ACTIVE destination-normal-v1,destination-output-v1,destination-returns-v1 PENDING 37
+EXIT destination-output-v1 0
+START depth-normal-v1 1012923
+ACTIVE destination-normal-v1,destination-returns-v1,depth-normal-v1 PENDING 36
+ACTIVE destination-normal-v1,destination-returns-v1,depth-normal-v1 PENDING 36
+ACTIVE destination-normal-v1,destination-returns-v1,depth-normal-v1 PENDING 36
+EXIT destination-returns-v1 0
+START depth-body-v1 1013107
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 35
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 35
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 35
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 35
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 35
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 35
+EXIT depth-body-v1 0
+START depth-output-v1 1013419
+ACTIVE destination-normal-v1,depth-normal-v1,depth-output-v1 PENDING 34
+EXIT depth-output-v1 0
+START depth-returns-v1 1013497
+ACTIVE destination-normal-v1,depth-normal-v1,depth-returns-v1 PENDING 33
+ACTIVE destination-normal-v1,depth-normal-v1,depth-returns-v1 PENDING 33
+EXIT depth-returns-v1 0
+ACTIVE destination-normal-v1,depth-normal-v1 PENDING 33
+START prior-destination-live-observers-v1 1013645
+EXIT prior-destination-live-observers-v1 0
+ACTIVE destination-normal-v1,depth-normal-v1 PENDING 32
+START prior-live-observers-v1 1013692
+ACTIVE destination-normal-v1,depth-normal-v1,prior-live-observers-v1 PENDING 31
+ACTIVE destination-normal-v1,depth-normal-v1,prior-live-observers-v1 PENDING 31
+EXIT prior-live-observers-v1 0
+ACTIVE destination-normal-v1,depth-normal-v1 PENDING 31
+START prior-depth-live-observers-v1 1013934
+EXIT destination-normal-v1 0
+START scoped-write-errors-v1 1013976
+EXIT scoped-write-errors-v1 1
+EXIT depth-normal-v1 0
+ACTIVE prior-depth-live-observers-v1 PENDING 29
+EXIT prior-depth-live-observers-v1 0
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T25/supervise.py", line 106, in <module>
+    drain(3)
+  File "/home/diego/projects/goal2rust/out/T25/supervise.py", line 48, in drain
+    if failed and not jobs:raise AssertionError(('Rejected stages; completed workers retained',failed))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Rejected stages; completed workers retained', [('scoped-write-errors-v1', 1)])
