@@ -43,7 +43,7 @@ T02 is complete. Its evidence and historical cross-computer experiment commands 
 [out/T02/README.md](out/T02/README.md). Read that before restarting its experiments;
 keep the task's Done-when intact and consult the latest GitHub checkpoint for status.
 
-The latest keyboard-service chunk T24 is specified in [docs/tasks/T24.md](docs/tasks/T24.md),
+Keyboard-service chunk T24 is specified in [docs/tasks/T24.md](docs/tasks/T24.md),
 with source/capture/artifact and post-writer rules in [out/T24/README.md](out/T24/README.md).
 Read those and checkpoint #1 before resuming any producer. Preserve both full timing
 campaigns, the final validation-v1 ledger and the separately sealed profile-reference
@@ -51,3 +51,12 @@ audit (one supplemental source/four input receipts). Its historical capture sour
 and genuine entry shards must remain intact. Never overwrite completed receipts or
 rebuild a bound artifact during measurement. Current completion and pause/resume
 authority remain in the live checkpoint; choose any next scope from the full profile.
+
+Text-cell chunk T25 is specified in [docs/tasks/T25.md](docs/tasks/T25.md).
+Read [out/T25/README.md](out/T25/README.md), inventory-v2 and checkpoint #1 before
+resuming. The original freeze and separately sealed continuation must both remain
+intact; preserve both raw job journals and the rejected pre-proof wrapper attempt.
+Use the README's updated final-v2 audit sequence and live controller identity.
+If a shutdown checkpoint exists, verify its stopped controller and all completed
+receipts before restarting the same artifact. Never rerun completed capture or
+overwrite receipts; current completion/stop/resume authority remains in checkpoint #1.

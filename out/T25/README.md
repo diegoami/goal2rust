@@ -73,3 +73,38 @@ failure,all92 required successes,the path-only correction and all six source/
 121 input bindings. It does not erase or count the failed invocation as a pass.
 The original frozen controller/audits/validator remain unchanged. Consult live
 checkpoint for launch/session status. No production change or rebuild occurred.
+
+## Shutdown checkpoint after M2
+
+At2026-11-03T22:29:26Z,the owner-requested boundary guard stopped controller
+1018768 cleanly after ALL87 M2 stages passed(57 original successes plus30
+resumed successes). All88 started physical groups,including the original
+pre-proof failed invocation,and both controllers are gone. The guard itself
+exited0. winddown-checkpoint-v1.json and winddown-watch-v1.log preserve the
+stop,source identities and raw-journal hash. No M3 producer was started and
+there is NO T25 speed result. PR#59 stays draft/unmerged;task#58 remains open.
+The current accepted main is still T24. Live status and resume authority remain
+in checkpoint#1.
+
+On the owner's next resume,first verify1083 primary bindings and sealed6source/
+121input identities,the stopped controller and both raw journals. Check the
+preserved jobs-v2 prefix against winddown-checkpoint-v1's hash before appending.
+Do NOT rerun capture,build/install,or any completed proof. Restart the SAME
+sealed controller with a NEW protected log:
+
+`set -C; PYTHONHASHSEED=0 .venv/bin/python -u -B out/T25/supervise_resume.py >out/T25/supervisor-v3.log 2>&1`
+
+It reuses87 source-verified completed receipts,continues jobs-v2.jsonl and
+updates.cache/T25-supervisor-v2.lock with the new PID. Remaining gates are the
+ordered Rust drive,quiet-host ALL75/lifecycle/profile/strict comparisons and
+full versioned four-arm timing campaigns,then all post-writer audits/CI/merge.
+Do not rerun the historical shutdown guard against an obsolete PID.
+
+Final canonical counts stay92 logical successes/93 physical groups plus12 per
+timing campaign,provided no producer is repeated. Final controller accounting
+must include original1006515,shutdown1018768,and the future resumed controller.
+The sealed attempt/closure sidecars check original plus latest controller;
+the preserved winddown receipt independently proves the intermediate controller
+stop. The ignored merged-audit template verifies that PID again and checks the
+immutable jobs-v2 prefix. Never edit the sealed six sidecars or raw journals to
+remove the intentional controller checkpoint stop.

@@ -14,11 +14,13 @@ in [out/T06](out/T06/README.md). Common-bridge performance evidence and
 baseline/confirmation rules are in [out/T08](out/T08/README.md). Read the latest
 [checkpoint](https://github.com/diegoami/goal2rust/issues/1) before restarting work.
 
-The Pascal string-write chunk is native: [T23 results](out/T23/assessment.md).
-The profile confirms 59 native bodies and 84.10% native guest entries on the reference
-fixture. Selected quiet timings are mixed: two rounds improve, one uses 3.01%
-more CPU; the median uses 0.62% less than saved T22. A repeatable gain is not
-established. Same-campaign T22/PyPy and T23/PyPy median CPU ratios are 0.661589
-and 0.678089. The first campaign was rejected for late load; every sample remains.
+Accepted main includes the native keyboard-service chunk: [T24 results](out/T24/assessment.md).
+Its profile confirms 63 native bodies and 86.62% native guest entries on the reference
+fixture. Selected quiet timings are mixed: one round improves, two regress;
+the median uses 1.00% more CPU than saved T23. No speed improvement is established.
+Same-campaign T23/PyPy and T24/PyPy median CPU ratios are 0.623213 and 0.629438.
+The first campaign was rejected for external load; every sample remains.
 This is a partial engine port and one-fixture result. Routine counts and guest-entry
-frequency are not overall port or test coverage. No next task is included.
+frequency are not overall port or test coverage. The connected six-routine
+[T25 text-cell chunk](docs/tasks/T25.md) is in progress; its full-match and timing
+gates remain required. Read the checkpoint for current shutdown/resume status.
