@@ -1,0 +1,1614 @@
+.FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF......................................................................
+======================================================================
+FAIL: test_actual_native_membership (test_ball_draw_state.BallDrawStateTests.test_actual_native_membership)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 100, in test_actual_native_membership
+    self.assertIsNone(p['error']);self.assertEqual(p,r)
+                                       ^^^^^^^^^^^
+AssertionError: {'mem[6794 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[6575 chars]alse} != {'mem[6794 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [5814 chars]alse}
+Diff is 20685 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=4, failure='23E4:08DF')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[2922 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6362 chars]alse} != {'mem[2922 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[5613 chars]alse}
+Diff is 14241 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=8, failure='23E4:08DF')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[2918 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6380 chars]alse} != {'mem[2918 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [5625 chars]alse}
+Diff is 14255 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=1, failure='23E4:0279')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[6435 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[2404 chars]alse} != {'mem[6435 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [2017 chars]alse}
+Diff is 13598 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=4, failure='23E4:0279')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[2923 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[2323 chars]alse} != {'mem[2923 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[1944 chars]alse}
+Diff is 8031 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=7, failure='23E4:0279')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[6486 chars]', 'ss', 12288)), ('call', '0791:835F', (42445[2416 chars]alse} != {'mem[6486 chars]', 'sp', 65526)), ('io', ('g', 'ss', 12288)), [2029 chars]alse}
+Diff is 13661 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=8, failure='23E4:0279')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[2922 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[2331 chars]alse} != {'mem[2922 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [1949 chars]alse}
+Diff is 8038 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=4, failure='0791:8F66')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[2922 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6362 chars]alse} != {'mem[2922 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[5613 chars]alse}
+Diff is 14241 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=8, failure='0791:8F66')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[2918 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6380 chars]alse} != {'mem[2918 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [5625 chars]alse}
+Diff is 14255 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=1, failure='0791:8FD4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[6432 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[5551 chars]alse} != {'mem[6432 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [4790 chars]alse}
+Diff is 18426 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=4, failure='0791:8FD4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[2924 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[5434 chars]alse} != {'mem[2924 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[4685 chars]alse}
+Diff is 12785 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=7, failure='0791:8FD4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[6487 chars]', 'ss', 12288)), ('call', '0791:835F', (42445[5545 chars]alse} != {'mem[6487 chars]', 'sp', 65526)), ('io', ('g', 'ss', 12288)), [4784 chars]alse}
+Diff is 18475 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=8, failure='0791:8FD4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[2919 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[5467 chars]alse} != {'mem[2919 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [4712 chars]alse}
+Diff is 12813 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=1, failure='0791:8396')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[6436 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[4453 chars]alse} != {'mem[6436 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [3692 chars]alse}
+Diff is 16727 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=4, failure='0791:8396')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[2924 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[4348 chars]alse} != {'mem[2924 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[3599 chars]alse}
+Diff is 11164 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=7, failure='0791:8396')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[6487 chars]', 'ss', 12288)), ('call', '0791:835F', (42445[4443 chars]alse} != {'mem[6487 chars]', 'sp', 65526)), ('io', ('g', 'ss', 12288)), [3682 chars]alse}
+Diff is 16768 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=8, failure='0791:8396')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[2923 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[4374 chars]alse} != {'mem[2923 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [3619 chars]alse}
+Diff is 11189 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=4, failure='callee:23E4:08DF')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[2922 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6362 chars]alse} != {'mem[2922 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[5613 chars]alse}
+Diff is 14241 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=8, failure='callee:23E4:08DF')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'mem[2918 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6380 chars]alse} != {'mem[2918 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [5625 chars]alse}
+Diff is 14255 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=1, failure='callee:0791:835F')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'memory': 'd44cda5e7cbf22a45388b0f758f6ed98eb0b653e3[7288 chars]alse} != {'memory': '0ea341ac64152be6c5e4eb240263d52d07b7efb2e[12131 chars]alse}
+Diff is 20853 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=4, failure='callee:0791:835F')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'memory': '5519622769050c890565dfcd4495655b99e9442a7[3708 chars]alse} != {'memory': '90c0e5664230aebdf407ca197b99af43dceb2fe7e[8533 chars]alse}
+Diff is 15157 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=7, failure='callee:0791:835F')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'memory': '9b5ae74b8c2fcfc206abb2b98f0ae11778421bcd6[7339 chars]alse} != {'memory': 'bf045520c71355af2260083b62ff753a7ae7f9948[11982 chars]alse}
+Diff is 20337 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=8, failure='callee:0791:835F')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'memory': '7b96a2d27bed14b24cdb988a46622c32e55f68dd0[3710 chars]alse} != {'memory': '6650c3152c7a6c5a93916848f4afc58b81beaf6b8[8541 chars]alse}
+Diff is 15181 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=1, failure='callee:23E4:0279')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'memory': '40d81f2629a7b5b6b15a0e31cc416c9e3ea6d13fa[9342 chars]alse} != {'memory': '0ea341ac64152be6c5e4eb240263d52d07b7efb2e[12131 chars]alse}
+Diff is 21680 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=4, failure='callee:23E4:0279')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'memory': '4b427daf389fbd058bf4c7b8ee7a5dd9487da3ce7[5741 chars]alse} != {'memory': '90c0e5664230aebdf407ca197b99af43dceb2fe7e[8533 chars]alse}
+Diff is 16111 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=7, failure='callee:23E4:0279')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'memory': '475c3b3b05e517a7c06894b99a2bbb904de012804[9405 chars]alse} != {'memory': 'bf045520c71355af2260083b62ff753a7ae7f9948[11982 chars]alse}
+Diff is 21524 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_errors_and_variants (test_ball_draw_state.BallDrawStateTests.test_errors_and_variants) (case=8, failure='callee:23E4:0279')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 117, in test_errors_and_variants
+    with self.subTest(case=case,failure=failure):self.assertEqual(exercise(Oracle,case,failure=failure)[0],exercise(PortMachine,case,failure=failure)[0])
+                                                      ^^^^^^^^^^^
+AssertionError: {'memory': '0156f38b263cff834d626abc53bc0b36621c49c30[5755 chars]alse} != {'memory': '6650c3152c7a6c5a93916848f4afc58b81beaf6b8[8541 chars]alse}
+Diff is 16134 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_native_caller (test_ball_draw_state.BallDrawStateTests.test_native_caller)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 105, in test_native_caller
+    p,_=exercise(Oracle,1);r,n=exercise(PortMachine,1);self.assertIsNone(p['error']);self.assertEqual(p,r);self.assertEqual(n.get(ROOT),1)
+                                                                                          ^^^^^^^^^^^
+AssertionError: {'mem[6431 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[6463 chars]alse} != {'mem[6431 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [5702 chars]alse}
+Diff is 19867 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=1, tapped=False, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3209 chars]), ('call', '0791:835F', (65520, 16384), 'd44c[2931 chars]alse} != {'mem[3209 chars]), ('w', 262134, 2, 0, 97951), ('w', 262130, 2[2226 chars]alse}
+Diff is 10210 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=1, tapped=True, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[7187 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[6575 chars]alse} != {'mem[7187 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [5814 chars]alse}
+Diff is 21341 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=2, tapped=False, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1791 chars]), ('call', '0791:835F', (65535, 16384), 'b2b4[2876 chars]alse} != {'mem[1791 chars]), ('w', 262140, 2, 6, 97951), ('w', 262136, 2[2167 chars]alse}
+Diff is 7706 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=2, tapped=True, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3690 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[6513 chars]alse} != {'mem[3690 chars]', 'sp', 65534)), ('io', ('g', 'ss', 12288)), [5748 chars]alse}
+Diff is 15913 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=4, tapped=False, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1328 chars]), ('call', '0791:835F', (0, 16384), '55196227[2729 chars]alse} != {'mem[1328 chars]), ('w', 196852, 2, 254, 97951), ('w', 196848,[2036 chars]alse}
+Diff is 6469 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=4, tapped=True, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2922 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6362 chars]alse} != {'mem[2922 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[5613 chars]alse}
+Diff is 14241 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=5, tapped=False, pause='0791:8FD4', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2800 chars]), ('call', '0791:835F', (65520, 16384), 'e47b[3401 chars]alse} != {'mem[2800 chars]), ('w', 262126, 2, 65528, 97951), ('w', 26212[2694 chars]alse}
+Diff is 10354 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=5, tapped=True, pause='0791:8FD4', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[6751 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[7390 chars]alse} != {'mem[6751 chars]', 'sp', 65520)), ('io', ('g', 'ss', 12288)), [6627 chars]alse}
+Diff is 21925 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=7, tapped=False, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2395 chars]), ('call', '0791:835F', (42445, 16384), '9b5a[2767 chars]alse} != {'mem[2395 chars]), ('w', 262132, 2, 65534, 97951), ('w', 26212[2062 chars]alse}
+Diff is 8467 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=7, tapped=True, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[5884 chars]', 'ss', 12288)), ('call', '0791:835F', (42445[6261 chars]alse} != {'mem[5884 chars]', 'sp', 65526)), ('io', ('g', 'ss', 12288)), [5500 chars]alse}
+Diff is 18616 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=8, tapped=False, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1330 chars]), ('call', '0791:835F', (0, 16384), '7b96a2d2[2738 chars]alse} != {'mem[1330 chars]), ('w', 262134, 2, 0, 97951), ('w', 262130, 2[2039 chars]alse}
+Diff is 6480 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=8, tapped=True, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2918 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6380 chars]alse} != {'mem[2918 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [5625 chars]alse}
+Diff is 14255 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=10, tapped=False, pause='23E4:0279', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1336 chars]), ('call', '0791:835F', (65535, 16384), '7905[3436 chars]alse} != {'mem[1336 chars]), ('w', 196612, 2, 14, 97951), ('w', 196608, [2735 chars]alse}
+Diff is 7897 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=10, tapped=True, pause='23E4:0279', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2925 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[7345 chars]alse} != {'mem[2925 chars]', 'sp', 6)), ('io', ('g', 'ss', 12288)), ('io[6588 chars]alse}
+Diff is 16072 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=11, tapped=False, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3213 chars]), ('call', '0791:835F', (59294, 16384), '9d43[2887 chars]alse} != {'mem[3213 chars]), ('w', 196852, 2, 254, 97951), ('w', 196848,[2184 chars]alse}
+Diff is 10159 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=11, tapped=True, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[7199 chars]', 'ss', 12288)), ('call', '0791:835F', (59294[6318 chars]alse} != {'mem[7199 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[5559 chars]alse}
+Diff is 20949 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=13, tapped=False, pause='0791:8396', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2767 chars]), ('call', '0791:835F', (65520, 16384), '1c4b[3535 chars]alse} != {'mem[2767 chars]), ('w', 262130, 2, 65532, 97951), ('w', 26212[2830 chars]alse}
+Diff is 10458 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=13, tapped=True, pause='0791:8396', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[6490 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[7526 chars]alse} != {'mem[6490 chars]', 'sp', 65524)), ('io', ('g', 'ss', 12288)), [6765 chars]alse}
+Diff is 21683 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=14, tapped=False, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[974 chars]), ('call', '0791:835F', (65535, 16384), '5e1d[2774 chars]alse} != {'mem[974 chars]), ('w', 262132, 2, 65534, 97951), ('w', 26212[2065 chars]alse}
+Diff is 6033 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=14, tapped=True, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2358 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[6436 chars]alse} != {'mem[2358 chars]', 'sp', 65526)), ('io', ('g', 'ss', 12288)), [5671 chars]alse}
+Diff is 13534 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=16, tapped=False, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1764 chars]), ('call', '0791:835F', (0, 16384), '0d72f77d[2835 chars]alse} != {'mem[1764 chars]), ('w', 262140, 2, 6, 97951), ('w', 262136, 2[2138 chars]alse}
+Diff is 7428 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=16, tapped=True, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3656 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6478 chars]alse} != {'mem[3656 chars]', 'sp', 65534)), ('io', ('g', 'ss', 12288)), [5725 chars]alse}
+Diff is 15634 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=17, tapped=False, pause='23E4:0279', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2746 chars]), ('call', '0791:835F', (65520, 16384), 'b8fa[3486 chars]alse} != {'mem[2746 chars]), ('w', 196612, 2, 14, 97951), ('w', 196608, [2787 chars]alse}
+Diff is 10388 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=17, tapped=True, pause='23E4:0279', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[6399 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[7346 chars]alse} != {'mem[6399 chars]', 'sp', 6)), ('io', ('g', 'ss', 12288)), ('io[6591 chars]alse}
+Diff is 21410 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=19, tapped=False, pause='0791:8FD4', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2763 chars]), ('call', '0791:835F', (5669, 16384), '4818e[3340 chars]alse} != {'mem[2763 chars]), ('w', 262126, 2, 65528, 97951), ('w', 26212[2634 chars]alse}
+Diff is 10162 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=19, tapped=True, pause='0791:8FD4', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[6472 chars]', 'ss', 12288)), ('call', '0791:835F', (5669,[7192 chars]alse} != {'mem[6472 chars]', 'sp', 65520)), ('io', ('g', 'ss', 12288)), [6430 chars]alse}
+Diff is 21098 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=20, tapped=False, pause='0791:8396', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1335 chars]), ('call', '0791:835F', (0, 16384), 'a12f327c[3436 chars]alse} != {'mem[1335 chars]), ('w', 262130, 2, 65532, 97951), ('w', 26212[2737 chars]alse}
+Diff is 7756 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=20, tapped=True, pause='0791:8396', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2947 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[7407 chars]alse} != {'mem[2947 chars]', 'sp', 65524)), ('io', ('g', 'ss', 12288)), [6652 chars]alse}
+Diff is 16016 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=22, tapped=False, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1341 chars]), ('call', '0791:835F', (65535, 16384), '5bd9[2711 chars]alse} != {'mem[1341 chars]), ('w', 262134, 2, 0, 97951), ('w', 262130, 2[2006 chars]alse}
+Diff is 6593 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=22, tapped=True, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2937 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[6275 chars]alse} != {'mem[2937 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [5514 chars]alse}
+Diff is 14195 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=23, tapped=False, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3201 chars]), ('call', '0791:835F', (37999, 16384), 'e6dd[2874 chars]alse} != {'mem[3201 chars]), ('w', 262140, 2, 6, 97951), ('w', 262136, 2[2169 chars]alse}
+Diff is 10134 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=23, tapped=True, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[7179 chars]', 'ss', 12288)), ('call', '0791:835F', (37999[6325 chars]alse} != {'mem[7179 chars]', 'sp', 65534)), ('io', ('g', 'ss', 12288)), [5564 chars]alse}
+Diff is 20936 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=25, tapped=False, pause='0791:8F66', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3203 chars]), ('call', '0791:835F', (65520, 16384), 'b6f2[2928 chars]alse} != {'mem[3203 chars]), ('w', 196852, 2, 254, 97951), ('w', 196848,[2225 chars]alse}
+Diff is 10201 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=25, tapped=True, pause='0791:8F66', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[7324 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[6541 chars]alse} != {'mem[7324 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[5782 chars]alse}
+Diff is 21501 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=26, tapped=False, pause='0791:8FD4', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1339 chars]), ('call', '0791:835F', (65535, 16384), '257a[3322 chars]alse} != {'mem[1339 chars]), ('w', 262126, 2, 65528, 97951), ('w', 26212[2619 chars]alse}
+Diff is 7700 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=26, tapped=True, pause='0791:8FD4', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2951 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[7306 chars]alse} != {'mem[2951 chars]', 'sp', 65520)), ('io', ('g', 'ss', 12288)), [6547 chars]alse}
+Diff is 15961 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=28, tapped=False, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[958 chars]), ('call', '0791:835F', (0, 16384), '03de1318[2738 chars]alse} != {'mem[958 chars]), ('w', 262132, 2, 65534, 97951), ('w', 26212[2041 chars]alse}
+Diff is 5841 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=28, tapped=True, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2334 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6405 chars]alse} != {'mem[2334 chars]', 'sp', 65526)), ('io', ('g', 'ss', 12288)), [5652 chars]alse}
+Diff is 13339 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=29, tapped=False, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3205 chars]), ('call', '0791:835F', (65520, 16384), '52ea[2935 chars]alse} != {'mem[3205 chars]), ('w', 262134, 2, 0, 97951), ('w', 262130, 2[2228 chars]alse}
+Diff is 10210 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=29, tapped=True, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[7180 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[6568 chars]alse} != {'mem[7180 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [5805 chars]alse}
+Diff is 21327 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=31, tapped=False, pause='23E4:0279', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2744 chars]), ('call', '0791:835F', (1609, 16384), '88ab8[3436 chars]alse} != {'mem[2744 chars]), ('w', 196612, 2, 14, 97951), ('w', 196608, [2738 chars]alse}
+Diff is 10325 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=31, tapped=True, pause='23E4:0279', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[6394 chars]', 'ss', 12288)), ('call', '0791:835F', (1609,[7191 chars]alse} != {'mem[6394 chars]', 'sp', 6)), ('io', ('g', 'ss', 12288)), ('io[6437 chars]alse}
+Diff is 21103 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=32, tapped=False, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1333 chars]), ('call', '0791:835F', (0, 16384), 'aebe5905[2730 chars]alse} != {'mem[1333 chars]), ('w', 196852, 2, 254, 97951), ('w', 196848,[2035 chars]alse}
+Diff is 6475 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=32, tapped=True, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2931 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6327 chars]alse} != {'mem[2931 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[5576 chars]alse}
+Diff is 14215 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=34, tapped=False, pause='0791:8396', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1347 chars]), ('call', '0791:835F', (65535, 16384), 'e39b[3481 chars]alse} != {'mem[1347 chars]), ('w', 262130, 2, 65532, 97951), ('w', 26212[2774 chars]alse}
+Diff is 7953 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=34, tapped=True, pause='0791:8396', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2963 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[7462 chars]alse} != {'mem[2963 chars]', 'sp', 65524)), ('io', ('g', 'ss', 12288)), [6699 chars]alse}
+Diff is 16215 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=35, tapped=False, pause='0791:8F10', direct=True, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2415 chars]), ('call', '0791:835F', (43957, 16384), '1ed9[2783 chars]alse} != {'mem[2415 chars]), ('w', 262132, 2, 65534, 97951), ('w', 26212[2078 chars]alse}
+Diff is 8514 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=35, tapped=True, pause='0791:8F10', direct=True, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[6132 chars]', 'ss', 12288)), ('call', '0791:835F', (43957[6289 chars]alse} != {'mem[6132 chars]', 'sp', 65526)), ('io', ('g', 'ss', 12288)), [5528 chars]alse}
+Diff is 19013 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=37, tapped=False, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3211 chars]), ('call', '0791:835F', (65520, 16384), '2ed5[2922 chars]alse} != {'mem[3211 chars]), ('w', 262140, 2, 6, 97951), ('w', 262136, 2[2215 chars]alse}
+Diff is 10203 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=37, tapped=True, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[7191 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[6538 chars]alse} != {'mem[7191 chars]', 'sp', 65534)), ('io', ('g', 'ss', 12288)), [5775 chars]alse}
+Diff is 21308 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=38, tapped=False, pause='23E4:0279', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1341 chars]), ('call', '0791:835F', (65535, 16384), '3eb1[3442 chars]alse} != {'mem[1341 chars]), ('w', 196612, 2, 14, 97951), ('w', 196608, [2739 chars]alse}
+Diff is 7908 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=38, tapped=True, pause='23E4:0279', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2934 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[7337 chars]alse} != {'mem[2934 chars]', 'sp', 6)), ('io', ('g', 'ss', 12288)), ('io[6578 chars]alse}
+Diff is 16061 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=40, tapped=False, pause='0791:8FD4', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1337 chars]), ('call', '0791:835F', (0, 16384), '413377e4[3294 chars]alse} != {'mem[1337 chars]), ('w', 262126, 2, 65528, 97951), ('w', 26212[2593 chars]alse}
+Diff is 7460 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=40, tapped=True, pause='0791:8FD4', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2946 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[7295 chars]alse} != {'mem[2946 chars]', 'sp', 65520)), ('io', ('g', 'ss', 12288)), [6538 chars]alse}
+Diff is 15758 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=41, tapped=False, pause='0791:8396', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2768 chars]), ('call', '0791:835F', (65520, 16384), '539c[3530 chars]alse} != {'mem[2768 chars]), ('w', 262130, 2, 65532, 97951), ('w', 26212[2825 chars]alse}
+Diff is 10454 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=41, tapped=True, pause='0791:8396', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[6482 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[7472 chars]alse} != {'mem[6482 chars]', 'sp', 65524)), ('io', ('g', 'ss', 12288)), [6711 chars]alse}
+Diff is 21621 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=43, tapped=False, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3213 chars]), ('call', '0791:835F', (5053, 16384), '28799[2885 chars]alse} != {'mem[3213 chars]), ('w', 262134, 2, 0, 97951), ('w', 262130, 2[2179 chars]alse}
+Diff is 10157 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=43, tapped=True, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[7198 chars]', 'ss', 12288)), ('call', '0791:835F', (5053,[6378 chars]alse} != {'mem[7198 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [5616 chars]alse}
+Diff is 21008 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=44, tapped=False, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1771 chars]), ('call', '0791:835F', (0, 16384), '520228d3[2798 chars]alse} != {'mem[1771 chars]), ('w', 262140, 2, 6, 97951), ('w', 262136, 2[2097 chars]alse}
+Diff is 7387 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=44, tapped=True, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3662 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6377 chars]alse} != {'mem[3662 chars]', 'sp', 65534)), ('io', ('g', 'ss', 12288)), [5620 chars]alse}
+Diff is 15425 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=46, tapped=False, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1340 chars]), ('call', '0791:835F', (65535, 16384), 'ee44[2755 chars]alse} != {'mem[1340 chars]), ('w', 196852, 2, 254, 97951), ('w', 196848,[2054 chars]alse}
+Diff is 6647 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=46, tapped=True, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2938 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[6373 chars]alse} != {'mem[2938 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[5616 chars]alse}
+Diff is 14408 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=47, tapped=False, pause='0791:8FD4', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2763 chars]), ('call', '0791:835F', (46117, 16384), '4513[3330 chars]alse} != {'mem[2763 chars]), ('w', 262126, 2, 65528, 97951), ('w', 26212[2627 chars]alse}
+Diff is 10152 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=47, tapped=True, pause='0791:8FD4', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[6474 chars]', 'ss', 12288)), ('call', '0791:835F', (46117[7128 chars]alse} != {'mem[6474 chars]', 'sp', 65520)), ('io', ('g', 'ss', 12288)), [6369 chars]alse}
+Diff is 21036 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=49, tapped=False, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2385 chars]), ('call', '0791:835F', (65520, 16384), '9b7a[2824 chars]alse} != {'mem[2385 chars]), ('w', 262132, 2, 65534, 97951), ('w', 26212[2119 chars]alse}
+Diff is 8525 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=49, tapped=True, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[5862 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[6502 chars]alse} != {'mem[5862 chars]', 'sp', 65526)), ('io', ('g', 'ss', 12288)), [5741 chars]alse}
+Diff is 18982 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=50, tapped=False, pause='23E4:08DF', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1339 chars]), ('call', '0791:835F', (65535, 16384), '3a93[2759 chars]alse} != {'mem[1339 chars]), ('w', 262134, 2, 0, 97951), ('w', 262130, 2[2054 chars]alse}
+Diff is 6650 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=50, tapped=True, pause='23E4:08DF', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2931 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[6408 chars]alse} != {'mem[2931 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [5647 chars]alse}
+Diff is 14446 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=52, tapped=False, pause='23E4:0279', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1326 chars]), ('call', '0791:835F', (0, 16384), '37b4859d[3391 chars]alse} != {'mem[1326 chars]), ('w', 196612, 2, 14, 97951), ('w', 196608, [2698 chars]alse}
+Diff is 7702 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=52, tapped=True, pause='23E4:0279', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2915 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[7264 chars]alse} != {'mem[2915 chars]', 'sp', 6)), ('io', ('g', 'ss', 12288)), ('io[6515 chars]alse}
+Diff is 15829 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=53, tapped=False, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3210 chars]), ('call', '0791:835F', (65520, 16384), '458d[2935 chars]alse} != {'mem[3210 chars]), ('w', 196852, 2, 254, 97951), ('w', 196848,[2232 chars]alse}
+Diff is 10215 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=53, tapped=True, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[7200 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[6520 chars]alse} != {'mem[7200 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[5761 chars]alse}
+Diff is 21299 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=55, tapped=False, pause='0791:8396', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2780 chars]), ('call', '0791:835F', (11841, 16384), 'eb78[3488 chars]alse} != {'mem[2780 chars]), ('w', 262130, 2, 65532, 97951), ('w', 26212[2785 chars]alse}
+Diff is 10424 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=55, tapped=True, pause='0791:8396', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[6716 chars]', 'ss', 12288)), ('call', '0791:835F', (11841[7405 chars]alse} != {'mem[6716 chars]', 'sp', 65524)), ('io', ('g', 'ss', 12288)), [6646 chars]alse}
+Diff is 21794 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=56, tapped=False, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[958 chars]), ('call', '0791:835F', (0, 16384), '47fde89d[2733 chars]alse} != {'mem[958 chars]), ('w', 262132, 2, 65534, 97951), ('w', 26212[2038 chars]alse}
+Diff is 5836 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=56, tapped=True, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2338 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6402 chars]alse} != {'mem[2338 chars]', 'sp', 65526)), ('io', ('g', 'ss', 12288)), [5651 chars]alse}
+Diff is 13340 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=58, tapped=False, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1779 chars]), ('call', '0791:835F', (65535, 16384), 'f440[2861 chars]alse} != {'mem[1779 chars]), ('w', 262140, 2, 6, 97951), ('w', 262136, 2[2158 chars]alse}
+Diff is 7679 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=58, tapped=True, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3678 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[6496 chars]alse} != {'mem[3678 chars]', 'sp', 65534)), ('io', ('g', 'ss', 12288)), [5737 chars]alse}
+Diff is 15884 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=59, tapped=False, pause='23E4:0279', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2738 chars]), ('call', '0791:835F', (29384, 16384), '2e7e[3448 chars]alse} != {'mem[2738 chars]), ('w', 196612, 2, 14, 97951), ('w', 196608, [2747 chars]alse}
+Diff is 10331 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=59, tapped=True, pause='23E4:0279', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[6381 chars]', 'ss', 12288)), ('call', '0791:835F', (29384[7190 chars]alse} != {'mem[6381 chars]', 'sp', 6)), ('io', ('g', 'ss', 12288)), ('io[6433 chars]alse}
+Diff is 21089 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=61, tapped=False, pause='0791:8FD4', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2775 chars]), ('call', '0791:835F', (65520, 16384), '7179[3394 chars]alse} != {'mem[2775 chars]), ('w', 262126, 2, 65528, 97951), ('w', 26212[2687 chars]alse}
+Diff is 10239 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=61, tapped=True, pause='0791:8FD4', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[6492 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[7390 chars]alse} != {'mem[6492 chars]', 'sp', 65520)), ('io', ('g', 'ss', 12288)), [6627 chars]alse}
+Diff is 21463 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=62, tapped=False, pause='0791:8396', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1344 chars]), ('call', '0791:835F', (65535, 16384), 'd9da[3475 chars]alse} != {'mem[1344 chars]), ('w', 262130, 2, 65532, 97951), ('w', 26212[2770 chars]alse}
+Diff is 7944 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=62, tapped=True, pause='0791:8396', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2960 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[7456 chars]alse} != {'mem[2960 chars]', 'sp', 65524)), ('io', ('g', 'ss', 12288)), [6695 chars]alse}
+Diff is 16206 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=64, tapped=False, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1333 chars]), ('call', '0791:835F', (0, 16384), 'd6703417[2743 chars]alse} != {'mem[1333 chars]), ('w', 262134, 2, 0, 97951), ('w', 262130, 2[2042 chars]alse}
+Diff is 6488 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=64, tapped=True, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2921 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6391 chars]alse} != {'mem[2921 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [5634 chars]alse}
+Diff is 14269 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=65, tapped=False, pause='0791:835F', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3222 chars]), ('call', '0791:835F', (65520, 16384), '54a9[2928 chars]alse} != {'mem[3222 chars]), ('w', 262140, 2, 6, 97951), ('w', 262136, 2[2225 chars]alse}
+Diff is 10303 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=65, tapped=True, pause='0791:835F', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[7432 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[6542 chars]alse} != {'mem[7432 chars]', 'sp', 65534)), ('io', ('g', 'ss', 12288)), [5783 chars]alse}
+Diff is 21747 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=67, tapped=False, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3197 chars]), ('call', '0791:835F', (9803, 16384), '79153[2868 chars]alse} != {'mem[3197 chars]), ('w', 196852, 2, 254, 97951), ('w', 196848,[2170 chars]alse}
+Diff is 10124 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=67, tapped=True, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[7183 chars]', 'ss', 12288)), ('call', '0791:835F', (9803,[6315 chars]alse} != {'mem[7183 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[5561 chars]alse}
+Diff is 20930 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=68, tapped=False, pause='0791:8FD4', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1338 chars]), ('call', '0791:835F', (0, 16384), '295d6aa2[3309 chars]alse} != {'mem[1338 chars]), ('w', 262126, 2, 65528, 97951), ('w', 26212[2606 chars]alse}
+Diff is 7476 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=68, tapped=True, pause='0791:8FD4', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2943 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[7299 chars]alse} != {'mem[2943 chars]', 'sp', 65520)), ('io', ('g', 'ss', 12288)), [6540 chars]alse}
+Diff is 15736 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=70, tapped=False, pause='0791:8F10', direct=True, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[970 chars]), ('call', '0791:835F', (65535, 16384), 'ec48[2769 chars]alse} != {'mem[970 chars]), ('w', 262132, 2, 65534, 97951), ('w', 26212[2062 chars]alse}
+Diff is 6024 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=70, tapped=True, pause='0791:8F10', direct=True, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2350 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[6445 chars]alse} != {'mem[2350 chars]', 'sp', 65526)), ('io', ('g', 'ss', 12288)), [5682 chars]alse}
+Diff is 13547 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=71, tapped=False, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3203 chars]), ('call', '0791:835F', (42434, 16384), 'd8d4[2875 chars]alse} != {'mem[3203 chars]), ('w', 262134, 2, 0, 97951), ('w', 262130, 2[2172 chars]alse}
+Diff is 10137 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=71, tapped=True, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[7181 chars]', 'ss', 12288)), ('call', '0791:835F', (42434[6321 chars]alse} != {'mem[7181 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [5562 chars]alse}
+Diff is 20934 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=73, tapped=False, pause='23E4:0279', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2744 chars]), ('call', '0791:835F', (65520, 16384), '4e9a[3490 chars]alse} != {'mem[2744 chars]), ('w', 196612, 2, 14, 97951), ('w', 196608, [2791 chars]alse}
+Diff is 10390 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=73, tapped=True, pause='23E4:0279', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[6399 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[7393 chars]alse} != {'mem[6399 chars]', 'sp', 6)), ('io', ('g', 'ss', 12288)), ('io[6638 chars]alse}
+Diff is 21457 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=74, tapped=False, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1336 chars]), ('call', '0791:835F', (65535, 16384), 'd7d5[2745 chars]alse} != {'mem[1336 chars]), ('w', 196852, 2, 254, 97951), ('w', 196848,[2048 chars]alse}
+Diff is 6633 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=74, tapped=True, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2938 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[6361 chars]alse} != {'mem[2938 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[5608 chars]alse}
+Diff is 14396 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=76, tapped=False, pause='0791:8396', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1335 chars]), ('call', '0791:835F', (0, 16384), '022bf803[3445 chars]alse} != {'mem[1335 chars]), ('w', 262130, 2, 65532, 97951), ('w', 26212[2746 chars]alse}
+Diff is 7765 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=76, tapped=True, pause='0791:8396', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2947 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[7431 chars]alse} != {'mem[2947 chars]', 'sp', 65524)), ('io', ('g', 'ss', 12288)), [6676 chars]alse}
+Diff is 16028 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=77, tapped=False, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2399 chars]), ('call', '0791:835F', (65520, 16384), 'c6c6[2777 chars]alse} != {'mem[2399 chars]), ('w', 262132, 2, 65534, 97951), ('w', 26212[2070 chars]alse}
+Diff is 8481 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=77, tapped=True, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[5886 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[6334 chars]alse} != {'mem[5886 chars]', 'sp', 65526)), ('io', ('g', 'ss', 12288)), [5571 chars]alse}
+Diff is 18724 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=79, tapped=False, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3183 chars]), ('call', '0791:835F', (19049, 16384), '76ce[2873 chars]alse} != {'mem[3183 chars]), ('w', 262140, 2, 6, 97951), ('w', 262136, 2[2170 chars]alse}
+Diff is 10115 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=79, tapped=True, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[7146 chars]', 'ss', 12288)), ('call', '0791:835F', (19049[6373 chars]alse} != {'mem[7146 chars]', 'sp', 65534)), ('io', ('g', 'ss', 12288)), [5614 chars]alse}
+Diff is 20951 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=80, tapped=False, pause='23E4:0279', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1335 chars]), ('call', '0791:835F', (0, 16384), '6fda45f1[3409 chars]alse} != {'mem[1335 chars]), ('w', 196612, 2, 14, 97951), ('w', 196608, [2710 chars]alse}
+Diff is 7729 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=80, tapped=True, pause='23E4:0279', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2924 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[7296 chars]alse} != {'mem[2924 chars]', 'sp', 6)), ('io', ('g', 'ss', 12288)), ('io[6541 chars]alse}
+Diff is 15882 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=82, tapped=False, pause='0791:8FD4', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1344 chars]), ('call', '0791:835F', (65535, 16384), '8a7c[3328 chars]alse} != {'mem[1344 chars]), ('w', 262126, 2, 65528, 97951), ('w', 26212[2623 chars]alse}
+Diff is 7711 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=82, tapped=True, pause='0791:8FD4', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2960 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[7312 chars]alse} != {'mem[2960 chars]', 'sp', 65520)), ('io', ('g', 'ss', 12288)), [6551 chars]alse}
+Diff is 15976 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=83, tapped=False, pause='0791:8396', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2749 chars]), ('call', '0791:835F', (65032, 16384), '6be4[3466 chars]alse} != {'mem[2749 chars]), ('w', 262130, 2, 65532, 97951), ('w', 26212[2767 chars]alse}
+Diff is 10360 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=83, tapped=True, pause='0791:8396', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[6469 chars]', 'ss', 12288)), ('call', '0791:835F', (65032[7262 chars]alse} != {'mem[6469 chars]', 'sp', 65524)), ('io', ('g', 'ss', 12288)), [6507 chars]alse}
+Diff is 21251 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=85, tapped=False, pause='23E4:08DF', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3240 chars]), ('call', '0791:835F', (65520, 16384), 'a770[2942 chars]alse} != {'mem[3240 chars]), ('w', 262134, 2, 0, 97951), ('w', 262130, 2[2235 chars]alse}
+Diff is 10335 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=85, tapped=True, pause='23E4:08DF', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[7455 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[6572 chars]alse} != {'mem[7455 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [5809 chars]alse}
+Diff is 21800 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=86, tapped=False, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1785 chars]), ('call', '0791:835F', (65535, 16384), 'c1ae[2871 chars]alse} != {'mem[1785 chars]), ('w', 262140, 2, 6, 97951), ('w', 262136, 2[2164 chars]alse}
+Diff is 7695 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=86, tapped=True, pause='0791:835F', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3680 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[6508 chars]alse} != {'mem[3680 chars]', 'sp', 65534)), ('io', ('g', 'ss', 12288)), [5745 chars]alse}
+Diff is 15898 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=88, tapped=False, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1334 chars]), ('call', '0791:835F', (0, 16384), '5b542299[2691 chars]alse} != {'mem[1334 chars]), ('w', 196852, 2, 254, 97951), ('w', 196848,[1994 chars]alse}
+Diff is 6426 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=88, tapped=True, pause='0791:8F66', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2928 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6242 chars]alse} != {'mem[2928 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[5489 chars]alse}
+Diff is 14013 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=89, tapped=False, pause='0791:8FD4', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2747 chars]), ('call', '0791:835F', (65520, 16384), 'caac[3376 chars]alse} != {'mem[2747 chars]), ('w', 262126, 2, 65528, 97951), ('w', 26212[2675 chars]alse}
+Diff is 10193 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=89, tapped=True, pause='0791:8FD4', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[6458 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[7360 chars]alse} != {'mem[6458 chars]', 'sp', 65520)), ('io', ('g', 'ss', 12288)), [6603 chars]alse}
+Diff is 21399 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=91, tapped=False, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2405 chars]), ('call', '0791:835F', (10947, 16384), 'a9f7[2786 chars]alse} != {'mem[2405 chars]), ('w', 262132, 2, 65534, 97951), ('w', 26212[2077 chars]alse}
+Diff is 8496 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=91, tapped=True, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[5891 chars]', 'ss', 12288)), ('call', '0791:835F', (10947[6309 chars]alse} != {'mem[5891 chars]', 'sp', 65526)), ('io', ('g', 'ss', 12288)), [5544 chars]alse}
+Diff is 18671 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=92, tapped=False, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1338 chars]), ('call', '0791:835F', (0, 16384), '1d7a14ed[2744 chars]alse} != {'mem[1338 chars]), ('w', 262134, 2, 0, 97951), ('w', 262130, 2[2041 chars]alse}
+Diff is 6494 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=92, tapped=True, pause='23E4:08DF', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2930 chars]', 'ss', 12288)), ('call', '0791:835F', (0, 16[6362 chars]alse} != {'mem[2930 chars]', 'sp', 65528)), ('io', ('g', 'ss', 12288)), [5603 chars]alse}
+Diff is 14249 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=94, tapped=False, pause='23E4:0279', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[1344 chars]), ('call', '0791:835F', (65535, 16384), 'c1a7[3448 chars]alse} != {'mem[1344 chars]), ('w', 196612, 2, 14, 97951), ('w', 196608, [2743 chars]alse}
+Diff is 7917 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=94, tapped=True, pause='23E4:0279', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2937 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[7343 chars]alse} != {'mem[2937 chars]', 'sp', 6)), ('io', ('g', 'ss', 12288)), ('io[6582 chars]alse}
+Diff is 16070 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=95, tapped=False, pause='0791:8F66', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[3189 chars]), ('call', '0791:835F', (16819, 16384), 'e0cc[2870 chars]alse} != {'mem[3189 chars]), ('w', 196852, 2, 254, 97951), ('w', 196848,[2171 chars]alse}
+Diff is 10118 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=95, tapped=True, pause='0791:8F66', direct=False, mutations=False, return_mutations=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[7308 chars]', 'ss', 12288)), ('call', '0791:835F', (16819[6332 chars]alse} != {'mem[7308 chars]', 'sp', 246)), ('io', ('g', 'ss', 12288)), ('[5577 chars]alse}
+Diff is 21129 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=97, tapped=False, pause='0791:8396', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2769 chars]), ('call', '0791:835F', (65520, 16384), 'a615[3526 chars]alse} != {'mem[2769 chars]), ('w', 262130, 2, 65532, 97951), ('w', 26212[2821 chars]alse}
+Diff is 10451 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=97, tapped=True, pause='0791:8396', direct=False, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[6490 chars]', 'ss', 12288)), ('call', '0791:835F', (65520[7488 chars]alse} != {'mem[6490 chars]', 'sp', 65524)), ('io', ('g', 'ss', 12288)), [6727 chars]alse}
+Diff is 21645 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=98, tapped=False, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[974 chars]), ('call', '0791:835F', (65535, 16384), '9346[2774 chars]alse} != {'mem[974 chars]), ('w', 262132, 2, 65534, 97951), ('w', 26212[2065 chars]alse}
+Diff is 6033 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations) (case=98, tapped=True, pause='0791:8F10', direct=True, mutations=False, return_mutations=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 112, in test_positive_paths_and_mutations
+    p,_=exercise(Oracle,case,**opts);r,_=exercise(PortMachine,case,**opts);self.assertIsNone(p['error']);self.assertEqual(p,r);visits.update(s for s,_ in p['visits']);writes.update(p['state']['writes']);calls.update(p['calls'])
+                                                                                                              ^^^^^^^^^^^
+AssertionError: {'mem[2358 chars]', 'ss', 12288)), ('call', '0791:835F', (65535[6436 chars]alse} != {'mem[2358 chars]', 'sp', 65526)), ('io', ('g', 'ss', 12288)), [5671 chars]alse}
+Diff is 13534 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_positive_paths_and_mutations (test_ball_draw_state.BallDrawStateTests.test_positive_paths_and_mutations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_ball_draw_state.py", line 113, in test_positive_paths_and_mutations
+    self.assertTrue(set(RETURNS)<=visits);self.assertTrue(set(WRITE_SITES)<=writes);self.assertTrue(set(TARGETS)<=calls)
+         ^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 75 tests in 178.527s
+
+FAILED (failures=161)

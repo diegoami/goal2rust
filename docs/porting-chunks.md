@@ -123,11 +123,31 @@ saved T19/PyPy 0.748274 and T20/PyPy 0.717119
 show 28.29% less CPU than PyPy on this fixture. No global LOC/test coverage
 or general workload claim. No new per-translation 5% floor.
 
+## Validated scope: T21 ball-travel/multiply closure
+
+[T21](tasks/T21.md) closes the two-body 835F/23E4:0279 tree, preserving the real
+far8396 return, register arguments, scratch/dead stack/last-add flags and captured
+SENT/live DX. Both entries remain non-long. Full prior51/new2 proofs, all output
+controls, positive arithmetic witnesses, five live matrices, ordered drive,
+lifecycle and strict ALL75/F40 pass. [Assessment](../out/T21/assessment.md).
+
+Profile: 53 native bodies (12.56% equal-weight count), 2,584,201 native entries
+(83.26% fixture frequency), 519,484 Python entries. All three paired rounds
+improve: median 1.90% less CPU than saved T20. Same-campaign T20/PyPy
+0.699125, T21/PyPy 0.686504 means 31.35% less CPU than
+PyPy on this fixture. No general workload or global LOC/test-coverage claim.
+The owner-approved no-arbitrary-5%-floor policy applies to this modest gain.
+
+Older observed draw-state wrappers now explicitly use nondefault tags, retaining
+all trace/fault assertions; a separate actual-native integration test was added.
+Rejected preflight logs/original harness are preserved. No Rust semantic fix or
+canonical rejection occurred. All 598 frozen bindings stayed fixed.
+
 ## Decide the following chunk from evidence
 
-After T20 is accepted, inspect its complete remaining Python profile and scoped
+After T21 is accepted, inspect its complete remaining Python profile and scoped
 execution/boundary observations before sealing the next closed tree. No next task
-is included in T20.
+is included in T21.
 
 If common dispatch/bridge work dominates instead, define a separate measured
 optimization task with its own predeclared criteria. Native-to-native calls still
@@ -241,3 +261,19 @@ Its prototypes and owner decision are pending. A hybrid speed result provides
 neither GIL release nor in-process UI-thread safety; preserve explicit API, worker,
 save/load, cancellation and target-extension ABI/loading gates. This does not
 change the accepted engine oracle or authorize an application redesign here.
+
+## Upstream adoption update after T21
+
+Goal2 main is `39d545bbed8550cc9a203a743f72e8c27640b806`; archaeology
+remains `2a411f50422ecd1f5d8cf96d05f1873e6257e684`. Goal2 merged the
+[owner-approved T157 screen/flow design #530](https://github.com/diegoami/goal2/pull/530):
+follow the original, with tagged departures for DOS limits or playtest problems.
+[Optional checked GOAL.HLP import #531](https://github.com/diegoami/goal2/pull/531)
+serves original help on F1, while old data folders without it remain valid.
+[Play-next UX #529](https://github.com/diegoami/goal2/pull/529) makes the desk
+control primary and preserves captain-stop Q/C choices. These are later
+application parity contracts, not engine semantic changes or a Rust adoption.
+No original help, renders or game data are copied here. T158's measured technology/
+engine-boundary/packaging evaluation and the owner decision remain separate,
+alongside explicit GIL/threading/ABI/save/load/cancellation/playtest gates.
+The controlled engine pin and Rust-in-parallel m3 order are unchanged.

@@ -69,7 +69,7 @@ pub fn step<H:Host>(h:&mut H,phase:Phase,mutant:bool)->Result<Action,H::Err>{
   }
  }
 }
-fn add_flags(a:u16,b:u16)->u32 {
+pub(crate) fn add_flags(a:u16,b:u16)->u32 {
  let result=a.wrapping_add(b);let mut f=0;
  if a as u32+b as u32>65535{f|=CF;}
  if (result as u8).count_ones()%2==0{f|=PF;}

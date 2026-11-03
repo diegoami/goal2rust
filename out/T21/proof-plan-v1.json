@@ -1,0 +1,242 @@
+{
+  "real_captures_per_body": 8,
+  "authored_per_body": 500,
+  "observer_modes": 4,
+  "normal_comparisons": 6192,
+  "body_control_comparisons": 4192,
+  "output_control_comparisons": 6288,
+  "return_control_comparisons": 160,
+  "branch_comparisons": 480,
+  "cases_per_error_selector": 160,
+  "error_execution_rows": 42,
+  "distinct_error_selectors": 42,
+  "error_comparisons": 6720,
+  "errors": {
+    "0791:835F": [
+      {
+        "selector": "0791:835F",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ax",
+        "controlled": false
+      },
+      {
+        "selector": "reg:bp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:bx",
+        "controlled": false
+      },
+      {
+        "selector": "reg:cs",
+        "controlled": false
+      },
+      {
+        "selector": "reg:cx",
+        "controlled": false
+      },
+      {
+        "selector": "reg:dx",
+        "controlled": false
+      },
+      {
+        "selector": "reg:eflags",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ip",
+        "controlled": false
+      },
+      {
+        "selector": "reg:sp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ss",
+        "controlled": false
+      },
+      {
+        "selector": "write",
+        "controlled": false
+      },
+      {
+        "selector": "write:214B:0000",
+        "controlled": false
+      },
+      {
+        "selector": "write:0791:835F",
+        "controlled": false
+      },
+      {
+        "selector": "read-index:1",
+        "controlled": false
+      },
+      {
+        "selector": "read-index:2",
+        "controlled": false
+      },
+      {
+        "selector": "read-index:3",
+        "controlled": false
+      },
+      {
+        "selector": "read-index:4",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:1",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:2",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:3",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:4",
+        "controlled": false
+      },
+      {
+        "selector": "23E4:0279",
+        "controlled": true
+      },
+      {
+        "selector": "0791:8396",
+        "controlled": true
+      },
+      {
+        "selector": "write:0791:8396",
+        "controlled": true
+      }
+    ],
+    "23E4:0279": [
+      {
+        "selector": "23E4:0279",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ax",
+        "controlled": false
+      },
+      {
+        "selector": "reg:bp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:bx",
+        "controlled": false
+      },
+      {
+        "selector": "reg:cs",
+        "controlled": false
+      },
+      {
+        "selector": "reg:cx",
+        "controlled": false
+      },
+      {
+        "selector": "reg:dx",
+        "controlled": false
+      },
+      {
+        "selector": "reg:eflags",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ip",
+        "controlled": false
+      },
+      {
+        "selector": "reg:sp",
+        "controlled": false
+      },
+      {
+        "selector": "reg:ss",
+        "controlled": false
+      },
+      {
+        "selector": "write",
+        "controlled": false
+      },
+      {
+        "selector": "write:214B:0000",
+        "controlled": false
+      },
+      {
+        "selector": "read-index:1",
+        "controlled": false
+      },
+      {
+        "selector": "read-index:2",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:1",
+        "controlled": false
+      },
+      {
+        "selector": "write-index:2",
+        "controlled": false
+      }
+    ]
+  },
+  "variants": {},
+  "observed_read_write_ordinals": {
+    "0791:835F": {
+      "false": {
+        "read_index": 4,
+        "write_index": 4
+      },
+      "true": {
+        "read_index": 4,
+        "write_index": 3
+      }
+    },
+    "23E4:0279": {
+      "false": {
+        "read_index": 2,
+        "write_index": 2
+      }
+    }
+  },
+  "positive_arithmetic_witnesses": [
+    "abs:minword",
+    "abs:negative",
+    "abs:nonnegative",
+    "add-flags:(a ^ b ^ r) & 16:false",
+    "add-flags:(a ^ b ^ r) & 16:true",
+    "add-flags:a + b > mask:false",
+    "add-flags:a + b > mask:true",
+    "add-flags:bin(r & 255).count('1') % 2 == 0:false",
+    "add-flags:bin(r & 255).count('1') % 2 == 0:true",
+    "add-flags:r & sign:false",
+    "add-flags:r & sign:true",
+    "add-flags:r == 0:false",
+    "add-flags:r == 0:true",
+    "add-flags:~(a ^ b) & (a ^ r) & sign:false",
+    "add-flags:~(a ^ b) & (a ^ r) & sign:true",
+    "mul:lhs-negative",
+    "mul:lhs-nonnegative",
+    "mul:modulo32",
+    "mul:no-overflow32",
+    "mul:nonzero",
+    "mul:overflow32",
+    "mul:rhs-negative",
+    "mul:rhs-nonnegative",
+    "mul:zero",
+    "sum:negative",
+    "sum:no-wrap",
+    "sum:nonnegative",
+    "sum:wrap"
+  ],
+  "output_controls": {
+    "AX": 157,
+    "DX": 158,
+    "EFLAGS": 159
+  }
+}

@@ -5,7 +5,7 @@ oracle and evidence, profile the Rust machine, then translate complete hot call
 trees. This follows the owner's approval of the upstream assessment. T02 is
 complete; its historical receipts and Done-when remain unchanged.
 
-## Current plan after T20: complete native chunks
+## Current plan after T21: complete native chunks
 
 [owner-approved recalibration] T03-T16 are historical accepted increments. The
 next default work unit is a complete bounded native execution tree with its
@@ -32,19 +32,24 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
    five guest sites. Full fidelity and paired measurements pass;
    [results](../out/T20/assessment.md). Select the next closed tree from its full
    profile in a new session; no following scope or implementation is included.
-5. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
+5. **T21, [PR #51](https://github.com/diegoami/goal2rust/pull/51):**
+   [complete ball-travel/multiply subtree](tasks/T21.md): both remaining default
+   bodies and far8396. Full fidelity/paired measurements pass;
+   [results](../out/T21/assessment.md). Owner requested winding down after this
+   task; select any following scope in a new session from the full profile.
+6. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
    dominant, define a separate optimization task. A larger PR alone does not remove
    every Python boundary or common dispatch cost.
-6. **Engine milestone and application adoption:** retain the larger A700 corpus,
+7. **Engine milestone and application adoption:** retain the larger A700 corpus,
    known ref-121 noncompletion and owner review, then worker/save-load/cancellation/
    playtest and representative performance gates. PyPy remains goal2's baseline.
-7. **Whole game later:** tournament, board and career initialization still have
+8. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
-Current coverage is **51/422 registered non-stub bodies (12.09%)**, while **81.92%**
-of guest entries on the reference fixture are native (2,542,617 native, 561,068
+Current coverage is **53/422 registered non-stub bodies (12.56%)**, while **83.26%**
+of guest entries on the reference fixture are native (2,584,201 native, 519,484
 Python). Neither is source-line, CPU-time or test coverage; no global line/branch
-percentage is currently reported. Use the [current profile](../out/T20/profile-after-v1.json),
+percentage is currently reported. Use the [current profile](../out/T21/profile-after-v1.json),
 the historical [T16 planning snapshot](plans/post-T16-baseline.json) and
 [same-campaign performance reporting](performance-reporting.md). Every new summary
 shows saved-baseline/PyPy and candidate/PyPy together. No calendar completion date
@@ -452,6 +457,26 @@ coverage/general workload claim or arbitrary incremental 5% floor.
 All 80 recorded producer groups and controller are stopped. Live CI/merge/stop
 status remains checkpoint #1 / PR #49. Finish T20 and wind down; no next task.
 
+## 2r. T21: complete ball-travel and long-multiply subtree
+
+835F/23E4:0279 are native together, preserving the one far guest return, captured
+SENT/live DX and exact scratch/dead-stack/last-add flag semantics. Full prior51/
+new2 normal154,024 comparisons and all controls/errors/branches/variants/closure/
+five live matrices pass; positive six-flag/sign/min-word/sum-wrap/modulo32/
+overflow witnesses. Public76 each/Rust11/GC20/observer328, exact ordered drive,
+sealed lifecycle and independent strict ALL75/F40 attestations pass. Instrumented
+draw-wrapper preflight correction/logs retained; separate native integration
+added, no assertion drop or Rust semantic fix. All 598 bound inputs fixed.
+
+Profile:53 native bodies,2,584,201 native/519,484 Python entries. All three paired
+rounds improve; median 1.90% less CPU than saved T20. Same-campaign T20/PyPy
+0.699125, T21/PyPy 0.686504 (31.35% less CPU on this
+fixture). Modest gain below 5%; no arbitrary incremental floor, general workload
+or global coverage claim. [Assessment](../out/T21/assessment.md),
+[final ledger](../out/T21/validation-final-v1.json). All 85 recorded groups and
+controller stopped. Live CI/merge/stop state remains checkpoint #1/PR #51.
+Owner requested winding down for the day after this task; no next task started.
+
 ## 3. Engine milestone and goal2 adoption
 
 Keep per-subtree proofs. Before an engine milestone, additionally run the
@@ -464,7 +489,7 @@ The owner runs the milestone review from a prompt naming the PR and requesting
 the full report as a PR comment and its URL. Goal2 adoption separately requires
 application fidelity, save/load, cancellation and native lifecycle/playtest.
 T08 historically demonstrated26.73% less CPU than its saved hybrid baseline and
-used 1.46x PyPy CPU (out/T08/assessment.md). T20 uses 28.29% less CPU than PyPy
+used 1.46x PyPy CPU (out/T08/assessment.md). T21 uses 31.35% less CPU than PyPy
 on the reference fixture at the three-round median in its own campaign. Broader
 adoption still needs its representative performance set and application gates.
 
@@ -519,3 +544,10 @@ T156→T157→T158 design phase absorbs T154 into a measured technology/route/en
 packaging evaluation, followed by the owner's decision. Preserve application,
 GIL/threading and portable ABI gates; no original assets copied and no pin refresh
 during this controlled campaign. See [adoption update](porting-chunks.md#upstream-plan-and-design-update-after-t20).
+
+T21 final upstream check: goal2 `39d545bb`, archaeology `2a411f50`. Approved
+original-faithful screen/flow design T157 (#530), optional checked help import
+(#531) and play-next/captain-stop UX (#529) are now merged. Keep those contracts
+for later application parity; they do not alter the accepted match-engine pin
+or prove Rust GIL/thread/portable ABI adoption. T158/owner technology decision and
+Rust-in-parallel m3 order remain. See [adoption update](porting-chunks.md#upstream-adoption-update-after-t21).

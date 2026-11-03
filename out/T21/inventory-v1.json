@@ -1,0 +1,111 @@
+{
+  "bodies": {
+    "0791:835F": {
+      "address": "0791:835F",
+      "end_line": 146,
+      "helper_symbols": [
+        {
+          "line": 67,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/motion.py",
+          "symbol": "original_match.port.motion.absw"
+        },
+        {
+          "line": 136,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/motion.py",
+          "symbol": "original_match.port.motion.ball_travel"
+        },
+        {
+          "line": 62,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/motion.py",
+          "symbol": "original_match.port.motion.cwd"
+        },
+        {
+          "line": 96,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/motion.py",
+          "symbol": "original_match.port.motion.record"
+        },
+        {
+          "line": 90,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/motion.py",
+          "symbol": "original_match.port.motion.regs"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 136,
+      "long": false,
+      "module": "original_match.port.motion",
+      "name": "ball_travel",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/motion.py",
+      "pop": 4,
+      "ret": "retf 4",
+      "return_stack_delta": 0,
+      "sites": [
+        {
+          "caller": "0791:835F",
+          "expression": "call('23E4:0279', ret_to='0791:8396', far=True)",
+          "far": true,
+          "line": 145,
+          "ret_to": "0791:8396",
+          "target": "23E4:0279"
+        }
+      ]
+    },
+    "23E4:0279": {
+      "address": "23E4:0279",
+      "end_line": 1081,
+      "helper_symbols": [
+        {
+          "line": 272,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.add_flags"
+        },
+        {
+          "line": 1065,
+          "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+          "symbol": "original_match.port.runtime.sys_long_mul"
+        }
+      ],
+      "inline_invokes": [],
+      "line": 1065,
+      "long": false,
+      "module": "original_match.port.runtime",
+      "name": "sys_long_mul",
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/runtime.py",
+      "pop": 0,
+      "ret": "retf",
+      "return_stack_delta": 0,
+      "sites": []
+    }
+  },
+  "boundaries": [],
+  "guest_sites": [
+    {
+      "caller": "0791:835F",
+      "expression": "call('23E4:0279', ret_to='0791:8396', far=True)",
+      "far": true,
+      "line": 145,
+      "ret_to": "0791:8396",
+      "target": "23E4:0279"
+    }
+  ],
+  "oracle": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+  "prediction": {
+    "native_bodies": 53,
+    "native_entries": 2584201,
+    "new_native_bodies": 2,
+    "new_native_entries": 41584,
+    "python_entries": 519484,
+    "scope": "unchanged fixture entry prediction only; no speed forecast",
+    "total": 3103685
+  },
+  "profile_sha256": "e69ab4e8dd9d4f1b576378bc11ed1eeb76a8704ab4ddac89ded6328b6c6e58ff",
+  "root": "0791:835F",
+  "site_count": 1,
+  "source_sha256": {
+    ".cache/goal2-archaeology/runtime/original_match/port/engine.py": "6439370e3ffcc5977bb066506431a25a0c300ea374faf28ec3f4fbd9718c6f14",
+    ".cache/goal2-archaeology/runtime/original_match/port/guest.py": "1062b5ea7d72114b5f404485768f6aeca69a5d94ffb0285a31158b266c46de7f",
+    ".cache/goal2-archaeology/runtime/original_match/port/mem.py": "0105113f8102a3e8c3544942a445e156fecc0196f7911089e7f789a7775fe45c",
+    ".cache/goal2-archaeology/runtime/original_match/port/motion.py": "4e7bab13c1e196464ecb41fd2ddb3a41878c217885c238fd2e80cd8329746eb2",
+    ".cache/goal2-archaeology/runtime/original_match/port/runtime.py": "2e94867069cd6e35c28af96426bfade7dcb381e370eb12af106627cbeeced0eb"
+  }
+}

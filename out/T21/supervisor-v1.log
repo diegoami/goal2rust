@@ -1,0 +1,316 @@
+START public-cpython-v1 257759
+START public-pypy-v1 257762
+START gc-parity-v1 257764
+ACTIVE public-cpython-v1,public-pypy-v1,gc-parity-v1 PENDING 65
+EXIT gc-parity-v1 0
+START observer-matrix-v2 257799
+EXIT observer-matrix-v2 0
+START rust-unit-v1 257830
+EXIT rust-unit-v1 0
+START taps-python-v1 257855
+ACTIVE public-cpython-v1,public-pypy-v1,taps-python-v1 PENDING 62
+ACTIVE public-cpython-v1,public-pypy-v1,taps-python-v1 PENDING 62
+ACTIVE public-cpython-v1,public-pypy-v1,taps-python-v1 PENDING 62
+EXIT public-cpython-v1 0
+START legacy-v1 257986
+ACTIVE public-pypy-v1,taps-python-v1,legacy-v1 PENDING 61
+EXIT public-pypy-v1 0
+START legacy-body-v1 258056
+ACTIVE taps-python-v1,legacy-v1,legacy-body-v1 PENDING 60
+EXIT legacy-v1 0
+START availability-differential-v1 258116
+EXIT availability-differential-v1 0
+ACTIVE taps-python-v1,legacy-body-v1 PENDING 59
+START availability-body-v1 258200
+EXIT legacy-body-v1 0
+START availability-return-v1 258255
+EXIT availability-body-v1 0
+START ball-differential-v1 258305
+ACTIVE taps-python-v1,availability-return-v1,ball-differential-v1 PENDING 56
+EXIT availability-return-v1 0
+START ball-body-v1 258358
+ACTIVE taps-python-v1,ball-differential-v1,ball-body-v1 PENDING 55
+ACTIVE taps-python-v1,ball-differential-v1,ball-body-v1 PENDING 55
+ACTIVE taps-python-v1,ball-differential-v1,ball-body-v1 PENDING 55
+EXIT taps-python-v1 0
+ACTIVE ball-differential-v1,ball-body-v1 PENDING 55
+START ball-return-v1 258496
+ACTIVE ball-differential-v1,ball-body-v1,ball-return-v1 PENDING 54
+ACTIVE ball-differential-v1,ball-body-v1,ball-return-v1 PENDING 54
+ACTIVE ball-differential-v1,ball-body-v1,ball-return-v1 PENDING 54
+ACTIVE ball-differential-v1,ball-body-v1,ball-return-v1 PENDING 54
+EXIT ball-body-v1 0
+START skill-differential-v1 258656
+ACTIVE ball-differential-v1,ball-return-v1,skill-differential-v1 PENDING 53
+EXIT ball-differential-v1 0
+EXIT ball-return-v1 0
+EXIT skill-differential-v1 0
+ACTIVE  PENDING 53
+START skill-body-v1 258739
+START skill-return-v1 258784
+START speaker-differential-v1 258829
+ACTIVE skill-body-v1,skill-return-v1,speaker-differential-v1 PENDING 50
+EXIT skill-return-v1 0
+START speaker-body-v1 258910
+EXIT skill-body-v1 0
+START speaker-root-return-v1 258940
+ACTIVE speaker-differential-v1,speaker-body-v1,speaker-root-return-v1 PENDING 48
+ACTIVE speaker-differential-v1,speaker-body-v1,speaker-root-return-v1 PENDING 48
+EXIT speaker-differential-v1 0
+START speaker-seed-return-v1 259028
+ACTIVE speaker-body-v1,speaker-root-return-v1,speaker-seed-return-v1 PENDING 47
+EXIT speaker-root-return-v1 0
+START keys-differential-v1 259083
+EXIT speaker-body-v1 0
+ACTIVE speaker-seed-return-v1,keys-differential-v1 PENDING 46
+START keys-body-v1 259113
+EXIT speaker-seed-return-v1 0
+ACTIVE keys-differential-v1,keys-body-v1 PENDING 45
+START keys-return-v1 259156
+ACTIVE keys-differential-v1,keys-body-v1,keys-return-v1 PENDING 44
+EXIT keys-body-v1 0
+START draw-differential-v1 259221
+EXIT keys-return-v1 0
+START draw-body-v1 259251
+EXIT keys-differential-v1 0
+ACTIVE draw-differential-v1,draw-body-v1 PENDING 42
+START draw-return-v1 259274
+EXIT draw-differential-v1 0
+START sweep-differential-v1 259319
+EXIT draw-body-v1 0
+EXIT draw-return-v1 0
+ACTIVE sweep-differential-v1 PENDING 40
+START sweep-body-v1 259342
+START sweep-return-v1 259365
+ACTIVE sweep-differential-v1,sweep-body-v1,sweep-return-v1 PENDING 38
+ACTIVE sweep-differential-v1,sweep-body-v1,sweep-return-v1 PENDING 38
+ACTIVE sweep-differential-v1,sweep-body-v1,sweep-return-v1 PENDING 38
+ACTIVE sweep-differential-v1,sweep-body-v1,sweep-return-v1 PENDING 38
+EXIT sweep-return-v1 0
+START play-differential-v1 259550
+ACTIVE sweep-differential-v1,sweep-body-v1,play-differential-v1 PENDING 37
+ACTIVE sweep-differential-v1,sweep-body-v1,play-differential-v1 PENDING 37
+EXIT sweep-body-v1 0
+ACTIVE sweep-differential-v1,play-differential-v1 PENDING 37
+START play-body-v1 259643
+EXIT play-differential-v1 0
+ACTIVE sweep-differential-v1,play-body-v1 PENDING 36
+START play-return-v1 259855
+EXIT sweep-differential-v1 0
+EXIT play-body-v1 0
+START update-differential-v1 259893
+START update-body-v1 259924
+ACTIVE play-return-v1,update-differential-v1,update-body-v1 PENDING 33
+EXIT play-return-v1 0
+START update-return-v1 259955
+EXIT update-body-v1 0
+ACTIVE update-differential-v1,update-return-v1 PENDING 32
+START sprite-differential-v1 260001
+EXIT update-return-v1 0
+START sprite-body-v1 260024
+ACTIVE update-differential-v1,sprite-differential-v1,sprite-body-v1 PENDING 30
+EXIT sprite-body-v1 0
+START sprite-return-v1 260073
+ACTIVE update-differential-v1,sprite-differential-v1,sprite-return-v1 PENDING 29
+EXIT sprite-differential-v1 0
+EXIT sprite-return-v1 0
+START run-differential-v1 260118
+START run-body-v1 260141
+EXIT run-body-v1 0
+START run-position-v1 260178
+EXIT update-differential-v1 0
+START marking-normal-v1 260203
+EXIT run-differential-v1 0
+ACTIVE run-position-v1,marking-normal-v1 PENDING 25
+START marking-body-v1 260237
+EXIT run-position-v1 0
+START marking-output-v1 260262
+ACTIVE marking-normal-v1,marking-body-v1,marking-output-v1 PENDING 23
+EXIT marking-output-v1 0
+START marking-returns-v1 260306
+ACTIVE marking-normal-v1,marking-body-v1,marking-returns-v1 PENDING 22
+ACTIVE marking-normal-v1,marking-body-v1,marking-returns-v1 PENDING 22
+ACTIVE marking-normal-v1,marking-body-v1,marking-returns-v1 PENDING 22
+EXIT marking-returns-v1 0
+START destination-normal-v1 260449
+ACTIVE marking-normal-v1,marking-body-v1,destination-normal-v1 PENDING 21
+ACTIVE marking-normal-v1,marking-body-v1,destination-normal-v1 PENDING 21
+ACTIVE marking-normal-v1,marking-body-v1,destination-normal-v1 PENDING 21
+EXIT marking-body-v1 0
+START destination-body-v1 260531
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 20
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 20
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 20
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 20
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 20
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 20
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 20
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 20
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 20
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 20
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 20
+EXIT destination-body-v1 0
+START destination-output-v1 260823
+ACTIVE marking-normal-v1,destination-normal-v1,destination-output-v1 PENDING 19
+ACTIVE marking-normal-v1,destination-normal-v1,destination-output-v1 PENDING 19
+ACTIVE marking-normal-v1,destination-normal-v1,destination-output-v1 PENDING 19
+ACTIVE marking-normal-v1,destination-normal-v1,destination-output-v1 PENDING 19
+EXIT marking-normal-v1 0
+START destination-returns-v1 260955
+ACTIVE destination-normal-v1,destination-output-v1,destination-returns-v1 PENDING 18
+EXIT destination-output-v1 0
+START depth-normal-v1 261018
+ACTIVE destination-normal-v1,destination-returns-v1,depth-normal-v1 PENDING 17
+ACTIVE destination-normal-v1,destination-returns-v1,depth-normal-v1 PENDING 17
+ACTIVE destination-normal-v1,destination-returns-v1,depth-normal-v1 PENDING 17
+EXIT destination-returns-v1 0
+START depth-body-v1 261150
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 16
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 16
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 16
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 16
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 16
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 16
+EXIT depth-body-v1 0
+START depth-output-v1 261341
+ACTIVE destination-normal-v1,depth-normal-v1,depth-output-v1 PENDING 15
+EXIT depth-output-v1 0
+START depth-returns-v1 261404
+ACTIVE destination-normal-v1,depth-normal-v1,depth-returns-v1 PENDING 14
+ACTIVE destination-normal-v1,depth-normal-v1,depth-returns-v1 PENDING 14
+EXIT depth-returns-v1 0
+ACTIVE destination-normal-v1,depth-normal-v1 PENDING 14
+START prior-destination-live-observers-v1 261469
+EXIT prior-destination-live-observers-v1 0
+ACTIVE destination-normal-v1,depth-normal-v1 PENDING 13
+START prior-live-observers-v1 261521
+ACTIVE destination-normal-v1,depth-normal-v1,prior-live-observers-v1 PENDING 12
+ACTIVE destination-normal-v1,depth-normal-v1,prior-live-observers-v1 PENDING 12
+EXIT prior-live-observers-v1 0
+START prior-depth-live-observers-v1 261631
+ACTIVE destination-normal-v1,depth-normal-v1,prior-depth-live-observers-v1 PENDING 11
+EXIT prior-depth-live-observers-v1 0
+START scoped-write-errors-v1 261677
+ACTIVE destination-normal-v1,depth-normal-v1,scoped-write-errors-v1 PENDING 10
+EXIT destination-normal-v1 0
+START chase-normal-v1 261708
+EXIT depth-normal-v1 0
+START chase-body-v1 261733
+EXIT scoped-write-errors-v1 0
+START chase-output-v1 261763
+ACTIVE chase-normal-v1,chase-body-v1,chase-output-v1 PENDING 7
+EXIT chase-output-v1 0
+START chase-returns-v1 261808
+EXIT chase-returns-v1 0
+ACTIVE chase-normal-v1,chase-body-v1 PENDING 6
+START prior-chase-live-observers-v1 261847
+EXIT chase-body-v1 0
+START travel-normal-v1 261870
+EXIT prior-chase-live-observers-v1 0
+START travel-body-v1 261938
+ACTIVE chase-normal-v1,travel-normal-v1,travel-body-v1 PENDING 3
+EXIT travel-body-v1 0
+ACTIVE chase-normal-v1,travel-normal-v1 PENDING 3
+START travel-output-v1 261988
+ACTIVE chase-normal-v1,travel-normal-v1,travel-output-v1 PENDING 2
+EXIT travel-normal-v1 0
+EXIT travel-output-v1 0
+START travel-returns-v1 262047
+START live-observers-v1 262070
+EXIT travel-returns-v1 0
+EXIT live-observers-v1 0
+ACTIVE chase-normal-v1 PENDING 0
+ACTIVE chase-normal-v1 PENDING 0
+EXIT chase-normal-v1 0
+START taps-rust-v1 262143
+ACTIVE taps-rust-v1 PENDING 0
+ACTIVE taps-rust-v1 PENDING 0
+ACTIVE taps-rust-v1 PENDING 0
+ACTIVE taps-rust-v1 PENDING 0
+ACTIVE taps-rust-v1 PENDING 0
+EXIT taps-rust-v1 0
+WAIT FOR QUIET HOST (1.0341796875, 2.05810546875, 2.5478515625) 1 /3
+WAIT FOR QUIET HOST (0.875, 1.990234375, 2.52001953125) 2 /3
+WAIT FOR QUIET HOST (0.740234375, 1.92431640625, 2.49267578125) 3 /3
+START family-ALL-v1 262342
+START check-v1 262365
+START profile-after-v1 262466
+ACTIVE family-ALL-v1,check-v1,profile-after-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1,profile-after-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1,profile-after-v1 PENDING 0
+EXIT profile-after-v1 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+Preserved completed ALL records 10
+Provisional strict prefix 10 equal; full ALL75/F40 pending
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+Preserved completed ALL records 20
+Provisional strict prefix 20 equal; full ALL75/F40 pending
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+EXIT check-v1 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+Preserved completed ALL records 30
+Provisional strict prefix 30 equal; full ALL75/F40 pending
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+Preserved completed ALL records 60
+Provisional strict prefix 60 equal; full ALL75/F40 pending
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+EXIT family-ALL-v1 0
+START performance-v1 264024
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+EXIT performance-v1 0
+ALL PRODUCERS EXITED; run post-exit audit after this writer exits

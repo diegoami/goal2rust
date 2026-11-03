@@ -1,0 +1,25 @@
+{
+  "public_tests_each": 76,
+  "new_public_test_methods": 6,
+  "rust_tests": 11,
+  "actual_state_comparisons": 192,
+  "actual_closure_probes": true,
+  "distinct_errors_reached": 42,
+  "error_execution_rows": 42,
+  "positive_branch_arithmetic_comparisons": 480,
+  "live_observer_comparisons": 1280,
+  "runtime_semantic_fix_required": false,
+  "instrumentation_recovery": "Observed travel/multiply wrappers now have explicit nondefault tags, retaining their trace/fault probes. Separate32-case default native draw->membership/travel/multiply integration added. No old assertion dropped.",
+  "original_instrumentation_source": ".cache/T21-baseline/engine/tests/test_ball_draw_state.py",
+  "original_instrumentation_sha256": "91de5fa701a120e19755252006df817673b32ca768a3ab6a63b5e41530cb5b35",
+  "sha256": {
+    ".cache/T21-public-cpython-preflight-v2.log": "18e45f74285efb851de2397152b7cb7896ddc314f282311fe51527af8d957fca",
+    ".cache/T21-public-pypy-preflight-v2.log": "266d0e36cf3b8dc7685983018da12f299db03f149485dcc8a933f8912f854a46",
+    ".cache/T21-rust-preflight-v1.log": "71d5fad2711bf385aba0f29b23dd5f639abea560ffe6de2f37a202df3024737d",
+    ".cache/T21-live-preflight-v1.json": "e71453cb3f2995a1f5d49a5e36fde215b28d8062735d2e8485941ce9196d78c2"
+  },
+  "rejected_log_sha256": {
+    "rejected-public-cpython-preflight-v1.log": "3aa2d0c6099e277cb30b7e9baea25b354c635e5b23471a650c230195a3372196",
+    "rejected-public-pypy-preflight-v1.log": "d30d8cad868dfef4419f633e1d17f98eb968b0630d31977a9e63bcab0e41b2a8"
+  }
+}

@@ -11,7 +11,7 @@ WRITE_SITES=('0791:8FAF','0791:8FBD','0791:8FE9','0791:906E')
 ENTRIES={ad:e for reg,_ in load(['all']) for ad,e in reg.entries.items() if ad in (ROOT,)+TARGETS}
 assert len(ENTRIES)==4
 
-def exercise(cls,case,*,tapped=True,listener=True,pause=None,failure=None,variant=None,mutant=0,direct=False,snapshot=None,mutations=False,return_mutations=False,native_member=False):
+def exercise(cls,case,*,tapped=True,listener=True,pause=None,failure=None,variant=None,mutant=0,direct=False,snapshot=None,mutations=False,return_mutations=False,native_member=False,native_travel=False):
  rng=random.Random(case);m=cls(bytes(range(256))*(0x110000//256),0x823,mutant=mutant) if cls is PortMachine else cls(bytes(range(256))*(0x110000//256),0x823)
  mem=m.port_memory();log=[];calls={};visits=[];done=[];state=dict(writes={},arg_mutations=0,pointer_mutations=0,zf_mutations=0,ax_mutations=0,saved_bp_mutations=0);ds=m.DS*16
  def put(a,v,n=1):m._memory[a:a+n]=(v&((1<<(8*n))-1)).to_bytes(n,'little')
@@ -22,8 +22,9 @@ def exercise(cls,case,*,tapped=True,listener=True,pause=None,failure=None,varian
     packet=args(mem,original.pop//2);log.append(('call',ad,packet,hashlib.sha256(m._memory).hexdigest(),dict(m._registers)))
     if failure=='callee:'+ad:raise ValueError('draw-state callee refused')
     return original.fn(mem,v)
-   entry=Entry(ad,original.ret,observed,original.name,original.long,original.stub,original.return_stack_delta);v='T18-observed-membership' if ad==MEMBER else None
+   entry=Entry(ad,original.ret,observed,original.name,original.long,original.stub,original.return_stack_delta);v='T18-observed-membership' if ad==MEMBER else 'T21-observed-'+ad
    if native_member and ad==MEMBER:entry=original;v=None
+   if native_travel and ad in (TRAVEL,MUL):entry=original;v=None
   if cls is Oracle:
    def runner(machine,e=entry,v=v):calls[e.address]=calls.get(e.address,0)+1;PortFrame(machine,mem,e,v).start()
   else:runner=BridgeRunner(entry,v,mem,calls)
@@ -99,6 +100,16 @@ class BallDrawStateTests(unittest.TestCase):
    r,n=exercise(PortMachine,case,native_member=True,mutations=case%3==0,return_mutations=case%5==0,pause=SITES[case%len(SITES)])
    self.assertIsNone(p['error']);self.assertEqual(p,r)
    if MEMBER in p['calls']:self.assertGreater(n.get(MEMBER,0),0);reached+=1
+  self.assertGreater(reached,0)
+
+ def test_actual_native_travel(self):
+  reached=0
+  for case in range(32):
+   opts=dict(native_member=True,native_travel=True,mutations=case%3==0,return_mutations=case%5==0,pause=SITES[case%len(SITES)])
+   p,_=exercise(Oracle,case,**opts);r,n=exercise(PortMachine,case,**opts)
+   self.assertIsNone(p['error']);self.assertEqual(p,r)
+   if TRAVEL in p['calls']:
+    self.assertGreater(n.get(TRAVEL,0),0);self.assertGreater(n.get(MUL,0),0);reached+=1
   self.assertGreater(reached,0)
 
  def test_native_caller(self):
