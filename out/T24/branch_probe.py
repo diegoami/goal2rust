@@ -22,3 +22,20 @@ class Probe:
    if row:self.pending[id(f)]=row
   if event=='return':self.pending.pop(id(f),None)
   return self.trace
+ def observe(self,root,p):
+  def add(k):self.counts[k]=self.counts.get(k,0)+1
+  writes=[x for x in p['log'] if x[0]=='w'];pc=lambda off:((0x214b+0x823)&65535)*16+off
+  if root=='214B:0723':
+   truth=[x[1] for x in p['log'] if x[0]=='provider-truth'];assert len(truth)==1 and not writes
+   add('poll:truth-true' if truth[0] else 'poll:truth-false');add('poll:no-BIOS-frame')
+  if root=='214B:08DD':
+   if p['state'].get('keys'):
+    assert all(x[4]!=pc(0) for x in writes);add('read:kit-no-frame')
+   else:
+    assert writes[0][4]==pc(0x8ea) and writes[1][4]==pc(0x97c) and writes[2][4]==pc(0)
+    add('read:pushed-frame-after-immediate-writes')
+  if root=='214B:0993':
+   assert writes[0][4]==pc(0x996) and writes[1][4]==pc(0) and writes[2][4]==pc(0x99e)
+   add('push:flag-before-frame-flush-before-key')
+  if root=='214B:0983':
+   assert any(x[4]==pc(0x98a) and x[3]==0 for x in writes);add('wait:real-return-key-clear')
