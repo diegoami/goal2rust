@@ -1,0 +1,8 @@
+denied: unicorn, .sav, .EXE, .DAT
+Real entry cases complete {'real': {'total': 96, 'equal': 0}}
+Authored inputs complete 100
+Authored inputs complete 200
+Authored inputs complete 300
+Authored inputs complete 400
+Authored inputs complete 500
+{"mutant": 21, "comparisons": {"real": {"total": 96, "equal": 0}, "random-edge": {"total": 2000, "equal": 0}}, "paths": {"handler": 1568, "no_handler": 528, "at_ball": 1452, "skip_at": 644, "comment": 609, "take": 1044, "fatigue": 196, "no_fatigue": 1900, "value_zero": 132, "value_none": 536}, "observer_mutations": {"arg_code_mutations": 508, "bp_mutations": 208, "kept_mutations": 47, "play_mutations": 72, "fatigue_mutations": 14, "state_mutations": 144, "sent_clobbers": 314}, "error_comparisons": 0, "all_equal": false, "source_unchanged": true}

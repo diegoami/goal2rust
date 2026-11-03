@@ -386,3 +386,79 @@ T23/PyPy0.678089 medians are retained alongside all raw rows. No repeatable
 speed claim or cherry-picked arm. Final-v2 ledger binds731 primary inputs,
 263 evidence hashes and two additive measurement/audit sources;107 process
 groups/controller stopped. Original v1 sources/receipts/ledger remain unchanged.
+
+## T24 selected chunk and upstream dependency update
+
+The full T23 profile selects the complete keyboard-service chunk214B:0723,
+08DD,0983 and0993,with nine owned body/helper functions in total. The wait/clear caller's
+only guest,08DD at098A,is included. This cohesive kit-service path moves78,172
+fixture entries;prediction63 bodies/2,688,294 native/415,391 Python,no speed
+forecast. The actual per-port memory view/kit callbacks remain the semantic API;
+no BIOS prologue or automatic-answer policy is invented. [Task](tasks/T24.md).
+
+Upstreams rechecked at goal2`4368facda28d807500eb382854e2cc3f3d157d54`
+and archaeology`ddc888b9dc3b13921928e50770c649c24a1d45d7`.
+Goal2[T163/#553](https://github.com/diegoami/goal2/pull/553) merges the new-window
+start/new-game screens. Its process now serializes local gates per computer
+after two WSL crashes;independent tasks still coordinate the shared host. The
+owner's first-key-poll choice concerns animation/RNG during post-match news in
+the NEW whole-game harness,not this pinned match-engine service behavior.
+Archaeology plansT119-T123:a route harness,then silent path,route_fixture/news,
+and sealed route handover;T118c's behavioral corroboration folds intoT119.
+These task docs do not change selected runtime/original_match/port semantics.
+Keep controlled2cbeb36f/private T07 inputs and Rust-in-parallel scope. No original
+screens/help/game assets copied. Application/route/UI/ABI/GIL gates remain apart.
+
+## Upstream whole-season dependency update during T24
+
+Rechecked goal2 `e44a66fe2f3724086ba0e722d5c6468394cf62e8` and archaeology
+`8298428759ce47f848981d30e90333bbf98493e7`. Goal2's
+[T170 season plan](https://github.com/diegoami/goal2/blob/e44a66fe2f3724086ba0e722d5c6468394cf62e8/docs/tasks/T170.md)
+depends on upstream T123 **and T124**. This commit adds the task contract;
+it does not implement a season on the Python route. New qualifier-viewing and
+fixtures/history work is also planned; T164 desk/team-info UI is implemented.
+The changed-file comparison contains no selected match-engine runtime changes.
+
+Archaeology split the route harness into
+[T119a](https://github.com/diegoami/goal2-archaeology/blob/8298428759ce47f848981d30e90333bbf98493e7/docs/tasks/T119a.md)
+(harness) and T119b (recorded runs, incorporating T118c). Its proposed
+`Match(tail=False)` split must retain the existing default behavior. The harness
+owns first-poll answers and ordered writes/RNG/key-site records; that future
+policy does not replace T24's pinned kit callbacks.
+
+[T124](https://github.com/diegoami/goal2-archaeology/blob/8298428759ce47f848981d30e90333bbf98493e7/docs/tasks/T124.md)
+adds the previously missing round-end scope: stage dispatch, six builders and
+remaining stage-news helpers. It must split into bounded builder tasks and prove
+draw order as well as the calendar. Yearly ageing/retirement remains separate.
+The new merged archaeology work is static sacking/write-set evidence and task
+design, not changes to the selected runtime port. The controlled T24 artifact
+and oracle stay fixed. Broader whole-game adoption must include these upstream
+dependencies; the current 422-body match-engine denominator is not a whole-game
+completion estimate. Select the next native chunk separately from T24's fresh
+profile, after T24 completes all acceptance and merge gates.
+
+## T24 final result and pause
+
+[T24](tasks/T24.md) moves the four complete keyboard-service exports and all
+nine owned body/helper functions, retaining the wait/read real guest at098A
+and generic kit callbacks. All prior59/new4 per-body/error/branch/variant/helper/
+callback/control proofs, ordered drive, lifecycle and strict ALL75/F40/prefixes
+pass. Full profile:63 bodies(14.93% count),2,688,294 native/415,391 Python entries,
+86.62% native fixture entry frequency. No CPU/LOC/global-test/whole-port coverage
+claim follows from those counts.
+
+The entire original timing campaign is retained/rejected for external load in
+round one. Its full replacement on the same artifact passes all quiet-start,
+arm-endpoint and continuous-load checks. Selected result:1.00% MORE CPU than
+saved T23 at the paired median;one1.50% faster round,two1.00%/2.55% slower.
+Same-campaign independent T23/PyPy0.623213354 and T24/PyPy0.629437938 medians
+remain beside all raw values. No repeatable gain or selectively replaced sample.
+This translation task has no positive magnitude or all-round speed gate.
+
+Final ledger binds852 primary files/281 evidence hashes. A separately sealed
+one-source/four-input profile-reference audit verifies the unchanged historical
+comparator and all profile observations against fresh Python/Rust receipts.
+All111 canonical/timing groups,controller and three capture PIDs exited. Final
+CI/merge/mainCI/merged-binding status lives in checkpoint#1. The owner requests
+a pause after this task;no T25 is selected or started. A later task must inventory
+a complete bounded tree from the fresh profile,including dynamic helper callees.

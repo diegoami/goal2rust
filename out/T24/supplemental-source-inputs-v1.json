@@ -1,0 +1,15 @@
+{
+  "accepted_main": "42c06a71398fb930ad6c1f9104c5398cccbf1481",
+  "additive_only": true,
+  "input_sha256": {
+    "out/T21/taps-rust-v1.json": "c8b8b33a1cf97e968679920a7549877131efbb77f2ab0314e3ab3ed10b6eaebe",
+    "out/T24/profile-after-v1.json": "9330e46ec4d43f3980bd1ae5cb9f5dd3d72b6ba97e868ed30c0732bcf36effa6",
+    "out/T24/taps-python-v1.json": "fd2c3bf5d39076254700641012f5971844d4978251135cb14cd1b96dd786cf5d",
+    "out/T24/taps-rust-v1.json": "e7f0336bea17e01f1c041b6285a390c74556d945f58469838b99d60bebb96de3"
+  },
+  "primary_freeze_sha256": "778cca17d3fe3065f08b185426250e0c3f2117c4f181d44d2bb79ece0c86a472",
+  "reason": "Bind the unchanged historical profile comparator and independently compare profile output with the fresh canonical Python/Rust receipts; primary852 sources and all artifacts remain fixed.",
+  "source_sha256": {
+    "out/T24/profile_reference_audit.py": "89b9a8a849770765dccc2444de0ad6c70a04dbb8f6582e3eaaacc568f0ffefa4"
+  }
+}

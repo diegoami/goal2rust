@@ -5,7 +5,7 @@ oracle and evidence, profile the Rust machine, then translate complete hot call
 trees. This follows the owner's approval of the upstream assessment. T02 is
 complete; its historical receipts and Done-when remain unchanged.
 
-## Current plan after T23: complete native chunks
+## Current plan after T24: complete native chunks
 
 [owner-approved recalibration] T03-T16 are historical accepted increments. The
 next default work unit is a complete bounded native execution tree with its
@@ -52,19 +52,28 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
    faster rounds,one3.01% slower,paired median0.62% less CPU than saved T22.
    [Assessment](../out/T23/assessment.md);no repeatable gain claim. Select any
    following closed tree separately from the full T23 remaining-work profile.
-8. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
+8. **T24, [PR #57](https://github.com/diegoami/goal2rust/pull/57):**
+   [complete keyboard-service chunk](tasks/T24.md),0723/08DD/0983/0993 and all
+   nine owned body/helper functions,including real far return098A. All fidelity/strict corpus
+   and selected quiet-measurement gates pass;78,172 moved entries confirmed.
+   Performance regresses at the paired median:1.00% more CPU than saved T23,
+   one faster/two slower rounds. Entire loaded v1 and quiet replacement v2
+   retained. [Assessment](../out/T24/assessment.md). Owner requests a pause
+   after completion;no following task selected. The actual kit callback/stop
+   boundary remains;the separate whole-game first-poll policy is not adopted.
+9. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
    dominant, define a separate optimization task. A larger PR alone does not remove
    every Python boundary or common dispatch cost.
-9. **Engine milestone and application adoption:** retain the larger A700 corpus,
+10. **Engine milestone and application adoption:** retain the larger A700 corpus,
    known ref-121 noncompletion and owner review, then worker/save-load/cancellation/
    playtest and representative performance gates. PyPy remains goal2's baseline.
-10. **Whole game later:** tournament, board and career initialization still have
+11. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
-Current coverage is **59/422 registered non-stub bodies (13.98%)**, while **84.10%**
-of guest entries on the reference fixture are native (2,610,122 native, 493,563
+Current coverage is **63/422 registered non-stub bodies (14.93%)**, while **86.62%**
+of guest entries on the reference fixture are native (2,688,294 native, 415,391
 Python). Neither is source-line, CPU-time or test coverage; no global line/branch
-percentage is currently reported. Use the [current profile](../out/T23/profile-after-v1.json),
+percentage is currently reported. Use the [current profile](../out/T24/profile-after-v1.json),
 the historical [T16 planning snapshot](plans/post-T16-baseline.json) and
 [same-campaign performance reporting](performance-reporting.md). Every new summary
 shows saved-baseline/PyPy and candidate/PyPy together. No calendar completion date
@@ -570,3 +579,12 @@ Rust-in-parallel m3 order remain. See [adoption update](porting-chunks.md#upstre
 Upstream now approved the T158 long-lived PyPy engine process over a pipe, with
 the Rust hybrid adopted inside it later after its gates. Track A owns UI/process
 protocol; Track B owns native whole-game rules. See the [T22 upstream update](porting-chunks.md#t22-scope-and-upstream-adoption-update-2026-11-03).
+
+During T24, goal2 `e44a66fe` adds the T170 whole-season task contract, dependent
+on archaeology T123 **and the new T124 round-end ports**. Archaeology `82984287`
+splits the route harness into T119a/b and adds stage dispatch/builders/news as
+explicit missing scope. These are plans and static findings; no selected
+match-engine runtime change appears in either upstream diff. Keep T24 frozen
+and its oracle pinned. Future whole-game adoption requires the round-end proofs
+as well as route continuation; the match-engine body/entry counts are not a
+whole-game denominator. See the [dependency update](porting-chunks.md#upstream-whole-season-dependency-update-during-t24).

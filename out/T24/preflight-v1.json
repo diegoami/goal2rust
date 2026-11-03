@@ -1,0 +1,13 @@
+{
+  "public_cpython": 88,
+  "public_pypy": 88,
+  "new_public": 5,
+  "all_pass": true,
+  "source_capture_pending": true,
+  "live_comparisons": 1280,
+  "private_live_receipt": ".cache/T24-live-preflight-v1.json",
+  "no_canonical_started": true,
+  "public-cpython-preflight-v1.log": "4023985c25e02bcbe4b8ce20dd4c29f5efa412bfb5ab24b3d31fd59ccdddb0af",
+  "public-pypy-preflight-v1.log": "42f4e1d037a6c314e962f9944a66dcc2d8af232266b20ec4244099ec58863e8c",
+  "keyboard-preflight-v1.log": "b69320464e6485a5cad76fb9e24c18c46f0d8750aa89719dea13ed911b4b3705"
+}

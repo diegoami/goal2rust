@@ -42,3 +42,12 @@ prototype and old baseline; no merge from a microbenchmark or single pilot.
 T02 is complete. Its evidence and historical cross-computer experiment commands are in
 [out/T02/README.md](out/T02/README.md). Read that before restarting its experiments;
 keep the task's Done-when intact and consult the latest GitHub checkpoint for status.
+
+The latest keyboard-service chunk T24 is specified in [docs/tasks/T24.md](docs/tasks/T24.md),
+with source/capture/artifact and post-writer rules in [out/T24/README.md](out/T24/README.md).
+Read those and checkpoint #1 before resuming any producer. Preserve both full timing
+campaigns, the final validation-v1 ledger and the separately sealed profile-reference
+audit (one supplemental source/four input receipts). Its historical capture source map
+and genuine entry shards must remain intact. Never overwrite completed receipts or
+rebuild a bound artifact during measurement. Current completion and pause/resume
+authority remain in the live checkpoint; choose any next scope from the full profile.

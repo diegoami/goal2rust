@@ -114,6 +114,7 @@ enum NativeContinuation {
     Depth(crate::depth::Phase,Option<crate::depth::Saved>),
     Chase(crate::chase::Phase),
     BallTravel(bool),
+    KeyboardWait(bool),
     Offside(crate::offside::Phase,Option<crate::offside::Saved>),
     Marking(crate::marking::Phase,Option<crate::marking::Saved>),
     RunStep,
@@ -588,7 +589,7 @@ impl MachineCore {
     fn routine(&self, m: &Bound<'_, PyAny>, mem: &Bound<'_, PyAny>, address: &str) -> PyResult<Py<PyAny>> {
         let entries = mem.getattr("_entries")?.cast_into::<PyList>()?;
         let entry: (u32, bool) = entries.get_item(entries.len() - 1)?.extract()?;
-        self.native_body(m, entry, address)?
+        self.native_body(m, mem, entry, address)?
             .ok_or_else(|| port_error(m.py(), format!("no native routine {address}")))
     }
     fn __traverse__(&self, visit: PyVisit<'_>) -> Result<(), PyTraverseError> {
@@ -861,6 +862,7 @@ impl MachineCore {
         };
         if self.native && frame.port.variant.bind(py).is_none() {
             frame.native = match address.extract::<String>()?.as_str() {
+                "214B:0983" => Some(NativeContinuation::KeyboardWait(true)),
                 "0791:8CF5" => Some(NativeContinuation::Offside(crate::offside::Phase::Start,None)),
                 "0791:90C5" => Some(NativeContinuation::Offside(crate::offside::Phase::MarkerStart,None)),
                 "0791:835F" => Some(NativeContinuation::BallTravel(true)),
@@ -903,7 +905,7 @@ impl MachineCore {
         entries.append((sp, far))?;
         let result = (|| {
             if self.native && frame.port.variant.bind(py).is_none() {
-                if let Some(value) = self.native_body(m, (sp, far), &address.extract::<String>()?)? {
+                if let Some(value) = self.native_body(m, frame.port.mem.bind(py), (sp, far), &address.extract::<String>()?)? {
                     *self.native_calls.borrow_mut().entry(address.extract()?).or_insert(0) += 1;
                     return Ok(value.into_bound(py));
                 }
@@ -976,6 +978,19 @@ impl MachineCore {
         let mut completed_value = py.None();
         let result = (|| -> PyResult<Option<Py<PyAny>>> {
             match f.native.take().unwrap() {
+                NativeContinuation::KeyboardWait(first)=>{
+                    crate::keyboard::wait(&mut h,first)?;
+                    if first{
+                        *self.native_calls.borrow_mut().entry("214B:0983".into()).or_insert(0)+=1;
+                        let args=PyTuple::empty(py);let call=self.call_type.bind(py).call1(("214B:08DD",args,"214B:098A",true,false))?;
+                        f.native=Some(NativeContinuation::KeyboardWait(false));Ok(Some(call.unbind()))
+                    }else{
+                        if self.mutant==187{crate::marking::corrupt(&mut h)?;}
+                        if self.mutant==191{let old=h.reg(Reg::Ax)?;h.set_reg(Reg::Ax,old^0x8000)?;}
+                        if self.mutant==195{let old=h.reg(Reg::Eflags)?;h.set_reg(Reg::Eflags,old^0x400)?;}
+                        Ok(None)
+                    }
+                }
                 NativeContinuation::Offside(phase,saved)=>{
                     let first=crate::offside::first(phase);
                     let reply=if matches!(phase,crate::offside::Phase::Direction|crate::offside::Phase::Sprite){sent.extract::<u16>()?}else{0};
@@ -1210,12 +1225,13 @@ impl MachineCore {
             // Mutant 1 corrupts a guest-call return's saved IP; a machine error.
             let t17_sites=["0791:47CE","0791:47EF","0791:485D","0791:4888","0791:48E2","0791:4930","0791:494D","0791:496A","0791:4980","0791:499D","0791:49B2","0791:49C0","0791:4493"];
             let site_mutant=(36..49).contains(&self.mutant) && t17_sites[(self.mutant-36) as usize]==ret_to;
+            let t24_mutant=self.mutant==197 && ret_to=="214B:098A";
             let t22_mutant=(166..170).contains(&self.mutant) && ["0791:8D42","0791:8DD0","0791:8E17","0791:9113"][(self.mutant-166) as usize]==ret_to;
             let t21_mutant=self.mutant==160 && ret_to=="0791:8396";
             let t20_mutant=(150..155).contains(&self.mutant) && T20_RETURNS[(self.mutant-150) as usize]==ret_to;
             let t19_mutant=(122..145).contains(&self.mutant) && T19_RETURNS[(self.mutant-122) as usize]==ret_to;
             let t18_mutant=(74..115).contains(&self.mutant) && T18_RETURNS[(self.mutant-74) as usize]==ret_to;
-            let corrupt = t22_mutant || t21_mutant || t20_mutant || t19_mutant || t18_mutant || site_mutant || (self.mutant == 27 && matches!(ret_to.as_str(),"0791:47CE"|"0791:47EF"|"0791:485D"|"0791:4888"|"0791:48E2"|"0791:4930"|"0791:494D"|"0791:496A"|"0791:4980"|"0791:499D"|"0791:49B2"|"0791:49C0"))
+            let corrupt = t24_mutant || t22_mutant || t21_mutant || t20_mutant || t19_mutant || t18_mutant || site_mutant || (self.mutant == 27 && matches!(ret_to.as_str(),"0791:47CE"|"0791:47EF"|"0791:485D"|"0791:4888"|"0791:48E2"|"0791:4930"|"0791:494D"|"0791:496A"|"0791:4980"|"0791:499D"|"0791:49B2"|"0791:49C0"))
                 || (self.mutant==29 && ret_to=="0791:4493")
                 || self.mutant == 1 || (self.mutant == 4
                 && matches!(ret_to.as_str(), "0791:3013" | "0791:3090" | "0791:30A3"))
@@ -1283,6 +1299,7 @@ impl MachineCore {
     fn native_body(
         &self,
         m: &Bound<'_, PyAny>,
+        view: &Bound<'_, PyAny>,
         entry: (u32, bool),
         address: &str,
     ) -> PyResult<Option<Py<PyAny>>> {
@@ -1293,6 +1310,16 @@ impl MachineCore {
         };
         use crate::geometry as g;
         match address {
+            "214B:0723"=>{
+                let site=keyboard_return_site(&mut h,view)?;
+                let has:bool=view.call_method1("keypressed",(site,))?.extract()?;
+                crate::keyboard::poll_done(&mut h,has)?;
+            },
+            "214B:08DD"=>{
+                if !crate::keyboard::read_pushed(&mut h)?{let site=keyboard_return_site(&mut h,view)?;view.call_method1("read_key",(site,))?;}
+            },
+            "214B:0993"=>crate::keyboard::push(&mut h)?,
+
             "23E4:062A"|"23E4:0644"|"23E4:06B7" => {
                 let index=match address{"23E4:062A"=>0,"23E4:0644"=>1,_=>2};
                 crate::pascal::run(&mut h,index)?;
@@ -1330,6 +1357,12 @@ impl MachineCore {
             "0791:2CEC" => g::player_at_ball(&mut h)?,
             "0791:2974" => g::side(&mut h)?,
             _ => return Ok(None),
+        }
+        let keyboard_index=match address{"214B:0723"=>Some(0),"214B:08DD"=>Some(1),"214B:0993"=>Some(3),_=>None};
+        if let Some(i)=keyboard_index{
+            if self.mutant==185+i{crate::marking::corrupt(&mut h)?;}
+            if self.mutant==189+i{let old=h.reg(Reg::Ax)?;h.set_reg(Reg::Ax,old^0x8000)?;}
+            if self.mutant==193+i{let old=h.reg(Reg::Eflags)?;h.set_reg(Reg::Eflags,old^0x400)?;}
         }
         if self.mutant==156 && address=="23E4:0279"{crate::marking::corrupt(&mut h)?;}
         if (157..160).contains(&self.mutant) && address=="23E4:0279"{let reg=match self.mutant{157=>Reg::Ax,158=>Reg::Dx,_=>Reg::Eflags};let value=h.reg(reg)?;h.set_reg(reg,value^if reg==Reg::Eflags{1}else{0x8000})?;}
@@ -1409,6 +1442,16 @@ struct NativeHost<'a, 'py> {
     core: &'a MachineCore,
     m: Bound<'py, PyAny>,
     entry: (u32, bool),
+}
+fn keyboard_return_site(h:&mut NativeHost<'_, '_>,view:&Bound<'_,PyAny>)->PyResult<String>{
+    let py=view.py();let cs=crate::keyboard::return_cs(h)?;
+    let machine=match view.getattr("m"){Ok(m)=>m,Err(e) if e.is_instance_of::<pyo3::exceptions::PyAttributeError>(py)=>view.clone(),Err(e)=>return Err(e)};
+    let load=machine.getattr("load")?;
+    let relative=if load.get_type().is(&py.get_type::<PyInt>()){
+        if let Ok(n)=load.extract::<i128>(){(i128::from(cs).wrapping_sub(n)&65535) as u16}
+        else{let op=py.import("operator")?;op.getattr("and_")?.call1((op.getattr("sub")?.call1((cs,load))?,65535))?.extract::<u16>()?}
+    }else{let op=py.import("operator")?;op.getattr("and_")?.call1((op.getattr("sub")?.call1((cs,load))?,65535))?.extract::<u16>()?};
+    let ip=crate::keyboard::return_ip(h)?;Ok(format!("{relative:04X}:{ip:04X}"))
 }
 impl Host for NativeHost<'_, '_> {
     type Err = PyErr;

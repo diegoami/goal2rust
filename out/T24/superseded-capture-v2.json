@@ -1,0 +1,13 @@
+{
+  "accepted": false,
+  "reason": "Owned idle attempt superseded before first drive by genuine-prefix capture;avoid replaying unused match tails.",
+  "pid": 627115,
+  "exit_code": 130,
+  "entries_collected": 0,
+  "private_shards_created": 0,
+  "log": "out/T24/capture-v2.log",
+  "log_sha256": "fcffed0637e4bd64d4d48eb4e59b14769200f3b5faee8f9e42d73b917c4c8d65",
+  "source_manifest": "out/T24/capture-inputs-v2.json",
+  "source_manifest_sha256": "b8ce2124fc9b73d42c637ad80f784c9b2e95a438af9643d1f5092848ed65ee31",
+  "original_guard_unchanged": true
+}
