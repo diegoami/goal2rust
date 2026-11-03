@@ -1,7 +1,8 @@
 # T23 Pascal string-write chunk
 
 Status: all per-body/inherited fidelity and exact ordered full-drive proofs pass.
-Sealed lifecycle, ALL75/F40, full profile, timings and final audits remain pending.
+Sealed lifecycle and full profile also pass. ALL75/F40, timings and final audits
+remain pending.
 No T23 speed result is claimed.
 
 ## Translation and source semantics
@@ -86,7 +87,11 @@ enters/leaves,81,134 site enters/leaves and4 writes, digest
 The native drive independently observes all59 bodies and2,610,122 native entries.
 Instrumentation elapsed/CPU time is no uninstrumented performance claim.
 
-Sealed lifecycle, strict ALL75/exact-source
+All four sealed lifecycle gates pass with11 independently attested Rust machines
+and all59 bodies. The full profile confirms59 bodies,2,610,122 native entries
+and493,563 Python of3,103,685 total(84.09751634% native fixture frequency).
+
+Strict ALL75/exact-source
 F40 with10/20/30/60 immutable prefix comparisons, independent backend attestation
 and full profile remain. Three quiet simultaneous rotated saved-T22/candidate/
 CPython/PyPy rounds must retain every outcome, including regressions. Report raw
