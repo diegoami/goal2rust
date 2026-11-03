@@ -1,0 +1,5 @@
+denied: unicorn, .sav, .EXE, .DAT
+0791:8CF5 {'total': 2096, 'real': 96, 'authored': 2000, 'outside_positive': 2096}
+0791:8E24 {'total': 2096, 'real': 96, 'authored': 2000, 'outside_positive': 2096}
+0791:90C5 {'total': 2096, 'real': 96, 'authored': 2000, 'outside_positive': 2096}
+All inventoried helpers:6288 scoped pairs and64 variant probes pass

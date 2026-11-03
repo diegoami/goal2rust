@@ -38,3 +38,20 @@ post_exit_audit.py,baseline_input_audit.py andvalidate.py with a fresh final
 output. Expected78 canonical+12 timing=90 groups and controller gone. Exact-head
 CI/squash/mainCI/merged bindings/shutdown/checkpoint complete this task.
 No automatic milestone review or next task included. Live status is checkpoint#1.
+
+## Final validation selection
+
+All required fidelity and complete-measurement gates pass in validation-final-v1:
+661 primary bindings/230 evidence hashes. Both original audits and baseline-input
+audit pass; all78 canonical+12 timing groups/controller stopped. The additive
+shared-helper proof/audit sources are sealed by supplemental-source-inputs-v1,
+with6288 all-inventory scoped pairs/64 variants, positive shared s8/s16 source
+witnesses and zero owned Python execution inside native lifetimes. Its separate
+actual-host audit confirms all91 groups/controller stopped. No canonical source,
+artifact or receipt changed. Do not rerun completed producers.
+
+Timings are mixed: two faster rounds and one1.24% slower; paired median1.01%
+less CPU than T21. No repeatable gain claim, arbitrary5% floor or replaced round.
+Same-campaign baseline/PyPy0.691683 and candidate/PyPy0.694602 are independent
+medians from different rows. Full raw tables/limits in assessment.md. Live exact-
+head/main CI, merge and final stop state remain in checkpoint#1.

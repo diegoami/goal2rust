@@ -325,7 +325,7 @@ inputs and both binaries remained fixed. Failed instrumentation preflight logs
 are preserved; canonical campaign has no rejected stage. Arithmetic/flag/sign/
 overflow witnesses and every raw timing outcome are in the assessment.
 
-## T22 offside-line/display tree (in validation)
+## T22 offside-line/display tree
 
 At accepted oracle`2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`,
 engine/src/offside.rs translates motion.track_offside_line0791:8CF5,
@@ -336,4 +336,12 @@ read/write/register ordering and captured/live values; no invented local writes.
 Variants remain Python. See out/T22/inventory-v1.json and contract.md.
 Actual accepted T21 source/tests/adapter/both interpreter binaries were preserved
 before builds in.cache/T22-baseline; all598 old inputs/214 evidence verified.
-No original bytes enter git. Full artifact-bound acceptance remains pending.
+No original bytes enter git. Full fidelity/strict ALL75/F40/lifecycle and complete
+three-round measurements pass their predeclared gates; performance is mixed,
+with two faster samples and one1.24% regression(median1.01% less CPU).
+No sample is discarded or repeatable gain claimed. validation-final-v1 binds661
+primary inputs and230 evidence hashes. A post-writer all-inventory helper proof
+adds shared s8/s16 instrumentation with6,288 scoped/64 variant pairs, separately
+sealed by supplemental-source-inputs-v1 for both proof/audit drivers. Canonical
+sources/artifacts/receipts remain fixed; all91 producer groups/controller stopped.
+Live CI/merge status remains checkpoint#1.

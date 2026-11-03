@@ -1,0 +1,10 @@
+{
+  "base_freeze_sha256": "e08a3fe34a658ee7bd5bf85c8dd338ea434c99318e54a63217e7225194c4c419",
+  "source_sha256": {
+    "out/T22/shared_helper_closure.py": "bc21621d5ae29e727ac084216838d7949e758de4a08076e5a774ecc5f9d4f3a3",
+    "out/T22/shared_helper_audit.py": "e8ee19ddd7f7f6fa31d11483ebcaa24111bd3405a8ef6ce4289969ee98076a9c"
+  },
+  "primary_binding_count": 661,
+  "post_canonical_additive_only": true,
+  "no_production_change": true
+}

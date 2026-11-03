@@ -5,7 +5,7 @@ oracle and evidence, profile the Rust machine, then translate complete hot call
 trees. This follows the owner's approval of the upstream assessment. T02 is
 complete; its historical receipts and Done-when remain unchanged.
 
-## Current plan after T21: complete native chunks
+## Current plan after T22: complete native chunks
 
 [owner-approved recalibration] T03-T16 are historical accepted increments. The
 next default work unit is a complete bounded native execution tree with its
@@ -37,10 +37,13 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
    bodies and far8396. Full fidelity/paired measurements pass;
    [results](../out/T21/assessment.md). Owner requested winding down after this
    task; select any following scope in a new session from the full profile.
-6. **T22, in progress:** [complete offside-line/display tree](tasks/T22.md),
-   8CF5/8E24/90C5 with four observable guest returns and native direction2BE5.
-   Selected from T21 full profile; predicted9,389 entries move. Full proofs and
-   measurements are pending, so accepted counts/performance below remain T21.
+6. **T22, [PR #53](https://github.com/diegoami/goal2rust/pull/53):**
+   [complete offside-line/display tree](tasks/T22.md),8CF5/8E24/90C5 and all four
+   guest returns. Full prior53/new3, all-inventory helper closure, ordered drive,
+   lifecycle and strict ALL75/F40 pass. Timings are mixed: two faster rounds,
+   one1.24% slower, median1.01% less CPU than saved T21; no repeatable gain claim.
+   [Assessment](../out/T22/assessment.md). No following task is included; select
+   any next closed tree from the full T22 profile in a new session.
 7. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
    dominant, define a separate optimization task. A larger PR alone does not remove
    every Python boundary or common dispatch cost.
@@ -50,10 +53,10 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
 9. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
-Current coverage is **53/422 registered non-stub bodies (12.56%)**, while **83.26%**
-of guest entries on the reference fixture are native (2,584,201 native, 519,484
+Current coverage is **56/422 registered non-stub bodies (13.27%)**, while **83.56%**
+of guest entries on the reference fixture are native (2,593,590 native, 510,095
 Python). Neither is source-line, CPU-time or test coverage; no global line/branch
-percentage is currently reported. Use the [current profile](../out/T21/profile-after-v1.json),
+percentage is currently reported. Use the [current profile](../out/T22/profile-after-v1.json),
 the historical [T16 planning snapshot](plans/post-T16-baseline.json) and
 [same-campaign performance reporting](performance-reporting.md). Every new summary
 shows saved-baseline/PyPy and candidate/PyPy together. No calendar completion date

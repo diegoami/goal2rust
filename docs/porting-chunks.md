@@ -298,3 +298,33 @@ The hybrid still invokes Python and holds interpreter-dependent state; no UI
 thread/GIL-release guarantee follows. Explicit worker/protocol/save-load/cancel/
 ABI/loading/representative performance and owner engine milestone gates remain.
 Archaeology main2a411f50 is unchanged; controlled oracle2cbeb36f stays fixed.
+
+## T22 validated outcome and current upstream boundary
+
+[T22](tasks/T22.md) closes8CF5/8E24/90C5 with all four far sites. All fidelity,
+strict ALL75/F40, lifecycle, source/baseline and process-closure gates pass;
+[assessment](../out/T22/assessment.md). The post-writer all-inventory scope proof
+adds shared s8/s16 to the canonical motion-helper set on the same artifact:
+6,288 comparisons/64 variants, positive source witnesses and zero native-lifetime
+owned Python calls. Two additive proof/audit sources are separately sealed;
+all661 primary bindings and every canonical receipt remain fixed.
+
+Profile:56 native bodies(13.27% equal-weight count),2,593,590 native entries
+(83.56% fixture frequency),510,095 Python. Timings are mixed: two faster rounds,
+one1.24% slower, paired median1.01% less CPU than T21. Same-campaign T21/PyPy
+0.691683 and T22/PyPy0.694602 are independent medians from different rounds.
+No repeatable gain or global LOC/test-coverage claim; all samples remain.
+
+Upstreams rechecked at goal2`185886f39ef51a4d9c5f9a68cf4f5ce62c85ab78`
+and archaeology`26fe704d58b483e5a8a2acbb4dca4ee4a16581aa`.
+Goal2[T159/#545](https://github.com/diegoami/goal2/pull/545) now provides the
+long-lived engine process and bounded binary-header/payload pipe protocol,
+ready/open/match/ack/pause/answer/cancel/quit messages, stderr isolation, death/
+restart, input-EOF shutdown and cancel/close deadlines. T160 routes watched and
+competitive matches onto it next. Rust adoption must test this actual protocol,
+restart/game replay, cancellation/EOF and target ABI/loading; T22 does not wire
+Rust into the application or release the GIL.
+Archaeology's new T118a-c documents the route(b) write-set/post-match-news scope;
+only task docs changed, not the selected engine semantics. Keep controlled
+2cbeb36f/private T07 inputs for this accepted comparison. Whole-game Track B
+and UI/protocol Track A still proceed independently of Rust translation.
