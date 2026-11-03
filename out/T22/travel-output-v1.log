@@ -1,0 +1,17 @@
+denied: unicorn, .sav, .EXE, .DAT
+output 23E4:0279 100
+output 23E4:0279 200
+output 23E4:0279 300
+output 23E4:0279 400
+output 23E4:0279 500
+output 23E4:0279 100
+output 23E4:0279 200
+output 23E4:0279 300
+output 23E4:0279 400
+output 23E4:0279 500
+output 23E4:0279 100
+output 23E4:0279 200
+output 23E4:0279 300
+output 23E4:0279 400
+output 23E4:0279 500
+output COMPLETE
