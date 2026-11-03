@@ -318,3 +318,9 @@ Freeze-v1 binds 598 source/binary/private/proof inputs. The earlier draw-state
 instrumented wrappers now have explicit nondefault tags; all original tracing/
 fault assertions remain, with an added actual-native integration test. Rejected
 preflight logs and original harness are preserved. No original bytes in git.
+
+Final T21 validation is out/T21/validation-final-v1.json; baseline-input-audit-v1
+verifies accepted T20 snapshot/profile/native-presence identity. All 598 bound
+inputs and both binaries remained fixed. Failed instrumentation preflight logs
+are preserved; canonical campaign has no rejected stage. Arithmetic/flag/sign/
+overflow witnesses and every raw timing outcome are in the assessment.

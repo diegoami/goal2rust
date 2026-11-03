@@ -74,6 +74,69 @@ probe passes. Independent fidelity suites run in a bounded three-process pool,
 all finished before guarded measurement stages. Every bound source/binary/private
 input remains fixed, with completed/rejected historical receipts preserved.
 
-Full corpus/lifecycle, timings, final audits and merge status belong in
-[checkpoint #1](https://github.com/diegoami/goal2rust/issues/1). No performance
-conclusion before all three complete simultaneous rotated four-arm rounds.
+
+## Corpus and lifecycle
+
+Strict ALL75 and exact-source F40 pass, with all 75 records completed without
+errors. Strict 10/20/30/60 prefixes are preserved. Independent attestation covers
+75 family Rust machines and all 53 bodies. All four sealed lifecycle checks pass
+(engine, interactive, goals, knockout), with 11 independently attested Rust machines.
+
+## Same-campaign CPU measurements
+
+Source: [all samples and ratios](performance-v1.json), with individual
+`cpu-*-r*-v1.json` receipts. Each of three complete rounds starts after three
+observations with 1-minute and 5-minute host load below 4. Four arms launch
+together on distinct reported physical cores; assignments and launch order
+rotate. Original dispatch guards remain. Every sample is retained, with no
+selective arm replacement or timing campaign rerun.
+
+CPU seconds:
+
+| Round | Saved T20 | T21 | Plain CPython | PyPy |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 35.225888 | 34.500652 | 136.382265 | 51.265134 |
+| 2 | 33.609398 | 32.970486 | 130.709078 | 48.013400 |
+| 3 | 33.363619 | 32.761326 | 132.004513 | 47.721942 |
+
+| Round | T21 / saved T20 | Saved T20 / PyPy | T21 / PyPy | CPython / T21 |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 0.979412 | 0.687131 | 0.672985 | 3.953034 |
+| 2 | 0.980990 | 0.700000 | 0.686693 | 3.964427 |
+| 3 | 0.981948 | 0.699125 | 0.686504 | 4.029279 |
+| Median of per-round ratios | 0.980990 | 0.699125 | 0.686504 | 3.964427 |
+
+T21 uses **1.90% less CPU than saved T20** at the paired median; all three
+rounds improve (range 1.81%–2.06% less). This is a modest incremental gain,
+below 5%; the owner-approved translation policy has no arbitrary magnitude floor.
+In the same campaign saved T20 uses 30.09% less CPU than PyPy at the
+median, and T21 uses **31.35% less**, with all three comparisons improving.
+Paired plain-CPython/T21 CPU speed is 3.964×. Summaries are medians
+of per-round ratios, not ratios of CPU medians or historical standalone PyPy gaps.
+
+This is one reference fixture, not a general workload or application result. The
+engine remains partly Python; this does not establish GIL release or thread
+ownership. Engine A700/ref-121/owner milestone review and application API,
+save/load, cancellation, target ABI/loading, packaging and playtest remain separate.
+
+## Closed ledger and shutdown
+
+Final validation verifies all **598** original source/binary/input bindings and
+**214** evidence hashes. All 73 canonical producers and 12 timing children
+have exited, with the controller gone: 85 recorded groups. No canonical stage
+was rejected or needed a replacement, and no Rust semantic correction/rebuild,
+assertion/corpus/guard reduction or overwritten receipt was needed. The earlier
+instrumentation preflight rejection is retained explicitly above.
+
+The baseline/input audit maps all 542 accepted T20 source/input bindings to
+unchanged inputs or the saved pre-build snapshot, verifies its 202 evidence
+hashes and older supplemental bindings, and checks historical T20/T19/T18/T17
+profiles against inventory digests and accepted main. All three saved-baseline/
+candidate drives reject/accept the new-two-body native-presence criterion
+respectively, while outputs agree. The accepted comparator's identity is preserved.
+
+[Final ledger](validation-final-v1.json), [baseline/input audit](baseline-input-audit-v1.json),
+[post-exit audit](post-exit-audit-v1.json), [process closure](process-closure-v1.json).
+Live exact-head/main CI, merge and stop state belong in checkpoint #1 and
+[PR #51](https://github.com/diegoami/goal2rust/pull/51). The owner requested winding
+down for the day after T21; no next task is started.
