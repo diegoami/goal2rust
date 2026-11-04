@@ -111,10 +111,30 @@ its alternate stack0x30000..0x40000 overwrote the synthetic DS far pointers.
 rejected-preparation-v1.json binds both failed logs and all archived executed
 sources/binary;all original wrappers/controller exited without a final build.
 The retry uses disjoint stack0x90000..0xA0000,retaining the AX47 assertion and
-all eight scenarios. Accepted development receipt is now live-development-v2;
-current continuation journal/report/log are preparation-jobs-v2/preparation-v2.
+all eight scenarios. Its intended development receipt was live-development-v2;
+its continuation journal/log are preparation-jobs-v2/preparation-v2.
 Never overwrite or treat the rejected v1 attempt as a pass. Current e.hashes
 binds both preparation source epochs and the rejected diagnostic archive.
+
+Live developmentv2 passed the first seven scenarios(1,120 source/native pairs,
+positive semantic effects in every case),including the corrected manager test.
+The eighth scenario,quick-pop-captures-segment-before-flush case0,completed in
+the Python oracle but PortMachine raised `no registered port/return at1771:0BE5`.
+The cause is unresolved:investigate the callback's SS change,pop's captured
+segment,Regs.store and native guest continuation/return-frame identity. Do not
+assume another fixture defect or remove the witness. Both the live wrapper and
+continuation exited;no final build/install/preflight/archive/freeze/canonical
+or timing stage ran. rejected-preparation-v2.json binds the immutable logs and
+both executed source/binary and146-source preparation archives.
+
+Before a future resume,verify shutdown-checkpoint-v1.json and latest checkpoint
+#1. Do not restart `prepare_final.py` as currently hardcoded:the v2 attempt is
+consumed and has no accepted live/preparation JSON report. A corrected retry
+needs new receipt/log/journal versions and updated evidence,baseline and process
+closure bindings for every preserved rejection. Keep the completed plan as long
+as all of its test/probe/inventory/native inputs remain unchanged;production or
+bound proof-input changes require a separately preserved proof refresh. Capture
+is complete and must not be repeated. No next task was selected.
 
 After all canonical/timing writers and controller have exited,run this sequence
 in the actual host PID namespace,with the frozen environment and sources:

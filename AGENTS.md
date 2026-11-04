@@ -86,3 +86,10 @@ Capture binds50 pure-oracle inputs;all56 genuine shards/eight per body are
 complete. Never overwrite completed receipts or recapture. All27 owned code
 objects include three Rec methods;_call/gcall/helper return bindings stay explicit.
 Current run/stop/resume authority remains the live checkpoint.
+
+Before resuming T27,read `out/T27/shutdown-checkpoint-v1.json` and the README's
+callback retry notes. Preserve the completed279-selector/70-outcome proof plan
+and BOTH rejected live/preparation epochs. Neither live attempt produced an
+accepted receipt;do not restart the hardcoded v2 controller or overwrite its
+logs/journal. Diagnose the final SS/pop/guest-return witness before a newly
+versioned retry;the shutdown checkpoint requires verification of stopped PIDs.

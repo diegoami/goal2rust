@@ -1,0 +1,18 @@
+{
+  "accepted_main": "d2f5a194e921f69b5492f19a4c3bbda85725b3d3",
+  "active_T27_python_producers": [],
+  "completed_proof_plan_sha256": "50c64bc0e6307bdac40c560b3f1658d02200463b260f4061e26d71a5e6a20c57",
+  "final_build_or_canonical_started": false,
+  "new_tasks_prohibited": true,
+  "no_automatic_restart": true,
+  "owner_requested_shutdown_within_one_hour": true,
+  "rejected_epoch": "out/T27/rejected-preparation-v2.json",
+  "rejected_epoch_sha256": "78ba81c2f8075e1a817122fc1096b3ba4a3286baef3475e4881b3b08cf334c88",
+  "resume_requires_new_versioned_attempt": true,
+  "stopped": true,
+  "stopped_controllers": [
+    495448,
+    495563
+  ],
+  "time_utc": "2026-11-04T22:08:16Z"
+}
