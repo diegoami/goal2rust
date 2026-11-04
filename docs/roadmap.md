@@ -619,3 +619,15 @@ T120's silent-fixture proof runner/input contract remains further work. Goal2
 has advanced save/quit and management UI. Keep T25's oracle/artifact fixed and
 finish its remaining M3 gates; select following scope only from the fresh full
 profile. See the [resume dependency check](porting-chunks.md#t25-resume-dependency-check-2026-11-04).
+
+T27 preparation upstream check (2026-11-04): goal2 `ec9429c6` contains the
+original-kit UI correction; archaeology `d3375867` now merges
+[T120 / PR #650](https://github.com/diegoami/goal2-archaeology/pull/650),
+porting the silent fixture path (6970, D47E, B602, BB2F) with E040 proof and
+falsifier records. This advances the later whole-game route dependency. The
+upstream T124a ordering now follows T120 rather than waiting for T121.
+These additions do not change T27's selected seven-body tree or authorize a
+mid-campaign oracle refresh. Keep its controlled `2cbeb36f` pin and finish its
+full fidelity/performance gates before merging. Later route adoption must assess
+the new module and its dedicated proofs explicitly; a match-engine receipt does
+not establish whole-game parity.

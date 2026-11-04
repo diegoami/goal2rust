@@ -97,6 +97,7 @@ def main():
                         sys.settrace(probe.trace)
                         try:p, _, _ = exercise(Oracle, case, root=root, controlled=controlled)
                         finally:sys.settrace(None)
+                        probe.observe(root,p)
                         r, _, _ = exercise(PortMachine, case, root=root, controlled=controlled)
                         assert p['error'] is None and p == r, ('branch', root, case, controlled)
             assert sorted(probe.counts) == plan['branch_outcomes'] and all(probe.counts.values())

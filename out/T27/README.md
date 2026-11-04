@@ -78,3 +78,33 @@ error selectors/exact control plan,then final builds/preflights/archive/freeze
 and ALL prior79/new7 canonical/full-corpus/quiet-timing/final-audit gates.
 No producer remains active at this milestone. Do not recapture or overwrite
 completed diagnostics;preserve their historical source maps when refining proofs.
+
+## Prepared canonical drivers
+
+The combined controller queues97 M2 stages/102 total canonical groups,including
+all prior79 proofs and ten prior live matrices plus the new strength proofs and
+eight-scenario live matrix. These are prepared sources,not completed gates.
+`plan_proofs.py` must positively witness every selected error before sealing its
+exact plan;canonical execution repeats every selector across160 cases. The new
+ordinal scope is bounded early/middle/last reads AND writes;no prior error suite
+is reduced. `freeze.py` requires that plan and both final102-test public preflights
+before writing the explicit source allowlist/final bindings. Never start the
+supervisor before archive/freeze. Current admitted/waiting processes and receipt
+versions belong in checkpoint#1.
+
+After all canonical/timing writers and controller have exited,run this sequence
+in the actual host PID namespace,with the frozen environment and sources:
+
+```
+PYTHONHASHSEED=0 .venv/bin/python -B out/T27/process_closure.py
+PYTHONHASHSEED=0 .venv/bin/python -B out/T27/final_capture_audit.py
+PYTHONHASHSEED=0 .venv/bin/python -B out/T27/post_exit_audit.py
+PYTHONHASHSEED=0 .venv/bin/python -B out/T27/baseline_input_audit.py
+PYTHONHASHSEED=0 .venv/bin/python -B out/T27/validate.py out/T27/validation-final-v1.json
+```
+
+The new baseline audit verifies accepted T26's1647/283 bindings,actual saved79
+files,all44 archived artifacts and preserved diagnostic epochs. The initial
+capture audit remains historical;final_capture_audit verifies its bound epoch
+without rerunning it against changed runtime. Complete assessment/exact-headCI/
+squash/mainCI/merged binding audit and checkpoint before selecting the next tree.

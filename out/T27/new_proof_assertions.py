@@ -1,5 +1,5 @@
 """Accept new strength proofs and preserve the entire prior commentary gate."""
-import importlib.util,json
+import json
 from pathlib import Path
 O=Path(__file__).resolve().parent;B=O.parents[1]
 def check_new(load):
@@ -22,13 +22,5 @@ def check_new(load):
  for name in ['live-observers-v1','prior-commentary-live-observers-v1']:
   r=load(name);assert r['pass_all'] and r['comparisons']==1280 and len(r['scenarios'])==8
   assert all(v['effect_witnesses']>0 and v['hits'] and all(v['hits'].values()) for v in r['scenarios'].values())
- # Execute the preserved prior79 proof assertions while explicitly binding their
- # historical inventory/plan,but use the current campaign's profile/attestation.
- old=(B/'out/T26/new_proof_assertions.py').read_text()
- old=old.replace("O = Path(__file__).resolve().parent","O = Path(__file__).resolve().parent")
- old=old.replace("(O/'inventory-v1.json')","(B/'out/T26/inventory-v1.json')").replace("(O/'proof-plan-v1.json')","(B/'out/T26/proof-plan-v1.json')")
- old=old.replace("['live-observers-v1', 'prior-text-live-observers-v1']","['prior-commentary-live-observers-v1', 'prior-text-live-observers-v1']")
- old=old.replace('== 79','== 86').replace('== 359012','== 340762').replace('== 2744673','== 2762923')
- namespace=dict(__file__=str(O/'new_proof_assertions.py'),B=B)
- exec(compile(old,'preserved-T26-proof-assertions','exec'),namespace)
- namespace['check_new'](load)
+ from prior_commentary_assertions import check_new as check_prior_commentary
+ check_prior_commentary(load)
