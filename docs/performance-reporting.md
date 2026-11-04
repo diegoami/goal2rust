@@ -207,3 +207,24 @@ at independent ratio medians. Historical standalone gaps do not establish this
 change. All raw samples, including rejected v1 and every slower round, remain.
 The predeclared translation criteria impose fidelity and full measurement, with
 no positive magnitude threshold or all-round speed-improvement gate. One fixture.
+
+## T25 complete quiet campaign
+
+Sources: [every raw sample](../out/T25/performance-v1.json) and
+[assessment](../out/T25/assessment.md). All three simultaneous four-arm rounds
+pass quiet-start, every-arm endpoint, continuous-load and independent idle-runner
+checks. No campaign or sample was rejected or replaced.
+
+| Round | Saved T24 / PyPy | T25 / PyPy | T25 / saved T24 | CPython / T25 |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 0.684159861 | 0.663918417 | 0.970414159 | 4.261476055 |
+| 2 | 0.695586570 | 0.692126360 | 0.995025480 | 3.792420227 |
+| 3 | 0.678679830 | 0.667383160 | 0.983354935 | 3.918157295 |
+| Median of per-round ratios | 0.684159861 | 0.667383160 | 0.983354935 | 3.918157295 |
+
+T25 uses1.66% less CPU than saved T24 at the paired median;all three rounds
+improve(2.96%,0.50%,1.66%). Same-campaign saved T24 uses31.58% less CPU than
+PyPy and T25 uses33.26% less,at independent ratio medians. Dividing independent
+median PyPy columns does not measure the incremental change. All raw CPU seconds
+remain in the assessment and receipts. This is one-fixture evidence;historical
+standalone ratios do not establish a trend. No arbitrary5% translation floor.

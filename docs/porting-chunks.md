@@ -462,3 +462,64 @@ All111 canonical/timing groups,controller and three capture PIDs exited. Final
 CI/merge/mainCI/merged-binding status lives in checkpoint#1. The owner requests
 a pause after this task;no T25 is selected or started. A later task must inventory
 a complete bounded tree from the fresh profile,including dynamic helper callees.
+
+## T25 selected text-cell closure and upstream update
+
+The owner resumed after T24. [T25](tasks/T25.md) selects four connected Pascal
+text callers and their forward/backward cell-writing callees,six exports and
+14 owned functions in total. Existing native0644 closes the remaining guest
+boundary;all eight real return sites remain. The fixed fixture predicts10,810
+moved entries,not a speed result. This tree is bounded even though the hotter
+duel/contest roots still fan out through larger unported helper-dispatched trees.
+
+Upstream snapshots:goal2 e1735b657a6812d86851ab38069819bf91b24e89 and
+archaeology9e77f0066216d0cddfbf76aed2dfa53866a97d9d. Goal2's T160 pipe-based
+watched/competitive matches and new-window pitch/boards are implemented;save/
+quit/load work is planned separately. Archaeology's T119a route harness and
+Match(tail=False) are merged,but T119c must preserve competitive fixture round
+bytes and name table-read key sites;T121 now depends on that correction. No
+controlled pin refresh or adoption into T25's default-match semantics follows.
+
+Goal2's shared-host runner rule now caps each runner at six gate jobs and
+requires checking IT13 runner activity before a local gate. T25 honors that
+admission rule and records independent runner observations during timings;
+a busy/unknown runner state rejects an entire timing campaign. Continuous
+five-second load monitoring remains separate from network queries. No unrelated
+process/runner is stopped or reconfigured. Original source/corpus/quality guards
+and the quiet-IT13 preference remain.
+
+## T25 resume dependency check (2026-11-04)
+
+Live main heads are goal2 `8893411ffb24bfddac617ba36b7d68fc0bb7ba1f` and
+archaeology `04021dd06e4afdeac99cc358273f6041a30ed6c4`. Since T25 selection,
+goal2 added save/quit UI and management extras, plus watched-match qualifier
+handling. Archaeology now includes T119c's competitive route fixture/key-policy
+correction and its E040 evidence. Route proofs can disable the write-recording
+listener with `record_writes=False`; the Prover still checks memory itself.
+T120's silent-fixture proof runner and the explicitly edited input needed to
+reach BB2F are now specified; that task contract is not a completed port proof.
+
+These updates advance later whole-game dependencies. They do not refresh
+T25's accepted `2cbeb36f` oracle, change its default-match contract, or alter
+the frozen artifact. Complete T25's remaining full-match/profile/timing gates
+before selecting the next chunk from the full profile. The paused M2 receipts
+and separately sealed continuation remain intact; checkpoint #1 records the
+owner-authorized restart and current controller identity.
+
+## T25 final validation
+
+All prior63/new6 fidelity proofs,all14-owned closure,ordered drive,lifecycle,
+strict ALL75/F40/prefixes and full profile pass. The fresh profile confirms69
+native bodies(16.35% count),2,699,104 native/404,581 Python entries,86.96%
+native fixture entry frequency. These are not source-line/test/CPU coverage.
+The first complete quiet four-arm campaign passes all load/runner gates and
+uses1.66% less CPU than saved T24 at the paired median;all three rounds improve.
+Same-campaign independent T24/PyPy0.684159861 and T25/PyPy0.667383160 remain
+beside all raw values in the [assessment](../out/T25/assessment.md).
+
+Final-v2 binds1083 primary files/277 evidence hashes and additive6sources/121
+inputs. All105 physical canonical/timing groups and three controller epochs
+are stopped. The original pre-proof wrapper failure remains reconciled,not
+counted as a proof pass. Exact-head CI/merge/mainCI/merged-audit status remains
+in checkpoint#1. The owner authorized merging and continuing;select the next
+complete bounded closure from the full remaining profile after T25 acceptance.

@@ -61,19 +61,27 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
    retained. [Assessment](../out/T24/assessment.md). Owner requests a pause
    after completion;no following task selected. The actual kit callback/stop
    boundary remains;the separate whole-game first-poll policy is not adopted.
-9. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
+9. **T25, [PR #59](https://github.com/diegoami/goal2rust/pull/59):**
+   [Complete text-cell rendering chunk](tasks/T25.md): six connected display
+   exports00FF/0123/01A3/0205/026D/02C8,all14 owned functions/eight guest returns,
+   with existing native0644 boundary. Full fidelity/ALL75/F40/prefix/lifecycle
+   and first quiet timing campaign pass. Profile confirms69 native bodies,
+   +10,810 native entries. Paired median1.66% less CPU than saved T24,all three
+   rounds improve. [Assessment](../out/T25/assessment.md) retains every raw CPU
+   value and same-campaign PyPy ratios. CI/merge status remains in checkpoint#1.
+10. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
    dominant, define a separate optimization task. A larger PR alone does not remove
    every Python boundary or common dispatch cost.
-10. **Engine milestone and application adoption:** retain the larger A700 corpus,
+11. **Engine milestone and application adoption:** retain the larger A700 corpus,
    known ref-121 noncompletion and owner review, then worker/save-load/cancellation/
    playtest and representative performance gates. PyPy remains goal2's baseline.
-11. **Whole game later:** tournament, board and career initialization still have
+12. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
-Current coverage is **63/422 registered non-stub bodies (14.93%)**, while **86.62%**
-of guest entries on the reference fixture are native (2,688,294 native, 415,391
+Current profile is **69/422 registered non-stub bodies (16.35%)**, while **86.96%**
+of guest entries on the reference fixture are native (2,699,104 native, 404,581
 Python). Neither is source-line, CPU-time or test coverage; no global line/branch
-percentage is currently reported. Use the [current profile](../out/T24/profile-after-v1.json),
+percentage is currently reported. Use the [current profile](../out/T25/profile-after-v1.json),
 the historical [T16 planning snapshot](plans/post-T16-baseline.json) and
 [same-campaign performance reporting](performance-reporting.md). Every new summary
 shows saved-baseline/PyPy and candidate/PyPy together. No calendar completion date
@@ -588,3 +596,10 @@ match-engine runtime change appears in either upstream diff. Keep T24 frozen
 and its oracle pinned. Future whole-game adoption requires the round-end proofs
 as well as route continuation; the match-engine body/entry counts are not a
 whole-game denominator. See the [dependency update](porting-chunks.md#upstream-whole-season-dependency-update-during-t24).
+
+T25 resume upstream check (2026-11-04): goal2 `8893411f`, archaeology `04021dd0`.
+Competitive route correction T119c and E040 evidence are now in archaeology;
+T120's silent-fixture proof runner/input contract remains further work. Goal2
+has advanced save/quit and management UI. Keep T25's oracle/artifact fixed and
+finish its remaining M3 gates; select following scope only from the fresh full
+profile. See the [resume dependency check](porting-chunks.md#t25-resume-dependency-check-2026-11-04).

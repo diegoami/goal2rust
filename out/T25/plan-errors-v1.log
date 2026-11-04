@@ -1,0 +1,7 @@
+OBSERVED 214B:00FF 20 {'max_reads': 2, 'max_writes': 257, 'selected_write_ordinals': [1, 2, 3, 4, 8, 9, 128, 257], 'program_write_sites': ['214B:0000', '214B:0119']}
+OBSERVED 214B:0123 19 {'max_reads': 1, 'max_writes': 257, 'selected_write_ordinals': [1, 2, 3, 4, 8, 9, 128, 257], 'program_write_sites': ['214B:0000', '214B:013D']}
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T25/plan_errors.py", line 14, in <module>
+    matches=[site for site in programs if ((int(site[:4],16)+0x823)&65535)*16+int(site[5:],16)==pc];assert len(matches)==1,(root,pc);write_sites.update(matches)
+                                                                                                           ^^^^^^^^^^^^^^^
+AssertionError: ('214B:01A3', 170142)

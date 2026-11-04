@@ -1,0 +1,13 @@
+{
+  "accepted_canonical_evidence": false,
+  "development_only": true,
+  "preserved_source_map": {
+    ".venv-pypy/lib/pypy3.11/site-packages/goal2rust_engine/goal2rust_engine.pypy311-pp80-x86_64-linux-gnu.so": ".cache/T25-baseline/pypy/goal2rust_engine/goal2rust_engine.pypy311-pp80-x86_64-linux-gnu.so",
+    "out/T25/branch_probe.py": ".cache/T25-branch-probe-development-v1.py",
+    "out/T25/evidence.py": ".cache/T25-evidence-development-v1.py"
+  },
+  "reason": "Preserve the diagnostic matrix epoch before separating equal-expression if/while branch labels and finalizing direct input bindings; PyPy was not used by this CPython diagnostic.",
+  "receipt": ".cache/T25-live-development-v1.json",
+  "receipt_sha256": "22c9ab5cc331c56689659033eccff12a98a38abff3d457ce41bef66f85a02390",
+  "verified_bindings": 1019
+}

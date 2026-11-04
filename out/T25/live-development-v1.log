@@ -1,0 +1,9 @@
+denied: unicorn, .sav, .EXE, .DAT
+forward-live-byte {'comparisons': 160, 'hits': {'future-source-byte-mutated': 1280, 'each-byte-read-live-before-its-word-write': 1280}, 'effect_witnesses': 160}
+backward-live-byte {'comparisons': 160, 'hits': {'future-source-byte-mutated': 1280, 'each-byte-read-live-before-its-word-write': 1280}, 'effect_witnesses': 160}
+cached-attribute-AH {'comparisons': 160, 'hits': {'captured-AH-survives-live-AX-change': 1280}, 'effect_witnesses': 160}
+late-DF-live-flags {'comparisons': 160, 'hits': {'DF-and-other-live-flags-mutated-before-store': 160, 'STD-stored-late': 160}, 'effect_witnesses': 160}
+global-attribute-after-copy {'comparisons': 160, 'hits': {'global-colour-changed-after-copy': 160}, 'effect_witnesses': 160}
+attribute-before-position {'comparisons': 160, 'hits': {'attribute-write-precedes-live-column-read': 160}, 'effect_witnesses': 160}
+live-SS-length-and-source {'comparisons': 160, 'hits': {'live-SS-before-length-and-source': 160, 'source-SS-captured-before-restoring-call-stack': 160}, 'effect_witnesses': 160}
+captured-destination {'comparisons': 160, 'hits': {'destination-table-changed-after-capture': 160}, 'effect_witnesses': 160}

@@ -406,3 +406,32 @@ sealed by supplemental-source-inputs-v1(one source/four receipts),proving the
 older comparator against accepted history and the profile against fresh drives.
 All111 canonical/timing groups,controller and three capture PIDs exited. Live
 CI/merge/mainCI/merged audit and owner-requested pause remain in checkpoint#1.
+
+## T25 text-cell rendering chunk
+
+At accepted oracle2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c,
+engine/src/text.rs translates display.text_cells_forward214B:00FF,
+text_cells_backward0123,string_at_attr01A3,string_at_set_attr0205,
+string_forward_attr026D and string_forward_set_attr02C8. Inventory-v2 resolves
+all14 owned body/helper functions and specializes _string_cells' eight real
+guest returns;23E4:0644 is an existing native boundary. Preserve bytewise live
+source/overlap/wrap,word-write ordering,captured versus live SS/pointers/AX,
+attribute-write order,fresh resumed Regs and late DF stores. Source geometry.mul
+writesAX/DX and does not change arithmetic flags. Variants remain Python.
+
+Actual accepted T24 source/tests/adapter/both interpreter artifacts were
+preserved before any build in.cache/T25-baseline(75 files),after852 primary/
+281 evidence plus supplemental1source/4inputs verified. Forty-eight genuine
+entry shards(eight per body)come from two pure-oracle prefixes,with49 capture
+inputs sealed before execution. Private memory remains ignored. Initial
+inventory line-attribution diagnostics and development probe epochs are
+preserved;accepted inventory-v2 uses actual AST call locations. All completion,
+final artifact binding,CI/merge and stop/resume status remain in checkpoint#1.
+
+Fresh prior63/new6 proofs,all14-owned closure,ordered drive,lifecycle and
+strict ALL75/F40/10/20/30/60 comparisons pass. Full profile confirms69 bodies,
+2,699,104 native/404,581 Python entries. First complete quiet campaign passes
+all runner/load checks;paired median1.66% less CPU than saved T24,all three
+rounds improve. Same-campaign T24/PyPy0.684159861 and T25/PyPy0.667383160
+remain alongside all raw samples. Original1083 bindings and additive6sources/
+121inputs stay fixed;the original pre-proof failed wrapper remains preserved.

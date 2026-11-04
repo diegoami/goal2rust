@@ -1,0 +1,8 @@
+{
+  "accepted": false,
+  "reason": "Guest targets and returns are correct; two manually entered helper call line numbers are wrong. Replace line attribution with actual AST locations before capture/proof sealing.",
+  "receipt": "out/T25/inventory-v1.json",
+  "receipt_sha256": "773557d620c5bec40c69f1654eca91d888cac42f0701ecdecf1f9a59963fdc29",
+  "source_archive": ".cache/T25-inventory-v1.py",
+  "source_sha256": "3c6cf7707a71c375ea2cbee2bbe9c87c3b42b2276c89c0c310db5699e8d97b59"
+}

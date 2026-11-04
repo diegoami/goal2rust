@@ -1,0 +1,7 @@
+OBSERVED 214B:00FF 20 {'max_reads': 2, 'max_writes': 257, 'selected_write_ordinals': [1, 2, 3, 4, 8, 9, 128, 257], 'program_write_sites': ['214B:0000', '214B:0119']}
+OBSERVED 214B:0123 19 {'max_reads': 1, 'max_writes': 257, 'selected_write_ordinals': [1, 2, 3, 4, 8, 9, 128, 257], 'program_write_sites': ['214B:0000', '214B:013D']}
+OBSERVED 214B:01A3 32 {'max_reads': 5, 'max_writes': 527, 'selected_write_ordinals': [1, 2, 3, 4, 8, 9, 263, 527], 'program_write_sites': ['214B:0000', '214B:013D', '214B:01BE', '214B:01FF', '23E4:065C', '23E4:0661']}
+OBSERVED 214B:0205 33 {'max_reads': 5, 'max_writes': 528, 'selected_write_ordinals': [1, 2, 3, 4, 8, 9, 264, 528], 'program_write_sites': ['214B:0000', '214B:013D', '214B:0220', '214B:0223', '214B:0267', '23E4:065C', '23E4:0661']}
+OBSERVED 214B:026D 33 {'max_reads': 6, 'max_writes': 528, 'selected_write_ordinals': [1, 2, 3, 4, 8, 9, 264, 528], 'program_write_sites': ['214B:0000', '214B:0119', '214B:0288', '214B:02C2', '23E4:065C', '23E4:0661']}
+OBSERVED 214B:02C8 34 {'max_reads': 6, 'max_writes': 529, 'selected_write_ordinals': [1, 2, 3, 4, 8, 9, 264, 529], 'program_write_sites': ['214B:0000', '214B:0119', '214B:02E3', '214B:02E6', '214B:0323', '23E4:065C', '23E4:0661']}
+SEALED 171 rows 171 distinct selectors 27360 error pairs

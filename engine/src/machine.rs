@@ -110,6 +110,7 @@ impl Port {
     }
 }
 enum NativeContinuation {
+    Text(crate::text::Phase,crate::text::Saved),
     Destination(crate::destination_flow::Phase,Option<crate::destination_flow::Saved>),
     Depth(crate::depth::Phase,Option<crate::depth::Saved>),
     Chase(crate::chase::Phase),
@@ -862,6 +863,10 @@ impl MachineCore {
         };
         if self.native && frame.port.variant.bind(py).is_none() {
             frame.native = match address.extract::<String>()?.as_str() {
+                "214B:01A3"=>Some(NativeContinuation::Text(crate::text::Phase::Start,crate::text::Saved::new(0))),
+                "214B:0205"=>Some(NativeContinuation::Text(crate::text::Phase::Start,crate::text::Saved::new(1))),
+                "214B:026D"=>Some(NativeContinuation::Text(crate::text::Phase::Start,crate::text::Saved::new(2))),
+                "214B:02C8"=>Some(NativeContinuation::Text(crate::text::Phase::Start,crate::text::Saved::new(3))),
                 "214B:0983" => Some(NativeContinuation::KeyboardWait(true)),
                 "0791:8CF5" => Some(NativeContinuation::Offside(crate::offside::Phase::Start,None)),
                 "0791:90C5" => Some(NativeContinuation::Offside(crate::offside::Phase::MarkerStart,None)),
@@ -978,6 +983,15 @@ impl MachineCore {
         let mut completed_value = py.None();
         let result = (|| -> PyResult<Option<Py<PyAny>>> {
             match f.native.take().unwrap() {
+                NativeContinuation::Text(phase,saved)=>{
+                    let first=phase==crate::text::Phase::Start;
+                    let action=crate::text::step(&mut h,phase,saved)?;
+                    if first{let address:String=f.port.entry.bind(py).getattr("address")?.extract()?;*self.native_calls.borrow_mut().entry(address).or_insert(0)+=1;}
+                    match action{
+                        crate::text::Action::Call(req)=>{let args=PyTuple::new(py,req.args)?;let call=self.call_type.bind(py).call1((req.target,args,req.ret_to,req.far,false))?;f.native=Some(NativeContinuation::Text(req.next,req.saved));Ok(Some(call.unbind()))}
+                        crate::text::Action::Done=>{self.text_control(&mut h,saved.kind as u32+2)?;Ok(None)}
+                    }
+                }
                 NativeContinuation::KeyboardWait(first)=>{
                     crate::keyboard::wait(&mut h,first)?;
                     if first{
@@ -1226,12 +1240,13 @@ impl MachineCore {
             let t17_sites=["0791:47CE","0791:47EF","0791:485D","0791:4888","0791:48E2","0791:4930","0791:494D","0791:496A","0791:4980","0791:499D","0791:49B2","0791:49C0","0791:4493"];
             let site_mutant=(36..49).contains(&self.mutant) && t17_sites[(self.mutant-36) as usize]==ret_to;
             let t24_mutant=self.mutant==197 && ret_to=="214B:098A";
+            let t25_mutant=(246..254).contains(&self.mutant) && crate::text::RETURNS[(self.mutant-246) as usize]==ret_to;
             let t22_mutant=(166..170).contains(&self.mutant) && ["0791:8D42","0791:8DD0","0791:8E17","0791:9113"][(self.mutant-166) as usize]==ret_to;
             let t21_mutant=self.mutant==160 && ret_to=="0791:8396";
             let t20_mutant=(150..155).contains(&self.mutant) && T20_RETURNS[(self.mutant-150) as usize]==ret_to;
             let t19_mutant=(122..145).contains(&self.mutant) && T19_RETURNS[(self.mutant-122) as usize]==ret_to;
             let t18_mutant=(74..115).contains(&self.mutant) && T18_RETURNS[(self.mutant-74) as usize]==ret_to;
-            let corrupt = t24_mutant || t22_mutant || t21_mutant || t20_mutant || t19_mutant || t18_mutant || site_mutant || (self.mutant == 27 && matches!(ret_to.as_str(),"0791:47CE"|"0791:47EF"|"0791:485D"|"0791:4888"|"0791:48E2"|"0791:4930"|"0791:494D"|"0791:496A"|"0791:4980"|"0791:499D"|"0791:49B2"|"0791:49C0"))
+            let corrupt = t25_mutant || t24_mutant || t22_mutant || t21_mutant || t20_mutant || t19_mutant || t18_mutant || site_mutant || (self.mutant == 27 && matches!(ret_to.as_str(),"0791:47CE"|"0791:47EF"|"0791:485D"|"0791:4888"|"0791:48E2"|"0791:4930"|"0791:494D"|"0791:496A"|"0791:4980"|"0791:499D"|"0791:49B2"|"0791:49C0"))
                 || (self.mutant==29 && ret_to=="0791:4493")
                 || self.mutant == 1 || (self.mutant == 4
                 && matches!(ret_to.as_str(), "0791:3013" | "0791:3090" | "0791:30A3"))
@@ -1310,6 +1325,7 @@ impl MachineCore {
         };
         use crate::geometry as g;
         match address {
+            "214B:00FF"|"214B:0123"=>{crate::text::cells(&mut h,address=="214B:0123")?;self.text_control(&mut h,crate::text::index(address).unwrap())?;},
             "214B:0723"=>{
                 let site=keyboard_return_site(&mut h,view)?;
                 let has:bool=view.call_method1("keypressed",(site,))?.extract()?;
@@ -1387,6 +1403,15 @@ impl MachineCore {
             let dx=h.reg(Reg::Dx)?;h.set_reg(Reg::Dx,dx^0x8000)?;
         }
         Ok(Some(m.py().None()))
+    }
+
+    fn text_control(&self,h:&mut NativeHost<'_, '_>,index:u32)->PyResult<()>{
+        if self.mutant==198+index{crate::marking::corrupt(h)?;}
+        if (204..246).contains(&self.mutant) && (self.mutant-204)/7==index{
+            let reg=[Reg::Ax,Reg::Cx,Reg::Dx,Reg::Si,Reg::Di,Reg::Es,Reg::Eflags][((self.mutant-204)%7) as usize];
+            let old=h.reg(reg)?;h.set_reg(reg,old^if reg==Reg::Eflags{0x400}else{0x8000})?;
+        }
+        Ok(())
     }
 
     /// attributes.player_unavailable at e0270981: no guest calls in the oracle.

@@ -1,0 +1,22 @@
+{
+  "all_started_groups_stopped": true,
+  "checkpoint_complete": true,
+  "completed_logical_stages": 87,
+  "completed_resumed_groups": 30,
+  "controller_pid": 1018768,
+  "controller_stopped": true,
+  "deadline_utc": "2026-11-03T23:14:04Z",
+  "original_primary_bindings": 1083,
+  "primary_freeze_unchanged": true,
+  "raw_journal_sha256": "00f3e0c8833f01ee84e63e2ea571701f0771b9c7c1b892cc5c382b31a8f0ec1e",
+  "reason": "Owner shutting down within an hour; stop at a completed producer boundary before the long remaining campaign.",
+  "remaining_resume_uses_same_raw_journal": true,
+  "resume_inputs": 121,
+  "resume_sources": 6,
+  "source_manifest_sha256": "ecbba5576aee12acfed5b0c8a768c0819bd4f99484239300987edf75d63db84b",
+  "started_resumed_groups": 30,
+  "task_complete": false,
+  "time_utc": "2026-11-03T22:29:26Z",
+  "watcher_source": ".cache/T25-deadline-boundary.py",
+  "watcher_source_sha256": "2d7a8e55c487b79b1a0e35253dc31e0e0cb75d147b634803a41cf4228c66b5ae"
+}

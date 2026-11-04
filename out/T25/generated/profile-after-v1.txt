@@ -1,0 +1,206 @@
+         111448021 function calls (111420474 primitive calls) in 63.763 seconds
+
+   Ordered by: internal time
+   List reduced from 872 to 70 due to restriction <70>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      553   23.104    0.042   63.589    0.115 {method 'run' of 'goal2rust_engine.MachineCore' objects}
+ 12373732    3.078    0.000    5.100    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:215(get)
+  8152774    2.237    0.000    3.258    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:225(put)
+ 18608892    2.135    0.000    2.135    0.000 {method 'get' of 'dict' objects}
+  2249546    2.003    0.000    4.157    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:147(flush)
+  3103683    1.155    0.000    1.467    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/guest.py:41(__init__)
+  1818765    1.138    0.000    1.339    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/engine.py:43(_set_plain)
+  8152774    1.021    0.000    1.021    0.000 {method 'add' of 'set' objects}
+   558488    0.970    0.000    3.665    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:196(store)
+  1762740    0.959    0.000    1.155    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:33(arithmetic)
+   663482    0.899    0.000    2.151    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:118(push)
+    16800    0.830    0.000    4.367    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:140(add_real)
+  1534165    0.797    0.000    0.975    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/engine.py:79(reg)
+    15960    0.770    0.000    3.919    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:195(multiply_real)
+  1447812    0.621    0.000    0.654    0.000 {method 'write_as' of 'goal2rust_engine.MachineCore' objects}
+  1818765    0.581    0.000    1.920    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/engine.py:104(set_reg)
+  1437067    0.579    0.000    0.924    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/engine.py:90(_at)
+   785008    0.560    0.000    1.953    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:35(ss16)
+  1817578    0.540    0.000    0.540    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/engine.py:110(ss_lin)
+   267890    0.508    0.000    1.248    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:131(leave)
+  6126806    0.498    0.000    0.498    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/machine.py:25(NOOP)
+     2520    0.492    0.000    1.999    0.001 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:244(divide_real)
+   268661    0.463    0.000    2.460    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:123(enter)
+   363522    0.425    0.000    1.875    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:28(guest)
+   151696    0.389    0.000    2.020    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:51(nested)
+  1447812    0.382    0.000    1.036    0.000 /home/diego/projects/goal2rust/engine/python/goal2rust/machine.py:69(write_as)
+  3398369    0.377    0.000    0.377    0.000 {built-in method builtins.len}
+   515340    0.374    0.000    0.720    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:39(add)
+  1244691    0.370    0.000    0.598    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:106(ss)
+   111528    0.367    0.000    0.887    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/match.py:630(seed_write)
+  1392720    0.355    0.000    0.355    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:27(carry)
+   587445    0.331    0.000    0.888    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:94(al)
+    18306    0.316    0.000    1.571    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/quick.py:1881(listing_1771_0BC4)
+   503580    0.315    0.000    0.636    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:42(sub)
+  3105368    0.313    0.000    0.313    0.000 {built-in method builtins.isinstance}
+  1282137    0.307    0.000    0.702    0.000 {built-in method builtins.getattr}
+   690081    0.285    0.000    1.027    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/engine.py:98(w8)
+   558533    0.275    0.000    0.275    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:72(__init__)
+   381780    0.264    0.000    0.356    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:54(rcl)
+   859661    0.255    0.000    0.381    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/match.py:658(<genexpr>)
+   115670    0.253    0.000    2.942    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/duels.py:512(handle_player_at_ball)
+   357957    0.245    0.000    0.728    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/quick.py:17(_read)
+   134308    0.233    0.000    1.108    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:62(own)
+   387660    0.219    0.000    0.695    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:72(put)
+   804300    0.215    0.000    0.674    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:71(get)
+  1351919    0.208    0.000    0.208    0.000 {method 'append' of 'list' objects}
+   505118    0.207    0.000    0.667    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/mem.py:183(_write)
+   178714    0.203    0.000    0.394    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:141(local8)
+    76533    0.199    0.000    2.217    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:275(energy_chance_branch)
+   339012    0.198    0.000    0.398    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/guest.py:47(call)
+  1762740    0.196    0.000    0.196    0.000 {method 'bit_count' of 'int' objects}
+  1113100    0.194    0.000    0.194    0.000 {built-in method from_bytes}
+   130620    0.193    0.000    0.903    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:19(pop)
+    72018    0.187    0.000    2.086    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:632(_5565_body)
+   180917    0.185    0.000    0.293    0.000 {built-in method builtins.min}
+   820757    0.184    0.000    0.255    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:159(<genexpr>)
+   162732    0.182    0.000    0.971    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/setup.py:52(guest)
+   597053    0.177    0.000    0.583    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:90(al)
+    36253    0.171    0.000    1.713    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:452(pass_receiver_destination)
+   888540    0.164    0.000    0.164    0.000 {method 'to_bytes' of 'int' objects}
+   352625    0.164    0.000    0.164    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/mem.py:46(ds8)
+   179349    0.161    0.000    0.417    0.000 {built-in method builtins.max}
+    72018    0.144    0.000    3.098    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:617(challenge_duel)
+   252613    0.142    0.000    0.529    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/engine.py:101(w16)
+    37852    0.142    0.000    1.580    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:716(offside_call)
+    16601    0.141    0.000    0.884    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/rare.py:80(listing_0791_73BA)
+   489300    0.140    0.000    0.463    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:38(logic)
+   259348    0.139    0.000    0.326    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:102(ah)
+   235951    0.139    0.000    0.291    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/machine.py:150(rd)
+   148124    0.130    0.000    0.921    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:40(ss8)
+
+
+         111448021 function calls (111420474 primitive calls) in 63.763 seconds
+
+   Ordered by: cumulative time
+   List reduced from 872 to 70 due to restriction <70>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.002    0.002   63.763   63.763 /home/diego/projects/goal2rust/.cache/goal2-archaeology/experiments/E033-original-match-kit/save_boundaries.py:83(drive)
+      832    0.001    0.000   63.745    0.077 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/match.py:422(events)
+      553    0.001    0.000   63.689    0.115 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/match.py:580(_advance)
+      553    0.000    0.000   63.589    0.115 /home/diego/projects/goal2rust/engine/python/goal2rust/machine.py:73(run)
+      553   23.104    0.042   63.589    0.115 {method 'run' of 'goal2rust_engine.MachineCore' objects}
+42840/16800    0.056    0.000   11.464    0.001 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:281(near)
+     1680    0.116    0.000    6.207    0.004 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:333(polynomial)
+      840    0.022    0.000    5.797    0.007 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:376(real_logarithm)
+ 12373732    3.078    0.000    5.100    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:215(get)
+      840    0.019    0.000    4.938    0.006 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:413(real_exponential)
+    16800    0.830    0.000    4.367    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:140(add_real)
+  2249546    2.003    0.000    4.157    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:147(flush)
+    15960    0.770    0.000    3.919    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:195(multiply_real)
+   558488    0.970    0.000    3.665    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:196(store)
+      840    0.007    0.000    3.284    0.004 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:355(odd_polynomial)
+  8152774    2.237    0.000    3.258    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:225(put)
+    72018    0.144    0.000    3.098    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:617(challenge_duel)
+   115670    0.253    0.000    2.942    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/duels.py:512(handle_player_at_ball)
+   268661    0.463    0.000    2.460    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:123(enter)
+    76533    0.199    0.000    2.217    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:275(energy_chance_branch)
+   663482    0.899    0.000    2.151    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:118(push)
+ 18608892    2.135    0.000    2.135    0.000 {method 'get' of 'dict' objects}
+    72018    0.187    0.000    2.086    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:632(_5565_body)
+   151696    0.389    0.000    2.020    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:51(nested)
+     2520    0.492    0.000    1.999    0.001 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:244(divide_real)
+   785008    0.560    0.000    1.953    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:35(ss16)
+  1818765    0.581    0.000    1.920    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/engine.py:104(set_reg)
+   363522    0.425    0.000    1.875    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:28(guest)
+    36253    0.171    0.000    1.713    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:452(pass_receiver_destination)
+    37852    0.142    0.000    1.580    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:716(offside_call)
+    18306    0.316    0.000    1.571    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/quick.py:1881(listing_1771_0BC4)
+  3103683    1.155    0.000    1.467    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/guest.py:41(__init__)
+  1818765    1.138    0.000    1.339    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/engine.py:43(_set_plain)
+   267890    0.508    0.000    1.248    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:131(leave)
+  1762740    0.959    0.000    1.155    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:33(arithmetic)
+    80646    0.110    0.000    1.113    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/quick.py:34(_call)
+   134308    0.233    0.000    1.108    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:62(own)
+  1447812    0.382    0.000    1.036    0.000 /home/diego/projects/goal2rust/engine/python/goal2rust/machine.py:69(write_as)
+   690081    0.285    0.000    1.027    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/engine.py:98(w8)
+  8152774    1.021    0.000    1.021    0.000 {method 'add' of 'set' objects}
+  1534165    0.797    0.000    0.975    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/engine.py:79(reg)
+   162732    0.182    0.000    0.971    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/setup.py:52(guest)
+     1206    0.005    0.000    0.965    0.001 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:1051(sys_move)
+     1206    0.117    0.000    0.933    0.001 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:314(_copy_forward)
+  1437067    0.579    0.000    0.924    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/engine.py:90(_at)
+   148124    0.130    0.000    0.921    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/contests.py:40(ss8)
+   130620    0.193    0.000    0.903    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:19(pop)
+   587445    0.331    0.000    0.888    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:94(al)
+   111528    0.367    0.000    0.887    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/match.py:630(seed_write)
+    16601    0.141    0.000    0.884    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/rare.py:80(listing_0791_73BA)
+   357957    0.245    0.000    0.728    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/quick.py:17(_read)
+   515340    0.374    0.000    0.720    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:39(add)
+  1282137    0.307    0.000    0.702    0.000 {built-in method builtins.getattr}
+   387660    0.219    0.000    0.695    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:72(put)
+   804300    0.215    0.000    0.674    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:71(get)
+   505118    0.207    0.000    0.667    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/mem.py:183(_write)
+  1447812    0.621    0.000    0.654    0.000 {method 'write_as' of 'goal2rust_engine.MachineCore' objects}
+    78132    0.038    0.000    0.644    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/match.py:660(_on_keypressed)
+   503580    0.315    0.000    0.636    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:42(sub)
+    88626    0.104    0.000    0.629    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/quick.py:28(_pop)
+    78151    0.124    0.000    0.606    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/match.py:657(_menus_ported)
+  1244691    0.370    0.000    0.598    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:106(ss)
+   597053    0.177    0.000    0.583    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/runtime.py:90(al)
+    19312    0.069    0.000    0.557    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/restarts.py:974(free_kick_state)
+    16421    0.105    0.000    0.554    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/display.py:1391(commentary_line_memory)
+    24059    0.106    0.000    0.540    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/positioning.py:301(near_player_zone)
+  1817578    0.540    0.000    0.540    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/engine.py:110(ss_lin)
+   252613    0.142    0.000    0.529    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/engine.py:101(w16)
+    18060    0.123    0.000    0.528    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/port/real.py:187(round_product)
+  6126806    0.498    0.000    0.498    0.000 /home/diego/projects/goal2rust/.cache/goal2-archaeology/runtime/original_match/machine.py:25(NOOP)
+
+
+0791:6188 {"body_self_s": 0.253146613, "cumulative_s": 2.9418949690000002, "function": "handle_player_at_ball", "guest_entries": 57791, "module": "duels", "native_entries": 0, "python_calls_or_resumes": 115670, "python_entries": 57791}
+0791:5049 {"body_self_s": 0.19886879500000001, "cumulative_s": 2.2167045, "function": "energy_chance_branch", "guest_entries": 36198, "module": "contests", "native_entries": 0, "python_calls_or_resumes": 76533, "python_entries": 36198}
+0791:56D9 {"body_self_s": 0.141518935, "cumulative_s": 1.580355927, "function": "offside_call", "guest_entries": 36198, "module": "contests", "native_entries": 0, "python_calls_or_resumes": 37852, "python_entries": 36198}
+0791:533B {"body_self_s": 0.17107385, "cumulative_s": 1.712713417, "function": "pass_receiver_destination", "guest_entries": 35723, "module": "contests", "native_entries": 0, "python_calls_or_resumes": 36253, "python_entries": 35723}
+0791:5565 {"body_self_s": 0.14363103000000002, "cumulative_s": 3.098220464, "function": "challenge_duel", "guest_entries": 35193, "module": "contests", "native_entries": 0, "python_calls_or_resumes": 72018, "python_entries": 35193}
+0791:44C1 {"body_self_s": 0.105677136, "cumulative_s": 0.540221872, "function": "near_player_zone", "guest_entries": 16064, "module": "positioning", "native_entries": 0, "python_calls_or_resumes": 24059, "python_entries": 16064}
+214B:0C57 {"body_self_s": 0.015422464, "cumulative_s": 0.396019597, "function": "set_test_bit", "guest_entries": 9510, "module": "runtime", "native_entries": 0, "python_calls_or_resumes": 9510, "python_entries": 9510}
+0791:2CC5 {"body_self_s": 0.037444325, "cumulative_s": 0.452742328, "function": "destination", "guest_entries": 8060, "module": "entrypoints", "native_entries": 0, "python_calls_or_resumes": 8060, "python_entries": 8060}
+0791:73BA {"body_self_s": 0.140590911, "cumulative_s": 0.884012617, "function": "listing_0791_73BA", "guest_entries": 4951, "module": "rare", "native_entries": 0, "python_calls_or_resumes": 16601, "python_entries": 4951}
+0791:7069 {"body_self_s": 0.045054316000000004, "cumulative_s": 0.389521677, "function": "throw_in_state", "guest_entries": 4535, "module": "restarts", "native_entries": 0, "python_calls_or_resumes": 14620, "python_entries": 4535}
+0791:7621 {"body_self_s": 0.06905910800000001, "cumulative_s": 0.55695386, "function": "free_kick_state", "guest_entries": 3718, "module": "restarts", "native_entries": 0, "python_calls_or_resumes": 19312, "python_entries": 3718}
+214B:0018 {"body_self_s": 0.02043479, "cumulative_s": 0.15776357600000002, "function": "fill_bytes", "guest_entries": 2361, "module": "runtime", "native_entries": 0, "python_calls_or_resumes": 2361, "python_entries": 2361}
+0791:970C {"body_self_s": 0.011111383, "cumulative_s": 0.074514835, "function": "match_clock", "guest_entries": 2290, "module": "frame", "native_entries": 0, "python_calls_or_resumes": 2433, "python_entries": 2290}
+0791:9119 {"body_self_s": 0.054977426, "cumulative_s": 0.213218975, "function": "move_referee", "guest_entries": 2278, "module": "motion", "native_entries": 0, "python_calls_or_resumes": 12903, "python_entries": 2278}
+1771:3041 {"body_self_s": 0.007060592, "cumulative_s": 0.054229169, "function": "is_two_footed", "guest_entries": 2106, "module": "attributes", "native_entries": 0, "python_calls_or_resumes": 2106, "python_entries": 2106}
+1771:3088 {"body_self_s": 0.008842810000000001, "cumulative_s": 0.057359625000000004, "function": "foot_index", "guest_entries": 2103, "module": "attributes", "native_entries": 0, "python_calls_or_resumes": 2103, "python_entries": 2103}
+1771:3179 {"body_self_s": 0.017544372000000003, "cumulative_s": 0.114098481, "function": "out_of_place_flag", "guest_entries": 2073, "module": "attributes", "native_entries": 0, "python_calls_or_resumes": 8098, "python_entries": 2073}
+214B:1E09 {"body_self_s": 0.012940717000000001, "cumulative_s": 0.12406842700000001, "function": "delay_frame_memory", "guest_entries": 2040, "module": "display", "native_entries": 0, "python_calls_or_resumes": 2040, "python_entries": 2040}
+0791:1829 {"body_self_s": 0.104967685, "cumulative_s": 0.553701487, "function": "commentary_line_memory", "guest_entries": 1980, "module": "display", "native_entries": 0, "python_calls_or_resumes": 16421, "python_entries": 1980}
+1771:377E {"body_self_s": 0.015714522, "cumulative_s": 0.09360886, "function": "player_strength", "guest_entries": 1868, "module": "attributes", "native_entries": 0, "python_calls_or_resumes": 5537, "python_entries": 1868}
+0791:69BD {"body_self_s": 0.044872685, "cumulative_s": 0.28841947500000004, "function": "kickoff_placement", "guest_entries": 1830, "module": "restarts", "native_entries": 0, "python_calls_or_resumes": 7394, "python_entries": 1830}
+23E4:0CB9 {"body_self_s": 0.0024504690000000003, "cumulative_s": 0.171761458, "function": "long_to_real", "guest_entries": 1680, "module": "real", "native_entries": 0, "python_calls_or_resumes": 1680, "python_entries": 1680}
+0791:2DCA {"body_self_s": 0.009461061, "cumulative_s": 0.096427628, "function": "pitch", "guest_entries": 1658, "module": "entrypoints", "native_entries": 0, "python_calls_or_resumes": 1658, "python_entries": 1658}
+0791:59B3 {"body_self_s": 0.014980398, "cumulative_s": 0.11961769700000001, "function": "check_woodwork", "guest_entries": 1538, "module": "contests", "native_entries": 0, "python_calls_or_resumes": 3093, "python_entries": 1538}
+0791:2E00 {"body_self_s": 0.010765584, "cumulative_s": 0.097168103, "function": "on_pitch_wide", "guest_entries": 1538, "module": "geometry", "native_entries": 0, "python_calls_or_resumes": 1538, "python_entries": 1538}
+0791:83A2 {"body_self_s": 0.018215061, "cumulative_s": 0.070508977, "function": "move_ball", "guest_entries": 1538, "module": "motion", "native_entries": 0, "python_calls_or_resumes": 6966, "python_entries": 1538}
+23E4:075A {"body_self_s": 0.005747801, "cumulative_s": 0.036763824, "function": "sys_char_to_str", "guest_entries": 1335, "module": "runtime", "native_entries": 0, "python_calls_or_resumes": 1335, "python_entries": 1335}
+214B:1C86 {"body_self_s": 0.0030200590000000003, "cumulative_s": 0.074827533, "function": "wrap_add_in_range", "guest_entries": 1328, "module": "runtime", "native_entries": 0, "python_calls_or_resumes": 1328, "python_entries": 1328}
+23E4:025D {"body_self_s": 0.005360762000000001, "cumulative_s": 0.964656964, "function": "sys_move", "guest_entries": 1206, "module": "runtime", "native_entries": 0, "python_calls_or_resumes": 1206, "python_entries": 1206}
+0791:72F2 {"body_self_s": 0.018369786000000003, "cumulative_s": 0.122558444, "function": "listing_0791_72F2", "guest_entries": 1177, "module": "rare", "native_entries": 0, "python_calls_or_resumes": 2837, "python_entries": 1177}
+0791:92FC {"body_self_s": 0.0037365470000000002, "cumulative_s": 0.031957526, "function": "switch_to_quick", "guest_entries": 1035, "module": "menus", "native_entries": 0, "python_calls_or_resumes": 1037, "python_entries": 1035}
+0791:0481 {"body_self_s": 0.010374642, "cumulative_s": 0.059882618000000006, "function": "digit_vertical_memory", "guest_entries": 1015, "module": "display", "native_entries": 0, "python_calls_or_resumes": 1015, "python_entries": 1015}
+0791:30EA {"body_self_s": 0.008198505, "cumulative_s": 0.055718243, "function": "slot_in_record_side", "guest_entries": 978, "module": "ball", "native_entries": 0, "python_calls_or_resumes": 1956, "python_entries": 978}
+214B:06D0 {"body_self_s": 0.002169541, "cumulative_s": 0.10965398500000001, "function": "random_is_one", "guest_entries": 925, "module": "runtime", "native_entries": 0, "python_calls_or_resumes": 925, "python_entries": 925}
+214B:1EF1 {"body_self_s": 0.029895961000000002, "cumulative_s": 0.248898781, "function": "note_memory", "guest_entries": 840, "module": "display", "native_entries": 0, "python_calls_or_resumes": 8400, "python_entries": 840}
+23E4:0CC5 {"body_self_s": 0.001824019, "cumulative_s": 0.13031793, "function": "real_to_long", "guest_entries": 840, "module": "real", "native_entries": 0, "python_calls_or_resumes": 840, "python_entries": 840}
+23E4:0C93 {"body_self_s": 0.001408645, "cumulative_s": 0.109164487, "function": "real_add", "guest_entries": 840, "module": "real", "native_entries": 0, "python_calls_or_resumes": 840, "python_entries": 840}
+23E4:0CA5 {"body_self_s": 0.001674759, "cumulative_s": 0.233551259, "function": "real_multiply", "guest_entries": 840, "module": "real", "native_entries": 0, "python_calls_or_resumes": 840, "python_entries": 840}
+23E4:0CAB {"body_self_s": 0.0023735, "cumulative_s": 0.44369590900000005, "function": "real_divide", "guest_entries": 840, "module": "real", "native_entries": 0, "python_calls_or_resumes": 840, "python_entries": 840}
+23E4:0E67 {"body_self_s": 0.022041943, "cumulative_s": 5.797489538000001, "function": "real_logarithm", "guest_entries": 840, "module": "real", "native_entries": 0, "python_calls_or_resumes": 840, "python_entries": 840}
+23E4:0F10 {"body_self_s": 0.018734237, "cumulative_s": 4.937845037000001, "function": "real_exponential", "guest_entries": 840, "module": "real", "native_entries": 0, "python_calls_or_resumes": 840, "python_entries": 840}
+0791:26A0 {"body_self_s": 0.002775327, "cumulative_s": 0.028775484, "function": "set_message_word", "guest_entries": 837, "module": "geometry", "native_entries": 0, "python_calls_or_resumes": 837, "python_entries": 837}
+0791:58E1 {"body_self_s": 0.009604276, "cumulative_s": 0.08114731, "function": "chase_countdown", "guest_entries": 767, "module": "contests", "native_entries": 0, "python_calls_or_resumes": 1534, "python_entries": 767}
+214B:0000 {"body_self_s": 0.004166151, "cumulative_s": 0.033714205000000004, "function": "fill_words", "guest_entries": 757, "module": "runtime", "native_entries": 0, "python_calls_or_resumes": 757, "python_entries": 757}
+0791:1E53 {"body_self_s": 0.0077955310000000005, "cumulative_s": 0.033286551000000004, "function": "apply_perf_delta", "guest_entries": 714, "module": "frame", "native_entries": 0, "python_calls_or_resumes": 714, "python_entries": 714}
+0791:1D4A {"body_self_s": 0.014028296, "cumulative_s": 0.06797072600000001, "function": "write_commentary_line", "guest_entries": 714, "module": "frame", "native_entries": 0, "python_calls_or_resumes": 2755, "python_entries": 714}
+0791:1EB5 {"body_self_s": 0.013013008000000001, "cumulative_s": 0.062723664, "function": "emit_commentary", "guest_entries": 714, "module": "frame", "native_entries": 0, "python_calls_or_resumes": 4122, "python_entries": 714}
+0791:1C78 {"body_self_s": 0.00740033, "cumulative_s": 0.036132710000000005, "function": "commentary_record_is_new", "guest_entries": 713, "module": "frame", "native_entries": 0, "python_calls_or_resumes": 713, "python_entries": 713}
+0791:6AF7 {"body_self_s": 0.005293343000000001, "cumulative_s": 0.047580701, "function": "walk_off_state", "guest_entries": 690, "module": "restarts", "native_entries": 0, "python_calls_or_resumes": 1402, "python_entries": 690}
+23E4:06E3 {"body_self_s": 0.005074291000000001, "cumulative_s": 0.023947097, "function": "sys_str_pos", "guest_entries": 658, "module": "runtime", "native_entries": 0, "python_calls_or_resumes": 658, "python_entries": 658}
