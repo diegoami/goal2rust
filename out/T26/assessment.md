@@ -1,7 +1,8 @@
 # T26 offside/commentary tree
 
-Status: all92 canonical M2 stages pass on fixed artifacts. Full-match validation,
-profile,timing and final audits remain pending.
+Status: all92 canonical M2 stages,ordered drive,fresh profile,lifecycle,strict
+ALL75/F40 and all four immutable prefixes pass on fixed artifacts. Complete
+four-arm timing and final audits remain pending.
 PR#61 stays draft;accepted main remains T25 until completion and merge.
 
 ## Source and implementation
@@ -75,8 +76,16 @@ matrices passed freshly on this same artifact.
 
 The controller queues92 M2 and97 total canonical producer groups,plus12 per
 complete four-arm timing campaign. Full source/frame/error/output fidelity,
-ordered drive,lifecycle,ALL75/F40/immutable prefixes,independent backend/full
-profile,strict quiet-host timing and post-writer ledgers remain mandatory.
-No T26 speed result or final profile count is available yet. The79-body/
-45,569-moved-entry figures remain predictions,not speed,source-line/test
-coverage or whole-game completion. See checkpoint#1 for live status.
+ordered drive,lifecycle,ALL75/F40/immutable prefixes and full profile pass.
+Independent attestation verifies11 lifecycle/75 family Rust machines,collectively
+reaching all79 native bodies in both campaigns. All75 records completed without
+errors under unchanged guards. F40 is selected byte for byte from ALL75;strict
+10/20/30/60 prefix comparisons pass. Complete strict quiet-host timings and
+post-writer ledgers remain mandatory.
+The ordered drive matches Python's831 events,result,records,full memory and
+complete IO/listener/site/write trace. The fresh full profile confirms79/422
+native bodies(18.72% by count),2,744,673 native and359,012 Python entries out
+of3,103,685 total:88.43% native fixture entry frequency. It confirms45,569
+moved entries relative to accepted T25. No T26 speed result is available yet.
+These counts are not source-line/test/CPU coverage or whole-game completion.
+See checkpoint#1 for live status.
