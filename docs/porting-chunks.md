@@ -487,3 +487,21 @@ a busy/unknown runner state rejects an entire timing campaign. Continuous
 five-second load monitoring remains separate from network queries. No unrelated
 process/runner is stopped or reconfigured. Original source/corpus/quality guards
 and the quiet-IT13 preference remain.
+
+## T25 resume dependency check (2026-11-04)
+
+Live main heads are goal2 `8893411ffb24bfddac617ba36b7d68fc0bb7ba1f` and
+archaeology `04021dd06e4afdeac99cc358273f6041a30ed6c4`. Since T25 selection,
+goal2 added save/quit UI and management extras, plus watched-match qualifier
+handling. Archaeology now includes T119c's competitive route fixture/key-policy
+correction and its E040 evidence. Route proofs can disable the write-recording
+listener with `record_writes=False`; the Prover still checks memory itself.
+T120's silent-fixture proof runner and the explicitly edited input needed to
+reach BB2F are now specified; that task contract is not a completed port proof.
+
+These updates advance later whole-game dependencies. They do not refresh
+T25's accepted `2cbeb36f` oracle, change its default-match contract, or alter
+the frozen artifact. Complete T25's remaining full-match/profile/timing gates
+before selecting the next chunk from the full profile. The paused M2 receipts
+and separately sealed continuation remain intact; checkpoint #1 records the
+owner-authorized restart and current controller identity.

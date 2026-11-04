@@ -594,3 +594,10 @@ match-engine runtime change appears in either upstream diff. Keep T24 frozen
 and its oracle pinned. Future whole-game adoption requires the round-end proofs
 as well as route continuation; the match-engine body/entry counts are not a
 whole-game denominator. See the [dependency update](porting-chunks.md#upstream-whole-season-dependency-update-during-t24).
+
+T25 resume upstream check (2026-11-04): goal2 `8893411f`, archaeology `04021dd0`.
+Competitive route correction T119c and E040 evidence are now in archaeology;
+T120's silent-fixture proof runner/input contract remains further work. Goal2
+has advanced save/quit and management UI. Keep T25's oracle/artifact fixed and
+finish its remaining M3 gates; select following scope only from the fresh full
+profile. See the [resume dependency check](porting-chunks.md#t25-resume-dependency-check-2026-11-04).

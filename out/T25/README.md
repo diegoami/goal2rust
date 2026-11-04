@@ -41,8 +41,9 @@ The canonical controller queues87 M2 stages and92 canonical producer groups in
 total,plus12 per full timing campaign. It admits no new local gate while an
 IT13 runner is busy. Timings additionally require every sampled runner state
 known/idle;load samples remain independently taken every five seconds. Sources
-and installed binaries are not yet archived/frozen;check checkpoint for build/
-full-public-preflight progress before running producers. No speed result yet.
+and both installed binaries are archived/frozen;both94-test public preflights
+preceded the freeze. Preserve these artifacts;check checkpoint for current
+producer progress before running anything. No speed result yet.
 
 ## Preserved wrapper failure and additive continuation
 
