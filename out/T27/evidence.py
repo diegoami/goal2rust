@@ -81,6 +81,13 @@ def hashes():
     for receipt in ['development-probe-v1.json', 'live-development-v1.json']:
         for p in json.loads((BASE / 'out/T27' / receipt).read_text())['preserved_source_map'].values():
             files.add(BASE / p)
+    # Bind the preparation source epoch without hashing its still-growing
+    # process journal. The complete journal enters the final evidence ledger.
+    journal = BASE / 'out/T27/preparation-jobs-v1.jsonl'
+    with journal.open() as stream:
+        prepared = json.loads(next(stream))
+    assert prepared['event'] == 'controller'
+    files.update(BASE / p for p in prepared['preserved_source_map'].values())
     for name in ['source-inputs-v1.json', 'proof-plan-v1.json', 'artifact-archive-v1.json']:
         path = BASE / 'out/T27' / name
         if path.exists():

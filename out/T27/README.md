@@ -92,6 +92,17 @@ before writing the explicit source allowlist/final bindings. Never start the
 supervisor before archive/freeze. Current admitted/waiting processes and receipt
 versions belong in checkpoint#1.
 
+`prepare_final.py` exclusively waits for both existing pre-seal wrappers and
+their positive receipts,then admits each final build/install/public preflight/
+archive/freeze stage only while IT13 runners are known idle. It subsequently
+runs the canonical supervisor with its original guards. It never merges or runs
+post-writer audits while its own controller is alive. Its eight process groups
+and source epoch are recorded separately in preparation-jobs-v1.jsonl;do not
+duplicate or restart a partial attempt. process_closure additionally verifies
+that controller,all eight groups and both original admission wrappers are gone.
+The live checkpoint owns current controller PID/log status. Preserve its
+content-addressed source archive and all partial logs/journals on failure.
+
 After all canonical/timing writers and controller have exited,run this sequence
 in the actual host PID namespace,with the frozen environment and sources:
 
