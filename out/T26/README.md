@@ -45,3 +45,13 @@ capture.py imports only capture_support and host_gate;neither imports candidate
 or candidate tests. Private shards live under.cache/T26-raw/capture-shards-v1;
 capture-drives-v1.jsonl is append-only and captures-v1.json is exclusive. Verify
 current PID/lock/log/checkpoint before resuming;do not duplicate a live producer.
+
+Genuine capture is now complete:one source drive through event692,80 exclusive
+private shards,eight entries per body,all49 inputs unchanged. Capture PID352793
+exited0. capture-input-audit-v1 independently verifies every shard/source,
+25 return sites/31 owned code objects(including both local helpers),all77
+baseline files and unchanged actual T25 runtime at this pre-implementation
+milestone. Do not rerun capture or overwrite its receipt/journal/log/audit.
+No T26 runtime implementation,proof plan,build or canonical gate has started.
+The next step is to implement and prove this complete bounded tree,retaining
+the accepted T25 artifact as comparator. No producer is left running.
