@@ -175,3 +175,11 @@
 {"event": "start", "name": "commentary-body-v1", "pid": 366309, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T26/commentary_differential.py", "--suite", "body", "--out", "out/T26/commentary-body-v1.json"], "time": 1793796977.3428552}
 {"event": "exit", "name": "text-output-v1", "pid": 365298, "code": 0, "time": 1793797317.366463}
 {"event": "start", "name": "commentary-output-v1", "pid": 370155, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T26/commentary_differential.py", "--suite", "output", "--out", "out/T26/commentary-output-v1.json"], "time": 1793797324.1935623}
+{"event": "exit", "name": "commentary-body-v1", "pid": 366309, "code": 0, "time": 1793797474.2029445}
+{"event": "start", "name": "commentary-returns-v1", "pid": 370477, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T26/commentary_differential.py", "--suite", "returns", "--out", "out/T26/commentary-returns-v1.json"], "time": 1793797481.3582149}
+{"event": "exit", "name": "commentary-returns-v1", "pid": 370477, "code": 0, "time": 1793797596.3658028}
+{"event": "start", "name": "live-observers-v1", "pid": 370592, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T26/live_observers.py", "--out", "out/T26/live-observers-v1.json"], "time": 1793797603.3237307}
+{"event": "exit", "name": "live-observers-v1", "pid": 370592, "code": 0, "time": 1793797633.3258336}
+{"event": "exit", "name": "commentary-output-v1", "pid": 370155, "code": 0, "time": 1793800573.5273714}
+{"event": "exit", "name": "commentary-normal-v1", "pid": 365505, "code": 0, "time": 1793801333.5763211}
+{"event": "start", "name": "taps-rust-v1", "pid": 378276, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T26/run_receipt.py", "--backend", "rust", "--mode", "taps", "--out", "out/T26/taps-rust-v1.json"], "time": 1793801337.50005}
