@@ -523,3 +523,24 @@ are stopped. The original pre-proof wrapper failure remains reconciled,not
 counted as a proof pass. Exact-head CI/merge/mainCI/merged-audit status remains
 in checkpoint#1. The owner authorized merging and continuing;select the next
 complete bounded closure from the full remaining profile after T25 acceptance.
+
+## T26 selected offside/commentary closure
+
+The owner authorized merging T25 and continuing. T25 is accepted atd300f98,
+with green exact-head/mainCI and a completed merged binding audit. Full-profile
+selection closes56D9 through26A0/2B0F/1EB5,ratings/ring/new-line checks,
+1829 rendering,0018 byte fill and1C86 wrap arithmetic:ten bodies,25 actual guest
+returns,31 owned code objects. Resolve frame.go via SITES and display's tuple
+loops;include both local word closures. Existing native2BE5 and T23/T25 string/
+text routines are the only guest boundaries. Prediction45,569 moved fixture
+entries,79 bodies/2,744,673 native/359,012 Python entries,is not a speed result.
+
+Latest upstream heads are goal2b3d8dc3bd2f7e6316ff56f1f8d163c4ff6426504 and
+archaeology65de2fc06d5c909c01da9deeedfffcbef0d398e2. The match-day UI and pipe
+prompts now include set-piece/extra-time/shoot-out decisions;later application
+adoption must retain those protocol/behavior gates. Whole-game T124 now has a
+T124t legal-eleven harness dependency before stage builders. These are separate
+from the pinned2cb default-match Rust task. The owner clarified shared-runner
+admission:check before STARTING a local gate;never stop a gate already running
+because a runner becomes busy. T26 retains strict independent runner/load timing
+quality and whole-campaign rejection/repetition. No original guard is raised.

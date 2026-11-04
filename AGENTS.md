@@ -60,3 +60,12 @@ Use the README's updated final-v2 audit sequence and live controller identity.
 If a shutdown checkpoint exists, verify its stopped controller and all completed
 receipts before restarting the same artifact. Never rerun completed capture or
 overwrite receipts; current completion/stop/resume authority remains in checkpoint #1.
+
+Offside/commentary tree T26 is specified in [docs/tasks/T26.md](docs/tasks/T26.md).
+Read [out/T26/README.md](out/T26/README.md), contract.md, inventory-v1.json and
+checkpoint #1 before producers/builds. Preserve accepted T25's final-v2 and
+separately sealed continuation, and actual T25 baseline in `.cache/T26-baseline`
+before builds. Genuine capture binds 49 pure-oracle inputs; never edit its bound
+sources while its producer lives or overwrite completed shards/receipts. Inventory
+includes all 31 code objects, both local word helpers, SITES and loop returns.
+Current run/stop/resume authority stays in checkpoint #1.

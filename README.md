@@ -22,3 +22,7 @@ uses 1.66% less CPU. Same-campaign T24/PyPy and T25/PyPy median CPU ratios are
 Every raw sample remains. This is a partial engine port and one-fixture result.
 Routine counts and guest-entry frequency are not overall port or test coverage.
 Read the checkpoint for exact-head CI, merge and current continuation status.
+
+T25 is merged;[T26](docs/tasks/T26.md) continues with the ten-body offside/
+commentary closure. Its baseline and source inventory are preserved;genuine
+capture is in progress. No T26 runtime/performance result is claimed yet.
