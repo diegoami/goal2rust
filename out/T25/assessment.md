@@ -1,7 +1,8 @@
 # T25 text-cell rendering chunk
 
-Status: the 87 per-body stages, fresh ordered drive, lifecycle and full profile
-pass. Strict10/20/30 prefixes pass; ALL75 and performance remain pending.
+Status: the 87 per-body stages, fresh ordered drive, lifecycle, full profile,
+ALL75/exact-source F40 and strict10/20/30/60 prefixes pass. Performance and
+post-writer acceptance remain pending.
 PR #59 stays draft and unmerged; checkpoint #1 owns live status.
 
 ## Translation and source contract
@@ -98,8 +99,13 @@ bounded closure separately after T25's acceptance gates complete.
 
 ## Remaining acceptance
 
-ALL75/exact-source F40 and the immutable60-prefix comparison, full campaign
-native attestation, all three four-arm timing rounds, post-writer
+Independent native attestation verifies11 lifecycle and75 family machines,
+each campaign collectively reaching all69 native bodies. All75 records
+completed under unchanged guards, with no errors. F40 is selected byte for
+byte from the complete ALL output; all immutable prefixes and both full
+comparisons pass. The original1083 bindings and additive6/121 remain unchanged.
+
+All three four-arm timing rounds, post-writer
 audits/final-v2 ledger, exact-head CI/squash/mainCI and merged binding audit
 remain required. No T25 performance conclusion is available yet. Measurements
 must preserve every sample and regression, reject an entire contaminated
