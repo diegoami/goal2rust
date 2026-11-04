@@ -1,9 +1,12 @@
 # T26 offside/commentary tree
 
 Status: all92 canonical M2 stages,ordered drive,fresh profile,lifecycle,strict
-ALL75/F40 and all four immutable prefixes pass on fixed artifacts. Complete
-four-arm timing and final audits remain pending.
-PR#61 stays draft;accepted main remains T25 until completion and merge.
+ALL75/F40 and all four immutable prefixes pass on fixed artifacts. The complete
+first timing campaign passes all quality checks;paired median1.57% less CPU
+than saved T25,with two faster rounds and one3.69% slower. Final audit/CI/merge
+status remains in checkpoint#1;no following task is included. All five post-writer
+audits/final-v1 pass,with1647 primary/283 evidence bindings and all109 producer
+groups/controller exited.
 
 ## Source and implementation
 
@@ -80,12 +83,46 @@ ordered drive,lifecycle,ALL75/F40/immutable prefixes and full profile pass.
 Independent attestation verifies11 lifecycle/75 family Rust machines,collectively
 reaching all79 native bodies in both campaigns. All75 records completed without
 errors under unchanged guards. F40 is selected byte for byte from ALL75;strict
-10/20/30/60 prefix comparisons pass. Complete strict quiet-host timings and
-post-writer ledgers remain mandatory.
+10/20/30/60 prefix comparisons pass. Post-writer ledgers and exact-head CI/
+merge/mainCI/merged audit remain mandatory.
 The ordered drive matches Python's831 events,result,records,full memory and
 complete IO/listener/site/write trace. The fresh full profile confirms79/422
 native bodies(18.72% by count),2,744,673 native and359,012 Python entries out
 of3,103,685 total:88.43% native fixture entry frequency. It confirms45,569
-moved entries relative to accepted T25. No T26 speed result is available yet.
+moved entries relative to accepted T25.
 These counts are not source-line/test/CPU coverage or whole-game completion.
 See checkpoint#1 for live status.
+
+## Complete quiet four-arm timing campaign
+
+The first entire campaign passes all three quiet-start observations,every arm's
+start/end load,independent continuous five-second load samples and known-idle
+runner observations. All12 arms completed under unchanged guards,with identical
+events/result/records/full memory. No campaign or sample was rejected/replaced.
+The following are uninstrumented match-drive CPU seconds,not wall time.
+
+| Round | Saved T25 CPU s | T26 CPU s | CPython CPU s | PyPy CPU s |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 31.396810521 | 30.902784889 | 133.598834483 | 46.321005780 |
+| 2 | 30.108901096 | 31.219582993 | 125.917047034 | 45.914188100 |
+| 3 | 31.520341480 | 30.184898870 | 128.489930315 | 45.182241755 |
+
+| Round | T26 / saved T25 | Saved T25 / PyPy | T26 / PyPy | CPython / T26 |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 0.984265101 | 0.677809344 | 0.667144082 | 4.323197245 |
+| 2 | 1.036888822 | 0.655764641 | 0.679955027 | 4.033271266 |
+| 3 | 0.957632356 | 0.697626772 | 0.668069969 | 4.256761994 |
+| Median of per-round ratios | 0.984265101 | 0.677809344 | 0.668069969 | 4.256761994 |
+
+Paired median:1.57% less CPU than saved T25. Round one improves1.57%,round two
+regresses3.69%,and round three improves4.24%. This is a mixed result;repeatable
+improvement is not established. Every slower sample remains in the complete
+receipt and this table. In the same campaign,saved T25 uses32.22% less CPU than
+PyPy and T26 uses33.19% less,at independent ratio medians. CPython/T26 median
+CPU-speed ratio is4.26. Each median is selected independently;dividing the
+median PyPy columns does not measure the incremental change. Historical
+standalone ratios are not substituted for this campaign's saved baseline.
+
+This is one-fixture evidence,not a general performance claim or a completion
+estimate. The predeclared translation criteria require full fidelity and
+complete measurement,with no positive magnitude or all-round-improvement gate.

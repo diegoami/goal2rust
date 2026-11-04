@@ -454,5 +454,12 @@ accepted T25 was preserved in.cache/T26-baseline(77 files)before any build;
 49 pure-oracle inputs/80 genuine entry shards completed and verified earlier.
 Both final interpreter preflights98 pass before archive;1647 primary bindings/
 72 explicit sources now fixed. Development diagnostics are separately archived,
-including rejected argument-order/probe/effect-counter attempts. No T26 speed
-claim or completion yet;canonical gates/CI/merge remain governed by checkpoint#1.
+including rejected argument-order/probe/effect-counter attempts. All92 M2,
+ordered/lifecycle/strict ALL75/F40/prefix/profile and quiet-measurement gates
+pass. Fresh profile79 bodies/2,744,673 native/359,012 Python entries. First
+complete quiet campaign:paired median1.57% less CPU than saved T25,two faster/
+one3.69% slower round. Same-campaign independent T25/PyPy0.677809344 and
+T26/PyPy0.668069969 remain beside every raw sample. Mixed one-fixture result;
+no repeatable/general gain claim. Final-v1 binds1647 primary/283 evidence;
+all109 canonical/timing groups and controller exit. CI/merge/mainCI/merged
+audit completion remains governed by checkpoint#1.

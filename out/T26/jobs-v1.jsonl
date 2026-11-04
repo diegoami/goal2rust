@@ -191,3 +191,4 @@
 {"event": "exit", "name": "check-v1", "pid": 378712, "code": 0, "time": 1793802029.9127944}
 {"event": "exit", "name": "family-ALL-v1", "pid": 378614, "code": 0, "time": 1793802836.0613832}
 {"event": "start", "name": "performance-v1", "pid": 380035, "command": ["/home/diego/projects/goal2rust/.venv/bin/python", "-u", "-B", "out/T26/performance.py"], "time": 1793802838.3803785}
+{"event": "exit", "name": "performance-v1", "pid": 380035, "code": 0, "time": 1793803318.569936}

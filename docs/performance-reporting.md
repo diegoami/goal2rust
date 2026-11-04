@@ -228,3 +228,25 @@ PyPy and T25 uses33.26% less,at independent ratio medians. Dividing independent
 median PyPy columns does not measure the incremental change. All raw CPU seconds
 remain in the assessment and receipts. This is one-fixture evidence;historical
 standalone ratios do not establish a trend. No arbitrary5% translation floor.
+
+## T26 complete quiet campaign
+
+Sources:[every raw sample](../out/T26/performance-v1.json) and
+[assessment](../out/T26/assessment.md). First complete simultaneous four-arm
+campaign passes quiet starts,each endpoint,continuous load and independent
+known-idle runners. No campaign or sample was rejected/replaced.
+
+| Round | Saved T25 / PyPy | T26 / PyPy | T26 / saved T25 | CPython / T26 |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 0.677809344 | 0.667144082 | 0.984265101 | 4.323197245 |
+| 2 | 0.655764641 | 0.679955027 | 1.036888822 | 4.033271266 |
+| 3 | 0.697626772 | 0.668069969 | 0.957632356 | 4.256761994 |
+| Median of per-round ratios | 0.677809344 | 0.668069969 | 0.984265101 | 4.256761994 |
+
+T26 uses1.57% less CPU than saved T25 at the paired median. Rounds one/three
+improve1.57%/4.24%;round two regresses3.69%. Mixed outcome,no repeatable gain
+claim. Same-campaign saved T25 uses32.22% less CPU than PyPy and T26 uses33.19%
+less,at independent ratio medians. Do not divide the median PyPy columns to
+infer the paired change or compare historical standalone gaps as a trend.
+Every raw CPU value and slower round is retained in the assessment. One fixture;
+the task has no positive magnitude or all-round-improvement gate.

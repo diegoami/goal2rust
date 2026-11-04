@@ -14,16 +14,16 @@ in [out/T06](out/T06/README.md). Common-bridge performance evidence and
 baseline/confirmation rules are in [out/T08](out/T08/README.md). Read the latest
 [checkpoint](https://github.com/diegoami/goal2rust/issues/1) before restarting work.
 
-The native text-cell chunk passes fidelity and timing gates: [T25 results](out/T25/assessment.md).
-Its profile confirms 69 native bodies and 86.96% native guest entries on the reference
-fixture. All three quiet timing rounds improve over saved T24; the paired median
-uses 1.66% less CPU. Same-campaign T24/PyPy and T25/PyPy median CPU ratios are
-0.684160 and 0.667383; T25 uses 33.26% less CPU than PyPy on this fixture.
+The native offside/commentary chunk passes fidelity and timing gates: [T26 results](out/T26/assessment.md).
+Its profile confirms 79 native bodies and 88.43% native guest entries on the reference
+fixture. Quiet timings are mixed: two rounds improve, one regresses 3.69%;
+the paired median uses 1.57% less CPU than saved T25. Repeatable improvement
+is not established. Same-campaign T25/PyPy and T26/PyPy median CPU ratios are
+0.677809 and 0.668070; T26 uses 33.19% less CPU than PyPy on this fixture.
 Every raw sample remains. This is a partial engine port and one-fixture result.
 Routine counts and guest-entry frequency are not overall port or test coverage.
 Read the checkpoint for exact-head CI, merge and current continuation status.
 
-T25 is merged;[T26](docs/tasks/T26.md) continues with the ten-body offside/
-commentary closure. Its baseline,source inventory and80 genuine entry captures
-are preserved. The native candidate passes development/98-test interpreter
-checks and is frozen for canonical validation. No T26 speed result yet.
+[T26](docs/tasks/T26.md) preserves the complete ten-body closure,source inventory,
+80 genuine captures,all prior69/new10 canonical proofs and strict ALL75/F40
+corpus validation. Read the checkpoint for final audit and CI/merge status.

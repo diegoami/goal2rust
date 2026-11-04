@@ -102,3 +102,20 @@ all ten live matrices,accepted T25's1083/277 and6/121,baseline77/all42 artifacts
 archived diagnostics,strict corpus/runner/load checks and complete raw timings.
 Only after those pass:exact-head CI/squash,green mainCI,merged binding audit,
 completion checkpoint. Current run/stop/resume authority remains checkpoint#1.
+
+## Completed campaign and post-writer ledger
+
+All97 canonical groups and12 timing groups completed with exit0;controller
+359848 and every producer group are gone. Do not restart any producer. All92
+M2,ordered/lifecycle/strict ALL75/F40/prefix/profile gates pass. First complete
+quiet timing campaign passes all checks;paired median1.57% less CPU than saved
+T25,two faster rounds and one3.69% slower. Every raw sample/ratio remains in
+assessment.md and unchanged receipts;no repeatable-gain or global speed claim.
+
+All five post-writer audits/final validation pass. validation-final-v1.json
+binds1647 primary files/283 evidence hashes;accepted T25 1083/277+6/121,
+baseline77/all42 artifacts,genuine capture49/80,archived diagnostics and full
+native-presence/quality checks remain verified. Final CI/merge/mainCI/merged
+binding audit and completion authority stay in checkpoint#1. After exact-head
+squash and green mainCI,the ignored.cache/T26-merged-binding-audit.py must pass
+on clean identical-tree main. Never commit its self-referential completion receipt.

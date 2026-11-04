@@ -1,0 +1,25 @@
+WAIT TIMING QUIET v1 1 (1.9892578125, 2.21826171875, 2.2255859375) 1 /3 runners busy False
+WAIT TIMING QUIET v1 1 (1.6826171875, 2.14453125, 2.201171875) 2 /3 runners busy False
+WAIT TIMING QUIET v1 1 (1.50390625, 2.09033203125, 2.18212890625) 3 /3 runners busy False
+START v1 1 baseline 380118
+START v1 1 candidate 380123
+START v1 1 python 380124
+START v1 1 pypy 380125
+ROUND v1 1 {'baseline': 31.396810521000003, 'candidate': 30.902784889000003, 'python': 133.59883448300002, 'pypy': 46.32100578} {'round': 1, 'all_arm_ends_quiet': True, 'continuous_total_load_below8': True, 'all_runner_observations_idle': True}
+WAIT TIMING QUIET v1 2 (1.72314453125, 2.0703125, 2.1669921875) 1 /3 runners busy False
+WAIT TIMING QUIET v1 2 (1.4580078125, 2.00146484375, 2.1435546875) 2 /3 runners busy False
+WAIT TIMING QUIET v1 2 (1.2333984375, 1.93505859375, 2.1201171875) 3 /3 runners busy False
+START v1 2 candidate 380707
+START v1 2 baseline 380709
+START v1 2 pypy 380712
+START v1 2 python 380715
+ROUND v1 2 {'candidate': 31.219582992999996, 'baseline': 30.108901096, 'pypy': 45.914188100000004, 'python': 125.91704703399999} {'round': 2, 'all_arm_ends_quiet': True, 'continuous_total_load_below8': True, 'all_runner_observations_idle': True}
+WAIT TIMING QUIET v1 3 (1.51708984375, 1.97998046875, 2.125) 1 /3 runners busy False
+WAIT TIMING QUIET v1 3 (1.28369140625, 1.9140625, 2.1015625) 2 /3 runners busy False
+WAIT TIMING QUIET v1 3 (0.99853515625, 1.81982421875, 2.0673828125) 3 /3 runners busy False
+START v1 3 baseline 381218
+START v1 3 candidate 381219
+START v1 3 python 381224
+START v1 3 pypy 381225
+ROUND v1 3 {'baseline': 31.520341480000003, 'candidate': 30.18489887, 'python': 128.489930315, 'pypy': 45.182241755} {'round': 3, 'all_arm_ends_quiet': True, 'continuous_total_load_below8': True, 'all_runner_observations_idle': True}
+SELECTED QUIET CAMPAIGN v1 0.9842651013334757

@@ -544,3 +544,23 @@ from the pinned2cb default-match Rust task. The owner clarified shared-runner
 admission:check before STARTING a local gate;never stop a gate already running
 because a runner becomes busy. T26 retains strict independent runner/load timing
 quality and whole-campaign rejection/repetition. No original guard is raised.
+
+## T26 final validation
+
+All92 M2 stages,prior69/new10 proofs and all ten live matrices pass on one
+fixed artifact. Ordered/lifecycle/strict ALL75/F40/10/20/30/60 and independent
+backend attestation pass. Full profile79 bodies/422(18.72% count),2,744,673
+native/359,012 Python entries,88.43% native fixture frequency. This confirms
+45,569 moved entries;it is not source-line/test/CPU coverage or whole-game
+progress. The complete first quiet timing campaign passes all checks,with
+paired median1.57% less CPU than saved T25,two faster and one3.69% slower
+round. Repeatable improvement is not established;all raw values/ratios and
+same-campaign independent T25/PyPy0.677809344,T26/PyPy0.668069969 remain in
+the [assessment](../out/T26/assessment.md).
+
+Final-v1 and all five post-writer audits bind1647 primary files/283 evidence
+hashes,accepted T25 1083/277+6/121,baseline77/all42 artifacts,capture49/80 and
+preserved development epochs. All109 canonical/timing groups/controller are
+stopped. Final exact-head CI/squash/mainCI/merged audit and completion stay in
+checkpoint#1. Select a following bounded closure separately from the fresh
+full profile;no T27 is selected here.
