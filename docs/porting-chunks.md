@@ -505,3 +505,21 @@ the frozen artifact. Complete T25's remaining full-match/profile/timing gates
 before selecting the next chunk from the full profile. The paused M2 receipts
 and separately sealed continuation remain intact; checkpoint #1 records the
 owner-authorized restart and current controller identity.
+
+## T25 final validation
+
+All prior63/new6 fidelity proofs,all14-owned closure,ordered drive,lifecycle,
+strict ALL75/F40/prefixes and full profile pass. The fresh profile confirms69
+native bodies(16.35% count),2,699,104 native/404,581 Python entries,86.96%
+native fixture entry frequency. These are not source-line/test/CPU coverage.
+The first complete quiet four-arm campaign passes all load/runner gates and
+uses1.66% less CPU than saved T24 at the paired median;all three rounds improve.
+Same-campaign independent T24/PyPy0.684159861 and T25/PyPy0.667383160 remain
+beside all raw values in the [assessment](../out/T25/assessment.md).
+
+Final-v2 binds1083 primary files/277 evidence hashes and additive6sources/121
+inputs. All105 physical canonical/timing groups and three controller epochs
+are stopped. The original pre-proof wrapper failure remains reconciled,not
+counted as a proof pass. Exact-head CI/merge/mainCI/merged-audit status remains
+in checkpoint#1. The owner authorized merging and continuing;select the next
+complete bounded closure from the full remaining profile after T25 acceptance.

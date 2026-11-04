@@ -14,13 +14,11 @@ in [out/T06](out/T06/README.md). Common-bridge performance evidence and
 baseline/confirmation rules are in [out/T08](out/T08/README.md). Read the latest
 [checkpoint](https://github.com/diegoami/goal2rust/issues/1) before restarting work.
 
-Accepted main includes the native keyboard-service chunk: [T24 results](out/T24/assessment.md).
-Its profile confirms 63 native bodies and 86.62% native guest entries on the reference
-fixture. Selected quiet timings are mixed: one round improves, two regress;
-the median uses 1.00% more CPU than saved T23. No speed improvement is established.
-Same-campaign T23/PyPy and T24/PyPy median CPU ratios are 0.623213 and 0.629438.
-The first campaign was rejected for external load; every sample remains.
-This is a partial engine port and one-fixture result. Routine counts and guest-entry
-frequency are not overall port or test coverage. The connected six-routine
-[T25 text-cell chunk](docs/tasks/T25.md) is in progress; its full-match and timing
-gates remain required. Read the checkpoint for current shutdown/resume status.
+The native text-cell chunk passes fidelity and timing gates: [T25 results](out/T25/assessment.md).
+Its profile confirms 69 native bodies and 86.96% native guest entries on the reference
+fixture. All three quiet timing rounds improve over saved T24; the paired median
+uses 1.66% less CPU. Same-campaign T24/PyPy and T25/PyPy median CPU ratios are
+0.684160 and 0.667383; T25 uses 33.26% less CPU than PyPy on this fixture.
+Every raw sample remains. This is a partial engine port and one-fixture result.
+Routine counts and guest-entry frequency are not overall port or test coverage.
+Read the checkpoint for exact-head CI, merge and current continuation status.

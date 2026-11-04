@@ -43,7 +43,9 @@ IT13 runner is busy. Timings additionally require every sampled runner state
 known/idle;load samples remain independently taken every five seconds. Sources
 and both installed binaries are archived/frozen;both94-test public preflights
 preceded the freeze. Preserve these artifacts;check checkpoint for current
-producer progress before running anything. No speed result yet.
+producer progress before running anything. Final quiet-v1 timing result:
+paired median1.66% less CPU than saved T24,all three rounds improve. See
+assessment.md for every raw value and same-campaign baseline/PyPy comparisons.
 
 ## Preserved wrapper failure and additive continuation
 
@@ -109,3 +111,19 @@ the preserved winddown receipt independently proves the intermediate controller
 stop. The ignored merged-audit template verifies that PID again and checks the
 immutable jobs-v2 prefix. Never edit the sealed six sidecars or raw journals to
 remove the intentional controller checkpoint stop.
+
+## Completed validation and timing
+
+The owner resumed on2026-11-04 with controller4250/protected supervisor-v3.log.
+All five remaining logical producers completed;ALL75/exact-source F40 and all
+four strict prefixes,lifecycle,ordered drive and full profile pass. Timing v1
+is complete/quiet with all12 arms and known-idle runner observations;no campaign
+or sample was replaced. All105 canonical/timing groups and all three controllers
+1006515/1018768/4250 are gone. Do not restart any controller or producer.
+
+All six post-writer audits pass. validation-final-v2.json binds1083 primary
+files/277 evidence hashes plus the separately sealed6sources/121inputs. The
+accepted derived journal contains92 successes;both raw journals retain all93
+physical attempts,including the pre-proof failure. The60-line shutdown prefix
+is unchanged. Completion/CI/merge authority remains in checkpoint#1;the ignored
+merged binding audit must still pass after exact-head squash and green mainCI.

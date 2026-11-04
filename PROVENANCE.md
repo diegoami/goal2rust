@@ -407,7 +407,7 @@ older comparator against accepted history and the profile against fresh drives.
 All111 canonical/timing groups,controller and three capture PIDs exited. Live
 CI/merge/mainCI/merged audit and owner-requested pause remain in checkpoint#1.
 
-## T25 text-cell rendering chunk (in progress)
+## T25 text-cell rendering chunk
 
 At accepted oracle2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c,
 engine/src/text.rs translates display.text_cells_forward214B:00FF,
@@ -427,3 +427,11 @@ inputs sealed before execution. Private memory remains ignored. Initial
 inventory line-attribution diagnostics and development probe epochs are
 preserved;accepted inventory-v2 uses actual AST call locations. All completion,
 final artifact binding,CI/merge and stop/resume status remain in checkpoint#1.
+
+Fresh prior63/new6 proofs,all14-owned closure,ordered drive,lifecycle and
+strict ALL75/F40/10/20/30/60 comparisons pass. Full profile confirms69 bodies,
+2,699,104 native/404,581 Python entries. First complete quiet campaign passes
+all runner/load checks;paired median1.66% less CPU than saved T24,all three
+rounds improve. Same-campaign T24/PyPy0.684159861 and T25/PyPy0.667383160
+remain alongside all raw samples. Original1083 bindings and additive6sources/
+121inputs stay fixed;the original pre-proof failed wrapper remains preserved.

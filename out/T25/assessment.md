@@ -1,8 +1,10 @@
 # T25 text-cell rendering chunk
 
 Status: the 87 per-body stages, fresh ordered drive, lifecycle, full profile,
-ALL75/exact-source F40 and strict10/20/30/60 prefixes pass. Performance and
-post-writer acceptance remain pending.
+ALL75/exact-source F40 and strict10/20/30/60 prefixes pass. The complete first
+timing campaign passes all quality gates: paired median1.66% less CPU than
+saved T24, with all three rounds improving. Final ledger/CI/merge status lives
+in checkpoint #1.
 PR #59 stays draft and unmerged; checkpoint #1 owns live status.
 
 ## Translation and source contract
@@ -97,7 +99,7 @@ quick listing1771:0BC4(162 entries). Entry counts and cProfile self times do not
 establish exact crossing costs or uninstrumented gains. Select a following
 bounded closure separately after T25's acceptance gates complete.
 
-## Remaining acceptance
+## Integrated fidelity
 
 Independent native attestation verifies11 lifecycle and75 family machines,
 each campaign collectively reaching all69 native bodies. All75 records
@@ -105,10 +107,41 @@ completed under unchanged guards, with no errors. F40 is selected byte for
 byte from the complete ALL output; all immutable prefixes and both full
 comparisons pass. The original1083 bindings and additive6/121 remain unchanged.
 
-All three four-arm timing rounds, post-writer
-audits/final-v2 ledger, exact-head CI/squash/mainCI and merged binding audit
-remain required. No T25 performance conclusion is available yet. Measurements
-must preserve every sample and regression, reject an entire contaminated
-campaign and repeat all three rounds on unchanged artifacts. Report saved T24
-and candidate against PyPy side by side within the same campaign. No positive
-magnitude or all-round speed-improvement gate applies to this translation task.
+## Complete timing campaign
+
+All three simultaneous four-arm rounds completed on the same archived
+artifacts. The first whole campaign passed the three quiet-start observations,
+every arm's start/end load, continuous five-second load samples and independent
+known-idle runner observations. No campaign or sample was rejected or replaced.
+Original guards remain unchanged, and all four arms match events, result,
+records and full memory. CPU seconds below are uninstrumented match-drive CPU,
+not wall time or a multi-fixture result.
+
+| Round | Saved T24 CPU s | T25 CPU s | CPython CPU s | PyPy CPU s |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 36.705729543 | 35.619759681 | 151.792752982 | 53.650808263 |
+| 2 | 36.126758854 | 35.947045565 | 136.326302704 | 51.937113824 |
+| 3 | 33.293700908 | 32.739525082 | 128.278609037 | 49.056564564 |
+
+| Round | T25 / saved T24 | Saved T24 / PyPy | T25 / PyPy | CPython / T25 |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 0.970414159 | 0.684159861 | 0.663918417 | 4.261476055 |
+| 2 | 0.995025480 | 0.695586570 | 0.692126360 | 3.792420227 |
+| 3 | 0.983354935 | 0.678679830 | 0.667383160 | 3.918157295 |
+| Median of per-round ratios | 0.983354935 | 0.684159861 | 0.667383160 | 3.918157295 |
+
+T25 uses1.66% less CPU than saved T24 at the paired median. Every round
+improves, by2.96%,0.50% and1.66%, respectively. In the same campaign, saved
+T24 uses31.58% less CPU than PyPy and T25 uses33.26% less, at independent
+ratio medians. The CPython/T25 CPU-speed ratio is3.92 at its per-round median.
+Each median is selected independently; dividing the median PyPy columns does
+not measure the incremental change. Historical standalone PyPy ratios are
+not substituted for this campaign's saved baseline. Every raw sample remains
+in performance-v1.json and its12 individual receipts.
+
+This is a modest improvement on one fixed fixture, not a general performance
+claim. No positive magnitude threshold applies to this translation task.
+Final post-writer accounting must retain92 successful logical stages,93
+physical canonical attempts(including the original pre-proof failure),12 timing
+groups and all three controller epochs. The six README audits/final-v2 ledger,
+exact-head CI/squash/mainCI and merged binding audit remain mandatory.
