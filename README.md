@@ -30,4 +30,6 @@ corpus validation. Read the checkpoint for final audit and CI/merge status.
 
 T26 is accepted on main. [T27](docs/tasks/T27.md) continues with the complete
 seven-body quick-result strength tree;its actual T26 comparator and56 genuine
-source-entry captures are preserved. No T27 speed result is claimed.
+source-entry captures are preserved. The native candidate passes5,024 development
+comparisons and102 public tests per interpreter. Canonical validation and timings
+remain;no T27 speed result is claimed.

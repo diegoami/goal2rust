@@ -52,3 +52,5 @@ pub mod keyboard;
 pub mod text;
 
 pub mod commentary;
+
+pub mod strength;

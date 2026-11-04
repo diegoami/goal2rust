@@ -1,0 +1,9 @@
+denied: unicorn, .sav, .EXE, .DAT
+PASS 1771:0AA7 {'authored': 512, 'real': 96}
+PASS 1771:0BC4 {'authored': 1024, 'real': 192, 'controlled-ABI': 256}
+PASS 1771:3041 {'authored': 1536, 'real': 288, 'controlled-ABI': 256}
+PASS 1771:3088 {'authored': 2048, 'real': 384, 'controlled-ABI': 256}
+PASS 1771:3179 {'authored': 2560, 'real': 480, 'controlled-ABI': 512}
+PASS 1771:377E {'authored': 3072, 'real': 576, 'controlled-ABI': 768}
+PASS 214B:0C57 {'authored': 3584, 'real': 672, 'controlled-ABI': 768}
+Unfrozen diagnostic passes;all27 source code objects/12 returns witnessed {'authored': 3584, 'real': 672, 'controlled-ABI': 768}

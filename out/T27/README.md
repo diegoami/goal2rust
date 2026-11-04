@@ -18,7 +18,8 @@ eight entries per body,exclusive private shards and append-only genuine-drive
 journal,unchanged original guards. Preserve every completed receipt/source map;
 never edit capture-bound code while its writer lives or duplicate a live producer.
 
-No T27 runtime build or proof freeze yet. Seal exact body/output/12-return
+At the initial capture milestone,no T27 runtime build or proof freeze existed.
+Seal exact body/output/12-return
 control assignments and both proof-row/distinct reached-error-selector counts
 before canonical producers. Track all functions/Rec methods from the first
 scoped probe,zero owned default Python inside native lifetimes. Generic Regs/
@@ -47,5 +48,33 @@ exited0. All inputs/guards remained unchanged,no candidate/test imports. The
 independent capture-input-audit verifies all50 inputs/56 shards,all27 codes/
 12 returns,all79 baseline files and unchanged actual T26 runtime. Do not rerun
 capture or overwrite its manifest/shards/bundle/journal/log/audit. No producer
-remains active. Next:implement/prove the complete tree and seal its exact
-controls/error selectors before canonical execution.
+remains active. The preserved source epoch remains unchanged after implementation.
+
+## Native development milestone
+
+engine/src/strength.rs implements the complete seven-body tree and the used
+record methods. strength_quick.inc.rs contains explicit native blocks generated
+from the pinned0BC4 Python function;generate_quick_root.py and codegen-binding-v1
+verify exact regeneration and ordered expression lowering. No instruction bytes,
+runtime Python inspection or general ISA interpreter is used. A new typed Cs
+register accessor preserves3179's live code-segment read;prior register indices
+and all prior control sites remain intact.
+
+All seven pre-native assertions failed on accepted T26. Native focused body/
+output/12-return/variant/error tests now pass. Initial authored states did not
+reach strength halving;that failed log is retained and valid available-player
+cases added. Root inputs now include averaging/non-averaging states. Development
+probe v1 passes3,584 authored/672 real schedules/768 ABI-double pairs,all27 code
+objects and12 returns positively witnessed,zero owned default Python inside
+native lifetimes. Executed source/binary map to immutable ignored content-addressed
+archives. This is diagnostic evidence,not canonical completion.
+
+Full public development suites pass102 tests each(CPython108.857s,PyPy153.764s;
+test-suite wall times,not performance). Rust11 tests pass. Both development
+artifacts are installed;actual accepted T26 remains in.cache/T27-baseline.
+No final proof plan,artifact archive,freeze or canonical campaign exists yet.
+Next:source-block/semantic branch and live-callback witnesses,positively reached
+error selectors/exact control plan,then final builds/preflights/archive/freeze
+and ALL prior79/new7 canonical/full-corpus/quiet-timing/final-audit gates.
+No producer remains active at this milestone. Do not recapture or overwrite
+completed diagnostics;preserve their historical source maps when refining proofs.

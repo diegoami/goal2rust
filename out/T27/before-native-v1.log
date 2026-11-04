@@ -1,0 +1,69 @@
+test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) ... 
+  test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) (root='1771:0AA7') ... FAIL
+  test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) (root='1771:0BC4') ... FAIL
+  test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) (root='1771:3041') ... FAIL
+  test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) (root='1771:3088') ... FAIL
+  test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) (root='1771:3179') ... FAIL
+  test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) (root='1771:377E') ... FAIL
+  test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) (root='214B:0C57') ... FAIL
+
+======================================================================
+FAIL: test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) (root='1771:0AA7')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_strength.py", line 250, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) (root='1771:0BC4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_strength.py", line 250, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) (root='1771:3041')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_strength.py", line 250, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) (root='1771:3088')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_strength.py", line 250, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) (root='1771:3179')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_strength.py", line 250, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) (root='1771:377E')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_strength.py", line 250, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) (root='214B:0C57')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_strength.py", line 250, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+----------------------------------------------------------------------
+Ran 1 test in 0.501s
+
+FAILED (failures=7)

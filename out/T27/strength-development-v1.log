@@ -1,0 +1,17 @@
+test_body_and_output_controls (test_strength.StrengthTests.test_body_and_output_controls) ... ok
+test_native_complete_tree (test_strength.StrengthTests.test_native_complete_tree) ... ok
+test_real_return_controls (test_strength.StrengthTests.test_real_return_controls) ... FAIL
+test_variant_and_error_scope (test_strength.StrengthTests.test_variant_and_error_scope) ... ok
+
+======================================================================
+FAIL: test_real_return_controls (test_strength.StrengthTests.test_real_return_controls)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_strength.py", line 238, in test_real_return_controls
+    self.fail('unreached real return '+site['ret_to'])
+AssertionError: unreached real return 1771:3808
+
+----------------------------------------------------------------------
+Ran 4 tests in 10.067s
+
+FAILED (failures=1)
