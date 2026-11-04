@@ -103,6 +103,19 @@ that controller,all eight groups and both original admission wrappers are gone.
 The live checkpoint owns current controller PID/log status. Preserve its
 content-addressed source archive and all partial logs/journals on failure.
 
+The first admitted plan completed:279 distinct positively reached error
+selectors/44,640 planned canonical error comparisons and70 positive branch/edge
+outcomes. Preserve proof-plan-v1.json and its completed log;do not rerun it.
+Live developmentv1 stopped in the Python oracle's manager-bonus assertion:
+its alternate stack0x30000..0x40000 overwrote the synthetic DS far pointers.
+rejected-preparation-v1.json binds both failed logs and all archived executed
+sources/binary;all original wrappers/controller exited without a final build.
+The retry uses disjoint stack0x90000..0xA0000,retaining the AX47 assertion and
+all eight scenarios. Accepted development receipt is now live-development-v2;
+current continuation journal/report/log are preparation-jobs-v2/preparation-v2.
+Never overwrite or treat the rejected v1 attempt as a pass. Current e.hashes
+binds both preparation source epochs and the rejected diagnostic archive.
+
 After all canonical/timing writers and controller have exited,run this sequence
 in the actual host PID namespace,with the frozen environment and sources:
 

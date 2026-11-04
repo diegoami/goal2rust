@@ -68,14 +68,14 @@ def on_write(m,lo,hi,fn):
    r['eax']^=0xff00;r['ecx']^=0x1234;r['eflags']^=0x800;hit('cached-arguments-preserved-other-flags-live')
   elif scenario==SCENARIOS[1]:
    if pc==m.lin('1771:0AA7'):
-    alt=0x30000;m._memory[alt:alt+65536]=m._memory[ctx['ss']:ctx['ss']+65536];put(m,alt+(a-ctx['ss']),v,n);put(m,alt+ctx['sp']+4,1,2);r['ss']=0x3000;hit('argument-live-SS-after-enter')
+    alt=0x90000;m._memory[alt:alt+65536]=m._memory[ctx['ss']:ctx['ss']+65536];put(m,alt+(a-ctx['ss']),v,n);put(m,alt+ctx['sp']+4,1,2);r['ss']=0x9000;hit('argument-live-SS-after-enter')
    elif pc==m.lin('1771:0AE4'):r['ss']=ctx['ss']//16;hit('restore-SS-after-manager-local')
   elif scenario==SCENARIOS[2] and pc==m.lin('1771:3055'):
    put(m,ds+0xa91b,0x100,2);put(m,ds+0xa91d,0x7000,2);put(m,0x60214+5,29);put(m,0x60214+2,1);hit('captured-pointer-live-two-bytes')
   elif scenario==SCENARIOS[3] and pc==m.lin('1771:3088'):
    put(m,ctx['ss']+ctx['sp']+4,2,2);put(m,ds+0xe7d,2);hit('cached-player-id-live-row-table')
   elif scenario==SCENARIOS[7] and pc==m.lin('214B:0000') and a==ctx['ss']+ctx['bp']-20:
-   alt=0x30000;m._memory[alt:alt+65536]=m._memory[ctx['ss']:ctx['ss']+65536];put(m,alt+(a-ctx['ss']),1,2);r['ss']=0x3000;hit('pop-segment-captured-before-pending-flush')
+   alt=0x90000;m._memory[alt:alt+65536]=m._memory[ctx['ss']:ctx['ss']+65536];put(m,alt+(a-ctx['ss']),1,2);r['ss']=0x9000;hit('pop-segment-captured-before-pending-flush')
  return OLD_WRITE[type(m)](m,lo,hi,wrapped)
 def run(cls,case,scenario,mutate):
  ctx.clear();ctx.update(root=ROOTS[SCENARIOS.index(scenario)],scenario=scenario,mutate=mutate,hits={})
