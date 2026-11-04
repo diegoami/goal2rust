@@ -1,0 +1,29 @@
+{
+  "accepted_T26_baseline_files": 79,
+  "accepted_T26_runtime_still_unchanged": true,
+  "actual_drives": 1,
+  "actual_entry_shards": 56,
+  "capture_pids_stopped": [
+    384712
+  ],
+  "capture_receipt_sha256": "9eca10440fd5c6b867dd326af3a465619c7692e41ad25e336d0f1d7d61b45537",
+  "capture_source_bindings": 50,
+  "captures_per_body": {
+    "1771:0AA7": 8,
+    "1771:0BC4": 8,
+    "1771:3041": 8,
+    "1771:3088": 8,
+    "1771:3179": 8,
+    "1771:377E": 8,
+    "214B:0C57": 8
+  },
+  "drive_journal_sha256": "c1b07d3d9f8951ee0af710231f30e1ae1d6a275e444f52446a5bff7979b5deee",
+  "guest_sites": 12,
+  "oracle": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+  "original_guards_retained": true,
+  "owned_code_objects": 27,
+  "owned_record_methods": 3,
+  "pass_all": true,
+  "script_sha256": "579b613e8846ec59fc8db49b46bece6217bcc42c1093ef2f88d3da5c3ee95fca",
+  "source_manifest_sha256": "9c9f3ed8434da29a4550bf08a4c1212304c0b1fdc78cf98c1f7c71d8176bf3da"
+}

@@ -78,13 +78,20 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
    paired median1.57% less CPU than saved T25,two faster/one3.69% slower round.
    [Assessment](../out/T26/assessment.md) retains all raw samples/ratios/limits.
    Final ledger/CI/merge status stays in checkpoint#1;no following task selected.
-11. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
+11. **T27,in progress,[issue #62](https://github.com/diegoami/goal2rust/issues/62):**
+   [Complete quick-result strength tree](tasks/T27.md),seven bodies/12 actual
+   returns/27 owned code objects,including the used Rec methods.0BC4 is the
+   highest remaining registered-body self-time in the full T26 profile. Native
+   availability/membership are the only guest boundaries. Preserve actual T26
+   before builds;capture56 genuine entries on50 sealed pure-oracle inputs.
+   Fixed-fixture prediction18,250 moved entries is not a speed claim.
+12. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
    dominant, define a separate optimization task. A larger PR alone does not remove
    every Python boundary or common dispatch cost.
-12. **Engine milestone and application adoption:** retain the larger A700 corpus,
+13. **Engine milestone and application adoption:** retain the larger A700 corpus,
    known ref-121 noncompletion and owner review, then worker/save-load/cancellation/
    playtest and representative performance gates. PyPy remains goal2's baseline.
-13. **Whole game later:** tournament, board and career initialization still have
+14. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
 Current profile is **79/422 registered non-stub bodies (18.72%)**, while **88.43%**

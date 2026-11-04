@@ -77,3 +77,12 @@ sources. Preserve all genuine capture/development epochs and every completed
 canonical receipt. Use final_capture_audit.py after writers exit;the initial
 capture-input audit belongs to the pre-implementation epoch. Live PID/journal
 and completion status stay in checkpoint #1.
+
+Quick-result strength tree T27 is specified in [docs/tasks/T27.md](docs/tasks/T27.md).
+Read [out/T27/README.md](out/T27/README.md),contract.md,inventory-v1.json and
+checkpoint #1 before producers/builds. Preserve accepted T26's1647/283 final
+ledger/history and actual comparator in `.cache/T27-baseline` before builds.
+Capture binds50 pure-oracle inputs;all56 genuine shards/eight per body are
+complete. Never overwrite completed receipts or recapture. All27 owned code
+objects include three Rec methods;_call/gcall/helper return bindings stay explicit.
+Current run/stop/resume authority remains the live checkpoint.
