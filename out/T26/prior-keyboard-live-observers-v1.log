@@ -1,0 +1,9 @@
+denied: unicorn, .sav, .EXE, .DAT
+poll-live-AH-truth {'comparisons': 160, 'hits': {'AH-read-after-provider-truth': 160}, 'effect_witnesses': 160}
+poll-two-live-SS-reads {'comparisons': 160, 'hits': {'SS-changed-after-first-return-word-address': 160, 'split-return-site-and-restore-SS': 160}, 'effect_witnesses': 160}
+read-ignore-provider-value {'comparisons': 160, 'hits': {'live-AX-versus-ignored-provider-return': 160}, 'effect_witnesses': 160}
+pushed-live-key-AH {'comparisons': 160, 'hits': {'pushed-key-and-AH-read-after-flag-clear': 160}, 'effect_witnesses': 160}
+push-flag-before-cached-flush-live-SS {'comparisons': 160, 'hits': {'flag-before-queued-frame-flush': 160, 'queued-frame-keeps-cached-SS': 160, 'argument-read-with-live-SS': 160}, 'effect_witnesses': 160}
+push-cached-AH {'comparisons': 160, 'hits': {'AH-live-after-frame-flush': 160, 'cached-AX-survives-key-write-callback': 160}, 'effect_witnesses': 160}
+wait-ignore-SENT {'comparisons': 160, 'hits': {'actual-AX-changed-after-SENT-capture': 160}, 'effect_witnesses': 160}
+key-stop-refusal {'comparisons': 160, 'hits': {'nondeferrable-stop-after-key-effects': 160}, 'effect_witnesses': 160}

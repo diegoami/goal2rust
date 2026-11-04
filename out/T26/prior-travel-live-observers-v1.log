@@ -1,0 +1,9 @@
+denied: unicorn, .sav, .EXE, .DAT
+cached-sum-live-scale {'comparisons': 160, 'hits': {'cached-sum-live-CX-and-scale': 160}, 'effect_witnesses': 160}
+captured-SENT-live-DX {'comparisons': 160, 'hits': {'captured-SENT-versus-live-AX-DX': 160}, 'effect_witnesses': 160}
+live-record-SS {'comparisons': 160, 'hits': {'live-SS-after-prologue-before-record': 160, 'restore-SS-before-guest': 160}, 'effect_witnesses': 160}
+callee-registers {'comparisons': 160, 'hits': {'live-register-arguments': 160}, 'effect_witnesses': 160}
+captured-multiply-inputs {'comparisons': 160, 'hits': {'captured-four-inputs-before-stack-flush': 178}, 'effect_witnesses': 160}
+live-final-flags {'comparisons': 160, 'hits': {'live-flags-after-scratch-before-flags-store': 160}, 'effect_witnesses': 160}
+cached-stack-SS {'comparisons': 160, 'hits': {'cached-stack-SS-at-first-flush': 160, 'restore-SS-before-return': 160, 'later-write-retains-cached-SS': 18}, 'effect_witnesses': 160}
+captured-record-live-scale {'comparisons': 160, 'hits': {'captured-record-live-scale': 160}, 'effect_witnesses': 160}
