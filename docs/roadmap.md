@@ -69,19 +69,28 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
    +10,810 native entries. Paired median1.66% less CPU than saved T24,all three
    rounds improve. [Assessment](../out/T25/assessment.md) retains every raw CPU
    value and same-campaign PyPy ratios. CI/merge status remains in checkpoint#1.
-10. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
+10. **T26, [PR #61](https://github.com/diegoami/goal2rust/pull/61):**
+   [Complete offside/commentary tree](tasks/T26.md),ten bodies/25 guest returns/
+   31 owned code objects,including nested helpers and site-table/loop calls.
+   Existing T23 strings/T25 text and2BE5 close the boundaries. All92 M2/strict
+   corpus/lifecycle/ordered/profile gates pass;79 native bodies and45,569 moved
+   entries confirmed. First complete quiet timing campaign passes,mixed result:
+   paired median1.57% less CPU than saved T25,two faster/one3.69% slower round.
+   [Assessment](../out/T26/assessment.md) retains all raw samples/ratios/limits.
+   Final ledger/CI/merge status stays in checkpoint#1;no following task selected.
+11. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
    dominant, define a separate optimization task. A larger PR alone does not remove
    every Python boundary or common dispatch cost.
-11. **Engine milestone and application adoption:** retain the larger A700 corpus,
+12. **Engine milestone and application adoption:** retain the larger A700 corpus,
    known ref-121 noncompletion and owner review, then worker/save-load/cancellation/
    playtest and representative performance gates. PyPy remains goal2's baseline.
-12. **Whole game later:** tournament, board and career initialization still have
+13. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
-Current profile is **69/422 registered non-stub bodies (16.35%)**, while **86.96%**
-of guest entries on the reference fixture are native (2,699,104 native, 404,581
+Current profile is **79/422 registered non-stub bodies (18.72%)**, while **88.43%**
+of guest entries on the reference fixture are native (2,744,673 native, 359,012
 Python). Neither is source-line, CPU-time or test coverage; no global line/branch
-percentage is currently reported. Use the [current profile](../out/T25/profile-after-v1.json),
+percentage is currently reported. Use the [current profile](../out/T26/profile-after-v1.json),
 the historical [T16 planning snapshot](plans/post-T16-baseline.json) and
 [same-campaign performance reporting](performance-reporting.md). Every new summary
 shows saved-baseline/PyPy and candidate/PyPy together. No calendar completion date

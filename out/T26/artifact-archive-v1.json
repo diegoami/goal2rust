@@ -1,0 +1,20 @@
+{
+  "artifacts": [
+    {
+      "archive": ".cache/T26-artifacts/cpython/goal2rust_engine.cpython-312-x86_64-linux-gnu.so",
+      "interpreter": "cpython",
+      "original": "engine/python/goal2rust_engine/goal2rust_engine.cpython-312-x86_64-linux-gnu.so",
+      "public_preflight_sha256": "065892684f03b6b8e68639c8583f8095e4ec2865952bc3350e92b76fe3ce4620",
+      "sha256": "73c5e43fb69b417179435fc208722288f6a3f4447595ac0e64bf83751fbb06bb"
+    },
+    {
+      "archive": ".cache/T26-artifacts/pypy/goal2rust_engine.pypy311-pp80-x86_64-linux-gnu.so",
+      "interpreter": "pypy",
+      "original": ".venv-pypy/lib/pypy3.11/site-packages/goal2rust_engine/goal2rust_engine.pypy311-pp80-x86_64-linux-gnu.so",
+      "public_preflight_sha256": "5b8ccc261ded80ce25075dadc3ba1976403e49e2d699f1b3cecfff9b7f821ce0",
+      "sha256": "086ae1efdb3b9c9fd9959e9066870555c1a380cd47c59f76e4aa3d019dde0070"
+    }
+  ],
+  "both_full_public_preflights_before_archive": true,
+  "script_sha256": "2f0b2364aab7afb08145dd87d344b703464de0ae2fd71e09329268c906928260"
+}

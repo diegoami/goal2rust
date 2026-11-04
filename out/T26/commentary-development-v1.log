@@ -1,0 +1,36 @@
+test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) ... 
+  test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:26A0') ... FAIL
+  test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:56D9') ... FAIL
+test_variant_and_error_scope (test_commentary.CommentaryTests.test_variant_and_error_scope) ... FAIL
+
+======================================================================
+FAIL: test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:26A0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_commentary.py", line 246, in test_native_complete_tree
+    self.assertEqual(p, r, (root, case))
+AssertionError: {'mem[426 chars]g', 'bp', 34419), ('io', 'g', 'ss', 8192), ('i[955 chars]None} != {'mem[426 chars]g', 'ss', 8192), ('io', 'g', 'bp', 34419), ('i[955 chars]None}
+Diff is 2072 characters long. Set self.maxDiff to None to see it. : ('0791:26A0', 0)
+
+======================================================================
+FAIL: test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:56D9')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_commentary.py", line 246, in test_native_complete_tree
+    self.assertEqual(p, r, (root, case))
+AssertionError: {'mem[5412 chars]g', 'bp', 254), ('io', 'g', 'ss', 8192), ('io'[114905 chars]None} != {'mem[5412 chars]g', 'ss', 8192), ('io', 'g', 'bp', 254), ('io'[114905 chars]None}
+Diff is 177710 characters long. Set self.maxDiff to None to see it. : ('0791:56D9', 1)
+
+======================================================================
+FAIL: test_variant_and_error_scope (test_commentary.CommentaryTests.test_variant_and_error_scope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_commentary.py", line 259, in test_variant_and_error_scope
+    self.assertEqual(p, r)
+AssertionError: {'mem[1077 chars]g', 'bp', 46002), ('io', 'g', 'ss', 8192), ('i[414 chars]None} != {'mem[1077 chars]g', 'ss', 8192), ('io', 'g', 'bp', 46002), ('i[414 chars]None}
+Diff is 2314 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 2 tests in 2.535s
+
+FAILED (failures=3)

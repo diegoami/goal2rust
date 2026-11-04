@@ -435,3 +435,31 @@ all runner/load checks;paired median1.66% less CPU than saved T24,all three
 rounds improve. Same-campaign T24/PyPy0.684159861 and T25/PyPy0.667383160
 remain alongside all raw samples. Original1083 bindings and additive6sources/
 121inputs stay fixed;the original pre-proof failed wrapper remains preserved.
+
+## T26 offside/commentary candidate
+
+At accepted oracle2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c,
+engine/src/commentary.rs translates contests.offside_call0791:56D9,
+geometry.set_message_word26A0/commentary_plain2B0F,frame.emit_commentary1EB5/
+apply_perf_delta1E53/write_commentary_line1D4A/commentary_record_is_new1C78,
+display.commentary_line_memory1829,runtime.fill_bytes214B:0018 and
+wrap_add_in_range214B:1C86. Inventory resolves all25 actual guest returns and
+31 owned code objects,including both local word helpers,go/SITES and display
+tuple-loop returns. Existing native2BE5,T23 strings and T25 text close the tree.
+
+Preserve source callback/read/write order,live frame SS/locals versus captured
+country pointers/indices,ratings/ring sentinels,temporary pushes and source
+copy/marker/padding/draw suspension behavior. Variants remain Python. Actual
+accepted T25 was preserved in.cache/T26-baseline(77 files)before any build;
+49 pure-oracle inputs/80 genuine entry shards completed and verified earlier.
+Both final interpreter preflights98 pass before archive;1647 primary bindings/
+72 explicit sources now fixed. Development diagnostics are separately archived,
+including rejected argument-order/probe/effect-counter attempts. All92 M2,
+ordered/lifecycle/strict ALL75/F40/prefix/profile and quiet-measurement gates
+pass. Fresh profile79 bodies/2,744,673 native/359,012 Python entries. First
+complete quiet campaign:paired median1.57% less CPU than saved T25,two faster/
+one3.69% slower round. Same-campaign independent T25/PyPy0.677809344 and
+T26/PyPy0.668069969 remain beside every raw sample. Mixed one-fixture result;
+no repeatable/general gain claim. Final-v1 binds1647 primary/283 evidence;
+all109 canonical/timing groups and controller exit. CI/merge/mainCI/merged
+audit completion remains governed by checkpoint#1.

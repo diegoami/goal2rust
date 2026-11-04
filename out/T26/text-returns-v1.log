@@ -1,0 +1,10 @@
+denied: unicorn, .sav, .EXE, .DAT
+RETURN CONTROL 214B:01BE {'total': 160, 'reached': 160, 'detected': 160}
+RETURN CONTROL 214B:01FF {'total': 160, 'reached': 160, 'detected': 160}
+RETURN CONTROL 214B:0220 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN CONTROL 214B:0267 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN CONTROL 214B:0288 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN CONTROL 214B:02C2 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN CONTROL 214B:02E3 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN CONTROL 214B:0323 {'total': 160, 'reached': 160, 'detected': 160}
+returns COMPLETE

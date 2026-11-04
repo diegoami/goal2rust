@@ -1,0 +1,97 @@
+test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) ... 
+  test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:1829') ... FAIL
+  test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:1C78') ... FAIL
+  test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:1D4A') ... FAIL
+  test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:1E53') ... FAIL
+  test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:1EB5') ... FAIL
+  test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:26A0') ... FAIL
+  test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:2B0F') ... FAIL
+  test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:56D9') ... FAIL
+  test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='214B:0018') ... FAIL
+  test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='214B:1C86') ... FAIL
+test_variant_and_error_scope (test_commentary.CommentaryTests.test_variant_and_error_scope) ... ok
+
+======================================================================
+FAIL: test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:1829')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_commentary.py", line 247, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:1C78')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_commentary.py", line 247, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:1D4A')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_commentary.py", line 247, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:1E53')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_commentary.py", line 247, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:1EB5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_commentary.py", line 247, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:26A0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_commentary.py", line 247, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:2B0F')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_commentary.py", line 247, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='0791:56D9')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_commentary.py", line 247, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='214B:0018')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_commentary.py", line 247, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) (root='214B:1C86')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/engine/tests/test_commentary.py", line 247, in test_native_complete_tree
+    self.assertEqual(native.get(root), 1)
+AssertionError: None != 1
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.429s
+
+FAILED (failures=10)
