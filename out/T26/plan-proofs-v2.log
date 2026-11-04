@@ -1,0 +1,13 @@
+denied: unicorn, .sav, .EXE, .DAT
+OBSERVED 0791:1829 96 error selectors
+OBSERVED 0791:1C78 23 error selectors
+OBSERVED 0791:1D4A 59 error selectors
+OBSERVED 0791:1E53 19 error selectors
+OBSERVED 0791:1EB5 223 error selectors
+OBSERVED 0791:26A0 15 error selectors
+OBSERVED 0791:2B0F 223 error selectors
+OBSERVED 0791:56D9 225 error selectors
+OBSERVED 214B:0018 21 error selectors
+OBSERVED 214B:1C86 17 error selectors
+UNWITNESSED BRANCH OUTCOMES []
+SEALED 921 rows/ 921 distinct error selectors; 65 positive source outcomes

@@ -1,0 +1,17 @@
+denied: unicorn, .sav, .EXE, .DAT
+OBSERVED 0791:1829 96 error selectors
+OBSERVED 0791:1C78 23 error selectors
+OBSERVED 0791:1D4A 59 error selectors
+OBSERVED 0791:1E53 19 error selectors
+OBSERVED 0791:1EB5 223 error selectors
+OBSERVED 0791:26A0 15 error selectors
+OBSERVED 0791:2B0F 223 error selectors
+OBSERVED 0791:56D9 225 error selectors
+OBSERVED 214B:0018 21 error selectors
+OBSERVED 214B:1C86 17 error selectors
+UNWITNESSED BRANCH OUTCOMES ['emit_commentary:329:While:True:false']
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T26/plan_proofs.py", line 52, in <module>
+    assert not missing, missing
+           ^^^^^^^^^^^
+AssertionError: ['emit_commentary:329:While:True:false']

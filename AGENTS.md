@@ -69,3 +69,11 @@ before builds. Genuine capture binds 49 pure-oracle inputs; never edit its bound
 sources while its producer lives or overwrite completed shards/receipts. Inventory
 includes all 31 code objects, both local word helpers, SITES and loop returns.
 Current run/stop/resume authority stays in checkpoint #1.
+
+T26's canonical candidate is now frozen:1647 primary bindings/72 explicit
+sources,both artifacts archived after98-test interpreter preflights. Read its
+updated README before resuming producers;never rebuild/install or edit bound
+sources. Preserve all genuine capture/development epochs and every completed
+canonical receipt. Use final_capture_audit.py after writers exit;the initial
+capture-input audit belongs to the pre-implementation epoch. Live PID/journal
+and completion status stay in checkpoint #1.

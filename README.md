@@ -25,4 +25,5 @@ Read the checkpoint for exact-head CI, merge and current continuation status.
 
 T25 is merged;[T26](docs/tasks/T26.md) continues with the ten-body offside/
 commentary closure. Its baseline,source inventory and80 genuine entry captures
-are preserved. No T26 runtime/performance result is claimed yet.
+are preserved. The native candidate passes development/98-test interpreter
+checks and is frozen for canonical validation. No T26 speed result yet.

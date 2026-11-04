@@ -1,0 +1,7 @@
+test_native_complete_tree (test_commentary.CommentaryTests.test_native_complete_tree) ... ok
+test_variant_and_error_scope (test_commentary.CommentaryTests.test_variant_and_error_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 3.113s
+
+OK

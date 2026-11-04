@@ -1,0 +1,10 @@
+{
+  "accepted": false,
+  "development_only": true,
+  "log_sha256": "8359bce0af8b4af681d46800e79894888ed1f6cc32a33251c581515680db019a",
+  "preserve_completed_receipt": true,
+  "reason": "The first mutation-vs-baseline effect check included observer log differences; final witnesses must require memory/register/call effects. The replacement aligns observer reads and makes the fill flag mutation noncancelling. v1 also omitted the loaded binary from its development-only source archive.",
+  "receipt": "out/T26/live-development-v1.json",
+  "receipt_sha256": "ab2d2e55f7b38d0dd000fc2c2691a255a2f62068825bacbd1674979a67b66572",
+  "replacement": "out/T26/live-development-v2.json"
+}

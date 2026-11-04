@@ -1,0 +1,8 @@
+fill-cached-word-late-DF {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'cached-word-and-late-flags': 640}}
+wrap-own-store-before-pending-pushes {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'own-store-before-pending-flush': 160, 'pending-push-overwrites-own-store': 160}}
+rating-live-SS-parent-code {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'SS-changed-after-record-local': 160, 'rating-used-live-parent-code': 160}}
+new-record-captured-country-pointer {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'country-pointer-replaced-after-capture': 160}}
+ring-live-word-cached-indices {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'live-country-word-with-cached-second-index': 160}}
+emitter-live-loop-bound {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'lower-bound-read-after-draw': 160}}
+render-captured-temporary-live-BP {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'live-BP-after-copy-captured-old-buffer': 160}}
+render-live-parent-row-after-attribute {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'parent-row-changed-after-child-attribute': 160}}

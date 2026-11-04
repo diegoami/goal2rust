@@ -1,0 +1,4958 @@
+{
+  "authored_per_body": 500,
+  "body_control_comparisons": 20960,
+  "body_controls": {
+    "0791:1829": 254,
+    "0791:1C78": 255,
+    "0791:1D4A": 256,
+    "0791:1E53": 257,
+    "0791:1EB5": 258,
+    "0791:26A0": 259,
+    "0791:2B0F": 260,
+    "0791:56D9": 261,
+    "214B:0018": 262,
+    "214B:1C86": 263
+  },
+  "branch_cases_per_mode": 160,
+  "branch_exclusions": {
+    "apply_perf_delta:248:If:variant == 'rating-sign'": "Variant-only choice; checked by explicit nondefault fallback proofs",
+    "commentary_line_memory:1394:If:variant == 'omit-0791-1829'": "Variant-only choice; checked by explicit nondefault fallback proofs",
+    "emit_commentary:329:While:True:false": "Unconditional while True exits through its separately observed break condition",
+    "wrap_add:931:If:s16(0) > s16(t_hi):true": "u16 v plus signed16 delta: positive sum cannot have negative high word; nonpositive sum cannot have positive high word",
+    "wrap_add:935:If:variant == 'wrap-high-inclusive'": "Variant-only choice; checked by explicit nondefault fallback proofs",
+    "wrap_add:943:If:s16(0) < s16(t_hi):true": "u16 v plus signed16 delta: positive sum cannot have negative high word; nonpositive sum cannot have positive high word"
+  },
+  "branch_outcomes": [
+    "commentary_line_memory:1399:If:mem.ds8(record) == 255:false",
+    "commentary_line_memory:1399:If:mem.ds8(record) == 255:true",
+    "commentary_line_memory:1406:If:mem.u8(mem.ss_lin(line)):false",
+    "commentary_line_memory:1406:If:mem.u8(mem.ss_lin(line)):true",
+    "commentary_line_memory:1407:If:mem.u8(mem.ss_lin(line + 1)) == 1:false",
+    "commentary_line_memory:1407:If:mem.u8(mem.ss_lin(line + 1)) == 1:true",
+    "commentary_line_memory:1421:If:mem.u8(mem.ss_lin(line + r.di)) == marker:marker=1:false",
+    "commentary_line_memory:1421:If:mem.u8(mem.ss_lin(line + r.di)) == marker:marker=1:true",
+    "commentary_line_memory:1421:If:mem.u8(mem.ss_lin(line + r.di)) == marker:marker=2:false",
+    "commentary_line_memory:1421:If:mem.u8(mem.ss_lin(line + r.di)) == marker:marker=2:true",
+    "commentary_line_memory:1434:If:length < 30:false",
+    "commentary_line_memory:1434:If:length < 30:true",
+    "commentary_line_memory:1441:If:pointer == 43378 and ss16(mem, r, r.bp + 6) > 4:false",
+    "commentary_line_memory:1441:If:pointer == 43378 and ss16(mem, r, r.bp + 6) > 4:true",
+    "commentary_record_is_new:198:If:p2 == 0:false",
+    "commentary_record_is_new:198:If:p2 == 0:true",
+    "commentary_record_is_new:206:If:p1 == 0:false",
+    "commentary_record_is_new:206:If:p1 == 0:true",
+    "commentary_record_is_new:217:If:code == mem.u8(top):false",
+    "commentary_record_is_new:217:If:code == mem.u8(top):true",
+    "commentary_record_is_new:219:If:v3 == mem.u16(top + 1):false",
+    "commentary_record_is_new:219:If:v3 == mem.u16(top + 1):true",
+    "commentary_record_is_new:221:If:v5 == mem.u16(top + 3):false",
+    "commentary_record_is_new:221:If:v5 == mem.u16(top + 3):true",
+    "commentary_record_is_new:equal-fields-side-test:false",
+    "commentary_record_is_new:equal-fields-side-test:true",
+    "emit_commentary:322:If:mem.reg('ax') & 255 != 0:false",
+    "emit_commentary:322:If:mem.reg('ax') & 255 != 0:true",
+    "emit_commentary:326:If:s16(n) >= s16(low):false",
+    "emit_commentary:326:If:s16(n) >= s16(low):true",
+    "emit_commentary:329:While:True:true",
+    "emit_commentary:330:If:s16(i) > 0:false",
+    "emit_commentary:330:If:s16(i) > 0:true",
+    "emit_commentary:335:If:i == fr.u16(-4):false",
+    "emit_commentary:335:If:i == fr.u16(-4):true",
+    "fill_bytes:371:If:count & 1:false",
+    "fill_bytes:371:If:count & 1:true",
+    "offside_call:723:If:mem.ds8(33550):false",
+    "offside_call:723:If:mem.ds8(33550):true",
+    "offside_call:729:If:mem.ds8(33577) == 0:false",
+    "offside_call:729:If:mem.ds8(33577) == 0:true",
+    "set_message_word:247:If:args(mem, 1)[0] & 255:false",
+    "set_message_word:247:If:args(mem, 1)[0] & 255:true",
+    "wrap_add:930:If:s16(delta) > 0:false",
+    "wrap_add:930:If:s16(delta) > 0:true",
+    "wrap_add:931:If:s16(0) > s16(t_hi):false",
+    "wrap_add:933:If:s16(0) < s16(t_hi):false",
+    "wrap_add:933:If:s16(0) < s16(t_hi):true",
+    "wrap_add:939:If:not wrap:false",
+    "wrap_add:939:If:not wrap:true",
+    "wrap_add:943:If:s16(0) < s16(t_hi):false",
+    "wrap_add:945:If:s16(0) > s16(t_hi):false",
+    "wrap_add:945:If:s16(0) > s16(t_hi):true",
+    "wrap_add:949:If:not wrap:false",
+    "wrap_add:949:If:not wrap:true",
+    "write_commentary_line:266:If:mem.ds16(RING_COUNT) != 0:false",
+    "write_commentary_line:266:If:mem.ds16(RING_COUNT) != 0:true",
+    "write_commentary_line:268:If:mem.reg('ax') & 255 == 0:false",
+    "write_commentary_line:268:If:mem.reg('ax') & 255 == 0:true",
+    "write_commentary_line:270:If:proceed:false",
+    "write_commentary_line:270:If:proceed:true",
+    "write_commentary_line:293:If:first > 0:false",
+    "write_commentary_line:293:If:first > 0:true",
+    "write_commentary_line:297:If:second > 0:false",
+    "write_commentary_line:297:If:second > 0:true"
+  ],
+  "branch_probe_sha256": "b55d9793edf89164733c0df7d418c780a3aa562b3593782df8a5b31a7fe8d9da",
+  "cases_per_error_selector": 160,
+  "distinct_error_selectors": 921,
+  "error_comparisons": 147360,
+  "error_execution_rows": 921,
+  "errors": {
+    "0791:1829": [
+      {
+        "controlled": false,
+        "selector": "0791:1829"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1873"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18A5"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18AF"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18BD"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18DD"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18E7"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1900"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:190E"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:192E"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1938"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1951"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:195F"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1988"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:19B2"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:19DE"
+      },
+      {
+        "controlled": false,
+        "selector": "214B:0018"
+      },
+      {
+        "controlled": false,
+        "selector": "214B:02C8"
+      },
+      {
+        "controlled": false,
+        "selector": "23E4:062A"
+      },
+      {
+        "controlled": false,
+        "selector": "23E4:0644"
+      },
+      {
+        "controlled": false,
+        "selector": "23E4:06B7"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:10"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:11"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:12"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:13"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:14"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:15"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:16"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:17"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:18"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:19"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:20"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:21"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:22"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:23"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:24"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:25"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:26"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:27"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:28"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:29"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:30"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:31"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:5"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:6"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:7"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:9"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ax"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:eflags"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:146"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:292"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:9"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169696"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169741"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169748"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169977"
+      },
+      {
+        "controlled": false,
+        "selector": "write:170435"
+      },
+      {
+        "controlled": false,
+        "selector": "write:170438"
+      },
+      {
+        "controlled": false,
+        "selector": "write:170499"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181928"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181933"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181964"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181969"
+      },
+      {
+        "controlled": false,
+        "selector": "write:182074"
+      },
+      {
+        "controlled": false,
+        "selector": "write:182092"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70579"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70629"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70639"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70653"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70685"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70695"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70720"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70734"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70766"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70776"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70801"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70815"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70856"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70898"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70942"
+      }
+    ],
+    "0791:1C78": [
+      {
+        "controlled": false,
+        "selector": "0791:1C78"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71608"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71630"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71633"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71663"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71666"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71681"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71704"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71719"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71742"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71806"
+      }
+    ],
+    "0791:1D4A": [
+      {
+        "controlled": false,
+        "selector": "0791:1C78"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1D4A"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1D5F"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1D88"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1E36"
+      },
+      {
+        "controlled": false,
+        "selector": "214B:1C86"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:5"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:6"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ax"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:21"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:43"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:9"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169696"
+      },
+      {
+        "controlled": false,
+        "selector": "write:177052"
+      },
+      {
+        "controlled": false,
+        "selector": "write:177112"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71608"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71630"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71633"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71663"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71666"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71681"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71704"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71719"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71742"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71806"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71818"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71824"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71839"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71854"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71880"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71896"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71899"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71925"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71928"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71937"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71963"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71974"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72001"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72012"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72022"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72029"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72054"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72065"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72070"
+      }
+    ],
+    "0791:1E53": [
+      {
+        "controlled": false,
+        "selector": "0791:1E53"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:6"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72083"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72123"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72126"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72147"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72150"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72171"
+      }
+    ],
+    "0791:1EB5": [
+      {
+        "controlled": false,
+        "selector": "0791:1829"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1873"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18A5"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18AF"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18BD"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18DD"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18E7"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1900"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:190E"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:192E"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1938"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1951"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:195F"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1988"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:19B2"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:19DE"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1C78"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1D4A"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1D5F"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1D88"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1E36"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1E53"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1EB5"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1EBF"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1ED0"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1F21"
+      },
+      {
+        "controlled": false,
+        "selector": "214B:0018"
+      },
+      {
+        "controlled": false,
+        "selector": "214B:02C8"
+      },
+      {
+        "controlled": false,
+        "selector": "214B:1C86"
+      },
+      {
+        "controlled": false,
+        "selector": "23E4:062A"
+      },
+      {
+        "controlled": false,
+        "selector": "23E4:0644"
+      },
+      {
+        "controlled": false,
+        "selector": "23E4:06B7"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:10"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:100"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:101"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:11"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:12"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:13"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:14"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:15"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:16"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:17"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:18"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:19"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:20"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:21"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:22"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:23"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:24"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:25"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:26"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:27"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:28"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:29"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:30"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:31"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:32"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:33"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:34"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:35"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:36"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:37"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:38"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:39"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:40"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:41"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:42"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:43"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:44"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:45"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:46"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:47"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:48"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:49"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:5"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:50"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:51"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:52"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:53"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:54"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:55"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:56"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:57"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:58"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:59"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:6"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:60"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:61"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:62"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:63"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:64"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:65"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:66"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:67"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:68"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:69"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:7"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:70"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:71"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:72"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:73"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:74"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:75"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:76"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:77"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:78"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:79"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:80"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:81"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:82"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:83"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:84"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:85"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:86"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:87"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:88"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:89"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:9"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:90"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:91"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:92"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:93"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:94"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:95"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:96"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:97"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:98"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:99"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ax"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:eflags"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:475"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:9"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:951"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169696"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169741"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169748"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169977"
+      },
+      {
+        "controlled": false,
+        "selector": "write:170435"
+      },
+      {
+        "controlled": false,
+        "selector": "write:170438"
+      },
+      {
+        "controlled": false,
+        "selector": "write:170499"
+      },
+      {
+        "controlled": false,
+        "selector": "write:177052"
+      },
+      {
+        "controlled": false,
+        "selector": "write:177112"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181928"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181933"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181964"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181969"
+      },
+      {
+        "controlled": false,
+        "selector": "write:182074"
+      },
+      {
+        "controlled": false,
+        "selector": "write:182092"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70579"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70629"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70639"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70653"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70685"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70695"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70720"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70734"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70766"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70776"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70801"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70815"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70856"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70898"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70942"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71608"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71630"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71633"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71663"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71666"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71681"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71704"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71719"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71742"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71806"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71818"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71824"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71839"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71854"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71880"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71896"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71899"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71925"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71928"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71937"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71963"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71974"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72001"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72012"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72022"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72029"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72054"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72065"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72070"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72083"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72123"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72126"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72147"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72150"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72171"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72181"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72191"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72208"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72223"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72234"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72239"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72289"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72303"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72306"
+      }
+    ],
+    "0791:26A0": [
+      {
+        "controlled": false,
+        "selector": "0791:26A0"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169696"
+      },
+      {
+        "controlled": false,
+        "selector": "write:74217"
+      },
+      {
+        "controlled": false,
+        "selector": "write:74225"
+      },
+      {
+        "controlled": false,
+        "selector": "write:74231"
+      }
+    ],
+    "0791:2B0F": [
+      {
+        "controlled": false,
+        "selector": "0791:1829"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1873"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18A5"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18AF"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18BD"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18DD"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18E7"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1900"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:190E"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:192E"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1938"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1951"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:195F"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1988"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:19B2"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:19DE"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1C78"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1D4A"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1D5F"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1D88"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1E36"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1E53"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1EB5"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1EBF"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1ED0"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1F21"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:2B0F"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:2B22"
+      },
+      {
+        "controlled": false,
+        "selector": "214B:0018"
+      },
+      {
+        "controlled": false,
+        "selector": "214B:02C8"
+      },
+      {
+        "controlled": false,
+        "selector": "214B:1C86"
+      },
+      {
+        "controlled": false,
+        "selector": "23E4:062A"
+      },
+      {
+        "controlled": false,
+        "selector": "23E4:0644"
+      },
+      {
+        "controlled": false,
+        "selector": "23E4:06B7"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:10"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:100"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:101"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:102"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:11"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:12"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:13"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:14"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:15"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:16"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:17"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:18"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:19"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:20"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:21"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:22"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:23"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:24"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:25"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:26"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:27"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:28"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:29"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:30"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:31"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:32"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:33"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:34"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:35"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:36"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:37"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:38"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:39"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:40"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:41"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:42"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:43"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:44"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:45"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:46"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:47"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:48"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:49"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:5"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:50"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:51"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:52"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:53"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:54"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:55"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:56"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:57"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:58"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:59"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:6"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:60"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:61"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:62"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:63"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:64"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:65"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:66"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:67"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:68"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:69"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:7"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:70"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:71"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:72"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:73"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:74"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:75"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:76"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:77"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:78"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:79"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:80"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:81"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:82"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:83"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:84"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:85"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:86"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:87"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:88"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:89"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:9"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:90"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:91"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:92"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:93"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:94"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:95"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:96"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:97"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:98"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:99"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ax"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:eflags"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:478"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:9"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:957"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169696"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169741"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169748"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169977"
+      },
+      {
+        "controlled": false,
+        "selector": "write:170435"
+      },
+      {
+        "controlled": false,
+        "selector": "write:170438"
+      },
+      {
+        "controlled": false,
+        "selector": "write:170499"
+      },
+      {
+        "controlled": false,
+        "selector": "write:177052"
+      },
+      {
+        "controlled": false,
+        "selector": "write:177112"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181928"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181933"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181964"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181969"
+      },
+      {
+        "controlled": false,
+        "selector": "write:182074"
+      },
+      {
+        "controlled": false,
+        "selector": "write:182092"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70579"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70629"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70639"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70653"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70685"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70695"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70720"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70734"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70766"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70776"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70801"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70815"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70856"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70898"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70942"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71608"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71630"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71633"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71663"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71666"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71681"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71719"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71806"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71818"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71824"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71839"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71854"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71880"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71896"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71899"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71925"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71928"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71937"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71974"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72012"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72022"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72029"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72054"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72065"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72070"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72083"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72123"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72126"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72147"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72150"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72171"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72181"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72191"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72208"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72223"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72234"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72239"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72289"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72303"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72306"
+      },
+      {
+        "controlled": false,
+        "selector": "write:75362"
+      }
+    ],
+    "0791:56D9": [
+      {
+        "controlled": false,
+        "selector": "0791:1829"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1873"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18A5"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18AF"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18BD"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18DD"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:18E7"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1900"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:190E"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:192E"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1938"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1951"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:195F"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1988"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:19B2"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:19DE"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1C78"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1D4A"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1D5F"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1D88"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1E36"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1E53"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1EB5"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1EBF"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1ED0"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:1F21"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:26A0"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:2B0F"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:2B22"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:2BE5"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:56D9"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:5700"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:570E"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:571B"
+      },
+      {
+        "controlled": false,
+        "selector": "214B:0018"
+      },
+      {
+        "controlled": false,
+        "selector": "214B:02C8"
+      },
+      {
+        "controlled": false,
+        "selector": "214B:1C86"
+      },
+      {
+        "controlled": false,
+        "selector": "23E4:062A"
+      },
+      {
+        "controlled": false,
+        "selector": "23E4:0644"
+      },
+      {
+        "controlled": false,
+        "selector": "23E4:06B7"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:10"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:11"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:12"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:13"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:14"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:15"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:16"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:17"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:18"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:19"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:20"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:21"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:22"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:23"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:24"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:25"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:26"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:27"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:28"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:29"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:30"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:31"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:32"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:33"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:34"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:35"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:36"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:37"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:38"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:39"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:40"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:41"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:42"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:43"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:44"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:45"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:46"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:47"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:48"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:49"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:5"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:50"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:51"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:52"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:53"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:54"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:55"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:56"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:57"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:58"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:59"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:6"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:60"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:61"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:62"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:63"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:64"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:65"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:66"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:67"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:68"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:69"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:7"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:70"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:71"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:72"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:73"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:74"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:75"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:76"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:77"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:78"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:79"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:80"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:81"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:82"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:83"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:84"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:85"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:86"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:87"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:88"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:89"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:9"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:90"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:91"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:92"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ax"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:eflags"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:445"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:890"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:9"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169696"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169741"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169748"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169977"
+      },
+      {
+        "controlled": false,
+        "selector": "write:170435"
+      },
+      {
+        "controlled": false,
+        "selector": "write:170438"
+      },
+      {
+        "controlled": false,
+        "selector": "write:170499"
+      },
+      {
+        "controlled": false,
+        "selector": "write:177052"
+      },
+      {
+        "controlled": false,
+        "selector": "write:177112"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181928"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181933"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181964"
+      },
+      {
+        "controlled": false,
+        "selector": "write:181969"
+      },
+      {
+        "controlled": false,
+        "selector": "write:182074"
+      },
+      {
+        "controlled": false,
+        "selector": "write:182092"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70579"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70629"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70639"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70653"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70685"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70695"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70720"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70734"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70766"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70776"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70801"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70815"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70856"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70898"
+      },
+      {
+        "controlled": false,
+        "selector": "write:70942"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71608"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71630"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71633"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71663"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71666"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71681"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71719"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71806"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71818"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71824"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71839"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71854"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71880"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71896"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71899"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71925"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71928"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71937"
+      },
+      {
+        "controlled": false,
+        "selector": "write:71974"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72012"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72022"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72029"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72054"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72065"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72070"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72083"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72123"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72126"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72147"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72150"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72171"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72181"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72191"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72208"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72223"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72234"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72239"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72289"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72303"
+      },
+      {
+        "controlled": false,
+        "selector": "write:72306"
+      },
+      {
+        "controlled": false,
+        "selector": "write:74217"
+      },
+      {
+        "controlled": false,
+        "selector": "write:74225"
+      },
+      {
+        "controlled": false,
+        "selector": "write:74231"
+      },
+      {
+        "controlled": false,
+        "selector": "write:75362"
+      },
+      {
+        "controlled": false,
+        "selector": "write:86592"
+      },
+      {
+        "controlled": false,
+        "selector": "write:86606"
+      },
+      {
+        "controlled": false,
+        "selector": "write:86619"
+      }
+    ],
+    "214B:0018": [
+      {
+        "controlled": false,
+        "selector": "214B:0018"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:eflags"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:129"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:64"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:9"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169696"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169741"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169748"
+      }
+    ],
+    "214B:1C86": [
+      {
+        "controlled": false,
+        "selector": "214B:1C86"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169696"
+      },
+      {
+        "controlled": false,
+        "selector": "write:177052"
+      },
+      {
+        "controlled": false,
+        "selector": "write:177112"
+      },
+      {
+        "controlled": false,
+        "selector": "write:177162"
+      },
+      {
+        "controlled": false,
+        "selector": "write:177222"
+      }
+    ]
+  },
+  "inventory_sha256": "4dc396fb508dbd74c2aeba07d49eba637c84b3c0466171d0cc09ac6e112ab600",
+  "normal_comparisons": 30960,
+  "observed_maxima": {
+    "0791:1829": {
+      "max_reads": 31,
+      "max_writes": 292,
+      "observed_write_pcs": [
+        70579,
+        70629,
+        70639,
+        70653,
+        70685,
+        70695,
+        70720,
+        70734,
+        70766,
+        70776,
+        70801,
+        70815,
+        70856,
+        70898,
+        70942,
+        169696,
+        169741,
+        169748,
+        169977,
+        170435,
+        170438,
+        170499,
+        181928,
+        181933,
+        181964,
+        181969,
+        182074,
+        182092
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        146,
+        292
+      ]
+    },
+    "0791:1C78": {
+      "max_reads": 1,
+      "max_writes": 8,
+      "observed_write_pcs": [
+        71608,
+        71630,
+        71633,
+        71663,
+        71666,
+        71681,
+        71704,
+        71719,
+        71742,
+        71806
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        4,
+        8
+      ]
+    },
+    "0791:1D4A": {
+      "max_reads": 6,
+      "max_writes": 43,
+      "observed_write_pcs": [
+        71608,
+        71630,
+        71633,
+        71663,
+        71666,
+        71681,
+        71704,
+        71719,
+        71742,
+        71806,
+        71818,
+        71824,
+        71839,
+        71854,
+        71880,
+        71896,
+        71899,
+        71925,
+        71928,
+        71937,
+        71963,
+        71974,
+        72001,
+        72012,
+        72022,
+        72029,
+        72054,
+        72065,
+        72070,
+        169696,
+        177052,
+        177112
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        21,
+        43
+      ]
+    },
+    "0791:1E53": {
+      "max_reads": 1,
+      "max_writes": 6,
+      "observed_write_pcs": [
+        72083,
+        72123,
+        72126,
+        72147,
+        72150,
+        72171
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    "0791:1EB5": {
+      "max_reads": 101,
+      "max_writes": 951,
+      "observed_write_pcs": [
+        70579,
+        70629,
+        70639,
+        70653,
+        70685,
+        70695,
+        70720,
+        70734,
+        70766,
+        70776,
+        70801,
+        70815,
+        70856,
+        70898,
+        70942,
+        71608,
+        71630,
+        71633,
+        71663,
+        71666,
+        71681,
+        71704,
+        71719,
+        71742,
+        71806,
+        71818,
+        71824,
+        71839,
+        71854,
+        71880,
+        71896,
+        71899,
+        71925,
+        71928,
+        71937,
+        71963,
+        71974,
+        72001,
+        72012,
+        72022,
+        72029,
+        72054,
+        72065,
+        72070,
+        72083,
+        72123,
+        72126,
+        72147,
+        72150,
+        72171,
+        72181,
+        72191,
+        72208,
+        72223,
+        72234,
+        72239,
+        72289,
+        72303,
+        72306,
+        169696,
+        169741,
+        169748,
+        169977,
+        170435,
+        170438,
+        170499,
+        177052,
+        177112,
+        181928,
+        181933,
+        181964,
+        181969,
+        182074,
+        182092
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        475,
+        951
+      ]
+    },
+    "0791:26A0": {
+      "max_reads": 1,
+      "max_writes": 3,
+      "observed_write_pcs": [
+        74217,
+        74225,
+        74231,
+        169696
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3
+      ]
+    },
+    "0791:2B0F": {
+      "max_reads": 102,
+      "max_writes": 957,
+      "observed_write_pcs": [
+        70579,
+        70629,
+        70639,
+        70653,
+        70685,
+        70695,
+        70720,
+        70734,
+        70766,
+        70776,
+        70801,
+        70815,
+        70856,
+        70898,
+        70942,
+        71608,
+        71630,
+        71633,
+        71663,
+        71666,
+        71681,
+        71719,
+        71806,
+        71818,
+        71824,
+        71839,
+        71854,
+        71880,
+        71896,
+        71899,
+        71925,
+        71928,
+        71937,
+        71974,
+        72012,
+        72022,
+        72029,
+        72054,
+        72065,
+        72070,
+        72083,
+        72123,
+        72126,
+        72147,
+        72150,
+        72171,
+        72181,
+        72191,
+        72208,
+        72223,
+        72234,
+        72239,
+        72289,
+        72303,
+        72306,
+        75362,
+        169696,
+        169741,
+        169748,
+        169977,
+        170435,
+        170438,
+        170499,
+        177052,
+        177112,
+        181928,
+        181933,
+        181964,
+        181969,
+        182074,
+        182092
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        478,
+        957
+      ]
+    },
+    "0791:56D9": {
+      "max_reads": 92,
+      "max_writes": 890,
+      "observed_write_pcs": [
+        70579,
+        70629,
+        70639,
+        70653,
+        70685,
+        70695,
+        70720,
+        70734,
+        70766,
+        70776,
+        70801,
+        70815,
+        70856,
+        70898,
+        70942,
+        71608,
+        71630,
+        71633,
+        71663,
+        71666,
+        71681,
+        71719,
+        71806,
+        71818,
+        71824,
+        71839,
+        71854,
+        71880,
+        71896,
+        71899,
+        71925,
+        71928,
+        71937,
+        71974,
+        72012,
+        72022,
+        72029,
+        72054,
+        72065,
+        72070,
+        72083,
+        72123,
+        72126,
+        72147,
+        72150,
+        72171,
+        72181,
+        72191,
+        72208,
+        72223,
+        72234,
+        72239,
+        72289,
+        72303,
+        72306,
+        74217,
+        74225,
+        74231,
+        75362,
+        86592,
+        86606,
+        86619,
+        169696,
+        169741,
+        169748,
+        169977,
+        170435,
+        170438,
+        170499,
+        177052,
+        177112,
+        181928,
+        181933,
+        181964,
+        181969,
+        182074,
+        182092
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        445,
+        890
+      ]
+    },
+    "214B:0018": {
+      "max_reads": 2,
+      "max_writes": 129,
+      "observed_write_pcs": [
+        169696,
+        169741,
+        169748
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        64,
+        129
+      ]
+    },
+    "214B:1C86": {
+      "max_reads": 2,
+      "max_writes": 3,
+      "observed_write_pcs": [
+        169696,
+        177052,
+        177112,
+        177162,
+        177222
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  "observer_modes": 4,
+  "ordinal_scope": "Bounded observed early/middle/last writes; no exhaustive global fault coverage claim",
+  "output_control_comparisons": 146720,
+  "output_controls": [
+    {
+      "control": 264,
+      "root": "0791:1829"
+    },
+    {
+      "control": 265,
+      "root": "0791:1829"
+    },
+    {
+      "control": 266,
+      "root": "0791:1829"
+    },
+    {
+      "control": 267,
+      "root": "0791:1829"
+    },
+    {
+      "control": 268,
+      "root": "0791:1829"
+    },
+    {
+      "control": 269,
+      "root": "0791:1829"
+    },
+    {
+      "control": 270,
+      "root": "0791:1829"
+    },
+    {
+      "control": 271,
+      "root": "0791:1C78"
+    },
+    {
+      "control": 272,
+      "root": "0791:1C78"
+    },
+    {
+      "control": 273,
+      "root": "0791:1C78"
+    },
+    {
+      "control": 274,
+      "root": "0791:1C78"
+    },
+    {
+      "control": 275,
+      "root": "0791:1C78"
+    },
+    {
+      "control": 276,
+      "root": "0791:1C78"
+    },
+    {
+      "control": 277,
+      "root": "0791:1C78"
+    },
+    {
+      "control": 278,
+      "root": "0791:1D4A"
+    },
+    {
+      "control": 279,
+      "root": "0791:1D4A"
+    },
+    {
+      "control": 280,
+      "root": "0791:1D4A"
+    },
+    {
+      "control": 281,
+      "root": "0791:1D4A"
+    },
+    {
+      "control": 282,
+      "root": "0791:1D4A"
+    },
+    {
+      "control": 283,
+      "root": "0791:1D4A"
+    },
+    {
+      "control": 284,
+      "root": "0791:1D4A"
+    },
+    {
+      "control": 285,
+      "root": "0791:1E53"
+    },
+    {
+      "control": 286,
+      "root": "0791:1E53"
+    },
+    {
+      "control": 287,
+      "root": "0791:1E53"
+    },
+    {
+      "control": 288,
+      "root": "0791:1E53"
+    },
+    {
+      "control": 289,
+      "root": "0791:1E53"
+    },
+    {
+      "control": 290,
+      "root": "0791:1E53"
+    },
+    {
+      "control": 291,
+      "root": "0791:1E53"
+    },
+    {
+      "control": 292,
+      "root": "0791:1EB5"
+    },
+    {
+      "control": 293,
+      "root": "0791:1EB5"
+    },
+    {
+      "control": 294,
+      "root": "0791:1EB5"
+    },
+    {
+      "control": 295,
+      "root": "0791:1EB5"
+    },
+    {
+      "control": 296,
+      "root": "0791:1EB5"
+    },
+    {
+      "control": 297,
+      "root": "0791:1EB5"
+    },
+    {
+      "control": 298,
+      "root": "0791:1EB5"
+    },
+    {
+      "control": 299,
+      "root": "0791:26A0"
+    },
+    {
+      "control": 300,
+      "root": "0791:26A0"
+    },
+    {
+      "control": 301,
+      "root": "0791:26A0"
+    },
+    {
+      "control": 302,
+      "root": "0791:26A0"
+    },
+    {
+      "control": 303,
+      "root": "0791:26A0"
+    },
+    {
+      "control": 304,
+      "root": "0791:26A0"
+    },
+    {
+      "control": 305,
+      "root": "0791:26A0"
+    },
+    {
+      "control": 306,
+      "root": "0791:2B0F"
+    },
+    {
+      "control": 307,
+      "root": "0791:2B0F"
+    },
+    {
+      "control": 308,
+      "root": "0791:2B0F"
+    },
+    {
+      "control": 309,
+      "root": "0791:2B0F"
+    },
+    {
+      "control": 310,
+      "root": "0791:2B0F"
+    },
+    {
+      "control": 311,
+      "root": "0791:2B0F"
+    },
+    {
+      "control": 312,
+      "root": "0791:2B0F"
+    },
+    {
+      "control": 313,
+      "root": "0791:56D9"
+    },
+    {
+      "control": 314,
+      "root": "0791:56D9"
+    },
+    {
+      "control": 315,
+      "root": "0791:56D9"
+    },
+    {
+      "control": 316,
+      "root": "0791:56D9"
+    },
+    {
+      "control": 317,
+      "root": "0791:56D9"
+    },
+    {
+      "control": 318,
+      "root": "0791:56D9"
+    },
+    {
+      "control": 319,
+      "root": "0791:56D9"
+    },
+    {
+      "control": 320,
+      "root": "214B:0018"
+    },
+    {
+      "control": 321,
+      "root": "214B:0018"
+    },
+    {
+      "control": 322,
+      "root": "214B:0018"
+    },
+    {
+      "control": 323,
+      "root": "214B:0018"
+    },
+    {
+      "control": 324,
+      "root": "214B:0018"
+    },
+    {
+      "control": 325,
+      "root": "214B:0018"
+    },
+    {
+      "control": 326,
+      "root": "214B:0018"
+    },
+    {
+      "control": 327,
+      "root": "214B:1C86"
+    },
+    {
+      "control": 328,
+      "root": "214B:1C86"
+    },
+    {
+      "control": 329,
+      "root": "214B:1C86"
+    },
+    {
+      "control": 330,
+      "root": "214B:1C86"
+    },
+    {
+      "control": 331,
+      "root": "214B:1C86"
+    },
+    {
+      "control": 332,
+      "root": "214B:1C86"
+    },
+    {
+      "control": 333,
+      "root": "214B:1C86"
+    }
+  ],
+  "real_captures_per_body": 8,
+  "return_control_comparisons": 4000,
+  "return_controls": [
+    {
+      "caller": "0791:56D9",
+      "control": 334,
+      "far": true,
+      "line": 726,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/contests.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {}
+      },
+      "ret_to": "0791:5700",
+      "target": "0791:2BE5"
+    },
+    {
+      "caller": "0791:56D9",
+      "control": 335,
+      "far": false,
+      "line": 728,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/contests.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {}
+      },
+      "ret_to": "0791:570E",
+      "target": "0791:26A0"
+    },
+    {
+      "caller": "0791:56D9",
+      "control": 336,
+      "far": false,
+      "line": 731,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/contests.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {}
+      },
+      "ret_to": "0791:571B",
+      "target": "0791:2B0F"
+    },
+    {
+      "caller": "0791:2B0F",
+      "control": 337,
+      "far": false,
+      "line": 687,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/geometry.py",
+      "resolution": {
+        "kind": "call",
+        "loop_bindings": {}
+      },
+      "ret_to": "0791:2B22",
+      "target": "0791:1EB5"
+    },
+    {
+      "caller": "0791:1EB5",
+      "control": 338,
+      "far": false,
+      "line": 317,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/frame.py",
+      "resolution": {
+        "kind": "SITES",
+        "nargs": 1,
+        "site": "0791:1EBC"
+      },
+      "ret_to": "0791:1EBF",
+      "target": "0791:1E53"
+    },
+    {
+      "caller": "0791:1EB5",
+      "control": 339,
+      "far": false,
+      "line": 321,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/frame.py",
+      "resolution": {
+        "kind": "SITES",
+        "nargs": 4,
+        "site": "0791:1ECD"
+      },
+      "ret_to": "0791:1ED0",
+      "target": "0791:1D4A"
+    },
+    {
+      "caller": "0791:1EB5",
+      "control": 340,
+      "far": false,
+      "line": 334,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/frame.py",
+      "resolution": {
+        "kind": "SITES",
+        "nargs": 3,
+        "site": "0791:1F1E"
+      },
+      "ret_to": "0791:1F21",
+      "target": "0791:1829"
+    },
+    {
+      "caller": "0791:1829",
+      "control": 341,
+      "far": true,
+      "line": 1405,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {}
+      },
+      "ret_to": "0791:1873",
+      "target": "23E4:0644"
+    },
+    {
+      "caller": "0791:1829",
+      "control": 342,
+      "far": true,
+      "line": 1412,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {}
+      },
+      "ret_to": "0791:18A5",
+      "target": "23E4:062A"
+    },
+    {
+      "caller": "0791:1829",
+      "control": 343,
+      "far": true,
+      "line": 1414,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {}
+      },
+      "ret_to": "0791:18AF",
+      "target": "23E4:06B7"
+    },
+    {
+      "caller": "0791:1829",
+      "control": 344,
+      "far": true,
+      "line": 1416,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {}
+      },
+      "ret_to": "0791:18BD",
+      "target": "23E4:0644"
+    },
+    {
+      "caller": "0791:1829",
+      "control": 345,
+      "far": true,
+      "line": 1425,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {
+          "concat_ret": "0791:18E7",
+          "end_ret": "0791:190E",
+          "field": 1,
+          "marker": 1,
+          "name_ret": "0791:1900",
+          "store_ret": "0791:18DD"
+        }
+      },
+      "ret_to": "0791:18DD",
+      "target": "23E4:062A"
+    },
+    {
+      "caller": "0791:1829",
+      "control": 346,
+      "far": true,
+      "line": 1425,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {
+          "concat_ret": "0791:1938",
+          "end_ret": "0791:195F",
+          "field": 3,
+          "marker": 2,
+          "name_ret": "0791:1951",
+          "store_ret": "0791:192E"
+        }
+      },
+      "ret_to": "0791:192E",
+      "target": "23E4:062A"
+    },
+    {
+      "caller": "0791:1829",
+      "control": 347,
+      "far": true,
+      "line": 1427,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {
+          "concat_ret": "0791:18E7",
+          "end_ret": "0791:190E",
+          "field": 1,
+          "marker": 1,
+          "name_ret": "0791:1900",
+          "store_ret": "0791:18DD"
+        }
+      },
+      "ret_to": "0791:18E7",
+      "target": "23E4:06B7"
+    },
+    {
+      "caller": "0791:1829",
+      "control": 348,
+      "far": true,
+      "line": 1427,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {
+          "concat_ret": "0791:1938",
+          "end_ret": "0791:195F",
+          "field": 3,
+          "marker": 2,
+          "name_ret": "0791:1951",
+          "store_ret": "0791:192E"
+        }
+      },
+      "ret_to": "0791:1938",
+      "target": "23E4:06B7"
+    },
+    {
+      "caller": "0791:1829",
+      "control": 349,
+      "far": true,
+      "line": 1430,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {
+          "concat_ret": "0791:18E7",
+          "end_ret": "0791:190E",
+          "field": 1,
+          "marker": 1,
+          "name_ret": "0791:1900",
+          "store_ret": "0791:18DD"
+        }
+      },
+      "ret_to": "0791:1900",
+      "target": "23E4:06B7"
+    },
+    {
+      "caller": "0791:1829",
+      "control": 350,
+      "far": true,
+      "line": 1430,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {
+          "concat_ret": "0791:1938",
+          "end_ret": "0791:195F",
+          "field": 3,
+          "marker": 2,
+          "name_ret": "0791:1951",
+          "store_ret": "0791:192E"
+        }
+      },
+      "ret_to": "0791:1951",
+      "target": "23E4:06B7"
+    },
+    {
+      "caller": "0791:1829",
+      "control": 351,
+      "far": true,
+      "line": 1432,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {
+          "concat_ret": "0791:18E7",
+          "end_ret": "0791:190E",
+          "field": 1,
+          "marker": 1,
+          "name_ret": "0791:1900",
+          "store_ret": "0791:18DD"
+        }
+      },
+      "ret_to": "0791:190E",
+      "target": "23E4:0644"
+    },
+    {
+      "caller": "0791:1829",
+      "control": 352,
+      "far": true,
+      "line": 1432,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {
+          "concat_ret": "0791:1938",
+          "end_ret": "0791:195F",
+          "field": 3,
+          "marker": 2,
+          "name_ret": "0791:1951",
+          "store_ret": "0791:192E"
+        }
+      },
+      "ret_to": "0791:195F",
+      "target": "23E4:0644"
+    },
+    {
+      "caller": "0791:1829",
+      "control": 353,
+      "far": true,
+      "line": 1438,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {}
+      },
+      "ret_to": "0791:1988",
+      "target": "214B:0018"
+    },
+    {
+      "caller": "0791:1829",
+      "control": 354,
+      "far": true,
+      "line": 1447,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {
+          "pointer": 43370,
+          "ret": "0791:19B2"
+        }
+      },
+      "ret_to": "0791:19B2",
+      "target": "214B:02C8"
+    },
+    {
+      "caller": "0791:1829",
+      "control": 355,
+      "far": true,
+      "line": 1447,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/display.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {
+          "pointer": 43378,
+          "ret": "0791:19DE"
+        }
+      },
+      "ret_to": "0791:19DE",
+      "target": "214B:02C8"
+    },
+    {
+      "caller": "0791:1D4A",
+      "control": 356,
+      "far": false,
+      "line": 267,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/frame.py",
+      "resolution": {
+        "kind": "SITES",
+        "nargs": 1,
+        "site": "0791:1D5C"
+      },
+      "ret_to": "0791:1D5F",
+      "target": "0791:1C78"
+    },
+    {
+      "caller": "0791:1D4A",
+      "control": 357,
+      "far": true,
+      "line": 276,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/frame.py",
+      "resolution": {
+        "kind": "SITES",
+        "nargs": 5,
+        "site": "0791:1D83"
+      },
+      "ret_to": "0791:1D88",
+      "target": "214B:1C86"
+    },
+    {
+      "caller": "0791:1D4A",
+      "control": 358,
+      "far": true,
+      "line": 305,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/frame.py",
+      "resolution": {
+        "kind": "SITES",
+        "nargs": 5,
+        "site": "0791:1E31"
+      },
+      "ret_to": "0791:1E36",
+      "target": "214B:1C86"
+    }
+  ],
+  "test_source_sha256": "9d1be1855d13a9df831460a85d097859c798b68ddd8e9bd80038a96e926f328b",
+  "variants": {
+    "0791:1829": [
+      "omit-0791-1829"
+    ],
+    "0791:1D4A": [
+      "ring-players-swapped"
+    ],
+    "0791:1E53": [
+      "rating-sign"
+    ],
+    "214B:1C86": [
+      "wrap-high-inclusive"
+    ]
+  }
+}
