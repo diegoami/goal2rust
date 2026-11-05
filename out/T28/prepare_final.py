@@ -53,8 +53,8 @@ def wait_receipt(name, pid, marker):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--plan-wrapper', type=int, required=True)
-    parser.add_argument('--live-wrapper', type=int, required=True)
+    parser.add_argument('--plan-wrapper', type=int)
+    parser.add_argument('--live-wrapper', type=int)
     args = parser.parse_args()
     pure.verify()
     lock = (B/'.cache/T28-preparation.lock').open('a+')
@@ -79,6 +79,14 @@ def main():
     append(dict(event='controller', pid=os.getpid(), source_sha256=before,
                 preserved_source_map=preserved,
                 plan_wrapper=args.plan_wrapper, live_wrapper=args.live_wrapper))
+    # Both pre-seal producers already completed before this continuation.
+    # No invented/reused PID stands in for an exited wrapper. Check actual
+    # argv identities independently,then verify their complete receipts.
+    for process in Path('/proc').iterdir():
+        if not process.name.isdigit():continue
+        try:argv=(process/'cmdline').read_bytes().split(b'\0')
+        except OSError:continue
+        assert not any(name in argv for name in [b'out/T28/plan_proofs.py',b'out/T28/live_observers.py']),('Preseal writer still active',process.name)
     plan = wait_receipt('proof-plan-v1.json', args.plan_wrapper, 'plan-admission-v2.log')
     live = wait_receipt('live-development-v3.json', args.live_wrapper, 'live_observers.py')
     assert plan['distinct_error_selectors'] == plan['error_execution_rows'] == len(plan['preseal_reached_errors'])
@@ -140,7 +148,7 @@ def main():
     run('supervisor-v1', [cp, '-u', '-B', 'out/T28/supervise.py'])
     assert source_hashes() == before
     report = dict(pass_all=True, controller_pid=os.getpid(), processes=rows,
-                  preseal_wrappers=[args.plan_wrapper, args.live_wrapper],
+                  preseal_wrappers=sorted({pid for pid in [args.plan_wrapper,args.live_wrapper,live['pid']] if pid is not None}),preseal_writers_checked_stopped=True,
                   source_sha256=before, source_unchanged=True, script_sha256=sha(Path(__file__)),
                   preserved_source_map=preserved,
                   post_writer_audits_pending=True, merge_performed=False)
