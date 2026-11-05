@@ -111,3 +111,10 @@ actual82-file comparator in.cache/T28-baseline. Capture binds50 pure-oracle
 inputs;eight genuine entry shards required. Do not edit bound capture sources
 while producer lives or overwrite completed receipts. Scope includes all six
 owned body/helpers and actual near return5367;045D is the native boundary.
+
+T28 development and preseal plan are complete:2416 differential pairs,106 public
+tests each,Rust11;livev3 hasfour scenarios/640 pairs aftertwo preserved fixture
+failures. Proof-plan-v1 seals22 reached selectors/eight branch outcomes. Never
+rerun capture/plan or overwrite completed receipts. Prepared final controller
+usespreparation-v1/107canonical groups. Read README/latest live checkpoint for
+PID/admission/completion status;keep its bound sources fixed while it lives.

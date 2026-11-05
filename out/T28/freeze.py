@@ -1,0 +1,56 @@
+"""Seal all final proof sources/inputs after both complete public preflights."""
+import ast
+import hashlib
+import json
+import os
+from pathlib import Path
+import types
+import evidence as e
+
+B = e.BASE
+O = B/'out/T28'
+sha = lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+e.verify()
+assert not (O/'freeze-v1.json').exists() and not (O/'source-inputs-v1.json').exists()
+archive = json.loads((O/'artifact-archive-v1.json').read_text())
+assert archive['both_full_public_preflights_before_archive']
+for name in ['cpython', 'pypy']:
+    text = (O/f'public-{name}-preflight-v1.log').read_text()
+    assert 'Ran 106 tests' in text and text.rstrip().endswith('OK')
+inventory = json.loads((O/'inventory-v1.json').read_text())
+plan = json.loads((O/'proof-plan-v1.json').read_text())
+assert len(inventory['bodies']) == 1 and len(inventory['owned_code_objects']) == 6 and inventory['site_count'] == 1
+assert plan['error_execution_rows'] == plan['distinct_error_selectors'] == len(plan['preseal_reached_errors'])
+assert plan['error_comparisons'] == 160 * plan['distinct_error_selectors']
+assert all(row['error'] is not None for row in plan['preseal_reached_errors'].values())
+assert plan['branch_outcomes'] and len(plan['branch_outcomes']) == len(set(plan['branch_outcomes']))
+assert plan['test_source_sha256'] == sha(B/'engine/tests/test_receiver.py')
+assert plan['inventory_sha256'] == sha(O/'inventory-v1.json') and plan['branch_probe_sha256'] == sha(O/'branch_probe.py')
+sources = sorted(p.name for p in O.glob('*.py'))
+for name in sources:ast.parse((O/name).read_text(), filename=name)
+controller = (O/'supervise.py').read_text()
+queued = []
+def start(name, *args, **kw):queued.append(name)
+program = controller[controller.index("start('public-cpython-v1'"):controller.index('drain(3)')]
+exec(program, dict(start=start, producer=start, wait=lambda *x:None, PY='python', e=e, os=os))
+assert len(queued) == len(set(queued)) == 102
+assert {'receiver-normal-v1','receiver-body-v1','receiver-output-v1','receiver-returns-v1','prior-strength-live-observers-v1','strength-normal-v1', 'strength-body-v1', 'strength-output-v1', 'strength-returns-v1', 'prior-commentary-live-observers-v1', 'commentary-normal-v1', 'commentary-body-v1', 'commentary-output-v1', 'commentary-returns-v1',
+        'prior-text-live-observers-v1', 'live-observers-v1', 'scoped-write-errors-v1'} <= set(queued)
+manifest = dict(proof_sources=sources, proof_source_sha256={name:sha(O/name) for name in sources},
+                generated_reports_excluded=True)
+with (O/'source-inputs-v1.json').open('x') as stream:
+    json.dump(manifest, stream, indent=2, sort_keys=True)
+    stream.write('\n')
+before = e.hashes()
+report = dict(oracle=e.PIN, revision=e.git('rev-parse', 'HEAD'), source_sha256=before,
+              source_count=len(before), explicit_proof_sources=len(sources), same_combined_artifact=True,
+              M2_stages=102, canonical_groups=107, guest_sites=1, error_execution_rows=plan['error_execution_rows'],
+              distinct_error_selectors=plan['distinct_error_selectors'], body_controls=list(range(427,428)),
+              output_controls=list(range(428,435)), return_controls=list(range(435,436)),
+              baseline_snapshot='out/T28/baseline-snapshot-v1.json',
+              artifact_archive='out/T28/artifact-archive-v1.json', proof_pool_limit=3)
+with (O/'freeze-v1.json').open('x') as stream:
+    json.dump(report, stream, indent=2, sort_keys=True)
+    stream.write('\n')
+assert e.hashes() == before
+print('Frozen', len(before), 'concrete bindings/', len(sources), 'explicit sources;102 M2/107 canonical groups')

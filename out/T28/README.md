@@ -58,3 +58,38 @@ freeze,canonical/full-corpus/timing campaign exists yet. Final campaign must
 retain all prior86 proofs and eleven prior live matrices and be followed by
 actual-host post-writer/ledger/CI/merge/merged-audit gates. Live checkpoint owns
 current process status;development passes are not final completion.
+
+## Prepared final campaign
+
+The prepared controller retains all prior86-body proof assertions and eleven
+live matrices,then adds receiver normal/body/output/return proofs and four new
+callback scenarios. Queue inspection confirms102 unique M2/107 total canonical
+groups. Old strength proofs use T27's immutable inventory/captures/279-selector
+plan through separately named helpers;all new source/error/branch/control rows
+use T28's completed plan. Positive native-disabled bridge execution witnesses
+all six owned functions outside native lifetimes;nondefault fallback is checked
+separately. No callback/fault/variant scope is cropped.
+
+prepare_final.py uses exclusive preparation-v1.log/preparation-jobs-v1.jsonl and
+archives its full source epoch before stages. It verifies both existing completed
+preseal receipts and fixed sources,then admits both final builds/PyPy install/
+full106-test preflights before archive/freeze and the complete supervisor. It
+never performs a merge or post-writer audit while its controller lives. Current
+PID/status in checkpoint#1;do not duplicate or restart a partial attempt. No
+completed receipt may be overwritten. Sources fixed while this controller lives.
+
+After ALL canonical/timing writers AND preparation controller exit,run in the
+actual host PID namespace,with frozen sources/binaries:
+
+```
+PYTHONHASHSEED=0 .venv/bin/python -B out/T28/process_closure.py
+PYTHONHASHSEED=0 .venv/bin/python -B out/T28/final_capture_audit.py
+PYTHONHASHSEED=0 .venv/bin/python -B out/T28/post_exit_audit.py
+PYTHONHASHSEED=0 .venv/bin/python -B out/T28/baseline_input_audit.py
+PYTHONHASHSEED=0 .venv/bin/python -B out/T28/validate.py out/T28/validation-final-v1.json
+```
+
+Final baseline audit closes acceptedT27's2378/320,saved82 files,46 formal archived
+artifacts,all older supplements/rejections and both failed T28 callback fixtures.
+Then assessment/raw ratios/regressions/limits,exact-headCI/squash/mainCI/merged
+binding audit/completion checkpoint. Development/plan passes are not acceptance.
