@@ -639,3 +639,9 @@ routing/news. T122 is split into five proof slices; T124b into rankings/draw,
 and required in-season ageing T124f now precedes sealed-season T123, while
 sealed year rollover stays deferred. These advance later whole-game dependencies;
 they do not replace T27's controlled `2cbeb36f` match pin or its full gates.
+
+T27's complete seven-body strength closure now passes its full local canonical,
+corpus and quiet timing campaign,with 86/422 bodies and 89.02% native fixture
+entry frequency. Median CPU use is4.80% lower than saved T26 with one3.05%
+slower round;one-fixture evidence only. Final ledgers pass;checkpoint#1 owns
+exact-headCI/merge/mainCI/merged-audit status. No following scope is started.

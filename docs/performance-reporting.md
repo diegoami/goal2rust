@@ -250,3 +250,23 @@ less,at independent ratio medians. Do not divide the median PyPy columns to
 infer the paired change or compare historical standalone gaps as a trend.
 Every raw CPU value and slower round is retained in the assessment. One fixture;
 the task has no positive magnitude or all-round-improvement gate.
+
+## T27 complete quiet campaign
+
+Sources: [raw samples](../out/T27/performance-v1.json) and
+[assessment](../out/T27/assessment.md). All three simultaneous four-arm rounds
+pass original start/endpoint/continuous-load/idle-runner guards; none replaced.
+
+| Round | T27 / saved T26 | Saved T26 / PyPy | T27 / PyPy | CPython / T27 |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 0.952034377 | 0.701659246 | 0.668003723 | 4.377578189 |
+| 2 | 1.030549463 | 0.651551060 | 0.671455595 | 4.272159032 |
+| 3 | 0.951621920 | 0.728978028 | 0.693711470 | 4.256502011 |
+| Median of per-round ratios | 0.952034377 | 0.701659246 | 0.671455595 | 4.272159032 |
+
+T27 uses 4.80% less CPU than saved T26 at the paired median. Rounds one/three
+improve 4.80%/4.84%; round two regresses 3.05%. Mixed results do not establish
+repeatable improvement. Same-campaign saved T26/PyPy and T27/PyPy medians are
+0.701659246 and 0.671455595, respectively. Each median is independent; do not
+divide them to infer the incremental gain. All raw CPU seconds and regressions
+remain in the assessment. One fixture; no positive magnitude acceptance floor.

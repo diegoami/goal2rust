@@ -97,3 +97,9 @@ Preparationv3 was SIGKILLed during PyPy preflight;preserve its rejection/source/
 artifact/log epoch. The new controller usesv4 receipts/journal andv2 preflight
 logs;never restart consumedv2/v3,
 duplicate a live controller,overwrite a receipt or edit its bound sources.
+
+T27's canonical campaign and final validation-v1 are now complete:2378 primary
+bindings/79 explicit sources,102 canonical plus12 timing groups;all writers and
+preparation controllers stopped. Read README and live checkpoint before any
+further action;never restart completed producers or alter frozen sources.
+Final merge/mainCI/merged binding audit status remains in checkpoint#1.

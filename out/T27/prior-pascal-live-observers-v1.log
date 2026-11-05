@@ -1,0 +1,9 @@
+denied: unicorn, .sav, .EXE, .DAT
+bulk-snapshot {'comparisons': 160, 'hits': {'future-source-byte-mutated-at-first-copy': 160}, 'effect_witnesses': 160, 'snapshot_witnesses': 160, 'live_read_witnesses': 0}
+overlap-live {'comparisons': 160, 'hits': {'future-source-byte-mutated-at-first-copy': 160}, 'effect_witnesses': 160, 'snapshot_witnesses': 0, 'live_read_witnesses': 160}
+wrap-live {'comparisons': 160, 'hits': {'future-source-byte-mutated-at-first-copy': 160}, 'effect_witnesses': 160, 'snapshot_witnesses': 0, 'live_read_witnesses': 160}
+eight-nine-threshold {'comparisons': 160, 'hits': {'future-source-byte-mutated-at-first-copy': 160}, 'effect_witnesses': 160, 'snapshot_witnesses': 80, 'live_read_witnesses': 80}
+concat-captured-lengths-live-AX {'comparisons': 160, 'hits': {'captured-lengths-versus-live-or-cached-AX': 160}, 'effect_witnesses': 160, 'snapshot_witnesses': 0, 'live_read_witnesses': 0}
+store-captured-length-AX {'comparisons': 160, 'hits': {'captured-lengths-versus-live-or-cached-AX': 160}, 'effect_witnesses': 160, 'snapshot_witnesses': 0, 'live_read_witnesses': 0}
+live-flags-last {'comparisons': 160, 'hits': {'live-arithmetic-and-DF-before-late-flags-store': 160}, 'effect_witnesses': 160, 'snapshot_witnesses': 0, 'live_read_witnesses': 0}
+live-SS-arguments {'comparisons': 160, 'hits': {'live-SS-before-captured-argument-block': 160, 'restore-SS-before-return': 160}, 'effect_witnesses': 160, 'snapshot_witnesses': 0, 'live_read_witnesses': 0}

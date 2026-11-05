@@ -173,3 +173,16 @@ files,all44 archived artifacts and preserved diagnostic epochs. The initial
 capture audit remains historical;final_capture_audit verifies its bound epoch
 without rerunning it against changed runtime. Complete assessment/exact-headCI/
 squash/mainCI/merged binding audit and checkpoint before selecting the next tree.
+
+## Completed canonical campaign
+
+Preparationv4 and all eight groups exited successfully. Both public102-test
+preflights precede archived fixed artifacts;freeze binds2378 primary files/79
+explicit proof sources. All97 M2/102 canonical groups and first quiet three-round
+four-arm campaign pass. All five final audits/validation-final-v1 pass with
+320 evidence bindings. Closure includes114 canonical/timing groups,eight
+successful preparation groups,five rejectedv3 groups and all earlier controllers.
+Do not restart any T27 producer,overwrite a completed receipt or rebuild its
+artifact. Assessment retains all raw CPU values and round-two regression:
+paired median4.80% less CPU;one fixture,mixed rounds,no repeatable-gain claim.
+Exact-headCI/merge/mainCI/merged audit authority remains live checkpoint#1.

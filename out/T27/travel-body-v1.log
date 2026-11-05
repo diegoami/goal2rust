@@ -1,0 +1,12 @@
+denied: unicorn, .sav, .EXE, .DAT
+body 0791:835F 100
+body 0791:835F 200
+body 0791:835F 300
+body 0791:835F 400
+body 0791:835F 500
+body 23E4:0279 100
+body 23E4:0279 200
+body 23E4:0279 300
+body 23E4:0279 400
+body 23E4:0279 500
+body COMPLETE
