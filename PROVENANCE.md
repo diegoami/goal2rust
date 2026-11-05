@@ -482,3 +482,14 @@ builds in.cache/T27-baseline(79 files),after1647/283/merged audit verification.
 audit are preserved. Unfrozen development5,024 pairs/all27 scope/12 returns,
 public102 each interpreter/Rust11 pass. No T27 canonical/performance/completion
 claim yet;proof plan/live callbacks/freeze/full campaign/CI/merge remain.
+
+## T28 pass-receiver destination closure
+
+Accepted oracle remains `2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c`.
+`engine/src/receiver.rs` translates `original_match.port.contests.pass_receiver_destination`
+(`0791:533B`) and its owned `nested`, `ss16`, `ss8`, `rb`, `guest` operations.
+The actual near keeper call returns at `0791:5367`; existing native `0791:045D`
+is the complete guest boundary. Pointer traversal, pending writes, callback
+read order and nondefault Python fallback follow that source. Inventory/source
+hashes and private genuine-capture receipts are in `out/T28/`; no original bytes
+are committed. Development evidence does not establish final acceptance.

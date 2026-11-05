@@ -24,3 +24,37 @@ full corpus/profile/strict quiet3-round4-arm timings;no arbitrary gain floor.
 Known-idle IT13 before STARTING gates;do not stop an already-admitted gate for
 later activity. Keep every campaign/regression/rejection. No final ledger or
 post-writer audit until every producer/controller exits in actual host namespace.
+
+## Development implementation
+
+The complete source path is now native in engine/src/receiver.rs,including the
+parent traversal helper/flush/read order and actual near keeper5367 continuation.
+Controls427(body),428..434(seven outputs),435(return) are distinct and all pass
+positive falsifier tests. Before-native-v1 fails only the missing native-entry
+assertion on accepted T27;source/full-state equality already held there.
+
+Focused4 tests pass,including full state/ordered callbacks,entry/guest pause and
+resume,direct completion,isolated ABI,variants,errors and six-helper closure.
+Development probev1 passes2000 authored/160 genuine schedules/256 ABI pairs and
+archives exact executed source/test/script/binary bytes by content hash.
+Both public development suites pass106 tests(CPython118.206s,PyPy193.452s;
+suite wall times are not performance). Actual acceptedT27 stays in savedbaseline.
+
+Live developmentv3 passesfour scenarios/640 pairs,160 semantic effects each:
+local-byte read uses liveSS AFTER pending flush;target captured before live
+parent/table changes;parent ES evaluated before DI;branch decided before slot
+reread for keeper. Rejectedv1 incorrectly expected own port reads in io_tap;
+source explicitly leaves them untapped. Rejectedv2 needed a guard for register
+callbacks preceding root fixture initialization. Both failed before a native
+pair;source/binary epochs/logs retained in separate rejection receipts. No
+production change or assertion removal was needed. All current scenarios use
+actual source register/write callback seams,not added own-read observations.
+
+Proof-plan-v1 is COMPLETE/immutable:22 positively reached selectors/3520 planned
+canonical error pairs,eight positive branch/short-circuit outcomes. New normal
+4096/body2096/output14672/return160 comparisons are sealed before canonical.
+Do not overwrite/rerun completed plan or capture. No final artifact archive,
+freeze,canonical/full-corpus/timing campaign exists yet. Final campaign must
+retain all prior86 proofs and eleven prior live matrices and be followed by
+actual-host post-writer/ledger/CI/merge/merged-audit gates. Live checkpoint owns
+current process status;development passes are not final completion.

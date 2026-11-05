@@ -1,0 +1,4 @@
+local-flag-read-live-SS-after-flush {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'local-read-live-SS-after-pending-write': 160}}
+cached-target-before-live-parent-reload {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'target-captured-before-parent-and-table-change': 160}}
+parent-ES-before-DI {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'captured-old-ES-new-DI': 160}}
+branch-decided-before-live-slot-reread {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'slot-cached-then-reread-for-keeper': 160}}

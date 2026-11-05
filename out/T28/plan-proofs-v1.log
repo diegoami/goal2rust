@@ -1,0 +1,26 @@
+denied: unicorn, .sav, .EXE, .DAT
+OBSERVED 0791:533B 22 selectors
+MISSING []
+REACHED 0791:533B/0791:045D case 1
+REACHED 0791:533B/0791:533B case 0
+REACHED 0791:533B/0791:5367 case 1
+REACHED 0791:533B/read-index:1 case 0
+REACHED 0791:533B/read-index:2 case 1
+REACHED 0791:533B/reg:ax case 0
+REACHED 0791:533B/reg:bp case 0
+REACHED 0791:533B/reg:cs case 0
+REACHED 0791:533B/reg:eflags case 1
+REACHED 0791:533B/reg:ip case 0
+REACHED 0791:533B/reg:sp case 0
+REACHED 0791:533B/reg:ss case 0
+REACHED 0791:533B/write case 0
+REACHED 0791:533B/write-index:1 case 0
+REACHED 0791:533B/write-index:2 case 0
+REACHED 0791:533B/write-index:3 case 1
+REACHED 0791:533B/write-index:4 case 1
+REACHED 0791:533B/write-index:6 case 1
+REACHED 0791:533B/write:169696 case 0
+REACHED 0791:533B/write:85671 case 1
+REACHED 0791:533B/write:85692 case 1
+REACHED 0791:533B/write:85708 case 16
+SEALED 22 distinct selectors, 8 positive edge/branch outcomes

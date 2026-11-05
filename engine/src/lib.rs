@@ -54,3 +54,5 @@ pub mod text;
 pub mod commentary;
 
 pub mod strength;
+
+pub mod receiver;

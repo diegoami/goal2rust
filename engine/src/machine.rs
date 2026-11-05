@@ -110,6 +110,7 @@ impl Port {
     }
 }
 enum NativeContinuation {
+    Receiver(bool),
     Strength(crate::strength::Phase,crate::strength::Saved),
     Commentary(crate::commentary::Phase,crate::commentary::Saved),
     Text(crate::text::Phase,crate::text::Saved),
@@ -865,6 +866,7 @@ impl MachineCore {
         };
         if self.native && frame.port.variant.bind(py).is_none() {
             frame.native = match address.extract::<String>()?.as_str() {
+                "0791:533B"=>Some(NativeContinuation::Receiver(false)),
                 ad @ ("1771:0AA7"|"1771:0BC4"|"1771:3041"|"1771:3088"|"1771:3179"|"1771:377E"|"214B:0C57")=>Some(NativeContinuation::Strength(crate::strength::Phase::Start,crate::strength::Saved::new(crate::strength::index(ad).unwrap()))),
                 ad @ ("0791:1829"|"0791:1C78"|"0791:1D4A"|"0791:1E53"|"0791:1EB5"|"0791:26A0"|"0791:2B0F"|"0791:56D9"|"214B:0018"|"214B:1C86")=>Some(NativeContinuation::Commentary(crate::commentary::Phase::Start,crate::commentary::Saved::new(crate::commentary::index(ad).unwrap()))),
                 "214B:01A3"=>Some(NativeContinuation::Text(crate::text::Phase::Start,crate::text::Saved::new(0))),
@@ -987,6 +989,21 @@ impl MachineCore {
         let mut completed_value = py.None();
         let result = (|| -> PyResult<Option<Py<PyAny>>> {
             match f.native.take().unwrap() {
+                NativeContinuation::Receiver(resumed)=>{
+                    let action=crate::receiver::step(&mut h,resumed)?;
+                    if !resumed{*self.native_calls.borrow_mut().entry("0791:533B".into()).or_insert(0)+=1;}
+                    match action{
+                        crate::receiver::Action::Keeper(ax)=>{let call=self.call_type.bind(py).call1(("0791:045D",(ax,),"0791:5367",false,false))?;f.native=Some(NativeContinuation::Receiver(true));Ok(Some(call.unbind()))}
+                        crate::receiver::Action::Done(mut value)=>{
+                            if self.mutant==427{crate::marking::corrupt(&mut h)?;}
+                            if (428..435).contains(&self.mutant){
+                                let reg=[Reg::Ax,Reg::Cx,Reg::Dx,Reg::Si,Reg::Di,Reg::Es,Reg::Eflags][(self.mutant-428) as usize];
+                                if reg==Reg::Ax{value^=0x8000;}else{let old=h.reg(reg)?;h.set_reg(reg,old^if reg==Reg::Eflags{0x400}else{0x8000})?;}
+                            }
+                            completed_value=value.into_pyobject(py)?.into_any().unbind();Ok(None)
+                        }
+                    }
+                }
                 NativeContinuation::Strength(phase,saved)=>{
                     let first=phase==crate::strength::Phase::Start;
                     let ax=if first || phase==crate::strength::Phase::Quick{0}else{sent.extract::<u16>()?};
@@ -1271,7 +1288,8 @@ impl MachineCore {
             let t20_mutant=(150..155).contains(&self.mutant) && T20_RETURNS[(self.mutant-150) as usize]==ret_to;
             let t19_mutant=(122..145).contains(&self.mutant) && T19_RETURNS[(self.mutant-122) as usize]==ret_to;
             let t18_mutant=(74..115).contains(&self.mutant) && T18_RETURNS[(self.mutant-74) as usize]==ret_to;
-            let corrupt = t27_mutant || t26_mutant || t25_mutant || t24_mutant || t22_mutant || t21_mutant || t20_mutant || t19_mutant || t18_mutant || site_mutant || (self.mutant == 27 && matches!(ret_to.as_str(),"0791:47CE"|"0791:47EF"|"0791:485D"|"0791:4888"|"0791:48E2"|"0791:4930"|"0791:494D"|"0791:496A"|"0791:4980"|"0791:499D"|"0791:49B2"|"0791:49C0"))
+            let t28_mutant=self.mutant==435 && ret_to=="0791:5367";
+            let corrupt = t28_mutant || t27_mutant || t26_mutant || t25_mutant || t24_mutant || t22_mutant || t21_mutant || t20_mutant || t19_mutant || t18_mutant || site_mutant || (self.mutant == 27 && matches!(ret_to.as_str(),"0791:47CE"|"0791:47EF"|"0791:485D"|"0791:4888"|"0791:48E2"|"0791:4930"|"0791:494D"|"0791:496A"|"0791:4980"|"0791:499D"|"0791:49B2"|"0791:49C0"))
                 || (self.mutant==29 && ret_to=="0791:4493")
                 || self.mutant == 1 || (self.mutant == 4
                 && matches!(ret_to.as_str(), "0791:3013" | "0791:3090" | "0791:30A3"))

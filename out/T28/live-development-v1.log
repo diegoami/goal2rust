@@ -1,0 +1,12 @@
+local-flag-read-live-SS-after-flush {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'local-read-live-SS-after-pending-write': 160}}
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T28/live_observers.py", line 91, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/diego/projects/goal2rust/out/T28/live_observers.py", line 78, in main
+    p,ph=run(Oracle,case,scenario,True);r,rh=run(PortMachine,case,scenario,True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/goal2rust/out/T28/live_observers.py", line 48, in run
+    assert ctx['hits'],(case,scenario)
+           ~~~^^^^^^^^
+AssertionError: (0, 'cached-target-before-live-parent-reload')
