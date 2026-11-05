@@ -118,3 +118,10 @@ failures. Proof-plan-v1 seals22 reached selectors/eight branch outcomes. Never
 rerun capture/plan or overwrite completed receipts. Prepared final controller
 usespreparation-v1/107canonical groups. Read README/latest live checkpoint for
 PID/admission/completion status;keep its bound sources fixed while it lives.
+
+T28's final artifact is FROZEN:3061 primary bindings/81 explicit sources,both
+artifacts archived after106-test final interpreter preflights. The full107-group
+canonical controller has started. Read README/latest checkpoint for live PIDs;
+never rebuild/install or edit bound sources/tests/adapter/config,duplicate a
+producer or overwrite completed receipts. All prior86 proofs/eleven matrices
+remain. Final audits only after every writer AND preparation controller exits.

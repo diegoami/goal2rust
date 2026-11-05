@@ -93,3 +93,14 @@ Final baseline audit closes acceptedT27's2378/320,saved82 files,46 formal archiv
 artifacts,all older supplements/rejections and both failed T28 callback fixtures.
 Then assessment/raw ratios/regressions/limits,exact-headCI/squash/mainCI/merged
 binding audit/completion checkpoint. Development/plan passes are not acceptance.
+
+## Final artifact frozen
+
+Both final106-test interpreter preflights passed(CPython117.155s,PyPy176.763s)
+BEFORE artifact archive and freeze. These are suite wall times,not performance.
+Freeze-v1 binds3061 concrete primary files/81 explicit proof sources,102 M2/
+107 total canonical groups. Both artifacts are archived and fixed. The canonical
+supervisor is now running;current PID/stages remain in checkpoint#1. NO rebuild,
+install or bound source/test/adapter/config edits. Keep current151-source
+preparation epoch and every completed receipt intact. Do not duplicate or restart
+an active producer/controller. No final speed/acceptance/merge claim yet.

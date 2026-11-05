@@ -1,0 +1,20 @@
+{
+  "artifacts": [
+    {
+      "archive": ".cache/T28-artifacts/cpython/goal2rust_engine.cpython-312-x86_64-linux-gnu.so",
+      "interpreter": "cpython",
+      "original": "engine/python/goal2rust_engine/goal2rust_engine.cpython-312-x86_64-linux-gnu.so",
+      "public_preflight_sha256": "3b208b1e98cc1035a686abf290152ee14b296049e9d5ebc69cea60688c472b3a",
+      "sha256": "3e395b52031df793e11c80c70e03faea0c82212c6d532750547473743b856848"
+    },
+    {
+      "archive": ".cache/T28-artifacts/pypy/goal2rust_engine.pypy311-pp80-x86_64-linux-gnu.so",
+      "interpreter": "pypy",
+      "original": ".venv-pypy/lib/pypy3.11/site-packages/goal2rust_engine/goal2rust_engine.pypy311-pp80-x86_64-linux-gnu.so",
+      "public_preflight_sha256": "0f1d1b3b0c1129da2e3eb34fe8877678748a0f2b7b087e5237d699533e545b59",
+      "sha256": "0d5e62eb96f35beb7c820a7bb3a6488ed7688098cda0d273dfe4b19f90860ba4"
+    }
+  ],
+  "both_full_public_preflights_before_archive": true,
+  "script_sha256": "89aa1fa67540c7f51425d8e480ed493f52c06df061b17499599d9cad45032ae7"
+}
