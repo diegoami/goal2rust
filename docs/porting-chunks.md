@@ -564,3 +564,20 @@ preserved development epochs. All109 canonical/timing groups/controller are
 stopped. Final exact-head CI/squash/mainCI/merged audit and completion stay in
 checkpoint#1. Select a following bounded closure separately from the fresh
 full profile;no T27 is selected here.
+
+## T27 selected quick-result strength closure
+
+The owner continued after accepted T26d2f5a19. Full-profile selection chooses
+quick.listing_1771_0BC4,the highest remaining registered-body self-time,with
+manager bonus,foot/position/player strength and bit-test callees:seven bodies,
+12 actual returns,27 owned code objects including Rec.__init__/lin/u8. Resolve
+quick._call popped-word semantics,attributes.gcall SENT/liveDX semantics and
+helper-dispatched membership returns explicitly. Native3216/08DF are the only
+guest boundaries. Higher player-at-ball/contest roots reach restarts,substitution
+and menus;they are not truncated into an apparently small partial closure.
+
+Prediction18,250 moved entries,86 native bodies/2,762,923 native/340,762 Python
+entries is fixture frequency,not speed or code/test/whole-game progress. Actual
+T26 baseline79 files is preserved before builds;50 pure-oracle inputs yield56
+genuine entry shards. Latest upstream change is goal2's UI kit/palette correction;
+archaeology remains65de2fc0. No accepted-pin/default-engine policy change follows.

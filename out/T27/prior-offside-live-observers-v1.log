@@ -1,0 +1,9 @@
+denied: unicorn, .sav, .EXE, .DAT
+captured-first-live-rows {'comparisons': 160, 'hits': {'captured-first-live-row-contents': 320}, 'effect_witnesses': 160}
+captured-SENT-live-DX {'comparisons': 160, 'hits': {'SENT-captured-before-live-DX': 320}, 'effect_witnesses': 160}
+marker-live-SS {'comparisons': 160, 'hits': {'live-SS-frame-and-record': 160, 'restore-SS-before-guest': 160}, 'effect_witnesses': 160}
+marker-captured-record-live-column {'comparisons': 160, 'hits': {'captured-record-live-column': 160}, 'effect_witnesses': 160}
+marker-captured-AX-DX {'comparisons': 160, 'hits': {'captured-row-and-direction': 160}, 'effect_witnesses': 160}
+sprite-live-current-glyph {'comparisons': 160, 'hits': {'live-position-and-glyph-after-old-position-write': 160}, 'effect_witnesses': 160}
+sprite-captured-row {'comparisons': 160, 'hits': {'captured-row-at-final-draw': 160}, 'effect_witnesses': 160}
+sprite-live-grid-pointer {'comparisons': 160, 'hits': {'live-picture-pointer-after-background-restore': 80}, 'effect_witnesses': 160}

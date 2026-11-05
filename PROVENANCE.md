@@ -463,3 +463,22 @@ T26/PyPy0.668069969 remain beside every raw sample. Mixed one-fixture result;
 no repeatable/general gain claim. Final-v1 binds1647 primary/283 evidence;
 all109 canonical/timing groups and controller exit. CI/merge/mainCI/merged
 audit completion remains governed by checkpoint#1.
+
+## T27 quick-result strength candidate
+
+At accepted oracle2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c,
+engine/src/strength.rs/strength_quick.inc.rs translate quick.listing_1771_0BC4,
+attributes.manager_bonus0AA7/is_two_footed3041/foot_index3088/
+out_of_place_flag3179/player_strength377E and runtime.set_test_bit214B:0C57.
+All12 real returns/27 owned code objects,including three used Rec methods,are
+inventoried;native3216/08DF are the only guest boundaries. Generated root blocks
+reproduce exactly from the pinned Python source with ordered expression lowering.
+Live/captured pointers/SS,explicit popped/re-pushed arguments,returned AX/live DX,
+flags,loop locals/division/clamps and nondefault fallback follow the source.
+
+Actual accepted T26 source/tests/adapter/both artifacts are preserved before
+builds in.cache/T27-baseline(79 files),after1647/283/merged audit verification.
+50 pure-oracle inputs/56 genuine shards(eight per body)and initial independent
+audit are preserved. Unfrozen development5,024 pairs/all27 scope/12 returns,
+public102 each interpreter/Rust11 pass. No T27 canonical/performance/completion
+claim yet;proof plan/live callbacks/freeze/full campaign/CI/merge remain.

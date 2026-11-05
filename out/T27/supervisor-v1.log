@@ -1,0 +1,697 @@
+START public-cpython-v1 100281
+START public-pypy-v1 100300
+START gc-parity-v1 100315
+ACTIVE public-cpython-v1,public-pypy-v1,gc-parity-v1 PENDING 94
+EXIT gc-parity-v1 0
+START observer-matrix-v2 100351
+EXIT observer-matrix-v2 0
+START rust-unit-v1 100389
+EXIT rust-unit-v1 0
+ACTIVE public-cpython-v1,public-pypy-v1 PENDING 92
+START taps-python-v1 100425
+ACTIVE public-cpython-v1,public-pypy-v1,taps-python-v1 PENDING 91
+ACTIVE public-cpython-v1,public-pypy-v1,taps-python-v1 PENDING 91
+ACTIVE public-cpython-v1,public-pypy-v1,taps-python-v1 PENDING 91
+ACTIVE public-cpython-v1,public-pypy-v1,taps-python-v1 PENDING 91
+ACTIVE public-cpython-v1,public-pypy-v1,taps-python-v1 PENDING 91
+ACTIVE public-cpython-v1,public-pypy-v1,taps-python-v1 PENDING 91
+EXIT public-cpython-v1 0
+START legacy-v1 120082
+ACTIVE public-pypy-v1,taps-python-v1,legacy-v1 PENDING 90
+ACTIVE public-pypy-v1,taps-python-v1,legacy-v1 PENDING 90
+ACTIVE public-pypy-v1,taps-python-v1,legacy-v1 PENDING 90
+ACTIVE public-pypy-v1,taps-python-v1,legacy-v1 PENDING 90
+ACTIVE public-pypy-v1,taps-python-v1,legacy-v1 PENDING 90
+EXIT legacy-v1 0
+ACTIVE public-pypy-v1,taps-python-v1 PENDING 90
+START legacy-body-v1 120468
+ACTIVE public-pypy-v1,taps-python-v1,legacy-body-v1 PENDING 89
+ACTIVE public-pypy-v1,taps-python-v1,legacy-body-v1 PENDING 89
+EXIT public-pypy-v1 0
+START availability-differential-v1 120962
+ACTIVE taps-python-v1,legacy-body-v1,availability-differential-v1 PENDING 88
+EXIT availability-differential-v1 0
+START availability-body-v1 122691
+ACTIVE taps-python-v1,legacy-body-v1,availability-body-v1 PENDING 87
+EXIT legacy-body-v1 0
+START availability-return-v1 123408
+EXIT availability-body-v1 0
+ACTIVE taps-python-v1,availability-return-v1 PENDING 86
+START ball-differential-v1 125161
+EXIT availability-return-v1 0
+START ball-body-v1 126218
+ACTIVE taps-python-v1,ball-differential-v1,ball-body-v1 PENDING 84
+ACTIVE taps-python-v1,ball-differential-v1,ball-body-v1 PENDING 84
+ACTIVE taps-python-v1,ball-differential-v1,ball-body-v1 PENDING 84
+ACTIVE taps-python-v1,ball-differential-v1,ball-body-v1 PENDING 84
+ACTIVE taps-python-v1,ball-differential-v1,ball-body-v1 PENDING 84
+EXIT taps-python-v1 0
+START ball-return-v1 132772
+ACTIVE ball-differential-v1,ball-body-v1,ball-return-v1 PENDING 83
+ACTIVE ball-differential-v1,ball-body-v1,ball-return-v1 PENDING 83
+ACTIVE ball-differential-v1,ball-body-v1,ball-return-v1 PENDING 83
+ACTIVE ball-differential-v1,ball-body-v1,ball-return-v1 PENDING 83
+ACTIVE ball-differential-v1,ball-body-v1,ball-return-v1 PENDING 83
+EXIT ball-body-v1 0
+START skill-differential-v1 135694
+ACTIVE ball-differential-v1,ball-return-v1,skill-differential-v1 PENDING 82
+ACTIVE ball-differential-v1,ball-return-v1,skill-differential-v1 PENDING 82
+EXIT skill-differential-v1 0
+START skill-body-v1 135803
+EXIT ball-differential-v1 0
+EXIT ball-return-v1 0
+START skill-return-v1 136166
+START speaker-differential-v1 136223
+ACTIVE skill-body-v1,skill-return-v1,speaker-differential-v1 PENDING 79
+ACTIVE skill-body-v1,skill-return-v1,speaker-differential-v1 PENDING 79
+EXIT skill-body-v1 0
+START speaker-body-v1 136728
+EXIT skill-return-v1 0
+START speaker-root-return-v1 137116
+ACTIVE speaker-differential-v1,speaker-body-v1,speaker-root-return-v1 PENDING 77
+ACTIVE speaker-differential-v1,speaker-body-v1,speaker-root-return-v1 PENDING 77
+EXIT speaker-differential-v1 0
+START speaker-seed-return-v1 137249
+ACTIVE speaker-body-v1,speaker-root-return-v1,speaker-seed-return-v1 PENDING 76
+EXIT speaker-root-return-v1 0
+START keys-differential-v1 137286
+EXIT speaker-body-v1 0
+START keys-body-v1 137320
+ACTIVE speaker-seed-return-v1,keys-differential-v1,keys-body-v1 PENDING 74
+EXIT speaker-seed-return-v1 0
+START keys-return-v1 137372
+ACTIVE keys-differential-v1,keys-body-v1,keys-return-v1 PENDING 73
+EXIT keys-body-v1 0
+START draw-differential-v1 137721
+EXIT keys-return-v1 0
+ACTIVE keys-differential-v1,draw-differential-v1 PENDING 72
+START draw-body-v1 137802
+EXIT keys-differential-v1 0
+START draw-return-v1 137855
+EXIT draw-differential-v1 0
+START sweep-differential-v1 138068
+EXIT draw-body-v1 0
+ACTIVE draw-return-v1,sweep-differential-v1 PENDING 69
+START sweep-body-v1 138101
+EXIT draw-return-v1 0
+START sweep-return-v1 138140
+ACTIVE sweep-differential-v1,sweep-body-v1,sweep-return-v1 PENDING 67
+ACTIVE sweep-differential-v1,sweep-body-v1,sweep-return-v1 PENDING 67
+ACTIVE sweep-differential-v1,sweep-body-v1,sweep-return-v1 PENDING 67
+EXIT sweep-return-v1 0
+START play-differential-v1 138185
+ACTIVE sweep-differential-v1,sweep-body-v1,play-differential-v1 PENDING 66
+ACTIVE sweep-differential-v1,sweep-body-v1,play-differential-v1 PENDING 66
+EXIT sweep-body-v1 0
+START play-body-v1 138273
+ACTIVE sweep-differential-v1,play-differential-v1,play-body-v1 PENDING 65
+EXIT play-differential-v1 0
+START play-return-v1 138650
+EXIT sweep-differential-v1 0
+START update-differential-v1 138687
+EXIT play-body-v1 0
+START update-body-v1 138723
+ACTIVE play-return-v1,update-differential-v1,update-body-v1 PENDING 62
+EXIT play-return-v1 0
+START update-return-v1 138764
+EXIT update-body-v1 0
+ACTIVE update-differential-v1,update-return-v1 PENDING 61
+START sprite-differential-v1 138966
+EXIT update-return-v1 0
+START sprite-body-v1 139170
+ACTIVE update-differential-v1,sprite-differential-v1,sprite-body-v1 PENDING 59
+EXIT sprite-body-v1 0
+START sprite-return-v1 139419
+EXIT sprite-differential-v1 0
+START run-differential-v1 139455
+ACTIVE update-differential-v1,sprite-return-v1,run-differential-v1 PENDING 57
+EXIT update-differential-v1 0
+EXIT sprite-return-v1 0
+START run-body-v1 139491
+START run-position-v1 139525
+EXIT run-differential-v1 0
+START marking-normal-v1 139559
+EXIT run-body-v1 0
+START marking-body-v1 139596
+EXIT run-position-v1 0
+ACTIVE marking-normal-v1,marking-body-v1 PENDING 53
+START marking-output-v1 139631
+EXIT marking-output-v1 0
+ACTIVE marking-normal-v1,marking-body-v1 PENDING 52
+START marking-returns-v1 139668
+ACTIVE marking-normal-v1,marking-body-v1,marking-returns-v1 PENDING 51
+ACTIVE marking-normal-v1,marking-body-v1,marking-returns-v1 PENDING 51
+EXIT marking-returns-v1 0
+ACTIVE marking-normal-v1,marking-body-v1 PENDING 51
+START destination-normal-v1 140783
+ACTIVE marking-normal-v1,marking-body-v1,destination-normal-v1 PENDING 50
+EXIT marking-body-v1 0
+START destination-body-v1 140823
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 49
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 49
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 49
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 49
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 49
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 49
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 49
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 49
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 49
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 49
+ACTIVE marking-normal-v1,destination-normal-v1,destination-body-v1 PENDING 49
+EXIT destination-body-v1 0
+START destination-output-v1 141934
+ACTIVE marking-normal-v1,destination-normal-v1,destination-output-v1 PENDING 48
+ACTIVE marking-normal-v1,destination-normal-v1,destination-output-v1 PENDING 48
+EXIT marking-normal-v1 0
+START destination-returns-v1 142297
+ACTIVE destination-normal-v1,destination-output-v1,destination-returns-v1 PENDING 47
+EXIT destination-output-v1 0
+ACTIVE destination-normal-v1,destination-returns-v1 PENDING 47
+START depth-normal-v1 142339
+ACTIVE destination-normal-v1,destination-returns-v1,depth-normal-v1 PENDING 46
+ACTIVE destination-normal-v1,destination-returns-v1,depth-normal-v1 PENDING 46
+EXIT destination-returns-v1 0
+START depth-body-v1 142385
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 45
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 45
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 45
+ACTIVE destination-normal-v1,depth-normal-v1,depth-body-v1 PENDING 45
+EXIT depth-body-v1 0
+ACTIVE destination-normal-v1,depth-normal-v1 PENDING 45
+START depth-output-v1 142440
+EXIT depth-output-v1 0
+ACTIVE destination-normal-v1,depth-normal-v1 PENDING 44
+START depth-returns-v1 142477
+ACTIVE destination-normal-v1,depth-normal-v1,depth-returns-v1 PENDING 43
+EXIT depth-returns-v1 0
+START prior-destination-live-observers-v1 142676
+ACTIVE destination-normal-v1,depth-normal-v1,prior-destination-live-observers-v1 PENDING 42
+EXIT prior-destination-live-observers-v1 0
+START prior-live-observers-v1 142717
+ACTIVE destination-normal-v1,depth-normal-v1,prior-live-observers-v1 PENDING 41
+ACTIVE destination-normal-v1,depth-normal-v1,prior-live-observers-v1 PENDING 41
+ACTIVE destination-normal-v1,depth-normal-v1,prior-live-observers-v1 PENDING 41
+EXIT prior-live-observers-v1 0
+START prior-depth-live-observers-v1 142917
+EXIT destination-normal-v1 0
+START scoped-write-errors-v1 142950
+EXIT depth-normal-v1 0
+ACTIVE prior-depth-live-observers-v1,scoped-write-errors-v1 PENDING 39
+START chase-normal-v1 142991
+EXIT prior-depth-live-observers-v1 0
+EXIT scoped-write-errors-v1 0
+START chase-body-v1 143025
+START chase-output-v1 143060
+ACTIVE chase-normal-v1,chase-body-v1,chase-output-v1 PENDING 36
+EXIT chase-output-v1 0
+START chase-returns-v1 143102
+EXIT chase-returns-v1 0
+START prior-chase-live-observers-v1 143143
+EXIT chase-body-v1 0
+ACTIVE chase-normal-v1,prior-chase-live-observers-v1 PENDING 34
+START travel-normal-v1 143176
+EXIT prior-chase-live-observers-v1 0
+START travel-body-v1 143217
+ACTIVE chase-normal-v1,travel-normal-v1,travel-body-v1 PENDING 32
+EXIT travel-body-v1 0
+START travel-output-v1 143255
+ACTIVE chase-normal-v1,travel-normal-v1,travel-output-v1 PENDING 31
+EXIT travel-normal-v1 0
+START travel-returns-v1 143321
+ACTIVE chase-normal-v1,travel-output-v1,travel-returns-v1 PENDING 30
+EXIT travel-output-v1 0
+EXIT travel-returns-v1 0
+START prior-travel-live-observers-v1 143355
+START offside-normal-v1 143389
+EXIT prior-travel-live-observers-v1 0
+START offside-body-v1 143427
+ACTIVE chase-normal-v1,offside-normal-v1,offside-body-v1 PENDING 27
+EXIT chase-normal-v1 0
+START offside-output-v1 143460
+ACTIVE offside-normal-v1,offside-body-v1,offside-output-v1 PENDING 26
+EXIT offside-output-v1 0
+START offside-returns-v1 143495
+EXIT offside-body-v1 0
+EXIT offside-returns-v1 0
+START prior-offside-live-observers-v1 143686
+START pascal-normal-v1 143720
+ACTIVE offside-normal-v1,prior-offside-live-observers-v1,pascal-normal-v1 PENDING 23
+EXIT prior-offside-live-observers-v1 0
+START pascal-body-v1 143756
+ACTIVE offside-normal-v1,pascal-normal-v1,pascal-body-v1 PENDING 22
+EXIT pascal-body-v1 0
+START pascal-output-v1 143958
+ACTIVE offside-normal-v1,pascal-normal-v1,pascal-output-v1 PENDING 21
+EXIT pascal-normal-v1 0
+START prior-pascal-live-observers-v1 144147
+EXIT prior-pascal-live-observers-v1 0
+START keyboard-normal-v1 144182
+ACTIVE offside-normal-v1,pascal-output-v1,keyboard-normal-v1 PENDING 19
+ACTIVE offside-normal-v1,pascal-output-v1,keyboard-normal-v1 PENDING 19
+EXIT pascal-output-v1 0
+START keyboard-body-v1 144228
+ACTIVE offside-normal-v1,keyboard-normal-v1,keyboard-body-v1 PENDING 18
+EXIT keyboard-body-v1 0
+START keyboard-output-v1 144423
+EXIT keyboard-normal-v1 0
+START keyboard-returns-v1 144458
+ACTIVE offside-normal-v1,keyboard-output-v1,keyboard-returns-v1 PENDING 16
+EXIT keyboard-returns-v1 0
+START prior-keyboard-live-observers-v1 144495
+EXIT prior-keyboard-live-observers-v1 0
+START text-normal-v1 144536
+ACTIVE offside-normal-v1,keyboard-output-v1,text-normal-v1 PENDING 14
+EXIT offside-normal-v1 0
+EXIT keyboard-output-v1 0
+START text-body-v1 144574
+START text-output-v1 144608
+ACTIVE text-normal-v1,text-body-v1,text-output-v1 PENDING 12
+ACTIVE text-normal-v1,text-body-v1,text-output-v1 PENDING 12
+ACTIVE text-normal-v1,text-body-v1,text-output-v1 PENDING 12
+ACTIVE text-normal-v1,text-body-v1,text-output-v1 PENDING 12
+EXIT text-body-v1 0
+START text-returns-v1 144659
+EXIT text-returns-v1 0
+START prior-text-live-observers-v1 144847
+ACTIVE text-normal-v1,text-output-v1,prior-text-live-observers-v1 PENDING 10
+EXIT prior-text-live-observers-v1 0
+START commentary-normal-v1 144882
+ACTIVE text-normal-v1,text-output-v1,commentary-normal-v1 PENDING 9
+ACTIVE text-normal-v1,text-output-v1,commentary-normal-v1 PENDING 9
+ACTIVE text-normal-v1,text-output-v1,commentary-normal-v1 PENDING 9
+ACTIVE text-normal-v1,text-output-v1,commentary-normal-v1 PENDING 9
+ACTIVE text-normal-v1,text-output-v1,commentary-normal-v1 PENDING 9
+EXIT text-normal-v1 0
+START commentary-body-v1 144947
+ACTIVE text-output-v1,commentary-normal-v1,commentary-body-v1 PENDING 8
+ACTIVE text-output-v1,commentary-normal-v1,commentary-body-v1 PENDING 8
+ACTIVE text-output-v1,commentary-normal-v1,commentary-body-v1 PENDING 8
+ACTIVE text-output-v1,commentary-normal-v1,commentary-body-v1 PENDING 8
+ACTIVE text-output-v1,commentary-normal-v1,commentary-body-v1 PENDING 8
+ACTIVE text-output-v1,commentary-normal-v1,commentary-body-v1 PENDING 8
+ACTIVE text-output-v1,commentary-normal-v1,commentary-body-v1 PENDING 8
+ACTIVE text-output-v1,commentary-normal-v1,commentary-body-v1 PENDING 8
+ACTIVE text-output-v1,commentary-normal-v1,commentary-body-v1 PENDING 8
+ACTIVE text-output-v1,commentary-normal-v1,commentary-body-v1 PENDING 8
+ACTIVE text-output-v1,commentary-normal-v1,commentary-body-v1 PENDING 8
+EXIT text-output-v1 0
+START commentary-output-v1 146138
+ACTIVE commentary-normal-v1,commentary-body-v1,commentary-output-v1 PENDING 7
+ACTIVE commentary-normal-v1,commentary-body-v1,commentary-output-v1 PENDING 7
+ACTIVE commentary-normal-v1,commentary-body-v1,commentary-output-v1 PENDING 7
+ACTIVE commentary-normal-v1,commentary-body-v1,commentary-output-v1 PENDING 7
+EXIT commentary-body-v1 0
+ACTIVE commentary-normal-v1,commentary-output-v1 PENDING 7
+START commentary-returns-v1 146515
+ACTIVE commentary-normal-v1,commentary-output-v1,commentary-returns-v1 PENDING 6
+ACTIVE commentary-normal-v1,commentary-output-v1,commentary-returns-v1 PENDING 6
+ACTIVE commentary-normal-v1,commentary-output-v1,commentary-returns-v1 PENDING 6
+EXIT commentary-returns-v1 0
+START prior-commentary-live-observers-v1 146870
+ACTIVE commentary-normal-v1,commentary-output-v1,prior-commentary-live-observers-v1 PENDING 5
+EXIT prior-commentary-live-observers-v1 0
+START strength-normal-v1 147074
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+ACTIVE commentary-normal-v1,commentary-output-v1,strength-normal-v1 PENDING 4
+EXIT commentary-output-v1 0
+START strength-body-v1 182444
+ACTIVE commentary-normal-v1,strength-normal-v1,strength-body-v1 PENDING 3
+ACTIVE commentary-normal-v1,strength-normal-v1,strength-body-v1 PENDING 3
+ACTIVE commentary-normal-v1,strength-normal-v1,strength-body-v1 PENDING 3
+ACTIVE commentary-normal-v1,strength-normal-v1,strength-body-v1 PENDING 3
+ACTIVE commentary-normal-v1,strength-normal-v1,strength-body-v1 PENDING 3
+ACTIVE commentary-normal-v1,strength-normal-v1,strength-body-v1 PENDING 3
+ACTIVE commentary-normal-v1,strength-normal-v1,strength-body-v1 PENDING 3
+EXIT strength-normal-v1 0
+START strength-output-v1 188991
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+ACTIVE commentary-normal-v1,strength-body-v1,strength-output-v1 PENDING 2
+EXIT commentary-normal-v1 0
+START strength-returns-v1 192841
+ACTIVE strength-body-v1,strength-output-v1,strength-returns-v1 PENDING 1
+ACTIVE strength-body-v1,strength-output-v1,strength-returns-v1 PENDING 1
+EXIT strength-body-v1 0
+START live-observers-v1 193048
+ACTIVE strength-output-v1,strength-returns-v1,live-observers-v1 PENDING 0
+EXIT live-observers-v1 0
+ACTIVE strength-output-v1,strength-returns-v1 PENDING 0
+ACTIVE strength-output-v1,strength-returns-v1 PENDING 0
+ACTIVE strength-output-v1,strength-returns-v1 PENDING 0
+ACTIVE strength-output-v1,strength-returns-v1 PENDING 0
+EXIT strength-returns-v1 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+ACTIVE strength-output-v1 PENDING 0
+EXIT strength-output-v1 0
+START taps-rust-v1 208032
+ACTIVE taps-rust-v1 PENDING 0
+ACTIVE taps-rust-v1 PENDING 0
+ACTIVE taps-rust-v1 PENDING 0
+ACTIVE taps-rust-v1 PENDING 0
+ACTIVE taps-rust-v1 PENDING 0
+EXIT taps-rust-v1 0
+WAIT FOR QUIET HOST (1.08935546875, 1.115234375, 1.09033203125) 1 /3
+WAIT FOR QUIET HOST (0.92138671875, 1.078125, 1.07861328125) 2 /3
+WAIT FOR QUIET HOST (0.716796875, 1.0244140625, 1.06103515625) 3 /3
+START family-ALL-v1 208751
+START check-v1 208845
+START profile-after-v1 208957
+ACTIVE family-ALL-v1,check-v1,profile-after-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1,profile-after-v1 PENDING 0
+EXIT profile-after-v1 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+Preserved completed ALL records 10
+Provisional strict prefix 10 equal; full ALL75/F40 pending
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+Preserved completed ALL records 20
+Provisional strict prefix 20 equal; full ALL75/F40 pending
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+ACTIVE family-ALL-v1,check-v1 PENDING 0
+EXIT check-v1 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+Preserved completed ALL records 30
+Provisional strict prefix 30 equal; full ALL75/F40 pending
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+Preserved completed ALL records 60
+Provisional strict prefix 60 equal; full ALL75/F40 pending
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+ACTIVE family-ALL-v1 PENDING 0
+EXIT family-ALL-v1 0
+ACTIVE  PENDING 0
+START performance-v1 210168
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+ACTIVE performance-v1 PENDING 0
+EXIT performance-v1 0
+ALL PRODUCERS EXITED; run post-exit audit after this writer exits

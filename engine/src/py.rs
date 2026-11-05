@@ -42,6 +42,7 @@ fn base_of(r: Reg) -> (&'static str, u64) {
         Reg::Es => ("es", 0xFFFF),
         Reg::Ss => ("ss", 0xFFFF),
         Reg::Eflags => ("eflags", 0xFFFF_FFFF),
+        Reg::Cs => ("cs", 0xFFFF),
     }
 }
 

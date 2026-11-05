@@ -1,0 +1,8 @@
+denied: unicorn, .sav, .EXE, .DAT
+Real capture cases complete {'real': {'total': 96, 'equal': 0}}
+Authored inputs complete 100
+Authored inputs complete 200
+Authored inputs complete 300
+Authored inputs complete 400
+Authored inputs complete 500
+{"mutant": 16, "comparisons": {"real": {"total": 96, "equal": 0}, "random-edge": {"total": 2000, "equal": 0}}, "paths": {"full_outer": 40, "inner22": 122, "quick_exit": 2040, "wait_write": 36}, "observer_mutations": {"keys": 4944, "inner": 9350, "bp_mutations": 200, "rec_mutations": 1204, "slot_mutations": 32, "play_mutations": 294, "return_mutations": 5740}, "error_comparisons": 0, "all_equal": false, "source_unchanged": true}

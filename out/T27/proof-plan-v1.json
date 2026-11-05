@@ -1,0 +1,3821 @@
+{
+  "authored_per_body": 500,
+  "body_control_comparisons": 14672,
+  "body_controls": {
+    "1771:0AA7": 359,
+    "1771:0BC4": 360,
+    "1771:3041": 361,
+    "1771:3088": 362,
+    "1771:3179": 363,
+    "1771:377E": 364,
+    "214B:0C57": 365
+  },
+  "branch_comparisons": 1600,
+  "branch_exclusions": {
+    "pc-dispatch": "Track actual block edges instead of false comparisons in the dispatch ladder",
+    "variant-only": "Explicit nondefault fallback proofs cover variant-only choices",
+    "while-True:false": "Constant loop exits through its source branch/return edges"
+  },
+  "branch_outcomes": [
+    "bit-result:0",
+    "bit-result:1",
+    "out_of_place_flag:531:not ax & 255 and foot != 0:false",
+    "out_of_place_flag:531:not ax & 255 and foot != 0:true",
+    "out_of_place_flag:535:member:false",
+    "out_of_place_flag:535:member:true",
+    "out_of_place_flag:537:flag is None and foot == 0:false",
+    "out_of_place_flag:537:flag is None and foot == 0:true",
+    "out_of_place_flag:541:member:false",
+    "out_of_place_flag:541:member:true",
+    "out_of_place_flag:543:flag is None:false",
+    "out_of_place_flag:543:flag is None:true",
+    "player_strength:560:ax & 255:false",
+    "player_strength:560:ax & 255:true",
+    "player_strength:567:c >= 32:false",
+    "player_strength:567:c >= 32:true",
+    "player_strength:574:s16(v) < 0:false",
+    "player_strength:574:s16(v) < 0:true",
+    "player_strength:576:s16(v) > 256:false",
+    "player_strength:576:s16(v) > 256:true",
+    "player_strength:580:ax & 255:false",
+    "player_strength:580:ax & 255:true",
+    "quick-edge:0BC4->0BF2",
+    "quick-edge:0BEF->0BF2",
+    "quick-edge:0BF2->0BEF",
+    "quick-edge:0BF2->0C0D",
+    "quick-edge:0C0D->0C17",
+    "quick-edge:0C14->0C17",
+    "quick-edge:0C17->0C28",
+    "quick-edge:0C17->0C2B",
+    "quick-edge:0C28->0DD1",
+    "quick-edge:0C2B->0C65",
+    "quick-edge:0C2B->0C6B",
+    "quick-edge:0C65->0C6B",
+    "quick-edge:0C6B->0C75",
+    "quick-edge:0C6B->0C78",
+    "quick-edge:0C75->0D32",
+    "quick-edge:0C78->0C82",
+    "quick-edge:0C7F->0C82",
+    "quick-edge:0C82->0C92",
+    "quick-edge:0C82->0C95",
+    "quick-edge:0C92->0D29",
+    "quick-edge:0C95->0C9B",
+    "quick-edge:0C95->0CCC",
+    "quick-edge:0C9B->0CB5",
+    "quick-edge:0C9B->0CCC",
+    "quick-edge:0CB5->0CF1",
+    "quick-edge:0CCC->0CF1",
+    "quick-edge:0CF1->0CF7",
+    "quick-edge:0CF1->0D11",
+    "quick-edge:0CF7->0D29",
+    "quick-edge:0D11->0D29",
+    "quick-edge:0D29->0D2F",
+    "quick-edge:0D29->0D32",
+    "quick-edge:0D2F->0C7F",
+    "quick-edge:0D32->0D44",
+    "quick-edge:0D32->0D6E",
+    "quick-edge:0D44->0DD1",
+    "quick-edge:0D6E->0DD1",
+    "quick-edge:0DD1->0DD7",
+    "quick-edge:0DD1->0DDA",
+    "quick-edge:0DD7->0C14",
+    "quick-edge:0DDA->0DE0",
+    "quick-edge:0DDA->0E1E",
+    "quick-edge:0DE0->0DEA",
+    "quick-edge:0DE7->0DEA",
+    "quick-edge:0DEA->0DE7",
+    "quick-edge:0DEA->0E1E",
+    "two-footed:0",
+    "two-footed:1"
+  ],
+  "branch_probe_sha256": "22955b9d3116db67155d4432360efbb4b8b0ab231a7e7da4df668f6c2fc86565",
+  "cases_per_error_selector": 160,
+  "distinct_error_selectors": 279,
+  "error_comparisons": 44640,
+  "error_execution_rows": 279,
+  "errors": {
+    "1771:0AA7": [
+      {
+        "controlled": false,
+        "selector": "1771:0AA7"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132071"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132091"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132094"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132132"
+      }
+    ],
+    "1771:0BC4": [
+      {
+        "controlled": false,
+        "selector": "1771:0AA7"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:0BC4"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:0BE5"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:0C5C"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:0C90"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:0CB1"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:0CC7"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:0CEE"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:3041"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:3088"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:3179"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:319A"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:31A4"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:31C0"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:31DA"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:3216"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:377E"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:379F"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:3808"
+      },
+      {
+        "controlled": false,
+        "selector": "214B:0C57"
+      },
+      {
+        "controlled": false,
+        "selector": "23E4:08DF"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:176"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:352"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:9"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ax"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cx"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:dx"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:eflags"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1395"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:697"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:9"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132071"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132091"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132094"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132132"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132376"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132379"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132389"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132394"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132399"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132419"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132429"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132436"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132484"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132487"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132508"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132520"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132536"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132543"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132560"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132593"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132615"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132654"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132683"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132709"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132776"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132792"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132834"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132877"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132898"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132903"
+      },
+      {
+        "controlled": false,
+        "selector": "write:132948"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141697"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141717"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141720"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141756"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141768"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141788"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141791"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141837"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142009"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142029"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142032"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142042"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142052"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142080"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142106"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142154"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142277"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143550"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143570"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143573"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143583"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143589"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143681"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143688"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143701"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143707"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169696"
+      }
+    ],
+    "1771:3041": [
+      {
+        "controlled": false,
+        "selector": "1771:3041"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141697"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141717"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141720"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141756"
+      }
+    ],
+    "1771:3088": [
+      {
+        "controlled": false,
+        "selector": "1771:3088"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141768"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141788"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141791"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141837"
+      }
+    ],
+    "1771:3179": [
+      {
+        "controlled": false,
+        "selector": "1771:3041"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:3088"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:3179"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:319A"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:31A4"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:31C0"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:31DA"
+      },
+      {
+        "controlled": false,
+        "selector": "23E4:08DF"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ax"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cx"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:dx"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:eflags"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:12"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:24"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:9"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141697"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141717"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141720"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141756"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141768"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141788"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141791"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141837"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142009"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142029"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142032"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142042"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142052"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142080"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142106"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142154"
+      }
+    ],
+    "1771:377E": [
+      {
+        "controlled": false,
+        "selector": "1771:3041"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:3088"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:3179"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:319A"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:31A4"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:31C0"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:31DA"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:3216"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:377E"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:379F"
+      },
+      {
+        "controlled": false,
+        "selector": "1771:3808"
+      },
+      {
+        "controlled": false,
+        "selector": "23E4:08DF"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:12"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:6"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:9"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ax"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cx"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:dx"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:eflags"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:18"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:37"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:8"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:9"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141697"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141717"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141720"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141756"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141768"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141788"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141791"
+      },
+      {
+        "controlled": false,
+        "selector": "write:141837"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142009"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142029"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142032"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142042"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142052"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142080"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142106"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142154"
+      },
+      {
+        "controlled": false,
+        "selector": "write:142277"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143550"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143570"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143573"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143583"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143589"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143681"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143688"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143701"
+      },
+      {
+        "controlled": false,
+        "selector": "write:143707"
+      }
+    ],
+    "214B:0C57": [
+      {
+        "controlled": false,
+        "selector": "214B:0C57"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169696"
+      }
+    ]
+  },
+  "inventory_sha256": "1ac66c9585c79c4a4f553f3e6e363677ec743d6dd65cd53c359cb998b1e800f8",
+  "normal_comparisons": 20672,
+  "observed_maxima": {
+    "1771:0AA7": {
+      "max_reads": 2,
+      "max_writes": 4,
+      "observed_write_pcs": [
+        132071,
+        132091,
+        132094,
+        132132
+      ],
+      "selected_read_ordinals": [
+        1,
+        2
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "1771:0BC4": {
+      "max_reads": 352,
+      "max_writes": 1395,
+      "observed_write_pcs": [
+        132071,
+        132091,
+        132094,
+        132132,
+        132376,
+        132379,
+        132389,
+        132394,
+        132399,
+        132419,
+        132429,
+        132436,
+        132484,
+        132487,
+        132508,
+        132520,
+        132536,
+        132543,
+        132560,
+        132593,
+        132615,
+        132654,
+        132683,
+        132709,
+        132776,
+        132792,
+        132834,
+        132877,
+        132898,
+        132903,
+        132948,
+        141697,
+        141717,
+        141720,
+        141756,
+        141768,
+        141788,
+        141791,
+        141837,
+        142009,
+        142029,
+        142032,
+        142042,
+        142052,
+        142080,
+        142106,
+        142154,
+        142277,
+        143550,
+        143570,
+        143573,
+        143583,
+        143589,
+        143681,
+        143688,
+        143701,
+        143707,
+        169696
+      ],
+      "selected_read_ordinals": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        176,
+        352
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        697,
+        1395
+      ]
+    },
+    "1771:3041": {
+      "max_reads": 2,
+      "max_writes": 4,
+      "observed_write_pcs": [
+        141697,
+        141717,
+        141720,
+        141756
+      ],
+      "selected_read_ordinals": [
+        1,
+        2
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "1771:3088": {
+      "max_reads": 2,
+      "max_writes": 4,
+      "observed_write_pcs": [
+        141768,
+        141788,
+        141791,
+        141837
+      ],
+      "selected_read_ordinals": [
+        1,
+        2
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "1771:3179": {
+      "max_reads": 8,
+      "max_writes": 24,
+      "observed_write_pcs": [
+        141697,
+        141717,
+        141720,
+        141756,
+        141768,
+        141788,
+        141791,
+        141837,
+        142009,
+        142029,
+        142032,
+        142042,
+        142052,
+        142080,
+        142106,
+        142154
+      ],
+      "selected_read_ordinals": [
+        1,
+        2,
+        3,
+        4,
+        8
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        12,
+        24
+      ]
+    },
+    "1771:377E": {
+      "max_reads": 12,
+      "max_writes": 37,
+      "observed_write_pcs": [
+        141697,
+        141717,
+        141720,
+        141756,
+        141768,
+        141788,
+        141791,
+        141837,
+        142009,
+        142029,
+        142032,
+        142042,
+        142052,
+        142080,
+        142106,
+        142154,
+        142277,
+        143550,
+        143570,
+        143573,
+        143583,
+        143589,
+        143681,
+        143688,
+        143701,
+        143707
+      ],
+      "selected_read_ordinals": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        9,
+        12
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        18,
+        37
+      ]
+    },
+    "214B:0C57": {
+      "max_reads": 2,
+      "max_writes": 2,
+      "observed_write_pcs": [
+        169696
+      ],
+      "selected_read_ordinals": [
+        1,
+        2
+      ],
+      "selected_write_ordinals": [
+        1,
+        2
+      ]
+    }
+  },
+  "observer_modes": 4,
+  "ordinal_scope": "Bounded observed early/middle/last read AND write ordinals,plus every observed write PC/register/site;not exhaustive global fault coverage",
+  "output_control_comparisons": 102704,
+  "output_controls": [
+    {
+      "control": 366,
+      "root": "1771:0AA7"
+    },
+    {
+      "control": 367,
+      "root": "1771:0AA7"
+    },
+    {
+      "control": 368,
+      "root": "1771:0AA7"
+    },
+    {
+      "control": 369,
+      "root": "1771:0AA7"
+    },
+    {
+      "control": 370,
+      "root": "1771:0AA7"
+    },
+    {
+      "control": 371,
+      "root": "1771:0AA7"
+    },
+    {
+      "control": 372,
+      "root": "1771:0AA7"
+    },
+    {
+      "control": 373,
+      "root": "1771:0BC4"
+    },
+    {
+      "control": 374,
+      "root": "1771:0BC4"
+    },
+    {
+      "control": 375,
+      "root": "1771:0BC4"
+    },
+    {
+      "control": 376,
+      "root": "1771:0BC4"
+    },
+    {
+      "control": 377,
+      "root": "1771:0BC4"
+    },
+    {
+      "control": 378,
+      "root": "1771:0BC4"
+    },
+    {
+      "control": 379,
+      "root": "1771:0BC4"
+    },
+    {
+      "control": 380,
+      "root": "1771:3041"
+    },
+    {
+      "control": 381,
+      "root": "1771:3041"
+    },
+    {
+      "control": 382,
+      "root": "1771:3041"
+    },
+    {
+      "control": 383,
+      "root": "1771:3041"
+    },
+    {
+      "control": 384,
+      "root": "1771:3041"
+    },
+    {
+      "control": 385,
+      "root": "1771:3041"
+    },
+    {
+      "control": 386,
+      "root": "1771:3041"
+    },
+    {
+      "control": 387,
+      "root": "1771:3088"
+    },
+    {
+      "control": 388,
+      "root": "1771:3088"
+    },
+    {
+      "control": 389,
+      "root": "1771:3088"
+    },
+    {
+      "control": 390,
+      "root": "1771:3088"
+    },
+    {
+      "control": 391,
+      "root": "1771:3088"
+    },
+    {
+      "control": 392,
+      "root": "1771:3088"
+    },
+    {
+      "control": 393,
+      "root": "1771:3088"
+    },
+    {
+      "control": 394,
+      "root": "1771:3179"
+    },
+    {
+      "control": 395,
+      "root": "1771:3179"
+    },
+    {
+      "control": 396,
+      "root": "1771:3179"
+    },
+    {
+      "control": 397,
+      "root": "1771:3179"
+    },
+    {
+      "control": 398,
+      "root": "1771:3179"
+    },
+    {
+      "control": 399,
+      "root": "1771:3179"
+    },
+    {
+      "control": 400,
+      "root": "1771:3179"
+    },
+    {
+      "control": 401,
+      "root": "1771:377E"
+    },
+    {
+      "control": 402,
+      "root": "1771:377E"
+    },
+    {
+      "control": 403,
+      "root": "1771:377E"
+    },
+    {
+      "control": 404,
+      "root": "1771:377E"
+    },
+    {
+      "control": 405,
+      "root": "1771:377E"
+    },
+    {
+      "control": 406,
+      "root": "1771:377E"
+    },
+    {
+      "control": 407,
+      "root": "1771:377E"
+    },
+    {
+      "control": 408,
+      "root": "214B:0C57"
+    },
+    {
+      "control": 409,
+      "root": "214B:0C57"
+    },
+    {
+      "control": 410,
+      "root": "214B:0C57"
+    },
+    {
+      "control": 411,
+      "root": "214B:0C57"
+    },
+    {
+      "control": 412,
+      "root": "214B:0C57"
+    },
+    {
+      "control": 413,
+      "root": "214B:0C57"
+    },
+    {
+      "control": 414,
+      "root": "214B:0C57"
+    }
+  ],
+  "preseal_reached_errors": {
+    "1771:0AA7/1771:0AA7": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0AA7/read-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:0AA7/read-index:2": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:0AA7/reg:bp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:0AA7/reg:cs": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:0AA7/reg:ip": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:0AA7/reg:sp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:0AA7/reg:ss": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:0AA7/write": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0AA7/write-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0AA7/write-index:2": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0AA7/write-index:3": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0AA7/write-index:4": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0AA7/write:132071": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0AA7/write:132091": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0AA7/write:132094": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0AA7/write:132132": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/1771:0AA7": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:0BC4": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:0BE5": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:0C5C": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:0C90": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:0CB1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:0CC7": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:0CEE": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:3041": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:3088": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:3179": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:319A": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:31A4": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:31C0": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:31DA": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:3216": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:377E": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:379F": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/1771:3808": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/214B:0C57": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/23E4:08DF": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:0BC4/read-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:0BC4/read-index:176": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:0BC4/read-index:2": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:0BC4/read-index:3": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:0BC4/read-index:352": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:0BC4/read-index:4": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:0BC4/read-index:8": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:0BC4/read-index:9": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:0BC4/reg:ax": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:0BC4/reg:bp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:0BC4/reg:cs": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:0BC4/reg:cx": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:0BC4/reg:dx": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:0BC4/reg:eflags": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:0BC4/reg:ip": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:0BC4/reg:sp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:0BC4/reg:ss": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:0BC4/write": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write-index:1395": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write-index:2": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write-index:3": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write-index:4": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write-index:697": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write-index:8": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write-index:9": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132071": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132091": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132094": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132132": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132376": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132379": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132389": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132394": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132399": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132419": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132429": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132436": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132484": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132487": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132508": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132520": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132536": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132543": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132560": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132593": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132615": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132654": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132683": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132709": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132776": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132792": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132834": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132877": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132898": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132903": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:132948": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:141697": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:141717": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:141720": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:141756": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:141768": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:141788": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:141791": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:141837": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:142009": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:142029": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:142032": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:142042": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:142052": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:142080": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:142106": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:142154": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:142277": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:143550": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:143570": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:143573": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:143583": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:143589": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:143681": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:143688": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:143701": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:143707": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:0BC4/write:169696": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3041/1771:3041": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:3041/read-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:3041/read-index:2": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:3041/reg:bp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3041/reg:cs": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3041/reg:ip": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3041/reg:sp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3041/reg:ss": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3041/write": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3041/write-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3041/write-index:2": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3041/write-index:3": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3041/write-index:4": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3041/write:141697": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3041/write:141717": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3041/write:141720": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3041/write:141756": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3088/1771:3088": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:3088/read-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:3088/read-index:2": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:3088/reg:bp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3088/reg:cs": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3088/reg:ip": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3088/reg:sp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3088/reg:ss": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3088/write": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3088/write-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3088/write-index:2": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3088/write-index:3": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3088/write-index:4": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3088/write:141768": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3088/write:141788": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3088/write:141791": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3088/write:141837": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/1771:3041": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:3179/1771:3088": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:3179/1771:3179": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:3179/1771:319A": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:3179/1771:31A4": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:3179/1771:31C0": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:3179/1771:31DA": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:3179/23E4:08DF": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:3179/read-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:3179/read-index:2": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:3179/read-index:3": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:3179/read-index:4": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:3179/read-index:8": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:3179/reg:ax": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3179/reg:bp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3179/reg:cs": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3179/reg:cx": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3179/reg:dx": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3179/reg:eflags": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3179/reg:ip": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3179/reg:sp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3179/reg:ss": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:3179/write": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write-index:12": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write-index:2": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write-index:24": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write-index:3": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write-index:4": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write-index:8": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write-index:9": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:141697": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:141717": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:141720": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:141756": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:141768": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:141788": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:141791": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:141837": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:142009": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:142029": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:142032": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:142042": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:142052": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:142080": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:142106": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:3179/write:142154": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/1771:3041": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:377E/1771:3088": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:377E/1771:3179": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:377E/1771:319A": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:377E/1771:31A4": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:377E/1771:31C0": {
+      "case": 19,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:377E/1771:31DA": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:377E/1771:3216": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:377E/1771:377E": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:377E/1771:379F": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:377E/1771:3808": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:377E/23E4:08DF": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "1771:377E/read-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:377E/read-index:12": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:377E/read-index:2": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:377E/read-index:3": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:377E/read-index:4": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:377E/read-index:6": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:377E/read-index:8": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:377E/read-index:9": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "1771:377E/reg:ax": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:377E/reg:bp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:377E/reg:cs": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:377E/reg:cx": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:377E/reg:dx": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:377E/reg:eflags": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:377E/reg:ip": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:377E/reg:sp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:377E/reg:ss": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "1771:377E/write": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write-index:18": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write-index:2": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write-index:3": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write-index:37": {
+      "case": 13,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write-index:4": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write-index:8": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write-index:9": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:141697": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:141717": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:141720": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:141756": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:141768": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:141788": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:141791": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:141837": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:142009": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:142029": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:142032": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:142042": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:142052": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:142080": {
+      "case": 19,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:142106": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:142154": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:142277": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:143550": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:143570": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:143573": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:143583": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:143589": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:143681": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:143688": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:143701": {
+      "case": 13,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "1771:377E/write:143707": {
+      "case": 11,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "214B:0C57/214B:0C57": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "214B:0C57/read-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "214B:0C57/read-index:2": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "214B:0C57/reg:bp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "214B:0C57/reg:cs": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "214B:0C57/reg:ip": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "214B:0C57/reg:sp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "214B:0C57/reg:ss": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "214B:0C57/write": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "214B:0C57/write-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "214B:0C57/write-index:2": {
+      "case": 3,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "214B:0C57/write:169696": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    }
+  },
+  "real_captures_per_body": 8,
+  "return_control_comparisons": 1920,
+  "return_controls": [
+    {
+      "caller": "1771:0BC4",
+      "control": 415,
+      "far": true,
+      "line": 1920,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/quick.py",
+      "resolution": {
+        "argument_order": "pop then reverse and re-push",
+        "consumed_words": 1,
+        "kind": "quick._call"
+      },
+      "ret_to": "1771:0BE5",
+      "target": "1771:0AA7"
+    },
+    {
+      "caller": "1771:0BC4",
+      "control": 416,
+      "far": true,
+      "line": 2069,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/quick.py",
+      "resolution": {
+        "argument_order": "pop then reverse and re-push",
+        "consumed_words": 1,
+        "kind": "quick._call"
+      },
+      "ret_to": "1771:0C5C",
+      "target": "1771:377E"
+    },
+    {
+      "caller": "1771:0BC4",
+      "control": 417,
+      "far": true,
+      "line": 2129,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/quick.py",
+      "resolution": {
+        "argument_order": "pop then reverse and re-push",
+        "consumed_words": 3,
+        "kind": "quick._call"
+      },
+      "ret_to": "1771:0C90",
+      "target": "23E4:08DF"
+    },
+    {
+      "caller": "1771:0BC4",
+      "control": 418,
+      "far": true,
+      "line": 2168,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/quick.py",
+      "resolution": {
+        "argument_order": "pop then reverse and re-push",
+        "consumed_words": 2,
+        "kind": "quick._call"
+      },
+      "ret_to": "1771:0CB1",
+      "target": "214B:0C57"
+    },
+    {
+      "caller": "1771:0BC4",
+      "control": 419,
+      "far": true,
+      "line": 2194,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/quick.py",
+      "resolution": {
+        "argument_order": "pop then reverse and re-push",
+        "consumed_words": 2,
+        "kind": "quick._call"
+      },
+      "ret_to": "1771:0CC7",
+      "target": "214B:0C57"
+    },
+    {
+      "caller": "1771:0BC4",
+      "control": 420,
+      "far": true,
+      "line": 2239,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/quick.py",
+      "resolution": {
+        "argument_order": "pop then reverse and re-push",
+        "consumed_words": 2,
+        "kind": "quick._call"
+      },
+      "ret_to": "1771:0CEE",
+      "target": "214B:0C57"
+    },
+    {
+      "caller": "1771:377E",
+      "control": 421,
+      "far": true,
+      "line": 559,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/attributes.py",
+      "resolution": {
+        "consumes_sent_AX": true,
+        "kind": "attributes.gcall",
+        "live_DX_after_sent": true
+      },
+      "ret_to": "1771:379F",
+      "target": "1771:3216"
+    },
+    {
+      "caller": "1771:377E",
+      "control": 422,
+      "far": true,
+      "line": 579,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/attributes.py",
+      "resolution": {
+        "consumes_sent_AX": true,
+        "kind": "attributes.gcall",
+        "live_DX_after_sent": true
+      },
+      "ret_to": "1771:3808",
+      "target": "1771:3179"
+    },
+    {
+      "caller": "1771:3179",
+      "control": 423,
+      "far": true,
+      "line": 525,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/attributes.py",
+      "resolution": {
+        "consumes_sent_AX": true,
+        "kind": "attributes.gcall",
+        "live_DX_after_sent": true
+      },
+      "ret_to": "1771:319A",
+      "target": "1771:3088"
+    },
+    {
+      "caller": "1771:3179",
+      "control": 424,
+      "far": true,
+      "line": 528,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/attributes.py",
+      "resolution": {
+        "consumes_sent_AX": true,
+        "kind": "attributes.gcall",
+        "live_DX_after_sent": true
+      },
+      "ret_to": "1771:31A4",
+      "target": "1771:3041"
+    },
+    {
+      "caller": "1771:3179",
+      "control": 425,
+      "far": true,
+      "line": 534,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/attributes.py",
+      "resolution": {
+        "binds_ret_to_argument": 5,
+        "helper_line": 96,
+        "helper_path": ".cache/goal2-archaeology/runtime/original_match/port/attributes.py",
+        "kind": "attributes.set_test"
+      },
+      "ret_to": "1771:31C0",
+      "target": "23E4:08DF"
+    },
+    {
+      "caller": "1771:3179",
+      "control": 426,
+      "far": true,
+      "line": 540,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/attributes.py",
+      "resolution": {
+        "binds_ret_to_argument": 5,
+        "helper_line": 96,
+        "helper_path": ".cache/goal2-archaeology/runtime/original_match/port/attributes.py",
+        "kind": "attributes.set_test"
+      },
+      "ret_to": "1771:31DA",
+      "target": "23E4:08DF"
+    }
+  ],
+  "test_source_sha256": "871da2e9eb444148dccc534719ecc8a9b15e9117be1c8b87b5a73aba037146d8",
+  "variants": {
+    "1771:3179": [
+      "foot-sets-swapped"
+    ],
+    "214B:0C57": [
+      "bit-shift-1"
+    ]
+  }
+}

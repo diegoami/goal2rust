@@ -78,13 +78,20 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
    paired median1.57% less CPU than saved T25,two faster/one3.69% slower round.
    [Assessment](../out/T26/assessment.md) retains all raw samples/ratios/limits.
    Final ledger/CI/merge status stays in checkpoint#1;no following task selected.
-11. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
+11. **T27,in progress,[issue #62](https://github.com/diegoami/goal2rust/issues/62):**
+   [Complete quick-result strength tree](tasks/T27.md),seven bodies/12 actual
+   returns/27 owned code objects,including the used Rec methods.0BC4 is the
+   highest remaining registered-body self-time in the full T26 profile. Native
+   availability/membership are the only guest boundaries. Preserve actual T26
+   before builds;capture56 genuine entries on50 sealed pure-oracle inputs.
+   Fixed-fixture prediction18,250 moved entries is not a speed claim.
+12. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
    dominant, define a separate optimization task. A larger PR alone does not remove
    every Python boundary or common dispatch cost.
-12. **Engine milestone and application adoption:** retain the larger A700 corpus,
+13. **Engine milestone and application adoption:** retain the larger A700 corpus,
    known ref-121 noncompletion and owner review, then worker/save-load/cancellation/
    playtest and representative performance gates. PyPy remains goal2's baseline.
-13. **Whole game later:** tournament, board and career initialization still have
+14. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
 Current profile is **79/422 registered non-stub bodies (18.72%)**, while **88.43%**
@@ -612,3 +619,29 @@ T120's silent-fixture proof runner/input contract remains further work. Goal2
 has advanced save/quit and management UI. Keep T25's oracle/artifact fixed and
 finish its remaining M3 gates; select following scope only from the fresh full
 profile. See the [resume dependency check](porting-chunks.md#t25-resume-dependency-check-2026-11-04).
+
+T27 preparation upstream check (2026-11-04): goal2 `ec9429c6` contains the
+original-kit UI correction; archaeology `d3375867` now merges
+[T120 / PR #650](https://github.com/diegoami/goal2-archaeology/pull/650),
+porting the silent fixture path (6970, D47E, B602, BB2F) with E040 proof and
+falsifier records. This advances the later whole-game route dependency. The
+upstream T124a ordering now follows T120 rather than waiting for T121.
+These additions do not change T27's selected seven-body tree or authorize a
+mid-campaign oracle refresh. Keep its controlled `2cbeb36f` pin and finish its
+full fidelity/performance gates before merging. Later route adoption must assess
+the new module and its dedicated proofs explicitly; a match-engine receipt does
+not establish whole-game parity.
+
+T27 resume dependency check (2026-11-05): goal2 `3fb3191d` adds T180's match
+stop/bench UI and requires in-season ageing for T170. Archaeology `7032ce40`
+merges T124a round-end framing, T124t legal-eleven harness and T121 fixture
+routing/news. T122 is split into five proof slices; T124b into rankings/draw,
+and required in-season ageing T124f now precedes sealed-season T123, while
+sealed year rollover stays deferred. These advance later whole-game dependencies;
+they do not replace T27's controlled `2cbeb36f` match pin or its full gates.
+
+T27's complete seven-body strength closure now passes its full local canonical,
+corpus and quiet timing campaign,with 86/422 bodies and 89.02% native fixture
+entry frequency. Median CPU use is4.80% lower than saved T26 with one3.05%
+slower round;one-fixture evidence only. Final ledgers pass;checkpoint#1 owns
+exact-headCI/merge/mainCI/merged-audit status. No following scope is started.

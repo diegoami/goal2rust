@@ -12,7 +12,7 @@ pub enum Ev {
 
 pub struct TestHost {
     pub memory: Vec<u8>,
-    pub regs: [u32; 11],
+    pub regs: [u32; 12],
     pub log: Vec<Ev>,
     pub ds: u16,
     pub load: u16,
@@ -23,7 +23,7 @@ impl TestHost {
     pub fn new(load: u16) -> Self {
         TestHost {
             memory: vec![0; MEM_SIZE as usize],
-            regs: [0; 11],
+            regs: [0; 12],
             log: vec![],
             ds: load.wrapping_add(0x2581),
             load,

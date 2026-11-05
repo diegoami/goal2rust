@@ -1,0 +1,18 @@
+bit-cached-arguments-live-flags {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'cached-arguments-preserved-other-flags-live': 160}}
+manager-live-SS-argument {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'argument-live-SS-after-enter': 160, 'restore-SS-after-manager-local': 160}}
+two-foot-captured-pointer-live-bytes {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'captured-pointer-live-two-bytes': 160}}
+foot-cached-id-live-table {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'cached-player-id-live-row-table': 160}}
+gcall-sent-AX-live-DX-CS {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'captured-sent-versus-new-live-AX-DX': 160, 'live-CS-after-second-guest': 160}}
+strength-captured-v-after-place {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'captured-v-survives-live-record-change': 160}}
+quick-live-record-locals {'comparisons': 160, 'effect_witnesses': 160, 'hits': {'live-record-locals-after-strength': 160}}
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T27/live_observers.py", line 132, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/diego/projects/goal2rust/out/T27/live_observers.py", line 120, in main
+    p,ph=run(Oracle,case,scenario,True);r,rh=run(PortMachine,case,scenario,True);assert p==r and ph==rh,(scenario,case,[k for k in p if p[k]!=r[k]])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/goal2rust/out/T27/live_observers.py", line 83, in run
+    assert result['error'] is None,(scenario,case,cls.__name__,result['error'])
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('quick-pop-captures-segment-before-flush', 0, 'PortMachine', ('PortError', 'no registered port/return at 1771:0BE5'))

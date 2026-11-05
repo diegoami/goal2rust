@@ -1,0 +1,10 @@
+{
+  "generated_native_blocks": true,
+  "generator_sha256": "d889830d7b7182abb87834477868d82010f6e79bbac6ab9d28ae2eae0c398022",
+  "input_sha256": "28836a578a2937b72a4fff05ab315bb0a9f665f24cf79e5a14bd4da710432590",
+  "output_sha256": "9fa5f2d6d931373906d8f4e72cf53aa91536478b4bb4139d9ea17b5da72dd1e8",
+  "pass_all": true,
+  "runtime_instruction_emulation": false,
+  "source_python": "original_match.port.quick.listing_1771_0BC4",
+  "statement_evaluation_order_preserved": true
+}

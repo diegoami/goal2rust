@@ -18,9 +18,10 @@ pub enum Reg {
     Bp = 8,
     Ss = 9,
     Eflags = 10,
+    Cs = 11,
 }
 
-pub const REGS_NAMES: [&str; 11] = ["ax", "bx", "cx", "dx", "si", "di", "es", "sp", "bp", "ss", "eflags"];
+pub const REGS_NAMES: [&str; 12] = ["ax", "bx", "cx", "dx", "si", "di", "es", "sp", "bp", "ss", "eflags", "cs"];
 
 impl Reg {
     pub fn name(self) -> &'static str {

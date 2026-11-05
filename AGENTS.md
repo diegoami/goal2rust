@@ -77,3 +77,29 @@ sources. Preserve all genuine capture/development epochs and every completed
 canonical receipt. Use final_capture_audit.py after writers exit;the initial
 capture-input audit belongs to the pre-implementation epoch. Live PID/journal
 and completion status stay in checkpoint #1.
+
+Quick-result strength tree T27 is specified in [docs/tasks/T27.md](docs/tasks/T27.md).
+Read [out/T27/README.md](out/T27/README.md),contract.md,inventory-v1.json and
+checkpoint #1 before producers/builds. Preserve accepted T26's1647/283 final
+ledger/history and actual comparator in `.cache/T27-baseline` before builds.
+Capture binds50 pure-oracle inputs;all56 genuine shards/eight per body are
+complete. Never overwrite completed receipts or recapture. All27 owned code
+objects include three Rec methods;_call/gcall/helper return bindings stay explicit.
+Current run/stop/resume authority remains the live checkpoint.
+
+Before resuming T27,read `out/T27/shutdown-checkpoint-v1.json` and the README's
+callback retry notes,then the latest live checkpoint. Preserve the completed
+279-selector/70-outcome proof plan and BOTH rejected live/preparation epochs.
+`live-return-diagnosis-v1.json` corrects the old shutdown interpretation:both
+identically named PortMachine classes reject the unchangedSS fixture equally.
+The fixed return-hook fixture passes all8 scenarios/1280 pairs in developmentv3.
+Preparationv3 was SIGKILLed during PyPy preflight;preserve its rejection/source/
+artifact/log epoch. The new controller usesv4 receipts/journal andv2 preflight
+logs;never restart consumedv2/v3,
+duplicate a live controller,overwrite a receipt or edit its bound sources.
+
+T27's canonical campaign and final validation-v1 are now complete:2378 primary
+bindings/79 explicit sources,102 canonical plus12 timing groups;all writers and
+preparation controllers stopped. Read README and live checkpoint before any
+further action;never restart completed producers or alter frozen sources.
+Final merge/mainCI/merged binding audit status remains in checkpoint#1.

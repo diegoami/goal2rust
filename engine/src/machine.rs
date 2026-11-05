@@ -110,6 +110,7 @@ impl Port {
     }
 }
 enum NativeContinuation {
+    Strength(crate::strength::Phase,crate::strength::Saved),
     Commentary(crate::commentary::Phase,crate::commentary::Saved),
     Text(crate::text::Phase,crate::text::Saved),
     Destination(crate::destination_flow::Phase,Option<crate::destination_flow::Saved>),
@@ -864,6 +865,7 @@ impl MachineCore {
         };
         if self.native && frame.port.variant.bind(py).is_none() {
             frame.native = match address.extract::<String>()?.as_str() {
+                ad @ ("1771:0AA7"|"1771:0BC4"|"1771:3041"|"1771:3088"|"1771:3179"|"1771:377E"|"214B:0C57")=>Some(NativeContinuation::Strength(crate::strength::Phase::Start,crate::strength::Saved::new(crate::strength::index(ad).unwrap()))),
                 ad @ ("0791:1829"|"0791:1C78"|"0791:1D4A"|"0791:1E53"|"0791:1EB5"|"0791:26A0"|"0791:2B0F"|"0791:56D9"|"214B:0018"|"214B:1C86")=>Some(NativeContinuation::Commentary(crate::commentary::Phase::Start,crate::commentary::Saved::new(crate::commentary::index(ad).unwrap()))),
                 "214B:01A3"=>Some(NativeContinuation::Text(crate::text::Phase::Start,crate::text::Saved::new(0))),
                 "214B:0205"=>Some(NativeContinuation::Text(crate::text::Phase::Start,crate::text::Saved::new(1))),
@@ -985,6 +987,16 @@ impl MachineCore {
         let mut completed_value = py.None();
         let result = (|| -> PyResult<Option<Py<PyAny>>> {
             match f.native.take().unwrap() {
+                NativeContinuation::Strength(phase,saved)=>{
+                    let first=phase==crate::strength::Phase::Start;
+                    let ax=if first || phase==crate::strength::Phase::Quick{0}else{sent.extract::<u16>()?};
+                    let action=crate::strength::step(&mut h,phase,saved,ax)?;
+                    if first{let address:String=f.port.entry.bind(py).getattr("address")?.extract()?;*self.native_calls.borrow_mut().entry(address).or_insert(0)+=1;}
+                    match action{
+                        crate::strength::Action::Call(req)=>{let args=PyTuple::new(py,req.args)?;let call=self.call_type.bind(py).call1((req.target,args,req.ret_to,req.far,false))?;f.native=Some(NativeContinuation::Strength(req.next,req.saved));Ok(Some(call.unbind()))}
+                        crate::strength::Action::Done(value)=>{if let Some(v)=self.strength_control(&mut h,saved.kind,value)?{completed_value=v.into_pyobject(py)?.into_any().unbind();}Ok(None)}
+                    }
+                }
                 NativeContinuation::Commentary(phase,saved)=>{
                     let first=phase==crate::commentary::Phase::Start;
                     let action=crate::commentary::step(&mut h,phase,saved)?;
@@ -1253,12 +1265,13 @@ impl MachineCore {
             let t24_mutant=self.mutant==197 && ret_to=="214B:098A";
             let t25_mutant=(246..254).contains(&self.mutant) && crate::text::RETURNS[(self.mutant-246) as usize]==ret_to;
             let t26_mutant=(334..359).contains(&self.mutant) && crate::commentary::RETURNS[(self.mutant-334) as usize]==ret_to;
+            let t27_mutant=(415..427).contains(&self.mutant) && crate::strength::RETURNS[(self.mutant-415) as usize]==ret_to;
             let t22_mutant=(166..170).contains(&self.mutant) && ["0791:8D42","0791:8DD0","0791:8E17","0791:9113"][(self.mutant-166) as usize]==ret_to;
             let t21_mutant=self.mutant==160 && ret_to=="0791:8396";
             let t20_mutant=(150..155).contains(&self.mutant) && T20_RETURNS[(self.mutant-150) as usize]==ret_to;
             let t19_mutant=(122..145).contains(&self.mutant) && T19_RETURNS[(self.mutant-122) as usize]==ret_to;
             let t18_mutant=(74..115).contains(&self.mutant) && T18_RETURNS[(self.mutant-74) as usize]==ret_to;
-            let corrupt = t26_mutant || t25_mutant || t24_mutant || t22_mutant || t21_mutant || t20_mutant || t19_mutant || t18_mutant || site_mutant || (self.mutant == 27 && matches!(ret_to.as_str(),"0791:47CE"|"0791:47EF"|"0791:485D"|"0791:4888"|"0791:48E2"|"0791:4930"|"0791:494D"|"0791:496A"|"0791:4980"|"0791:499D"|"0791:49B2"|"0791:49C0"))
+            let corrupt = t27_mutant || t26_mutant || t25_mutant || t24_mutant || t22_mutant || t21_mutant || t20_mutant || t19_mutant || t18_mutant || site_mutant || (self.mutant == 27 && matches!(ret_to.as_str(),"0791:47CE"|"0791:47EF"|"0791:485D"|"0791:4888"|"0791:48E2"|"0791:4930"|"0791:494D"|"0791:496A"|"0791:4980"|"0791:499D"|"0791:49B2"|"0791:49C0"))
                 || (self.mutant==29 && ret_to=="0791:4493")
                 || self.mutant == 1 || (self.mutant == 4
                 && matches!(ret_to.as_str(), "0791:3013" | "0791:3090" | "0791:30A3"))
@@ -1415,6 +1428,15 @@ impl MachineCore {
             let dx=h.reg(Reg::Dx)?;h.set_reg(Reg::Dx,dx^0x8000)?;
         }
         Ok(Some(m.py().None()))
+    }
+
+    fn strength_control(&self,h:&mut NativeHost<'_, '_>,index:u32,mut value:Option<u16>)->PyResult<Option<u16>>{
+        if self.mutant==359+index{crate::marking::corrupt(h)?;}
+        if (366..415).contains(&self.mutant) && (self.mutant-366)/7==index{
+            let reg=[Reg::Ax,Reg::Cx,Reg::Dx,Reg::Si,Reg::Di,Reg::Es,Reg::Eflags][((self.mutant-366)%7) as usize];
+            if reg==Reg::Ax && value.is_some(){value=value.map(|v|v^0x8000);}else{let old=h.reg(reg)?;h.set_reg(reg,old^if reg==Reg::Eflags{0x400}else{0x8000})?;}
+        }
+        Ok(value)
     }
 
     fn commentary_control(&self,h:&mut NativeHost<'_, '_>,index:u32,mut value:Option<u16>)->PyResult<Option<u16>>{

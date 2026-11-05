@@ -1,0 +1,9 @@
+denied: unicorn, .sav, .EXE, .DAT
+attack-stack {'comparisons': 160, 'hits': {'popped-group-live': 160}, 'effect_witnesses': 160}
+defend-stack {'comparisons': 160, 'hits': {'popped-group-and-dead-t6': 160}, 'effect_witnesses': 160}
+parent-captured {'comparisons': 160, 'hits': {'captured-parent-pointer': 160}, 'effect_witnesses': 160}
+root-live {'comparisons': 160, 'hits': {'live-depth-after-step': 160}, 'effect_witnesses': 160}
+result-local-ss {'comparisons': 160, 'hits': {'fresh-ss-live-local': 42, 'restore-ss': 42}, 'effect_witnesses': 160}
+slot-captured {'comparisons': 160, 'hits': {'captured-slot-live-ah': 183}, 'effect_witnesses': 160}
+coin-seed-df {'comparisons': 160, 'hits': {'captured-seed-live-df': 160}, 'effect_witnesses': 160}
+t6-sent {'comparisons': 160, 'hits': {'captured-sent-live-ax': 433}, 'effect_witnesses': 160}
