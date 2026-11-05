@@ -5,7 +5,7 @@ oracle and evidence, profile the Rust machine, then translate complete hot call
 trees. This follows the owner's approval of the upstream assessment. T02 is
 complete; its historical receipts and Done-when remain unchanged.
 
-## Current plan after T24: complete native chunks
+## Current plan after T27: complete native chunks
 
 [owner-approved recalibration] T03-T16 are historical accepted increments. The
 next default work unit is a complete bounded native execution tree with its
@@ -78,26 +78,32 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
    paired median1.57% less CPU than saved T25,two faster/one3.69% slower round.
    [Assessment](../out/T26/assessment.md) retains all raw samples/ratios/limits.
    Final ledger/CI/merge status stays in checkpoint#1;no following task selected.
-11. **T27,in progress,[issue #62](https://github.com/diegoami/goal2rust/issues/62):**
-   [Complete quick-result strength tree](tasks/T27.md),seven bodies/12 actual
-   returns/27 owned code objects,including the used Rec methods.0BC4 is the
-   highest remaining registered-body self-time in the full T26 profile. Native
-   availability/membership are the only guest boundaries. Preserve actual T26
-   before builds;capture56 genuine entries on50 sealed pure-oracle inputs.
-   Fixed-fixture prediction18,250 moved entries is not a speed claim.
-12. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
+11. **T27,[PR #63](https://github.com/diegoami/goal2rust/pull/63):**
+   [Complete quick-result strength tree](tasks/T27.md),seven bodies/12 returns/
+   27 owned code objects. Full campaign and final2378/320 ledger/merged audit
+   pass;86 native bodies and18250 moved entries confirmed. First quiet timing
+   campaign has pairedmedian4.80% less CPU than savedT26,with one3.05% slower
+   round. [Assessment](../out/T27/assessment.md);one fixture,mixed rounds.
+12. **T28,in progress,[issue #64](https://github.com/diegoami/goal2rust/issues/64):**
+   [Complete pass-receiver destination closure](tasks/T28.md),533B/six owned
+   functions/one near return5367. Its only guest callee045D is already native.
+   Third remaining body self-time in T27's full profile;higher6188/5049 roots
+   still reach broad duel/restart/substitution closures. Preserve actualT27
+   before builds and capture eight genuine entries on50 sealed pure-oracle
+   inputs. Prediction35723 moved entries is not a speed/coverage claim.
+13. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
    dominant, define a separate optimization task. A larger PR alone does not remove
    every Python boundary or common dispatch cost.
-13. **Engine milestone and application adoption:** retain the larger A700 corpus,
+14. **Engine milestone and application adoption:** retain the larger A700 corpus,
    known ref-121 noncompletion and owner review, then worker/save-load/cancellation/
    playtest and representative performance gates. PyPy remains goal2's baseline.
-14. **Whole game later:** tournament, board and career initialization still have
+15. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
-Current profile is **79/422 registered non-stub bodies (18.72%)**, while **88.43%**
-of guest entries on the reference fixture are native (2,744,673 native, 359,012
+Current profile is **86/422 registered non-stub bodies (20.38%)**, while **89.02%**
+of guest entries on the reference fixture are native (2,762,923 native, 340,762
 Python). Neither is source-line, CPU-time or test coverage; no global line/branch
-percentage is currently reported. Use the [current profile](../out/T26/profile-after-v1.json),
+percentage is currently reported. Use the [current profile](../out/T27/profile-after-v1.json),
 the historical [T16 planning snapshot](plans/post-T16-baseline.json) and
 [same-campaign performance reporting](performance-reporting.md). Every new summary
 shows saved-baseline/PyPy and candidate/PyPy together. No calendar completion date
@@ -645,3 +651,10 @@ corpus and quiet timing campaign,with 86/422 bodies and 89.02% native fixture
 entry frequency. Median CPU use is4.80% lower than saved T26 with one3.05%
 slower round;one-fixture evidence only. Final ledgers pass;checkpoint#1 owns
 exact-headCI/merge/mainCI/merged-audit status. No following scope is started.
+
+T28 start dependency check(2026-11-05):goal2 `f19309df` adds T181 replay/saved
+summaries,T148 native Qt scaling and explicit season terminal boundary before
+deferred rollover;archaeology `174dfe4b` advances shared news primitives/result
+columns(T122a/b). These affect later whole-game/application adoption;T28 retains
+the accepted `2cbeb36f` pin and existing match family. No new adoption proof is
+inferred from this native subtree.
