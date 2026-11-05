@@ -44,14 +44,15 @@ for stage in range(7, 28):
             archives.append(row['archive'])
 assert len(archives) == 44
 diagnostics = {}
-rejected = load('out/T27/rejected-preparation-v1.json')
-assert not rejected['accepted'] and rejected['no_final_build_or_canonical_started']
-for name, digest in rejected['receipts_sha256'].items():assert sha(O/name) == digest, name
-for original, digest in rejected['live_source_sha256'].items():
-    assert sha(B/rejected['live_source_map'][original]) == digest, original
-for original, digest in rejected['preparation_source_sha256'].items():
-    assert sha(B/rejected['preparation_preserved_source_map'][original]) == digest, original
-for name in ['development-probe-v1.json', 'live-development-v2.json']:
+for version in ['v1', 'v2']:
+    rejected = load(f'out/T27/rejected-preparation-{version}.json')
+    assert not rejected['accepted'] and rejected['no_final_build_or_canonical_started']
+    for name, digest in rejected['receipts_sha256'].items():assert sha(O/name) == digest, name
+    for original, digest in rejected['live_source_sha256'].items():
+        assert sha(B/rejected['live_source_map'][original]) == digest, original
+    for original, digest in rejected['preparation_source_sha256'].items():
+        assert sha(B/rejected['preparation_preserved_source_map'][original]) == digest, original
+for name in ['development-probe-v1.json', 'live-development-v3.json']:
     report = load('out/T27/'+name)
     assert report['development_only'] and not report['accepted_canonical_evidence']
     for p, digest in report['executed_source_sha256'].items():

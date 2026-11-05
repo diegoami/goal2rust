@@ -631,3 +631,11 @@ mid-campaign oracle refresh. Keep its controlled `2cbeb36f` pin and finish its
 full fidelity/performance gates before merging. Later route adoption must assess
 the new module and its dedicated proofs explicitly; a match-engine receipt does
 not establish whole-game parity.
+
+T27 resume dependency check (2026-11-05): goal2 `3fb3191d` adds T180's match
+stop/bench UI and requires in-season ageing for T170. Archaeology `7032ce40`
+merges T124a round-end framing, T124t legal-eleven harness and T121 fixture
+routing/news. T122 is split into five proof slices; T124b into rankings/draw,
+and required in-season ageing T124f now precedes sealed-season T123, while
+sealed year rollover stays deferred. These advance later whole-game dependencies;
+they do not replace T27's controlled `2cbeb36f` match pin or its full gates.

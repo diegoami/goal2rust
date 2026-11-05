@@ -1,0 +1,147 @@
+{
+  "accepted_canonical_evidence": false,
+  "comparisons": 1280,
+  "development_only": true,
+  "executed_source_sha256": {
+    "engine/python/goal2rust_engine/goal2rust_engine.cpython-312-x86_64-linux-gnu.so": "a8f7e774da799da6364c59cbf87f1631103fb9cdb0813d02aef1bf24a2a0ad36",
+    "engine/src/ball.rs": "91478bb65afe22329a523c80d42e2fc6ba83d811e1320f7e1599437badba9c75",
+    "engine/src/ball_draw.rs": "62b766fc833efa092f9f71193ebb9c93e0ee19f71e8743e9fb0e1aaa0859101c",
+    "engine/src/chase.rs": "df0ad3fbb5d5e7bbd46d28b9d9f2c2f4703afd6fd64b74a1f3ce64c699d1e26f",
+    "engine/src/commentary.rs": "24ab04eef9854de0a6134ea3fd1b1282ee7193a93226a0dbf379361efb80a3f5",
+    "engine/src/depth.rs": "c7124abdc73661e0d6d2746538cad9dc95d477a3e61f0125e16e392f2887e67a",
+    "engine/src/destination.rs": "074c7aa68364f3459ae651a7eeb56a78c2ae7ebaacba3efb835edce4e3b113e1",
+    "engine/src/destination_flow.rs": "6a8cb78f0fd2f02d9adaf1b7df96f6e675ad7dd4690f11a0353e2e6dc9825db3",
+    "engine/src/geometry.rs": "0cf5fb4b5131f6fb8131309bdb57d7121372cd61a68f01f5a94a6278d8eb823b",
+    "engine/src/host.rs": "24677ee1a9d05a6afc40e6865dd49ad0fb8eea4152cb4a60d25f669b44136086",
+    "engine/src/keyboard.rs": "91da5716a99433e608f7733af7a4cb547346f3c3cfca22f557817cf1802e62e4",
+    "engine/src/keys.rs": "8e8233173741d92152cfb6522fd39edb79402c6a7d1fe65dbe67b46553eec3f8",
+    "engine/src/lib.rs": "0e80410f3ee1919dea8afa32f3c43cdd939b5425ac04bae1979b8222505074d3",
+    "engine/src/machine.rs": "a014777495197830cdab76c48a0108db8722f59828ae8fb4c40d0a195200bd65",
+    "engine/src/marking.rs": "09e158306f0031b9324d7fa14591862bc1a446f56ffd9e7adc7e164f0582c52b",
+    "engine/src/mem.rs": "f10a8b447bf667aab43e1eaaf12e1a6690416f34577e0a8e216dbc345c8cd68b",
+    "engine/src/offside.rs": "12ccd8b5064780696f256ba5670178d81fdaecf4bdb14463a8ccc5e79bfa6ffa",
+    "engine/src/pascal.rs": "190c4a9e9b8305873ab34d1aabfb6e2886a9bad725c0c44b8c15aba3e152270d",
+    "engine/src/play.rs": "a1985ca927c275524265ad5b2444a1614817696563a595b33a69a2818aff6abd",
+    "engine/src/player_sprite.rs": "68e4acc9b4b47d782265f71324fcc264e969fd5c935780ba3846c946ecbd61a0",
+    "engine/src/player_update.rs": "4ee0ad8b0d10dc80094932ed5bc8efefff1f8271fd19e6f15e388be67a0a217e",
+    "engine/src/py.rs": "a00c5cfb629c449ae63e07780b06f9c03a0e31727203744cac5a654d87d23681",
+    "engine/src/regs.rs": "5e33d20c6aea4f195209a5694d438e2a880071d4832804eef69ec17bc37f8385",
+    "engine/src/routines.inc.rs": "12b4539c79ab3f6f57a11bea0353bdc4deb0eb463d4beae54b0b9097318baeb9",
+    "engine/src/run_step.rs": "4c93ef33b225a76a139c379d9fb5008f5fedd5117b89d5c745cd3fb57af1c53b",
+    "engine/src/skill.rs": "dd894310819fcf9ea92d1b16d72f9aaf701ca494172d097813a862948b4d0181",
+    "engine/src/speaker.rs": "212bdf063465190a84259f5a275bea703ef62a48779989a00a5e96cbcb150dd6",
+    "engine/src/strength.rs": "2c9e8482215fb34ca8e814e0128ace455be171415d8414d87387b44615ad71ce",
+    "engine/src/strength_quick.inc.rs": "9fa5f2d6d931373906d8f4e72cf53aa91536478b4bb4139d9ea17b5da72dd1e8",
+    "engine/src/sweep.rs": "158ddee0bc7486a4092c5b776795e83db4fc935954dc46d1ac1e15fec67832fe",
+    "engine/src/testhost.rs": "796213cd1693fcc635de0ff25f82d1206181eba1adef06b3c944ae26a38b6479",
+    "engine/src/tests.rs": "ed2ddb894963121289767e348f3e8529c623fbaf9fba50b4d137b736b7504c59",
+    "engine/src/text.rs": "4c64a0205eac2cdd40835db4ddfa1ef85da966feb63cfc725fa0faafde8b3fdc",
+    "engine/src/travel.rs": "5c68f1d4bc3792e4d0a330dde879a7fb583dfc2568f788bdf26c438f7ece3af9",
+    "engine/tests/test_strength.py": "871da2e9eb444148dccc534719ecc8a9b15e9117be1c8b87b5a73aba037146d8",
+    "out/T27/live_observers.py": "ed5ae2621c69cbcc8235e73fa4f5e05ca43136ed282478b4f85e7a7699ec40d6"
+  },
+  "pass_all": true,
+  "pgid": 8786,
+  "pid": 8787,
+  "preserved_source_map": {
+    "engine/python/goal2rust_engine/goal2rust_engine.cpython-312-x86_64-linux-gnu.so": ".cache/T27-development-sources/a8f7e774da799da6364c59cbf87f1631103fb9cdb0813d02aef1bf24a2a0ad36",
+    "engine/src/ball.rs": ".cache/T27-development-sources/91478bb65afe22329a523c80d42e2fc6ba83d811e1320f7e1599437badba9c75",
+    "engine/src/ball_draw.rs": ".cache/T27-development-sources/62b766fc833efa092f9f71193ebb9c93e0ee19f71e8743e9fb0e1aaa0859101c",
+    "engine/src/chase.rs": ".cache/T27-development-sources/df0ad3fbb5d5e7bbd46d28b9d9f2c2f4703afd6fd64b74a1f3ce64c699d1e26f",
+    "engine/src/commentary.rs": ".cache/T27-development-sources/24ab04eef9854de0a6134ea3fd1b1282ee7193a93226a0dbf379361efb80a3f5",
+    "engine/src/depth.rs": ".cache/T27-development-sources/c7124abdc73661e0d6d2746538cad9dc95d477a3e61f0125e16e392f2887e67a",
+    "engine/src/destination.rs": ".cache/T27-development-sources/074c7aa68364f3459ae651a7eeb56a78c2ae7ebaacba3efb835edce4e3b113e1",
+    "engine/src/destination_flow.rs": ".cache/T27-development-sources/6a8cb78f0fd2f02d9adaf1b7df96f6e675ad7dd4690f11a0353e2e6dc9825db3",
+    "engine/src/geometry.rs": ".cache/T27-development-sources/0cf5fb4b5131f6fb8131309bdb57d7121372cd61a68f01f5a94a6278d8eb823b",
+    "engine/src/host.rs": ".cache/T27-development-sources/24677ee1a9d05a6afc40e6865dd49ad0fb8eea4152cb4a60d25f669b44136086",
+    "engine/src/keyboard.rs": ".cache/T27-development-sources/91da5716a99433e608f7733af7a4cb547346f3c3cfca22f557817cf1802e62e4",
+    "engine/src/keys.rs": ".cache/T27-development-sources/8e8233173741d92152cfb6522fd39edb79402c6a7d1fe65dbe67b46553eec3f8",
+    "engine/src/lib.rs": ".cache/T27-development-sources/0e80410f3ee1919dea8afa32f3c43cdd939b5425ac04bae1979b8222505074d3",
+    "engine/src/machine.rs": ".cache/T27-development-sources/a014777495197830cdab76c48a0108db8722f59828ae8fb4c40d0a195200bd65",
+    "engine/src/marking.rs": ".cache/T27-development-sources/09e158306f0031b9324d7fa14591862bc1a446f56ffd9e7adc7e164f0582c52b",
+    "engine/src/mem.rs": ".cache/T27-development-sources/f10a8b447bf667aab43e1eaaf12e1a6690416f34577e0a8e216dbc345c8cd68b",
+    "engine/src/offside.rs": ".cache/T27-development-sources/12ccd8b5064780696f256ba5670178d81fdaecf4bdb14463a8ccc5e79bfa6ffa",
+    "engine/src/pascal.rs": ".cache/T27-development-sources/190c4a9e9b8305873ab34d1aabfb6e2886a9bad725c0c44b8c15aba3e152270d",
+    "engine/src/play.rs": ".cache/T27-development-sources/a1985ca927c275524265ad5b2444a1614817696563a595b33a69a2818aff6abd",
+    "engine/src/player_sprite.rs": ".cache/T27-development-sources/68e4acc9b4b47d782265f71324fcc264e969fd5c935780ba3846c946ecbd61a0",
+    "engine/src/player_update.rs": ".cache/T27-development-sources/4ee0ad8b0d10dc80094932ed5bc8efefff1f8271fd19e6f15e388be67a0a217e",
+    "engine/src/py.rs": ".cache/T27-development-sources/a00c5cfb629c449ae63e07780b06f9c03a0e31727203744cac5a654d87d23681",
+    "engine/src/regs.rs": ".cache/T27-development-sources/5e33d20c6aea4f195209a5694d438e2a880071d4832804eef69ec17bc37f8385",
+    "engine/src/routines.inc.rs": ".cache/T27-development-sources/12b4539c79ab3f6f57a11bea0353bdc4deb0eb463d4beae54b0b9097318baeb9",
+    "engine/src/run_step.rs": ".cache/T27-development-sources/4c93ef33b225a76a139c379d9fb5008f5fedd5117b89d5c745cd3fb57af1c53b",
+    "engine/src/skill.rs": ".cache/T27-development-sources/dd894310819fcf9ea92d1b16d72f9aaf701ca494172d097813a862948b4d0181",
+    "engine/src/speaker.rs": ".cache/T27-development-sources/212bdf063465190a84259f5a275bea703ef62a48779989a00a5e96cbcb150dd6",
+    "engine/src/strength.rs": ".cache/T27-development-sources/2c9e8482215fb34ca8e814e0128ace455be171415d8414d87387b44615ad71ce",
+    "engine/src/strength_quick.inc.rs": ".cache/T27-development-sources/9fa5f2d6d931373906d8f4e72cf53aa91536478b4bb4139d9ea17b5da72dd1e8",
+    "engine/src/sweep.rs": ".cache/T27-development-sources/158ddee0bc7486a4092c5b776795e83db4fc935954dc46d1ac1e15fec67832fe",
+    "engine/src/testhost.rs": ".cache/T27-development-sources/796213cd1693fcc635de0ff25f82d1206181eba1adef06b3c944ae26a38b6479",
+    "engine/src/tests.rs": ".cache/T27-development-sources/ed2ddb894963121289767e348f3e8529c623fbaf9fba50b4d137b736b7504c59",
+    "engine/src/text.rs": ".cache/T27-development-sources/4c64a0205eac2cdd40835db4ddfa1ef85da966feb63cfc725fa0faafde8b3fdc",
+    "engine/src/travel.rs": ".cache/T27-development-sources/5c68f1d4bc3792e4d0a330dde879a7fb583dfc2568f788bdf26c438f7ece3af9",
+    "engine/tests/test_strength.py": ".cache/T27-development-sources/871da2e9eb444148dccc534719ecc8a9b15e9117be1c8b87b5a73aba037146d8",
+    "out/T27/live_observers.py": ".cache/T27-development-sources/ed5ae2621c69cbcc8235e73fa4f5e05ca43136ed282478b4f85e7a7699ec40d6"
+  },
+  "scenarios": {
+    "bit-cached-arguments-live-flags": {
+      "comparisons": 160,
+      "effect_witnesses": 160,
+      "hits": {
+        "cached-arguments-preserved-other-flags-live": 160
+      }
+    },
+    "foot-cached-id-live-table": {
+      "comparisons": 160,
+      "effect_witnesses": 160,
+      "hits": {
+        "cached-player-id-live-row-table": 160
+      }
+    },
+    "gcall-sent-AX-live-DX-CS": {
+      "comparisons": 160,
+      "effect_witnesses": 160,
+      "hits": {
+        "captured-sent-versus-new-live-AX-DX": 160,
+        "live-CS-after-second-guest": 160
+      }
+    },
+    "manager-live-SS-argument": {
+      "comparisons": 160,
+      "effect_witnesses": 160,
+      "hits": {
+        "argument-live-SS-after-enter": 160,
+        "restore-SS-after-manager-local": 160
+      }
+    },
+    "quick-live-record-locals": {
+      "comparisons": 160,
+      "effect_witnesses": 160,
+      "hits": {
+        "live-record-locals-after-strength": 160
+      }
+    },
+    "quick-pop-captures-segment-before-flush": {
+      "comparisons": 160,
+      "effect_witnesses": 160,
+      "hits": {
+        "pop-segment-captured-before-pending-flush": 160,
+        "restore-entry-SS-at-guest-return": 160
+      }
+    },
+    "strength-captured-v-after-place": {
+      "comparisons": 160,
+      "effect_witnesses": 160,
+      "hits": {
+        "captured-v-survives-live-record-change": 160
+      }
+    },
+    "two-foot-captured-pointer-live-bytes": {
+      "comparisons": 160,
+      "effect_witnesses": 160,
+      "hits": {
+        "captured-pointer-live-two-bytes": 160
+      }
+    }
+  },
+  "script_sha256": "ed5ae2621c69cbcc8235e73fa4f5e05ca43136ed282478b4f85e7a7699ec40d6",
+  "wall_s": 21.075011099999983
+}

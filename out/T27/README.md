@@ -116,25 +116,30 @@ its continuation journal/log are preparation-jobs-v2/preparation-v2.
 Never overwrite or treat the rejected v1 attempt as a pass. Current e.hashes
 binds both preparation source epochs and the rejected diagnostic archive.
 
-Live developmentv2 passed the first seven scenarios(1,120 source/native pairs,
-positive semantic effects in every case),including the corrected manager test.
-The eighth scenario,quick-pop-captures-segment-before-flush case0,completed in
-the Python oracle but PortMachine raised `no registered port/return at1771:0BE5`.
-The cause is unresolved:investigate the callback's SS change,pop's captured
-segment,Regs.store and native guest continuation/return-frame identity. Do not
-assume another fixture defect or remove the witness. Both the live wrapper and
-continuation exited;no final build/install/preflight/archive/freeze/canonical
-or timing stage ran. rejected-preparation-v2.json binds the immutable logs and
-both executed source/binary and146-source preparation archives.
+Live developmentv2 passed the first seven scenarios(1,120 source/native pairs),
+then failed scenario8 in the PYTHON oracle. Both classes are named PortMachine;
+the shutdown checkpoint incorrectly attributed that assertion to Rust after a
+successful oracle. Preserve that checkpoint and rejected-preparation-v2 unchanged.
+`live-return-diagnosis-v1.json` independently reproduces case0 with module-qualified
+backend identities:full results are equal,both reject1771:0BE5 with liveSS9000
+instead of caller entrySS2000,and both already passed the expected ABI packet(0,).
+Neither dispatcher is defective;both enforce the pinned PortFrame.returned contract.
 
-Before a future resume,verify shutdown-checkpoint-v1.json and latest checkpoint
-#1. Do not restart `prepare_final.py` as currently hardcoded:the v2 attempt is
-consumed and has no accepted live/preparation JSON report. A corrected retry
-needs new receipt/log/journal versions and updated evidence,baseline and process
-closure bindings for every preserved rejection. Keep the completed plan as long
-as all of its test/probe/inventory/native inputs remain unchanged;production or
-bound proof-input changes require a separately preserved proof refresh. Capture
-is complete and must not be repeated. No next task was selected.
+The corrected fixture retains the alternate SS through pop,argument re-push and
+callee completion,then restores entry SS in the return hook before dispatcher
+matching. It retains the poisoned alternate argument and packet(0,) assertion.
+No production/test_strength/branch_probe/inventory change was needed;the completed
+279-selector/70-outcome proof-plan-v1 stays valid and must not be rerun.
+`live-development-v3.json` passes all eight scenarios/1,280 source/native pairs,
+160 semantic effects per scenario,both final SS hooks160 times. Both rejected
+source/binary/preparation epochs and all completed logs remain bound explicitly.
+
+The owner resumed T27 after shutdown. `prepare_final.py` now uses NEWv3 journal/
+report and live-development-v3,retaining both consumedv1/v2 journals/rejections.
+Read live checkpoint#1 for current PID/admission/completion state;do not duplicate
+or restart an active/partial controller. Capture stays completed and cannot be
+repeated. Sources must remain fixed while the preparation controller lives;
+never rebuild a bound artifact during measurements. No next task was selected.
 
 After all canonical/timing writers and controller have exited,run this sequence
 in the actual host PID namespace,with the frozen environment and sources:

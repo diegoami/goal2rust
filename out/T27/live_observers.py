@@ -52,6 +52,12 @@ def at(m,site,fn):
     r['eax']=(r['eax']&0xffff0000)|128
     if ctx['mutate']:
      put(m,ctx['ss']+ctx['bp']-17,0x228,2);put(m,ctx['ss']+ctx['bp']-15,0x6000,2);hit('live-record-locals-after-strength')
+  if scenario==SCENARIOS[7] and site=='1771:0BE5' and ctx['mutate']:
+   # Both dispatchers require the caller's entry SS at its return. Keep the
+   # alternate SS through argument re-push and callee completion, then restore
+   # it in the return hook before dispatch checks the suspended caller.
+   assert r['ss']==0x9000
+   r['ss']=ctx['ss']//16;hit('restore-entry-SS-at-guest-return')
  return OLD_AT[type(m)](m,site,wrapped)
 def on_write(m,lo,hi,fn):
  oldio=m.io_tap

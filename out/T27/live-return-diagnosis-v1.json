@@ -1,0 +1,21 @@
+{
+  "backends": [
+    "original_match.port.engine.PortMachine",
+    "goal2rust.machine.PortMachine"
+  ],
+  "equal_full_results": true,
+  "error": [
+    "PortError",
+    "no registered port/return at 1771:0BE5"
+  ],
+  "explanation": "Both frames retain entry SS 0x2000; callback leaves live SS 0x9000 at return. Both reject it.",
+  "guest_packet": [
+    0
+  ],
+  "pass_all": true,
+  "return_ss": 36864,
+  "sources": {
+    "out/T27/diagnose_live_return.py": "3161c809ff0edc50393d42baf5f2126cfd5eccbbfac3aea56f617978c5a873e8",
+    "out/T27/live_observers.py": "8ef922f4b261f2e249319986296796afbeec5fc0bc93fd5f8451f7c09610bdb7"
+  }
+}

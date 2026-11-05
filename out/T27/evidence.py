@@ -74,26 +74,29 @@ def hashes():
     files.update(BASE / 'out/T27' / p for p in ['baseline-snapshot-v1.json', 'inventory-v1.json',
                  'capture-inputs-v1.json', 'capture-drives-v1.jsonl', 'captures-v1.json',
                  'capture-input-audit-v1.json', 'development-probe-v1.json',
-                 'live-development-v2.json', 'codegen-binding-v1.json'])
+                 'live-development-v3.json', 'codegen-binding-v1.json'])
     capture = json.loads((BASE / 'out/T27/captures-v1.json').read_text())
     files.add(BASE / capture['private_file'])
     files.update(BASE / p for p in capture['private_shards'])
-    for receipt in ['development-probe-v1.json', 'live-development-v2.json']:
+    for receipt in ['development-probe-v1.json', 'live-development-v3.json']:
         for p in json.loads((BASE / 'out/T27' / receipt).read_text())['preserved_source_map'].values():
             files.add(BASE / p)
     # Bind the preparation source epoch without hashing its still-growing
     # process journal. The complete journal enters the final evidence ledger.
-    for version in ['v1', 'v2']:
+    for version in ['v1', 'v2', 'v3']:
         journal = BASE / f'out/T27/preparation-jobs-{version}.jsonl'
         with journal.open() as stream:
             prepared = json.loads(next(stream))
         assert prepared['event'] == 'controller'
         files.update(BASE / p for p in prepared['preserved_source_map'].values())
-    rejected_path = BASE / 'out/T27/rejected-preparation-v1.json'
-    rejected = json.loads(rejected_path.read_text())
-    files.add(rejected_path)
-    files.update(BASE / p for p in rejected['live_source_map'].values())
-    files.update(BASE / 'out/T27' / p for p in rejected['receipts_sha256'])
+    for version in ['v1', 'v2']:
+        rejected_path = BASE / f'out/T27/rejected-preparation-{version}.json'
+        rejected = json.loads(rejected_path.read_text())
+        files.add(rejected_path)
+        files.update(BASE / p for p in rejected['live_source_map'].values())
+        files.update(BASE / p for p in rejected['preparation_preserved_source_map'].values())
+        files.update(BASE / 'out/T27' / p for p in rejected['receipts_sha256'])
+    files.add(BASE / 'out/T27/live-return-diagnosis-v1.json')
     for name in ['source-inputs-v1.json', 'proof-plan-v1.json', 'artifact-archive-v1.json']:
         path = BASE / 'out/T27' / name
         if path.exists():

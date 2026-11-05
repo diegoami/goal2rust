@@ -28,7 +28,7 @@ def source_hashes():
 
 
 def append(row):
-    with (O/'preparation-jobs-v2.jsonl').open('a') as stream:
+    with (O/'preparation-jobs-v3.jsonl').open('a') as stream:
         stream.write(json.dumps(dict(time=time.time(), **row), sort_keys=True)+'\n')
 
 
@@ -59,8 +59,8 @@ def main():
     pure.verify()
     lock = (B/'.cache/T27-preparation.lock').open('a+')
     fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-    assert not (O/'preparation-jobs-v2.jsonl').exists(), 'Partial attempt: preserve/audit before retry'
-    assert not (O/'preparation-v2.json').exists() and not (O/'freeze-v1.json').exists()
+    assert not (O/'preparation-jobs-v3.jsonl').exists(), 'Partial attempt: preserve/audit before retry'
+    assert not (O/'preparation-v3.json').exists() and not (O/'freeze-v1.json').exists()
     lock.seek(0)
     lock.truncate()
     lock.write(str(os.getpid()))
@@ -80,7 +80,7 @@ def main():
                 preserved_source_map=preserved,
                 plan_wrapper=args.plan_wrapper, live_wrapper=args.live_wrapper))
     plan = wait_receipt('proof-plan-v1.json', args.plan_wrapper, 'plan-admission-v2.log')
-    live = wait_receipt('live-development-v2.json', args.live_wrapper, 'live-admission-v2.log')
+    live = wait_receipt('live-development-v3.json', args.live_wrapper, 'live_observers.py')
     assert plan['distinct_error_selectors'] == plan['error_execution_rows'] == len(plan['preseal_reached_errors'])
     assert all(row['error'] is not None for row in plan['preseal_reached_errors'].values())
     assert plan['test_source_sha256'] == sha(B/'engine/tests/test_strength.py')
@@ -144,7 +144,7 @@ def main():
                   source_sha256=before, source_unchanged=True, script_sha256=sha(Path(__file__)),
                   preserved_source_map=preserved,
                   post_writer_audits_pending=True, merge_performed=False)
-    with (O/'preparation-v2.json').open('x') as stream:
+    with (O/'preparation-v3.json').open('x') as stream:
         json.dump(report, stream, indent=2, sort_keys=True)
         stream.write('\n')
     print('Canonical controller exited; run actual-host post-writer audits after this controller exits', flush=True)
