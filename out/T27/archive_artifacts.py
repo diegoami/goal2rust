@@ -5,7 +5,7 @@ B=Path(__file__).resolve().parents[2];O=B/'out/T27';D=B/'.cache/T27-artifacts';s
 assert not D.exists() and not (O/'artifact-archive-v1.json').exists()
 logs={}
 for name in ['cpython','pypy']:
- p=O/f'public-{name}-preflight-v1.log';text=p.read_text();assert 'Ran 102 tests' in text and text.rstrip().endswith('OK');logs[name]=sha(p)
+ p=O/f'public-{name}-preflight-v2.log';text=p.read_text();assert 'Ran 102 tests' in text and text.rstrip().endswith('OK');logs[name]=sha(p)
 artifacts=[]
 for name,interpreter in [('cpython','.venv/bin/python'),('pypy','.venv-pypy/bin/python')]:
  code="import json,goal2rust_engine;from pathlib import Path;print(json.dumps([str(p.resolve()) for p in Path(goal2rust_engine.__file__).parent.glob('*.so')]))"

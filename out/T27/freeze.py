@@ -15,7 +15,7 @@ assert not (O/'freeze-v1.json').exists() and not (O/'source-inputs-v1.json').exi
 archive = json.loads((O/'artifact-archive-v1.json').read_text())
 assert archive['both_full_public_preflights_before_archive']
 for name in ['cpython', 'pypy']:
-    text = (O/f'public-{name}-preflight-v1.log').read_text()
+    text = (O/f'public-{name}-preflight-v2.log').read_text()
     assert 'Ran 102 tests' in text and text.rstrip().endswith('OK')
 inventory = json.loads((O/'inventory-v1.json').read_text())
 plan = json.loads((O/'proof-plan-v1.json').read_text())

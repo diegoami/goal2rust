@@ -141,6 +141,22 @@ or restart an active/partial controller. Capture stays completed and cannot be
 repeated. Sources must remain fixed while the preparation controller lives;
 never rebuild a bound artifact during measurements. No next task was selected.
 
+Preparationv3 built/installed both artifacts and passed CPython's full102-test
+preflight,then PyPy's full preflight was SIGKILLed(-9). Host kernel/cgroup reports
+an OOM kill at matching time;resource pressure is inferred,not a test failure.
+All five groups/controller exited. `rejected-preparation-v3.json` preserves
+147-source epoch,both installed artifacts,all logs/journal and memory evidence.
+No artifact archive,freeze or canonical stage began. Never overwrite that attempt.
+
+Preparationv4 repeats the complete eight-group preparation under the same idle
+admission rules,using NEW build/install/preflight-v2 logs and wheel directory.
+Both full102-test preflights must pass before archive/freeze;the failed PyPy log
+remains v1. Archive/freeze/baseline audit now require both successfulv2 logs.
+The final closure verifies all8 v4 groups PLUS all5 stopped v3 groups and BOTH
+earlier rejected pre-seal epochs. All147 sources were preserved before edits;
+no production/test/probe/inventory/plan change. Live checkpoint owns current
+v4 controller/admission state;never restart consumedv3 or duplicate a waiter.
+
 After all canonical/timing writers and controller have exited,run this sequence
 in the actual host PID namespace,with the frozen environment and sources:
 

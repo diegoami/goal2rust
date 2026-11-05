@@ -40,7 +40,7 @@ for stage in range(7, 28):
             assert sha(B/row['archive']) == row['sha256']
             if stage == 27:
                 assert sha(B/row['original']) == row['sha256']
-                assert row['public_preflight_sha256'] == sha(O/f"public-{row['interpreter']}-preflight-v1.log")
+                assert row['public_preflight_sha256'] == sha(O/f"public-{row['interpreter']}-preflight-v2.log")
             archives.append(row['archive'])
 assert len(archives) == 44
 diagnostics = {}
@@ -52,6 +52,12 @@ for version in ['v1', 'v2']:
         assert sha(B/rejected['live_source_map'][original]) == digest, original
     for original, digest in rejected['preparation_source_sha256'].items():
         assert sha(B/rejected['preparation_preserved_source_map'][original]) == digest, original
+failed = load('out/T27/rejected-preparation-v3.json')
+assert not failed['accepted'] and failed['no_archive_freeze_or_canonical_started']
+assert failed['failed_code'] == -9 and failed['completed_successful_groups'] == 4
+for name, digest in failed['receipts_sha256'].items():assert sha(O/name) == digest, name
+for name, digest in failed['source_sha256'].items():assert sha(B/failed['preserved_source_map'][name]) == digest, name
+for row in failed['artifacts']:assert sha(B/row['archive']) == row['sha256']
 for name in ['development-probe-v1.json', 'live-development-v3.json']:
     report = load('out/T27/'+name)
     assert report['development_only'] and not report['accepted_canonical_evidence']

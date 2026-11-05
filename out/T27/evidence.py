@@ -83,7 +83,7 @@ def hashes():
             files.add(BASE / p)
     # Bind the preparation source epoch without hashing its still-growing
     # process journal. The complete journal enters the final evidence ledger.
-    for version in ['v1', 'v2', 'v3']:
+    for version in ['v1', 'v2', 'v3', 'v4']:
         journal = BASE / f'out/T27/preparation-jobs-{version}.jsonl'
         with journal.open() as stream:
             prepared = json.loads(next(stream))
@@ -96,6 +96,12 @@ def hashes():
         files.update(BASE / p for p in rejected['live_source_map'].values())
         files.update(BASE / p for p in rejected['preparation_preserved_source_map'].values())
         files.update(BASE / 'out/T27' / p for p in rejected['receipts_sha256'])
+    failed_path = BASE / 'out/T27/rejected-preparation-v3.json'
+    failed = json.loads(failed_path.read_text())
+    files.add(failed_path)
+    files.update(BASE / p for p in failed['preserved_source_map'].values())
+    files.update(BASE / 'out/T27' / p for p in failed['receipts_sha256'])
+    files.update(BASE / row['archive'] for row in failed['artifacts'])
     files.add(BASE / 'out/T27/live-return-diagnosis-v1.json')
     for name in ['source-inputs-v1.json', 'proof-plan-v1.json', 'artifact-archive-v1.json']:
         path = BASE / 'out/T27' / name

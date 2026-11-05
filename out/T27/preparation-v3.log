@@ -1,0 +1,19 @@
+START build-cpython-final-v1 9985
+EXIT build-cpython-final-v1 0
+START build-pypy-final-v1 10432
+EXIT build-pypy-final-v1 0
+START install-pypy-final-v1 11010
+EXIT install-pypy-final-v1 0
+START public-cpython-preflight-v1 11073
+EXIT public-cpython-preflight-v1 0
+START public-pypy-preflight-v1 14235
+EXIT public-pypy-preflight-v1 -9
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T27/prepare_final.py", line 154, in <module>
+    main()
+  File "/home/diego/projects/goal2rust/out/T27/prepare_final.py", line 132, in main
+    run('public-'+name+'-preflight-v1', [interpreter, '-B', '-m', 'unittest',
+  File "/home/diego/projects/goal2rust/out/T27/prepare_final.py", line 115, in run
+    assert code == 0, ('Failed preparation stage; preserve log and journal', name, code)
+           ^^^^^^^^^
+AssertionError: ('Failed preparation stage; preserve log and journal', 'public-pypy-preflight-v1', -9)

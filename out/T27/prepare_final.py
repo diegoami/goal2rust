@@ -28,7 +28,7 @@ def source_hashes():
 
 
 def append(row):
-    with (O/'preparation-jobs-v3.jsonl').open('a') as stream:
+    with (O/'preparation-jobs-v4.jsonl').open('a') as stream:
         stream.write(json.dumps(dict(time=time.time(), **row), sort_keys=True)+'\n')
 
 
@@ -59,8 +59,8 @@ def main():
     pure.verify()
     lock = (B/'.cache/T27-preparation.lock').open('a+')
     fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-    assert not (O/'preparation-jobs-v3.jsonl').exists(), 'Partial attempt: preserve/audit before retry'
-    assert not (O/'preparation-v3.json').exists() and not (O/'freeze-v1.json').exists()
+    assert not (O/'preparation-jobs-v4.jsonl').exists(), 'Partial attempt: preserve/audit before retry'
+    assert not (O/'preparation-v4.json').exists() and not (O/'freeze-v1.json').exists()
     lock.seek(0)
     lock.truncate()
     lock.write(str(os.getpid()))
@@ -117,21 +117,21 @@ def main():
 
     maturin = str(B/'.venv/bin/maturin')
     cp, pp = str(B/'.venv/bin/python'), str(B/'.venv-pypy/bin/python')
-    run('build-cpython-final-v1', [maturin, 'develop', '--release', '--locked',
+    run('build-cpython-final-v2', [maturin, 'develop', '--release', '--locked',
         '--manifest-path', 'engine/Cargo.toml'], VIRTUAL_ENV=str(B/'.venv'))
-    wheels = B/'.cache/T27-final-pypy-wheels-v1'
+    wheels = B/'.cache/T27-final-pypy-wheels-v2'
     assert not wheels.exists(), 'Preserve an existing final wheel directory'
-    run('build-pypy-final-v1', [maturin, 'build', '--release', '--locked',
+    run('build-pypy-final-v2', [maturin, 'build', '--release', '--locked',
         '--manifest-path', 'engine/Cargo.toml', '--interpreter', pp, '--out', str(wheels)])
     paths = sorted(wheels.glob('*.whl'))
     assert len(paths) == 1
-    run('install-pypy-final-v1', [pp, '-m', 'pip', 'install', '--no-index', '--no-deps',
+    run('install-pypy-final-v2', [pp, '-m', 'pip', 'install', '--no-index', '--no-deps',
         '--force-reinstall', str(paths[0])])
     for name, interpreter, paths in [('cpython', cp, [B/'engine/python', pure.ORACLE/'runtime']),
                                      ('pypy', pp, [pure.ORACLE/'runtime'])]:
-        run('public-'+name+'-preflight-v1', [interpreter, '-B', '-m', 'unittest',
+        run('public-'+name+'-preflight-v2', [interpreter, '-B', '-m', 'unittest',
             'discover', '-s', 'engine/tests', '-v'], PYTHONPATH=os.pathsep.join(map(str, paths)))
-        text = (O/('public-'+name+'-preflight-v1.log')).read_text()
+        text = (O/('public-'+name+'-preflight-v2.log')).read_text()
         assert 'Ran 102 tests' in text and text.rstrip().endswith('OK')
     run('archive-artifacts-v1', [cp, '-B', 'out/T27/archive_artifacts.py'])
     run('freeze-v1', [cp, '-B', 'out/T27/freeze.py'])
@@ -144,7 +144,7 @@ def main():
                   source_sha256=before, source_unchanged=True, script_sha256=sha(Path(__file__)),
                   preserved_source_map=preserved,
                   post_writer_audits_pending=True, merge_performed=False)
-    with (O/'preparation-v3.json').open('x') as stream:
+    with (O/'preparation-v4.json').open('x') as stream:
         json.dump(report, stream, indent=2, sort_keys=True)
         stream.write('\n')
     print('Canonical controller exited; run actual-host post-writer audits after this controller exits', flush=True)

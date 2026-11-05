@@ -93,5 +93,7 @@ callback retry notes,then the latest live checkpoint. Preserve the completed
 `live-return-diagnosis-v1.json` corrects the old shutdown interpretation:both
 identically named PortMachine classes reject the unchangedSS fixture equally.
 The fixed return-hook fixture passes all8 scenarios/1280 pairs in developmentv3.
-The new preparation controller usesv3 receipts/journal;never restart consumedv2,
+Preparationv3 was SIGKILLed during PyPy preflight;preserve its rejection/source/
+artifact/log epoch. The new controller usesv4 receipts/journal andv2 preflight
+logs;never restart consumedv2/v3,
 duplicate a live controller,overwrite a receipt or edit its bound sources.
