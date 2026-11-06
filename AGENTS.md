@@ -134,3 +134,14 @@ checks the correct prior1280-pair matrix, retaining the new640-pair gate.
 final-audit-sources-v2.json binds original/corrected audit+validator sources;
 validate_final_v2.py produces the final ledger after all audits. Never rerun a
 completed receipt. Exact-head merge/mainCI/merged-audit authority is checkpoint#1.
+
+Near-player-zone T29 is specified in docs/tasks/T29.md. Read out/T29/README.md,
+contract.md,inventory-v1.json and live checkpoint before producers/builds.
+Preserve accepted T28's3061/338+5 finalledger,merged audit and actual84-file
+comparator in.cache/T29-baseline. Capture binds50pure-oracle inputs/eight genuine
+shards. Never edit capture-bound sources while its producer lives or overwrite
+receipts. Prepared develop.py waits for existing capture to exit,then independent
+baseline/capture audit,before-native failure and knownidle development stages;
+no final acceptance or merge. Initial/wiring source epochs and every failed
+stage must remain intact. No duplicatecontroller,sourceedit or rebuild while a
+boundstage lives. CurrentPID/admission/completion authority remainscheckpoint#1.
