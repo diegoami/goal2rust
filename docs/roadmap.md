@@ -658,3 +658,11 @@ deferred rollover;archaeology `174dfe4b` advances shared news primitives/result
 columns(T122a/b). These affect later whole-game/application adoption;T28 retains
 the accepted `2cbeb36f` pin and existing match family. No new adoption proof is
 inferred from this native subtree.
+
+T28 local campaign completes the six-function pass-receiver path through its
+existing native keeper boundary:87/422 native bodies and90.17% native fixture
+entry frequency. Accepted quiet timingv2 uses2.12% less CPU than saved T27 at
+the paired median,all rounds improve;whole rejectedv1 remains preserved.
+A separately sealed post-writer audit correction retains every historical/new
+matrix gate and all frozen sources. Checkpoint#1 owns finalCI/merge/mainCI/
+merged-audit status;following scope must come from the fresh full profile.

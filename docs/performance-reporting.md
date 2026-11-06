@@ -270,3 +270,24 @@ repeatable improvement. Same-campaign saved T26/PyPy and T27/PyPy medians are
 0.701659246 and 0.671455595, respectively. Each median is independent; do not
 divide them to infer the incremental gain. All raw CPU seconds and regressions
 remain in the assessment. One fixture; no positive magnitude acceptance floor.
+
+## T28 complete quiet campaign
+
+Sources: [raw accepted samples](../out/T28/performance-v2.json),
+[rejected complete campaign](../out/T28/performance-v1.json) and
+[assessment](../out/T28/assessment.md). Campaignv1 was rejected for a round1
+runner observation; all twelve samples remain. The unchanged whole campaignv2
+passes every quiet-start/endpoint/continuous-load/known-idle-runner guard.
+
+| Round | T28 / saved T27 | Saved T27 / PyPy | T28 / PyPy | CPython / T28 |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 0.962124978 | 0.543113282 | 0.522542855 | 4.504132942 |
+| 2 | 0.993965744 | 0.539746949 | 0.536489978 | 4.219841185 |
+| 3 | 0.978790527 | 0.545043859 | 0.533483766 | 4.798587083 |
+| Median of per-round ratios | 0.978790527 | 0.543113282 | 0.533483766 | 4.504132942 |
+
+T28 uses2.12% less CPU than saved T27 at the paired median, with all rounds
+improving(3.79%,0.60%,2.12%). Independent same-campaign savedT27/PyPy and
+T28/PyPy medians are0.543113282/0.533483766. One fixture; historical standalone
+gaps do not establish a trend. All rawCPU values and rejectedv1 slower round
+remain in the assessment. No positive magnitude acceptance floor.

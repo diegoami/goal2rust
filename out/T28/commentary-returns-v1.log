@@ -1,0 +1,27 @@
+denied: unicorn, .sav, .EXE, .DAT
+RETURN 0791:5700 {'total': 160, 'reached': 120, 'detected': 120}
+RETURN 0791:570E {'total': 160, 'reached': 120, 'detected': 120}
+RETURN 0791:571B {'total': 160, 'reached': 60, 'detected': 60}
+RETURN 0791:2B22 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN 0791:1EBF {'total': 160, 'reached': 160, 'detected': 160}
+RETURN 0791:1ED0 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN 0791:1F21 {'total': 160, 'reached': 156, 'detected': 156}
+RETURN 0791:1873 {'total': 160, 'reached': 146, 'detected': 146}
+RETURN 0791:18A5 {'total': 160, 'reached': 55, 'detected': 55}
+RETURN 0791:18AF {'total': 160, 'reached': 55, 'detected': 55}
+RETURN 0791:18BD {'total': 160, 'reached': 55, 'detected': 55}
+RETURN 0791:18DD {'total': 160, 'reached': 36, 'detected': 36}
+RETURN 0791:192E {'total': 160, 'reached': 19, 'detected': 19}
+RETURN 0791:18E7 {'total': 160, 'reached': 36, 'detected': 36}
+RETURN 0791:1938 {'total': 160, 'reached': 19, 'detected': 19}
+RETURN 0791:1900 {'total': 160, 'reached': 36, 'detected': 36}
+RETURN 0791:1951 {'total': 160, 'reached': 19, 'detected': 19}
+RETURN 0791:190E {'total': 160, 'reached': 36, 'detected': 36}
+RETURN 0791:195F {'total': 160, 'reached': 19, 'detected': 19}
+RETURN 0791:1988 {'total': 160, 'reached': 128, 'detected': 128}
+RETURN 0791:19B2 {'total': 160, 'reached': 146, 'detected': 146}
+RETURN 0791:19DE {'total': 160, 'reached': 87, 'detected': 87}
+RETURN 0791:1D5F {'total': 160, 'reached': 128, 'detected': 128}
+RETURN 0791:1D88 {'total': 160, 'reached': 156, 'detected': 156}
+RETURN 0791:1E36 {'total': 160, 'reached': 156, 'detected': 156}
+returns 0 comparisons pass

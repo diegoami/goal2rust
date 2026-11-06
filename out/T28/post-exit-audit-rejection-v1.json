@@ -1,0 +1,9 @@
+{
+  "pass_all": false,
+  "failed_script": "out/T28/post_exit_audit.py",
+  "line": 122,
+  "reason": "Historical 1280-pair check incorrectly names the new 640-pair receiver matrix rather than prior-strength-live-observers-v1. All historical and new matrices remain required. Original source unchanged; failed audit wrote no receipt.",
+  "actual_new_comparisons": 640,
+  "required_new_comparisons": 640,
+  "required_prior_strength_comparisons": 1280
+}

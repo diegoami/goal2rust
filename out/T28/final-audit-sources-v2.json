@@ -1,0 +1,11 @@
+{
+  "frozen_primary_unchanged": true,
+  "reason": "Post-writer audit correction only; preserve all frozen sources and receipts. Historical strength 1280-pair gate restored to its correct receipt; new receiver remains independently checked at640/four scenarios by check_new. Validator differs only in corrected audit receipt and extra supplemental bindings.",
+  "source_sha256": {
+    "out/T28/post-exit-audit-rejection-v1.json": "b5795cab2dd6c5756a2fd59b4e58925ebf15d2274f072653ac883c902b432f22",
+    "out/T28/post_exit_audit.py": "4eeb2fd107b590f6a7d153258469454635b45cf8cc0b96e665aa8b2e7a25f762",
+    "out/T28/post_exit_audit_v2.py": "c7c52250a5f7f70e819e2e0a04ab206f953d059905e17005ce0330c050d31914",
+    "out/T28/validate.py": "3bbced03998c4fe1073f8c8b4b1fb3681331d14267e078b80b714269045e0cb4",
+    "out/T28/validate_final_v2.py": "87e6cf2c60bb8bbe9d9f172a6eb0866642a795ea6026634aaf14188b9caa7847"
+  }
+}

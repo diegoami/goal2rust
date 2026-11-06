@@ -1,0 +1,9 @@
+denied: unicorn, .sav, .EXE, .DAT
+group-captured {'comparisons': 160, 'hits': {'captured-group-return': 160, 'restore-ss': 160, 'captured-position': 144}, 'effect_witnesses': 160}
+post-live {'comparisons': 160, 'hits': {'post-live-record': 160, 'post-late-x': 160}, 'effect_witnesses': 160}
+mirror-captured {'comparisons': 160, 'hits': {'captured-word-live-direction': 160}, 'effect_witnesses': 153}
+clamp-captured {'comparisons': 160, 'hits': {'captured-bounds-live-ah': 129}, 'effect_witnesses': 98}
+extreme-captured {'comparisons': 160, 'hits': {'captured-long-flags': 183}, 'effect_witnesses': 160}
+root-stack {'comparisons': 160, 'hits': {'captured-sent': 84, 'live-stack': 67, 'prepush-overwrite': 33, 'live-zf': 18}, 'effect_witnesses': 85}
+advanced-live-local {'comparisons': 160, 'hits': {'flushed-live-local': 160, 'restore-ss': 160}, 'effect_witnesses': 160}
+mark-captured {'comparisons': 160, 'hits': {'captured-player-record': 160, 'live-parent-locals': 52}, 'effect_witnesses': 160}

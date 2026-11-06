@@ -104,3 +104,20 @@ supervisor is now running;current PID/stages remain in checkpoint#1. NO rebuild,
 install or bound source/test/adapter/config edits. Keep current151-source
 preparation epoch and every completed receipt intact. Do not duplicate or restart
 an active producer/controller. No final speed/acceptance/merge claim yet.
+
+## Post-writer correction and completed campaign
+
+All107 canonical groups and both controllers exited successfully. Two complete
+three-round timing campaigns remain intact: rejectedv1(runner observation) and
+accepted quietv2. All3061 primary bindings/81 explicit sources remain frozen.
+The post-writer audit incorrectly named new live-observers-v1(640 pairs/four
+scenarios) in a historical1280-pair loop. Preserve the frozen audit unchanged.
+The failure record is post-exit-audit-rejection-v1.json. Separately sealed
+post_exit_audit_v2.py restores prior-strength-live-observers-v1 to that loop;
+all640 new comparisons remain independently required by check_new. No assertion
+count or Done-when is reduced. final-audit-sources-v2.json binds both original
+and corrected audit/validator sources. Final sequence after process/capture:
+post_exit_audit_v2.py -> baseline_input_audit.py -> validate_final_v2.py
+out/T28/validation-final-v1.json. Existing completed receipts are not rerun.
+See assessment.md for every raw ratio, rejection and coverage limit; checkpoint
+owns exact-head CI/merge/mainCI/merged audit status. Never restart producers.

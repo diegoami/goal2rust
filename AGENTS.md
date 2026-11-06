@@ -125,3 +125,12 @@ canonical controller has started. Read README/latest checkpoint for live PIDs;
 never rebuild/install or edit bound sources/tests/adapter/config,duplicate a
 producer or overwrite completed receipts. All prior86 proofs/eleven matrices
 remain. Final audits only after every writer AND preparation controller exits.
+
+T28's107 canonical groups and both controllers have completed; all writers are
+stopped. Preserve both full timing campaigns(rejectedv1/quietv2). The frozen
+post_exit_audit.py has a historical matrix-name error; never edit that source.
+Read README's post-writer correction: separately sealed post_exit_audit_v2.py
+checks the correct prior1280-pair matrix, retaining the new640-pair gate.
+final-audit-sources-v2.json binds original/corrected audit+validator sources;
+validate_final_v2.py produces the final ledger after all audits. Never rerun a
+completed receipt. Exact-head merge/mainCI/merged-audit authority is checkpoint#1.
