@@ -48,3 +48,22 @@ It does NOT run finalcanonical/timing gates or merge. Development2416pairs and
 After developmentcomplete,positivereached callbackmatrix/proofplan and full
 combined frozen campaign retaining prior87proofs/12matrices remain required.
 CurrentPID/status/stop/resume authority stayscheckpoint#1.
+
+## Separately queued callback and proof-plan phase
+
+Prepared follow-on producers are under docs/plans/T29/,outside the active
+development controller's source set. Its README documents five planned live
+scenarios/800 comparisons and eight planned source outcomes; none is yet a
+passed receipt. post_development.py waits for the EXISTING development success
+receipt AND stopped PID,verifies its final source map,then copies four templates
+exclusively into out/T29. It archives its own templates first,then the exact
+installed source/test/CPython binary epoch before any producer.
+
+This separate controller uses .cache/T29-post-development.lock,
+post-development-controller-v1.log and append-only post-development-jobs-v1.jsonl.
+Never duplicate it or edit its bound docs/plans/T29 Python templates while it
+lives. It admits live-development-v1 and plan-proofs-v1 only after known-idle
+IT13. It stops on first failure,preserving the complete epoch. Do not overwrite
+receipts or restart a consumed version. Final canonical/differential template
+is prepared but NOT run by this controller;full combined campaign still remains.
+Current PIDs/status and any future retry authority stay in live checkpoint#1.

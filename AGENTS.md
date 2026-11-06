@@ -145,3 +145,12 @@ baseline/capture audit,before-native failure and knownidle development stages;
 no final acceptance or merge. Initial/wiring source epochs and every failed
 stage must remain intact. No duplicatecontroller,sourceedit or rebuild while a
 boundstage lives. CurrentPID/admission/completion authority remainscheckpoint#1.
+
+T29's callback/proof-plan continuation is prepared in docs/plans/T29/README.md.
+It is separately queued behind the existing development controller's successful
+exit;never add sources to out/T29 while develop.py lives. The post-development
+controller archives its templates and fixed source/artifact epoch,then admits
+five-scenario live and positively reached preseal-plan producers. Read its
+README/latestcheckpoint before action;never duplicate it,edit bound templates,
+overwrite receipts or rerun consumed controllers. No canonical acceptance claim
+follows from prepared templates;all prior87proofs/12matrices remain required.
