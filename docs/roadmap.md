@@ -5,7 +5,7 @@ oracle and evidence, profile the Rust machine, then translate complete hot call
 trees. This follows the owner's approval of the upstream assessment. T02 is
 complete; its historical receipts and Done-when remain unchanged.
 
-## Current plan after T27: complete native chunks
+## Current plan after T28: complete native chunks
 
 [owner-approved recalibration] T03-T16 are historical accepted increments. The
 next default work unit is a complete bounded native execution tree with its
@@ -84,26 +84,32 @@ bundle in one full campaign. See [chunk policy](porting-chunks.md).
    pass;86 native bodies and18250 moved entries confirmed. First quiet timing
    campaign has pairedmedian4.80% less CPU than savedT26,with one3.05% slower
    round. [Assessment](../out/T27/assessment.md);one fixture,mixed rounds.
-12. **T28,in progress,[issue #64](https://github.com/diegoami/goal2rust/issues/64):**
+12. **T28, [PR #65](https://github.com/diegoami/goal2rust/pull/65):**
    [Complete pass-receiver destination closure](tasks/T28.md),533B/six owned
-   functions/one near return5367. Its only guest callee045D is already native.
-   Third remaining body self-time in T27's full profile;higher6188/5049 roots
-   still reach broad duel/restart/substitution closures. Preserve actualT27
-   before builds and capture eight genuine entries on50 sealed pure-oracle
-   inputs. Prediction35723 moved entries is not a speed/coverage claim.
-13. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
+   functions/one near return5367 through existing native045D. All107 canonical
+   stages/final3061primary+338evidence+5supplemental ledger/merged audit pass.
+   87 native bodies and35723 moved entries confirmed. Complete quietv2 paired
+   median2.12% less CPU than savedT27;all rounds improve. Entire rejectedv1 and
+   separately sealed post-writer audit correction preserved. [Assessment](../out/T28/assessment.md).
+13. **T29, [issue #66](https://github.com/diegoami/goal2rust/issues/66):**
+   [Complete near-player-zone path](tasks/T29.md),44C1/six actual ownedfunctions/
+   one farreturn4500/native2BE5 boundary. Fifth by remaining selftime in FULL
+   T28 profile;higher roots still pull in duel/state/delay/launch/restart paths.
+   Preserve actualT28 before builds,seal50pure-oracle inputs/eight genuine shards.
+   Prediction16064 moved entries is not performance or coverage evidence.
+14. **Measure boundary cost:** if common native-to-native dispatch/bridge work is
    dominant, define a separate optimization task. A larger PR alone does not remove
    every Python boundary or common dispatch cost.
-14. **Engine milestone and application adoption:** retain the larger A700 corpus,
+15. **Engine milestone and application adoption:** retain the larger A700 corpus,
    known ref-121 noncompletion and owner review, then worker/save-load/cancellation/
    playtest and representative performance gates. PyPy remains goal2's baseline.
-15. **Whole game later:** tournament, board and career initialization still have
+16. **Whole game later:** tournament, board and career initialization still have
    original-game dependencies; a native match subtree does not remove those gates.
 
-Current profile is **86/422 registered non-stub bodies (20.38%)**, while **89.02%**
-of guest entries on the reference fixture are native (2,762,923 native, 340,762
+Current profile is **87/422 registered non-stub bodies (20.62%)**, while **90.17%**
+of guest entries on the reference fixture are native (2,798,646 native, 305,039
 Python). Neither is source-line, CPU-time or test coverage; no global line/branch
-percentage is currently reported. Use the [current profile](../out/T27/profile-after-v1.json),
+percentage is currently reported. Use the [current profile](../out/T28/profile-after-v1.json),
 the historical [T16 planning snapshot](plans/post-T16-baseline.json) and
 [same-campaign performance reporting](performance-reporting.md). Every new summary
 shows saved-baseline/PyPy and candidate/PyPy together. No calendar completion date
@@ -666,3 +672,13 @@ the paired median,all rounds improve;whole rejectedv1 remains preserved.
 A separately sealed post-writer audit correction retains every historical/new
 matrix gate and all frozen sources. Checkpoint#1 owns finalCI/merge/mainCI/
 merged-audit status;following scope must come from the fresh full profile.
+
+T29 start dependency check(2026-11-06):goal2 `c951855b` removes file journals
+(T161),adds independent menu navigation and commentary reading pause(T184/185),
+and requires best-twenty selection beforem3. Archaeology `953b57ee` merges
+T122c/d/e news/route proofs,T125 original-backed best-twenty assistant,T123a
+speaker ABI and captain-reentry/stopped-edit fixes(#659/#663). These are material
+later application/whole-game and oracle-refresh dependencies. Before adopting a
+new source pin,assess those behavior changes and regenerate its full receipts;
+T29 deliberately retains accepted2cb/privateT07 and all current match gates.
+No new application/adoption proof follows from this native chunk.

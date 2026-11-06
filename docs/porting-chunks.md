@@ -581,3 +581,20 @@ entries is fixture frequency,not speed or code/test/whole-game progress. Actual
 T26 baseline79 files is preserved before builds;50 pure-oracle inputs yield56
 genuine entry shards. Latest upstream change is goal2's UI kit/palette correction;
 archaeology remains65de2fc0. No accepted-pin/default-engine policy change follows.
+
+## T29 selected near-player-zone path and upstream dependencies
+
+After accepted T28,select44C1 from the fresh FULL profile:one body/six actual
+owned helper functions/onefar4500 return/native2BE5 onlyboundary. Its source
+Frame-style lifetime and SENT direction value differ from Regs-based533B;
+retain repeatedargumentreads,cached physicalpointer,liveSS and AX-before-local
+read order. Explicitly exclude the uncalled positioning.w8 namecollision with
+Frame.w8;all actualsix require positive source/outside/nondefault witnesses.
+Prediction16064movedentries is not a speed claim. ActualT28(84files) is saved
+before builds with its3061primary/338evidence+5supplemental ledger/mergedaudit.
+
+Upstreams goal2c951855b/archaeology953b57ee advance pipe-only application,
+independentmenu navigation/commentarypause,best-twenty assistant,newsroute/
+speakerABI and captain/stopped-substitution fixes. Later adoption/pinrefresh
+must explicitly assess these contracts and their original-backed proofs.
+Keep2cb/privateT07 for this controlled task;no mid-campaign source refresh.
