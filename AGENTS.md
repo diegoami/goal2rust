@@ -103,3 +103,34 @@ bindings/79 explicit sources,102 canonical plus12 timing groups;all writers and
 preparation controllers stopped. Read README and live checkpoint before any
 further action;never restart completed producers or alter frozen sources.
 Final merge/mainCI/merged binding audit status remains in checkpoint#1.
+
+T28 pass-receiver destination closure is specified in docs/tasks/T28.md.
+Read out/T28/README.md,contract.md,inventory-v1.json and live checkpoint before
+producers/builds. Preserve accepted T27's2378/320 final ledger/merged audit and
+actual82-file comparator in.cache/T28-baseline. Capture binds50 pure-oracle
+inputs;eight genuine entry shards required. Do not edit bound capture sources
+while producer lives or overwrite completed receipts. Scope includes all six
+owned body/helpers and actual near return5367;045D is the native boundary.
+
+T28 development and preseal plan are complete:2416 differential pairs,106 public
+tests each,Rust11;livev3 hasfour scenarios/640 pairs aftertwo preserved fixture
+failures. Proof-plan-v1 seals22 reached selectors/eight branch outcomes. Never
+rerun capture/plan or overwrite completed receipts. Prepared final controller
+usespreparation-v1/107canonical groups. Read README/latest live checkpoint for
+PID/admission/completion status;keep its bound sources fixed while it lives.
+
+T28's final artifact is FROZEN:3061 primary bindings/81 explicit sources,both
+artifacts archived after106-test final interpreter preflights. The full107-group
+canonical controller has started. Read README/latest checkpoint for live PIDs;
+never rebuild/install or edit bound sources/tests/adapter/config,duplicate a
+producer or overwrite completed receipts. All prior86 proofs/eleven matrices
+remain. Final audits only after every writer AND preparation controller exits.
+
+T28's107 canonical groups and both controllers have completed; all writers are
+stopped. Preserve both full timing campaigns(rejectedv1/quietv2). The frozen
+post_exit_audit.py has a historical matrix-name error; never edit that source.
+Read README's post-writer correction: separately sealed post_exit_audit_v2.py
+checks the correct prior1280-pair matrix, retaining the new640-pair gate.
+final-audit-sources-v2.json binds original/corrected audit+validator sources;
+validate_final_v2.py produces the final ledger after all audits. Never rerun a
+completed receipt. Exact-head merge/mainCI/merged-audit authority is checkpoint#1.

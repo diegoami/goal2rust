@@ -1,0 +1,358 @@
+{
+  "authored_per_body": 500,
+  "body_control_comparisons": 2096,
+  "body_controls": {
+    "0791:533B": 427
+  },
+  "branch_comparisons": 320,
+  "branch_exclusions": {
+    "nested-loop-positive": "Default533B calls nested with levels=1;no positive iteration of range(levels-1) is in this root contract",
+    "variant-only": "receiver-to-target is positively exercised by explicit nondefault fallback proofs"
+  },
+  "branch_outcomes": [
+    "keeper-or-countdown:false",
+    "keeper-or-countdown:true",
+    "keeper-short-circuit:no",
+    "keeper-short-circuit:yes",
+    "nonkeeper-countdown:at-least10",
+    "nonkeeper-countdown:below10",
+    "receiver-match:false",
+    "receiver-match:true"
+  ],
+  "branch_probe_sha256": "ad62366fa38eb79a1f4a2458fd571873fccb9d086ff0f2df486d3da0c8808323",
+  "cases_per_error_selector": 160,
+  "distinct_error_selectors": 22,
+  "error_comparisons": 3520,
+  "error_execution_rows": 22,
+  "errors": {
+    "0791:533B": [
+      {
+        "controlled": false,
+        "selector": "0791:045D"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:533B"
+      },
+      {
+        "controlled": false,
+        "selector": "0791:5367"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "read-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ax"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:bp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:cs"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:eflags"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ip"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:sp"
+      },
+      {
+        "controlled": false,
+        "selector": "reg:ss"
+      },
+      {
+        "controlled": false,
+        "selector": "write"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:1"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:2"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:3"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:4"
+      },
+      {
+        "controlled": false,
+        "selector": "write-index:6"
+      },
+      {
+        "controlled": false,
+        "selector": "write:169696"
+      },
+      {
+        "controlled": false,
+        "selector": "write:85671"
+      },
+      {
+        "controlled": false,
+        "selector": "write:85692"
+      },
+      {
+        "controlled": false,
+        "selector": "write:85708"
+      }
+    ]
+  },
+  "inventory_sha256": "9d49afb3eb159ad5a1377b3ff2bdd01418545673441999a511c855bb5db01099",
+  "normal_comparisons": 4096,
+  "observed_maxima": {
+    "0791:533B": {
+      "max_reads": 2,
+      "max_writes": 6,
+      "observed_write_pcs": [
+        85671,
+        85692,
+        85708,
+        169696
+      ],
+      "selected_read_ordinals": [
+        1,
+        2
+      ],
+      "selected_write_ordinals": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ]
+    }
+  },
+  "observer_modes": 4,
+  "ordinal_scope": "Bounded observed early/middle/last read AND write ordinals,plus every observed write PC/register/site;not exhaustive global fault coverage",
+  "output_control_comparisons": 14672,
+  "output_controls": [
+    {
+      "control": 428,
+      "root": "0791:533B"
+    },
+    {
+      "control": 429,
+      "root": "0791:533B"
+    },
+    {
+      "control": 430,
+      "root": "0791:533B"
+    },
+    {
+      "control": 431,
+      "root": "0791:533B"
+    },
+    {
+      "control": 432,
+      "root": "0791:533B"
+    },
+    {
+      "control": 433,
+      "root": "0791:533B"
+    },
+    {
+      "control": 434,
+      "root": "0791:533B"
+    }
+  ],
+  "preseal_reached_errors": {
+    "0791:533B/0791:045D": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "0791:533B/0791:533B": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "0791:533B/0791:5367": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary site refused"
+      ]
+    },
+    "0791:533B/read-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "0791:533B/read-index:2": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary read refused"
+      ]
+    },
+    "0791:533B/reg:ax": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "0791:533B/reg:bp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "0791:533B/reg:cs": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "0791:533B/reg:eflags": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "0791:533B/reg:ip": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "0791:533B/reg:sp": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "0791:533B/reg:ss": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary register refused"
+      ]
+    },
+    "0791:533B/write": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "0791:533B/write-index:1": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "0791:533B/write-index:2": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "0791:533B/write-index:3": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "0791:533B/write-index:4": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "0791:533B/write-index:6": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "0791:533B/write:169696": {
+      "case": 0,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "0791:533B/write:85671": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "0791:533B/write:85692": {
+      "case": 1,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    },
+    "0791:533B/write:85708": {
+      "case": 16,
+      "error": [
+        "ValueError",
+        "commentary write refused"
+      ]
+    }
+  },
+  "real_captures_per_body": 8,
+  "return_control_comparisons": 160,
+  "return_controls": [
+    {
+      "caller": "0791:533B",
+      "control": 435,
+      "far": false,
+      "line": 467,
+      "path": ".cache/goal2-archaeology/runtime/original_match/port/contests.py",
+      "resolution": {
+        "kind": "guest",
+        "loop_bindings": {}
+      },
+      "ret_to": "0791:5367",
+      "target": "0791:045D"
+    }
+  ],
+  "test_source_sha256": "d9c459cb72e9403544768a9afa9f87bb7e84bb0800178cfbbe5e4b9048d38dbf",
+  "variants": {
+    "0791:533B": [
+      "receiver-to-target",
+      "countdown-double",
+      "nearest-not-chasing"
+    ]
+  }
+}

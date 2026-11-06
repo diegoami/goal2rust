@@ -1,0 +1,9 @@
+test_body_output_return_controls (test_receiver.ReceiverTests.test_body_output_return_controls) ... ok
+test_complete_native_body (test_receiver.ReceiverTests.test_complete_native_body) ... ok
+test_paths_observers_and_suspension (test_receiver.ReceiverTests.test_paths_observers_and_suspension) ... ok
+test_variants_errors_and_closure (test_receiver.ReceiverTests.test_variants_errors_and_closure) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.317s
+
+OK

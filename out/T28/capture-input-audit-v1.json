@@ -1,0 +1,23 @@
+{
+  "accepted_T27_baseline_files": 82,
+  "accepted_T27_runtime_still_unchanged": true,
+  "actual_drives": 1,
+  "actual_entry_shards": 8,
+  "capture_pids_stopped": [
+    220640
+  ],
+  "capture_receipt_sha256": "8a4427dd5f7f69e53db0ffd59d0ce85ddad700921d234e806fbeca8433d12719",
+  "capture_source_bindings": 50,
+  "captures_per_body": {
+    "0791:533B": 8
+  },
+  "drive_journal_sha256": "5e593f578787c6bc88f5a4624a2420e9ecb5697204d6e8861047b42c503d0041",
+  "guest_sites": 1,
+  "oracle": "2cbeb36fdd3feb369324aaa88e6e4d2aa3b3d99c",
+  "original_guards_retained": true,
+  "owned_code_objects": 6,
+  "owned_record_methods": 0,
+  "pass_all": true,
+  "script_sha256": "9341b2fc851f557776260c9dcc9e38820edcf74b57ecfc8fc0fc07e39b114d85",
+  "source_manifest_sha256": "87600cc735011006dab58838f6c04c0de5f9b32e33b767d46c7bb8fa146f38db"
+}

@@ -1,0 +1,14 @@
+denied: unicorn, .sav, .EXE, .DAT
+RETURN 1771:0BE5 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN 1771:0C5C {'total': 160, 'reached': 160, 'detected': 160}
+RETURN 1771:0C90 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN 1771:0CB1 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN 1771:0CC7 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN 1771:0CEE {'total': 160, 'reached': 160, 'detected': 160}
+RETURN 1771:379F {'total': 160, 'reached': 160, 'detected': 160}
+RETURN 1771:3808 {'total': 160, 'reached': 39, 'detected': 39}
+RETURN 1771:319A {'total': 160, 'reached': 160, 'detected': 160}
+RETURN 1771:31A4 {'total': 160, 'reached': 160, 'detected': 160}
+RETURN 1771:31C0 {'total': 160, 'reached': 62, 'detected': 62}
+RETURN 1771:31DA {'total': 160, 'reached': 82, 'detected': 82}
+returns 0 comparisons pass

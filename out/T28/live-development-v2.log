@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/diego/projects/goal2rust/out/T28/live_observers.py", line 95, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/diego/projects/goal2rust/out/T28/live_observers.py", line 82, in main
+    p,ph=run(Oracle,case,scenario,True);r,rh=run(PortMachine,case,scenario,True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/diego/projects/goal2rust/out/T28/live_observers.py", line 50, in run
+    assert p['error'] is None,(cls.__module__,case,scenario,p['error'])
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: ('original_match.port.engine', 0, 'local-flag-read-live-SS-after-flush', ('KeyError', "'ds'"))

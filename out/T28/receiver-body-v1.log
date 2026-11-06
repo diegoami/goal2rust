@@ -1,0 +1,7 @@
+denied: unicorn, .sav, .EXE, .DAT
+body 0791:533B 427 100
+body 0791:533B 427 200
+body 0791:533B 427 300
+body 0791:533B 427 400
+body 0791:533B 427 500
+body 2096 comparisons pass

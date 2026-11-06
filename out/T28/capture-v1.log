@@ -1,0 +1,14 @@
+denied: unicorn, .sav, .EXE, .DAT
+WAIT CAPTURE QUIET (0.53564453125, 0.40576171875, 0.34326171875) IT13 runners busy False 1 /3
+WAIT CAPTURE QUIET (0.453125, 0.39208984375, 0.33935546875) IT13 runners busy False 2 /3
+WAIT CAPTURE QUIET (0.46337890625, 0.3955078125, 0.34130859375) IT13 runners busy False 3 /3
+CAPTURE 0791:533B 1 drive 1
+CAPTURE 0791:533B 2 drive 1
+CAPTURE 0791:533B 3 drive 1
+CAPTURE 0791:533B 4 drive 1
+CAPTURE 0791:533B 5 drive 1
+CAPTURE 0791:533B 6 drive 1
+CAPTURE 0791:533B 7 drive 1
+CAPTURE 0791:533B 8 drive 1
+DRIVE {'drive': 1, 'started': 1793893255.4117565, 'before': {'0791:533B': 0}, 'guard_unchanged': True, 'runner_idle': True, 'exit': 'genuine-prefix-or-complete-drive', 'finished': 1793893256.728553, 'last_event': 2, 'after': {'0791:533B': 8}, 'source_unchanged': True}
+The complete body have eight genuine entries

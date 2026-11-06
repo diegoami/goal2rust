@@ -1,0 +1,17 @@
+START build-cpython-final-v1 251891
+EXIT build-cpython-final-v1 0
+START build-pypy-final-v1 252527
+EXIT build-pypy-final-v1 0
+START install-pypy-final-v1 252857
+EXIT install-pypy-final-v1 0
+START public-cpython-preflight-v1 252948
+EXIT public-cpython-preflight-v1 0
+START public-pypy-preflight-v1 254691
+EXIT public-pypy-preflight-v1 0
+START archive-artifacts-v1 256189
+EXIT archive-artifacts-v1 0
+START freeze-v1 256203
+EXIT freeze-v1 0
+START supervisor-v1 256238
+EXIT supervisor-v1 0
+Canonical controller exited; run actual-host post-writer audits after this controller exits
